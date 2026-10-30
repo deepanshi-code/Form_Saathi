@@ -22,6 +22,10 @@ TODO: add findings from interviews and the collected forms.
 \* Shown with a caution note: the official source found is older or indirect (details on each page).
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
 
+## User testing
+
+Plan and results template: [docs/user-testing](docs/user-testing/plan.md). Round 1 (5 users) not yet done.
+
 ## Run it
 
 Double-click `index.html`. No install, no server.
