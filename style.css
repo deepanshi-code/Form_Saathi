@@ -106,4 +106,17 @@ h1 { font-size: 28px; line-height: 1.3; margin: 28px 0 8px; }
 .field p { margin: 0; }
 .field ul { margin: 0; padding-left: 22px; }
 
+.status a { color: inherit; word-break: break-word; }
+
+/* "Recently changed" note: the rule people are most likely to get outdated advice about */
+.changed {
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border-left: 4px solid var(--warn-text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
 footer { padding-top: 24px; padding-bottom: 32px; }

@@ -16,7 +16,7 @@ TODO: add findings from interviews and the collected forms.
 | Part | State |
 |---|---|
 | Website skeleton (list, field-by-field view, Hindi/English, search) | Done, live on GitHub Pages |
-| Verified form guides | 0. The bank form is a **placeholder**. |
+| Verified form guides | 1: SBI savings account opening form (checked 2026-10-30) |
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
 
 ## Run it
@@ -25,10 +25,11 @@ Double-click `index.html`. No install, no server.
 
 ## Add a new form
 
-1. Copy `forms/bank-account-opening.js` to `forms/<new-id>.js` and change `id`.
-2. Fill in every field from the **official** form and its instructions.
-3. Add `<script src="forms/<new-id>.js"></script>` in `index.html`, after `registry.js` and before `app.js`.
-4. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
+1. Copy `forms/sbi-account-opening.js` to `forms/<new-id>.js` and change `id`.
+2. Fill in every field from the **official** form and its instructions. If the official documents don't answer something, write "ask the branch/office". Never guess.
+3. If a rule changed recently (so older advice is wrong), add a `changed` note to that field.
+4. Add `<script src="forms/<new-id>.js"></script>` in `index.html`, after `registry.js` and before `app.js`.
+5. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
 
 ## Rules
 

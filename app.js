@@ -11,7 +11,8 @@ const UI = {
     documents: "Documents needed",
     mistakes: "Common mistakes",
     unverified: "Not verified yet. This guide has not been checked against official instructions. Always confirm with the bank or office.",
-    verified: (date, source) => `Verified on ${date} against the official source: ${source}`,
+    verified: date => `Checked on ${date} against the official form:`,
+    changed: "Recently changed",
     noResults: "No form found. More forms are coming.",
     disclaimer: "Form Saathi explains forms in simple words. It is not an official service — the issuing bank or office has the final word."
   },
@@ -26,7 +27,8 @@ const UI = {
     documents: "ज़रूरी दस्तावेज़",
     mistakes: "आम गलतियाँ",
     unverified: "अभी जाँचा नहीं गया। यह जानकारी आधिकारिक निर्देशों से मिलाई नहीं गई है। बैंक या दफ़्तर से ज़रूर पुष्टि करें।",
-    verified: (date, source) => `${date} को आधिकारिक स्रोत से जाँचा गया: ${source}`,
+    verified: date => `${date} को आधिकारिक फॉर्म से जाँचा गया:`,
+    changed: "हाल में बदला",
     noResults: "कोई फॉर्म नहीं मिला। और फॉर्म जल्द आएँगे।",
     disclaimer: "फॉर्म साथी फॉर्म को आसान शब्दों में समझाता है। यह कोई सरकारी/आधिकारिक सेवा नहीं है — अंतिम निर्णय बैंक या दफ़्तर का होता है।"
   }
@@ -90,9 +92,18 @@ function renderForm(form) {
   $("form-title").textContent = form.name[lang];
   $("form-about").textContent = form.about[lang];
 
-  const status = form.verified
-    ? el("p", "status verified", UI[lang].verified(form.lastChecked, form.source))
-    : el("p", "status unverified", UI[lang].unverified);
+  let status;
+  if (form.verified) {
+    status = el("p", "status verified", UI[lang].verified(form.lastChecked) + " ");
+    // Link to the exact official document, so users can check it themselves.
+    const link = el("a", null, form.source.title);
+    link.href = form.source.url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    status.append(link);
+  } else {
+    status = el("p", "status unverified", UI[lang].unverified);
+  }
   $("form-status").replaceChildren(status);
 
   const list = $("field-list");
@@ -103,6 +114,13 @@ function renderForm(form) {
 
     item.append(el("h3", null, UI[lang].meaning), el("p", null, field.meaning[lang]));
     item.append(el("h3", null, UI[lang].write), el("p", null, field.write[lang]));
+
+    // Highlight rules that changed recently, because old advice from others may be wrong.
+    if (field.changed) {
+      const note = el("div", "changed");
+      note.append(el("strong", null, UI[lang].changed), el("p", null, field.changed[lang]));
+      item.append(note);
+    }
 
     // Lists are optional — skip the heading when a field has nothing to show.
     [["documents", field.documents], ["mistakes", field.mistakes]].forEach(([key, values]) => {
