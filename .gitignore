@@ -1,0 +1,7 @@
+# Editor and OS clutter
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Never commit real filled forms or scans with personal data
+private/

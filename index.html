@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Saathi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="#" class="brand" id="home-link">Form Saathi</a>
+      <!-- Language toggle: the app re-renders all text when this changes -->
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">English</button>
+        <button type="button" data-lang="hi">हिंदी</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- View 1: list of forms -->
+    <section id="list-view">
+      <h1 data-text="tagline"></h1>
+      <p class="muted" data-text="intro"></p>
+      <input type="search" id="search" class="search" autocomplete="off">
+      <ul id="form-list" class="form-list"></ul>
+    </section>
+
+    <!-- View 2: one form, field by field (hidden until a form is picked) -->
+    <section id="form-view" hidden>
+      <button type="button" class="back" id="back-btn" data-text="back"></button>
+      <h1 id="form-title"></h1>
+      <p class="muted" id="form-about"></p>
+      <div id="form-status"></div>
+      <ol id="field-list" class="field-list"></ol>
+    </section>
+  </main>
+
+  <footer class="wrap muted small" data-text="disclaimer"></footer>
+
+  <!-- Order matters: the registry first, then each form file, then the app -->
+  <script src="forms/registry.js"></script>
+  <script src="forms/bank-account-opening.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

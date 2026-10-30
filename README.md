@@ -1,0 +1,35 @@
+# Form Saathi
+
+Explains confusing official forms (bank, government, legal, college) field by field, in simple English and Hindi.
+
+## Problem
+
+Official forms use small print, jargon and unclear boxes. First-time applicants (for example, at 18) and older family members both get stuck. Mistakes mean rejected forms, repeat visits, paying agents, or embarrassment at the counter.
+
+*Evidence so far:* one personal experience (bank account opening form).
+TODO: add findings from interviews and the collected forms.
+
+## Status
+
+| Part | State |
+|---|---|
+| Website skeleton (list, field-by-field view, Hindi/English, search) | Done |
+| Verified form guides | 0. The bank form is a **placeholder**. |
+| AI explanations for any uploaded form | Not started (needs a small server, later) |
+
+## Run it
+
+Double-click `index.html`. No install, no server.
+
+## Add a new form
+
+1. Copy `forms/bank-account-opening.js` to `forms/<new-id>.js` and change `id`.
+2. Fill in every field from the **official** form and its instructions.
+3. Add `<script src="forms/<new-id>.js"></script>` in `index.html`, after `registry.js` and before `app.js`.
+4. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
+
+## Rules
+
+- No real personal data (Aadhaar, PAN, signatures) is ever stored or collected.
+- Every guide shows whether it is verified. Unverified guides warn the user.
+- The issuing bank or office has the final word. This tool only explains.
