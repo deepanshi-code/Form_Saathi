@@ -46,7 +46,7 @@
     <!-- View 2: one form in fill-along mode (hidden until a form is picked) -->
     <section id="form-view" hidden>
       <button type="button" class="back" id="back-btn" data-text="back"></button>
-      <!-- On wide screens: summary on the left (sticky), fields on the right -->
+      <!-- Medium screens: summary | fields. Wide screens: summary | field list | open field -->
       <div class="form-layout">
         <aside class="form-side">
           <div id="form-header"></div>
@@ -54,6 +54,7 @@
           <div id="form-sections"></div>
         </aside>
         <ol id="field-list" class="field-list"></ol>
+        <article id="field-detail" class="field-detail" aria-live="polite"></article>
       </div>
     </section>
   </main>

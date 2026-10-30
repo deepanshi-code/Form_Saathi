@@ -67,7 +67,7 @@ body {
 }
 
 button { font: inherit; color: inherit; }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.wrap { margin: 0 auto; padding: 0 16px; }
 .muted { color: var(--muted); }
 
 /* ---------- Header ---------- */
@@ -251,15 +251,18 @@ button { font: inherit; color: inherit; }
 .footer { color: var(--muted); font-size: 15px; padding-top: 28px; padding-bottom: 36px; }
 
 /* ---------- Wide screens: landscape tablets, laptops, desktops ---------- */
-@media (min-width: 900px) {
-  .wrap { max-width: 1180px; padding: 0 28px; }
+.field-detail { display: none; }
 
-  /* Home: headline and search side by side, more cards per row */
-  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 8px 40px; align-items: end; padding-top: 40px; }
-  .hero h1 { font-size: 42px; grid-column: 1; }
-  .hero-sub { grid-column: 1; margin-bottom: 0; }
+@media (min-width: 900px) {
+  /* Use the whole screen: no fixed maximum width, just comfortable side padding */
+  .wrap { max-width: none; padding: 0 clamp(24px, 3vw, 56px); }
+
+  /* Home: headline and search side by side; cards fill every row */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 8px 48px; align-items: end; padding-top: 40px; }
+  .hero h1 { font-size: clamp(40px, 3.4vw, 56px); grid-column: 1; }
+  .hero-sub { grid-column: 1; margin-bottom: 0; max-width: 60ch; }
   .hero .search { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
-  .form-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .form-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
   .changes-row { flex-wrap: wrap; overflow: visible; }
 
   /* Form page: summary column stays in view while you work through the fields */
@@ -274,8 +277,29 @@ button { font: inherit; color: inherit; }
   .field-head { padding: 14px 18px; }
 }
 
-@media (min-width: 1200px) {
-  .form-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+/* Wide screens: three panels side by side, like an email app.
+   Summary | list of fields | the open field, large */
+@media (min-width: 1300px) {
+  .form-layout { grid-template-columns: minmax(300px, 22%) minmax(320px, 28%) minmax(0, 1fr); gap: 28px; }
+  .field-list {
+    position: sticky; top: 72px; margin-top: 0;
+    max-height: calc(100vh - 88px); overflow-y: auto; padding-right: 4px; scrollbar-width: thin;
+  }
+  .field { margin-bottom: 6px; }
+  .field.open { background: var(--accent-soft); box-shadow: none; }
+  .field-head { padding: 10px 14px; }
+
+  .field-detail {
+    display: block; position: sticky; top: 72px;
+    max-height: calc(100vh - 88px); overflow-y: auto;
+    background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+    box-shadow: var(--shadow); padding: 24px 28px;
+  }
+  .detail-count { margin: 0; color: var(--muted); font-size: 15px; font-weight: 600; }
+  .detail-title { margin: 2px 0 10px; font-size: 28px; line-height: 1.2; }
+  .field-detail .field-body { padding: 0; font-size: 19px; }
+  .field-detail .block { padding: 14px 18px; }
+  .field-detail .done-btn { width: auto; padding: 12px 28px; }
 }
 
 /* Phones held sideways: wide but very short, so save vertical space */

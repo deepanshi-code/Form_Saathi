@@ -320,10 +320,76 @@ function renderSections(form) {
   box.append(about);
 }
 
+// Wide screens show the open field in its own panel instead of inside the list.
+const widePanel = window.matchMedia("(min-width: 1300px)");
+
+function fieldBody(form, field, i, isDone) {
+  const body = el("div", "field-body");
+
+  // "What to write" first: it is what people came for.
+  const write = el("div", "block block-write");
+  write.append(el("h3", null, "✍ " + UI[lang].write), el("p", null, field.write[lang]));
+  body.append(write);
+
+  body.append(el("h3", null, UI[lang].meaning), el("p", null, field.meaning[lang]));
+
+  if (field.changed) {
+    const ch = el("div", "block block-warn");
+    ch.append(el("h3", null, "⚠ " + UI[lang].changed), el("p", null, field.changed[lang]));
+    body.append(ch);
+  }
+
+  if (field.documents && field.documents[lang].length) {
+    const ul = el("ul");
+    field.documents[lang].forEach(v => ul.append(el("li", null, v)));
+    body.append(el("h3", null, "📄 " + UI[lang].documents), ul);
+  }
+
+  if (field.mistakes && field.mistakes[lang].length) {
+    const mist = el("div", "block block-danger");
+    const ul = el("ul");
+    field.mistakes[lang].forEach(v => ul.append(el("li", null, v)));
+    mist.append(el("h3", null, "✗ " + UI[lang].mistakes), ul);
+    body.append(mist);
+  }
+
+  const btn = el("button", "done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
+  btn.type = "button";
+  btn.addEventListener("click", () => {
+    const now = store.get(doneKey(form), []);
+    if (isDone) {
+      store.set(doneKey(form), now.filter(x => x !== i));
+    } else {
+      store.set(doneKey(form), [...now, i]);
+      // Jump to the next field that is not done yet (wrap around to earlier skipped ones).
+      const notDone = j => j !== i && !now.includes(j);
+      const next = form.fields.findIndex((_, j) => j > i && notDone(j));
+      openField = next >= 0 ? next : form.fields.findIndex((_, j) => notDone(j));
+    }
+    renderProgress(form);
+    renderFields(form);
+    if (openField < 0) return;
+    if (widePanel.matches) {
+      $("field-detail").scrollTop = 0;
+      $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } else {
+      $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+  body.append(btn);
+  return body;
+}
+
 function renderFields(form) {
   const done = store.get(doneKey(form), []);
+  const wide = widePanel.matches;
   const list = $("field-list");
+  const detail = $("field-detail");
   list.replaceChildren();
+  detail.replaceChildren();
+
+  // In the side panel there must always be something to read.
+  if (wide && openField < 0) openField = 0;
 
   form.fields.forEach((field, i) => {
     const isDone = done.includes(i);
@@ -336,62 +402,31 @@ function renderFields(form) {
     // The circle works like a checkbox; the form's own numbering stays in the label.
     head.append(el("span", "step", isDone ? "✓" : ""), el("span", "field-label", field.label[lang]));
     if (field.changed) head.append(el("span", "dot-warn", "!"));
-    head.addEventListener("click", () => { openField = isOpen ? -1 : i; renderFields(form); });
+    head.addEventListener("click", () => {
+      openField = isOpen && !wide ? -1 : i;
+      renderFields(form);
+      if (wide) detail.scrollTop = 0;
+    });
     item.append(head);
 
-    if (isOpen) {
-      const body = el("div", "field-body");
-
-      // "What to write" first: it is what people came for.
-      const write = el("div", "block block-write");
-      write.append(el("h3", null, "✍ " + UI[lang].write), el("p", null, field.write[lang]));
-      body.append(write);
-
-      body.append(el("h3", null, UI[lang].meaning), el("p", null, field.meaning[lang]));
-
-      if (field.changed) {
-        const ch = el("div", "block block-warn");
-        ch.append(el("h3", null, "⚠ " + UI[lang].changed), el("p", null, field.changed[lang]));
-        body.append(ch);
-      }
-
-      if (field.documents && field.documents[lang].length) {
-        const ul = el("ul");
-        field.documents[lang].forEach(v => ul.append(el("li", null, v)));
-        body.append(el("h3", null, "📄 " + UI[lang].documents), ul);
-      }
-
-      if (field.mistakes && field.mistakes[lang].length) {
-        const mist = el("div", "block block-danger");
-        const ul = el("ul");
-        field.mistakes[lang].forEach(v => ul.append(el("li", null, v)));
-        mist.append(el("h3", null, "✗ " + UI[lang].mistakes), ul);
-        body.append(mist);
-      }
-
-      const btn = el("button", "done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
-      btn.type = "button";
-      btn.addEventListener("click", () => {
-        const now = store.get(doneKey(form), []);
-        if (isDone) {
-          store.set(doneKey(form), now.filter(x => x !== i));
-        } else {
-          store.set(doneKey(form), [...now, i]);
-          // Jump to the next field that is not done yet (wrap around to earlier skipped ones).
-          const notDone = j => j !== i && !now.includes(j);
-          const next = form.fields.findIndex((_, j) => j > i && notDone(j));
-          openField = next >= 0 ? next : form.fields.findIndex((_, j) => notDone(j));
-        }
-        renderProgress(form);
-        renderFields(form);
-        if (openField >= 0) list.children[openField].scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-      body.append(btn);
-      item.append(body);
+    if (isOpen && !wide) item.append(fieldBody(form, field, i, isDone));
+    if (isOpen && wide) {
+      detail.append(
+        el("p", "detail-count", `${i + 1} / ${form.fields.length}`),
+        el("h2", "detail-title", field.label[lang]),
+        fieldBody(form, field, i, isDone)
+      );
     }
     list.append(item);
   });
 }
+
+// Re-render when the window crosses the wide-panel size (e.g. rotating a tablet).
+widePanel.addEventListener("change", () => {
+  const match = location.hash.match(/^#form\/(.+)$/);
+  const form = match && window.FORMS.find(f => f.id === match[1]);
+  if (form) renderFields(form);
+});
 
 function renderForm(form) {
   renderFormHeader(form);
