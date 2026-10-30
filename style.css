@@ -86,6 +86,15 @@ h1 { font-size: 28px; line-height: 1.3; margin: 28px 0 8px; }
 .form-list button:hover { border-color: var(--accent); }
 .form-list .name { font-weight: 600; display: block; }
 .form-list .meta { font-size: 15px; color: var(--muted); }
+.form-list .group-heading {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 20px 0 8px;
+}
+.form-list .group-heading:first-child { margin-top: 0; }
 
 .back { font: inherit; background: none; border: none; color: var(--accent); cursor: pointer; padding: 16px 0 0; }
 

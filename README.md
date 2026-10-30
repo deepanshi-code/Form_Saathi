@@ -16,7 +16,10 @@ TODO: add findings from interviews and the collected forms.
 | Part | State |
 |---|---|
 | Website skeleton (list, field-by-field view, Hindi/English, search) | Done, live on GitHub Pages |
-| Verified form guides | 6, all checked 2026-10-30: SBI savings account, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6), Learner's licence (Form 2), Fresh passport |
+| Verified form guides | 9, all checked 2026-10-30: SBI savings account, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6), Learner's licence (Form 2), Fresh passport, National Scholarship Portal\*, Uttarakhand caste certificate\*, Uttarakhand permanent residence certificate\* |
+| Not yet verified | Uttarakhand income certificate (no official form found yet) |
+
+\* Shown with a caution note: the official source found is older or indirect (details on each page).
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
 
 ## Run it

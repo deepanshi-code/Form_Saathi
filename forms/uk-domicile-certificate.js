@@ -1,0 +1,243 @@
+// Checked against the official application form "Permanent resident certificate" (स्थाई निवास प्रमाण-पत्र)
+// published by District Administration Pithoragarh on pithoragarh.nic.in (dated 19/05/2017). It is a
+// 2-page scanned form marked "शासनादेश संख्या-2588 /एक/संलग्नक": page 1 is the applicant's application
+// to the उपजिलाधिकारी (SDM), page 2 is the Patwari's report (आख्या). Also checked: the District Haridwar
+// service page "Permanent Residence Certificate" (haridwar.nic.in, last updated 20.09.2026), which points
+// to eservices.uk.gov.in, and the District Almora service page "Residence Certificate" (almora.nic.in,
+// last updated 20.04.2018), which names the Tehsil office.
+// These pages do NOT list the eligibility rule (years of residence), the documents to attach, the fee or
+// the time limit, and none of them explains the difference between "स्थायी निवास" and "मूल निवास".
+// Wherever they are silent, the guide says "ask at your Tehsil / CSC centre or check eservices.uk.gov.in".
+// The online form on eservices.uk.gov.in may ask the same things in a different layout.
+
+window.FORMS.push({
+  id: "uk-domicile-certificate",
+  verified: true,
+  source: {
+    title: "District Administration Pithoragarh, application form \"Permanent resident certificate\" (स्थाई निवास प्रमाण-पत्र), annexure to शासनादेश संख्या-2588, posted 19/05/2017",
+    url: "https://cdn.s3waas.gov.in/s347d1e990583c9c67424d369f3414728e/uploads/2018/02/2018031647-2.pdf"
+  },
+  lastChecked: "2026-10-30",
+  caution: {
+    en: "This guide follows an official Pithoragarh district form posted in 2017. The current online form on eservices.uk.gov.in could not be checked, and the official documents we found don't list which papers to attach or how many years of residence are needed. Confirm these at your Tehsil or CSC centre.",
+    hi: "यह गाइड पिथौरागढ़ ज़िले के 2017 में डाले गए आधिकारिक फॉर्म पर आधारित है। eservices.uk.gov.in का मौजूदा ऑनलाइन फॉर्म जाँचा नहीं जा सका, और हमें मिले आधिकारिक दस्तावेज़ों में यह नहीं लिखा कि कौन-से काग़ज़ लगाने हैं या कितने साल का निवास ज़रूरी है। ये बातें अपनी तहसील या CSC केंद्र पर पक्की करें।"
+  },
+
+  category: { en: "Uttarakhand", hi: "उत्तराखंड" },
+  name: { en: "Permanent Residence Certificate (Uttarakhand)", hi: "स्थायी निवास प्रमाण पत्र (उत्तराखंड)" },
+  about: {
+    en: "This is the application for Uttarakhand's Permanent Residence Certificate (स्थायी निवास प्रमाण पत्र). The paper form is addressed to the SDM (उपजिलाधिकारी). After you apply, the Patwari checks your details and writes a report. District websites say the service is given at the Tehsil office, and Haridwar district's page (updated 20.09.2026) says to apply at eservices.uk.gov.in (Apuni Sarkar). The pages we checked do not state the residence rule (how many years), the documents, the fee or the time limit. They also do not explain how this certificate differs from the मूल निवास प्रमाण पत्र. For all of these, ask at your Tehsil / CSC centre or check eservices.uk.gov.in.",
+    hi: "यह उत्तराखंड के स्थायी निवास प्रमाण पत्र का आवेदन है। काग़ज़ वाला फॉर्म उपजिलाधिकारी (SDM) के नाम लिखा जाता है। आवेदन के बाद पटवारी आपकी जानकारी जाँचकर अपनी आख्या (रिपोर्ट) लिखते हैं। ज़िलों की वेबसाइट के अनुसार यह सेवा तहसील कार्यालय से मिलती है, और हरिद्वार ज़िले के पेज (20.09.2026 को अपडेट) पर eservices.uk.gov.in (अपुणि सरकार) पर आवेदन करने को कहा गया है। जिन पेजों को हमने देखा, उनमें यह नहीं लिखा कि कितने साल का निवास चाहिए, कौन-से दस्तावेज़ लगेंगे, कितनी फ़ीस है या कितने दिन लगेंगे। उनमें यह भी नहीं बताया कि यह प्रमाण पत्र मूल निवास प्रमाण पत्र से कैसे अलग है। इन सब बातों के लिए अपनी तहसील / CSC केंद्र पर पूछें या eservices.uk.gov.in देखें।"
+  },
+
+  fields: [
+    {
+      label: { en: "\"सेवा में, उपजिलाधिकारी महोदय\" (addressed to the SDM)", hi: "\"सेवा में, उपजिलाधिकारी महोदय\"" },
+      meaning: {
+        en: "The application is addressed to the Sub-Divisional Magistrate (उपजिलाधिकारी, SDM) of your area. The subject line is \"स्थाई निवास प्रमाण-पत्र\".",
+        hi: "आवेदन आपके क्षेत्र के उपजिलाधिकारी (SDM) के नाम होता है। विषय की लाइन में \"स्थाई निवास प्रमाण-पत्र\" लिखा है।"
+      },
+      write: {
+        en: "Write the name of your own sub-division / district. The sample form is printed for Pithoragarh. If you apply online, the portal asks this in its own way. Which office covers your village or ward: ask at your Tehsil / CSC centre.",
+        hi: "अपने उपखंड / ज़िले का नाम लिखें। नमूना फॉर्म पिथौरागढ़ के लिए छपा है। ऑनलाइन आवेदन में पोर्टल यह अपने तरीक़े से पूछता है। आपका गाँव या वार्ड किस दफ़्तर में आता है, यह अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Applying to the office of a district where you do not live"],
+        hi: ["ऐसे ज़िले के दफ़्तर में आवेदन करना जहाँ आप रहते नहीं हैं"]
+      }
+    },
+    {
+      label: { en: "Applicant's name (item 1)", hi: "आवेदक का नाम (खाना 1)" },
+      meaning: {
+        en: "Your full name, the person who needs the certificate.",
+        hi: "आपका पूरा नाम, यानी जिसे प्रमाण पत्र चाहिए।"
+      },
+      write: {
+        en: "Write your name with the same spelling as on your other papers, such as school certificates. The form does not say which ID to match, so ask at your Tehsil / CSC centre if your papers have different spellings.",
+        hi: "नाम की वही स्पेलिंग लिखें जो आपके दूसरे काग़ज़ों, जैसे स्कूल के प्रमाण पत्रों, में है। फॉर्म में यह नहीं लिखा कि किस पहचान पत्र से मिलान होगा, इसलिए काग़ज़ों में स्पेलिंग अलग-अलग हो तो तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing a short or nickname instead of the full name"],
+        hi: ["पूरे नाम की जगह छोटा नाम या घर का नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "Date and place of birth (item 2)", hi: "जन्म तिथि व स्थान (खाना 2)" },
+      meaning: {
+        en: "Your date of birth and the place where you were born. Both go on one line.",
+        hi: "आपकी जन्म तिथि और जहाँ आपका जन्म हुआ वह जगह। दोनों एक ही लाइन में।"
+      },
+      write: {
+        en: "Write both: the date and the village/town and district of birth. The Patwari's report asks the same thing, so it should match your records.",
+        hi: "दोनों लिखें: तारीख़ और जन्म का गाँव/शहर व ज़िला। पटवारी की आख्या में भी यही पूछा जाता है, इसलिए यह आपके रिकॉर्ड से मेल खाना चाहिए।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing only the date and leaving out the place of birth"],
+        hi: ["सिर्फ़ तारीख़ लिखना और जन्म स्थान छोड़ देना"]
+      }
+    },
+    {
+      label: { en: "Father's name and mother's name (items 3 and 4)", hi: "पिता का नाम और माता का नाम (खाना 3 और 4)" },
+      meaning: {
+        en: "The form asks for both your father's name (item 3) and your mother's name (item 4).",
+        hi: "फॉर्म में पिता का नाम (खाना 3) और माता का नाम (खाना 4), दोनों पूछे गए हैं।"
+      },
+      write: {
+        en: "Fill both lines. Use the same spellings as in your school or family records.",
+        hi: "दोनों लाइनें भरें। वही स्पेलिंग लिखें जो स्कूल या परिवार के रिकॉर्ड में है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the mother's name blank"],
+        hi: ["माता का नाम ख़ाली छोड़ देना"]
+      }
+    },
+    {
+      label: { en: "Father's place of birth (items 5 and 6)", hi: "पिता का जन्म स्थान (खाना 5 और 6)" },
+      meaning: {
+        en: "Item 5 asks where your father was born. Item 6 says: \"यदि पिता का जन्मस्थान उत्तराखण्ड से भिन्न है तो वह कब से उत्तराखण्ड में निवास कर रहे हैं\", that is, if he was born outside Uttarakhand, since when he has lived in Uttarakhand.",
+        hi: "खाना 5 में पूछा है कि आपके पिता का जन्म कहाँ हुआ। खाना 6 में लिखा है: \"यदि पिता का जन्मस्थान उत्तराखण्ड से भिन्न है तो वह कब से उत्तराखण्ड में निवास कर रहे हैं\"।"
+      },
+      write: {
+        en: "Write the father's birthplace. Fill item 6 only if he was born outside Uttarakhand: give the year (or date) from which he has lived here. How many years of residence are needed is not written on the form, so ask at your Tehsil / CSC centre or check eservices.uk.gov.in.",
+        hi: "पिता का जन्म स्थान लिखें। खाना 6 तभी भरें जब उनका जन्म उत्तराखंड से बाहर हुआ हो: वे किस साल (या तारीख़) से यहाँ रह रहे हैं, वह लिखें। कितने साल का निवास ज़रूरी है, यह फॉर्म पर नहीं लिखा, इसलिए तहसील / CSC केंद्र पर पूछें या eservices.uk.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing your own birthplace here instead of your father's", "Leaving item 6 blank when the father was born outside Uttarakhand"],
+        hi: ["यहाँ पिता की जगह अपना जन्म स्थान लिख देना", "पिता का जन्म उत्तराखंड से बाहर हुआ हो फिर भी खाना 6 ख़ाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "Permanent address (item 7 a)", hi: "आवेदक का स्थाई पता (खाना 7 क)" },
+      meaning: {
+        en: "Your permanent address in Uttarakhand. The Patwari's report also records your village/mohalla, पट्टी, tehsil and district.",
+        hi: "उत्तराखंड में आपका स्थायी पता। पटवारी की आख्या में भी आपका ग्राम/मोहल्ला, पट्टी, तहसील और ज़िला दर्ज होता है।"
+      },
+      write: {
+        en: "Write the full address: village or mohalla, पट्टी (in hill areas), tehsil and district. Which address proof to attach is not stated on the form, so ask at your Tehsil / CSC centre.",
+        hi: "पूरा पता लिखें: ग्राम या मोहल्ला, पट्टी (पहाड़ी इलाक़ों में), तहसील और ज़िला। पते का कौन-सा प्रमाण लगाना है, यह फॉर्म पर नहीं लिखा, इसलिए तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a temporary hostel or rented address outside the state as the permanent address", "Leaving out the tehsil"],
+        hi: ["राज्य से बाहर का हॉस्टल या किराए का अस्थायी पता स्थायी पते में लिख देना", "तहसील का नाम न लिखना"]
+      }
+    },
+    {
+      label: { en: "Education details (item 7 b)", hi: "शिक्षा का विवरण (खाना 7 ख)" },
+      meaning: {
+        en: "Where you studied: from High School (Class 10) onwards, the name of each school / university / institution, its district (जनपद) and the year.",
+        hi: "आपने कहाँ पढ़ाई की: हाईस्कूल (10वीं) और उसके आगे, हर विद्यालय / विश्वविद्यालय / संस्थान का नाम, उसका जनपद और वर्ष।"
+      },
+      write: {
+        en: "List each school or college on its own line, with district and year. Include studies outside Uttarakhand too; the form asks for all of them. Whether you must attach mark sheets is not stated, so ask at your Tehsil / CSC centre.",
+        hi: "हर स्कूल या कॉलेज अलग लाइन में लिखें, साथ में जनपद और वर्ष। उत्तराखंड से बाहर की पढ़ाई भी लिखें; फॉर्म सब पूछता है। अंकपत्र लगाने हैं या नहीं, यह नहीं लिखा, इसलिए तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing only the last school", "Forgetting the year or district"],
+        hi: ["सिर्फ़ आख़िरी स्कूल लिखना", "वर्ष या जनपद लिखना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Family property here (item 8)", hi: "माता / पिता / दादा की सम्पत्ति (खाना 8)" },
+      meaning: {
+        en: "Does your mother / father / grandfather own property here? If yes, where, and since when? The form says \"यहाँ सम्पत्ति का संक्षिप्त ब्यौरा दे दिया जाय\" (give a short description). The Patwari's report asks whether ancestral property (पैतृक सम्पत्ति) of the father / grandfather / great-grandfather / mother is recorded in the village.",
+        hi: "क्या आपके माता / पिता / दादा की यहाँ सम्पत्ति है? हाँ, तो कहाँ और कब से? फॉर्म में लिखा है: \"यहाँ सम्पत्ति का संक्षिप्त ब्यौरा दे दिया जाय\"। पटवारी की आख्या में पूछा जाता है कि क्या पिता / दादा / परदादा / माता की पैतृक सम्पत्ति गाँव में दर्ज है।"
+      },
+      write: {
+        en: "Write a short description: which village, what kind of property, and since when. If there is none, say so clearly. Whether no property affects your application is not stated, so ask at your Tehsil / CSC centre.",
+        hi: "छोटा ब्यौरा लिखें: कौन-सा गाँव, किस तरह की सम्पत्ति, और कब से। अगर कोई सम्पत्ति नहीं है, तो साफ़ लिखें। सम्पत्ति न होने से आवेदन पर क्या असर होगा, यह नहीं लिखा, इसलिए तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving it blank instead of writing \"none\"", "Not writing since when the property is held"],
+        hi: ["\"नहीं\" लिखने की जगह ख़ाली छोड़ देना", "सम्पत्ति कब से है, यह न लिखना"]
+      }
+    },
+    {
+      label: { en: "Parents' livelihood and government job (items 9 and 10)", hi: "माता-पिता की आजीविका और सरकारी सेवा (खाना 9 और 10)" },
+      meaning: {
+        en: "Item 9: are your parents earning their living in their ancestral village (पैतृक ग्राम)? If not, where and since when (with details of their work). Item 10: are your parents in government service? If yes, in which district, which department and which post.",
+        hi: "खाना 9: क्या आपके माता-पिता अपने पैतृक ग्राम में आजीविका कमा रहे हैं? नहीं, तो कहाँ और कब से (काम का विवरण भी)। खाना 10: क्या माता-पिता सरकारी सेवा में हैं? हाँ, तो किस जनपद में, किस विभाग में और किस पद पर।"
+      },
+      write: {
+        en: "Answer both truthfully. If a parent works elsewhere, give the place, the year they started there and the type of work. For item 10, write \"No\" if neither parent is a government employee.",
+        hi: "दोनों का सच्चा जवाब दें। अगर माता या पिता कहीं और काम करते हैं, तो जगह, वहाँ किस साल से हैं, और काम किस तरह का है, लिखें। खाना 10 में, अगर दोनों में से कोई सरकारी कर्मचारी नहीं है, तो \"नहीं\" लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing only \"job\" without the place and since when", "Leaving item 10 blank"],
+        hi: ["जगह और कब से, यह लिखे बिना सिर्फ़ \"नौकरी\" लिखना", "खाना 10 ख़ाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "Reason for the certificate (item 11)", hi: "प्रमाण पत्र माँगे जाने का कारण (खाना 11)" },
+      meaning: {
+        en: "Why you need the certificate, for example the admission, job or scheme you are applying for.",
+        hi: "आपको प्रमाण पत्र क्यों चाहिए, जैसे किस दाख़िले, नौकरी या योजना के लिए।"
+      },
+      write: {
+        en: "Write the exact purpose. Check first whether that college or office wants this certificate or a मूल निवास certificate; the form does not explain the difference, so ask the college / office and your Tehsil / CSC centre.",
+        hi: "सही काम लिखें। पहले पता करें कि उस कॉलेज या दफ़्तर को यही प्रमाण पत्र चाहिए या मूल निवास प्रमाण पत्र; फॉर्म में फ़र्क़ नहीं बताया गया, इसलिए कॉलेज / दफ़्तर से और अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the reason blank", "Applying for the wrong certificate without checking what the college or office asks for"],
+        hi: ["कारण ख़ाली छोड़ना", "कॉलेज या दफ़्तर क्या माँग रहा है, यह जाने बिना ग़लत प्रमाण पत्र के लिए आवेदन करना"]
+      }
+    },
+    {
+      label: { en: "Declaration (घोषणा)", hi: "घोषणा" },
+      meaning: {
+        en: "You declare two things: (1) all the information above is true; (2) \"मैंने उत्तराखण्ड के अतिरिक्त अन्य किसी राज्य से किसी भी प्रयोजन हेतु स्थाई निवास प्रमाण-पत्र प्राप्त नहीं किया है\", that is, you have not taken a permanent residence certificate from any other state for any purpose. The Patwari's report also asks (item 12) whether you got a domicile / permanent residence certificate from any other district.",
+        hi: "आप दो बातों की घोषणा करते हैं: (1) ऊपर दी गई सारी जानकारी सच है; (2) \"मैंने उत्तराखण्ड के अतिरिक्त अन्य किसी राज्य से किसी भी प्रयोजन हेतु स्थाई निवास प्रमाण-पत्र प्राप्त नहीं किया है\"। पटवारी की आख्या (खाना 12) में भी पूछा जाता है कि क्या आपने किसी दूसरे ज़िले से डोमिसाइल / स्थायी निवास प्रमाण पत्र लिया है।"
+      },
+      write: {
+        en: "Read both points before signing. If you already hold such a certificate from another state or district, tell the office; do not sign a declaration that is not true.",
+        hi: "हस्ताक्षर से पहले दोनों बातें पढ़ें। अगर आपके पास किसी दूसरे राज्य या ज़िले से ऐसा प्रमाण पत्र पहले से है, तो दफ़्तर को बताएँ; ग़लत घोषणा पर हस्ताक्षर न करें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing without reading point 2"],
+        hi: ["बिंदु 2 पढ़े बिना हस्ताक्षर कर देना"]
+      }
+    },
+    {
+      label: { en: "Date, place, signature and address", hi: "दिनांक, स्थान, हस्ताक्षर और पता" },
+      meaning: {
+        en: "The form has two places to sign: once after item 11 (with date and your address) and once below the declaration (with date and place, as घोषणाकर्ता, the person declaring).",
+        hi: "फॉर्म में दो जगह हस्ताक्षर हैं: एक खाना 11 के बाद (दिनांक और आपके पते के साथ), और एक घोषणा के नीचे (दिनांक और स्थान के साथ, घोषणाकर्ता के रूप में)।"
+      },
+      write: {
+        en: "Sign in both places and fill the dates, the place and your address. The applicant signs; whether a parent signs for someone under 18 is not stated, so ask at your Tehsil / CSC centre.",
+        hi: "दोनों जगह हस्ताक्षर करें और दिनांक, स्थान व अपना पता भरें। हस्ताक्षर आवेदक करता है; 18 साल से कम उम्र होने पर माता-पिता हस्ताक्षर करें या नहीं, यह नहीं लिखा, इसलिए तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing only once", "Leaving the date or place blank"],
+        hi: ["सिर्फ़ एक जगह हस्ताक्षर करना", "दिनांक या स्थान ख़ाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "Patwari's report (page 2, for office use)", hi: "पटवारी की आख्या (पेज 2, दफ़्तर के लिए)" },
+      meaning: {
+        en: "Page 2 is filled and signed by the Patwari (हस्ताक्षर पटवारी), not by you. It repeats your details point by point (\"बिन्दुसार आख्या\"): name, birth, father's birthplace, address, education, ancestral property, parents' work and job, the reason, and whether you hold a certificate from another district.",
+        hi: "पेज 2 पटवारी भरते हैं और उस पर हस्ताक्षर करते हैं (हस्ताक्षर पटवारी), आप नहीं। इसमें आपकी जानकारी बिंदुवार दोहराई जाती है (\"बिन्दुसार आख्या\"): नाम, जन्म, पिता का जन्म स्थान, पता, शिक्षा, पैतृक सम्पत्ति, माता-पिता का काम और नौकरी, कारण, और क्या आपके पास किसी दूसरे ज़िले का प्रमाण पत्र है।"
+      },
+      write: {
+        en: "Leave this page blank. Because the Patwari checks the same points, keep your answers on page 1 accurate. How to track your application and how long it takes is not on the form, so check eservices.uk.gov.in or ask at your Tehsil / CSC centre.",
+        hi: "यह पेज ख़ाली छोड़ें। पटवारी वही बातें जाँचते हैं, इसलिए पेज 1 के जवाब सही रखें। आवेदन की स्थिति कैसे देखें और कितने दिन लगेंगे, यह फॉर्म में नहीं लिखा, इसलिए eservices.uk.gov.in देखें या तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the Patwari's page yourself"],
+        hi: ["पटवारी वाला पेज ख़ुद भर देना"]
+      }
+    }
+  ]
+});

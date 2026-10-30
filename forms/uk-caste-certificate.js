@@ -1,0 +1,250 @@
+// Checked against these official Uttarakhand district documents:
+// 1. "जाति प्रमाणपत्र हेतु आवेदन पत्र" (SC / ST Certificate form), District Almora website
+//    almora.nic.in, PDF dated 13-03-2018 (1 page, text PDF).
+// 2. "OBC certificate" form set, District Pithoragarh website pithoragarh.nic.in, PDF dated 16-03-2018
+//    (4 scanned pages, read from the page images): Annexure 'ख' application for OBC certificate for
+//    Government of India civil posts, the Patwari's inquiry report, and the creamy-layer inquiry report.
+// 3. District service pages for "Caste Certificate": Haridwar (last updated 04-12-2024),
+//    Dehradun (18-04-2022), Uttarkashi (16-04-2018), Almora (22-01-2020), and the Pithoragarh
+//    "E-District" page (17-08-2019).
+// Every statement below comes from one of those documents. The current online Apuni Sarkar form could
+// not be opened, and no official page stating the processing time, fee or validity was found, so the
+// guide says "ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in" for those points.
+
+window.FORMS.push({
+  id: "uk-caste-certificate",
+  verified: true,
+  source: {
+    title: "District Almora (almora.nic.in): SC / ST caste certificate application form, PDF dated 13-03-2018; also District Pithoragarh (pithoragarh.nic.in) OBC certificate form, PDF dated 16-03-2018",
+    url: "https://cdn.s3waas.gov.in/s33a0772443a0739141292a5429b952fe6/uploads/2018/03/2018031695.pdf"
+  },
+  lastChecked: "2026-10-30",
+  caution: {
+    en: "The official forms we could find are from 2018. The current online form on the state portal could not be checked, so some fields may have changed. Confirm at your Tehsil or CSC centre.",
+    hi: "हमें जो आधिकारिक फॉर्म मिले, वे 2018 के हैं। राज्य पोर्टल का मौजूदा ऑनलाइन फॉर्म जाँचा नहीं जा सका, इसलिए कुछ खाने बदले हो सकते हैं। अपनी तहसील या CSC केंद्र पर पुष्टि करें।"
+  },
+
+  category: { en: "Uttarakhand", hi: "उत्तराखंड" },
+  name: { en: "Caste Certificate (Uttarakhand)", hi: "जाति प्रमाण पत्र (उत्तराखंड)" },
+  about: {
+    en: "The application for a caste certificate (SC / ST / OBC) in Uttarakhand. The Haridwar district page says the certificate is issued by the District Magistrate or Tehsildar of your area, to a permanent resident of Uttarakhand. You can apply online on the state portal, or at the Tehsil e-District centre or a Common Service Centre (CSC). This guide follows the paper forms published on the Almora (SC / ST) and Pithoragarh (OBC) district websites in 2018. The online form may look different. Ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in for the current version.",
+    hi: "उत्तराखंड में जाति प्रमाण पत्र (SC / ST / OBC) बनवाने का आवेदन। हरिद्वार ज़िले की वेबसाइट के अनुसार यह प्रमाण पत्र आपके क्षेत्र के ज़िलाधिकारी या तहसीलदार जारी करते हैं, और यह उत्तराखंड के स्थायी निवासी के लिए है। आवेदन राज्य के पोर्टल पर ऑनलाइन, या तहसील के ई-डिस्ट्रिक्ट केंद्र या जन सेवा केंद्र (CSC) पर किया जा सकता है। यह गाइड 2018 में अल्मोड़ा (SC / ST) और पिथौरागढ़ (OBC) ज़िले की वेबसाइट पर डाले गए काग़ज़ी फॉर्म पर आधारित है। ऑनलाइन फॉर्म अलग दिख सकता है। मौजूदा फॉर्म के लिए अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+  },
+
+  fields: [
+    {
+      label: { en: "Where to apply and who issues it", hi: "आवेदन कहाँ करें और प्रमाण पत्र कौन देता है" },
+      meaning: {
+        en: "The Haridwar district page says the caste certificate is issued by the \"District Magistrate or Tehsildar\" of your area. The Dehradun page says you can apply online, or at the \"Tehsil e-District Center\" in your tehsil or a Common Service Center (CSC).",
+        hi: "हरिद्वार ज़िले की वेबसाइट के अनुसार जाति प्रमाण पत्र आपके क्षेत्र के ज़िलाधिकारी या तहसीलदार जारी करते हैं। देहरादून ज़िले की वेबसाइट के अनुसार आवेदन ऑनलाइन, या अपनी तहसील के ई-डिस्ट्रिक्ट केंद्र या जन सेवा केंद्र (CSC) पर किया जा सकता है।"
+      },
+      write: {
+        en: "Apply in the tehsil where you live. The district pages link to the state portal (eservices.uk.gov.in, \"Apuni Sarkar\"). How many days it takes and the fee are not stated on these pages, so ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in.",
+        hi: "जिस तहसील में रहते हैं, वहीं आवेदन करें। ज़िलों की वेबसाइट राज्य के पोर्टल (eservices.uk.gov.in, \"अपणि सरकार\") का लिंक देती है। कितने दिन लगेंगे और कितनी फ़ीस है, यह इन पन्नों पर नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Applying in a tehsil where you do not live"],
+        hi: ["ऐसी तहसील में आवेदन करना जहाँ आप रहते नहीं हैं"]
+      }
+    },
+    {
+      label: { en: "SC / ST or OBC: which form?", hi: "SC / ST या OBC: कौन-सा फॉर्म?" },
+      meaning: {
+        en: "The Almora district site has a short one-page form titled \"जाति प्रमाणपत्र हेतु आवेदन पत्र\" (application for caste certificate), listed as the SC / ST certificate form. The Pithoragarh district site has a longer OBC form set. Its first part is \"अनुबन्ध 'ख'\": an application for an OBC certificate for reservation in civil posts and services \"under the Government of India\".",
+        hi: "अल्मोड़ा ज़िले की वेबसाइट पर एक पन्ने का छोटा फॉर्म है, \"जाति प्रमाणपत्र हेतु आवेदन पत्र\", जो SC / ST प्रमाण पत्र के फॉर्म के रूप में दिया गया है। पिथौरागढ़ ज़िले की वेबसाइट पर OBC का लंबा फॉर्म है। इसका पहला हिस्सा \"अनुबन्ध 'ख'\" है: भारत सरकार के अधीन सिविल पदों और सेवाओं में आरक्षण के लिए OBC प्रमाण पत्र का आवेदन।"
+      },
+      write: {
+        en: "Pick the form for your category. The OBC form says it is only a \"model\" and extra items may be added as per local needs. If you need an OBC certificate for a state purpose rather than a central job, the documents checked do not say which form to use, so ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in.",
+        hi: "अपनी श्रेणी का फॉर्म चुनें। OBC फॉर्म पर लिखा है कि यह सिर्फ़ \"माडल\" है और स्थानीय ज़रूरत के हिसाब से इसमें और बातें जोड़ी जा सकती हैं। अगर OBC प्रमाण पत्र केंद्र की नौकरी के बजाय राज्य के किसी काम के लिए चाहिए, तो कौन-सा फॉर्म भरें यह इन काग़ज़ों में नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Not knowing for which purpose (state or central) you need the certificate before applying"],
+        hi: ["आवेदन से पहले यह न जानना कि प्रमाण पत्र किस काम (राज्य या केंद्र) के लिए चाहिए"]
+      }
+    },
+    {
+      label: { en: "Applicant's name (नाम आवेदक)", hi: "आवेदक का नाम" },
+      meaning: {
+        en: "Your own name. The OBC form asks for \"आवेदक का पूरा नाम\" (full name) \"in bold letters\" (मोटे अक्षरों में).",
+        hi: "आपका अपना नाम। OBC फॉर्म में \"आवेदक का पूरा नाम\" \"मोटे अक्षरों में\" माँगा गया है।"
+      },
+      write: {
+        en: "Write your full name clearly. Use the same spelling as in your other documents. The forms do not say which document the name must match, so ask at your Tehsil / CSC centre.",
+        hi: "अपना पूरा नाम साफ़ लिखें। वही स्पेलिंग लिखें जो आपके दूसरे काग़ज़ों में है। नाम किस दस्तावेज़ से मिलना चाहिए, यह फॉर्म में नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing a short or nick name instead of the full name"],
+        hi: ["पूरे नाम की जगह छोटा नाम या घर का नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "Father's / husband's name and mother's name", hi: "पिता / पति का नाम और माता का नाम" },
+      meaning: {
+        en: "The SC / ST form has \"पिता/पति का नाम\" (father's or husband's name) and \"माता का नाम\" (mother's name). The OBC form has three separate lines: father's name, mother's name and husband's name.",
+        hi: "SC / ST फॉर्म में \"पिता/पति का नाम\" और \"माता का नाम\" के खाने हैं। OBC फॉर्म में तीन अलग लाइनें हैं: पिता का नाम, माता का नाम और पति का नाम।"
+      },
+      write: {
+        en: "Write the full names. On the OBC form, fill the husband's line only if it applies.",
+        hi: "पूरे नाम लिखें। OBC फॉर्म में पति वाली लाइन तभी भरें जब लागू हो।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the mother's name blank"],
+        hi: ["माता का नाम ख़ाली छोड़ देना"]
+      }
+    },
+    {
+      label: { en: "Gender, age / date of birth", hi: "लिंग, आयु / जन्म तिथि" },
+      meaning: {
+        en: "The SC / ST form asks \"लिंग आवेदक\" (applicant's gender) and \"आयु आवेदक\" (applicant's age). The OBC form asks \"जन्म तिथि\" (date of birth).",
+        hi: "SC / ST फॉर्म में \"लिंग आवेदक\" और \"आयु आवेदक\" पूछा गया है। OBC फॉर्म में \"जन्म तिथि\" पूछी गई है।"
+      },
+      write: {
+        en: "Write your age in years, or your date of birth, as the form asks. The forms do not list an age proof, so ask at your Tehsil / CSC centre.",
+        hi: "जैसा फॉर्म में माँगा है, साल में अपनी उम्र या अपनी जन्म तिथि लिखें। फॉर्म में उम्र के प्रमाण की कोई सूची नहीं है, इसलिए अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the date of birth where the form asks for age (or the other way round)"],
+        hi: ["जहाँ उम्र पूछी है वहाँ जन्म तिथि लिखना (या इसका उल्टा)"]
+      }
+    },
+    {
+      label: { en: "Caste and sub-caste (जाति, उपजाति)", hi: "जाति और उपजाति" },
+      meaning: {
+        en: "Both forms have separate lines for \"जाति\" (caste) and \"उपजाति\" (sub-caste). The OBC form also asks your religion (धर्म), your occupational group (व्यावसायिक समूह), and the serial number of your caste in the central OBC list (\"अन्य पिछड़ी श्रेणियों की केन्द्र सूची में जाति की क्रम संख्या\").",
+        hi: "दोनों फॉर्म में \"जाति\" और \"उपजाति\" की अलग लाइनें हैं। OBC फॉर्म में धर्म, व्यावसायिक समूह, और केंद्र की OBC सूची में आपकी जाति की क्रम संख्या (\"अन्य पिछड़ी श्रेणियों की केन्द्र सूची में जाति की क्रम संख्या\") भी पूछी गई है।"
+      },
+      write: {
+        en: "Write the caste and sub-caste exactly as they appear in your family's earlier official records. Where to find the central list serial number is not stated on the form, so ask at your Tehsil / CSC centre.",
+        hi: "जाति और उपजाति ठीक वैसे लिखें जैसे आपके परिवार के पुराने सरकारी काग़ज़ों में लिखी है। केंद्र सूची की क्रम संख्या कहाँ मिलेगी, यह फॉर्म में नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the sub-caste line blank", "Writing a different spelling from the family's earlier records"],
+        hi: ["उपजाति वाली लाइन ख़ाली छोड़ना", "परिवार के पुराने काग़ज़ों से अलग स्पेलिंग लिखना"]
+      }
+    },
+    {
+      label: { en: "Rural / urban, district, tehsil, Patwari area, village or town", hi: "ग्रामीण / शहरी, ज़िला, तहसील, पटवारी क्षेत्र, गाँव या नगर" },
+      meaning: {
+        en: "The SC / ST form asks: \"ग्रामीण/शहरी\" (rural or urban), district, tehsil, \"पटवारी क्षेत्र\" (Patwari area), village, and \"नगर पालिका क्षेत्र\" (municipal area).",
+        hi: "SC / ST फॉर्म में पूछा गया है: \"ग्रामीण/शहरी\", ज़िला, तहसील, \"पटवारी क्षेत्र\", ग्राम, और \"नगर पालिका क्षेत्र\"।"
+      },
+      write: {
+        en: "Tick or write rural or urban. In a village, fill the Patwari area and village. In a town, fill the municipal area. Not sure of your Patwari area? Ask at your Tehsil.",
+        hi: "ग्रामीण या शहरी लिखें। गाँव में रहते हैं तो पटवारी क्षेत्र और गाँव भरें। शहर में रहते हैं तो नगर पालिका क्षेत्र भरें। अपना पटवारी क्षेत्र नहीं पता? अपनी तहसील में पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the wrong tehsil or Patwari area"],
+        hi: ["ग़लत तहसील या पटवारी क्षेत्र भरना"]
+      }
+    },
+    {
+      label: { en: "Address and mobile number", hi: "पता और मोबाइल नंबर" },
+      meaning: {
+        en: "The SC / ST form has \"पता\" (address) and \"मोबाईल नम्बर\" (mobile number). The OBC form asks the full home address in two parts: \"वर्तमान\" (present) and \"स्थाई पता\" (permanent address).",
+        hi: "SC / ST फॉर्म में \"पता\" और \"मोबाईल नम्बर\" के खाने हैं। OBC फॉर्म में घर का पूरा पता दो हिस्सों में माँगा गया है: \"वर्तमान\" और \"स्थाई पता\"।"
+      },
+      write: {
+        en: "Write the full address. On the OBC form, fill both present and permanent, even if they are the same. Give a mobile number that you use.",
+        hi: "पूरा पता लिखें। OBC फॉर्म में वर्तमान और स्थायी दोनों पते भरें, चाहे दोनों एक ही हों। ऐसा मोबाइल नंबर दें जो आप इस्तेमाल करते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling only the present address on the OBC form"],
+        hi: ["OBC फॉर्म में सिर्फ़ वर्तमान पता भरना"]
+      }
+    },
+    {
+      label: { en: "OBC only: parents' / husband's status (माता तथा पिता/पति की हैसियत)", hi: "सिर्फ़ OBC: माता-पिता / पति की हैसियत" },
+      meaning: {
+        en: "Item 12 of the OBC form asks about the father, mother and husband in columns: any constitutional post; government service (central or state, post, pay scale, date of appointment); jobs in international organisations; death or permanent disability; public sector jobs; armed forces including paramilitary; profession, trade or business; property held; agricultural land (place, size, irrigated or not); orchards; urban land or buildings; and income / wealth.",
+        hi: "OBC फॉर्म के खाना 12 में पिता, माता और पति के बारे में अलग-अलग कॉलम में पूछा गया है: कोई संवैधानिक पद; सरकारी नौकरी (केंद्र या राज्य, पद, वेतनमान, नियुक्ति की तारीख़); अंतरराष्ट्रीय संगठनों में नौकरी; मृत्यु या स्थायी अशक्तता; सार्वजनिक क्षेत्र के उपक्रम में नौकरी; अर्धसैनिक बल सहित सेना; व्यवसाय / पेशा / व्यापार; संपत्ति; खेती की ज़मीन (जगह, आकार, सिंचित या असिंचित); बाग़; शहरी ज़मीन या मकान; और आय / संपत्ति।"
+      },
+      write: {
+        en: "Fill only the lines that apply and mark the others clearly. The income line asks \"annual family income from all sources\", excluding salary and agricultural land income, whether anyone is a taxpayer (if yes, attach details for the last three years), and whether covered by the Wealth Tax Act. This information is used for the creamy-layer check. The current income limit is not stated in these forms, so ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in.",
+        hi: "सिर्फ़ लागू लाइनें भरें और बाक़ी को साफ़ तौर पर काट दें। आय वाली लाइन में \"सभी स्रोतों से वार्षिक पारिवारिक आय\" (वेतन और खेती की ज़मीन की आय छोड़कर), क्या कोई करदाता है (हाँ हो तो पिछले तीन साल का विवरण लगाएँ), और क्या संपत्ति कर अधिनियम में आते हैं, यह पूछा गया है। यह जानकारी क्रीमी लेयर की जाँच के लिए है। आय की मौजूदा सीमा इन फॉर्मों में नहीं लिखी, इसलिए अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+      },
+      documents: {
+        en: ["If anyone is a taxpayer: one copy each of the details for the last three years (as the OBC form asks)"],
+        hi: ["अगर कोई करदाता है: पिछले तीन साल के विवरण की एक-एक कॉपी (जैसा OBC फॉर्म में माँगा गया है)"]
+      },
+      mistakes: {
+        en: ["Leaving the whole section blank instead of filling the lines that apply", "Including salary or farm income in the \"income from all sources\" line, which the form says to exclude"],
+        hi: ["लागू लाइनें भरने की जगह पूरा हिस्सा ख़ाली छोड़ देना", "\"सभी स्रोतों से आय\" वाली लाइन में वेतन या खेती की आय जोड़ देना, जिसे फॉर्म छोड़ने को कहता है"]
+      }
+    },
+    {
+      label: { en: "OBC only: creamy-layer declaration", hi: "सिर्फ़ OBC: क्रीमी लेयर की घोषणा" },
+      meaning: {
+        en: "At the end of the OBC application you certify that the details are correct as far as you know, that you are \"not in the creamy layer\" (सम्पन्न वर्ग में से नहीं हूँ) of the OBCs, and that you are eligible for posts reserved for OBCs.",
+        hi: "OBC आवेदन के आख़िर में आप प्रमाणित करते हैं कि आपकी जानकारी के अनुसार ऊपर का विवरण सही है, आप अन्य पिछड़ी जातियों के \"सम्पन्न वर्ग में से नहीं\" हैं, और OBC के लिए आरक्षित पदों के लिए पात्र हैं।"
+      },
+      write: {
+        en: "Read it before signing. The form warns that if any information is found false or wrong, before or after selection, your candidature or appointment can be cancelled and legal action can be taken.",
+        hi: "हस्ताक्षर से पहले इसे पढ़ लें। फॉर्म में चेतावनी है कि कोई जानकारी झूठी या ग़लत पाई गई, चयन से पहले या बाद में, तो आपकी उम्मीदवारी / नियुक्ति रद्द की जा सकती है और क़ानूनी कार्यवाही हो सकती है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing the declaration without checking the income details above it"],
+        hi: ["ऊपर लिखी आय की जानकारी जाँचे बिना घोषणा पर हस्ताक्षर करना"]
+      }
+    },
+    {
+      label: { en: "Documents to attach", hi: "साथ में लगाने वाले काग़ज़" },
+      meaning: {
+        en: "The district pages mention only a few items. The Dehradun and Uttarkashi pages mention a certificate of residence in the state for a minimum period, a declaration (\"promissory note\") that you belong to the caste, and court stamp charges. The Haridwar page says an income certificate is \"necessary\" for an OBC certificate. The Patwari's report on the OBC form asks whether you got a caste certificate earlier and, if yes, to attach it.",
+        hi: "ज़िलों की वेबसाइट पर कुछ ही चीज़ें बताई गई हैं। देहरादून और उत्तरकाशी की वेबसाइट पर राज्य में कुछ न्यूनतम समय से रहने का निवास प्रमाण पत्र, अपनी जाति के बारे में एक घोषणा पत्र (\"प्रॉमिसरी नोट\"), और कोर्ट स्टांप शुल्क का ज़िक्र है। हरिद्वार की वेबसाइट के अनुसार OBC प्रमाण पत्र के लिए आय प्रमाण पत्र \"ज़रूरी\" है। OBC फॉर्म की पटवारी रिपोर्ट में पूछा गया है कि पहले कभी जाति प्रमाण पत्र बना है या नहीं; बना हो तो उसे लगाएँ।"
+      },
+      write: {
+        en: "The pages do not give the minimum residence period, the stamp amount, or a full document list. Ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in before you go.",
+        hi: "इन पन्नों पर निवास की न्यूनतम अवधि, स्टांप की रक़म, या काग़ज़ों की पूरी सूची नहीं दी गई है। जाने से पहले अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+      },
+      documents: {
+        en: ["Residence certificate for the state (minimum period: ask the office)", "Self-declaration about your caste", "Court stamp, as charged by the office", "For OBC: income certificate", "Earlier caste certificate, if one was made before"],
+        hi: ["राज्य का निवास प्रमाण पत्र (न्यूनतम अवधि दफ़्तर से पूछें)", "अपनी जाति के बारे में स्व-घोषणा पत्र", "कोर्ट स्टांप, जितना दफ़्तर बताए", "OBC के लिए: आय प्रमाण पत्र", "पुराना जाति प्रमाण पत्र, अगर पहले बना हो"]
+      },
+      mistakes: {
+        en: ["Applying for OBC without an income certificate", "Not mentioning a caste certificate made earlier"],
+        hi: ["आय प्रमाण पत्र के बिना OBC के लिए आवेदन करना", "पहले बने जाति प्रमाण पत्र की बात न बताना"]
+      }
+    },
+    {
+      label: { en: "Patwari inquiry report (filled by the office)", hi: "पटवारी की जाँच रिपोर्ट (दफ़्तर भरता है)" },
+      meaning: {
+        en: "The Uttarkashi and Dehradun pages say a local inquiry may be done before the certificate is issued. The Pithoragarh OBC form set includes a report \"to be filled only by the concerned Patwari\": your name, parents, native address, parents' caste with sub-caste, any earlier caste certificate, property in the parents' or guardian's name, family income, and his recommendation. For a married woman, it records her caste and sub-caste before marriage.",
+        hi: "उत्तरकाशी और देहरादून की वेबसाइट के अनुसार प्रमाण पत्र देने से पहले स्थानीय जाँच हो सकती है। पिथौरागढ़ के OBC फॉर्म में एक रिपोर्ट है जो \"सम्बन्धित पटवारी द्वारा ही\" भरी जाएगी: आपका नाम, माता-पिता, मूल निवास का पता, माता-पिता की जाति उपजाति सहित, पहले बना कोई जाति प्रमाण पत्र, माता-पिता / अभिभावक के नाम संपत्ति, परिवार की आय, और उनकी संस्तुति। शादीशुदा महिला के मामले में इसमें शादी से पहले की उसकी जाति और उपजाति लिखी जाती है।"
+      },
+      write: {
+        en: "Do not fill this part yourself. Keep your family details and papers ready in case the Patwari asks. Whether the online process uses the same report is not stated, so ask at your Tehsil / CSC centre.",
+        hi: "यह हिस्सा ख़ुद न भरें। पटवारी पूछें तो बताने के लिए परिवार की जानकारी और काग़ज़ तैयार रखें। ऑनलाइन प्रक्रिया में भी यही रिपोर्ट होती है या नहीं, यह नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling or signing the Patwari's part yourself"],
+        hi: ["पटवारी वाला हिस्सा ख़ुद भरना या उस पर हस्ताक्षर करना"]
+      }
+    },
+    {
+      label: { en: "Signature, place and date", hi: "हस्ताक्षर, स्थान और दिनांक" },
+      meaning: {
+        en: "The SC / ST form ends with \"आवेदक के हस्ताक्षर\" (applicant's signature), \"स्थान\" (place) and \"दिनांक\" (date). The OBC form also ends with place, date and your signature under \"भवदीय\" (yours faithfully).",
+        hi: "SC / ST फॉर्म के आख़िर में \"आवेदक के हस्ताक्षर\", \"स्थान\" और \"दिनांक\" हैं। OBC फॉर्म के आख़िर में भी स्थान, दिनांक और \"भवदीय\" के नीचे आपके हस्ताक्षर हैं।"
+      },
+      write: {
+        en: "Sign yourself and fill the place and date. Keep the receipt or application number you get. How long the certificate stays valid is not stated in the documents checked, so ask at your Tehsil / CSC centre or check apunisarkar.uk.gov.in.",
+        hi: "हस्ताक्षर ख़ुद करें और स्थान व दिनांक भरें। जो रसीद या आवेदन नंबर मिले, उसे संभालकर रखें। प्रमाण पत्र कितने समय तक मान्य रहता है, यह जाँचे गए काग़ज़ों में नहीं लिखा, इसलिए अपनी तहसील / CSC केंद्र पर पूछें या apunisarkar.uk.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Forgetting the place and date", "Not keeping the receipt or application number"],
+        hi: ["स्थान और दिनांक लिखना भूल जाना", "रसीद या आवेदन नंबर संभालकर न रखना"]
+      }
+    }
+  ]
+});

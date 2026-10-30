@@ -1,0 +1,273 @@
+// Checked against these official documents:
+// 1. National Scholarship Portal "User Manual for Students, NSP Web Portal" (v1.0, NSP; copy published
+//    by NIT Kurukshetra, July 2024).
+// 2. NSP "Frequently Asked Questions (FAQ) on One-Time Registration" (2024) and NSP "OTR Related
+//    instruction to the students who have applied on National Scholarship Portal in AY 2023-24"
+//    (copies published by NIT Kurukshetra, July 2024).
+// 3. Ministry of Education press release, PIB Delhi, 02 July 2024 (Release ID 2030218), on the OTR
+//    launch (copy published by SCERT Uttarakhand).
+// 4. Directorate of Tribal Welfare, Government of Goa, circular of July 2026 for AY 2026-27, which
+//    repeats the NSP / DBT Mission directions on Aadhaar, face authentication and bank seeding.
+// scholarships.gov.in itself could not be opened on 30-10-2026 (its security certificate was
+// rejected), so the PDFs on that site were not read directly. Every statement below comes from one of
+// the documents above. If something is not stated in them, the guide says "ask your institute's NSP
+// nodal officer or check scholarships.gov.in" instead of guessing.
+
+window.FORMS.push({
+  id: "nsp-scholarship",
+  verified: true,
+  source: {
+    title: "Govt. of Goa, Directorate of Tribal Welfare: NSP circular for AY 2026-27 (July 2026), with NSP Student User Manual v1.0 and NSP OTR FAQ (2024)",
+    url: "https://tribalwelfare.goa.gov.in/wp-content/uploads/2026/07/2026-27-central-circular.pdf"
+  },
+  lastChecked: "2026-10-30",
+  caution: {
+    en: "scholarships.gov.in could not be opened when this guide was checked, so it is based on an official 2026-27 state circular and official NSP manuals/FAQs from 2024 shared by an institute. Screens may have changed. Each scheme has its own rules; check with your institute's NSP nodal officer.",
+    hi: "यह गाइड जाँचते समय scholarships.gov.in नहीं खुल सका, इसलिए यह 2026-27 के एक आधिकारिक राज्य परिपत्र और 2024 के आधिकारिक NSP मैनुअल/FAQ (एक संस्थान द्वारा साझा) पर आधारित है। स्क्रीन बदल चुकी हो सकती हैं। हर योजना के अपने नियम होते हैं; अपने संस्थान के NSP नोडल अधिकारी से पुष्टि करें।"
+  },
+
+  category: { en: "Scholarship", hi: "छात्रवृत्ति" },
+  name: { en: "National Scholarship Portal: Registration & Application", hi: "राष्ट्रीय छात्रवृत्ति पोर्टल: पंजीकरण और आवेदन" },
+  about: {
+    en: "The National Scholarship Portal (NSP, scholarships.gov.in) is where you apply online for many government scholarships. First you get a One Time Registration (OTR) number. It is a unique 14-digit number based on your Aadhaar or Aadhaar Enrolment ID (EID), and it stays valid for your whole student life. Then you log in with it and fill the scholarship application. OTR is free on NSP. Each scheme has its own rules, documents and dates, so always read your scheme's details.",
+    hi: "राष्ट्रीय छात्रवृत्ति पोर्टल (NSP, scholarships.gov.in) पर कई सरकारी छात्रवृत्तियों के लिए ऑनलाइन आवेदन होता है। पहले आपको वन टाइम रजिस्ट्रेशन (OTR) नंबर मिलता है। यह आपके आधार या आधार नामांकन नंबर (EID) से बना 14 अंकों का अलग नंबर है, जो पूरी पढ़ाई के दौरान चलता है। फिर इसी से लॉग-इन करके छात्रवृत्ति का फॉर्म भरते हैं। NSP पर OTR मुफ़्त है। हर योजना के नियम, दस्तावेज़ और तारीख़ें अलग होती हैं, इसलिए अपनी योजना की जानकारी ज़रूर पढ़ें।"
+  },
+
+  fields: [
+    {
+      label: { en: "Before you start: what to keep ready", hi: "शुरू करने से पहले: क्या तैयार रखें" },
+      meaning: {
+        en: "The NSP student manual lists what to keep ready. It says \"not all the details mentioned below are mandatory\" and that \"Document requirements vary by scheme\".",
+        hi: "NSP की छात्र पुस्तिका में बताया गया है कि क्या तैयार रखें। उसमें लिखा है कि नीचे की हर चीज़ ज़रूरी नहीं है, और दस्तावेज़ योजना के हिसाब से अलग-अलग होते हैं।"
+      },
+      write: {
+        en: "Keep the items below at hand before you begin. To know which ones your scheme makes mandatory, check your scheme's details on scholarships.gov.in or ask your institute's NSP nodal officer.",
+        hi: "शुरू करने से पहले नीचे की चीज़ें पास रखें। आपकी योजना में कौन-सी ज़रूरी हैं, यह scholarships.gov.in पर अपनी योजना की जानकारी में देखें या अपने संस्थान के NSP नोडल अधिकारी से पूछें।"
+      },
+      documents: {
+        en: ["An active mobile number on an Android phone", "Aadhaar number, with the mobile number linked to Aadhaar (or the Aadhaar enrolment slip / parent's or legal guardian's Aadhaar, if you are a minor without Aadhaar)", "Basic details: name, gender, date of birth, father's and mother's name, domicile state", "School / institute enrolment number", "Class 10 and Class 12 roll number, percentage and marksheet (if applicable)", "Competitive exam name, roll number and year (if any)", "Ration card / PPPID details, UDID number (if you have a disability), complete address, domicile certificate (if applicable)"],
+        hi: ["Android फ़ोन में चालू मोबाइल नंबर", "आधार नंबर और आधार से जुड़ा मोबाइल नंबर (आधार न हो तो आधार नामांकन पर्ची / नाबालिग होने पर माता-पिता या क़ानूनी अभिभावक का आधार)", "बुनियादी जानकारी: नाम, लिंग, जन्म तिथि, पिता और माता का नाम, मूल निवास (डोमिसाइल) राज्य", "स्कूल / संस्थान का नामांकन नंबर", "10वीं और 12वीं का रोल नंबर, प्रतिशत और मार्कशीट (अगर लागू हो)", "प्रतियोगी परीक्षा का नाम, रोल नंबर और साल (अगर हो)", "राशन कार्ड / PPPID की जानकारी, UDID नंबर (दिव्यांगता हो तो), पूरा पता, डोमिसाइल प्रमाण पत्र (अगर लागू हो)"]
+      },
+      mistakes: {
+        en: [],
+        hi: []
+      }
+    },
+    {
+      label: { en: "OTR step 1–2: General Instructions and Register Mobile Number", hi: "OTR चरण 1–2: सामान्य निर्देश और मोबाइल नंबर रजिस्टर करना" },
+      meaning: {
+        en: "OTR starts from the \"Register yourself\" link on the NSP login page. The steps are: General Instructions, Register Mobile Number, eKYC Update, Finish. Only students can register.",
+        hi: "OTR, NSP लॉग-इन पेज पर \"Register yourself\" लिंक से शुरू होता है। चरण हैं: सामान्य निर्देश, मोबाइल नंबर रजिस्टर करना, eKYC अपडेट, और फ़िनिश। सिर्फ़ छात्र ही रजिस्टर कर सकते हैं।"
+      },
+      write: {
+        en: "Read the instructions and tick all the boxes to go ahead. Enter your mobile number, get the OTP, type the OTP and the captcha. NSP sends your OTR number and other messages to this number, so use a number that will stay active.",
+        hi: "निर्देश पढ़ें और आगे बढ़ने के लिए सारे खानों पर टिक करें। मोबाइल नंबर डालें, OTP मँगाएँ, फिर OTP और कैप्चा भरें। NSP आपका OTR नंबर और दूसरे संदेश इसी नंबर पर भेजता है, इसलिए ऐसा नंबर दें जो चालू रहे।"
+      },
+      changed: {
+        en: "Changed in 2024: the Ministry of Education announced on 2 July 2024 that the OTR application (with a new mobile app and web version) is live, and that OTR is required for both fresh and renewal applications on NSP.",
+        hi: "2024 में बदलाव: शिक्षा मंत्रालय ने 2 जुलाई 2024 को बताया कि OTR (नए मोबाइल ऐप और वेब वर्ज़न के साथ) शुरू हो गया है, और NSP पर नए (फ़्रेश) और नवीनीकरण (रिन्यूअल), दोनों आवेदनों के लिए OTR ज़रूरी है।"
+      },
+      documents: { en: ["Your active mobile number"], hi: ["आपका चालू मोबाइल नंबर"] },
+      mistakes: {
+        en: ["Using a number that is inactive or will soon stop working (the Goa 2026-27 circular asks students to update an inactive number on Aadhaar)"],
+        hi: ["बंद या जल्दी बंद होने वाला नंबर देना (गोवा के 2026-27 परिपत्र में कहा गया है कि बंद नंबर हो तो आधार में नया नंबर अपडेट कराएँ)"]
+      }
+    },
+    {
+      label: { en: "OTR step 3: eKYC (Aadhaar / EID / guardian's Aadhaar)", hi: "OTR चरण 3: eKYC (आधार / EID / अभिभावक का आधार)" },
+      meaning: {
+        en: "eKYC checks your identity with Aadhaar. The manual shows 3 options: \"I have an Aadhaar\", \"Aadhaar not assigned (I have EID)\", and using a guardian's Aadhaar. After eKYC you fill your basic information; the manual says \"All are mandatory\". You then get a Reference number on your mobile.",
+        hi: "eKYC में आधार से आपकी पहचान जाँची जाती है। पुस्तिका में 3 विकल्प हैं: \"मेरे पास आधार है\", \"आधार नहीं मिला (मेरे पास EID है)\", और अभिभावक के आधार से। eKYC के बाद बुनियादी जानकारी भरनी है; पुस्तिका के अनुसार सारे खाने ज़रूरी हैं। फिर आपके मोबाइल पर एक रेफ़रेंस नंबर आता है।"
+      },
+      write: {
+        en: "With Aadhaar: enter the student's Aadhaar number, click 'Get OTP' (the OTP goes to the mobile linked with Aadhaar), and enter the OTP and captcha. With EID: enter the 12-digit EID and the date and time of enrolment from the slip. Guardian's Aadhaar: enter it and the OTP sent to the guardian's linked mobile. Forgot the Reference number? Use \"Forgot Reference no\" with the Aadhaar number used in eKYC.",
+        hi: "आधार से: छात्र का आधार नंबर डालें, 'Get OTP' दबाएँ (OTP आधार से जुड़े मोबाइल पर आएगा), फिर OTP और कैप्चा भरें। EID से: 12 अंकों का EID और पर्ची पर लिखी नामांकन की तारीख़ और समय डालें। अभिभावक के आधार से: उनका आधार और उनके जुड़े मोबाइल पर आया OTP डालें। रेफ़रेंस नंबर भूल गए? eKYC में दिए आधार नंबर से \"Forgot Reference no\" विकल्प इस्तेमाल करें।"
+      },
+      documents: {
+        en: ["Aadhaar number with a linked mobile, or Aadhaar enrolment slip (EID), or parent's / legal guardian's Aadhaar if you are a minor"],
+        hi: ["आधार नंबर और उससे जुड़ा मोबाइल, या आधार नामांकन पर्ची (EID), या नाबालिग हों तो माता-पिता / क़ानूनी अभिभावक का आधार"]
+      },
+      mistakes: {
+        en: ["Starting eKYC when the mobile linked to Aadhaar is not with you (the OTP goes only to that number)"],
+        hi: ["आधार से जुड़ा मोबाइल पास न होने पर भी eKYC शुरू करना (OTP सिर्फ़ उसी नंबर पर आता है)"]
+      }
+    },
+    {
+      label: { en: "Face authentication and getting the OTR number", hi: "चेहरे से प्रमाणीकरण (फ़ेस ऑथेंटिकेशन) और OTR नंबर पाना" },
+      meaning: {
+        en: "\"Face authentication is mandatory for generation of OTR.\" It is done on an Android phone with two apps from the Google Play Store: UIDAI's \"Aadhaar Face RD\" and the \"NSP OTR\" app. When it succeeds, the OTR number is shown in the app and also sent to your registered mobile.",
+        hi: "OTR बनाने के लिए फ़ेस ऑथेंटिकेशन ज़रूरी है। यह Android फ़ोन पर Google Play Store के दो ऐप से होता है: UIDAI का \"Aadhaar Face RD\" और \"NSP OTR\" ऐप। सफल होने पर OTR नंबर ऐप में दिखता है और आपके रजिस्टर्ड मोबाइल पर भी भेजा जाता है।"
+      },
+      write: {
+        en: "Install both apps. In the NSP OTR app choose \"eKYC with FaceAuth\", enter your Reference number, click \"Send OTP\", enter the OTP and captcha, then click \"Proceed for Face Authentication\". The FAQ says capturing the face \"requires proper positioning and good lighting condition\". NSP services are also available at Common Service Centres (CSCs); the Goa 2026-27 circular says the total charge there is fixed at Rs. 30.",
+        hi: "दोनों ऐप इंस्टॉल करें। NSP OTR ऐप में \"eKYC with FaceAuth\" चुनें, रेफ़रेंस नंबर डालें, \"Send OTP\" दबाएँ, OTP और कैप्चा भरें, फिर \"Proceed for Face Authentication\" दबाएँ। FAQ के अनुसार चेहरा ठीक से कैप्चर होने के लिए सही जगह पर रहना और अच्छी रोशनी ज़रूरी है। NSP की सेवाएँ कॉमन सर्विस सेंटर (CSC) पर भी मिलती हैं; गोवा के 2026-27 परिपत्र के अनुसार वहाँ पूरा शुल्क Rs. 30 तय है।"
+      },
+      changed: {
+        en: "Changed: face authentication was launched in AY 2023-24 and was then optional (Ministry of Education, 2 July 2024). It is now mandatory for generating the OTR (NSP FAQ 2024; Goa circular for AY 2026-27).",
+        hi: "बदलाव: फ़ेस ऑथेंटिकेशन 2023-24 सत्र में शुरू हुआ था और तब वैकल्पिक था (शिक्षा मंत्रालय, 2 जुलाई 2024)। अब OTR बनाने के लिए यह ज़रूरी है (NSP FAQ 2024; गोवा परिपत्र, सत्र 2026-27)।"
+      },
+      documents: { en: ["Android phone with the Aadhaar Face RD and NSP OTR apps", "Your Reference number"], hi: ["Android फ़ोन, जिसमें Aadhaar Face RD और NSP OTR ऐप हों", "आपका रेफ़रेंस नंबर"] },
+      mistakes: {
+        en: ["Trying in poor light or without holding the face in position", "Not installing Aadhaar Face RD first (the app must be pre-installed)"],
+        hi: ["कम रोशनी में या चेहरा ठीक जगह रखे बिना कोशिश करना", "पहले Aadhaar Face RD इंस्टॉल न करना (यह ऐप पहले से होना चाहिए)"]
+      }
+    },
+    {
+      label: { en: "Logging in with your OTR", hi: "OTR से लॉग-इन करना" },
+      meaning: {
+        en: "Your OTR number is your username on NSP. The manual's login screen asks for the OTR, a password and a captcha. All your applications are linked to your one OTR, so you don't need to remember separate application IDs.",
+        hi: "NSP पर आपका OTR नंबर ही आपका यूज़रनेम है। पुस्तिका की लॉग-इन स्क्रीन पर OTR, पासवर्ड और कैप्चा माँगा जाता है। आपके सारे आवेदन एक ही OTR से जुड़े रहते हैं, इसलिए अलग-अलग आवेदन नंबर याद रखने की ज़रूरत नहीं।"
+      },
+      write: {
+        en: "Forgot the OTR? Use \"Know your OTR\" / \"Forgot OTR Number\" with the Aadhaar number used in eKYC. No password received, or forgot it? Use \"Forget Password\" under OTR login in the Student Corner. To change the mobile number, you first pass an Aadhaar-based OTP check, then verify the new number with an OTP.",
+        hi: "OTR भूल गए? eKYC वाले आधार नंबर से \"Know your OTR\" / \"Forgot OTR Number\" इस्तेमाल करें। पासवर्ड नहीं मिला या भूल गए? स्टूडेंट कॉर्नर में OTR लॉग-इन के नीचे \"Forget Password\" इस्तेमाल करें। मोबाइल नंबर बदलना है तो पहले आधार वाले OTP से जाँच होगी, फिर नए नंबर को OTP से पक्का करना होगा।"
+      },
+      documents: { en: ["Your OTR number"], hi: ["आपका OTR नंबर"] },
+      mistakes: {
+        en: ["Making a new registration instead of recovering your existing OTR (OTR is made once for your whole student life)"],
+        hi: ["पुराना OTR वापस पाने की जगह नया रजिस्ट्रेशन करना (OTR पूरी पढ़ाई के लिए एक ही बार बनता है)"]
+      }
+    },
+    {
+      label: { en: "Apply Fresh: Domicile State, Scholarship Category and scheme", hi: "Apply Fresh: डोमिसाइल राज्य, छात्रवृत्ति श्रेणी और योजना" },
+      meaning: {
+        en: "From 'My Applications', click 'Apply Fresh', read the disclaimer and click 'I Agree'. Then select your Domicile State, the scholarship category and the scholarship / incentive. The manual warns about the Domicile State: \"Once selected, it cannot be changed\".",
+        hi: "'My Applications' में 'Apply Fresh' दबाएँ, डिस्क्लेमर पढ़कर 'I Agree' दबाएँ। फिर डोमिसाइल (मूल निवास) राज्य, छात्रवृत्ति की श्रेणी और छात्रवृत्ति / प्रोत्साहन चुनें। पुस्तिका में चेतावनी है कि डोमिसाइल राज्य एक बार चुनने के बाद बदला नहीं जा सकता।"
+      },
+      write: {
+        en: "Choose carefully. \"Only 1 scholarship can be active at one time\", but you can apply for multiple incentives. To change the domicile state, category or application type later, you must withdraw ALL your applications and apply fresh. Which category or scheme fits you is not explained in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "ध्यान से चुनें। एक समय में सिर्फ़ 1 छात्रवृत्ति का आवेदन चालू रह सकता है, पर प्रोत्साहन (इंसेंटिव) कई ले सकते हैं। बाद में डोमिसाइल राज्य, श्रेणी या आवेदन का प्रकार बदलना हो, तो अपने सारे आवेदन वापस (विदड्रॉ) लेकर फिर से नया आवेदन करना होगा। आपके लिए कौन-सी श्रेणी या योजना सही है, यह पुस्तिका में नहीं बताया, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Choosing the wrong domicile state (it gets locked)", "Trying to apply for two scholarships at the same time"],
+        hi: ["ग़लत डोमिसाइल राज्य चुनना (यह लॉक हो जाता है)", "एक साथ दो छात्रवृत्तियों के लिए आवेदन करने की कोशिश"]
+      }
+    },
+    {
+      label: { en: "General Information (personal details and address)", hi: "सामान्य जानकारी (निजी जानकारी और पता)" },
+      meaning: {
+        en: "Your demographic details and photo are fetched automatically from your OTR. You check them and fill the rest. Fields marked in red are mandatory; grey ones are optional.",
+        hi: "आपकी निजी (डेमोग्राफ़िक) जानकारी और फ़ोटो आपके OTR से अपने आप आ जाती है। आप उसे जाँचते हैं और बाक़ी भरते हैं। लाल रंग वाले खाने ज़रूरी हैं; स्लेटी (ग्रे) वाले वैकल्पिक।"
+      },
+      write: {
+        en: "Enter your permanent address carefully. The manual says: \"Your permanent state can only be your domicile state.\" If your name or other demographic details are wrong, first update Aadhaar; the change reaches your OTR through a fresh eKYC, and then shows in the application. If Aadhaar details change, you must do eKYC and face authentication again.",
+        hi: "स्थायी पता ध्यान से भरें। पुस्तिका के अनुसार आपका स्थायी राज्य सिर्फ़ आपका डोमिसाइल राज्य ही हो सकता है। नाम या दूसरी निजी जानकारी ग़लत है, तो पहले आधार में सुधार कराएँ; नए eKYC से बदलाव OTR में आएगा, फिर आवेदन में दिखेगा। आधार की जानकारी बदलने पर eKYC और फ़ेस ऑथेंटिकेशन दोबारा करना होगा।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a permanent address in a state other than your domicile state", "Trying to fix a name spelling only on NSP instead of in Aadhaar"],
+        hi: ["डोमिसाइल राज्य से अलग राज्य का स्थायी पता देना", "नाम की स्पेलिंग आधार में ठीक कराने की जगह सिर्फ़ NSP पर ठीक करने की कोशिश"]
+      }
+    },
+    {
+      label: { en: "Academic Details and \"Get Institute\"", hi: "पढ़ाई की जानकारी और \"Get Institute\"" },
+      meaning: {
+        en: "Sections for: present course / class, previous academic details, Class 10, Class 12 and competitive exam details. You pick your institute with the 'Get Institute' button.",
+        hi: "इसमें हिस्से हैं: अभी का कोर्स / कक्षा, पिछली पढ़ाई, 10वीं, 12वीं और प्रतियोगी परीक्षा की जानकारी। अपना संस्थान 'Get Institute' बटन से चुनना है।"
+      },
+      write: {
+        en: "Search your institute by name (after choosing state / district), by AISHE / ITI (NCVT) code, or by UDISE code, then select it. Fill all red boxes. If your institute does not appear, the manual doesn't say what to do, so ask your institute's NSP nodal officer.",
+        hi: "संस्थान को नाम से (राज्य / ज़िला चुनकर), AISHE / ITI (NCVT) कोड से, या UDISE कोड से खोजें और चुनें। सारे लाल खाने भरें। संस्थान सूची में न मिले तो क्या करें, यह पुस्तिका में नहीं लिखा, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें।"
+      },
+      documents: {
+        en: ["Institute's AISHE / ITI (NCVT) or UDISE code, if you know it", "Class 10 / 12 roll number, percentage and marksheet"],
+        hi: ["संस्थान का AISHE / ITI (NCVT) या UDISE कोड, अगर पता हो", "10वीं / 12वीं का रोल नंबर, प्रतिशत और मार्कशीट"]
+      },
+      mistakes: {
+        en: ["Selecting a different campus or institute with a similar name"],
+        hi: ["मिलते-जुलते नाम वाला दूसरा संस्थान या कैंपस चुन लेना"]
+      }
+    },
+    {
+      label: { en: "Application Specific, Scheme Available and Scheme Specific Details", hi: "Application Specific, Scheme Available और Scheme Specific Details" },
+      meaning: {
+        en: "'Application Specific' depends on your domicile state; it may ask for ration card and UDID details (click to fetch the data), or be skipped. 'Scheme Available' shows \"Only the schemes which the student is eligible for\", based on what you entered. 'Scheme Specific Details' appears only for some schemes.",
+        hi: "'Application Specific' आपके डोमिसाइल राज्य पर निर्भर है; इसमें राशन कार्ड और UDID की जानकारी माँगी जा सकती है (डेटा लाने के लिए बटन दबाना होता है), या यह छूट भी सकता है। 'Scheme Available' में सिर्फ़ वे योजनाएँ दिखती हैं जिनके लिए आप आपकी भरी जानकारी के हिसाब से योग्य हैं। 'Scheme Specific Details' सिर्फ़ कुछ योजनाओं में आता है।"
+      },
+      write: {
+        en: "Select one scheme with the radio button. If a scheme you expected is missing, re-check the details you entered earlier. The exact eligibility of each scheme is not in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "रेडियो बटन से एक योजना चुनें। जिस योजना की उम्मीद थी वह न दिखे, तो पहले भरी जानकारी दोबारा जाँचें। हर योजना की योग्यता पुस्तिका में नहीं लिखी, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+      },
+      documents: { en: ["Ration card / PPPID details (if asked)", "UDID number (if you have a disability)"], hi: ["राशन कार्ड / PPPID की जानकारी (अगर माँगी जाए)", "UDID नंबर (दिव्यांगता हो तो)"] },
+      mistakes: {
+        en: ["Wrong details in earlier steps, so the right scheme never shows up"],
+        hi: ["पहले के चरणों में ग़लत जानकारी, जिससे सही योजना दिखती ही नहीं"]
+      }
+    },
+    {
+      label: { en: "Bank account: Aadhaar seeding (DBT)", hi: "बैंक खाता: आधार सीडिंग (DBT)" },
+      meaning: {
+        en: "Per the DBT Mission directions quoted in the Goa circular for 2026-27, all scholarship payments are made through the Aadhaar Payment Bridge (APB). So your bank account must be seeded (linked) with your Aadhaar number, and the status should show \"Active\".",
+        hi: "गोवा के 2026-27 परिपत्र में दिए DBT मिशन के निर्देशों के अनुसार, सारी छात्रवृत्ति आधार पेमेंट ब्रिज (APB) से दी जाती है। इसलिए आपका बैंक खाता आपके आधार नंबर से सीड (जुड़ा) होना चाहिए, और स्थिति \"Active\" दिखनी चाहिए।"
+      },
+      write: {
+        en: "Check your Bank Seeding Status on NSP (OTR login, or 'Aadhaar Seeding' in Student Corner) or on myaadhaar.uidai.gov.in. Already seeded but NSP shows \"Not seeded\"? The FAQ says to click \"Aadhar Seeding -> Check it now\" in 'Profile Details' under OTR login. How to seed the account is not explained in these documents, so ask your bank or your institute's NSP nodal officer.",
+        hi: "अपना बैंक सीडिंग स्टेटस NSP पर (OTR लॉग-इन से, या स्टूडेंट कॉर्नर में 'Aadhaar Seeding' से) या myaadhaar.uidai.gov.in पर देखें। खाता सीड है पर NSP पर \"Not seeded\" दिख रहा है? FAQ के अनुसार OTR लॉग-इन में 'Profile Details' के अंदर \"Aadhar Seeding -> Check it now\" दबाएँ। खाता सीड कैसे कराएँ, यह इन दस्तावेज़ों में नहीं बताया, इसलिए अपने बैंक या संस्थान के NSP नोडल अधिकारी से पूछें।"
+      },
+      changed: {
+        en: "Changed: the Goa circular for AY 2026-27 says \"Bank details will no longer be captured on the NSP portal.\" Money goes to the Aadhaar-seeded account.",
+        hi: "बदलाव: गोवा के 2026-27 परिपत्र में लिखा है कि अब NSP पोर्टल पर बैंक की जानकारी नहीं ली जाएगी। पैसा आधार से सीड हुए खाते में जाता है।"
+      },
+      documents: { en: ["A bank account seeded with your Aadhaar"], hi: ["आपके आधार से सीड हुआ बैंक खाता"] },
+      mistakes: {
+        en: ["Applying without checking that the seeding status is \"Active\""],
+        hi: ["सीडिंग स्टेटस \"Active\" है या नहीं, यह देखे बिना आवेदन करना"]
+      }
+    },
+    {
+      label: { en: "Upload Document(s), including income certificate", hi: "दस्तावेज़ अपलोड करना, आय प्रमाण पत्र सहित" },
+      meaning: {
+        en: "You upload all mandatory documents for your scheme. Which documents are needed depends on the scheme. For example, the Goa 2026-27 circular (Pre-Matric Scholarship for ST students) asks fresh applicants for an income certificate \"issued by competent authority for the year 2025-26\", a caste certificate, the previous year's marksheet and a disability certificate (if applicable), each under 200 KB in PDF/JPEG.",
+        hi: "अपनी योजना के सारे ज़रूरी दस्तावेज़ अपलोड करने हैं। कौन-से दस्तावेज़ चाहिए, यह योजना पर निर्भर है। उदाहरण के लिए, गोवा का 2026-27 परिपत्र (अनुसूचित जनजाति के छात्रों की प्री-मैट्रिक छात्रवृत्ति) नए आवेदकों से सक्षम अधिकारी का 2025-26 का आय प्रमाण पत्र, जाति प्रमाण पत्र, पिछले साल की मार्कशीट और दिव्यांगता प्रमाण पत्र (अगर लागू हो) माँगता है, हर फ़ाइल 200 KB से कम, PDF/JPEG में।"
+      },
+      write: {
+        en: "Click to upload each file, then use 'View / Download' to check it opened correctly. That Goa list is only one scheme's example. For your scheme's documents, income certificate rules, format and size, check your scheme's details on scholarships.gov.in or ask your institute's NSP nodal officer.",
+        hi: "हर फ़ाइल अपलोड करें, फिर 'View / Download' से देखें कि सही खुल रही है। गोवा वाली सूची सिर्फ़ एक योजना का उदाहरण है। आपकी योजना के दस्तावेज़, आय प्रमाण पत्र के नियम, फ़ॉर्मेट और साइज़ के लिए scholarships.gov.in पर अपनी योजना की जानकारी देखें या अपने संस्थान के NSP नोडल अधिकारी से पूछें।"
+      },
+      documents: {
+        en: ["Documents asked by your scheme (for example: income certificate, caste certificate, previous year's marksheet, disability certificate)"],
+        hi: ["आपकी योजना के माँगे गए दस्तावेज़ (जैसे: आय प्रमाण पत्र, जाति प्रमाण पत्र, पिछले साल की मार्कशीट, दिव्यांगता प्रमाण पत्र)"]
+      },
+      mistakes: {
+        en: ["Uploading a file without opening it once to check it"],
+        hi: ["फ़ाइल अपलोड करके एक बार खोलकर न देखना"]
+      }
+    },
+    {
+      label: { en: "Final Submit, Withdraw and Revoke", hi: "फ़ाइनल सबमिट, विदड्रॉ (वापस लेना) और रिवोक (फिर चालू करना)" },
+      meaning: {
+        en: "Final Submit sends your application for approval. The manual is clear: \"This application can no longer be edited after final submission.\" To fix a wrong entry, you withdraw the application and apply fresh.",
+        hi: "फ़ाइनल सबमिट से आवेदन मंज़ूरी के लिए चला जाता है। पुस्तिका साफ़ कहती है कि फ़ाइनल सबमिट के बाद आवेदन बदला नहीं जा सकता। ग़लती सुधारनी हो तो आवेदन वापस (विदड्रॉ) लेकर नया आवेदन करना होगा।"
+      },
+      write: {
+        en: "Check everything before you click 'Yes' to confirm. To withdraw, use the 'Submit / Withdraw / Revoke' button on My Applications and pick a reason. You cannot withdraw once the application is approved by L2 (Nodal officer) or payment is released. 'Revoke Application' brings a withdrawn application back, but not if another scholarship application is active, application dates have closed, or the domicile state is different.",
+        hi: "पुष्टि के लिए 'Yes' दबाने से पहले सब कुछ जाँच लें। वापस लेने के लिए My Applications में 'Submit / Withdraw / Revoke' बटन दबाएँ और कारण चुनें। L2 (नोडल अधिकारी) की मंज़ूरी या पैसा जारी होने के बाद आवेदन वापस नहीं ले सकते। 'Revoke Application' से वापस लिया आवेदन फिर चालू होता है, पर तब नहीं जब दूसरा छात्रवृत्ति आवेदन चालू हो, आवेदन की तारीख़ें बंद हो गई हों, या डोमिसाइल राज्य अलग हो।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Clicking Final Submit before checking every page", "Withdrawing late and finding that application dates have closed, so it can't be revoked"],
+        hi: ["हर पेज जाँचे बिना फ़ाइनल सबमिट दबाना", "देर से विदड्रॉ करना और फिर तारीख़ें बंद होने से रिवोक न कर पाना"]
+      }
+    },
+    {
+      label: { en: "Renewal, verification and dates", hi: "रिन्यूअल (नवीनीकरण), सत्यापन और तारीख़ें" },
+      meaning: {
+        en: "After you submit, your application is verified in levels. For example, the 2024 PIB release on NMMSS describes Level-1 verification by the Institute Nodal Officer (INO) and Level-2 by the District Nodal Officer (DNO). The Goa 2026-27 circular says institute and state officers also do face / biometric eKYC to verify applications. For renewal, the student must complete OTP-based eKYC; \"Applications will not be submitted without Aadhaar based eKYC.\"",
+        hi: "सबमिट करने के बाद आवेदन का कई स्तरों पर सत्यापन होता है। उदाहरण के लिए, NMMSS पर 2024 की PIB रिलीज़ में लेवल-1 सत्यापन संस्थान नोडल अधिकारी (INO) और लेवल-2 ज़िला नोडल अधिकारी (DNO) करते हैं। गोवा के 2026-27 परिपत्र के अनुसार संस्थान और राज्य के अधिकारी भी आवेदन जाँचने के लिए चेहरे / बायोमेट्रिक से eKYC करते हैं। रिन्यूअल में छात्र को OTP वाला eKYC पूरा करना होगा; आधार वाले eKYC के बिना आवेदन जमा नहीं होगा।"
+      },
+      write: {
+        en: "Use the same OTR for renewal; you can update your mobile number at renewal time on NSP. Tell your institute once you submit, since your application must be verified there. Last dates differ by scheme and state, and no single official all-scheme date list was found, so check your scheme on scholarships.gov.in or ask your institute's NSP nodal officer. NSP helpdesk (from the manual): helpdesk@nsp.gov.in, 0120-6619540 (8 AM to 8 PM, except government holidays).",
+        hi: "रिन्यूअल में वही OTR इस्तेमाल करें; रिन्यूअल के समय NSP पर मोबाइल नंबर भी बदल सकते हैं। सबमिट करने के बाद अपने संस्थान को बताएँ, क्योंकि वहाँ आवेदन का सत्यापन होना है। आख़िरी तारीख़ें योजना और राज्य के हिसाब से अलग हैं, और सभी योजनाओं की एक आधिकारिक सूची नहीं मिली, इसलिए scholarships.gov.in पर अपनी योजना देखें या संस्थान के NSP नोडल अधिकारी से पूछें। NSP हेल्पडेस्क (पुस्तिका से): helpdesk@nsp.gov.in, 0120-6619540 (सुबह 8 से रात 8 बजे, सरकारी छुट्टियों को छोड़कर)।"
+      },
+      documents: {
+        en: ["Your OTR number", "Previous year's marksheet (asked for renewal in the Goa 2026-27 circular; check your scheme)"],
+        hi: ["आपका OTR नंबर", "पिछले साल की मार्कशीट (गोवा के 2026-27 परिपत्र में रिन्यूअल के लिए माँगी गई; अपनी योजना में देखें)"]
+      },
+      mistakes: {
+        en: ["Making a new OTR for renewal instead of using your existing one", "Submitting on the last day and leaving no time for institute verification"],
+        hi: ["रिन्यूअल के लिए पुराने OTR की जगह नया OTR बनाना", "आख़िरी दिन सबमिट करना, जिससे संस्थान के सत्यापन के लिए समय न बचे"]
+      }
+    }
+  ]
+});

@@ -74,17 +74,27 @@ function renderList() {
     return;
   }
 
+  // Group by category (in the order categories first appear), with a heading for each group.
+  const groups = new Map();
   matches.forEach(form => {
-    const btn = el("button");
-    btn.type = "button";
-    btn.append(
-      el("span", "name", form.name[lang]),
-      el("span", "meta", `${form.category[lang]} · ${UI[lang].fieldsCount(form.fields.length)}`)
-    );
-    btn.addEventListener("click", () => { location.hash = "form/" + form.id; });
-    const li = el("li");
-    li.append(btn);
-    list.append(li);
+    if (!groups.has(form.category.en)) groups.set(form.category.en, []);
+    groups.get(form.category.en).push(form);
+  });
+
+  groups.forEach(forms => {
+    list.append(el("li", "group-heading", forms[0].category[lang]));
+    forms.forEach(form => {
+      const btn = el("button");
+      btn.type = "button";
+      btn.append(
+        el("span", "name", form.name[lang]),
+        el("span", "meta", UI[lang].fieldsCount(form.fields.length))
+      );
+      btn.addEventListener("click", () => { location.hash = "form/" + form.id; });
+      const li = el("li");
+      li.append(btn);
+      list.append(li);
+    });
   });
 }
 
@@ -105,6 +115,9 @@ function renderForm(form) {
     status = el("p", "status unverified", UI[lang].unverified);
   }
   $("form-status").replaceChildren(status);
+
+  // Extra warning when the official source we checked may be old or incomplete.
+  if (form.caution) $("form-status").append(el("p", "status unverified", form.caution[lang]));
 
   const list = $("field-list");
   list.replaceChildren();
