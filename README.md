@@ -2,6 +2,8 @@
 
 Explains confusing official forms (bank, government, legal, college) field by field, in simple English and Hindi.
 
+**Live:** https://deepanshi-code.github.io/Form_Saathi/
+
 ## Problem
 
 Official forms use small print, jargon and unclear boxes. First-time applicants (for example, at 18) and older family members both get stuck. Mistakes mean rejected forms, repeat visits, paying agents, or embarrassment at the counter.
@@ -13,7 +15,7 @@ TODO: add findings from interviews and the collected forms.
 
 | Part | State |
 |---|---|
-| Website skeleton (list, field-by-field view, Hindi/English, search) | Done |
+| Website skeleton (list, field-by-field view, Hindi/English, search) | Done, live on GitHub Pages |
 | Verified form guides | 0. The bank form is a **placeholder**. |
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
 
