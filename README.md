@@ -16,7 +16,7 @@ TODO: add findings from interviews and the collected forms.
 | Part | State |
 |---|---|
 | Website skeleton (list, field-by-field view, Hindi/English, search) | Done, live on GitHub Pages |
-| Verified form guides | 13, all checked 2026-10-30: SBI, PNB\*, Bank of Baroda\* and HDFC savings accounts, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6), Learner's licence (Form 2), Fresh passport, National Scholarship Portal\*, UGC anti-ragging undertaking, Uttarakhand caste certificate\*, Uttarakhand permanent residence certificate\* |
+| Verified form guides | 17, all checked 2026-10-30: SBI, PNB\*, Bank of Baroda\*, HDFC, Post Office\* and Jan Dhan\* savings accounts, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6 and Form 8), Learner's licence (Form 2), Fresh passport, National Scholarship Portal\*, PM-Vidyalaxmi education loan, UGC anti-ragging undertaking, Uttarakhand caste certificate\*, Uttarakhand permanent residence certificate\* |
 | Not yet verified | Uttarakhand income certificate (no official form found yet) |
 
 \* Shown with a caution note: the official source found is older or indirect (details on each page).

@@ -1,0 +1,261 @@
+// Checked against the Election Commission of India's English "Form-8: Voter Application Form for shifting of
+// Residence/Correction of Entries in Existing Electoral Roll/Replacement of EPIC/Marking of PwD" published on
+// voters.eci.gov.in (PDF last modified 28-10-2026; its wording matches the 01-08-2022 copy on the CEO Telangana
+// website), the official "Guidelines for filling up the application Form-8" on voters.eci.gov.in (same date), and
+// the CEO Odisha note "Recent Amendments relating to Electoral Rolls" on the forms that changed on 1 August 2022.
+// Every statement below comes from one of those documents. If something is not stated in them, the guide says
+// "ask your Booth Level Officer (BLO)" instead of guessing.
+
+window.FORMS.push({
+  id: "voter-id-form-8",
+  verified: true,
+  source: {
+    title: "Election Commission of India, Form-8: Shifting of Residence / Correction of Entries / Replacement of EPIC / Marking of PwD (voters.eci.gov.in, PDF last modified 28-10-2026)",
+    url: "https://voters.eci.gov.in/formspdf/Form_8_English.pdf"
+  },
+  lastChecked: "2026-10-30",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "Voter ID: Form 8 (Shift Address / Correction)", hi: "वोटर आईडी: फॉर्म 8 (पता बदलना / सुधार)" },
+  about: {
+    en: "Form 8 is only for people who are already on the voter list. You use it for ONE of four things: (1) you have shifted your home, (2) you want to correct your details on the voter list, (3) you need a new voter ID card (EPIC) because yours is lost, destroyed or damaged, or (4) you want to be marked as a Person with Disability. If your application for 1, 2 or 3 is approved, a new replacement EPIC is issued and you must return your old one to the Electoral Registration Officer (ERO). Never registered before? Use Form 6 instead.",
+    hi: "फॉर्म 8 सिर्फ़ उनके लिए है जिनका नाम पहले से मतदाता सूची में है। इसे इन चार में से किसी एक काम के लिए भरते हैं: (1) आपने घर बदल लिया है, (2) मतदाता सूची में अपनी जानकारी ठीक करवानी है, (3) वोटर आईडी कार्ड (EPIC) खो गया, नष्ट हो गया या फट गया है और नया चाहिए, या (4) दिव्यांग व्यक्ति के रूप में दर्ज होना है। 1, 2 या 3 का आवेदन मंज़ूर होने पर नया EPIC मिलता है और पुराना EPIC निर्वाचक रजिस्ट्रीकरण अधिकारी (ERO) को लौटाना होता है। पहले कभी नाम नहीं जुड़ा? तो फॉर्म 6 भरें।"
+  },
+
+  fields: [
+    {
+      label: { en: "Assembly / Parliamentary Constituency (\"To, The Electoral Registration Officer\")", hi: "विधानसभा / लोकसभा क्षेत्र (\"सेवा में, निर्वाचक रजिस्ट्रीकरण ऑफ़िसर\")" },
+      meaning: {
+        en: "The form is addressed to an Electoral Registration Officer (ERO). You write the number and name of the Assembly Constituency. The Parliamentary Constituency line is only for Union Territories that have no Legislative Assembly.",
+        hi: "यह फॉर्म निर्वाचक रजिस्ट्रीकरण अधिकारी (ERO) के नाम है। इसमें विधानसभा क्षेत्र का नंबर और नाम लिखना है। लोकसभा क्षेत्र वाली लाइन सिर्फ़ उन केंद्र शासित प्रदेशों के लिए है जहाँ विधानसभा नहीं है।"
+      },
+      write: {
+        en: "If you are shifting, the guidelines say the form goes to the ERO of the constituency \"in which the new address of the applicant is located\". So write your NEW constituency. Don't know its number and name? Ask your BLO or check voters.eci.gov.in.",
+        hi: "अगर आप पता बदल रहे हैं, तो निर्देशों के अनुसार फॉर्म उस क्षेत्र के ERO को जाता है जहाँ आपका नया पता है। इसलिए अपना नया क्षेत्र लिखें। उसका नंबर और नाम नहीं पता? अपने BLO से पूछें या voters.eci.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing your old constituency when you have shifted to a new one"],
+        hi: ["नए क्षेत्र में आ जाने के बाद भी पुराना क्षेत्र लिख देना"]
+      }
+    },
+    {
+      label: { en: "Name of the applicant and EPIC No. (item I)", hi: "आवेदक का नाम और EPIC नंबर (खाना I)" },
+      meaning: {
+        en: "Your name and your EPIC number (the number printed on your voter ID card). This tells the office which existing entry on the voter list is yours.",
+        hi: "आपका नाम और आपका EPIC नंबर (वोटर आईडी कार्ड पर छपा नंबर)। इससे दफ़्तर को पता चलता है कि मतदाता सूची में कौन-सी प्रविष्टि आपकी है।"
+      },
+      write: {
+        en: "Copy the EPIC number carefully from your voter ID card. If you are correcting your name, still write it here as you want it, and also tick \"Name\" in section 2. If you don't know your EPIC number, ask your BLO or check voters.eci.gov.in.",
+        hi: "EPIC नंबर अपने वोटर आईडी कार्ड से ध्यान से उतारें। अगर नाम ठीक करवा रहे हैं, तब भी यहाँ नाम लिखें और सेक्शन 2 में \"नाम\" पर भी टिक करें। EPIC नंबर नहीं पता, तो अपने BLO से पूछें या voters.eci.gov.in देखें।"
+      },
+      documents: { en: ["Your existing voter ID card (EPIC), to copy the number"], hi: ["आपका मौजूदा वोटर आईडी कार्ड (EPIC), नंबर देखने के लिए"] },
+      mistakes: {
+        en: ["Writing a family member's EPIC number instead of your own", "Mixing up similar-looking letters and numbers (like O and 0)"],
+        hi: ["अपनी जगह परिवार के किसी सदस्य का EPIC नंबर लिख देना", "मिलते-जुलते अक्षर और अंक (जैसे O और 0) में गड़बड़ करना"]
+      }
+    },
+    {
+      label: { en: "Aadhaar details (item I)", hi: "आधार की जानकारी (खाना I)" },
+      meaning: {
+        en: "Tick ONE box: (a) write your Aadhaar number, or (b) \"I am not able to furnish my Aadhaar Number because I don't have Aadhaar Number.\" The guidelines say Aadhaar is asked \"for the purpose of authentication of entries\".",
+        hi: "एक खाने पर टिक करें: (क) अपना आधार नंबर लिखें, या (ख) \"मैं आधार नंबर नहीं दे सकता/सकती, क्योंकि मेरे पास आधार नंबर नहीं है।\" निर्देशों के अनुसार आधार \"प्रविष्टियों के प्रमाणीकरण\" (सूची की जानकारी जाँचने) के लिए माँगा जाता है।"
+      },
+      write: {
+        en: "If you don't have Aadhaar, tick box (b). The CEO Odisha note on the 2022 changes says electors can submit Aadhaar \"voluntarily\". If you have Aadhaar but don't wish to give it, the form doesn't say what to tick, so ask your BLO.",
+        hi: "आधार नहीं है तो खाना (ख) पर टिक करें। 2022 के बदलावों पर CEO ओडिशा के नोट में लिखा है कि मतदाता आधार अपनी मर्ज़ी से (स्वैच्छिक रूप से) दे सकते हैं। आधार है पर देना नहीं चाहते, तो क्या टिक करें यह फॉर्म में नहीं लिखा, इसलिए अपने BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking both boxes", "Writing a wrong Aadhaar digit (check it twice)"],
+        hi: ["दोनों खानों पर टिक कर देना", "आधार का कोई अंक ग़लत लिखना (दो बार जाँचें)"]
+      }
+    },
+    {
+      label: { en: "Mobile number and email (item I)", hi: "मोबाइल नंबर और ईमेल (खाना I)" },
+      meaning: {
+        en: "Your own mobile number and email, or those of your father, mother or any other relative \"(if available)\".",
+        hi: "आपका अपना मोबाइल नंबर और ईमेल, या पिता, माता या किसी और रिश्तेदार का, \"(अगर उपलब्ध हो)\"।"
+      },
+      write: {
+        en: "Write your own if you have one; otherwise a relative's. What messages are sent to this number is not stated on the form, so ask your BLO or check voters.eci.gov.in.",
+        hi: "अपना हो तो अपना लिखें, वरना किसी रिश्तेदार का। इस नंबर पर कौन-से संदेश आएँगे, यह फॉर्म में नहीं लिखा, इसलिए अपने BLO से पूछें या voters.eci.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a number that will soon stop working"],
+        hi: ["ऐसा नंबर देना जो जल्दी बंद होने वाला हो"]
+      }
+    },
+    {
+      label: { en: "What you are applying for (item II): tick only one", hi: "आप किसके लिए आवेदन कर रहे हैं (खाना II): सिर्फ़ एक पर टिक करें" },
+      meaning: {
+        en: "Four choices: 1. Shifting of Residence, 2. Correction of Entries in Existing Electoral Roll, 3. Issue of Replacement EPIC without correction, 4. Request for marking as Person with Disability. The form says \"Tick any one\".",
+        hi: "चार विकल्प: 1. निवास बदलना, 2. मौजूदा मतदाता सूची में प्रविष्टियों का सुधार, 3. बिना सुधार के नया (बदले में) EPIC, 4. दिव्यांग व्यक्ति के रूप में दर्ज करने का अनुरोध। फॉर्म पर लिखा है: \"किसी एक पर टिक करें\"।"
+      },
+      write: {
+        en: "Tick one, then fill only the matching section below (1, 2, 3 or 4). The guidelines say: \"All other sections which are not relevant should be struck off\", so draw a line through the sections you are not using.",
+        hi: "एक पर टिक करें, फिर नीचे सिर्फ़ उसी से जुड़ा सेक्शन (1, 2, 3 या 4) भरें। निर्देशों के अनुसार जो सेक्शन लागू नहीं हैं, उन्हें काट देना है, यानी जिन सेक्शन को आप नहीं भर रहे उन पर लाइन खींच दें।"
+      },
+      changed: {
+        en: "Changed on 1 August 2022: earlier, shifting within the same constituency used Form 8A, and a replacement EPIC used Form 001. Both were discontinued and added to this modified Form 8. Shifting from one constituency to another, earlier done in Form 6, is also now in Form 8.",
+        hi: "1 अगस्त 2022 से बदलाव: पहले उसी क्षेत्र के अंदर घर बदलने पर फॉर्म 8A और नया EPIC लेने के लिए फॉर्म 001 भरा जाता था। ये दोनों बंद करके इसी नए फॉर्म 8 में जोड़ दिए गए। एक क्षेत्र से दूसरे क्षेत्र में जाना, जो पहले फॉर्म 6 से होता था, अब यह भी फॉर्म 8 से होता है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking more than one option", "Not striking off the sections you are not using", "Using Form 8 when you have never been on the voter list (use Form 6)"],
+        hi: ["एक से ज़्यादा विकल्पों पर टिक करना", "जो सेक्शन नहीं भर रहे, उन्हें न काटना", "कभी मतदाता सूची में नाम न होने पर भी फॉर्म 8 भरना (फॉर्म 6 भरें)"]
+      }
+    },
+    {
+      label: { en: "Section 1: Shifting of Residence: present address *", hi: "सेक्शन 1: निवास बदलना: अभी का पता *" },
+      meaning: {
+        en: "By filling this you request that your name \"may be deleted from the previous address and shifted to the current address\", and that a replacement EPIC be issued. The CEO Odisha note says this covers shifting \"within or across constituencies\". You write your \"Present Ordinary Residence\", the place where you now normally live.",
+        hi: "यह भरकर आप अनुरोध करते हैं कि आपका नाम पुराने पते से हटाकर नए (अभी के) पते पर कर दिया जाए, और नया EPIC दिया जाए। CEO ओडिशा के नोट के अनुसार यह उसी क्षेत्र के अंदर और दूसरे क्षेत्र में, दोनों तरह के बदलाव के लिए है। इसमें अपना \"अभी का साधारण निवास\" लिखें, यानी जहाँ आप अब आम तौर पर रहते हैं।"
+      },
+      write: {
+        en: "Fill every line: House/Building/Apartment No., Street/Area/Locality/Mohalla/Road, Town/Village, Post Office, PIN Code, Tehsil/Taluqa/Mandal, District, State/UT. The form also says \"I hereby return my old EPIC\". Whether a hostel or PG counts as your ordinary residence is not explained in Form 8 or its guidelines, so ask your BLO.",
+        hi: "हर लाइन भरें: मकान/बिल्डिंग/अपार्टमेंट नंबर, गली/इलाक़ा/मोहल्ला/सड़क, शहर/गाँव, डाकघर, पिन कोड, तहसील/तालुका/मंडल, ज़िला, राज्य/केंद्र शासित प्रदेश। फॉर्म में यह भी लिखा है: \"मैं अपना पुराना EPIC लौटाता/लौटाती हूँ\"। हॉस्टल या PG को साधारण निवास माना जाएगा या नहीं, यह फॉर्म 8 या उसके निर्देशों में नहीं लिखा, इसलिए अपने BLO से पूछें।"
+      },
+      documents: { en: ["Your old EPIC, to return"], hi: ["आपका पुराना EPIC, लौटाने के लिए"] },
+      mistakes: {
+        en: ["Writing your old address here instead of the new one", "Leaving out the PIN code", "Filling Form 6 again at the new place instead of Form 8"],
+        hi: ["नए पते की जगह पुराना पता लिख देना", "पिन कोड न लिखना", "नई जगह पर फॉर्म 8 की जगह फिर से फॉर्म 6 भर देना"]
+      }
+    },
+    {
+      label: { en: "Section 1: Shifting of Residence: address proof", hi: "सेक्शन 1: निवास बदलना: पते का प्रमाण" },
+      meaning: {
+        en: "A self-attested copy (you sign the photocopy yourself) of ONE address proof for the new address. The form says it can be in your name, or in the name of a parent, spouse or adult child \"if already enrolled with as elector at the same address\".",
+        hi: "नए पते के किसी एक प्रमाण की स्व-प्रमाणित कॉपी (फ़ोटोकॉपी पर ख़ुद हस्ताक्षर करके)। फॉर्म के अनुसार यह आपके नाम का हो सकता है, या माता-पिता, पति/पत्नी या बालिग़ बच्चे के नाम का, अगर वे उसी पते पर पहले से मतदाता हैं।"
+      },
+      write: {
+        en: "Tick the document you are attaching. If you have none of the listed ones, write the name of the other document next to \"Any Other: (Pl. Specify)\". The form notes that a listed document \"will ensure speedy delivery of services\". Whether another document will be accepted for you, ask your BLO.",
+        hi: "जो दस्तावेज़ लगा रहे हैं उस पर टिक करें। सूची वाला कोई दस्तावेज़ नहीं है, तो \"कोई अन्य (कृपया बताएँ)\" के आगे दूसरे दस्तावेज़ का नाम लिखें। फॉर्म के अनुसार सूची वाला दस्तावेज़ लगाने से काम जल्दी होता है। आपका दूसरा दस्तावेज़ माना जाएगा या नहीं, यह अपने BLO से पूछें।"
+      },
+      documents: {
+        en: ["Any one of: Water / electricity / gas connection bill for that address (the form says \"atleast 1 year\"; ask your BLO what this means for you)", "Aadhaar card", "Current passbook of a nationalised / scheduled bank or post office", "Indian passport", "Revenue Department land owning records, including Kisan Bahi", "Registered rent lease deed (if tenant)", "Registered sale deed (if own house)"],
+        hi: ["इनमें से कोई एक: उस पते का पानी / बिजली / गैस कनेक्शन का बिल (फॉर्म पर \"कम से कम 1 वर्ष\" लिखा है; आपके लिए इसका क्या मतलब है, BLO से पूछें)", "आधार कार्ड", "राष्ट्रीयकृत / अनुसूचित बैंक या डाकघर की चालू पासबुक", "भारतीय पासपोर्ट", "राजस्व विभाग के ज़मीन के मालिकाना काग़ज़, किसान बही सहित", "रजिस्टर्ड किरायानामा (किराएदार हों तो)", "रजिस्टर्ड बैनामा (अपना घर हो तो)"]
+      },
+      mistakes: {
+        en: ["Forgetting to sign (self-attest) the photocopy", "Not ticking which document you attached", "Giving a proof in a relative's name when that relative is not already a voter at the same address"],
+        hi: ["फ़ोटोकॉपी पर ख़ुद हस्ताक्षर (स्व-प्रमाणित) करना भूल जाना", "कौन-सा दस्तावेज़ लगाया, उस पर टिक न करना", "ऐसे रिश्तेदार के नाम का प्रमाण देना जो उसी पते पर पहले से मतदाता नहीं है"]
+      }
+    },
+    {
+      label: { en: "Section 2: Correction of Entries: what to correct", hi: "सेक्शन 2: प्रविष्टियों का सुधार: क्या ठीक करवाना है" },
+      meaning: {
+        en: "Tick the details on the voter list / EPIC that are wrong. Options: 1. Name, 2. Gender, 3. DoB/Age, 4. Relation Type, 5. Relation Name, 6. Address, 7. Mobile Number, 8. Photo. The form says \"Maximum of 4 entries/particulars can be corrected\".",
+        hi: "मतदाता सूची / EPIC में जो जानकारी ग़लत है, उस पर टिक करें। विकल्प: 1. नाम, 2. लिंग, 3. जन्म तिथि/उम्र, 4. रिश्ते का प्रकार, 5. रिश्तेदार का नाम, 6. पता, 7. मोबाइल नंबर, 8. फ़ोटो। फॉर्म पर लिखा है: \"ज़्यादा से ज़्यादा 4 प्रविष्टियाँ ठीक की जा सकती हैं\"।"
+      },
+      write: {
+        en: "Tick up to 4 boxes. Then, under \"The correct particulars in the entry to be corrected are as under\", write the CORRECT details, not the wrong ones. If more than 4 details are wrong, the form does not say what to do, so ask your BLO.",
+        hi: "ज़्यादा से ज़्यादा 4 खानों पर टिक करें। फिर \"सही जानकारी इस प्रकार है\" वाली जगह पर सही जानकारी लिखें, ग़लत वाली नहीं। अगर 4 से ज़्यादा चीज़ें ग़लत हैं, तो क्या करें यह फॉर्म में नहीं लिखा, इसलिए अपने BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking more than 4 boxes", "Writing the wrong (current) details instead of the correct ones", "Using \"Address\" correction when you have actually moved house (use Section 1, Shifting of Residence)"],
+        hi: ["4 से ज़्यादा खानों पर टिक करना", "सही जानकारी की जगह अभी वाली ग़लत जानकारी लिख देना", "असल में घर बदला हो, फिर भी \"पता\" सुधार चुनना (सेक्शन 1, निवास बदलना भरें)"]
+      }
+    },
+    {
+      label: { en: "Section 2: Correction of Entries: proof document", hi: "सेक्शन 2: प्रविष्टियों का सुधार: प्रमाण का दस्तावेज़" },
+      meaning: {
+        en: "The form says \"Copy of self-attested Documentary Proof in support of claim to be attached\". You must also write the document's name in the space \"Name of Document in support of above claim attached\".",
+        hi: "फॉर्म के अनुसार अपनी बात के समर्थन में दस्तावेज़ की स्व-प्रमाणित कॉपी लगानी है। साथ ही \"संलग्न दस्तावेज़ का नाम\" वाली जगह पर उस दस्तावेज़ का नाम भी लिखना है।"
+      },
+      write: {
+        en: "Attach a self-attested copy that shows the correct detail, and write its name. Form 8 does not list which documents are accepted for each correction, so ask your BLO or check voters.eci.gov.in. The form also says \"I hereby return my old EPIC\", since a replacement card is issued.",
+        hi: "ऐसे दस्तावेज़ की स्व-प्रमाणित कॉपी लगाएँ जिसमें सही जानकारी हो, और उसका नाम लिखें। हर सुधार के लिए कौन-से दस्तावेज़ माने जाते हैं, यह फॉर्म 8 में नहीं लिखा, इसलिए अपने BLO से पूछें या voters.eci.gov.in देखें। फॉर्म में यह भी लिखा है कि आप अपना पुराना EPIC लौटाते हैं, क्योंकि नया कार्ड बनता है।"
+      },
+      documents: {
+        en: ["Self-attested copy of a document showing the correct detail (ask your BLO which ones are accepted)", "Your old EPIC, to return"],
+        hi: ["सही जानकारी वाले दस्तावेज़ की स्व-प्रमाणित कॉपी (कौन-से माने जाते हैं, BLO से पूछें)", "आपका पुराना EPIC, लौटाने के लिए"]
+      },
+      mistakes: {
+        en: ["Attaching a document but not writing its name in the blank", "Forgetting to sign (self-attest) the photocopy"],
+        hi: ["दस्तावेज़ लगाना पर ख़ाली जगह में उसका नाम न लिखना", "फ़ोटोकॉपी पर ख़ुद हस्ताक्षर (स्व-प्रमाणित) करना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Section 2: New photograph (only if photo is to be changed)", hi: "सेक्शन 2: नई फ़ोटो (सिर्फ़ अगर फ़ोटो बदलनी हो)" },
+      meaning: {
+        en: "There is a box for a photo, to be used \"ONLY IF PHOTO TO BE CHANGED\". If you are not changing your photo, leave it empty.",
+        hi: "फ़ोटो के लिए एक खाना है, जो \"सिर्फ़ तब, जब फ़ोटो बदलनी हो\" भरना है। फ़ोटो नहीं बदलवा रहे, तो इसे ख़ाली छोड़ दें।"
+      },
+      write: {
+        en: "Tick \"8. Photo\" and paste one recent, good quality passport-size \"UNSIGNED\" colour photo, 4.5 cm x 3.5 cm, showing the full face from the front, with a white background.",
+        hi: "\"8. फ़ोटो\" पर टिक करें और एक हाल की, साफ़, पासपोर्ट साइज़, बिना हस्ताक्षर वाली रंगीन फ़ोटो चिपकाएँ: 4.5 सेमी x 3.5 सेमी, सामने से पूरा चेहरा, सफ़ेद बैकग्राउंड।"
+      },
+      documents: { en: ["1 recent passport-size colour photo, white background (only if changing photo)"], hi: ["1 हाल की पासपोर्ट साइज़ रंगीन फ़ोटो, सफ़ेद बैकग्राउंड (सिर्फ़ फ़ोटो बदलनी हो तो)"] },
+      mistakes: {
+        en: ["Signing across the photo (it must be unsigned)", "Pasting a photo but not ticking \"Photo\" in the list", "Coloured or dark background"],
+        hi: ["फ़ोटो पर हस्ताक्षर कर देना (फ़ोटो बिना हस्ताक्षर की होनी चाहिए)", "फ़ोटो चिपकाना पर सूची में \"फ़ोटो\" पर टिक न करना", "रंगीन या गहरा बैकग्राउंड"]
+      }
+    },
+    {
+      label: { en: "Section 3: Replacement EPIC without correction", hi: "सेक्शन 3: बिना सुधार के नया EPIC" },
+      meaning: {
+        en: "For a new voter ID card when your details are fine but the card itself is \"Lost\", \"Destroyed due to reason beyond control like floods, fire, other natural disaster etc.\", or \"Mutilated\" (badly damaged).",
+        hi: "जब जानकारी सही है पर कार्ड ख़ुद \"खो गया\", \"बाढ़, आग, किसी और प्राकृतिक आपदा जैसी मजबूरी से नष्ट हो गया\", या \"फट/ख़राब हो गया\" हो, तब नए वोटर आईडी कार्ड के लिए।"
+      },
+      write: {
+        en: "Tick the reason. If the card is damaged or old, return it with the form. If it is lost, the form says you attach a copy of an FIR/Police report and \"undertake to return the earlier EPIC\" if it is found later. If you need a new card because a detail is wrong, use Section 2 instead.",
+        hi: "कारण पर टिक करें। कार्ड ख़राब या पुराना है, तो उसे फॉर्म के साथ लौटाएँ। कार्ड खो गया है, तो फॉर्म के अनुसार FIR/पुलिस रिपोर्ट की कॉपी लगानी है और यह वचन देना है कि पुराना EPIC बाद में मिल गया तो लौटा देंगे। कोई जानकारी ग़लत होने की वजह से नया कार्ड चाहिए, तो सेक्शन 2 भरें।"
+      },
+      documents: {
+        en: ["Your mutilated / old EPIC (if you have it)", "Copy of FIR / Police report (if the EPIC is lost)"],
+        hi: ["आपका फटा/ख़राब या पुराना EPIC (अगर आपके पास है)", "FIR / पुलिस रिपोर्ट की कॉपी (अगर EPIC खो गया है)"]
+      },
+      mistakes: {
+        en: ["Not attaching the FIR / Police report copy for a lost card", "Keeping the damaged card instead of returning it"],
+        hi: ["कार्ड खोने पर FIR / पुलिस रिपोर्ट की कॉपी न लगाना", "ख़राब कार्ड लौटाने की जगह अपने पास रख लेना"]
+      }
+    },
+    {
+      label: { en: "Section 4: Marking as Person with Disability", hi: "सेक्शन 4: दिव्यांग व्यक्ति के रूप में दर्ज करना" },
+      meaning: {
+        en: "Categories on the form: Locomotive, Visual, Deaf & Dumb, or any other (give a description). The form also asks the percentage of disability and whether a certificate is attached.",
+        hi: "फॉर्म पर श्रेणियाँ: चलने-फिरने से जुड़ी, देखने से जुड़ी, मूक-बधिर, या कोई और (लिखकर बताएँ)। फॉर्म यह भी पूछता है कि दिव्यांगता कितने प्रतिशत है और प्रमाण पत्र लगाया है या नहीं।"
+      },
+      write: {
+        en: "Tick the category, write the %, and tick Yes or No for \"Certificate attached\". Whether a certificate is required is not stated on the form or in its guidelines, so ask your BLO.",
+        hi: "श्रेणी पर टिक करें, प्रतिशत लिखें, और \"प्रमाण पत्र संलग्न\" के लिए हाँ या नहीं पर टिक करें। प्रमाण पत्र ज़रूरी है या नहीं, यह फॉर्म या उसके निर्देशों में नहीं लिखा, इसलिए BLO से पूछें।"
+      },
+      documents: { en: ["Disability certificate, if you have one"], hi: ["दिव्यांगता प्रमाण पत्र, अगर हो"] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "Declaration, signature / thumb impression, date and place *", hi: "घोषणा, हस्ताक्षर / अंगूठे का निशान, तारीख़ और जगह *" },
+      meaning: {
+        en: "You declare that you are a citizen of India and that what you wrote is true to the best of your knowledge. Then you sign (or give a thumb impression) with the date and place.",
+        hi: "आप घोषणा करते हैं कि आप भारत के नागरिक हैं और आपने जो लिखा वह आपकी जानकारी के अनुसार सच है। फिर तारीख़ और जगह के साथ हस्ताक्षर करते हैं (या अंगूठा लगाते हैं)।"
+      },
+      write: {
+        en: "Sign yourself and fill the date and place. The form warns that a false statement is punishable under Section 31 of the Representation of the People Act, 1950, with up to one year in jail, a fine, or both. Its accessibility note says that for persons with intellectual disability, autism, cerebral palsy, multiple disabilities etc., the signature or left-hand thumb impression of the person or of their legal guardian is needed.",
+        hi: "हस्ताक्षर ख़ुद करें और तारीख़ व जगह भरें। फॉर्म में चेतावनी है कि ग़लत जानकारी देना लोक प्रतिनिधित्व अधिनियम 1950 की धारा 31 के तहत अपराध है, जिसमें एक साल तक की जेल, जुर्माना या दोनों हो सकते हैं। फॉर्म के सुगम्यता निर्देश के अनुसार बौद्धिक दिव्यांगता, ऑटिज़्म, सेरेब्रल पाल्सी, बहु-दिव्यांगता आदि वाले व्यक्ति के मामले में, उस व्यक्ति के या उसके क़ानूनी अभिभावक के हस्ताक्षर या बाएँ हाथ के अंगूठे का निशान चाहिए।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Forgetting the date and place"],
+        hi: ["तारीख़ और जगह लिखना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Acknowledgement / receipt", hi: "पावती / रसीद" },
+      meaning: {
+        en: "The bottom slip is filled and signed by the ERO / AERO / BLO when they receive your Form 8. It has an Acknowledgment Number and date.",
+        hi: "नीचे की पर्ची ERO / AERO / BLO आपका फॉर्म 8 लेते समय भरकर हस्ताक्षर करते हैं। इसमें पावती नंबर (Acknowledgment Number) और तारीख़ होती है।"
+      },
+      write: {
+        en: "This part is for the office. Keep the slip safe. How and where to track your application is not stated on Form 8, so check voters.eci.gov.in or ask your BLO.",
+        hi: "यह हिस्सा दफ़्तर के लिए है। पर्ची संभालकर रखें। आवेदन की स्थिति कैसे और कहाँ देखें, यह फॉर्म 8 में नहीं लिखा, इसलिए voters.eci.gov.in देखें या BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Handing in the form without getting the signed receipt back"],
+        hi: ["फॉर्म देकर हस्ताक्षर वाली रसीद वापस न लेना"]
+      }
+    }
+  ]
+});

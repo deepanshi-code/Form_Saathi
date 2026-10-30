@@ -1,0 +1,240 @@
+// Checked against the official PMJDY "Financial Inclusion Account Opening Form" from pmjdy.gov.in:
+//   English PDF (file dated 07-10-2015) and Hindi PDF (file dated 20-09-2014), one page each.
+// Scheme features are from the pmjdy.gov.in "Scheme Details" page and the official
+// "Continuation of PMJDY" note (2018) on pmjdy.gov.in.
+// Every statement below comes from one of those documents. If something is not stated
+// in them, the guide says "ask at the bank branch or Bank Mitra" instead of guessing.
+
+window.FORMS.push({
+  id: "pmjdy-account",
+  verified: true,
+  source: {
+    title: "PMJDY Financial Inclusion Account Opening Form (English), pmjdy.gov.in, file dated 07-10-2015",
+    url: "https://pmjdy.gov.in/files/forms/account-opening/English.pdf"
+  },
+  caution: {
+    en: "The newest official form on pmjdy.gov.in is old: the English file is dated October 2015 and the Hindi file September 2014. Some printed details (like the overdraft amount) have changed since then. Your bank may use its own newer version, so use the form the branch or Bank Mitra gives you.",
+    hi: "pmjdy.gov.in पर मौजूद सबसे नया आधिकारिक फॉर्म पुराना है: अंग्रेज़ी फ़ाइल अक्टूबर 2015 की और हिंदी फ़ाइल सितंबर 2014 की है। तब से कुछ छपी हुई बातें (जैसे ओवरड्राफ़्ट की रकम) बदल चुकी हैं। आपका बैंक अपना नया फॉर्म इस्तेमाल कर सकता है, इसलिए वही फॉर्म भरें जो शाखा या बैंक मित्र आपको दे।"
+  },
+  lastChecked: "2026-10-30",
+
+  category: { en: "Bank", hi: "बैंक" },
+  name: { en: "Jan Dhan (PMJDY) Account Opening Form", hi: "जन धन (PMJDY) खाता खोलने का फॉर्म" },
+  about: {
+    en: "The one-page form for opening a Pradhan Mantri Jan Dhan Yojana account. It is a basic savings (BSBD) account for \"persons not having any other account\", opened at a bank branch or a Bank Mitra (Business Correspondent) outlet. The official scheme page says there is no minimum balance, you earn interest, and you get a RuPay debit card with accident insurance cover (Rs. 2 lakh for new accounts opened after 28.8.2018).",
+    hi: "प्रधानमंत्री जन धन योजना का खाता खोलने का एक पेज का फॉर्म। यह बुनियादी बचत (BSBD) खाता उन लोगों के लिए है जिनका कोई और खाता नहीं है। इसे बैंक शाखा या बैंक मित्र (बिज़नेस कॉरेस्पॉन्डेंट) के केंद्र पर खोला जाता है। आधिकारिक योजना पेज के अनुसार इसमें कोई न्यूनतम बैलेंस नहीं रखना होता, जमा पर ब्याज मिलता है, और रुपे डेबिट कार्ड मिलता है जिसके साथ दुर्घटना बीमा है (28.8.2018 के बाद खुले नए खातों के लिए ₹2 लाख)।"
+  },
+
+  fields: [
+    {
+      label: { en: "Branch and location details", hi: "शाखा और जगह की जानकारी" },
+      meaning: {
+        en: "The top box asks for: Name of the Branch, Village / Town, Sub District / Block Name, District, State, SSA Code / Ward No., and Village Code / Town Code and Name of Village/Town \"[as per census 2011]\".",
+        hi: "ऊपर के खाने में माँगा गया है: शाखा का नाम, गाँव/शहर, उपज़िला/ब्लॉक का नाम, ज़िला, राज्य, एसएसए कोड/वार्ड नं., और ग्राम कोड/शहर कोड व गाँव/शहर का नाम \"(2011 की जनगणना के अनुसार)\"।"
+      },
+      write: {
+        en: "Write the branch name and your village or town, block, district and state. The form does not explain the SSA code or the census code, so ask at the bank branch or Bank Mitra for these numbers.",
+        hi: "शाखा का नाम और अपना गाँव या शहर, ब्लॉक, ज़िला और राज्य लिखें। एसएसए कोड और जनगणना कोड क्या हैं, यह फॉर्म में नहीं बताया गया है, इसलिए ये नंबर बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Guessing the SSA code or census code instead of asking"],
+        hi: ["पूछने के बजाय एसएसए कोड या जनगणना कोड का अंदाज़ा लगाकर लिख देना"]
+      }
+    },
+    {
+      label: { en: "Photograph", hi: "फ़ोटो" },
+      meaning: {
+        en: "The photo box says: \"To be captured through system or obtain latest photograph not older than six month\".",
+        hi: "फ़ोटो वाले खाने पर लिखा है: सिस्टम द्वारा खींची गई या नवीनतम फ़ोटो, जो 6 माह से पुरानी न हो।"
+      },
+      write: {
+        en: "The bank may take your photo on its system. If not, bring a recent photo that is not older than six months. How many copies to bring is not stated, so ask at the bank branch or Bank Mitra.",
+        hi: "बैंक अपने सिस्टम से आपकी फ़ोटो खींच सकता है। अगर नहीं, तो 6 महीने से पुरानी न हो ऐसी नई फ़ोटो लाएँ। कितनी फ़ोटो लानी हैं, यह नहीं बताया गया है, इसलिए बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: ["A recent photo (not older than six months), if the bank does not take one"], hi: ["हाल की फ़ोटो (6 महीने से पुरानी नहीं), अगर बैंक ख़ुद फ़ोटो न खींचे"] },
+      mistakes: { en: ["Using a photo older than six months"], hi: ["6 महीने से पुरानी फ़ोटो लगाना"] }
+    },
+    {
+      label: { en: "Full name", hi: "पूरा नाम" },
+      meaning: {
+        en: "Your name, with a title (Mr./Mrs./Ms.) and separate spaces for First, Middle and Last name.",
+        hi: "आपका नाम, संबोधन (श्री/श्रीमती/सुश्री) के साथ, और पहले, बीच के और आख़िरी नाम के लिए अलग-अलग जगह।"
+      },
+      write: {
+        en: "Circle or tick one title, then write your first, middle and last name in the right spaces. If you have no middle name, leave that space empty.",
+        hi: "एक संबोधन पर गोला या टिक लगाएँ, फिर पहला, बीच का और आख़िरी नाम सही जगह लिखें। बीच का नाम न हो तो वह जगह खाली छोड़ दें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the whole name in one space instead of splitting it"],
+        hi: ["नाम को बाँटने के बजाय पूरा नाम एक ही जगह लिख देना"]
+      }
+    },
+    {
+      label: { en: "Marital status and gender", hi: "वैवाहिक स्थिति और लिंग" },
+      meaning: {
+        en: "Marital status means whether you are married or not. For gender the form prints only \"M / F\" (Male / Female).",
+        hi: "वैवाहिक स्थिति यानी आप शादीशुदा हैं या नहीं। लिंग के लिए फॉर्म पर सिर्फ़ \"पुरुष / महिला\" छपा है।"
+      },
+      write: {
+        en: "Write your marital status in its box and circle M or F. If neither option fits you, ask at the bank branch or Bank Mitra.",
+        hi: "वैवाहिक स्थिति उसके खाने में लिखें और पुरुष या महिला पर गोला लगाएँ। अगर दोनों में से कोई विकल्प आप पर लागू न हो, तो बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "Name of Father / Spouse", hi: "पिता का नाम / पति-पत्नी का नाम" },
+      meaning: {
+        en: "The full name of your father, or of your husband or wife.",
+        hi: "आपके पिता का, या पति या पत्नी का पूरा नाम।"
+      },
+      write: {
+        en: "Write one full name. The form does not have a box to show whose name it is, so you may tell the staff.",
+        hi: "एक पूरा नाम लिखें। फॉर्म में यह बताने का खाना नहीं है कि नाम किसका है, इसलिए कर्मचारी को बता सकते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Writing only the first name"], hi: ["सिर्फ़ पहला नाम लिखना"] }
+    },
+    {
+      label: { en: "Address and PIN code", hi: "पता और पिन कोड" },
+      meaning: {
+        en: "Where you live, and the 6-digit postal PIN code of that area.",
+        hi: "आप कहाँ रहते हैं, और उस इलाक़े का 6 अंकों वाला डाक पिन कोड।"
+      },
+      write: {
+        en: "Write your full address and the PIN code. The form has only one address line. Which address proof is accepted is not printed on the form, so ask at the bank branch or Bank Mitra.",
+        hi: "अपना पूरा पता और पिन कोड लिखें। फॉर्म में पते की सिर्फ़ एक लाइन है। पते का कौन-सा प्रमाण माना जाएगा, यह फॉर्म पर नहीं छपा है, इसलिए बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: {
+        en: ["Address proof: ask at the bank branch or Bank Mitra which ones are accepted"],
+        hi: ["पते का प्रमाण: बैंक शाखा या बैंक मित्र से पूछें कि कौन-से मान्य हैं"]
+      },
+      mistakes: { en: ["Leaving out the PIN code"], hi: ["पिन कोड न लिखना"] }
+    },
+    {
+      label: { en: "Telephone & Mobile No.", hi: "टेलीफ़ोन एवं मोबाइल नं." },
+      meaning: { en: "Your phone number, so the bank can reach you.", hi: "आपका फ़ोन नंबर, ताकि बैंक आपसे संपर्क कर सके।" },
+      write: {
+        en: "Write a mobile number you use and will keep.",
+        hi: "ऐसा मोबाइल नंबर लिखें जो आप इस्तेमाल करते हैं और आगे भी रखेंगे।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "Date of birth", hi: "जन्मतिथि" },
+      meaning: { en: "The day you were born.", hi: "आपके जन्म की तारीख़।" },
+      write: {
+        en: "The form prints the order as DD/MM/YEAR: day first, then month, then the full year.",
+        hi: "फॉर्म पर क्रम दिन/माह/वर्ष छपा है: पहले दिन, फिर महीना, फिर पूरा साल।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the month before the day", "Writing only two digits of the year"],
+        hi: ["दिन से पहले महीना लिखना", "साल के सिर्फ़ दो अंक लिखना"]
+      }
+    },
+    {
+      label: { en: "Aadhaar / EID No., PAN No., MNREGA Job Card No.", hi: "आधार / ई.आई.डी. नं., पैन नं., मनरेगा जॉब कार्ड सं." },
+      meaning: {
+        en: "Three separate boxes for ID numbers: your Aadhaar (or EID) number, your PAN, and your MNREGA job card number.",
+        hi: "पहचान नंबरों के तीन अलग खाने: आपका आधार (या ई.आई.डी.) नंबर, पैन, और मनरेगा जॉब कार्ड नंबर।"
+      },
+      write: {
+        en: "Write the numbers you have, copied carefully from the card. The form does not say which of these are compulsory or what to do if you have none, so ask at the bank branch or Bank Mitra. Also ask which ID documents to bring, because the form does not list them.",
+        hi: "जो नंबर आपके पास हैं, वे कार्ड से ध्यान से देखकर लिखें। इनमें से कौन-सा ज़रूरी है, या कोई भी न हो तो क्या करें, यह फॉर्म में नहीं बताया गया है, इसलिए बैंक शाखा या बैंक मित्र से पूछें। कौन-से पहचान दस्तावेज़ लाने हैं, यह भी पूछें, क्योंकि फॉर्म में इनकी सूची नहीं है।"
+      },
+      documents: {
+        en: ["The cards whose numbers you write (Aadhaar, PAN, MNREGA job card, if you have them)", "Other ID documents: ask at the bank branch or Bank Mitra"],
+        hi: ["जिन कार्डों के नंबर लिख रहे हैं (आधार, पैन, मनरेगा जॉब कार्ड, जो आपके पास हों)", "बाक़ी पहचान दस्तावेज़: बैंक शाखा या बैंक मित्र से पूछें"]
+      },
+      mistakes: {
+        en: ["Copying a digit wrong", "Writing a number in the wrong box"],
+        hi: ["कोई अंक ग़लत लिख देना", "नंबर ग़लत खाने में लिख देना"]
+      }
+    },
+    {
+      label: { en: "Occupation, annual income, no. of dependents", hi: "पेशा, वार्षिक आय, आश्रितों की संख्या" },
+      meaning: {
+        en: "Occupation / Profession is the work you do. Annual income is what you earn in a year. Dependents are the people who depend on your income.",
+        hi: "पेशा/व्यवसाय यानी आप क्या काम करते हैं। वार्षिक आय यानी साल भर की कमाई। आश्रित यानी वे लोग जो आपकी कमाई पर निर्भर हैं।"
+      },
+      write: {
+        en: "Write your work in your own words, your yearly income, and the number of dependents. The form does not say what to write if you are a student or have no income, so ask at the bank branch or Bank Mitra.",
+        hi: "अपना काम अपने शब्दों में, साल भर की आय, और आश्रितों की संख्या लिखें। छात्र हों या कोई आय न हो तो क्या लिखें, यह फॉर्म में नहीं बताया गया है, इसलिए बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Writing monthly income in the annual income box"], hi: ["वार्षिक आय के खाने में महीने की आय लिख देना"] }
+    },
+    {
+      label: { en: "Assets, family bank accounts, Kisan Credit Card", hi: "संपत्ति, परिवार के बैंक खाते, किसान क्रेडिट कार्ड" },
+      meaning: {
+        en: "Three questions about your household: Detail of Assets (Owning House Y/N, Owning Farm Y/N, No. of Animals, Any other); whether family members or the household already have a bank account (Y/N, and if yes, how many); and whether you are eligible for a Kisan Credit Card (Y/N).",
+        hi: "आपके परिवार के बारे में तीन सवाल: संपत्ति के ब्यौरे (अपना घर हां/नहीं, अपना खेत हां/नहीं, पशुओं की संख्या, यदि अन्य); क्या परिवार के सदस्यों या परिवार के नाम पर पहले से बैंक खाता है (हां/नहीं, और हां तो कितने); और क्या आप किसान क्रेडिट कार्ड के पात्र हैं (हां/नहीं)।"
+      },
+      write: {
+        en: "Circle Y or N for each, and write the number of animals and of family accounts. If you are not sure whether you are eligible for a Kisan Credit Card, ask at the bank branch or Bank Mitra.",
+        hi: "हर सवाल पर हां या नहीं पर गोला लगाएँ, और पशुओं की तथा परिवार के खातों की संख्या लिखें। किसान क्रेडिट कार्ड के पात्र हैं या नहीं, यह पता न हो तो बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking N for family accounts when a family member does have one"],
+        hi: ["परिवार में किसी का खाता होते हुए भी \"नहीं\" पर निशान लगाना"]
+      }
+    },
+    {
+      label: { en: "RuPay card and overdraft", hi: "रुपे कार्ड और ओवरड्राफ़्ट" },
+      meaning: {
+        en: "Printed lines on the form: \"I request you to issue me a Rupay Card\", and a statement about an overdraft (a small loan on your account). The form says only one member from the household will be eligible for the overdraft.",
+        hi: "फॉर्म पर छपी लाइनें: \"मैं आपसे अनुरोध करता हूं कि मुझे एक रुपे डेबिट कार्ड जारी किया जाए\", और ओवरड्राफ़्ट (खाते पर छोटा कर्ज़) के बारे में एक बात। फॉर्म के अनुसार परिवार के सिर्फ़ एक सदस्य को ओवरड्राफ़्ट मिलेगा।"
+      },
+      write: {
+        en: "Nothing to fill here; these lines are part of what you sign. The official scheme page says a RuPay debit card is given to PMJDY account holders, with accident insurance cover. To know when and how you can get the overdraft, ask at the bank branch or Bank Mitra.",
+        hi: "यहाँ कुछ भरना नहीं है; ये लाइनें उस बात का हिस्सा हैं जिस पर आप हस्ताक्षर करते हैं। आधिकारिक योजना पेज के अनुसार PMJDY खाताधारक को रुपे डेबिट कार्ड मिलता है, जिसके साथ दुर्घटना बीमा है। ओवरड्राफ़्ट कब और कैसे मिलेगा, यह बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      changed: {
+        en: "Changed since the form was printed: the form says an overdraft of \"Rs.5000/-\" after 6 months of satisfactory use. The official 2018 \"Continuation of PMJDY\" note raised it to Rs 10,000, with no conditions for an overdraft up to Rs 2,000, and an age limit for the overdraft of 18-65 years (earlier 18-60). The scheme page now says \"up to Rs. 10,000 to eligible account holders\". It also raised accident cover from Rs 1 lakh to Rs 2 lakh for new accounts opened after 28.8.2018.",
+        hi: "फॉर्म छपने के बाद बदला: फॉर्म में 6 महीने के संतोषजनक इस्तेमाल के बाद \"5000/- रु.\" का ओवरड्राफ़्ट लिखा है। 2018 के आधिकारिक \"PMJDY जारी रखने\" वाले नोट में इसे बढ़ाकर ₹10,000 किया गया; ₹2,000 तक के ओवरड्राफ़्ट पर कोई शर्त नहीं; और ओवरड्राफ़्ट के लिए उम्र सीमा 18-65 साल (पहले 18-60)। योजना पेज पर अब लिखा है: पात्र खाताधारकों को ₹10,000 तक। इसी नोट में 28.8.2018 के बाद खुले नए खातों के लिए दुर्घटना बीमा ₹1 लाख से बढ़ाकर ₹2 लाख किया गया।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Believing the old Rs. 5000 figure printed on the form is the current limit"],
+        hi: ["फॉर्म पर छपे पुराने ₹5000 को ही आज की सीमा मान लेना"]
+      }
+    },
+    {
+      label: { en: "Declaration and signature / thumb impression", hi: "घोषणा और हस्ताक्षर / अंगूठे का निशान" },
+      meaning: {
+        en: "By signing, you say your information is true, the terms were read and explained to you, and: \"I declare that I have not availed any Overdraft or Credit facility from any other bank.\"",
+        hi: "हस्ताक्षर करके आप कहते हैं कि आपकी दी गई जानकारी सच है, शर्तें आपको पढ़कर समझाई गई हैं, और: \"मैं घोषणा करता हूं कि मैंने किसी अन्य बैंक से कोई ओवरड्राफ़्ट या ऋण सुविधा नहीं ली है।\""
+      },
+      write: {
+        en: "Write the Place and Date, then sign at \"Signature / LTI of Applicant\". The Hindi form explains this as signature or left / right thumb impression, so you can give a thumb impression if you cannot sign. The form asks for this signature twice: under the declaration and under the nomination.",
+        hi: "स्थान और दिनांक लिखें, फिर \"आवेदक के हस्ताक्षर / बाएं / दाएं अंगूठे का निशान\" वाली जगह पर हस्ताक्षर करें। हस्ताक्षर न कर सकें तो अंगूठे का निशान लगा सकते हैं। फॉर्म में यह दो बार माँगा गया है: घोषणा के नीचे और नामांकन के नीचे।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing without having the terms explained", "Signing the declaration when you already have an overdraft or loan facility from another bank", "Signing in only one of the two places"],
+        hi: ["शर्तें समझे बिना हस्ताक्षर करना", "किसी दूसरे बैंक से ओवरड्राफ़्ट या कर्ज़ सुविधा लेने के बावजूद घोषणा पर हस्ताक्षर करना", "दो में से सिर्फ़ एक जगह हस्ताक्षर करना"]
+      }
+    },
+    {
+      label: { en: "Nomination", hi: "नामांकन (नॉमिनी)" },
+      meaning: {
+        en: "\"I want to nominate as under\": the person you name here (nominee) is the one linked to your deposit in the event of your death. The form has one row.",
+        hi: "\"मैं निम्न को नामांकित करना चाहता हूं\": यहाँ जिसका नाम लिखते हैं (नॉमिनी), आपकी मृत्यु होने पर आपकी जमा राशि उससे जुड़ी होती है। फॉर्म में एक ही पंक्ति है।"
+      },
+      write: {
+        en: "Write the nominee's Name, Relationship to you and Age. If the nominee is a minor (a child), also write their Date of Birth and the name of the \"Person authorised ... to receive the amount of deposit on behalf of the nominee\". Then write Place and Date and sign again. The form has no option to refuse a nominee; if you do not want one, ask at the bank branch or Bank Mitra.",
+        hi: "नॉमिनी का नाम, आपसे संबंध और आयु लिखें। अगर नॉमिनी नाबालिग (बच्चा) है, तो उसकी जन्मतिथि और उस व्यक्ति का नाम भी लिखें जो नॉमिनी की जगह जमा राशि प्राप्त करने के लिए अधिकृत होगा। फिर स्थान और दिनांक लिखकर दोबारा हस्ताक्षर करें। फॉर्म में नॉमिनी न रखने का विकल्प नहीं है; नॉमिनी नहीं चाहिए तो बैंक शाखा या बैंक मित्र से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["For a minor nominee, leaving out the date of birth or the authorised person", "Forgetting the second signature under the nomination"],
+        hi: ["नाबालिग नॉमिनी के लिए जन्मतिथि या अधिकृत व्यक्ति का नाम न लिखना", "नामांकन के नीचे दूसरा हस्ताक्षर भूल जाना"]
+      }
+    }
+  ]
+});
