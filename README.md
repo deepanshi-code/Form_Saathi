@@ -16,7 +16,7 @@ TODO: add findings from interviews and the collected forms.
 | Part | State |
 |---|---|
 | Website skeleton (list, field-by-field view, Hindi/English, search) | Done, live on GitHub Pages |
-| Verified form guides | 1: SBI savings account opening form (checked 2026-10-30) |
+| Verified form guides | 6, all checked 2026-10-30: SBI savings account, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6), Learner's licence (Form 2), Fresh passport |
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
 
 ## Run it

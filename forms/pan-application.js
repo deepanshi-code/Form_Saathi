@@ -1,0 +1,264 @@
+// Checked against the official "Form No. 93 [See rule 158] Application for Allotment of Permanent
+// Account Number [For an Individual being a Citizen of India]" (5-page PDF with its printed Notes and
+// "Guidelines for filling Form No. 93", file dated 31-03-2026 on tinpan.proteantech.in), Protean's
+// pages "Documents to be Submitted" and "Steps for online PAN application (Form 93 / Form 94)", and
+// Protean's article "Major PAN Application Changes (April 2026)". Form 93 replaced Form 49A from
+// 1 April 2026. Every statement below comes from those documents. If something is not stated in
+// them, the guide says "ask at the PAN centre / check the official site" instead of guessing.
+
+window.FORMS.push({
+  id: "pan-application",
+  verified: true,
+  source: {
+    title: "Form No. 93 (Rule 158, Income-tax Rules, 2026): Application for Allotment of PAN for an Individual being a Citizen of India, with Guidelines (Protean, file dated 31-03-2026)",
+    url: "https://tinpan.proteantech.in/downloads/pan/download/Form%2093.pdf"
+  },
+  lastChecked: "2026-10-30",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "PAN Card Application (Form 93, earlier Form 49A)", hi: "पैन कार्ड आवेदन (फॉर्म 93, पहले फॉर्म 49A)" },
+  about: {
+    en: "The form an Indian citizen uses to get a PAN (Permanent Account Number) for the first time. Use it only if you have never been given a PAN. Fill it in English only, in BLOCK (capital) letters, preferably in black ink. Put one letter or number in each box and leave one box empty after each word.",
+    hi: "भारतीय नागरिक पहली बार पैन (स्थायी खाता संख्या) लेने के लिए यह फॉर्म भरते हैं। इसे तभी भरें जब आपको पहले कभी पैन न मिला हो। फॉर्म सिर्फ़ अंग्रेज़ी में, बड़े (कैपिटल) अक्षरों में भरें, हो सके तो काली स्याही से। हर खाने में एक ही अक्षर या अंक लिखें और हर शब्द के बाद एक खाना खाली छोड़ें।"
+  },
+
+  fields: [
+    {
+      label: { en: "1A. Name (First, Middle, Last)", hi: "1A. नाम (पहला, बीच का, आख़िरी)" },
+      meaning: {
+        en: "Your full name, split into First Name, Middle Name and Last Name.",
+        hi: "आपका पूरा नाम, तीन हिस्सों में: पहला नाम, बीच का नाम और आख़िरी नाम।"
+      },
+      write: {
+        en: "Write the name in full, with no short forms. Do not add any title like Shri, Smt, Kumari, Dr. or Major. If your Aadhaar shows initials, write the full expanded name here. The form's own example: Aadhaar says \"M.S. KANDASWAMY\", so write First Name MADURAI, Middle Name SOMASUNDRAM, Last Name KANDASWAMY. If you have only one name (example: RAVIKANT), the form's example puts it in the Last Name boxes.",
+        hi: "नाम पूरा लिखें, कोई छोटा रूप (initials) नहीं। Shri, Smt, Kumari, Dr. या Major जैसा कोई टाइटल न लगाएँ। अगर आधार में नाम के initials हैं, तो यहाँ पूरा नाम लिखें। फॉर्म का अपना उदाहरण: आधार में \"M.S. KANDASWAMY\" है, तो पहला नाम MADURAI, बीच का नाम SOMASUNDRAM, आख़िरी नाम KANDASWAMY लिखें। अगर आपका एक ही नाम है (जैसे RAVIKANT), तो फॉर्म के उदाहरण में वह आख़िरी नाम (Last Name) वाले खानों में लिखा गया है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing initials like \"M.S.\" instead of the full name", "Adding Shri / Smt / Kumari / Dr. before the name"],
+        hi: ["पूरे नाम की जगह \"M.S.\" जैसे initials लिखना", "नाम से पहले Shri / Smt / Kumari / Dr. लगाना"]
+      }
+    },
+    {
+      label: { en: "1B. Name (as per Aadhaar)", hi: "1B. नाम (आधार के अनुसार)" },
+      meaning: {
+        en: "Your name exactly as it is printed on your Aadhaar. The guidelines say: \"Aadhaar name will be printed on the PAN card.\"",
+        hi: "आपका नाम ठीक वैसा, जैसा आधार पर छपा है। निर्देशों में लिखा है कि पैन कार्ड पर आधार वाला नाम ही छपेगा।"
+      },
+      write: {
+        en: "Copy the Aadhaar name letter by letter, without dots. The form's example: Aadhaar says \"M.S. KANDASWAMY\", so write M S KANDASWAMY here.",
+        hi: "आधार वाला नाम अक्षर-अक्षर वैसे ही लिखें, बिना बिंदु (.) के। फॉर्म का उदाहरण: आधार में \"M.S. KANDASWAMY\" है, तो यहाँ M S KANDASWAMY लिखें।"
+      },
+      changed: {
+        en: "Changed from 1 April 2026: the old Form 49A had a separate box for the \"abbreviated\" name to print on the card, plus boxes for a title and \"other names\". Protean says these fields were removed in Form 93. If an older guide tells you to fill an abbreviated name, it is outdated.",
+        hi: "1 अप्रैल 2026 से बदला: पुराने फॉर्म 49A में कार्ड पर छपने वाले \"संक्षिप्त\" (abbreviated) नाम, टाइटल और \"दूसरे नाम\" के अलग खाने थे। प्रोटियन के अनुसार फॉर्म 93 में ये खाने हटा दिए गए हैं। अगर कोई पुरानी गाइड संक्षिप्त नाम भरने को कहे, तो वह पुरानी जानकारी है।"
+      },
+      documents: { en: ["Your Aadhaar"], hi: ["आपका आधार"] },
+      mistakes: {
+        en: ["Writing a name here that differs from the Aadhaar", "Not filling the full name in 1A when the Aadhaar has initials"],
+        hi: ["यहाँ आधार से अलग नाम लिखना", "आधार में initials हों तब 1A में पूरा नाम न भरना"]
+      }
+    },
+    {
+      label: { en: "3. Date of Birth", hi: "3. जन्म तिथि" },
+      meaning: { en: "The day you were born.", hi: "आपके जन्म की तारीख।" },
+      write: {
+        en: "The boxes are printed as d d m m y y y y. The form's example: 2nd August 1975 is written 0 2 0 8 1 9 7 5. It must match your proof of date of birth (see 'Proof documents').",
+        hi: "खाने d d m m y y y y क्रम में छपे हैं। फॉर्म का उदाहरण: 2 अगस्त 1975 को 0 2 0 8 1 9 7 5 लिखा जाता है। यह आपके जन्म तिथि के प्रमाण से मेल खानी चाहिए ('प्रमाण के दस्तावेज़' देखें)।"
+      },
+      documents: { en: ["A proof of date of birth (Aadhaar is NOT accepted for this)"], hi: ["जन्म तिथि का प्रमाण (इसके लिए आधार मान्य नहीं)"] },
+      mistakes: {
+        en: ["Writing the month before the day", "Writing 2 instead of 02 (each box needs one digit)"],
+        hi: ["दिन से पहले महीना लिखना", "02 की जगह सिर्फ़ 2 लिखना (हर खाने में एक अंक चाहिए)"]
+      }
+    },
+    {
+      label: { en: "4. Aadhaar Number", hi: "4. आधार नंबर" },
+      meaning: {
+        en: "Your Aadhaar number. The guidelines say: \"Every Person who possesses Aadhaar shall mandatorily quote Aadhaar in the application.\"",
+        hi: "आपका आधार नंबर। निर्देशों के अनुसार जिसके पास भी आधार है, उसे आवेदन में आधार नंबर देना ज़रूरी है।"
+      },
+      write: {
+        en: "Write your Aadhaar number. It is mandatory \"except for exempt category\". The form does not explain who is exempt, so if you have no Aadhaar, ask at the PAN centre / check the official site. Protean also says a copy of the Aadhaar allotment letter should be enclosed.",
+        hi: "अपना आधार नंबर लिखें। यह ज़रूरी है, सिवाय \"छूट वाली श्रेणी\" के। छूट किसे है, यह फॉर्म में नहीं बताया गया, इसलिए अगर आपके पास आधार नहीं है तो पैन केंद्र पर पूछें / आधिकारिक साइट देखें। प्रोटियन के अनुसार आधार की कॉपी भी साथ लगानी है।"
+      },
+      documents: { en: ["Copy of Aadhaar"], hi: ["आधार की कॉपी"] },
+      mistakes: {
+        en: ["Leaving it blank when you do have Aadhaar"],
+        hi: ["आधार होते हुए भी खाना खाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "5, 6 & 22. Residence address, office address, address for communication", hi: "5, 6 और 22. घर का पता, दफ़्तर का पता, पत्र-व्यवहार का पता" },
+      meaning: {
+        en: "Residence address = where you live. Office address = where you work. Address for communication (item 22) = where the PAN card will be sent.",
+        hi: "घर का पता = जहाँ आप रहते हैं। दफ़्तर का पता = जहाँ आप काम करते हैं। पत्र-व्यवहार का पता (खाना 22) = जहाँ पैन कार्ड भेजा जाएगा।"
+      },
+      write: {
+        en: "Residence address is mandatory. Fill every part: Flat/Door/Building, Road/Street, Post Office, Area/Locality, District, State, Country and PIN. Office address is optional (except for a sole proprietor). In item 22, tick ONE: Residence, Office or Representative Assessee address.",
+        hi: "घर का पता ज़रूरी है। हर हिस्सा भरें: फ़्लैट/मकान/बिल्डिंग, सड़क/गली, डाकघर, इलाका, ज़िला, राज्य, देश और पिन। दफ़्तर का पता वैकल्पिक है (सिर्फ़ अकेले मालिक वाले व्यापार यानी sole proprietor के लिए ज़रूरी)। खाना 22 में कोई एक टिक करें: घर, दफ़्तर या प्रतिनिधि (Representative Assessee) का पता।"
+      },
+      documents: {
+        en: ["A proof of address for the residence address", "If you choose the office address for communication, a proof of office address is also mandatory"],
+        hi: ["घर के पते का प्रमाण", "अगर पत्र-व्यवहार के लिए दफ़्तर का पता चुनते हैं, तो दफ़्तर के पते का प्रमाण भी ज़रूरी है"]
+      },
+      mistakes: {
+        en: ["Skipping the Post Office or District box", "Choosing the office address for delivery without giving office address proof"],
+        hi: ["डाकघर या ज़िले का खाना छोड़ देना", "दफ़्तर के पते का प्रमाण दिए बिना कार्ड दफ़्तर के पते पर मँगवाना"]
+      }
+    },
+    {
+      label: { en: "7 & 8. Residential Status and Passport Number", hi: "7 और 8. निवास की स्थिति और पासपोर्ट नंबर" },
+      meaning: {
+        en: "Options on the form: Resident, Non Resident, Resident but Not ordinarily Resident.",
+        hi: "फॉर्म पर विकल्प: Resident (निवासी), Non Resident (अनिवासी), Resident but Not ordinarily Resident।"
+      },
+      write: {
+        en: "Tick one; it is mandatory. The passport number is mandatory only for Non Resident and \"Resident but not ordinarily resident\". The form does not explain how to decide your status, so if you are unsure, ask at the PAN centre / check the official site.",
+        hi: "कोई एक टिक करें; यह ज़रूरी है। पासपोर्ट नंबर सिर्फ़ Non Resident और \"Resident but not ordinarily resident\" के लिए ज़रूरी है। अपनी स्थिति कैसे तय करें, यह फॉर्म में नहीं बताया गया, इसलिए पक्का न हो तो पैन केंद्र पर पूछें / आधिकारिक साइट देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Ticking more than one option"], hi: ["एक से ज़्यादा विकल्प पर टिक करना"] }
+    },
+    {
+      label: { en: "10. Contact Details (mobile and email)", hi: "10. संपर्क जानकारी (मोबाइल और ईमेल)" },
+      meaning: {
+        en: "Your mobile number, email ID and (if you have one) landline.",
+        hi: "आपका मोबाइल नंबर, ईमेल आईडी और (अगर हो तो) लैंडलाइन नंबर।"
+      },
+      write: {
+        en: "Mobile number and email ID are both mandatory. Write the country code first: for India, 91 goes in the Country Code boxes, then the 10-digit number. Landline is optional; if you give it, add the STD code (11 for Delhi).",
+        hi: "मोबाइल नंबर और ईमेल आईडी दोनों ज़रूरी हैं। पहले देश का कोड लिखें: भारत के लिए Country Code वाले खानों में 91, फिर 10 अंकों का नंबर। लैंडलाइन वैकल्पिक है; दें तो साथ में STD कोड लिखें (दिल्ली का 11)।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the email blank", "Writing 91 inside the mobile number boxes instead of the Country Code boxes"],
+        hi: ["ईमेल खाली छोड़ना", "91 को Country Code की जगह मोबाइल नंबर वाले खानों में लिख देना"]
+      }
+    },
+    {
+      label: { en: "11. Source of Income", hi: "11. आय का स्रोत" },
+      meaning: {
+        en: "Where your money comes from. Options: Salary, Income from Business/Profession, Income from House Property, Capital Gains, Income from Other Sources, No Income.",
+        hi: "आपकी कमाई कहाँ से आती है। विकल्प: वेतन, व्यापार/पेशे से आय, मकान-संपत्ति से आय, पूंजीगत लाभ (Capital Gains), अन्य स्रोतों से आय, कोई आय नहीं।"
+      },
+      write: {
+        en: "You must tick at least one. If you have more than one source, you can tick more than one. If you earn nothing (for example, a student), the form has a \"No Income\" option.",
+        hi: "कम से कम एक पर टिक करना ज़रूरी है। एक से ज़्यादा स्रोत हों तो एक से ज़्यादा टिक कर सकते हैं। अगर आपकी कोई कमाई नहीं है (जैसे छात्र), तो फॉर्म में \"No Income\" (कोई आय नहीं) का विकल्प है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Leaving the whole section blank"], hi: ["पूरा खंड खाली छोड़ना"] }
+    },
+    {
+      label: { en: "12–15. Details of Parents", hi: "12–15. माता-पिता की जानकारी" },
+      meaning: {
+        en: "Item 12 asks whether you have a single parent. Items 13 and 14 ask for your father's and mother's names. Item 15 asks which parent's name should be printed on the PAN card.",
+        hi: "खाना 12 पूछता है कि क्या आपके माता या पिता में से कोई एक ही अभिभावक (single parent) है। खाना 13 और 14 में पिता और माता का नाम है। खाना 15 पूछता है कि पैन कार्ड पर किसका नाम छपे।"
+      },
+      write: {
+        en: "Fill BOTH parents' names (first, middle, last), except in single-parent cases. If a parent has died, or the parents are divorced or separated, do NOT tick single parent \"Yes\"; still give both names. A married woman must give her father's name, not her husband's. In item 15, tick Father or Mother for the name on the card.",
+        hi: "दोनों माता-पिता के नाम (पहला, बीच का, आख़िरी) भरें, सिवाय single parent वाले मामलों के। अगर माता या पिता का निधन हो गया है, या तलाक़/अलगाव हुआ है, तो भी single parent में \"Yes\" न चुनें; दोनों के नाम दें। शादीशुदा महिला अपने पिता का नाम लिखें, पति का नहीं। खाना 15 में कार्ड पर छपने के लिए पिता या माता में से एक पर टिक करें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking single parent \"Yes\" because a parent has died or the parents are divorced", "A married woman writing her husband's name in place of her father's", "Forgetting to tick item 15"],
+        hi: ["माता या पिता के निधन या तलाक़ की वजह से single parent में \"Yes\" चुन लेना", "शादीशुदा महिला का पिता की जगह पति का नाम लिखना", "खाना 15 पर टिक करना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "16. Assessing Officer (AO Code)", hi: "16. कर निर्धारण अधिकारी (AO कोड)" },
+      meaning: {
+        en: "A code for the income tax office that will handle your PAN. It has four parts: Area Code, AO Type, Range Code and AO No.",
+        hi: "उस आयकर दफ़्तर का कोड जो आपका पैन देखेगा। इसके चार हिस्से हैं: Area Code, AO Type, Range Code और AO No.।"
+      },
+      write: {
+        en: "The applicant must fill it. The guidelines say you can get these details from the Income Tax Office, a PAN service centre run by UTIITSL or Protean, or the websites www.utiitsl.com and www.tinpan.proteantech.in. How to pick the right code for your city is not explained on the form, so ask at the PAN centre / check the official site.",
+        hi: "यह आवेदक को ख़ुद भरना है। निर्देशों के अनुसार यह जानकारी आयकर दफ़्तर, UTIITSL या प्रोटियन के पैन सेवा केंद्र, या www.utiitsl.com और www.tinpan.proteantech.in वेबसाइट से मिल सकती है। अपने शहर के लिए सही कोड कैसे चुनें, यह फॉर्म में नहीं बताया गया, इसलिए पैन केंद्र पर पूछें / आधिकारिक साइट देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Leaving the AO code blank", "Filling only some of the four parts"], hi: ["AO कोड खाली छोड़ना", "चार में से कुछ ही हिस्से भरना"] }
+    },
+    {
+      label: { en: "17–21. Representative Assessee (if applicable)", hi: "17–21. प्रतिनिधि (Representative Assessee), अगर लागू हो" },
+      meaning: {
+        en: "A Representative Assessee (RA) is a person who applies on behalf of the applicant. This part is mandatory if the applicant is a minor, mentally ill or of unsound mind.",
+        hi: "प्रतिनिधि (RA) वह व्यक्ति है जो आवेदक की ओर से आवेदन करता है। अगर आवेदक नाबालिग है, या मानसिक रूप से बीमार/अस्वस्थ है, तो यह हिस्सा भरना ज़रूरी है।"
+      },
+      write: {
+        en: "Adults applying for themselves can usually skip it. If it applies, write the RA's name, PAN (or Aadhaar if the RA has no PAN), address, mobile number and email; the RA's mobile and email are mandatory. Non Residents and \"Resident but not ordinarily resident\" applicants must also give an RA with an Indian address.",
+        hi: "जो बालिग अपने लिए ख़ुद आवेदन कर रहे हैं, उनके लिए यह आम तौर पर लागू नहीं होता। लागू हो तो प्रतिनिधि का नाम, पैन (पैन न हो तो आधार), पता, मोबाइल नंबर और ईमेल लिखें; प्रतिनिधि का मोबाइल और ईमेल ज़रूरी हैं। Non Resident और \"Resident but not ordinarily resident\" आवेदकों को भी भारतीय पते वाला प्रतिनिधि देना ज़रूरी है।"
+      },
+      documents: {
+        en: ["The RA's proof of identity and proof of address (mandatory, if an RA applies)"],
+        hi: ["प्रतिनिधि का पहचान प्रमाण और पते का प्रमाण (अगर प्रतिनिधि है तो ज़रूरी)"]
+      },
+      mistakes: {
+        en: ["Applying for a minor without filling the RA part", "Not attaching the RA's own ID and address proof"],
+        hi: ["नाबालिग के लिए आवेदन में प्रतिनिधि वाला हिस्सा न भरना", "प्रतिनिधि का पहचान और पते का प्रमाण न लगाना"]
+      }
+    },
+    {
+      label: { en: "23. Proof of Identity, Address and Date of Birth", hi: "23. पहचान, पते और जन्म तिथि का प्रमाण" },
+      meaning: {
+        en: "You must submit three proofs: identity (PoI), address (PoA) and date of birth (PoDoB). They go with the form as Annexures A-1, A-2 and A-3. One document can count for more than one proof if it is allowed for both.",
+        hi: "आपको तीन प्रमाण देने हैं: पहचान (PoI), पता (PoA) और जन्म तिथि (PoDoB)। ये फॉर्म के साथ Annexure A-1, A-2 और A-3 के रूप में लगते हैं। अगर कोई दस्तावेज़ दो प्रमाणों के लिए मान्य है, तो वह दोनों के काम आ सकता है।"
+      },
+      write: {
+        en: "Tick the three boxes in item 23 and attach copies. Aadhaar, Indian passport, driving licence and voter ID count for identity and address. For date of birth, Aadhaar is NOT accepted: use a passport, driving licence, voter ID, Class 10 (matriculation) certificate or mark sheet, birth certificate, or one of the other documents listed. For anyone born on or after 01.10.2023, a birth certificate is mandatory. Bills and bank statements used as address proof must be not more than three months old. For a minor, a parent's or guardian's documents can be the proof of identity (along with the minor's Aadhaar) and of address.",
+        hi: "खाना 23 के तीनों खानों पर टिक करें और कॉपियाँ लगाएँ। आधार, भारतीय पासपोर्ट, ड्राइविंग लाइसेंस और वोटर आईडी पहचान और पते, दोनों के लिए मान्य हैं। जन्म तिथि के लिए आधार मान्य नहीं है: पासपोर्ट, ड्राइविंग लाइसेंस, वोटर आईडी, 10वीं (मैट्रिक) का प्रमाणपत्र या मार्कशीट, जन्म प्रमाणपत्र, या सूची का कोई और दस्तावेज़ दें। 01.10.2023 या उसके बाद जन्मे बच्चों के लिए जन्म प्रमाणपत्र ज़रूरी है। पते के प्रमाण के लिए बिल और बैंक स्टेटमेंट तीन महीने से पुराने न हों। नाबालिग के लिए माता-पिता या अभिभावक के दस्तावेज़ पहचान (नाबालिग के आधार के साथ) और पते के प्रमाण माने जाते हैं।"
+      },
+      changed: {
+        en: "Changed from 1 April 2026: Protean says Aadhaar is no longer accepted as proof of date of birth for PAN. It still works as proof of identity and address. Keep a separate date-of-birth document ready.",
+        hi: "1 अप्रैल 2026 से बदला: प्रोटियन के अनुसार अब पैन के लिए आधार को जन्म तिथि का प्रमाण नहीं माना जाता। पहचान और पते के प्रमाण के रूप में आधार अब भी मान्य है। जन्म तिथि के लिए अलग दस्तावेज़ तैयार रखें।"
+      },
+      documents: {
+        en: [
+          "Identity: Aadhaar, Indian passport, driving licence, voter ID, ration card with your photo, Transgender ID card/certificate, photo ID from Central/State Government or a PSU, Government pensioner card with photo, CGHS/ECHS photo card; or an original certificate of identity signed by an MP, MLA, Municipal Councillor or Gazetted Officer (Annexure A), or an original bank certificate (Annexure C)",
+          "Address: Aadhaar, Indian passport, driving licence, voter ID, Transgender ID card/certificate, spouse's Indian passport, post office passbook, domicile certificate, Government accommodation allotment letter (not more than 3 years old), property registration document, latest property tax assessment order; electricity, landline/broadband, water or gas bill, bank, depository or credit card statement (not more than 3 months old); or an original certificate of address signed by an MP, MLA, Municipal Councillor or Gazetted Officer (Annexure A), or an original employer certificate (Annexure B)",
+          "Date of birth: Indian passport, driving licence, voter ID, Transgender ID card/certificate, Government/PSU photo ID, CGHS/ECHS photo card, domicile certificate, pension payment order, marriage certificate from the Registrar of Marriages, matriculation certificate or mark sheet, birth certificate (mandatory if born on or after 01.10.2023); or an original affidavit sworn before a magistrate stating the date of birth"
+        ],
+        hi: [
+          "पहचान: आधार, भारतीय पासपोर्ट, ड्राइविंग लाइसेंस, वोटर आईडी, आपकी फ़ोटो वाला राशन कार्ड, ट्रांसजेंडर पहचान पत्र/प्रमाणपत्र, केंद्र/राज्य सरकार या सार्वजनिक उपक्रम (PSU) का फ़ोटो पहचान पत्र, फ़ोटो वाला सरकारी पेंशनर कार्ड, CGHS/ECHS फ़ोटो कार्ड; या सांसद, विधायक, पार्षद या राजपत्रित अधिकारी के हस्ताक्षर वाला मूल पहचान प्रमाणपत्र (Annexure A), या बैंक का मूल प्रमाणपत्र (Annexure C)",
+          "पता: आधार, भारतीय पासपोर्ट, ड्राइविंग लाइसेंस, वोटर आईडी, ट्रांसजेंडर पहचान पत्र/प्रमाणपत्र, पति/पत्नी का भारतीय पासपोर्ट, डाकघर की पासबुक, अधिवास (domicile) प्रमाणपत्र, सरकारी आवास आवंटन पत्र (3 साल से पुराना नहीं), संपत्ति रजिस्ट्री का दस्तावेज़, संपत्ति कर का ताज़ा आकलन आदेश; बिजली, लैंडलाइन/ब्रॉडबैंड, पानी या गैस का बिल, बैंक, डीमैट (depository) या क्रेडिट कार्ड स्टेटमेंट (3 महीने से पुराना नहीं); या सांसद, विधायक, पार्षद या राजपत्रित अधिकारी के हस्ताक्षर वाला मूल पता प्रमाणपत्र (Annexure A), या नियोक्ता का मूल प्रमाणपत्र (Annexure B)",
+          "जन्म तिथि: भारतीय पासपोर्ट, ड्राइविंग लाइसेंस, वोटर आईडी, ट्रांसजेंडर पहचान पत्र/प्रमाणपत्र, सरकारी/PSU फ़ोटो पहचान पत्र, CGHS/ECHS फ़ोटो कार्ड, अधिवास प्रमाणपत्र, पेंशन भुगतान आदेश, विवाह रजिस्ट्रार का विवाह प्रमाणपत्र, 10वीं (मैट्रिक) का प्रमाणपत्र या मार्कशीट, जन्म प्रमाणपत्र (01.10.2023 या बाद में जन्म हो तो ज़रूरी); या मजिस्ट्रेट के सामने दिया गया मूल शपथ-पत्र (affidavit) जिसमें जन्म तिथि लिखी हो"
+        ]
+      },
+      mistakes: {
+        en: ["Giving only Aadhaar and no separate date-of-birth proof", "Using a bill or bank statement older than three months", "A document whose name or date of birth doesn't match what you wrote on the form"],
+        hi: ["सिर्फ़ आधार देना और जन्म तिथि का अलग प्रमाण न देना", "तीन महीने से पुराना बिल या बैंक स्टेटमेंट देना", "ऐसा दस्तावेज़ देना जिसका नाम या जन्म तिथि फॉर्म में लिखी जानकारी से मेल न खाए"]
+      }
+    },
+    {
+      label: { en: "Photographs (two)", hi: "फ़ोटो (दो)" },
+      meaning: {
+        en: "The form has two photo boxes, one on the left and one on the right. Every applicant, including a minor, must paste two photos.",
+        hi: "फॉर्म पर फ़ोटो के दो खाने हैं, एक बाईं ओर और एक दाईं ओर। हर आवेदक को, नाबालिग को भी, दो फ़ोटो चिपकानी हैं।"
+      },
+      write: {
+        en: "Use two recent colour photos with a white background, size 4.5 cm x 3.5 cm (as printed on Form 93). Paste them; do not staple or clip them. The guidelines say the clarity of the photo on your PAN card depends on the photo you paste. Keep the right-side photo clean, with no mark on it.",
+        hi: "हाल की दो रंगीन फ़ोटो लगाएँ, सफ़ेद बैकग्राउंड वाली, साइज़ 4.5 सेमी x 3.5 सेमी (जैसा फॉर्म 93 पर छपा है)। फ़ोटो चिपकाएँ; स्टेपल या क्लिप न करें। निर्देशों के अनुसार पैन कार्ड पर फ़ोटो उतनी ही साफ़ आएगी जितनी साफ़ फ़ोटो आप लगाएँगे। दाईं ओर वाली फ़ोटो पर कोई निशान न लगाएँ।"
+      },
+      documents: { en: ["2 recent colour photos, white background, 4.5 cm x 3.5 cm"], hi: ["हाल की 2 रंगीन फ़ोटो, सफ़ेद बैकग्राउंड, 4.5 सेमी x 3.5 सेमी"] },
+      mistakes: {
+        en: ["Stapling or clipping the photos", "A coloured background or an old or blurry photo", "Any signature or mark on the right-side photo"],
+        hi: ["फ़ोटो स्टेपल या क्लिप करना", "रंगीन बैकग्राउंड, पुरानी या धुंधली फ़ोटो", "दाईं ओर वाली फ़ोटो पर हस्ताक्षर या कोई निशान"]
+      }
+    },
+    {
+      label: { en: "Signature / Left hand thumb impression", hi: "हस्ताक्षर / बाएँ हाथ के अंगूठे का निशान" },
+      meaning: {
+        en: "Your signature, or your left thumb impression if you cannot sign. The form asks for it in two places.",
+        hi: "आपके हस्ताक्षर, या अगर आप हस्ताक्षर नहीं कर सकते तो बाएँ हाथ के अंगूठे का निशान। फॉर्म में यह दो जगह चाहिए।"
+      },
+      write: {
+        en: "1) Across the LEFT photo, so that part of it is on the photo and part on the form. 2) Inside the box on the last page, under the declaration, with the place and date. Do not sign on the right photo. If you use a thumb impression, it must be attested by a Magistrate, Notary Public, Oath Commissioner or Gazetted Officer under official seal and stamp. In the declaration you state that you do not already have a PAN.",
+        hi: "1) बाईं ओर वाली फ़ोटो के आर-पार, ताकि हस्ताक्षर का कुछ हिस्सा फ़ोटो पर और कुछ फॉर्म पर रहे। 2) आख़िरी पेज पर घोषणा के नीचे दिए खाने के अंदर, जगह और तारीख़ के साथ। दाईं फ़ोटो पर हस्ताक्षर न करें। अगर अंगूठा लगाते हैं, तो उसे मजिस्ट्रेट, नोटरी, ओथ कमिश्नर या राजपत्रित अधिकारी से सरकारी मुहर के साथ सत्यापित (attest) करवाना ज़रूरी है। घोषणा में आप लिखते हैं कि आपके पास पहले से पैन नहीं है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing on the right-side photo", "Signing fully inside the left photo instead of across its edge", "A thumb impression without attestation", "Applying when you already have a PAN (the declaration warns of legal consequences)"],
+        hi: ["दाईं ओर वाली फ़ोटो पर हस्ताक्षर करना", "बाईं फ़ोटो के किनारे के आर-पार की जगह पूरा हस्ताक्षर फ़ोटो के अंदर करना", "बिना सत्यापन के अंगूठे का निशान", "पहले से पैन होते हुए फिर से आवेदन करना (घोषणा में क़ानूनी कार्रवाई की चेतावनी है)"]
+      }
+    }
+  ]
+});

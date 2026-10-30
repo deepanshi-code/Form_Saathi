@@ -1,0 +1,259 @@
+// Checked against the Election Commission of India's English "Form-6: Application Form for New Voters"
+// published on voters.eci.gov.in (PDF last modified 28-10-2025), the official "Guidelines for filling up
+// the application Form-6" appended to the same form on the CEO Manipur website (August 2022 version),
+// and the CEO Delhi press release of 01-08-2022 on the new forms, the four qualifying dates and Aadhaar.
+// Every statement below comes from one of those documents. If something is not stated in them, the
+// guide says "ask your Booth Level Officer (BLO)" instead of guessing.
+
+window.FORMS.push({
+  id: "voter-id-form-6",
+  verified: true,
+  source: {
+    title: "Election Commission of India, Form-6: Application Form for New Voters (voters.eci.gov.in, PDF last modified 28-10-2025)",
+    url: "https://voters.eci.gov.in/formspdf/Form_6_English.pdf"
+  },
+  lastChecked: "2026-10-30",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "Voter ID: Form 6 (New Voter Registration)", hi: "वोटर आईडी: फॉर्म 6 (नया मतदाता पंजीकरण)" },
+  about: {
+    en: "Form 6 is the Election Commission's form to get your name added to the voter list (electoral roll) for the first time. Since 1 August 2022 there are four qualifying dates in a year: 1 January, 1 April, 1 July and 1 October. If you turn 18 on or before any of these dates, you can enrol, and you can apply in advance. Fields marked * are mandatory. Your voter ID card (EPIC) is sent free by speed post to the address you give.",
+    hi: "फॉर्म 6 चुनाव आयोग का फॉर्म है, जिससे पहली बार मतदाता सूची में नाम जुड़वाया जाता है। 1 अगस्त 2022 से साल में चार तारीख़ें तय हैं: 1 जनवरी, 1 अप्रैल, 1 जुलाई और 1 अक्टूबर। इनमें से किसी भी तारीख़ तक आपकी उम्र 18 साल हो जाती है, तो आप नाम जुड़वा सकते हैं, और पहले से आवेदन भी कर सकते हैं। * वाले खाने ज़रूरी हैं। वोटर आईडी कार्ड (EPIC) आपके दिए पते पर स्पीड पोस्ट से मुफ़्त भेजा जाता है।"
+  },
+
+  fields: [
+    {
+      label: { en: "Assembly / Parliamentary Constituency (\"To, The Electoral Registration Officer\")", hi: "विधानसभा / लोकसभा क्षेत्र (\"सेवा में, निर्वाचक रजिस्ट्रीकरण ऑफ़िसर\")" },
+      meaning: {
+        en: "The form is addressed to the Electoral Registration Officer (ERO) of the constituency where you live now. You write the number and name of your Assembly Constituency. The Parliamentary Constituency line is only for Union Territories that have no Legislative Assembly.",
+        hi: "यह फॉर्म उस क्षेत्र के निर्वाचक रजिस्ट्रीकरण अधिकारी (ERO) के नाम है, जहाँ आप अभी रहते हैं। इसमें अपने विधानसभा क्षेत्र का नंबर और नाम लिखना है। लोकसभा क्षेत्र वाली लाइन सिर्फ़ उन केंद्र शासित प्रदेशों के लिए है जहाँ विधानसभा नहीं है।"
+      },
+      write: {
+        en: "Write the constituency number and name. Don't know them? The official guidelines say the ERO will help, and your application \"will not be rejected\" just because this is missing. For your exact constituency, ask your BLO or check voters.eci.gov.in.",
+        hi: "क्षेत्र का नंबर और नाम लिखें। नहीं पता? आधिकारिक निर्देशों के अनुसार ERO इसमें मदद करेंगे, और सिर्फ़ यह न लिखने की वजह से आवेदन रद्द नहीं होगा। अपना सही क्षेत्र जानने के लिए अपने BLO से पूछें या voters.eci.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the constituency of your old home town instead of where you ordinarily live now"],
+        hi: ["जहाँ अभी रहते हैं उसकी जगह अपने पुराने शहर/गाँव का क्षेत्र लिख देना"]
+      }
+    },
+    {
+      label: { en: "Photograph *", hi: "फ़ोटो *" },
+      meaning: {
+        en: "One recent passport-size colour photo. It is used for your voter entry and voter ID card.",
+        hi: "एक हाल की पासपोर्ट साइज़ रंगीन फ़ोटो। यही आपकी मतदाता सूची और वोटर आईडी कार्ड में लगेगी।"
+      },
+      write: {
+        en: "Paste it in the box. The form asks for an \"UNSIGNED\" photo, 4.5 cm x 3.5 cm, full face from the front, with a white background. The guidelines add: eyes must be open and both edges of the face clearly visible.",
+        hi: "फ़ोटो खाने में चिपकाएँ। फॉर्म में बिना हस्ताक्षर वाली फ़ोटो माँगी गई है: 4.5 सेमी x 3.5 सेमी, सामने से पूरा चेहरा, सफ़ेद बैकग्राउंड। निर्देशों के अनुसार आँखें खुली हों और चेहरे के दोनों किनारे साफ़ दिखें।"
+      },
+      documents: { en: ["1 recent passport-size colour photo, white background"], hi: ["1 हाल की पासपोर्ट साइज़ रंगीन फ़ोटो, सफ़ेद बैकग्राउंड"] },
+      mistakes: {
+        en: ["Signing across the photo (it must be unsigned)", "Coloured or dark background", "Old or blurry photo"],
+        hi: ["फ़ोटो पर हस्ताक्षर कर देना (फ़ोटो बिना हस्ताक्षर की होनी चाहिए)", "रंगीन या गहरा बैकग्राउंड", "पुरानी या धुंधली फ़ोटो"]
+      }
+    },
+    {
+      label: { en: "Name * (item 1)", hi: "नाम * (खाना 1)" },
+      meaning: {
+        en: "Your name, written twice: 1(a) in your State's official language and 1(b) in English in BLOCK (capital) letters. First name with middle name in one box, surname (if any) in the next.",
+        hi: "आपका नाम दो बार: 1(क) राज्य की राजभाषा में और 1(ख) अंग्रेज़ी में बड़े (कैपिटल) अक्षरों में। पहला और बीच का नाम एक खाने में, उपनाम (अगर हो) अगले खाने में।"
+      },
+      write: {
+        en: "Fill both languages with the exact spelling you want on the voter list. The guidelines warn: if you fill only one, the system translates it automatically, \"which may lead to spelling mistakes\". No surname? Leave that box empty.",
+        hi: "दोनों भाषाओं में बिल्कुल वही स्पेलिंग लिखें जो आप मतदाता सूची में चाहते हैं। निर्देशों में चेतावनी है: सिर्फ़ एक भाषा में भरेंगे तो सिस्टम अपने आप दूसरी भाषा में बदलेगा, जिससे स्पेलिंग ग़लत हो सकती है। उपनाम नहीं है? तो वह खाना खाली छोड़ दें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the name in only one language", "Writing the English name in small letters"],
+        hi: ["नाम सिर्फ़ एक भाषा में भरना", "अंग्रेज़ी नाम छोटे अक्षरों में लिखना"]
+      }
+    },
+    {
+      label: { en: "Name of one relative * (item 2)", hi: "किसी एक रिश्तेदार का नाम * (खाना 2)" },
+      meaning: {
+        en: "The name and surname of ANY ONE of: Father, Mother, Husband, Wife, or \"Legal Guardian in case of orphan / Guru in case of Third Gender\". Again in both the State language (2a) and English BLOCK letters (2b).",
+        hi: "इनमें से किसी एक का नाम और उपनाम: पिता, माता, पति, पत्नी, या अनाथ होने पर क़ानूनी अभिभावक / तृतीय लिंग होने पर गुरु। यह भी दोनों भाषाओं में: राज्य की भाषा (2क) और अंग्रेज़ी बड़े अक्षरों (2ख) में।"
+      },
+      write: {
+        en: "Tick whose name you are giving and write it. The form's note says that for a married woman, the husband's name \"may preferably be mentioned\" (a preference, not a rule). Strike off the options that don't apply.",
+        hi: "किसका नाम दे रहे हैं उस पर टिक करें और नाम लिखें। फॉर्म के नोट में लिखा है कि शादीशुदा महिला के लिए पति का नाम लिखना बेहतर है (यह सलाह है, नियम नहीं)। जो विकल्प लागू नहीं, उन्हें काट दें।"
+      },
+      changed: {
+        en: "Changed: the August 2022 form listed only \"Legal Guardian in case of orphan\". The current ECI form (October 2025) also adds \"Guru in case of Third Gender\".",
+        hi: "बदलाव: अगस्त 2022 के फॉर्म में सिर्फ़ \"अनाथ होने पर क़ानूनी अभिभावक\" था। चुनाव आयोग के मौजूदा फॉर्म (अक्टूबर 2025) में \"तृतीय लिंग होने पर गुरु\" भी जोड़ा गया है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Not ticking which relative's name you wrote", "Writing more than one relative's name"],
+        hi: ["यह टिक न करना कि किस रिश्तेदार का नाम लिखा है", "एक से ज़्यादा रिश्तेदारों के नाम लिख देना"]
+      }
+    },
+    {
+      label: { en: "Mobile number and email (items 3 and 4)", hi: "मोबाइल नंबर और ईमेल (खाना 3 और 4)" },
+      meaning: {
+        en: "Your own mobile number and email \"if available\", or those of the relative named in item 2.",
+        hi: "आपका अपना मोबाइल नंबर और ईमेल, \"अगर उपलब्ध हो\", या खाना 2 में लिखे रिश्तेदार का।"
+      },
+      write: {
+        en: "Write your own if you have one; otherwise the relative's. These are not marked mandatory. What messages are sent to this number is not stated on the form, so ask your BLO or check voters.eci.gov.in.",
+        hi: "अपना हो तो अपना लिखें, वरना रिश्तेदार का। ये खाने ज़रूरी नहीं बताए गए हैं। इस नंबर पर कौन-से संदेश आएँगे, यह फॉर्म में नहीं लिखा, इसलिए अपने BLO से पूछें या voters.eci.gov.in देखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a number that will soon stop working"],
+        hi: ["ऐसा नंबर देना जो जल्दी बंद होने वाला हो"]
+      }
+    },
+    {
+      label: { en: "Aadhaar details (item 5)", hi: "आधार की जानकारी (खाना 5)" },
+      meaning: {
+        en: "Tick ONE box: (a) write your Aadhaar number, or (b) \"I am not able to furnish my Aadhaar Number because I don't have Aadhaar Number.\" The guidelines say Aadhaar is asked \"for the purpose of authentication of entries\".",
+        hi: "एक खाने पर टिक करें: (क) अपना आधार नंबर लिखें, या (ख) \"मैं आधार नंबर नहीं दे सकता/सकती, क्योंकि मेरे पास आधार नंबर नहीं है।\" निर्देशों के अनुसार आधार \"प्रविष्टियों के प्रमाणीकरण\" (सूची की जानकारी जाँचने) के लिए माँगा जाता है।"
+      },
+      write: {
+        en: "The Election Commission's August 2022 press note (published by CEO Delhi) says: \"Submission of Aadhaar number is voluntary and non-submission will not result in denial of registration\". The form's option (b) only covers people who don't have Aadhaar. If you have Aadhaar but don't wish to give it, the form doesn't say what to tick, so ask your BLO.",
+        hi: "चुनाव आयोग के अगस्त 2022 के प्रेस नोट (CEO दिल्ली द्वारा जारी) में लिखा है कि आधार नंबर देना स्वैच्छिक है और न देने पर पंजीकरण से मना नहीं किया जाएगा। फॉर्म का विकल्प (ख) सिर्फ़ उनके लिए है जिनके पास आधार नहीं है। अगर आधार है पर देना नहीं चाहते, तो क्या टिक करें यह फॉर्म में नहीं लिखा, इसलिए अपने BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking both boxes", "Writing a wrong Aadhaar digit (check it twice)"],
+        hi: ["दोनों खानों पर टिक कर देना", "आधार का कोई अंक ग़लत लिखना (दो बार जाँचें)"]
+      }
+    },
+    {
+      label: { en: "Gender * (item 6)", hi: "लिंग * (खाना 6)" },
+      meaning: { en: "Options on the form: Male, Female, Third Gender.", hi: "फॉर्म पर विकल्प: पुरुष, महिला, तृतीय लिंग।" },
+      write: {
+        en: "Tick one box clearly. The guidelines say applicants of the third gender may choose 'Male', 'Female' or 'Third Gender'.",
+        hi: "एक खाने पर साफ़ टिक करें। निर्देशों के अनुसार तृतीय लिंग के आवेदक 'पुरुष', 'महिला' या 'तृतीय लिंग' में से कोई भी चुन सकते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "Date of birth and age proof * (item 7)", hi: "जन्म तिथि और उम्र का प्रमाण * (खाना 7)" },
+      meaning: {
+        en: "7(a) is your date of birth. 7(b) asks for a self-attested copy (you sign the photocopy yourself) of ONE age-proof document.",
+        hi: "7(क) में जन्म तिथि लिखनी है। 7(ख) में उम्र के किसी एक प्रमाण की स्व-प्रमाणित कॉपी (फ़ोटोकॉपी पर ख़ुद हस्ताक्षर करके) लगानी है।"
+      },
+      write: {
+        en: "Boxes are printed dd / mm / yyyy. Attach one document from the list below. If you have none of them, attach some other document, write its name in 7(ii) AND in declaration point (iv). Then you must appear in person before the ERO or an officer named by them for checking.",
+        hi: "खाने dd / mm / yyyy क्रम में छपे हैं। नीचे की सूची में से एक दस्तावेज़ लगाएँ। इनमें से कोई नहीं है, तो कोई दूसरा दस्तावेज़ लगाएँ और उसका नाम 7(ii) में और घोषणा के बिंदु (iv) में भी लिखें। ऐसे में जाँच के लिए आपको ख़ुद ERO या उनके तय किए अधिकारी के सामने जाना होगा।"
+      },
+      documents: {
+        en: ["Any one of: Birth certificate (local body / municipal authority / Registrar of Births & Deaths)", "Aadhaar card", "PAN card", "Driving licence", "Class X or XII certificate from CBSE / ICSE / State Board, if it shows date of birth", "Indian passport"],
+        hi: ["इनमें से कोई एक: जन्म प्रमाण पत्र (स्थानीय निकाय / नगर निगम / जन्म-मृत्यु रजिस्ट्रार)", "आधार कार्ड", "पैन कार्ड", "ड्राइविंग लाइसेंस", "CBSE / ICSE / राज्य बोर्ड का 10वीं या 12वीं का प्रमाण पत्र, अगर उसमें जन्म तिथि हो", "भारतीय पासपोर्ट"]
+      },
+      mistakes: {
+        en: ["Writing the month before the day", "Forgetting to sign (self-attest) the photocopy", "Using another document but not naming it in the declaration"],
+        hi: ["दिन से पहले महीना लिखना", "फ़ोटोकॉपी पर ख़ुद हस्ताक्षर (स्व-प्रमाणित) करना भूल जाना", "दूसरा दस्तावेज़ लगाना पर घोषणा में उसका नाम न लिखना"]
+      }
+    },
+    {
+      label: { en: "Present ordinary residence and address proof * (item 8)", hi: "अभी का साधारण निवास और पते का प्रमाण * (खाना 8)" },
+      meaning: {
+        en: "\"Ordinary residence\" means the place where you normally live now. 8(a) is the full address with PIN code. 8(b) is a self-attested address proof in your name, or in the name of a parent, spouse or adult child who is already a voter at the same address.",
+        hi: "\"साधारण निवास\" यानी वह जगह जहाँ आप अभी आम तौर पर रहते हैं। 8(क) में पिन कोड सहित पूरा पता लिखें। 8(ख) में पते का स्व-प्रमाणित प्रमाण लगाएँ: आपके नाम का, या माता-पिता, पति/पत्नी या बालिग़ बच्चे के नाम का, अगर वे उसी पते पर पहले से मतदाता हैं।"
+      },
+      write: {
+        en: "Fill every line: house no., street, town/village, post office, PIN, tehsil, district, state. Students can enrol either at their parents' address or at the hostel/mess where they ordinarily live. If you have none of the listed proofs, name another document in 8(ii); a field verification will then be done. What exactly a hostel student must attach is not stated in the current guidelines, so ask your BLO.",
+        hi: "हर लाइन भरें: मकान नंबर, गली, शहर/गाँव, डाकघर, पिन, तहसील, ज़िला, राज्य। छात्र अपने माता-पिता के पते पर या जिस हॉस्टल/मेस में आम तौर पर रहते हैं, वहाँ नाम जुड़वा सकते हैं। सूची का कोई प्रमाण नहीं है, तो 8(ii) में दूसरे दस्तावेज़ का नाम लिखें; तब मौके पर जाँच होगी। हॉस्टल में रहने वाले छात्र को ठीक-ठीक क्या लगाना है, यह मौजूदा निर्देशों में नहीं लिखा, इसलिए अपने BLO से पूछें।"
+      },
+      documents: {
+        en: ["Any one of: Water / electricity / gas connection bill for that address (the form says \"atleast 1 year\"; ask your BLO what this means for you)", "Aadhaar card", "Current passbook of a nationalised / scheduled bank or post office", "Indian passport", "Revenue Department land records, including Kisan Bahi", "Registered rent lease deed (if tenant)", "Registered sale deed (if own house)"],
+        hi: ["इनमें से कोई एक: उस पते का पानी / बिजली / गैस कनेक्शन का बिल (फॉर्म पर \"कम से कम 1 वर्ष\" लिखा है; आपके लिए इसका क्या मतलब है, BLO से पूछें)", "आधार कार्ड", "राष्ट्रीयकृत / अनुसूचित बैंक या डाकघर की चालू पासबुक", "भारतीय पासपोर्ट", "राजस्व विभाग के ज़मीन के काग़ज़, किसान बही सहित", "रजिस्टर्ड किरायानामा (किराएदार हों तो)", "रजिस्टर्ड बैनामा (अपना घर हो तो)"]
+      },
+      mistakes: {
+        en: ["Leaving out the PIN code", "Giving a proof in a relative's name when that relative is not already a voter at the same address", "Using a college ID card (it is not on the list)"],
+        hi: ["पिन कोड न लिखना", "ऐसे रिश्तेदार के नाम का प्रमाण देना जो उसी पते पर पहले से मतदाता नहीं है", "कॉलेज आईडी कार्ड लगाना (यह सूची में नहीं है)"]
+      }
+    },
+    {
+      label: { en: "Disability (item 9, optional)", hi: "दिव्यांगता (खाना 9, वैकल्पिक)" },
+      meaning: {
+        en: "Optional. Categories on the form: Locomotive, Visual, Deaf & Dumb, or any other (describe it). The form also asks the percentage of disability and whether a certificate is attached.",
+        hi: "यह वैकल्पिक है। फॉर्म पर श्रेणियाँ: चलने-फिरने से जुड़ी, देखने से जुड़ी, मूक-बधिर, या कोई और (लिखकर बताएँ)। फॉर्म यह भी पूछता है कि दिव्यांगता कितने प्रतिशत है और प्रमाण पत्र लगाया है या नहीं।"
+      },
+      write: {
+        en: "Fill only if it applies. Tick the category, write the %, and tick Yes or No for \"Certificate attached\". Whether a certificate is required is not stated, so ask your BLO.",
+        hi: "सिर्फ़ तब भरें जब लागू हो। श्रेणी पर टिक करें, प्रतिशत लिखें, और \"प्रमाण पत्र संलग्न\" के लिए हाँ या नहीं पर टिक करें। प्रमाण पत्र ज़रूरी है या नहीं, यह नहीं लिखा, इसलिए BLO से पूछें।"
+      },
+      changed: {
+        en: "Changed: the August 2022 form had only the categories. The current ECI form (October 2025) adds \"Percentage of disability\" and \"Certificate attached: Yes / No\".",
+        hi: "बदलाव: अगस्त 2022 के फॉर्म में सिर्फ़ श्रेणियाँ थीं। चुनाव आयोग के मौजूदा फॉर्म (अक्टूबर 2025) में \"दिव्यांगता का प्रतिशत\" और \"प्रमाण पत्र संलग्न: हाँ / नहीं\" जोड़ा गया है।"
+      },
+      documents: { en: ["Disability certificate, if you have one"], hi: ["दिव्यांगता प्रमाण पत्र, अगर हो"] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "Family member already on the voter list (item 10)", hi: "परिवार का सदस्य जो पहले से मतदाता है (खाना 10)" },
+      meaning: {
+        en: "Details of a family member who is already on the voter list at your current address and lives with you: their name, their relationship with you, and their EPIC number (the number on their voter ID card).",
+        hi: "परिवार के उस सदस्य की जानकारी जो आपके अभी के पते पर पहले से मतदाता है और आपके साथ रहता है: उनका नाम, आपसे रिश्ता, और उनका EPIC नंबर (उनके वोटर आईडी कार्ड पर लिखा नंबर)।"
+      },
+      write: {
+        en: "Copy the EPIC number carefully from the family member's voter ID card. The form does not say what to do if no family member is enrolled there, so ask your BLO.",
+        hi: "EPIC नंबर परिवार के सदस्य के वोटर आईडी कार्ड से ध्यान से उतारें। अगर वहाँ परिवार का कोई सदस्य मतदाता नहीं है, तो क्या करें यह फॉर्म में नहीं लिखा, इसलिए BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving the details of a relative who is a voter at a different address"],
+        hi: ["ऐसे रिश्तेदार की जानकारी देना जो किसी दूसरे पते पर मतदाता है"]
+      }
+    },
+    {
+      label: { en: "Declaration *", hi: "घोषणा *" },
+      meaning: {
+        en: "You confirm: (i) you are a citizen of India, and your place of birth (village/town, district, state); (ii) since which month and year you have lived at the address in 8(a); (iii) you are applying for the first time and your name is not on any voter list; (iv) only if you used an 'other' age proof, its name.",
+        hi: "आप पुष्टि करते हैं: (i) आप भारत के नागरिक हैं, और आपका जन्म स्थान (गाँव/शहर, ज़िला, राज्य); (ii) 8(क) वाले पते पर आप किस महीने और साल से रह रहे हैं; (iii) आप पहली बार आवेदन कर रहे हैं और आपका नाम किसी मतदाता सूची में नहीं है; (iv) सिर्फ़ अगर उम्र का 'दूसरा' प्रमाण लगाया है, तो उसका नाम।"
+      },
+      write: {
+        en: "Complete every blank. Point (iv) says \"Strike off, if not applicable\": cut it if you attached a listed age proof. The form warns that a false statement is punishable under Section 31 of the Representation of the People Act, 1950, with up to one year in jail, a fine, or both.",
+        hi: "हर ख़ाली जगह भरें। बिंदु (iv) पर लिखा है: लागू न हो तो काट दें; अगर आपने सूची वाला उम्र का प्रमाण लगाया है, तो इसे काट दें। फॉर्म में चेतावनी है कि ग़लत जानकारी देना लोक प्रतिनिधित्व अधिनियम 1950 की धारा 31 के तहत अपराध है, जिसमें एक साल तक की जेल, जुर्माना या दोनों हो सकते हैं।"
+      },
+      changed: {
+        en: "Changed in 2022: earlier, Form 6 was also used when shifting from one constituency to another. Since 1 August 2022, Form 6 is only for new voters; shifting is done in Form 8.",
+        hi: "2022 में बदलाव: पहले फॉर्म 6 एक क्षेत्र से दूसरे क्षेत्र में जाने पर भी भरा जाता था। 1 अगस्त 2022 से फॉर्म 6 सिर्फ़ नए मतदाताओं के लिए है; पता बदलने के लिए फॉर्म 8 है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving \"since (month and year)\" blank", "Not striking off point (iv) when it doesn't apply", "Using Form 6 when you are already a voter somewhere else and have only moved"],
+        hi: ["\"कब से (महीना और साल)\" ख़ाली छोड़ना", "लागू न होने पर भी बिंदु (iv) न काटना", "पहले से कहीं मतदाता होते हुए, सिर्फ़ पता बदलने पर फॉर्म 6 भरना"]
+      }
+    },
+    {
+      label: { en: "Signature / left-hand thumb impression, date and place", hi: "हस्ताक्षर / बाएँ हाथ के अंगूठे का निशान, तारीख़ और जगह" },
+      meaning: {
+        en: "You sign (or give your LEFT-hand thumb impression) below the declaration, with the date and place.",
+        hi: "घोषणा के नीचे आप हस्ताक्षर करते हैं (या बाएँ हाथ का अंगूठा लगाते हैं), साथ में तारीख़ और जगह लिखते हैं।"
+      },
+      write: {
+        en: "Sign yourself. The form's accessibility note says that for persons with intellectual disability, autism, cerebral palsy, multiple disabilities etc., the signature or left-hand thumb impression of the person or of their legal guardian is needed.",
+        hi: "हस्ताक्षर ख़ुद करें। फॉर्म के सुगम्यता निर्देश के अनुसार बौद्धिक दिव्यांगता, ऑटिज़्म, सेरेब्रल पाल्सी, बहु-दिव्यांगता आदि वाले व्यक्ति के मामले में, उस व्यक्ति के या उसके क़ानूनी अभिभावक के हस्ताक्षर या बाएँ हाथ के अंगूठे का निशान चाहिए।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Using the right thumb instead of the left", "Forgetting the date and place"],
+        hi: ["बाएँ की जगह दाएँ हाथ का अंगूठा लगाना", "तारीख़ और जगह लिखना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Acknowledgement / receipt", hi: "पावती / रसीद" },
+      meaning: {
+        en: "The bottom slip is filled and signed by the ERO / AERO / BLO when they receive your form. It carries an Acknowledgement Number.",
+        hi: "नीचे की पर्ची ERO / AERO / BLO फॉर्म लेते समय भरकर हस्ताक्षर करते हैं। इसमें एक पावती नंबर (Acknowledgement Number) होता है।"
+      },
+      write: {
+        en: "This part is for the office. Keep this slip: the form says you can use the Acknowledgement Number \"to check the status of application\". Where to check it is not stated on the form, so check voters.eci.gov.in or ask your BLO.",
+        hi: "यह हिस्सा दफ़्तर के लिए है। यह पर्ची संभालकर रखें: फॉर्म के अनुसार पावती नंबर से आवेदन की स्थिति जाँची जा सकती है। कहाँ जाँचें, यह फॉर्म में नहीं लिखा, इसलिए voters.eci.gov.in देखें या BLO से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Handing in the form without getting the signed receipt back"],
+        hi: ["फॉर्म देकर हस्ताक्षर वाली रसीद वापस न लेना"]
+      }
+    }
+  ]
+});

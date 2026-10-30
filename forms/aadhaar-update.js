@@ -1,0 +1,257 @@
+// Checked against UIDAI's official English "FORM 1: Aadhaar Enrolment and Update" for
+// (a) Resident Indian or (b) NRI having Proof of Address in India, aged 18 years and above
+// (PDF file dated 29-09-2026 on uidai.gov.in; the fee table is printed on this form), and UIDAI's
+// "List of Acceptable Documents for Enrolment and Update" (PDF dated 22-05-2026, uploaded on
+// uidai.gov.in on 11-06-2026): List III (enrolment, 18+) and List IV (update, any age).
+// Every statement below comes from one of those two documents. If something is not stated
+// in them, the guide says "ask at the Aadhaar centre" instead of guessing.
+
+window.FORMS.push({
+  id: "aadhaar-update",
+  verified: true,
+  source: {
+    title: "UIDAI Form 1: Aadhaar Enrolment and Update (Resident Indian / NRI with Indian address, 18+), file dated 29-09-2026",
+    url: "https://backend.uidai.gov.in/get/files/media/document/2026-09/Form_1_Eng.pdf"
+  },
+  lastChecked: "2026-10-30",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "Aadhaar Enrolment / Update Form (18+)", hi: "आधार नामांकन / अपडेट फॉर्म (18+ उम्र)" },
+  about: {
+    en: "UIDAI's Form 1, used at Aadhaar centres by people aged 18 or above, to get a new Aadhaar or to update name, date of birth, gender, address, mobile, email, photo or fingerprints. Fill it only in upper case (BLOCK / capital) letters. Where the form says \"tick\", tick (✔) only one box unless it says \"one or more\". You must show ORIGINAL documents; the centre makes an electronic copy and returns them. The full document list is on uidai.gov.in: https://backend.uidai.gov.in/get/files/media/document/2026-06/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+    hi: "यूआईडीएआई का फॉर्म 1, जो 18 साल या उससे ज़्यादा उम्र के लोग आधार केंद्र पर भरते हैं: नया आधार बनवाने के लिए, या नाम, जन्म तिथि, लिंग, पता, मोबाइल, ईमेल, फ़ोटो या उंगलियों के निशान बदलवाने के लिए। फॉर्म सिर्फ़ बड़े (कैपिटल) अक्षरों में भरें। जहाँ \"टिक\" करना है, वहाँ एक ही खाने पर (✔) लगाएँ, जब तक फॉर्म \"एक या ज़्यादा\" न कहे। असली (ओरिजिनल) दस्तावेज़ दिखाने होंगे; केंद्र उनकी इलेक्ट्रॉनिक कॉपी बनाकर आपको लौटा देता है। पूरी दस्तावेज़ सूची uidai.gov.in पर है।"
+  },
+
+  fields: [
+    {
+      label: { en: "1. Purpose: Enrolment OR Update *", hi: "1. उद्देश्य: नामांकन या अपडेट *" },
+      meaning: {
+        en: "\"Enrolment\" means you have never had an Aadhaar and want a new one. \"Update\" means you already have an Aadhaar and want to change something in it.",
+        hi: "\"Enrolment\" यानी आपका आधार कभी बना ही नहीं और अब नया बनवाना है। \"Update\" यानी आधार पहले से है और उसमें कुछ बदलवाना है।"
+      },
+      write: {
+        en: "Tick only one. If you tick Update, you must also fill box 7 (your Aadhaar number and what you want to update).",
+        hi: "सिर्फ़ एक पर टिक करें। अगर Update पर टिक किया, तो खाना 7 भी भरना ज़रूरी है (आपका आधार नंबर और क्या बदलवाना है)।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking both boxes", "Ticking Enrolment when you already have an Aadhaar"],
+        hi: ["दोनों खानों पर टिक करना", "आधार पहले से होने पर भी Enrolment पर टिक करना"]
+      }
+    },
+    {
+      label: { en: "2. Resident status *", hi: "2. निवासी स्थिति *" },
+      meaning: {
+        en: "The declaration explains: a resident of India is someone who \"resided in India for 182 days or more in 12 months\" before applying. An NRI is a citizen with a valid Indian passport who is not resident in India.",
+        hi: "फॉर्म की घोषणा के अनुसार: भारत का निवासी वह है जो आवेदन से पहले के 12 महीनों में 182 दिन या ज़्यादा भारत में रहा हो। एनआरआई वह भारतीय नागरिक है जिसके पास वैध भारतीय पासपोर्ट है पर जो भारत में नहीं रहता।"
+      },
+      write: {
+        en: "Tick only one: Resident Indian OR Non-Resident Indian (NRI). For NRIs, a valid Indian passport is the only accepted proof of identity, and email is mandatory. An NRI without an address proof in India must use Form 2, not this form.",
+        hi: "सिर्फ़ एक पर टिक करें: Resident Indian या NRI। एनआरआई के लिए पहचान का एकमात्र मान्य प्रमाण वैध भारतीय पासपोर्ट है, और ईमेल देना ज़रूरी है। जिस एनआरआई के पास भारत के पते का प्रमाण नहीं है, उसे यह नहीं, फॉर्म 2 भरना होगा।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["An NRI with no Indian address proof using this form instead of Form 2"],
+        hi: ["भारत के पते का प्रमाण न होने पर भी एनआरआई का फॉर्म 2 की जगह यह फॉर्म भरना"]
+      }
+    },
+    {
+      label: { en: "3(a). Name *", hi: "3(a). नाम *" },
+      meaning: {
+        en: "Your full name as it will appear on Aadhaar. UIDAI's document list says the name in your supporting document \"will be replicated as such\" in your Aadhaar.",
+        hi: "आपका पूरा नाम, जैसा आधार पर छपेगा। यूआईडीएआई की दस्तावेज़ सूची के अनुसार आपके दस्तावेज़ में जो नाम है, वही हूबहू आधार में दर्ज होगा।"
+      },
+      write: {
+        en: "Write the name exactly as on your Proof of Identity (POI) document. Leave out titles (Mr, Ms, Mrs, Shri, Smt., Kumari), honorifics (Dr, Prof., defence rank), profession (Er., CA, Adv., IAS) and aliases (urf, a.k.a.), even if your document has them. For an update, fill this only if you are changing your name.",
+        hi: "नाम बिल्कुल वैसा लिखें जैसा आपके पहचान प्रमाण (POI) पर है। Mr, Ms, Mrs, श्री, श्रीमती, कुमारी जैसे संबोधन; Dr, Prof., सेना का पद जैसी उपाधि; Er., CA, Adv., IAS जैसे पेशे; और \"उर्फ़\" वाले दूसरे नाम न लिखें, भले ही दस्तावेज़ में हों। अपडेट में यह खाना तभी भरें जब नाम बदलवाना हो।"
+      },
+      documents: {
+        en: ["Proof of Identity (POI) showing this name (see field 5(b))", "For a change of first name or full name: Gazette notification", "After marriage or divorce: Marriage Certificate or Divorce Decree (if it has no photo, also an old-name POI with photo)"],
+        hi: ["इसी नाम वाला पहचान प्रमाण (POI) (खाना 5(b) देखें)", "पहला नाम या पूरा नाम बदलने के लिए: गज़ट अधिसूचना", "शादी या तलाक़ के बाद: विवाह प्रमाण पत्र या तलाक़ की डिक्री (फ़ोटो न हो तो पुराने नाम वाला फ़ोटो सहित पहचान प्रमाण भी)"]
+      },
+      mistakes: {
+        en: ["Adding \"Mr\", \"Smt.\", \"Dr\" or a nickname", "Spelling different from your POI document", "Name and DOB not matching across your documents (the list says they must be uniform)"],
+        hi: ["नाम के साथ \"Mr\", \"श्रीमती\", \"Dr\" या घर का नाम जोड़ना", "पहचान प्रमाण से अलग स्पेलिंग", "अलग-अलग दस्तावेज़ों में नाम और जन्म तिथि का मेल न खाना (सूची के अनुसार ये एक जैसे होने चाहिए)"]
+      }
+    },
+    {
+      label: { en: "3(b). Gender *", hi: "3(b). लिंग *" },
+      meaning: { en: "Options on the form: Female, Male, Third gender / Transgender.", hi: "फॉर्म पर विकल्प: महिला, पुरुष, तृतीय लिंग / ट्रांसजेंडर।" },
+      write: {
+        en: "Tick only one. The document list accepts a Transgender Identity Card / Certificate (under the Transgender Persons Act, 2019) for gender and full name change. For other gender-change cases, ask at the Aadhaar centre.",
+        hi: "सिर्फ़ एक पर टिक करें। दस्तावेज़ सूची के अनुसार लिंग और पूरा नाम बदलने के लिए ट्रांसजेंडर पहचान पत्र / प्रमाण पत्र (ट्रांसजेंडर व्यक्ति अधिनियम, 2019 के तहत) मान्य है। बाकी मामलों में आधार केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: [], hi: [] }
+    },
+    {
+      label: { en: "3(c). Date of Birth or Age *: Verified / Declared / Approximate", hi: "3(c). जन्म तिथि या उम्र *: Verified / Declared / Approximate" },
+      meaning: {
+        en: "\"Verified\" means you show a proof of date of birth. \"Declared\" means you state your DOB without proof. \"Approximate\" is only for age, when you don't know your exact DOB.",
+        hi: "\"Verified\" यानी आप जन्म तिथि का प्रमाण दिखा रहे हैं। \"Declared\" यानी बिना प्रमाण के आप अपनी जन्म तिथि बता रहे हैं। \"Approximate\" सिर्फ़ उम्र के लिए है, जब सही जन्म तिथि पता न हो।"
+      },
+      write: {
+        en: "Write the DOB as DDMMYYYY (day, month, full year), OR write your age in years. Then tick only one: Verified, Declared or Approximate. Tick \"Verified\" only if you are presenting a proof of date of birth. The form warns: for Declared or Approximate, \"only year of declared/approximate birth will be printed on Aadhaar card\".",
+        hi: "जन्म तिथि DDMMYYYY में लिखें (पहले दिन, फिर महीना, फिर पूरा साल), या अपनी उम्र सालों में लिखें। फिर सिर्फ़ एक पर टिक करें: Verified, Declared या Approximate। \"Verified\" पर तभी टिक करें जब जन्म तिथि का प्रमाण दिखा रहे हों। फॉर्म के अनुसार Declared या Approximate चुनने पर आधार कार्ड पर सिर्फ़ जन्म का साल छपेगा।"
+      },
+      documents: {
+        en: ["Only for \"Verified\" or for a DOB update, one proof of date of birth, such as: Birth certificate (under the Registration of Births and Deaths Act, 1969)", "Valid Indian passport", "Marksheet / certificate from a recognised Board or university", "Service photo ID card or Pensioner photo ID card / Pension Payment Order (Government / PSU)", "Transgender Identity Card / Certificate", "Updating a DOB that is already in Aadhaar: if you earlier gave a birth certificate, bring a corrected birth certificate with the same Birth Registration Number; if you gave another document (e.g. marksheet, passport), bring a corrected version of it or a birth certificate"],
+        hi: ["सिर्फ़ \"Verified\" या जन्म तिथि बदलवाने के लिए, जन्म तिथि का एक प्रमाण, जैसे: जन्म प्रमाण पत्र (जन्म और मृत्यु पंजीकरण अधिनियम, 1969 के तहत)", "वैध भारतीय पासपोर्ट", "मान्य बोर्ड या विश्वविद्यालय की मार्कशीट / प्रमाण पत्र", "सरकारी / सार्वजनिक उपक्रम का सर्विस फ़ोटो पहचान पत्र या पेंशनर फ़ोटो पहचान पत्र / पेंशन भुगतान आदेश", "ट्रांसजेंडर पहचान पत्र / प्रमाण पत्र", "आधार में पहले से दर्ज जन्म तिथि बदलवाने पर: अगर पहले जन्म प्रमाण पत्र दिया था, तो उसी जन्म पंजीकरण संख्या (BRN) वाला सुधरा हुआ जन्म प्रमाण पत्र लाएँ; अगर कोई और दस्तावेज़ (जैसे मार्कशीट, पासपोर्ट) दिया था, तो उसी का सुधरा रूप या जन्म प्रमाण पत्र लाएँ"]
+      },
+      mistakes: {
+        en: ["Ticking \"Verified\" without bringing a DOB proof", "Writing the month before the day", "Bringing a driving licence, voter ID or ration card as DOB proof (the list does not accept them for DOB)"],
+        hi: ["जन्म तिथि का प्रमाण लाए बिना \"Verified\" पर टिक करना", "दिन से पहले महीना लिखना", "जन्म तिथि के प्रमाण के रूप में ड्राइविंग लाइसेंस, वोटर आईडी या राशन कार्ड लाना (सूची में ये जन्म तिथि के लिए मान्य नहीं हैं)"]
+      }
+    },
+    {
+      label: { en: "3(d) Email and 3(e) Mobile number", hi: "3(d) ईमेल और 3(e) मोबाइल नंबर" },
+      meaning: {
+        en: "Your contact details. Per the instructions, email is \"Mandatory for NRI\" and the mobile number is \"Optional\".",
+        hi: "आपकी संपर्क जानकारी। निर्देशों के अनुसार ईमेल एनआरआई के लिए ज़रूरी है, और मोबाइल नंबर वैकल्पिक है।"
+      },
+      write: {
+        en: "Write a mobile number and email you use. The form says no SMS will be sent to a non-Indian mobile number. To change only your mobile or email in an existing Aadhaar, tick \"Mobile\" or \"Email\" in box 7(b).",
+        hi: "ऐसा मोबाइल नंबर और ईमेल लिखें जो आप इस्तेमाल करते हैं। फॉर्म के अनुसार विदेशी मोबाइल नंबर पर कोई SMS नहीं आएगा। मौजूदा आधार में सिर्फ़ मोबाइल या ईमेल बदलवाना हो, तो खाना 7(b) में \"Mobile\" या \"Email\" पर टिक करें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["An NRI leaving email blank (it is mandatory for NRIs)", "Writing a number you will not keep"],
+        hi: ["एनआरआई का ईमेल खाली छोड़ना (एनआरआई के लिए यह ज़रूरी है)", "ऐसा नंबर लिखना जो आप आगे नहीं रखेंगे"]
+      }
+    },
+    {
+      label: { en: "4. Basis: Document verification OR Confirmation by Head of Family (HoF) *", hi: "4. आधार: दस्तावेज़ से सत्यापन या परिवार के मुखिया (HoF) की पुष्टि *" },
+      meaning: {
+        en: "How your details will be proved. \"Document verification\" = you show your own documents (then fill box 5). \"Head of Family (HoF)\" = a family member who already has Aadhaar confirms you (then fill box 6).",
+        hi: "आपकी जानकारी कैसे साबित होगी। \"Document verification\" = आप अपने दस्तावेज़ दिखाते हैं (फिर खाना 5 भरें)। \"Head of Family (HoF)\" = परिवार का कोई सदस्य जिसका आधार पहले से है, आपकी पुष्टि करता है (फिर खाना 6 भरें)।"
+      },
+      write: {
+        en: "Tick only one. The document list says HoF-based address update can be used if you do not have your own address proof.",
+        hi: "सिर्फ़ एक पर टिक करें। दस्तावेज़ सूची के अनुसार, अगर आपके पास अपने नाम का पते का प्रमाण नहीं है, तो परिवार के मुखिया (HoF) के आधार पर पता बदलवाया जा सकता है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking both", "Ticking HoF but not filling box 6 or not getting the HoF's signature"],
+        hi: ["दोनों पर टिक करना", "HoF पर टिक करके खाना 6 न भरना या मुखिया के हस्ताक्षर न करवाना"]
+      }
+    },
+    {
+      label: { en: "5(a). Address (PIN code and Post Office mandatory)", hi: "5(a). पता (पिन कोड और डाकघर ज़रूरी)" },
+      meaning: {
+        en: "Your address in India, with boxes for House no., Street, Landmark, Ward no., Area/Locality, Village/Town/City, Post Office, PIN code, Sub-district, District and State. Fill it only for a new enrolment or when updating your address.",
+        hi: "भारत में आपका पता, जिसमें मकान नंबर, गली, लैंडमार्क, वार्ड नंबर, इलाका/मोहल्ला, गाँव/कस्बा/शहर, डाकघर, पिन कोड, तहसील, ज़िला और राज्य के खाने हैं। यह सिर्फ़ नए नामांकन या पता बदलवाते समय भरें।"
+      },
+      write: {
+        en: "Post Office and PIN code are mandatory. Village/Town/City, Sub-district, District and State are filled automatically by the centre's software from the PIN code. Minor differences from your address proof may be allowed. Your Aadhaar letter will be sent by India Post to this address. This form has no separate \"care of\" (C/O) box; if you need one, ask at the Aadhaar centre.",
+        hi: "डाकघर और पिन कोड ज़रूरी हैं। गाँव/शहर, तहसील, ज़िला और राज्य केंद्र का सॉफ़्टवेयर पिन कोड से अपने-आप भर देता है। पते के प्रमाण से छोटा-मोटा फ़र्क़ चल सकता है। आपका आधार पत्र इंडिया पोस्ट से इसी पते पर आएगा। इस फॉर्म में \"केयर ऑफ़\" (C/O) का अलग खाना नहीं है; ज़रूरत हो तो आधार केंद्र पर पूछें।"
+      },
+      documents: {
+        en: ["One Proof of Address (POA) with your name and address in India, for example: Valid Indian passport", "Ration / PDS photo card or e-Ration card", "Voter ID / e-Voter ID", "Electricity, water, gas, landline / post-paid mobile / broadband bill (not older than 3 months)", "Registered sale agreement / gift deed, or rent, lease or leave-and-licence agreement", "For UPDATE only (not in the enrolment list): bank or Post Office passbook with photo (bank seal and official's signature), bank / credit card / Post Office statement with stamp and signature (not older than 3 months), or property tax receipt (not older than 1 year)", "Certificate on UIDAI's standard format from an MP / MLA / Councillor, Gazetted Officer, Tehsildar, Village Panchayat head, or your recognised educational institution (for its students)"],
+        hi: ["आपके नाम और भारत के पते वाला एक पते का प्रमाण (POA), जैसे: वैध भारतीय पासपोर्ट", "राशन / PDS फ़ोटो कार्ड या ई-राशन कार्ड", "वोटर आईडी / ई-वोटर आईडी", "बिजली, पानी, गैस, लैंडलाइन / पोस्टपेड मोबाइल / ब्रॉडबैंड का बिल (3 महीने से पुराना नहीं)", "रजिस्टर्ड बिक्री अनुबंध / दान-पत्र, या किराया / लीज़ / लीव-एंड-लाइसेंस अनुबंध", "सिर्फ़ अपडेट के लिए (नामांकन सूची में नहीं): फ़ोटो वाली बैंक या डाकघर पासबुक (बैंक की मुहर और अधिकारी के हस्ताक्षर सहित), मुहर और हस्ताक्षर वाला बैंक / क्रेडिट कार्ड / डाकघर स्टेटमेंट (3 महीने से पुराना नहीं), या संपत्ति कर की रसीद (1 साल से पुरानी नहीं)", "यूआईडीएआई के तय फ़ॉर्मेट में सांसद / विधायक / पार्षद, राजपत्रित अधिकारी, तहसीलदार, ग्राम पंचायत प्रधान, या आपके मान्य शिक्षण संस्थान (उसके छात्रों के लिए) का प्रमाण पत्र"]
+      },
+      mistakes: {
+        en: ["Leaving out the PIN code or Post Office", "Bringing a driving licence or marksheet as address proof (the list accepts them for identity, not address)", "A utility bill or bank statement older than 3 months"],
+        hi: ["पिन कोड या डाकघर न लिखना", "पते के प्रमाण के रूप में ड्राइविंग लाइसेंस या मार्कशीट लाना (सूची में ये पहचान के लिए मान्य हैं, पते के लिए नहीं)", "3 महीने से पुराना बिल या बैंक स्टेटमेंट"]
+      }
+    },
+    {
+      label: { en: "5(b). Type of documents presented: POI / POA / PDB", hi: "5(b). दिखाए गए दस्तावेज़: POI / POA / PDB" },
+      meaning: {
+        en: "Write the type of each document you show. POI = Proof of Identity (must have your name and photo). POA = Proof of Address. PDB = Proof of Date of Birth (optional on this form).",
+        hi: "हर दिखाए गए दस्तावेज़ का प्रकार लिखें। POI = पहचान का प्रमाण (इसमें आपका नाम और फ़ोटो होना ज़रूरी है)। POA = पते का प्रमाण। PDB = जन्म तिथि का प्रमाण (इस फॉर्म में वैकल्पिक)।"
+      },
+      write: {
+        en: "Write the document name (e.g. \"Passport\", \"Voter ID\"). Documents must be from UIDAI's \"List of acceptable supporting documents\". Bring the originals; they are returned after scanning. Each document must be currently valid and in your own name.",
+        hi: "दस्तावेज़ का नाम लिखें (जैसे \"Passport\", \"Voter ID\")। दस्तावेज़ यूआईडीएआई की \"मान्य दस्तावेज़ों की सूची\" में से ही होने चाहिए। ओरिजिनल साथ लाएँ; स्कैन करके लौटा दिए जाते हैं। हर दस्तावेज़ अभी वैध हो और आपके अपने नाम पर हो।"
+      },
+      documents: {
+        en: ["POI (name + photo), for example: Valid Indian passport", "Driving licence", "Voter ID / e-Voter ID", "Ration / PDS photo card", "Service photo ID or Pensioner photo ID (Government / PSU)", "CGHS / ECHS / ESIC / Medi-Claim card (Government / PSU)", "Kisan photo passbook (update list only)", "Marksheet / certificate from a recognised Board or university", "SC / ST / OBC certificate (Central / State Government)", "MGNREGA / NREGS job card along with State domicile certificate", "Check the full list on uidai.gov.in for other options"],
+        hi: ["पहचान का प्रमाण (नाम + फ़ोटो), जैसे: वैध भारतीय पासपोर्ट", "ड्राइविंग लाइसेंस", "वोटर आईडी / ई-वोटर आईडी", "राशन / PDS फ़ोटो कार्ड", "सरकारी / सार्वजनिक उपक्रम का सर्विस या पेंशनर फ़ोटो पहचान पत्र", "CGHS / ECHS / ESIC / मेडी-क्लेम कार्ड (सरकारी / सार्वजनिक उपक्रम)", "किसान फ़ोटो पासबुक (सिर्फ़ अपडेट सूची में)", "मान्य बोर्ड या विश्वविद्यालय की मार्कशीट / प्रमाण पत्र", "अनुसूचित जाति / जनजाति / ओबीसी प्रमाण पत्र (केंद्र / राज्य सरकार)", "मनरेगा / NREGS जॉब कार्ड, साथ में राज्य का मूल निवास प्रमाण पत्र", "और विकल्पों के लिए uidai.gov.in पर पूरी सूची देखें"]
+      },
+      mistakes: {
+        en: ["Bringing only photocopies (originals must be shown)", "Using a POI without a photo, such as a bank statement (it counts only as address proof)", "Expired documents"],
+        hi: ["सिर्फ़ फ़ोटोकॉपी लाना (ओरिजिनल दिखाना ज़रूरी है)", "बिना फ़ोटो वाला दस्तावेज़ पहचान के लिए देना, जैसे बैंक स्टेटमेंट (यह सिर्फ़ पते का प्रमाण है)", "जिनकी वैधता ख़त्म हो चुकी हो, ऐसे दस्तावेज़"]
+      }
+    },
+    {
+      label: { en: "6. Head of Family (HoF) details and signature", hi: "6. परिवार के मुखिया (HoF) की जानकारी और हस्ताक्षर" },
+      meaning: {
+        en: "Fill only if you ticked HoF in box 4. The HoF is a family member who already has a valid Aadhaar, is 18 or older, and confirms your identity and lets their Aadhaar address be used as yours.",
+        hi: "सिर्फ़ तब भरें जब खाना 4 में HoF पर टिक किया हो। मुखिया परिवार का वह सदस्य है जिसका आधार वैध है, जिसकी उम्र 18 या ज़्यादा है, और जो आपकी पहचान की पुष्टि करके अपने आधार का पता आपके लिए इस्तेमाल करने देता है।"
+      },
+      write: {
+        en: "Write the HoF's name and Aadhaar number, and tick one relationship. For a new enrolment, the HoF must be your mother, father or legal guardian. For an address update, the HoF can also be your spouse, child/ward or sibling. The HoF signs the consent printed in box 6. Whether the HoF must come to the centre in person: ask at the Aadhaar centre.",
+        hi: "मुखिया का नाम और आधार नंबर लिखें, और एक रिश्ते पर टिक करें। नए नामांकन में मुखिया आपकी माँ, पिता या क़ानूनी अभिभावक ही हो सकते हैं। पता बदलवाने में मुखिया आपके पति/पत्नी, बच्चा/आश्रित या भाई-बहन भी हो सकते हैं। खाना 6 में छपी सहमति पर मुखिया हस्ताक्षर करते हैं। मुखिया को ख़ुद केंद्र आना होगा या नहीं, यह आधार केंद्र पर पूछें।"
+      },
+      documents: {
+        en: ["One Proof of Relationship (POR) with your name and the HoF's name, for example: Marriage certificate (Central / State Government)", "Birth certificate", "Ration / PDS photo card", "Valid Indian passport", "Pensioner photo ID / Pension Payment Order", "Self-declaration by the HoF on UIDAI's format (only for borrowing an immediate family member's address; valid for 3 months from date of issue)"],
+        hi: ["एक रिश्ते का प्रमाण (POR), जिसमें आपका और मुखिया का नाम हो, जैसे: विवाह प्रमाण पत्र (केंद्र / राज्य सरकार)", "जन्म प्रमाण पत्र", "राशन / PDS फ़ोटो कार्ड", "वैध भारतीय पासपोर्ट", "पेंशनर फ़ोटो पहचान पत्र / पेंशन भुगतान आदेश", "यूआईडीएआई के फ़ॉर्मेट में मुखिया का स्व-घोषणा पत्र (सिर्फ़ साथ रहने वाले क़रीबी परिजन का पता लेने के लिए; जारी होने से 3 महीने तक मान्य)"]
+      },
+      mistakes: {
+        en: ["Choosing spouse, child or sibling as HoF for a NEW enrolment (allowed only for address update)", "HoF signature missing", "Using a self-declaration older than 3 months"],
+        hi: ["नए नामांकन के लिए पति/पत्नी, बच्चे या भाई-बहन को मुखिया चुनना (यह सिर्फ़ पता बदलवाने में चलता है)", "मुखिया के हस्ताक्षर न होना", "3 महीने से पुराना स्व-घोषणा पत्र देना"]
+      }
+    },
+    {
+      label: { en: "7(a). Aadhaar number of applicant (for update) *", hi: "7(a). आवेदक का आधार नंबर (अपडेट के लिए) *" },
+      meaning: {
+        en: "Your existing 12-digit Aadhaar number. Mandatory when the purpose is Update.",
+        hi: "आपका मौजूदा 12 अंकों वाला आधार नंबर। उद्देश्य Update हो तो यह ज़रूरी है।"
+      },
+      write: {
+        en: "Copy it carefully from your Aadhaar letter or card. Leave it blank only for a new enrolment.",
+        hi: "इसे अपने आधार पत्र या कार्ड से ध्यान से उतारें। सिर्फ़ नए नामांकन में इसे खाली छोड़ें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Wrong or missing digit"], hi: ["कोई अंक ग़लत या छूट जाना"] }
+    },
+    {
+      label: { en: "7(b). Information to be updated *", hi: "7(b). क्या अपडेट करना है *" },
+      meaning: {
+        en: "Options: Biometric (photo, fingerprints and irises), Name, Date of Birth, Gender, Address, Mobile, Email, Update of POI and POA documents.",
+        hi: "विकल्प: बायोमेट्रिक (फ़ोटो, उंगलियों और आँखों की पुतली के निशान), नाम, जन्म तिथि, लिंग, पता, मोबाइल, ईमेल, पहचान और पते के दस्तावेज़ अपडेट करना।"
+      },
+      write: {
+        en: "Tick one or more. In box 3, fill only the details you are changing (the form says \"For update, please fill only the information to be updated\"). For changes to name or gender beyond UIDAI's set limits, or for DOB changes, UIDAI follows a separate procedure; ask at the Aadhaar centre.",
+        hi: "एक या ज़्यादा पर टिक करें। खाना 3 में सिर्फ़ वही जानकारी भरें जो बदलवानी है (फॉर्म पर लिखा है: अपडेट के लिए सिर्फ़ बदलने वाली जानकारी भरें)। नाम या लिंग में तय सीमा से ज़्यादा बदलाव, या जन्म तिथि बदलने के लिए यूआईडीएआई की अलग प्रक्रिया है; आधार केंद्र पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling all of box 3 again during an update", "Not ticking what you want changed"],
+        hi: ["अपडेट में पूरा खाना 3 दोबारा भर देना", "जो बदलवाना है उस पर टिक न करना"]
+      }
+    },
+    {
+      label: { en: "Declaration and signature / thumb impression *", hi: "घोषणा और हस्ताक्षर / अंगूठे का निशान *" },
+      meaning: {
+        en: "By signing you declare the information and documents are correct and give consent for UIDAI to check them electronically with the issuing authorities. The form warns that if the declaration is found incorrect, your Aadhaar \"may be deactivated\" and legal action may be taken.",
+        hi: "हस्ताक्षर करके आप घोषित करते हैं कि जानकारी और दस्तावेज़ सही हैं, और यूआईडीएआई को उन्हें जारी करने वाले विभागों से इलेक्ट्रॉनिक तरीके से जाँचने की सहमति देते हैं। फॉर्म चेतावनी देता है कि घोषणा ग़लत निकली तो आपका आधार बंद किया जा सकता है और क़ानूनी कार्रवाई भी हो सकती है।"
+      },
+      write: {
+        en: "Sign or give your thumb impression in \"Signature / thumb impression of applicant\". Leave \"Signature of verifier\", \"Name of verifier\" and \"Date and time\" for the centre staff. For a person with disability who has a lawful guardian, the guardian shows the guardianship document and signs.",
+        hi: "\"आवेदक के हस्ताक्षर / अंगूठे का निशान\" वाली जगह पर हस्ताक्षर करें या अंगूठा लगाएँ। \"सत्यापनकर्ता के हस्ताक्षर\", \"सत्यापनकर्ता का नाम\" और \"तारीख़ और समय\" केंद्र के कर्मचारी के लिए छोड़ दें। जिस दिव्यांग व्यक्ति का क़ानूनी अभिभावक नियुक्त है, उसके लिए अभिभावक संरक्षकता का दस्तावेज़ दिखाकर हस्ताक्षर करते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the verifier boxes yourself", "Forgetting to sign"],
+        hi: ["सत्यापनकर्ता वाले खाने ख़ुद भर देना", "हस्ताक्षर करना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Fees (printed on the form)", hi: "शुल्क (फॉर्म पर छपा हुआ)" },
+      meaning: {
+        en: "Form 1 (file dated 29-09-2026) prints this fee table for services at an enrolment centre.",
+        hi: "फॉर्म 1 (फ़ाइल तारीख़ 29-09-2026) में आधार केंद्र की सेवाओं की यह शुल्क तालिका छपी है।"
+      },
+      write: {
+        en: "New enrolment: Free. Biometric update (photo, fingerprints, irises) for adults: ₹125. Demographic update (name, gender, DOB, address, mobile, email) done separately: ₹75 for all or any of them; free if done together with a biometric update (only the biometric charge applies). Updating POI and POA documents: ₹75.",
+        hi: "नया नामांकन: मुफ़्त। वयस्कों के लिए बायोमेट्रिक अपडेट (फ़ोटो, उंगलियों और पुतली के निशान): ₹125। जनसांख्यिकीय अपडेट (नाम, लिंग, जन्म तिथि, पता, मोबाइल, ईमेल) अलग से: सब या कोई भी, ₹75; बायोमेट्रिक अपडेट के साथ करवाएँ तो मुफ़्त (सिर्फ़ बायोमेट्रिक का शुल्क लगेगा)। पहचान और पते के दस्तावेज़ अपडेट करना: ₹75।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Paying separately for a demographic change done along with a biometric update"],
+        hi: ["बायोमेट्रिक अपडेट के साथ किए गए जनसांख्यिकीय बदलाव का अलग से शुल्क देना"]
+      }
+    }
+  ]
+});
