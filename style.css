@@ -249,3 +249,50 @@ button { font: inherit; color: inherit; }
 .done-btn.is-done { background: var(--ok-soft); color: var(--ok); }
 
 .footer { color: var(--muted); font-size: 15px; padding-top: 28px; padding-bottom: 36px; }
+
+/* ---------- Wide screens: landscape tablets, laptops, desktops ---------- */
+@media (min-width: 900px) {
+  .wrap { max-width: 1180px; padding: 0 28px; }
+
+  /* Home: headline and search side by side, more cards per row */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 8px 40px; align-items: end; padding-top: 40px; }
+  .hero h1 { font-size: 42px; grid-column: 1; }
+  .hero-sub { grid-column: 1; margin-bottom: 0; }
+  .hero .search { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .form-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .changes-row { flex-wrap: wrap; overflow: visible; }
+
+  /* Form page: summary column stays in view while you work through the fields */
+  .form-layout { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 32px; align-items: start; }
+  .form-side {
+    position: sticky; top: 72px;
+    max-height: calc(100vh - 88px); overflow-y: auto;
+    padding-bottom: 16px; scrollbar-width: thin;
+  }
+  .field-list { margin-top: 8px; }
+  .field-body { padding: 4px 20px 20px; }
+  .field-head { padding: 14px 18px; }
+}
+
+@media (min-width: 1200px) {
+  .form-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+/* Phones held sideways: wide but very short, so save vertical space */
+@media (orientation: landscape) and (max-height: 520px) {
+  .site-header { position: static; }
+  .header-row { padding-top: 6px; padding-bottom: 6px; }
+  .hero { padding-top: 14px; }
+  .hero h1 { font-size: 28px; }
+  .form-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .form-side { position: static; max-height: none; overflow: visible; }
+}
+
+/* Landscape phones that are wide enough for two columns */
+@media (orientation: landscape) and (max-height: 520px) and (min-width: 700px) {
+  .form-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .form-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 20px; align-items: start; }
+  .form-side { position: sticky; top: 8px; max-height: calc(100vh - 16px); overflow-y: auto; }
+  .form-head h1 { font-size: 22px; }
+  .card-icon.big { width: 42px; height: 42px; }
+}
