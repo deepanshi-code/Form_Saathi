@@ -7,59 +7,136 @@
   <meta name="description" content="Understand Indian official forms field by field, in simple English and Hindi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Mukta covers both Latin and Devanagari, so English and Hindi look like one family -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap">
+  <!-- Inter for English, Noto Sans Devanagari for Hindi: a clean, official-looking pair -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a href="#" class="brand" id="home-link">
-        <span class="brand-mark" aria-hidden="true">स</span>
-        <span>Form Saathi</span>
-      </a>
+  <!-- Thin utility bar, as on most official sites -->
+  <div class="topbar">
+    <div class="wrap topbar-row">
+      <span data-text="topbar"></span>
       <!-- Language toggle: the app re-renders all text when this changes -->
       <div class="lang-toggle" role="group" aria-label="Language">
         <button type="button" data-lang="en">English</button>
         <button type="button" data-lang="hi">हिंदी</button>
       </div>
     </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="#" class="brand" id="home-link">
+        <span class="brand-mark" aria-hidden="true">स</span>
+        <span class="brand-text">
+          <strong>Form Saathi</strong>
+          <small data-text="brandSub"></small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#forms" data-text="navForms"></a>
+        <a href="#changes" data-text="navChanges"></a>
+        <a href="#how" data-text="navHow"></a>
+      </nav>
+      <a href="#forms" class="btn btn-primary header-cta" data-text="cta"></a>
+    </div>
   </header>
 
-  <main class="wrap">
-    <!-- View 1: home (search, recent changes, form cards) -->
+  <main>
+    <!-- View 1: home -->
     <section id="list-view">
       <div class="hero">
-        <h1 data-text="tagline"></h1>
-        <p class="hero-sub" data-text="intro"></p>
-        <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <input type="search" id="search" autocomplete="off">
-        </label>
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="kicker" data-text="kicker"></p>
+            <h1 data-text="tagline"></h1>
+            <p class="hero-sub" data-text="intro"></p>
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input type="search" id="search" autocomplete="off">
+            </label>
+          </div>
+          <dl id="stats" class="stats"></dl>
+        </div>
       </div>
 
-      <div id="changes-banner"></div>
-      <div id="chips" class="chips" role="group"></div>
-      <div id="form-grid" class="form-grid"></div>
+      <section class="band" id="changes">
+        <div class="wrap">
+          <div class="band-head">
+            <h2 id="changes-title"></h2>
+            <p data-text="changesSub"></p>
+          </div>
+          <div id="changes-list" class="changes-list"></div>
+        </div>
+      </section>
+
+      <section class="band band-alt" id="forms">
+        <div class="wrap">
+          <div class="band-head">
+            <h2 data-text="browseTitle"></h2>
+            <p data-text="browseSub"></p>
+          </div>
+          <div id="chips" class="chips" role="group"></div>
+          <div id="form-grid" class="form-grid"></div>
+        </div>
+      </section>
+
+      <section class="band" id="how">
+        <div class="wrap">
+          <div class="band-head">
+            <h2 data-text="howTitle"></h2>
+          </div>
+          <ol class="steps">
+            <li><span class="step-no">1</span><h3 data-text="how1t"></h3><p data-text="how1"></p></li>
+            <li><span class="step-no">2</span><h3 data-text="how2t"></h3><p data-text="how2"></p></li>
+            <li><span class="step-no">3</span><h3 data-text="how3t"></h3><p data-text="how3"></p></li>
+          </ol>
+        </div>
+      </section>
     </section>
 
     <!-- View 2: one form in fill-along mode (hidden until a form is picked) -->
     <section id="form-view" hidden>
-      <button type="button" class="back" id="back-btn" data-text="back"></button>
-      <!-- Medium screens: summary | fields. Wide screens: summary | field list | open field -->
-      <div class="form-layout">
-        <aside class="form-side">
+      <div class="page-title">
+        <div class="wrap">
+          <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
           <div id="form-header"></div>
-          <div id="form-progress"></div>
-          <div id="form-sections"></div>
-        </aside>
-        <ol id="field-list" class="field-list"></ol>
-        <article id="field-detail" class="field-detail" aria-live="polite"></article>
+        </div>
+      </div>
+      <div class="wrap">
+        <!-- Medium screens: summary | fields. Wide screens: summary | field list | open field -->
+        <div class="form-layout">
+          <aside class="form-side">
+            <div id="form-progress"></div>
+            <div id="form-sections"></div>
+          </aside>
+          <ol id="field-list" class="field-list"></ol>
+          <article id="field-detail" class="field-detail" aria-live="polite"></article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="wrap footer" data-text="disclaimer"></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand"><span class="brand-mark" aria-hidden="true">स</span> Form Saathi</p>
+        <p data-text="footerAbout"></p>
+      </div>
+      <div>
+        <h4 data-text="footerBrowse"></h4>
+        <ul id="footer-categories"></ul>
+      </div>
+      <div>
+        <h4 data-text="footerProject"></h4>
+        <ul>
+          <li><a href="https://github.com/deepanshi-code/Form_Saathi" target="_blank" rel="noopener" data-text="footerSource"></a></li>
+          <li><a href="https://github.com/deepanshi-code/Form_Saathi/blob/main/docs/user-testing/plan.md" target="_blank" rel="noopener" data-text="footerTesting"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom" data-text="disclaimer"></div>
+  </footer>
 
   <!-- Order matters: the registry first, then each form file, then the catalog and the app -->
   <script src="forms/registry.js"></script>

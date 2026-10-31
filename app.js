@@ -1,21 +1,43 @@
 // Text used by the page itself (not by forms), in both languages.
 const UI = {
   en: {
-    tagline: "Fill any form without fear",
+    topbar: "Free, independent guide to Indian official forms · Not a government website",
+    brandSub: "Official forms, explained",
+    navForms: "Forms",
+    navChanges: "What changed",
+    navHow: "How it works",
+    cta: "Find your form",
+    kicker: "English · हिंदी · Checked against official sources",
+    tagline: "Fill official forms correctly, the first time",
     intro: "Every box explained in simple words: what it means, what to write, and the mistakes people make.",
     search: "Search: PAN, voter ID, bank…",
-    back: "← All forms",
+    statForms: "Forms explained",
+    statVerified: "Checked against official sources",
+    statChanges: "Recent rule changes flagged",
+    statLang: "Languages: English and Hindi",
     changesTitle: n => `${n} rules changed recently`,
-    changesSub: "Old advice from friends or seniors may be wrong for these forms:",
+    changesSub: "Advice from friends or seniors may be out of date for these forms. Open one to see exactly what changed.",
     changesCount: n => (n === 1 ? "1 change" : `${n} changes`),
+    browseTitle: "Browse forms",
+    browseSub: "Pick a form to see every field explained, step by step.",
+    howTitle: "How it works",
+    how1t: "Pick your form",
+    how1: "Search or browse by category: bank, government, students or Uttarakhand.",
+    how2t: "Follow each field",
+    how2: "See what to write, what it means and the common mistakes. Tick each field as you finish it.",
+    how3t: "Check before you submit",
+    how3: "Keep the listed documents ready, and confirm anything marked \"ask at the office\".",
+    viewGuide: "View guide",
     tagChanged: "Rules changed",
     tagCaution: "Check details",
     tagUnverified: "Not verified",
+    tagVerified: "Verified",
     fieldsCount: n => `${n} fields`,
     noResults: "No form found. More forms are coming.",
-    verifiedPill: date => `Verified · ${date}`,
+    home: "Home",
+    verifiedPill: date => `Verified on ${date}`,
     unverifiedPill: "Not verified yet",
-    sourceToggle: "Where this comes from",
+    sourceToggle: "View official source",
     sourceText: "Checked against the official form:",
     unverified: "This guide has not been checked against an official form yet. Always confirm with the bank or office.",
     progress: (d, t) => `${d} of ${t} fields done`,
@@ -32,24 +54,51 @@ const UI = {
     changed: "Recently changed",
     markDone: "Mark as done",
     markUndone: "Done ✓ (tap to undo)",
+    footerAbout: "An independent student project that explains Indian official forms in simple English and Hindi, checked against official sources.",
+    footerBrowse: "Browse",
+    footerProject: "Project",
+    footerSource: "Source code on GitHub",
+    footerTesting: "User testing plan",
     disclaimer: "Form Saathi explains forms in simple words. It is not an official service. The issuing bank or office has the final word."
   },
   hi: {
-    tagline: "बिना डर के कोई भी फॉर्म भरें",
+    topbar: "भारतीय आधिकारिक फॉर्मों की मुफ़्त, स्वतंत्र गाइड · यह सरकारी वेबसाइट नहीं है",
+    brandSub: "आधिकारिक फॉर्म, आसान भाषा में",
+    navForms: "फॉर्म",
+    navChanges: "क्या बदला",
+    navHow: "कैसे काम करता है",
+    cta: "अपना फॉर्म खोजें",
+    kicker: "English · हिंदी · आधिकारिक स्रोतों से जाँचा गया",
+    tagline: "आधिकारिक फॉर्म पहली बार में ही सही भरें",
     intro: "हर खाना आसान शब्दों में: इसका मतलब, इसमें क्या लिखना है, और लोग कौन-सी गलतियाँ करते हैं।",
     search: "खोजें: पैन, वोटर आईडी, बैंक…",
-    back: "← सभी फॉर्म",
+    statForms: "फॉर्म समझाए गए",
+    statVerified: "आधिकारिक स्रोतों से जाँचे गए",
+    statChanges: "हाल के नियम-बदलाव बताए गए",
+    statLang: "भाषाएँ: अंग्रेज़ी और हिंदी",
     changesTitle: n => `${n} नियम हाल में बदले हैं`,
-    changesSub: "इन फॉर्मों के लिए दोस्तों या सीनियर की पुरानी सलाह ग़लत हो सकती है:",
+    changesSub: "इन फॉर्मों के लिए दोस्तों या सीनियर की सलाह पुरानी हो सकती है। ठीक-ठीक क्या बदला, यह देखने के लिए फॉर्म खोलें।",
     changesCount: n => `${n} बदलाव`,
+    browseTitle: "फॉर्म देखें",
+    browseSub: "कोई फॉर्म चुनें और हर खाने की जानकारी क्रम से देखें।",
+    howTitle: "यह कैसे काम करता है",
+    how1t: "अपना फॉर्म चुनें",
+    how1: "खोजें या श्रेणी से चुनें: बैंक, सरकारी, छात्र या उत्तराखंड।",
+    how2t: "हर खाना भरते चलें",
+    how2: "देखें क्या लिखना है, उसका मतलब और आम गलतियाँ। हर खाना पूरा होने पर टिक करें।",
+    how3t: "जमा करने से पहले जाँचें",
+    how3: "बताए गए दस्तावेज़ तैयार रखें, और जहाँ \"दफ़्तर में पूछें\" लिखा है, वह पक्का कर लें।",
+    viewGuide: "गाइड देखें",
     tagChanged: "नियम बदले",
     tagCaution: "जाँच लें",
     tagUnverified: "जाँचा नहीं गया",
+    tagVerified: "जाँचा गया",
     fieldsCount: n => `${n} खाने`,
     noResults: "कोई फॉर्म नहीं मिला। और फॉर्म जल्द आएँगे।",
-    verifiedPill: date => `जाँचा गया · ${date}`,
+    home: "मुख्य पेज",
+    verifiedPill: date => `${date} को जाँचा गया`,
     unverifiedPill: "अभी जाँचा नहीं गया",
-    sourceToggle: "यह जानकारी कहाँ से है",
+    sourceToggle: "आधिकारिक स्रोत देखें",
     sourceText: "आधिकारिक फॉर्म से जाँचा गया:",
     unverified: "यह गाइड अभी किसी आधिकारिक फॉर्म से नहीं जाँची गई है। बैंक या दफ़्तर से ज़रूर पुष्टि करें।",
     progress: (d, t) => `${t} में से ${d} खाने पूरे`,
@@ -66,6 +115,11 @@ const UI = {
     changed: "हाल में बदला",
     markDone: "पूरा हुआ",
     markUndone: "पूरा ✓ (हटाने के लिए दबाएँ)",
+    footerAbout: "एक स्वतंत्र छात्र प्रोजेक्ट, जो भारतीय आधिकारिक फॉर्मों को आसान अंग्रेज़ी और हिंदी में समझाता है, आधिकारिक स्रोतों से जाँचकर।",
+    footerBrowse: "फॉर्म देखें",
+    footerProject: "प्रोजेक्ट",
+    footerSource: "GitHub पर सोर्स कोड",
+    footerTesting: "यूज़र टेस्टिंग योजना",
     disclaimer: "फॉर्म साथी फॉर्म को आसान शब्दों में समझाता है। यह कोई सरकारी/आधिकारिक सेवा नहीं है। अंतिम निर्णय बैंक या दफ़्तर का होता है।"
   }
 };
@@ -83,7 +137,8 @@ const ICONS = {
   home: "M3 11l9-7 9 7M5 9.5V20h14V9.5M10 20v-6h4v6",
   cap: "M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5",
   rupee: "M7 4h10M7 8.5h10M7 4h3a4.5 4.5 0 0 1 0 9H7l7 7",
-  shield: "M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4"
+  shield: "M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4",
+  arrow: "M5 12h14M13 6l6 6-6 6"
 };
 
 // Browser storage can be blocked (private mode), so every access is wrapped.
@@ -124,6 +179,8 @@ function icon(name, className = "icon") {
 
 const meta = form => window.CATALOG[form.id] || { icon: "certificate", short: form.name };
 const changedFields = form => form.fields.filter(f => f.changed);
+const catClass = form => "cat-" + form.category.en.toLowerCase();
+const openForm = form => { location.hash = "form/" + form.id; };
 
 function renderStaticText() {
   document.documentElement.lang = lang;
@@ -134,30 +191,48 @@ function renderStaticText() {
   document.querySelectorAll(".lang-toggle button").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+  renderFooter();
 }
 
 // ---------- Home page ----------
 
-function renderChangesBanner() {
+function renderStats() {
+  const total = window.FORMS.reduce((n, f) => n + changedFields(f).length, 0);
+  const stats = [
+    [window.FORMS.length, UI[lang].statForms],
+    [window.FORMS.filter(f => f.verified).length, UI[lang].statVerified],
+    [total, UI[lang].statChanges],
+    [2, UI[lang].statLang]
+  ];
+  const box = $("stats");
+  box.replaceChildren();
+  stats.forEach(([value, label]) => {
+    const item = el("div", "stat");
+    item.append(el("dt", null, label), el("dd", null, String(value)));
+    box.append(item);
+  });
+}
+
+function renderChangesList() {
   const forms = window.FORMS.filter(f => changedFields(f).length > 0);
   const total = forms.reduce((n, f) => n + changedFields(f).length, 0);
-  const box = $("changes-banner");
-  box.replaceChildren();
-  if (total === 0) return;
+  $("changes").hidden = total === 0;
+  $("changes-title").textContent = UI[lang].changesTitle(total);
 
-  const banner = el("div", "changes-banner");
-  banner.append(el("p", "changes-title", "⚠ " + UI[lang].changesTitle(total)));
-  banner.append(el("p", "changes-sub", UI[lang].changesSub));
-  const row = el("div", "changes-row");
+  const list = $("changes-list");
+  list.replaceChildren();
   forms.forEach(form => {
-    const btn = el("button", "change-chip");
-    btn.type = "button";
-    btn.append(el("strong", null, meta(form).short[lang]), el("span", null, UI[lang].changesCount(changedFields(form).length)));
-    btn.addEventListener("click", () => { location.hash = "form/" + form.id; });
-    row.append(btn);
+    const m = meta(form);
+    const row = el("button", "change-row");
+    row.type = "button";
+    const iconBox = el("span", "card-icon small " + catClass(form));
+    iconBox.append(icon(m.icon));
+    const text = el("span", "change-text");
+    text.append(el("strong", null, m.short[lang]), el("span", null, form.category[lang]));
+    row.append(iconBox, text, el("span", "badge badge-warn", UI[lang].changesCount(changedFields(form).length)), icon("arrow", "icon arrow"));
+    row.addEventListener("click", () => openForm(form));
+    list.append(row);
   });
-  banner.append(row);
-  box.append(banner);
 }
 
 function renderChips() {
@@ -195,24 +270,49 @@ function renderGrid() {
     const m = meta(form);
     const card = el("button", "form-card");
     card.type = "button";
-    const iconBox = el("span", "card-icon cat-" + form.category.en.toLowerCase());
+
+    const top = el("span", "card-top");
+    const iconBox = el("span", "card-icon " + catClass(form));
     iconBox.append(icon(m.icon));
-    card.append(iconBox, el("span", "card-name", m.short[lang]), el("span", "card-meta", UI[lang].fieldsCount(form.fields.length)));
+    // One status badge per card, most important first.
+    let badge;
+    if (!form.verified) badge = el("span", "badge badge-muted", UI[lang].tagUnverified);
+    else if (changedFields(form).length) badge = el("span", "badge badge-warn", UI[lang].tagChanged);
+    else if (form.caution) badge = el("span", "badge badge-muted", UI[lang].tagCaution);
+    else badge = el("span", "badge badge-ok", "✓ " + UI[lang].tagVerified);
+    top.append(iconBox, badge);
 
-    // At most one tag per card, most important first.
-    let tag = null;
-    if (!form.verified) tag = el("span", "tag tag-muted", UI[lang].tagUnverified);
-    else if (changedFields(form).length) tag = el("span", "tag tag-warn", UI[lang].tagChanged);
-    else if (form.caution) tag = el("span", "tag tag-muted", UI[lang].tagCaution);
-    if (tag) card.append(tag);
+    const foot = el("span", "card-foot");
+    foot.append(el("span", null, UI[lang].fieldsCount(form.fields.length)), el("span", "card-link", UI[lang].viewGuide + " →"));
 
-    card.addEventListener("click", () => { location.hash = "form/" + form.id; });
+    card.append(
+      top,
+      el("span", "card-cat", form.category[lang]),
+      el("span", "card-name", m.short[lang]),
+      el("span", "card-official", form.name[lang]),
+      foot
+    );
+    card.addEventListener("click", () => openForm(form));
     grid.append(card);
   });
 }
 
+function renderFooter() {
+  const list = $("footer-categories");
+  list.replaceChildren();
+  window.CHIPS.filter(c => c.categories).forEach(c => {
+    const li = el("li");
+    const a = el("a", null, c.label[lang]);
+    a.href = "#forms";
+    a.addEventListener("click", () => { chip = c.key; renderChips(); renderGrid(); });
+    li.append(a);
+    list.append(li);
+  });
+}
+
 function renderHome() {
-  renderChangesBanner();
+  renderStats();
+  renderChangesList();
   renderChips();
   renderGrid();
 }
@@ -223,17 +323,25 @@ const doneKey = form => `fs:done:${form.id}:${form.fields.length}`;
 
 function renderFormHeader(form) {
   const m = meta(form);
+
+  // Breadcrumb: Home › Category › Form
+  const crumbs = $("breadcrumb");
+  const home = el("a", null, UI[lang].home);
+  home.href = "#";
+  home.addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
+  crumbs.replaceChildren(home, el("span", "sep", "›"), el("span", null, form.category[lang]), el("span", "sep", "›"), el("span", "current", m.short[lang]));
+
   const head = el("div", "form-head");
-  const iconBox = el("span", "card-icon big cat-" + form.category.en.toLowerCase());
+  const iconBox = el("span", "card-icon big " + catClass(form));
   iconBox.append(icon(m.icon));
   const titles = el("div");
   titles.append(el("h1", null, m.short[lang]), el("p", "official-name", form.name[lang]));
   head.append(iconBox, titles);
 
-  // Trust line: a small pill, with the source tucked into a "details" toggle.
+  // Trust line: a badge, with the source tucked into a "details" toggle.
   const trust = el("div", "trust");
   if (form.verified) {
-    trust.append(el("span", "pill pill-ok", "✓ " + UI[lang].verifiedPill(form.lastChecked)));
+    trust.append(el("span", "badge badge-ok", "✓ " + UI[lang].verifiedPill(form.lastChecked)));
     const details = el("details", "source");
     details.append(el("summary", null, UI[lang].sourceToggle));
     const p = el("p", null, UI[lang].sourceText + " ");
@@ -245,7 +353,7 @@ function renderFormHeader(form) {
     details.append(p);
     trust.append(details);
   } else {
-    trust.append(el("span", "pill pill-muted", UI[lang].unverifiedPill));
+    trust.append(el("span", "badge badge-muted", UI[lang].unverifiedPill));
   }
 
   const box = $("form-header");
@@ -328,7 +436,7 @@ function fieldBody(form, field, i, isDone) {
 
   // "What to write" first: it is what people came for.
   const write = el("div", "block block-write");
-  write.append(el("h3", null, "✍ " + UI[lang].write), el("p", null, field.write[lang]));
+  write.append(el("h3", null, UI[lang].write), el("p", null, field.write[lang]));
   body.append(write);
 
   body.append(el("h3", null, UI[lang].meaning), el("p", null, field.meaning[lang]));
@@ -342,18 +450,18 @@ function fieldBody(form, field, i, isDone) {
   if (field.documents && field.documents[lang].length) {
     const ul = el("ul");
     field.documents[lang].forEach(v => ul.append(el("li", null, v)));
-    body.append(el("h3", null, "📄 " + UI[lang].documents), ul);
+    body.append(el("h3", null, UI[lang].documents), ul);
   }
 
   if (field.mistakes && field.mistakes[lang].length) {
     const mist = el("div", "block block-danger");
     const ul = el("ul");
     field.mistakes[lang].forEach(v => ul.append(el("li", null, v)));
-    mist.append(el("h3", null, "✗ " + UI[lang].mistakes), ul);
+    mist.append(el("h3", null, UI[lang].mistakes), ul);
     body.append(mist);
   }
 
-  const btn = el("button", "done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
+  const btn = el("button", "btn done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
   btn.type = "button";
   btn.addEventListener("click", () => {
     const now = store.get(doneKey(form), []);
@@ -423,8 +531,7 @@ function renderFields(form) {
 
 // Re-render when the window crosses the wide-panel size (e.g. rotating a tablet).
 widePanel.addEventListener("change", () => {
-  const match = location.hash.match(/^#form\/(.+)$/);
-  const form = match && window.FORMS.find(f => f.id === match[1]);
+  const form = currentForm();
   if (form) renderFields(form);
 });
 
@@ -435,12 +542,15 @@ function renderForm(form) {
   renderFields(form);
 }
 
-// The URL hash decides which view is shown: "" = home, "#form/<id>" = one form.
-// This makes the browser back button work and lets people share a link to one form.
-function route() {
+function currentForm() {
   const match = location.hash.match(/^#form\/(.+)$/);
-  const form = match && window.FORMS.find(f => f.id === match[1]);
+  return match && window.FORMS.find(f => f.id === match[1]);
+}
 
+// The URL hash decides which view is shown: "#form/<id>" = one form, anything else = home.
+// Home links like "#forms" or "#how" scroll to that section.
+function route() {
+  const form = currentForm();
   $("list-view").hidden = Boolean(form);
   $("form-view").hidden = !form;
 
@@ -450,9 +560,12 @@ function route() {
     openField = form.fields.findIndex((_, i) => !done.includes(i));
     renderForm(form);
     window.scrollTo(0, 0);
-  } else {
-    renderHome();
+    return;
   }
+
+  renderHome();
+  const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+  if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
 }
 
 document.querySelectorAll(".lang-toggle button").forEach(btn => {
@@ -461,14 +574,19 @@ document.querySelectorAll(".lang-toggle button").forEach(btn => {
     store.set("fs:lang", lang);
     renderStaticText();
     // Re-render the current view without losing the open field.
-    const match = location.hash.match(/^#form\/(.+)$/);
-    const form = match && window.FORMS.find(f => f.id === match[1]);
+    const form = currentForm();
     if (form) renderForm(form); else renderHome();
   });
 });
 
-$("search").addEventListener("input", renderGrid);
-$("back-btn").addEventListener("click", () => { location.hash = ""; });
+$("search").addEventListener("input", () => {
+  // Typing in the hero search shows results right away.
+  if (chip !== "all") { chip = "all"; renderChips(); }
+  renderGrid();
+});
+$("search").addEventListener("keydown", e => {
+  if (e.key === "Enter") $("forms").scrollIntoView({ behavior: "smooth" });
+});
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
 window.addEventListener("hashchange", route);
 
