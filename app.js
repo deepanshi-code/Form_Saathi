@@ -1,98 +1,90 @@
-// Text used by the page itself (not by forms), in both languages.
+// Text used by the page itself (not by forms), in both languages. Kept short on purpose.
 const UI = {
   en: {
-    topbar: "Free, independent guide to Indian official forms · Not a government website",
-    brandSub: "Official forms, explained",
+    topbar: "Independent guide · Not a government website",
     navForms: "Forms",
     navChanges: "What changed",
     navHow: "How it works",
-    cta: "Find your form",
-    kicker: "English · हिंदी · Checked against official sources",
-    tagline: "Fill official forms correctly, the first time",
-    intro: "Every box explained in simple words: what it means, what to write, and the mistakes people make.",
-    search: "Search: PAN, voter ID, bank…",
-    statForms: "Forms explained",
-    statVerified: "Checked against official sources",
-    statChanges: "Recent rule changes flagged",
-    statLang: "Languages: English and Hindi",
+    tagline: "Fill any form the right way",
+    intro: "Simple answers for every box, in English and Hindi.",
+    search: "Search a form: PAN, voter ID, bank…",
+    popular: "Popular:",
+    catTitle: "What do you need help with?",
+    catCount: n => `${n} forms`,
+    catDesc: {
+      bank: "Open a bank or post office account",
+      gov: "PAN, Aadhaar, voter ID, licence, passport",
+      students: "Scholarships, education loan, anti-ragging",
+      uttarakhand: "Income, caste and residence certificates"
+    },
+    allForms: "All forms",
     changesTitle: n => `${n} rules changed recently`,
-    changesSub: "Advice from friends or seniors may be out of date for these forms. Open one to see exactly what changed.",
-    changesCount: n => (n === 1 ? "1 change" : `${n} changes`),
-    browseTitle: "Browse forms",
-    browseSub: "Pick a form to see every field explained, step by step.",
-    howTitle: "How it works",
-    how1t: "Pick your form",
-    how1: "Search or browse by category: bank, government, students or Uttarakhand.",
-    how2t: "Follow each field",
-    how2: "See what to write, what it means and the common mistakes. Tick each field as you finish it.",
-    how3t: "Check before you submit",
-    how3: "Keep the listed documents ready, and confirm anything marked \"ask at the office\".",
-    viewGuide: "View guide",
+    changesSub: "Old advice may be wrong for these forms. Check them first.",
+    howTitle: "Three simple steps",
+    how1t: "Find your form",
+    how2t: "Fill it box by box",
+    how3t: "Check, then submit",
     tagChanged: "Rules changed",
     tagCaution: "Check details",
     tagUnverified: "Not verified",
     tagVerified: "Verified",
-    fieldsCount: n => `${n} fields`,
+    fieldsCount: n => `${n} boxes`,
     noResults: "No form found. More forms are coming.",
     home: "Home",
-    verifiedPill: date => `Verified on ${date}`,
+    verifiedPill: date => `Verified ${date}`,
     unverifiedPill: "Not verified yet",
-    sourceToggle: "View official source",
-    sourceText: "Checked against the official form:",
-    unverified: "This guide has not been checked against an official form yet. Always confirm with the bank or office.",
-    progress: (d, t) => `${d} of ${t} fields done`,
-    allDone: "All fields done. Check the form once more before you submit it.",
+    sourceToggle: "Source",
+    sourceText: "Checked against:",
+    unverified: "Not yet checked against an official form. Confirm with the office.",
+    progressLabel: "boxes done",
+    toastDone: label => `✓ Done: ${label}`,
+    toastUndone: "Marked as not done",
+    allDone: "All boxes done. Check once more before you submit.",
     reset: "Start again",
-    sectionChanges: n => `What changed recently (${n})`,
-    sectionDocs: "Documents to keep ready",
-    sectionAbout: "About this form",
-    noDocs: "This guide lists no documents. Ask at the office what to bring.",
+    toolDocs: "Documents to bring",
+    toolChanges: n => `What changed (${n})`,
+    toolAbout: "About this form",
+    noDocs: "No documents listed. Ask at the office what to bring.",
     write: "What to write",
     meaning: "What it means",
     documents: "Documents",
-    mistakes: "Common mistakes",
-    changed: "Recently changed",
-    markDone: "Mark as done",
-    markUndone: "Done ✓ (tap to undo)",
-    tickLabel: "Mark this field as done",
+    mistakes: "Avoid these mistakes",
+    changed: "Changed recently",
     details: "Details",
-    hideDetails: "Hide",
-    cheatHint: "Short answer for every box. Tap a box for details, tick it when you're done.",
-    footerAbout: "An independent student project that explains Indian official forms in simple English and Hindi, checked against official sources.",
+    hideDetails: "Close",
+    done: "Done",
+    markDone: "Mark done",
+    footerAbout: "An independent student project explaining Indian official forms in simple English and Hindi, checked against official sources.",
     footerBrowse: "Browse",
     footerProject: "Project",
     footerSource: "Source code on GitHub",
     footerTesting: "User testing plan",
-    disclaimer: "Form Saathi explains forms in simple words. It is not an official service. The issuing bank or office has the final word."
+    disclaimer: "Form Saathi explains forms in simple words. It is not an official service. The bank or office has the final word."
   },
   hi: {
-    topbar: "भारतीय आधिकारिक फॉर्मों की मुफ़्त, स्वतंत्र गाइड · यह सरकारी वेबसाइट नहीं है",
-    brandSub: "आधिकारिक फॉर्म, आसान भाषा में",
+    topbar: "स्वतंत्र गाइड · यह सरकारी वेबसाइट नहीं है",
     navForms: "फॉर्म",
     navChanges: "क्या बदला",
     navHow: "कैसे काम करता है",
-    cta: "अपना फॉर्म खोजें",
-    kicker: "English · हिंदी · आधिकारिक स्रोतों से जाँचा गया",
-    tagline: "आधिकारिक फॉर्म पहली बार में ही सही भरें",
-    intro: "हर खाना आसान शब्दों में: इसका मतलब, इसमें क्या लिखना है, और लोग कौन-सी गलतियाँ करते हैं।",
-    search: "खोजें: पैन, वोटर आईडी, बैंक…",
-    statForms: "फॉर्म समझाए गए",
-    statVerified: "आधिकारिक स्रोतों से जाँचे गए",
-    statChanges: "हाल के नियम-बदलाव बताए गए",
-    statLang: "भाषाएँ: अंग्रेज़ी और हिंदी",
+    tagline: "कोई भी फॉर्म सही तरीके से भरें",
+    intro: "हर खाने का आसान जवाब, हिंदी और अंग्रेज़ी में।",
+    search: "फॉर्म खोजें: पैन, वोटर आईडी, बैंक…",
+    popular: "लोकप्रिय:",
+    catTitle: "आपको किसमें मदद चाहिए?",
+    catCount: n => `${n} फॉर्म`,
+    catDesc: {
+      bank: "बैंक या डाकघर में खाता खोलें",
+      gov: "पैन, आधार, वोटर आईडी, लाइसेंस, पासपोर्ट",
+      students: "छात्रवृत्ति, शिक्षा ऋण, एंटी-रैगिंग",
+      uttarakhand: "आय, जाति और निवास प्रमाण पत्र"
+    },
+    allForms: "सभी फॉर्म",
     changesTitle: n => `${n} नियम हाल में बदले हैं`,
-    changesSub: "इन फॉर्मों के लिए दोस्तों या सीनियर की सलाह पुरानी हो सकती है। ठीक-ठीक क्या बदला, यह देखने के लिए फॉर्म खोलें।",
-    changesCount: n => `${n} बदलाव`,
-    browseTitle: "फॉर्म देखें",
-    browseSub: "कोई फॉर्म चुनें और हर खाने की जानकारी क्रम से देखें।",
-    howTitle: "यह कैसे काम करता है",
-    how1t: "अपना फॉर्म चुनें",
-    how1: "खोजें या श्रेणी से चुनें: बैंक, सरकारी, छात्र या उत्तराखंड।",
-    how2t: "हर खाना भरते चलें",
-    how2: "देखें क्या लिखना है, उसका मतलब और आम गलतियाँ। हर खाना पूरा होने पर टिक करें।",
-    how3t: "जमा करने से पहले जाँचें",
-    how3: "बताए गए दस्तावेज़ तैयार रखें, और जहाँ \"दफ़्तर में पूछें\" लिखा है, वह पक्का कर लें।",
-    viewGuide: "गाइड देखें",
+    changesSub: "इन फॉर्मों के लिए पुरानी सलाह ग़लत हो सकती है। पहले इन्हें देखें।",
+    howTitle: "तीन आसान कदम",
+    how1t: "अपना फॉर्म खोजें",
+    how2t: "एक-एक खाना भरें",
+    how3t: "जाँचें, फिर जमा करें",
     tagChanged: "नियम बदले",
     tagCaution: "जाँच लें",
     tagUnverified: "जाँचा नहीं गया",
@@ -100,30 +92,30 @@ const UI = {
     fieldsCount: n => `${n} खाने`,
     noResults: "कोई फॉर्म नहीं मिला। और फॉर्म जल्द आएँगे।",
     home: "मुख्य पेज",
-    verifiedPill: date => `${date} को जाँचा गया`,
+    verifiedPill: date => `जाँचा गया ${date}`,
     unverifiedPill: "अभी जाँचा नहीं गया",
-    sourceToggle: "आधिकारिक स्रोत देखें",
-    sourceText: "आधिकारिक फॉर्म से जाँचा गया:",
-    unverified: "यह गाइड अभी किसी आधिकारिक फॉर्म से नहीं जाँची गई है। बैंक या दफ़्तर से ज़रूर पुष्टि करें।",
-    progress: (d, t) => `${t} में से ${d} खाने पूरे`,
-    allDone: "सारे खाने पूरे। जमा करने से पहले फॉर्म एक बार फिर जाँच लें।",
+    sourceToggle: "स्रोत",
+    sourceText: "इससे जाँचा गया:",
+    unverified: "अभी किसी आधिकारिक फॉर्म से नहीं जाँचा गया। दफ़्तर से पुष्टि करें।",
+    progressLabel: "खाने पूरे",
+    toastDone: label => `✓ पूरा: ${label}`,
+    toastUndone: "अधूरा मार्क किया",
+    allDone: "सारे खाने पूरे। जमा करने से पहले एक बार और जाँच लें।",
     reset: "फिर से शुरू करें",
-    sectionChanges: n => `हाल में क्या बदला (${n})`,
-    sectionDocs: "ये दस्तावेज़ तैयार रखें",
-    sectionAbout: "इस फॉर्म के बारे में",
-    noDocs: "इस गाइड में कोई दस्तावेज़ नहीं लिखा है। दफ़्तर में पूछें कि क्या लाना है।",
+    toolDocs: "ये दस्तावेज़ लाएँ",
+    toolChanges: n => `क्या बदला (${n})`,
+    toolAbout: "इस फॉर्म के बारे में",
+    noDocs: "कोई दस्तावेज़ नहीं लिखा। दफ़्तर में पूछें क्या लाना है।",
     write: "क्या लिखें",
     meaning: "इसका मतलब",
     documents: "दस्तावेज़",
-    mistakes: "आम गलतियाँ",
+    mistakes: "ये गलतियाँ न करें",
     changed: "हाल में बदला",
-    markDone: "पूरा हुआ",
-    markUndone: "पूरा ✓ (हटाने के लिए दबाएँ)",
-    tickLabel: "इस खाने को पूरा मार्क करें",
     details: "पूरी जानकारी",
-    hideDetails: "छिपाएँ",
-    cheatHint: "हर खाने का छोटा जवाब। ज़्यादा जानकारी के लिए खाने पर दबाएँ, पूरा होने पर टिक करें।",
-    footerAbout: "एक स्वतंत्र छात्र प्रोजेक्ट, जो भारतीय आधिकारिक फॉर्मों को आसान अंग्रेज़ी और हिंदी में समझाता है, आधिकारिक स्रोतों से जाँचकर।",
+    hideDetails: "बंद करें",
+    done: "पूरा",
+    markDone: "पूरा करें",
+    footerAbout: "एक स्वतंत्र छात्र प्रोजेक्ट, जो भारतीय आधिकारिक फॉर्मों को आसान हिंदी और अंग्रेज़ी में समझाता है, आधिकारिक स्रोतों से जाँचकर।",
     footerBrowse: "फॉर्म देखें",
     footerProject: "प्रोजेक्ट",
     footerSource: "GitHub पर सोर्स कोड",
@@ -146,8 +138,18 @@ const ICONS = {
   cap: "M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5",
   rupee: "M7 4h10M7 8.5h10M7 4h3a4.5 4.5 0 0 1 0 9H7l7 7",
   shield: "M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4",
-  arrow: "M5 12h14M13 6l6 6-6 6"
+  arrow: "M5 12h14M13 6l6 6-6 6",
+  doc: "M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6",
+  info: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5M12 8h.01",
+  alert: "M12 4l9 16H3zM12 10v4M12 17h.01",
+  chevron: "M6 9l6 6 6-6",
+  check: "M5 12l5 5 9-10"
 };
+
+// Icon for each category tile.
+const CHIP_ICONS = { bank: "bank", gov: "card", students: "cap", uttarakhand: "home" };
+// Shown as quick buttons under the search box.
+const POPULAR = ["pan-application", "voter-id-form-6", "aadhaar-update", "passport-fresh", "sbi-account-opening"];
 
 // Browser storage can be blocked (private mode), so every access is wrapped.
 const store = {
@@ -161,7 +163,8 @@ const store = {
 
 let lang = store.get("fs:lang", "en");
 let chip = "all";
-let openField = 0; // which field is expanded on the form page
+let openField = -1; // which box card is expanded on the form page
+let panel = null;   // which tool panel is open on the form page: "docs" | "changes" | "about"
 
 const $ = id => document.getElementById(id);
 
@@ -189,6 +192,20 @@ const meta = form => window.CATALOG[form.id] || { icon: "certificate", short: fo
 const changedFields = form => form.fields.filter(f => f.changed);
 const catClass = form => "cat-" + form.category.en.toLowerCase();
 const openForm = form => { location.hash = "form/" + form.id; };
+const formsInChip = c => window.FORMS.filter(f => !c.categories || c.categories.includes(f.category.en));
+
+function iconBox(form, extra = "") {
+  const box = el("span", `card-icon ${catClass(form)} ${extra}`);
+  box.append(icon(meta(form).icon));
+  return box;
+}
+
+function statusBadge(form) {
+  if (!form.verified) return el("span", "badge badge-muted", UI[lang].tagUnverified);
+  if (changedFields(form).length) return el("span", "badge badge-warn", UI[lang].tagChanged);
+  if (form.caution) return el("span", "badge badge-muted", UI[lang].tagCaution);
+  return el("span", "badge badge-ok", "✓ " + UI[lang].tagVerified);
+}
 
 function renderStaticText() {
   document.documentElement.lang = lang;
@@ -204,20 +221,132 @@ function renderStaticText() {
 
 // ---------- Home page ----------
 
-function renderStats() {
-  const total = window.FORMS.reduce((n, f) => n + changedFields(f).length, 0);
-  const stats = [
-    [window.FORMS.length, UI[lang].statForms],
-    [window.FORMS.filter(f => f.verified).length, UI[lang].statVerified],
-    [total, UI[lang].statChanges],
-    [2, UI[lang].statLang]
-  ];
-  const box = $("stats");
+function searchForms(query) {
+  // Search both languages and short names, so "बैंक", "bank" and "pan" all work.
+  const q = query.trim().toLowerCase();
+  return window.FORMS.filter(form => {
+    const m = meta(form);
+    return [form.name.en, form.name.hi, form.category.en, form.category.hi, m.short.en, m.short.hi].join(" ").toLowerCase().includes(q);
+  });
+}
+
+// Command-style search: results appear as you type; arrow keys move, Enter opens.
+let searchMatches = [];
+let searchActive = 0;
+
+function renderSearchResults() {
+  const query = $("search").value.trim();
+  const list = $("search-results");
+  list.replaceChildren();
+  list.hidden = query === "";
+  $("search").setAttribute("aria-expanded", query !== "");
+  searchMatches = query ? searchForms(query).slice(0, 6) : [];
+  searchActive = Math.min(searchActive, Math.max(searchMatches.length - 1, 0));
+  if (!query) return;
+
+  if (searchMatches.length === 0) {
+    list.append(el("li", "empty", UI[lang].noResults));
+    return;
+  }
+  searchMatches.forEach((form, i) => {
+    const li = el("li");
+    const btn = el("button", "result" + (i === searchActive ? " active" : ""));
+    btn.type = "button";
+    btn.id = "result-" + i;
+    btn.setAttribute("role", "option");
+    btn.setAttribute("aria-selected", i === searchActive);
+    btn.append(iconBox(form, "small"), el("span", "result-name", meta(form).short[lang]), el("span", "result-cat", form.category[lang]));
+    if (i === searchActive) btn.append(el("kbd", "result-enter", "↵"));
+    btn.addEventListener("click", () => openForm(form));
+    btn.addEventListener("mousemove", () => { if (searchActive !== i) { searchActive = i; renderSearchResults(); } });
+    li.append(btn);
+    list.append(li);
+  });
+  $("search").setAttribute("aria-activedescendant", "result-" + searchActive);
+}
+
+function renderPopular() {
+  const box = $("popular-list");
   box.replaceChildren();
-  stats.forEach(([value, label]) => {
-    const item = el("div", "stat");
-    item.append(el("dt", null, label), el("dd", null, String(value)));
-    box.append(item);
+  POPULAR.map(id => window.FORMS.find(f => f.id === id)).filter(Boolean).forEach(form => {
+    const btn = el("button", "pop", meta(form).short[lang]);
+    btn.type = "button";
+    btn.addEventListener("click", () => openForm(form));
+    box.append(btn);
+  });
+}
+
+function renderCategoryTiles() {
+  const box = $("cat-tiles");
+  box.replaceChildren();
+  window.CHIPS.filter(c => c.categories).forEach(c => {
+    const tile = el("button", "cat-tile tile-" + c.key);
+    tile.type = "button";
+    const blob = el("span", "tile-icon");
+    blob.append(icon(CHIP_ICONS[c.key]));
+    tile.append(
+      blob,
+      el("span", "tile-name", c.label[lang]),
+      el("span", "tile-desc", UI[lang].catDesc[c.key]),
+      el("span", "tile-count", UI[lang].catCount(formsInChip(c).length) + " →")
+    );
+    tile.addEventListener("click", () => {
+      chip = c.key;
+      renderChips();
+      renderGrid();
+      $("forms").scrollIntoView({ behavior: "smooth" });
+    });
+    box.append(tile);
+  });
+}
+
+// Fluid tabs: a highlight slides between categories. The indicator element is reused
+// across renders so the browser can animate it from its old position to the new one.
+function renderChips() {
+  const box = $("chips");
+  const indicator = box.querySelector(".chip-indicator") || el("span", "chip-indicator");
+  const buttons = window.CHIPS.map(c => {
+    const btn = el("button", "chip" + (c.key === chip ? " active" : ""), c.label[lang]);
+    btn.type = "button";
+    btn.setAttribute("aria-pressed", c.key === chip);
+    btn.addEventListener("click", () => { chip = c.key; renderChips(); renderGrid(); });
+    return btn;
+  });
+  box.replaceChildren(indicator, ...buttons);
+  requestAnimationFrame(() => moveChipIndicator(box, indicator));
+}
+
+function moveChipIndicator(box, indicator) {
+  const active = box.querySelector(".chip.active");
+  if (!active) return;
+  indicator.style.width = active.offsetWidth + "px";
+  indicator.style.height = active.offsetHeight + "px";
+  indicator.style.transform = `translate(${active.offsetLeft}px, ${active.offsetTop}px)`;
+}
+// Chips can wrap onto new lines when the window is resized, so re-place the highlight.
+window.addEventListener("resize", () => {
+  const box = $("chips");
+  const indicator = box.querySelector(".chip-indicator");
+  if (indicator) moveChipIndicator(box, indicator);
+});
+
+function renderGrid() {
+  const current = window.CHIPS.find(c => c.key === chip);
+  $("forms-title").textContent = current.categories ? current.label[lang] : UI[lang].allForms;
+  const grid = $("form-grid");
+  grid.replaceChildren();
+
+  formsInChip(current).forEach((form, i) => {
+    const card = el("button", "form-card");
+    card.type = "button";
+    card.style.setProperty("--i", i); // staggers the fade-in animation
+    const text = el("span", "card-text");
+    const metaRow = el("span", "card-meta");
+    metaRow.append(statusBadge(form), el("span", null, UI[lang].fieldsCount(form.fields.length)));
+    text.append(el("span", "card-name", meta(form).short[lang]), metaRow);
+    card.append(iconBox(form), text, icon("arrow", "icon card-arrow"));
+    card.addEventListener("click", () => openForm(form));
+    grid.append(card);
   });
 }
 
@@ -230,78 +359,11 @@ function renderChangesList() {
   const list = $("changes-list");
   list.replaceChildren();
   forms.forEach(form => {
-    const m = meta(form);
-    const row = el("button", "change-row");
-    row.type = "button";
-    const iconBox = el("span", "card-icon small " + catClass(form));
-    iconBox.append(icon(m.icon));
-    const text = el("span", "change-text");
-    text.append(el("strong", null, m.short[lang]), el("span", null, form.category[lang]));
-    row.append(iconBox, text, el("span", "badge badge-warn", UI[lang].changesCount(changedFields(form).length)), icon("arrow", "icon arrow"));
-    row.addEventListener("click", () => openForm(form));
-    list.append(row);
-  });
-}
-
-function renderChips() {
-  const box = $("chips");
-  box.replaceChildren();
-  window.CHIPS.forEach(c => {
-    const btn = el("button", "chip" + (c.key === chip ? " active" : ""), c.label[lang]);
+    const btn = el("button", "change-chip");
     btn.type = "button";
-    btn.setAttribute("aria-pressed", c.key === chip);
-    btn.addEventListener("click", () => { chip = c.key; renderChips(); renderGrid(); });
-    box.append(btn);
-  });
-}
-
-function renderGrid() {
-  const query = $("search").value.trim().toLowerCase();
-  const current = window.CHIPS.find(c => c.key === chip);
-  const grid = $("form-grid");
-  grid.replaceChildren();
-
-  // Search both languages and short names, so "बैंक", "bank" and "pan" all work.
-  const matches = window.FORMS.filter(form => {
-    if (current.categories && !current.categories.includes(form.category.en)) return false;
-    const m = meta(form);
-    const haystack = [form.name.en, form.name.hi, form.category.en, form.category.hi, m.short.en, m.short.hi].join(" ").toLowerCase();
-    return haystack.includes(query);
-  });
-
-  if (matches.length === 0) {
-    grid.append(el("p", "empty", UI[lang].noResults));
-    return;
-  }
-
-  matches.forEach(form => {
-    const m = meta(form);
-    const card = el("button", "form-card");
-    card.type = "button";
-
-    const top = el("span", "card-top");
-    const iconBox = el("span", "card-icon " + catClass(form));
-    iconBox.append(icon(m.icon));
-    // One status badge per card, most important first.
-    let badge;
-    if (!form.verified) badge = el("span", "badge badge-muted", UI[lang].tagUnverified);
-    else if (changedFields(form).length) badge = el("span", "badge badge-warn", UI[lang].tagChanged);
-    else if (form.caution) badge = el("span", "badge badge-muted", UI[lang].tagCaution);
-    else badge = el("span", "badge badge-ok", "✓ " + UI[lang].tagVerified);
-    top.append(iconBox, badge);
-
-    const foot = el("span", "card-foot");
-    foot.append(el("span", null, UI[lang].fieldsCount(form.fields.length)), el("span", "card-link", UI[lang].viewGuide + " →"));
-
-    card.append(
-      top,
-      el("span", "card-cat", form.category[lang]),
-      el("span", "card-name", m.short[lang]),
-      el("span", "card-official", form.name[lang]),
-      foot
-    );
-    card.addEventListener("click", () => openForm(form));
-    grid.append(card);
+    btn.append(el("span", null, meta(form).short[lang]), el("span", "change-count", String(changedFields(form).length)));
+    btn.addEventListener("click", () => openForm(form));
+    list.append(btn);
   });
 }
 
@@ -319,13 +381,15 @@ function renderFooter() {
 }
 
 function renderHome() {
-  renderStats();
-  renderChangesList();
+  renderSearchResults();
+  renderPopular();
+  renderCategoryTiles();
   renderChips();
   renderGrid();
+  renderChangesList();
 }
 
-// ---------- Form page (fill-along mode) ----------
+// ---------- Form page: header, tools and a grid of box cards ----------
 
 const doneKey = form => `fs:done:${form.id}:${form.fields.length}`;
 
@@ -333,20 +397,13 @@ function renderFormHeader(form) {
   const m = meta(form);
 
   // Breadcrumb: Home › Category › Form
-  const crumbs = $("breadcrumb");
   const home = el("a", null, UI[lang].home);
   home.href = "#";
   home.addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
-  crumbs.replaceChildren(home, el("span", "sep", "›"), el("span", null, form.category[lang]), el("span", "sep", "›"), el("span", "current", m.short[lang]));
+  $("breadcrumb").replaceChildren(home, el("span", "sep", "›"), el("span", null, form.category[lang]), el("span", "sep", "›"), el("span", "current", m.short[lang]));
 
   const head = el("div", "form-head");
-  const iconBox = el("span", "card-icon big " + catClass(form));
-  iconBox.append(icon(m.icon));
-  const titles = el("div");
-  titles.append(el("h1", null, m.short[lang]), el("p", "official-name", form.name[lang]));
-  head.append(iconBox, titles);
-
-  // Trust line: a badge, with the source tucked into a "details" toggle.
+  const titles = el("div", "form-titles");
   const trust = el("div", "trust");
   if (form.verified) {
     trust.append(el("span", "badge badge-ok", "✓ " + UI[lang].verifiedPill(form.lastChecked)));
@@ -363,209 +420,205 @@ function renderFormHeader(form) {
   } else {
     trust.append(el("span", "badge badge-muted", UI[lang].unverifiedPill));
   }
+  titles.append(el("h1", null, m.short[lang]), el("p", "official-name", form.name[lang]), trust);
+  head.append(iconBox(form, "big"), titles);
 
   const box = $("form-header");
-  box.replaceChildren(head, trust);
+  box.replaceChildren(head);
   if (form.caution) box.append(el("p", "note note-warn", form.caution[lang]));
   if (!form.verified) box.append(el("p", "note note-warn", UI[lang].unverified));
 }
 
-function renderProgress(form) {
+function renderTools(form) {
+  const box = $("form-tools");
+  box.replaceChildren();
+
+  // Labelled, segmented progress: one segment per box. Tap a segment to jump to that box.
+  const prog = el("div", "progress");
+  const top = el("div", "progress-top");
+  const reset = el("button", "link-btn", UI[lang].reset);
+  reset.type = "button";
+  reset.addEventListener("click", () => { store.set(doneKey(form), []); openField = -1; renderForm(form); });
+  top.append(el("span", "progress-count"), el("span", "progress-label"), reset);
+  const segments = el("div", "segments");
+  form.fields.forEach((field, i) => {
+    const seg = el("button", "seg");
+    seg.type = "button";
+    seg.title = field.label[lang];
+    seg.setAttribute("aria-label", field.label[lang]);
+    seg.addEventListener("click", () => { if (openField !== i) setOpen(form, i); });
+    segments.append(seg);
+  });
+  prog.append(top, segments);
+
+  // Buttons that open one panel at a time
+  const tools = el("div", "tool-buttons");
+  const changes = changedFields(form).length;
+  [
+    ["docs", "doc", UI[lang].toolDocs, ""],
+    changes ? ["changes", "alert", UI[lang].toolChanges(changes), " tool-warn"] : null,
+    ["about", "info", UI[lang].toolAbout, ""]
+  ].filter(Boolean).forEach(([key, ic, label, extra]) => {
+    const btn = el("button", "tool" + extra + (panel === key ? " active" : ""));
+    btn.type = "button";
+    btn.setAttribute("aria-expanded", panel === key);
+    btn.append(icon(ic, "icon small-icon"), el("span", null, label));
+    btn.addEventListener("click", () => { panel = panel === key ? null : key; renderTools(form); renderPanel(form); });
+    tools.append(btn);
+  });
+
+  box.append(prog, tools);
+  updateProgress(form);
+}
+
+// Updates the progress in place (no re-render), so the segments can animate.
+function updateProgress(form) {
   const done = store.get(doneKey(form), []);
   const total = form.fields.length;
-  const box = $("form-progress");
-  box.replaceChildren();
-
-  const wrap = el("div", "progress");
-  const top = el("div", "progress-top");
-  top.append(el("span", null, done.length === total ? UI[lang].allDone : UI[lang].progress(done.length, total)));
-  if (done.length) {
-    const reset = el("button", "link-btn", UI[lang].reset);
-    reset.type = "button";
-    reset.addEventListener("click", () => { store.set(doneKey(form), []); openField = 0; renderForm(form); });
-    top.append(reset);
-  }
-  const bar = el("div", "bar");
-  const fill = el("div", "bar-fill");
-  fill.style.width = `${Math.round((done.length / total) * 100)}%`;
-  bar.append(fill);
-  wrap.append(top, bar, el("p", "cheat-hint", UI[lang].cheatHint));
-  box.append(wrap);
+  const box = $("form-tools");
+  box.querySelector(".progress-count").textContent = `${done.length} / ${total}`;
+  box.querySelector(".progress-label").textContent = done.length === total ? UI[lang].allDone : UI[lang].progressLabel;
+  box.querySelector(".link-btn").hidden = done.length === 0;
+  box.querySelectorAll(".seg").forEach((seg, i) => seg.classList.toggle("on", done.includes(i)));
 }
 
-function section(title, open, className) {
-  const d = el("details", "section " + (className || ""));
-  if (open) d.open = true;
-  d.append(el("summary", null, title));
-  return d;
+// Small confirmation message at the bottom of the screen.
+function toast(message) {
+  const t = $("toast");
+  t.textContent = message;
+  t.classList.add("show");
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => t.classList.remove("show"), 1800);
 }
 
-function renderSections(form) {
-  const box = $("form-sections");
+function renderPanel(form) {
+  const box = $("form-panel");
   box.replaceChildren();
+  if (!panel) return;
 
-  const changes = changedFields(form);
-  if (changes.length) {
-    // On big screens, open until the person starts filling. On phones it starts closed,
-    // so the short answers come first (the "!" on each field still flags the change).
-    const started = store.get(doneKey(form), []).length > 0;
-    const roomy = window.matchMedia("(min-width: 960px)").matches;
-    const s = section(UI[lang].sectionChanges(changes.length), roomy && !started, "section-warn");
-    changes.forEach(f => {
-      const item = el("div", "section-item");
+  const card = el("div", "panel panel-" + panel);
+  if (panel === "changes") {
+    changedFields(form).forEach(f => {
+      const item = el("div", "panel-item");
       item.append(el("strong", null, f.label[lang]), el("p", null, f.changed[lang]));
-      s.append(item);
+      card.append(item);
     });
-    box.append(s);
-  }
-
-  // Documents grouped by field, because many lists are "any ONE of" and must not be merged.
-  const withDocs = form.fields.filter(f => f.documents && f.documents[lang].length);
-  const docs = section(UI[lang].sectionDocs, false);
-  if (withDocs.length === 0) docs.append(el("p", "muted", UI[lang].noDocs));
-  withDocs.forEach(f => {
-    const item = el("div", "section-item");
-    item.append(el("strong", null, f.label[lang]));
-    const ul = el("ul");
-    f.documents[lang].forEach(d => ul.append(el("li", null, d)));
-    item.append(ul);
-    docs.append(item);
-  });
-  box.append(docs);
-
-  const about = section(UI[lang].sectionAbout, false);
-  about.append(el("p", null, form.about[lang]));
-  box.append(about);
-}
-
-// Wide screens show the open field in its own panel instead of inside the list.
-const widePanel = window.matchMedia("(min-width: 1300px)");
-
-function fieldBody(form, field, i, isDone) {
-  const body = el("div", "field-body");
-
-  // "What to write" first: it is what people came for.
-  const write = el("div", "block block-write");
-  write.append(el("h3", null, UI[lang].write), el("p", null, field.write[lang]));
-  body.append(write);
-
-  body.append(el("h3", null, UI[lang].meaning), el("p", null, field.meaning[lang]));
-
-  if (field.changed) {
-    const ch = el("div", "block block-warn");
-    ch.append(el("h3", null, "⚠ " + UI[lang].changed), el("p", null, field.changed[lang]));
-    body.append(ch);
-  }
-
-  if (field.documents && field.documents[lang].length) {
-    const ul = el("ul");
-    field.documents[lang].forEach(v => ul.append(el("li", null, v)));
-    body.append(el("h3", null, UI[lang].documents), ul);
-  }
-
-  if (field.mistakes && field.mistakes[lang].length) {
-    const mist = el("div", "block block-danger");
-    const ul = el("ul");
-    field.mistakes[lang].forEach(v => ul.append(el("li", null, v)));
-    mist.append(el("h3", null, UI[lang].mistakes), ul);
-    body.append(mist);
-  }
-
-  const btn = el("button", "btn done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
-  btn.type = "button";
-  btn.addEventListener("click", () => toggleDone(form, i, true));
-  body.append(btn);
-  return body;
-}
-
-// Tick or untick a field. From the details view ("advance"), ticking moves on to the next open field.
-function toggleDone(form, i, advance) {
-  const now = store.get(doneKey(form), []);
-  const wasDone = now.includes(i);
-  store.set(doneKey(form), wasDone ? now.filter(x => x !== i) : [...now, i]);
-
-  if (advance && !wasDone) {
-    // Jump to the next field that is not done yet (wrap around to earlier skipped ones).
-    const notDone = j => j !== i && !now.includes(j);
-    const next = form.fields.findIndex((_, j) => j > i && notDone(j));
-    openField = next >= 0 ? next : form.fields.findIndex((_, j) => notDone(j));
-  }
-  renderProgress(form);
-  renderFields(form);
-  if (!advance || openField < 0) return;
-  if (widePanel.matches) {
-    $("field-detail").scrollTop = 0;
-    $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } else if (panel === "docs") {
+    // Grouped by box, because many lists are "any ONE of" and must not be merged.
+    const withDocs = form.fields.filter(f => f.documents && f.documents[lang].length);
+    if (withDocs.length === 0) card.append(el("p", null, UI[lang].noDocs));
+    withDocs.forEach(f => {
+      const item = el("div", "panel-item");
+      const ul = el("ul");
+      f.documents[lang].forEach(d => ul.append(el("li", null, d)));
+      item.append(el("strong", null, f.label[lang]), ul);
+      card.append(item);
+    });
   } else {
-    $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "start" });
+    card.append(el("p", null, form.about[lang]));
   }
+  box.append(card);
+}
+
+function detailBlock(className, title, content) {
+  const block = el("div", "detail " + className);
+  block.append(el("h3", null, title));
+  if (Array.isArray(content)) {
+    const ul = el("ul");
+    content.forEach(v => ul.append(el("li", null, v)));
+    block.append(ul);
+  } else {
+    block.append(el("p", null, content));
+  }
+  return block;
+}
+
+// Accordion: open or close one box card in place, so the height change can animate.
+function setOpen(form, i) {
+  const cards = $("field-list").children;
+  const next = openField === i ? -1 : i;
+  [openField, next].forEach(j => {
+    const card = cards[j];
+    if (!card) return;
+    const isOpen = j === next;
+    card.classList.toggle("open", isOpen);
+    card.querySelector(".box-main").setAttribute("aria-expanded", isOpen);
+    card.querySelector(".box-more span").textContent = isOpen ? UI[lang].hideDetails : UI[lang].details;
+  });
+  openField = next;
+  if (next >= 0) setTimeout(() => cards[next].scrollIntoView({ behavior: "smooth", block: "nearest" }), 60);
+}
+
+function toggleDone(form, i) {
+  const now = store.get(doneKey(form), []);
+  const nowDone = !now.includes(i);
+  store.set(doneKey(form), nowDone ? [...now, i] : now.filter(x => x !== i));
+
+  // Update just this card and the progress, instead of re-rendering everything.
+  const card = $("field-list").children[i];
+  const btn = card.querySelector(".box-done");
+  card.classList.toggle("done", nowDone);
+  btn.classList.toggle("is-done", nowDone);
+  btn.setAttribute("aria-pressed", nowDone);
+  btn.querySelector("span").textContent = nowDone ? UI[lang].done : UI[lang].markDone;
+  if (nowDone && openField === i) setOpen(form, i);
+  updateProgress(form);
+  toast(nowDone ? UI[lang].toastDone(form.fields[i].label[lang]) : UI[lang].toastUndone);
 }
 
 function renderFields(form) {
   const done = store.get(doneKey(form), []);
-  const wide = widePanel.matches;
   const list = $("field-list");
-  const detail = $("field-detail");
   list.replaceChildren();
-  detail.replaceChildren();
-
-  // In the side panel there must always be something to read.
-  if (wide && openField < 0) openField = 0;
 
   form.fields.forEach((field, i) => {
     const isDone = done.includes(i);
     const isOpen = i === openField;
-    const item = el("li", "field" + (isDone ? " done" : "") + (isOpen ? " open" : ""));
-    const row = el("div", "field-row");
+    const card = el("li", "box" + (isDone ? " done" : "") + (isOpen ? " open" : "") + (field.changed ? " has-change" : ""));
+    card.style.setProperty("--i", i); // staggers the fade-in animation
 
-    // Tick box: mark a field done straight from the cheat sheet, without opening it.
-    const tick = el("button", "step", isDone ? "✓" : "");
-    tick.type = "button";
-    tick.setAttribute("aria-pressed", isDone);
-    tick.setAttribute("aria-label", UI[lang].tickLabel);
-    tick.addEventListener("click", () => toggleDone(form, i, false));
+    // Main area: tap to open details.
+    const main = el("button", "box-main");
+    main.type = "button";
+    main.setAttribute("aria-expanded", isOpen);
+    const top = el("span", "box-top");
+    top.append(el("span", "box-label", field.label[lang]));
+    if (field.changed) top.append(el("span", "badge badge-warn", UI[lang].changed));
+    main.append(top, el("span", "box-quick", field.quick ? field.quick[lang] : field.write[lang]));
+    main.addEventListener("click", () => setOpen(form, i));
 
-    // The row itself: field name, the one-line answer, and a hint that details exist.
-    const head = el("button", "field-head");
-    head.type = "button";
-    head.setAttribute("aria-expanded", isOpen);
-    const text = el("span", "field-text");
-    text.append(el("span", "field-label", field.label[lang]));
-    if (field.quick) text.append(el("span", "field-quick", field.quick[lang]));
-    head.append(text);
-    if (field.changed) head.append(el("span", "dot-warn", "!"));
-    if (!wide) head.append(el("span", "more", isOpen ? UI[lang].hideDetails : UI[lang].details));
-    head.addEventListener("click", () => {
-      openField = isOpen && !wide ? -1 : i;
-      renderFields(form);
-      if (wide) detail.scrollTop = 0;
-    });
+    // Details are always in the page but collapsed, so opening can animate smoothly.
+    const collapse = el("div", "box-collapse");
+    const details = el("div", "box-details");
+    details.append(detailBlock("detail-write", UI[lang].write, field.write[lang]));
+    details.append(detailBlock("detail-plain", UI[lang].meaning, field.meaning[lang]));
+    if (field.changed) details.append(detailBlock("detail-warn", UI[lang].changed, field.changed[lang]));
+    if (field.documents && field.documents[lang].length) details.append(detailBlock("detail-plain", UI[lang].documents, field.documents[lang]));
+    if (field.mistakes && field.mistakes[lang].length) details.append(detailBlock("detail-danger", UI[lang].mistakes, field.mistakes[lang]));
+    collapse.append(details);
 
-    row.append(tick, head);
-    item.append(row);
+    // Footer: details toggle and the done button.
+    const foot = el("div", "box-foot");
+    const more = el("button", "box-more");
+    more.type = "button";
+    more.append(el("span", null, isOpen ? UI[lang].hideDetails : UI[lang].details), icon("chevron", "icon chev"));
+    more.addEventListener("click", () => setOpen(form, i));
+    const doneBtn = el("button", "box-done" + (isDone ? " is-done" : ""));
+    doneBtn.type = "button";
+    doneBtn.setAttribute("aria-pressed", isDone);
+    doneBtn.append(icon("check", "icon small-icon tick-draw"), el("span", null, isDone ? UI[lang].done : UI[lang].markDone));
+    doneBtn.addEventListener("click", () => toggleDone(form, i));
+    foot.append(more, doneBtn);
 
-    if (isOpen && !wide) item.append(fieldBody(form, field, i, isDone));
-    if (isOpen && wide) {
-      detail.append(
-        el("p", "detail-count", `${i + 1} / ${form.fields.length}`),
-        el("h2", "detail-title", field.label[lang]),
-        fieldBody(form, field, i, isDone)
-      );
-    }
-    list.append(item);
+    card.append(main, collapse, foot);
+    list.append(card);
   });
 }
 
-// Re-render when the window crosses the wide-panel size (e.g. rotating a tablet).
-widePanel.addEventListener("change", () => {
-  const form = currentForm();
-  if (form) renderFields(form);
-});
-
 function renderForm(form) {
   renderFormHeader(form);
-  renderProgress(form);
-  renderSections(form);
+  renderTools(form);
+  renderPanel(form);
   renderFields(form);
 }
 
@@ -582,15 +635,14 @@ function route() {
   $("form-view").hidden = !form;
 
   if (form) {
-    // Cheat sheet: nothing open on phones so the whole form can be scanned.
-    // In the wide three-panel view, show the first field that isn't done yet.
-    const done = store.get(doneKey(form), []);
-    openField = widePanel.matches ? form.fields.findIndex((_, i) => !done.includes(i)) : -1;
+    openField = -1;
+    panel = null;
     renderForm(form);
     window.scrollTo(0, 0);
     return;
   }
 
+  $("search").value = "";
   renderHome();
   const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
   if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
@@ -601,20 +653,38 @@ document.querySelectorAll(".lang-toggle button").forEach(btn => {
     lang = btn.dataset.lang;
     store.set("fs:lang", lang);
     renderStaticText();
-    // Re-render the current view without losing the open field.
+    // Re-render the current view without losing what is open.
     const form = currentForm();
     if (form) renderForm(form); else renderHome();
   });
 });
 
-$("search").addEventListener("input", () => {
-  // Typing in the hero search shows results right away.
-  if (chip !== "all") { chip = "all"; renderChips(); }
-  renderGrid();
-});
+$("search").addEventListener("input", () => { searchActive = 0; renderSearchResults(); });
 $("search").addEventListener("keydown", e => {
-  if (e.key === "Enter") $("forms").scrollIntoView({ behavior: "smooth" });
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    if (!searchMatches.length) return;
+    e.preventDefault();
+    const step = e.key === "ArrowDown" ? 1 : -1;
+    searchActive = (searchActive + step + searchMatches.length) % searchMatches.length;
+    renderSearchResults();
+  }
+  if (e.key === "Enter" && searchMatches[searchActive]) openForm(searchMatches[searchActive]);
+  if (e.key === "Escape") { $("search").value = ""; renderSearchResults(); $("search").blur(); }
 });
+// Ctrl+K / Cmd+K or "/" jumps to the search box on the home page.
+document.addEventListener("keydown", e => {
+  const typing = /INPUT|TEXTAREA/.test(document.activeElement.tagName);
+  const shortcut = ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") || (e.key === "/" && !typing);
+  if (!shortcut || currentForm()) return;
+  e.preventDefault();
+  $("search").focus();
+  $("search").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+// Close the results list when clicking elsewhere.
+document.addEventListener("click", e => {
+  if (!e.target.closest(".search-box")) $("search-results").hidden = true;
+});
+$("search").addEventListener("focus", renderSearchResults);
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
 window.addEventListener("hashchange", route);
 

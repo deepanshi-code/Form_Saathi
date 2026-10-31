@@ -7,12 +7,11 @@
   <meta name="description" content="Understand Indian official forms field by field, in simple English and Hindi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Inter for English, Noto Sans Devanagari for Hindi: a clean, official-looking pair -->
+  <!-- Inter for English, Noto Sans Devanagari for Hindi -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261101">
+  <link rel="stylesheet" href="style.css?v=20261101-4">
 </head>
 <body>
-  <!-- Thin utility bar, as on most official sites -->
   <div class="topbar">
     <div class="wrap topbar-row">
       <span data-text="topbar"></span>
@@ -28,17 +27,13 @@
     <div class="wrap header-row">
       <a href="#" class="brand" id="home-link">
         <span class="brand-mark" aria-hidden="true">स</span>
-        <span class="brand-text">
-          <strong>Form Saathi</strong>
-          <small data-text="brandSub"></small>
-        </span>
+        <span class="brand-text"><strong>Form Saathi</strong></span>
       </a>
       <nav class="main-nav" aria-label="Main">
-        <a href="#forms" data-text="navForms"></a>
+        <a href="#categories" data-text="navForms"></a>
         <a href="#changes" data-text="navChanges"></a>
         <a href="#how" data-text="navHow"></a>
       </nav>
-      <a href="#forms" class="btn btn-primary header-cta" data-text="cta"></a>
     </div>
   </header>
 
@@ -48,74 +43,156 @@
       <div class="hero">
         <div class="wrap hero-inner">
           <div class="hero-copy">
-            <p class="kicker" data-text="kicker"></p>
             <h1 data-text="tagline"></h1>
             <p class="hero-sub" data-text="intro"></p>
-            <label class="search">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-              <input type="search" id="search" autocomplete="off">
-            </label>
+            <div class="search-box">
+              <label class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                <input type="search" id="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
+                <kbd class="kbd-hint">Ctrl K</kbd>
+              </label>
+              <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+            </div>
+            <div class="popular">
+              <span data-text="popular"></span>
+              <div id="popular-list"></div>
+            </div>
           </div>
-          <dl id="stats" class="stats"></dl>
+
+          <!-- Hero illustration: a person filling a form, with an ID card and a "verified" tick -->
+          <svg class="hero-art" viewBox="0 0 480 400" role="img" aria-hidden="true">
+            <circle cx="260" cy="205" r="170" class="art-blob"/>
+            <circle cx="420" cy="70" r="10" class="art-dot"/>
+            <circle cx="70" cy="110" r="6" class="art-dot2"/>
+            <circle cx="440" cy="250" r="5" class="art-dot2"/>
+            <!-- form sheet -->
+            <rect x="170" y="62" width="200" height="268" rx="16" class="art-paper"/>
+            <path d="M170 78a16 16 0 0 1 16-16h168a16 16 0 0 1 16 16v26H170z" class="art-head"/>
+            <rect x="190" y="77" width="90" height="10" rx="5" class="art-head-line"/>
+            <g class="art-rows">
+              <rect x="190" y="128" width="20" height="20" rx="5" class="art-done"/>
+              <path d="M195 138l4 4 7-8" class="art-tick"/>
+              <rect x="222" y="134" width="120" height="9" rx="4.5" class="art-line"/>
+              <rect x="190" y="166" width="20" height="20" rx="5" class="art-done"/>
+              <path d="M195 176l4 4 7-8" class="art-tick"/>
+              <rect x="222" y="172" width="96" height="9" rx="4.5" class="art-line"/>
+              <rect x="190" y="204" width="20" height="20" rx="5" class="art-done"/>
+              <path d="M195 214l4 4 7-8" class="art-tick"/>
+              <rect x="222" y="210" width="128" height="9" rx="4.5" class="art-line"/>
+              <rect x="190" y="242" width="20" height="20" rx="5" class="art-box"/>
+              <rect x="222" y="248" width="84" height="9" rx="4.5" class="art-line"/>
+              <rect x="190" y="280" width="20" height="20" rx="5" class="art-box"/>
+              <rect x="222" y="286" width="110" height="9" rx="4.5" class="art-line"/>
+            </g>
+            <!-- person -->
+            <path d="M48 380c0-62 26-104 74-104s74 42 74 104z" class="art-kurta"/>
+            <path d="M104 276h36l-18 26z" class="art-neck"/>
+            <circle cx="122" cy="236" r="32" class="art-skin"/>
+            <path d="M90 232c0-24 14-38 33-38 20 0 34 14 34 34-10-6-24-8-40-6-12 2-20 6-27 10z" class="art-hair"/>
+            <path d="M168 320c14-12 26-30 34-50" class="art-arm"/>
+            <path d="M196 284l26-40" class="art-pen"/>
+            <!-- ID card -->
+            <g transform="rotate(-8 400 300)">
+              <rect x="338" y="262" width="122" height="78" rx="10" class="art-card"/>
+              <rect x="350" y="276" width="30" height="36" rx="5" class="art-photo"/>
+              <rect x="390" y="280" width="58" height="7" rx="3.5" class="art-line"/>
+              <rect x="390" y="294" width="44" height="7" rx="3.5" class="art-line"/>
+              <rect x="350" y="322" width="98" height="7" rx="3.5" class="art-line"/>
+            </g>
+            <!-- verified badge -->
+            <circle cx="372" cy="120" r="26" class="art-badge"/>
+            <path d="M361 120l8 8 15-16" class="art-badge-tick"/>
+          </svg>
         </div>
       </div>
 
-      <section class="band" id="changes">
+      <section class="band band-white" id="categories">
         <div class="wrap">
-          <div class="band-head">
-            <h2 id="changes-title"></h2>
-            <p data-text="changesSub"></p>
+          <h2 class="band-title" data-text="catTitle"></h2>
+          <div id="cat-tiles" class="cat-tiles"></div>
+        </div>
+      </section>
+
+      <section class="band band-cream" id="forms">
+        <div class="wrap">
+          <div class="band-row">
+            <h2 class="band-title" id="forms-title"></h2>
+            <div id="chips" class="chips" role="group"></div>
+          </div>
+          <div id="form-grid" class="form-grid"></div>
+        </div>
+      </section>
+
+      <section class="band band-warn" id="changes">
+        <div class="wrap changes-inner">
+          <div>
+            <h2 class="band-title" id="changes-title"></h2>
+            <p class="band-sub" data-text="changesSub"></p>
           </div>
           <div id="changes-list" class="changes-list"></div>
         </div>
       </section>
 
-      <section class="band band-alt" id="forms">
+      <section class="band band-blue" id="how">
         <div class="wrap">
-          <div class="band-head">
-            <h2 data-text="browseTitle"></h2>
-            <p data-text="browseSub"></p>
-          </div>
-          <div id="chips" class="chips" role="group"></div>
-          <div id="form-grid" class="form-grid"></div>
-        </div>
-      </section>
-
-      <section class="band" id="how">
-        <div class="wrap">
-          <div class="band-head">
-            <h2 data-text="howTitle"></h2>
-          </div>
+          <h2 class="band-title center" data-text="howTitle"></h2>
           <ol class="steps">
-            <li><span class="step-no">1</span><h3 data-text="how1t"></h3><p data-text="how1"></p></li>
-            <li><span class="step-no">2</span><h3 data-text="how2t"></h3><p data-text="how2"></p></li>
-            <li><span class="step-no">3</span><h3 data-text="how3t"></h3><p data-text="how3"></p></li>
+            <li>
+              <svg viewBox="0 0 120 96" aria-hidden="true" class="step-art">
+                <rect x="10" y="14" width="60" height="70" rx="10" class="art-paper"/>
+                <rect x="22" y="30" width="36" height="7" rx="3.5" class="art-line"/>
+                <rect x="22" y="44" width="28" height="7" rx="3.5" class="art-line"/>
+                <rect x="22" y="58" width="32" height="7" rx="3.5" class="art-line"/>
+                <circle cx="78" cy="52" r="20" class="art-lens"/>
+                <path d="M93 67l16 16" class="art-handle"/>
+              </svg>
+              <h3 data-text="how1t"></h3>
+            </li>
+            <li>
+              <svg viewBox="0 0 120 96" aria-hidden="true" class="step-art">
+                <rect x="20" y="10" width="64" height="78" rx="10" class="art-paper"/>
+                <rect x="32" y="26" width="16" height="16" rx="4" class="art-done"/>
+                <path d="M36 34l3 3 6-7" class="art-tick"/>
+                <rect x="54" y="31" width="20" height="6" rx="3" class="art-line"/>
+                <rect x="32" y="52" width="16" height="16" rx="4" class="art-box"/>
+                <rect x="54" y="57" width="20" height="6" rx="3" class="art-line"/>
+                <path d="M74 80l30-38" class="art-pen"/>
+              </svg>
+              <h3 data-text="how2t"></h3>
+            </li>
+            <li>
+              <svg viewBox="0 0 120 96" aria-hidden="true" class="step-art">
+                <rect x="16" y="10" width="64" height="78" rx="10" class="art-paper"/>
+                <rect x="28" y="26" width="40" height="6" rx="3" class="art-line"/>
+                <rect x="28" y="40" width="30" height="6" rx="3" class="art-line"/>
+                <rect x="28" y="54" width="36" height="6" rx="3" class="art-line"/>
+                <circle cx="84" cy="66" r="22" class="art-badge"/>
+                <path d="M74 66l7 7 13-14" class="art-badge-tick"/>
+              </svg>
+              <h3 data-text="how3t"></h3>
+            </li>
           </ol>
         </div>
       </section>
     </section>
 
-    <!-- View 2: one form in fill-along mode (hidden until a form is picked) -->
+    <!-- View 2: one form, as a grid of box cards -->
     <section id="form-view" hidden>
       <div class="page-title">
         <div class="wrap">
           <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
           <div id="form-header"></div>
+          <div id="form-tools" class="form-tools"></div>
         </div>
       </div>
       <div class="wrap">
-        <!-- Medium screens: summary | fields. Wide screens: summary | field list | open field -->
-        <div class="form-layout">
-          <aside class="form-side">
-            <div id="form-progress"></div>
-            <div id="form-sections"></div>
-          </aside>
-          <ol id="field-list" class="field-list"></ol>
-          <article id="field-detail" class="field-detail" aria-live="polite"></article>
-        </div>
+        <div id="form-panel"></div>
+        <ol id="field-list" class="box-grid"></ol>
       </div>
     </section>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
@@ -139,26 +216,26 @@
   </footer>
 
   <!-- Order matters: the registry first, then each form file, then the catalog and the app -->
-  <script src="forms/registry.js?v=20261101"></script>
-  <script src="forms/sbi-account-opening.js?v=20261101"></script>
-  <script src="forms/pnb-account-opening.js?v=20261101"></script>
-  <script src="forms/bob-account-opening.js?v=20261101"></script>
-  <script src="forms/hdfc-account-opening.js?v=20261101"></script>
-  <script src="forms/post-office-savings.js?v=20261101"></script>
-  <script src="forms/pmjdy-account.js?v=20261101"></script>
-  <script src="forms/pan-application.js?v=20261101"></script>
-  <script src="forms/aadhaar-update.js?v=20261101"></script>
-  <script src="forms/voter-id-form-6.js?v=20261101"></script>
-  <script src="forms/voter-id-form-8.js?v=20261101"></script>
-  <script src="forms/learner-licence.js?v=20261101"></script>
-  <script src="forms/passport-fresh.js?v=20261101"></script>
-  <script src="forms/uk-income-certificate.js?v=20261101"></script>
-  <script src="forms/uk-caste-certificate.js?v=20261101"></script>
-  <script src="forms/uk-domicile-certificate.js?v=20261101"></script>
-  <script src="forms/nsp-scholarship.js?v=20261101"></script>
-  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101"></script>
-  <script src="forms/ugc-anti-ragging.js?v=20261101"></script>
-  <script src="forms/catalog.js?v=20261101"></script>
-  <script src="app.js?v=20261101"></script>
+  <script src="forms/registry.js?v=20261101-4"></script>
+  <script src="forms/sbi-account-opening.js?v=20261101-4"></script>
+  <script src="forms/pnb-account-opening.js?v=20261101-4"></script>
+  <script src="forms/bob-account-opening.js?v=20261101-4"></script>
+  <script src="forms/hdfc-account-opening.js?v=20261101-4"></script>
+  <script src="forms/post-office-savings.js?v=20261101-4"></script>
+  <script src="forms/pmjdy-account.js?v=20261101-4"></script>
+  <script src="forms/pan-application.js?v=20261101-4"></script>
+  <script src="forms/aadhaar-update.js?v=20261101-4"></script>
+  <script src="forms/voter-id-form-6.js?v=20261101-4"></script>
+  <script src="forms/voter-id-form-8.js?v=20261101-4"></script>
+  <script src="forms/learner-licence.js?v=20261101-4"></script>
+  <script src="forms/passport-fresh.js?v=20261101-4"></script>
+  <script src="forms/uk-income-certificate.js?v=20261101-4"></script>
+  <script src="forms/uk-caste-certificate.js?v=20261101-4"></script>
+  <script src="forms/uk-domicile-certificate.js?v=20261101-4"></script>
+  <script src="forms/nsp-scholarship.js?v=20261101-4"></script>
+  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101-4"></script>
+  <script src="forms/ugc-anti-ragging.js?v=20261101-4"></script>
+  <script src="forms/catalog.js?v=20261101-4"></script>
+  <script src="app.js?v=20261101-4"></script>
 </body>
 </html>
