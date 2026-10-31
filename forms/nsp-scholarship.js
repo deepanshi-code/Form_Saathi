@@ -36,6 +36,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Before you start: what to keep ready", hi: "शुरू करने से पहले: क्या तैयार रखें" },
+      quick: { en: "Keep the listed items ready; your scheme decides what's mandatory", hi: "नीचे दी चीज़ें तैयार रखें; कौन-सी ज़रूरी है, यह आपकी योजना तय करती है" },
       meaning: {
         en: "The NSP student manual lists what to keep ready. It says \"not all the details mentioned below are mandatory\" and that \"Document requirements vary by scheme\".",
         hi: "NSP की छात्र पुस्तिका में बताया गया है कि क्या तैयार रखें। उसमें लिखा है कि नीचे की हर चीज़ ज़रूरी नहीं है, और दस्तावेज़ योजना के हिसाब से अलग-अलग होते हैं।"
@@ -55,6 +56,7 @@ window.FORMS.push({
     },
     {
       label: { en: "OTR step 1–2: General Instructions and Register Mobile Number", hi: "OTR चरण 1–2: सामान्य निर्देश और मोबाइल नंबर रजिस्टर करना" },
+      quick: { en: "Tick all instructions; verify an active mobile with OTP and captcha", hi: "सारे निर्देशों पर टिक करें; चालू मोबाइल नंबर OTP और कैप्चा से पक्का करें" },
       meaning: {
         en: "OTR starts from the \"Register yourself\" link on the NSP login page. The steps are: General Instructions, Register Mobile Number, eKYC Update, Finish. Only students can register.",
         hi: "OTR, NSP लॉग-इन पेज पर \"Register yourself\" लिंक से शुरू होता है। चरण हैं: सामान्य निर्देश, मोबाइल नंबर रजिस्टर करना, eKYC अपडेट, और फ़िनिश। सिर्फ़ छात्र ही रजिस्टर कर सकते हैं।"
@@ -75,6 +77,7 @@ window.FORMS.push({
     },
     {
       label: { en: "OTR step 3: eKYC (Aadhaar / EID / guardian's Aadhaar)", hi: "OTR चरण 3: eKYC (आधार / EID / अभिभावक का आधार)" },
+      quick: { en: "Verify via Aadhaar OTP, EID, or guardian's Aadhaar; keep Reference number", hi: "आधार OTP, EID या अभिभावक के आधार से eKYC करें; रेफ़रेंस नंबर संभालें" },
       meaning: {
         en: "eKYC checks your identity with Aadhaar. The manual shows 3 options: \"I have an Aadhaar\", \"Aadhaar not assigned (I have EID)\", and using a guardian's Aadhaar. After eKYC you fill your basic information; the manual says \"All are mandatory\". You then get a Reference number on your mobile.",
         hi: "eKYC में आधार से आपकी पहचान जाँची जाती है। पुस्तिका में 3 विकल्प हैं: \"मेरे पास आधार है\", \"आधार नहीं मिला (मेरे पास EID है)\", और अभिभावक के आधार से। eKYC के बाद बुनियादी जानकारी भरनी है; पुस्तिका के अनुसार सारे खाने ज़रूरी हैं। फिर आपके मोबाइल पर एक रेफ़रेंस नंबर आता है।"
@@ -94,6 +97,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Face authentication and getting the OTR number", hi: "चेहरे से प्रमाणीकरण (फ़ेस ऑथेंटिकेशन) और OTR नंबर पाना" },
+      quick: { en: "Mandatory: do face authentication in NSP OTR app to get OTR", hi: "ज़रूरी: NSP OTR ऐप में फ़ेस ऑथेंटिकेशन करें, तभी OTR नंबर मिलेगा" },
       meaning: {
         en: "\"Face authentication is mandatory for generation of OTR.\" It is done on an Android phone with two apps from the Google Play Store: UIDAI's \"Aadhaar Face RD\" and the \"NSP OTR\" app. When it succeeds, the OTR number is shown in the app and also sent to your registered mobile.",
         hi: "OTR बनाने के लिए फ़ेस ऑथेंटिकेशन ज़रूरी है। यह Android फ़ोन पर Google Play Store के दो ऐप से होता है: UIDAI का \"Aadhaar Face RD\" और \"NSP OTR\" ऐप। सफल होने पर OTR नंबर ऐप में दिखता है और आपके रजिस्टर्ड मोबाइल पर भी भेजा जाता है।"
@@ -114,6 +118,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Logging in with your OTR", hi: "OTR से लॉग-इन करना" },
+      quick: { en: "Log in with OTR, password, captcha; forgot OTR? Use \"Know your OTR\"", hi: "OTR, पासवर्ड और कैप्चा से लॉग-इन करें; OTR भूलें तो \"Know your OTR\" इस्तेमाल करें" },
       meaning: {
         en: "Your OTR number is your username on NSP. The manual's login screen asks for the OTR, a password and a captcha. All your applications are linked to your one OTR, so you don't need to remember separate application IDs.",
         hi: "NSP पर आपका OTR नंबर ही आपका यूज़रनेम है। पुस्तिका की लॉग-इन स्क्रीन पर OTR, पासवर्ड और कैप्चा माँगा जाता है। आपके सारे आवेदन एक ही OTR से जुड़े रहते हैं, इसलिए अलग-अलग आवेदन नंबर याद रखने की ज़रूरत नहीं।"
@@ -130,6 +135,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Apply Fresh: Domicile State, Scholarship Category and scheme", hi: "Apply Fresh: डोमिसाइल राज्य, छात्रवृत्ति श्रेणी और योजना" },
+      quick: { en: "Choose domicile state carefully, it locks; one scholarship at a time", hi: "डोमिसाइल राज्य ध्यान से चुनें, बाद में नहीं बदलेगा; एक समय में एक छात्रवृत्ति" },
       meaning: {
         en: "From 'My Applications', click 'Apply Fresh', read the disclaimer and click 'I Agree'. Then select your Domicile State, the scholarship category and the scholarship / incentive. The manual warns about the Domicile State: \"Once selected, it cannot be changed\".",
         hi: "'My Applications' में 'Apply Fresh' दबाएँ, डिस्क्लेमर पढ़कर 'I Agree' दबाएँ। फिर डोमिसाइल (मूल निवास) राज्य, छात्रवृत्ति की श्रेणी और छात्रवृत्ति / प्रोत्साहन चुनें। पुस्तिका में चेतावनी है कि डोमिसाइल राज्य एक बार चुनने के बाद बदला नहीं जा सकता।"
@@ -146,6 +152,7 @@ window.FORMS.push({
     },
     {
       label: { en: "General Information (personal details and address)", hi: "सामान्य जानकारी (निजी जानकारी और पता)" },
+      quick: { en: "Check fetched details; permanent state must be your domicile state", hi: "अपने आप आई जानकारी जाँचें; स्थायी राज्य वही हो जो डोमिसाइल राज्य है" },
       meaning: {
         en: "Your demographic details and photo are fetched automatically from your OTR. You check them and fill the rest. Fields marked in red are mandatory; grey ones are optional.",
         hi: "आपकी निजी (डेमोग्राफ़िक) जानकारी और फ़ोटो आपके OTR से अपने आप आ जाती है। आप उसे जाँचते हैं और बाक़ी भरते हैं। लाल रंग वाले खाने ज़रूरी हैं; स्लेटी (ग्रे) वाले वैकल्पिक।"
@@ -162,6 +169,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Academic Details and \"Get Institute\"", hi: "पढ़ाई की जानकारी और \"Get Institute\"" },
+      quick: { en: "Use Get Institute (name, AISHE/ITI or UDISE code); fill red boxes", hi: "'Get Institute' से नाम, AISHE/ITI या UDISE कोड से संस्थान चुनें; लाल खाने भरें" },
       meaning: {
         en: "Sections for: present course / class, previous academic details, Class 10, Class 12 and competitive exam details. You pick your institute with the 'Get Institute' button.",
         hi: "इसमें हिस्से हैं: अभी का कोर्स / कक्षा, पिछली पढ़ाई, 10वीं, 12वीं और प्रतियोगी परीक्षा की जानकारी। अपना संस्थान 'Get Institute' बटन से चुनना है।"
@@ -181,6 +189,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Application Specific, Scheme Available and Scheme Specific Details", hi: "Application Specific, Scheme Available और Scheme Specific Details" },
+      quick: { en: "Select one listed scheme; if missing, re-check earlier details", hi: "दिखी योजनाओं में से एक चुनें; अपेक्षित योजना न दिखे तो पिछली जानकारी जाँचें" },
       meaning: {
         en: "'Application Specific' depends on your domicile state; it may ask for ration card and UDID details (click to fetch the data), or be skipped. 'Scheme Available' shows \"Only the schemes which the student is eligible for\", based on what you entered. 'Scheme Specific Details' appears only for some schemes.",
         hi: "'Application Specific' आपके डोमिसाइल राज्य पर निर्भर है; इसमें राशन कार्ड और UDID की जानकारी माँगी जा सकती है (डेटा लाने के लिए बटन दबाना होता है), या यह छूट भी सकता है। 'Scheme Available' में सिर्फ़ वे योजनाएँ दिखती हैं जिनके लिए आप आपकी भरी जानकारी के हिसाब से योग्य हैं। 'Scheme Specific Details' सिर्फ़ कुछ योजनाओं में आता है।"
@@ -197,6 +206,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Bank account: Aadhaar seeding (DBT)", hi: "बैंक खाता: आधार सीडिंग (DBT)" },
+      quick: { en: "Your Aadhaar-seeded bank account must show status \"Active\"", hi: "आधार से जुड़े बैंक खाते का स्टेटस \"Active\" होना चाहिए" },
       meaning: {
         en: "Per the DBT Mission directions quoted in the Goa circular for 2026-27, all scholarship payments are made through the Aadhaar Payment Bridge (APB). So your bank account must be seeded (linked) with your Aadhaar number, and the status should show \"Active\".",
         hi: "गोवा के 2026-27 परिपत्र में दिए DBT मिशन के निर्देशों के अनुसार, सारी छात्रवृत्ति आधार पेमेंट ब्रिज (APB) से दी जाती है। इसलिए आपका बैंक खाता आपके आधार नंबर से सीड (जुड़ा) होना चाहिए, और स्थिति \"Active\" दिखनी चाहिए।"
@@ -217,6 +227,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Upload Document(s), including income certificate", hi: "दस्तावेज़ अपलोड करना, आय प्रमाण पत्र सहित" },
+      quick: { en: "Upload your scheme's documents; open each once to check it", hi: "अपनी योजना के दस्तावेज़ अपलोड करें; हर फ़ाइल एक बार खोलकर जाँचें" },
       meaning: {
         en: "You upload all mandatory documents for your scheme. Which documents are needed depends on the scheme. For example, the Goa 2026-27 circular (Pre-Matric Scholarship for ST students) asks fresh applicants for an income certificate \"issued by competent authority for the year 2025-26\", a caste certificate, the previous year's marksheet and a disability certificate (if applicable), each under 200 KB in PDF/JPEG.",
         hi: "अपनी योजना के सारे ज़रूरी दस्तावेज़ अपलोड करने हैं। कौन-से दस्तावेज़ चाहिए, यह योजना पर निर्भर है। उदाहरण के लिए, गोवा का 2026-27 परिपत्र (अनुसूचित जनजाति के छात्रों की प्री-मैट्रिक छात्रवृत्ति) नए आवेदकों से सक्षम अधिकारी का 2025-26 का आय प्रमाण पत्र, जाति प्रमाण पत्र, पिछले साल की मार्कशीट और दिव्यांगता प्रमाण पत्र (अगर लागू हो) माँगता है, हर फ़ाइल 200 KB से कम, PDF/JPEG में।"
@@ -236,6 +247,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Final Submit, Withdraw and Revoke", hi: "फ़ाइनल सबमिट, विदड्रॉ (वापस लेना) और रिवोक (फिर चालू करना)" },
+      quick: { en: "Check everything first; no edits after Final Submit", hi: "पहले सब जाँचें; फ़ाइनल सबमिट के बाद आवेदन बदला नहीं जा सकता" },
       meaning: {
         en: "Final Submit sends your application for approval. The manual is clear: \"This application can no longer be edited after final submission.\" To fix a wrong entry, you withdraw the application and apply fresh.",
         hi: "फ़ाइनल सबमिट से आवेदन मंज़ूरी के लिए चला जाता है। पुस्तिका साफ़ कहती है कि फ़ाइनल सबमिट के बाद आवेदन बदला नहीं जा सकता। ग़लती सुधारनी हो तो आवेदन वापस (विदड्रॉ) लेकर नया आवेदन करना होगा।"
@@ -252,6 +264,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Renewal, verification and dates", hi: "रिन्यूअल (नवीनीकरण), सत्यापन और तारीख़ें" },
+      quick: { en: "Renew with the same OTR; last dates vary, check your scheme", hi: "रिन्यूअल में वही OTR इस्तेमाल करें; आख़िरी तारीख़ें अपनी योजना में देखें" },
       meaning: {
         en: "After you submit, your application is verified in levels. For example, the 2024 PIB release on NMMSS describes Level-1 verification by the Institute Nodal Officer (INO) and Level-2 by the District Nodal Officer (DNO). The Goa 2026-27 circular says institute and state officers also do face / biometric eKYC to verify applications. For renewal, the student must complete OTP-based eKYC; \"Applications will not be submitted without Aadhaar based eKYC.\"",
         hi: "सबमिट करने के बाद आवेदन का कई स्तरों पर सत्यापन होता है। उदाहरण के लिए, NMMSS पर 2024 की PIB रिलीज़ में लेवल-1 सत्यापन संस्थान नोडल अधिकारी (INO) और लेवल-2 ज़िला नोडल अधिकारी (DNO) करते हैं। गोवा के 2026-27 परिपत्र के अनुसार संस्थान और राज्य के अधिकारी भी आवेदन जाँचने के लिए चेहरे / बायोमेट्रिक से eKYC करते हैं। रिन्यूअल में छात्र को OTP वाला eKYC पूरा करना होगा; आधार वाले eKYC के बिना आवेदन जमा नहीं होगा।"

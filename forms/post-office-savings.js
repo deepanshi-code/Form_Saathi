@@ -32,6 +32,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Scheme name and account type", hi: "योजना का नाम और खाते का प्रकार" },
+      quick: { en: "Write \"Savings\"; tick \"Self\" and \"Single\"", hi: "योजना में \"Savings\" लिखें; \"Self\" और \"Single\" टिक करें" },
       meaning: {
         en: "At the top you write the post office name (\"To The Postmaster\") and which scheme you want. Then you tick the Account Holder Type (Self, Minor through Guardian, Person of unsound mind through guardian) and the Account Type (Single, Joint A, Joint B).",
         hi: "सबसे ऊपर डाकघर का नाम (\"सेवा में, पोस्टमास्टर\") और योजना का नाम लिखें। फिर खाताधारक का प्रकार (ख़ुद, अभिभावक के ज़रिए नाबालिग, अभिभावक के ज़रिए मानसिक रूप से अस्वस्थ व्यक्ति) और खाते का प्रकार (सिंगल, जॉइंट A, जॉइंट B) टिक करें।"
@@ -48,6 +49,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Initial deposit", hi: "शुरुआती जमा राशि" },
+      quick: { en: "At least Rs. 500, in figures and in words", hi: "कम से कम ₹500, अंकों और शब्दों दोनों में लिखें" },
       meaning: {
         en: "The money you pay to open the account. The form asks for the amount in figures and in words, and whether you pay by cash, DD or cheque (with cheque number and date).",
         hi: "खाता खोलते समय जमा की जाने वाली रकम। फॉर्म में रकम अंकों में और शब्दों में, और भुगतान का तरीक़ा (नकद, डीडी या चेक, चेक नंबर और तारीख़ के साथ) माँगा गया है।"
@@ -64,6 +66,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of the Applicant / Guardian", hi: "आवेदक / अभिभावक का नाम" },
+      quick: { en: "Your full name in CAPITALS, in the 1st Applicant column", hi: "पूरा नाम बड़े अक्षरों में, \"1st Applicant\" वाले कॉलम में" },
       meaning: {
         en: "Your full name. The table has columns for up to 3 applicants; for a single account fill only \"1st Applicant\".",
         hi: "आपका पूरा नाम। तालिका में 3 आवेदकों के कॉलम हैं; सिंगल खाते के लिए सिर्फ़ \"1st Applicant\" वाला कॉलम भरें।"
@@ -80,6 +83,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of Husband / Father / Mother", hi: "पति / पिता / माता का नाम" },
+      quick: { en: "One full name in CAPITALS; unsure which? Ask the post office", hi: "एक पूरा नाम बड़े अक्षरों में; किसका लिखें, पक्का न हो तो डाकघर में पूछें" },
       meaning: {
         en: "The full name of your husband, father or mother.",
         hi: "आपके पति, पिता या माता का पूरा नाम।"
@@ -93,6 +97,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender (M/F/O)", hi: "लिंग (M/F/O)" },
+      quick: { en: "Write M, F or O", hi: "M, F या O लिखें" },
       meaning: { en: "M = Male, F = Female, O = Other.", hi: "M = पुरुष, F = महिला, O = अन्य।" },
       write: { en: "Write M, F or O.", hi: "M, F या O लिखें।" },
       documents: { en: [], hi: [] },
@@ -100,6 +105,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of Birth (DD/MM/YYYY) and in words", hi: "जन्म तिथि (DD/MM/YYYY) और शब्दों में" },
+      quick: { en: "DD/MM/YYYY, and also in words (mandatory)", hi: "DD/MM/YYYY में, और शब्दों में भी (ज़रूरी)" },
       meaning: {
         en: "The day you were born, written twice: once in figures and once in words.",
         hi: "आपकी जन्म की तारीख़, दो बार: एक बार अंकों में और एक बार शब्दों में।"
@@ -116,6 +122,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar Number", hi: "आधार नंबर" },
+      quick: { en: "Your 12-digit Aadhaar number, with a self-attested copy", hi: "अपना 12 अंकों का आधार नंबर, स्व-सत्यापित कॉपी के साथ" },
       meaning: {
         en: "Your 12-digit Aadhaar number. The form also has an \"Aadhaar Seeding\" box under Additional Facilities, for linking Aadhaar to the account.",
         hi: "आपका 12 अंकों का आधार नंबर। फॉर्म में \"अतिरिक्त सुविधाएँ\" के अंदर \"Aadhaar Seeding\" का खाना भी है, खाते से आधार जोड़ने के लिए।"
@@ -129,6 +136,7 @@ window.FORMS.push({
     },
     {
       label: { en: "PAN Number *", hi: "पैन नंबर *" },
+      quick: { en: "Your PAN; no PAN? Ask the post office which form", hi: "अपना पैन लिखें; पैन नहीं तो डाकघर में पूछें कौन-सा फॉर्म दें" },
       meaning: {
         en: "PAN is your Permanent Account Number from the Income Tax Department. The form marks this field with *, but does not explain the *.",
         hi: "पैन आयकर विभाग का स्थायी खाता संख्या है। फॉर्म में इस खाने पर * लगा है, पर * का मतलब नहीं बताया गया।"
@@ -145,6 +153,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Present Address and Permanent Address", hi: "वर्तमान पता और स्थायी पता" },
+      quick: { en: "Fill both addresses with Pin Code; no \"same as above\" box", hi: "दोनों पते पिन कोड के साथ भरें; \"ऊपर जैसा\" का खाना नहीं है" },
       meaning: {
         en: "Present address is where you live now. Permanent address is your home address. Each asks for House/Locality/Village & Post Office/City/District/State/Pin Code.",
         hi: "वर्तमान पता = जहाँ आप अभी रहते हैं। स्थायी पता = आपके घर का पता। दोनों में मकान/मोहल्ला/गाँव और डाकघर/शहर/ज़िला/राज्य/पिन कोड माँगा गया है।"
@@ -161,6 +170,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Telephone / Mobile No. * and E-mail ID", hi: "टेलीफ़ोन / मोबाइल नंबर * और ईमेल" },
+      quick: { en: "A mobile number you will keep; no mobile? Ask the post office", hi: "ऐसा मोबाइल नंबर जो आगे भी रखेंगे; मोबाइल नहीं तो डाकघर में पूछें" },
       meaning: {
         en: "Your phone number (marked * on the form) and email address.",
         hi: "आपका फ़ोन नंबर (फॉर्म पर * लगा है) और ईमेल पता।"
@@ -174,6 +184,7 @@ window.FORMS.push({
     },
     {
       label: { en: "ID Proof and Address Proof", hi: "पहचान और पते का प्रमाण" },
+      quick: { en: "Document no., issue date, issuing authority; attach self-attested copy", hi: "दस्तावेज़ नंबर, जारी तारीख़ और जारी करने वाला लिखें; स्व-सत्यापित कॉपी लगाएँ" },
       meaning: {
         en: "For each proof, write the Document No., Date of Issue and Issuing Authority, and attach a self-attested copy.",
         hi: "हर प्रमाण के लिए दस्तावेज़ नंबर, जारी होने की तारीख़ और जारी करने वाला विभाग लिखें, और उसकी स्व-सत्यापित कॉपी लगाएँ।"
@@ -193,6 +204,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph and Specimen Signatures", hi: "फ़ोटो और नमूना हस्ताक्षर" },
+      quick: { en: "Paste photo; sign the same way three times, name below", hi: "फ़ोटो चिपकाएँ; तीनों बार एक जैसा हस्ताक्षर करें, नीचे नाम लिखें" },
       meaning: {
         en: "Each applicant pastes a photo in the box and signs three times as a specimen. The post office matches your later signatures with these.",
         hi: "हर आवेदक बॉक्स में फ़ोटो चिपकाता है और नमूने के तौर पर तीन बार हस्ताक्षर करता है। डाकघर आगे आपके हस्ताक्षर इन्हीं से मिलाता है।"
@@ -209,6 +221,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Additional Facilities", hi: "अतिरिक्त सुविधाएँ" },
+      quick: { en: "Tick only what you want; attach the separate forms needed", hi: "सिर्फ़ ज़रूरी सुविधाएँ टिक करें; उनके अलग फॉर्म भी लगाएँ" },
       meaning: {
         en: "Extra services for a Post Office Savings Account: Cheque Book, IPPB account, Aadhaar Seeding, ATM Card, Internet Banking, Mobile Banking, and insurance/pension schemes PMSBY, PMJJBY and APY.",
         hi: "डाकघर बचत खाते के साथ मिलने वाली अतिरिक्त सेवाएँ: चेक बुक, IPPB खाता, आधार सीडिंग, एटीएम कार्ड, इंटरनेट बैंकिंग, मोबाइल बैंकिंग, और बीमा/पेंशन योजनाएँ PMSBY, PMJJBY और APY।"
@@ -225,6 +238,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Nomination (section 4) and signature", hi: "नामांकन / नॉमिनी (खंड 4) और हस्ताक्षर" },
+      quick: { en: "Write scheme name and nominee details; sign with place and date", hi: "योजना का नाम और नॉमिनी की जानकारी लिखें; जगह-तारीख़ के साथ हस्ताक्षर करें" },
       meaning: {
         en: "A nominee is the person who gets the money in the account if you die. The table has rows for up to 4 nominees: name and relationship, full address, nominee's Aadhaar (optional), date of birth if the nominee is a minor, and share of entitlement.",
         hi: "नॉमिनी वह व्यक्ति है जिसे आपकी मृत्यु होने पर खाते का पैसा मिलेगा। तालिका में 4 नॉमिनी तक की पंक्तियाँ हैं: नाम और रिश्ता, पूरा पता, नॉमिनी का आधार (वैकल्पिक), नाबालिग नॉमिनी की जन्म तिथि, और हिस्सा।"

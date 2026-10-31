@@ -33,6 +33,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Before you start: email and mobile number", hi: "शुरू करने से पहले: ईमेल और मोबाइल नंबर" },
+      quick: { en: "Have a working email and mobile before starting", hi: "शुरू करने से पहले चालू ईमेल और मोबाइल नंबर तैयार रखें" },
       meaning: {
         en: "The portal sends your registration number by email, so you need a working email address. The instructions say: \"If you do not have an E mail address please create one before you fill this form.\"",
         hi: "पोर्टल आपका रजिस्ट्रेशन नंबर ईमेल पर भेजता है, इसलिए चालू ईमेल पता चाहिए। निर्देशों में लिखा है: अगर ईमेल पता नहीं है, तो फॉर्म भरने से पहले बना लें।"
@@ -49,6 +50,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Choose your Educational Institution Type", hi: "अपने शिक्षण संस्थान का प्रकार चुनें" },
+      quick: { en: "Pick College, Standalone Institution or University; unsure? Ask anti-ragging cell", hi: "कॉलेज, स्टैंडअलोन संस्थान या यूनिवर्सिटी चुनें; पक्का न हो तो एंटी-रैगिंग सेल से पूछें" },
       meaning: {
         en: "Three choices: College, Standalone Institution, University. The portal explains: College = colleges affiliated with a university; Standalone Institution = institutes not dependent on any university (e.g. teacher training, nursing); University = universities that run courses without any colleges.",
         hi: "तीन विकल्प: कॉलेज, स्टैंडअलोन संस्थान, यूनिवर्सिटी। पोर्टल के अनुसार: कॉलेज = किसी यूनिवर्सिटी से जुड़े कॉलेज; स्टैंडअलोन संस्थान = जो किसी यूनिवर्सिटी पर निर्भर नहीं (जैसे शिक्षक प्रशिक्षण, नर्सिंग); यूनिवर्सिटी = जो बिना किसी कॉलेज के ख़ुद कोर्स चलाती हैं।"
@@ -65,6 +67,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Student's name: First Name *, Middle Name (optional), Surname / Last Name *", hi: "छात्र का नाम: पहला नाम *, बीच का नाम (वैकल्पिक), उपनाम *" },
+      quick: { en: "Your name as college records have it; middle name optional", hi: "अपना नाम कॉलेज के रिकॉर्ड जैसा लिखें; बीच का नाम वैकल्पिक है" },
       meaning: {
         en: "Your own name, in three boxes. Fields marked * are mandatory; the middle name is optional.",
         hi: "आपका अपना नाम, तीन खानों में। * वाले खाने ज़रूरी हैं; बीच का नाम वैकल्पिक है।"
@@ -81,6 +84,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile Number (+91) * and Email *", hi: "मोबाइल नंबर (+91) * और ईमेल *" },
+      quick: { en: "Your own mobile and email; recheck carefully before submitting", hi: "अपना मोबाइल और ईमेल; जमा करने से पहले ध्यान से दोबारा जाँचें" },
       meaning: {
         en: "Your mobile number and email. The registration number comes to this email.",
         hi: "आपका मोबाइल नंबर और ईमेल। रजिस्ट्रेशन नंबर इसी ईमेल पर आता है।"
@@ -97,6 +101,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender *, City *, State *, Select Nationality *", hi: "लिंग *, शहर *, राज्य *, राष्ट्रीयता चुनें *" },
+      quick: { en: "Tick gender, type city, pick state and nationality", hi: "लिंग चुनें, शहर लिखें, सूची से राज्य और राष्ट्रीयता चुनें" },
       meaning: {
         en: "Gender options on the form: Male, Female, Other. City is typed; State and Nationality are chosen from lists.",
         hi: "फॉर्म पर लिंग के विकल्प: पुरुष, महिला, अन्य। शहर टाइप करना है; राज्य और राष्ट्रीयता सूची से चुननी है।"
@@ -113,6 +118,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Parent / Guardian Details *", hi: "माता-पिता / अभिभावक की जानकारी *" },
+      quick: { en: "One parent's name, phone, email, city, state and address", hi: "एक माता-पिता/अभिभावक का नाम, फ़ोन, ईमेल, शहर, राज्य और पता" },
       meaning: {
         en: "All mandatory: Parent / Guardian Name, Phone Number (+91), Email, City, State and address. The parent's undertaking is made from these details: after you submit, both the Student's and the Parents' undertakings can be downloaded.",
         hi: "सब ज़रूरी: माता-पिता / अभिभावक का नाम, फ़ोन नंबर (+91), ईमेल, शहर, राज्य और पता। माता-पिता का शपथ पत्र इन्हीं जानकारियों से बनता है: फॉर्म जमा होने के बाद छात्र और माता-पिता दोनों के शपथ पत्र डाउनलोड किए जा सकते हैं।"
@@ -129,6 +135,7 @@ window.FORMS.push({
     },
     {
       label: { en: "College / University details *", hi: "कॉलेज / यूनिवर्सिटी की जानकारी *" },
+      quick: { en: "Choose state first, then college; fill head's name and phone", hi: "पहले राज्य, फिर कॉलेज चुनें; प्रमुख का नाम और फ़ोन भरें" },
       meaning: {
         en: "State in which your college (or university) is based, then its name from a list (\"Select College state first\"). Then: College Director's Name (University form: \"University Director/Vice Chancellor\") with a title (Dr., Prof., Mr., Mrs.), the institution's phone number, and a landline (optional).",
         hi: "आपका कॉलेज (या यूनिवर्सिटी) किस राज्य में है, फिर सूची से उसका नाम (पहले राज्य चुनें)। फिर: कॉलेज के डायरेक्टर का नाम (यूनिवर्सिटी वाले फॉर्म में \"डायरेक्टर/कुलपति\") उपाधि के साथ (Dr., Prof., Mr., Mrs.), संस्थान का फ़ोन नंबर, और लैंडलाइन (वैकल्पिक)।"
@@ -145,6 +152,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Course details *", hi: "कोर्स की जानकारी *" },
+      quick: { en: "Course type, name, current year, nearest police station", hi: "कोर्स का प्रकार, नाम, मौजूदा साल और पास का पुलिस थाना" },
       meaning: {
         en: "Details of the course: Under Graduate Diploma, Post Graduate Diploma, Under Graduate Degree, Post Graduate Degree, Ph.D, or Others. Then Name of the Course *, Number of students in your class (not marked mandatory), Current year of study * (1 to 5 or Other), and Nearest Police Station to your college *.",
         hi: "कोर्स का प्रकार: अंडरग्रेजुएट डिप्लोमा, पोस्टग्रेजुएट डिप्लोमा, अंडरग्रेजुएट डिग्री, पोस्टग्रेजुएट डिग्री, पीएचडी या अन्य। फिर कोर्स का नाम *, आपकी क्लास में छात्रों की संख्या (ज़रूरी नहीं बताया गया), पढ़ाई का मौजूदा साल * (1 से 5 या अन्य), और कॉलेज के सबसे पास का पुलिस थाना *।"
@@ -161,6 +169,7 @@ window.FORMS.push({
     },
     {
       label: { en: "UGC Regulations: the five promises", hi: "यूजीसी नियम: पाँच वचन" },
+      quick: { en: "Open and read both linked documents, then tick", hi: "दोनों लिंक खोलकर पढ़ें, फिर टिक करें" },
       meaning: {
         en: "You confirm that: (1) you have read UGC's regulations on ragging; (2) you have read the Supreme Court's judgment on prevention of ragging; (3) \"I will not indulge in Ragging or any form of violent behaviour\", nor tolerate being ragged; (4) if accused of ragging, \"the responsibility is on me to prove that I am not guilty\"; (5) you will not stay a spectator and will report ragging to your Principal/Director and/or the helpline.",
         hi: "आप पुष्टि करते हैं कि: (1) आपने रैगिंग पर यूजीसी के नियम पढ़े हैं; (2) आपने रैगिंग रोकने पर सुप्रीम कोर्ट का फ़ैसला पढ़ा है; (3) आप रैगिंग या किसी भी तरह की हिंसा नहीं करेंगे, और न ही अपनी रैगिंग सहेंगे; (4) अगर आप पर रैगिंग का आरोप लगे, तो ख़ुद को निर्दोष साबित करने की ज़िम्मेदारी आपकी होगी; (5) आप रैगिंग होते चुपचाप नहीं देखेंगे, बल्कि प्रिंसिपल/डायरेक्टर और/या हेल्पलाइन को बताएँगे।"
@@ -177,6 +186,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Confidential Survey *", hi: "गोपनीय सर्वे *" },
+      quick: { en: "Answer all four honestly; helpline is 1800-180-5522", hi: "चारों सवालों के सच्चे जवाब दें; हेल्पलाइन 1800-180-5522 है" },
       meaning: {
         en: "Four questions: Were you ever ragged? (No / Yes); Did you ever rag anybody? (No / Yes); What is the phone number of the National Anti-Ragging Helpline? (type it); Does ragging happen in your college? (No / Mild / Severe). The form says the survey is confidential and \"Your college will only know that you have participated\".",
         hi: "चार सवाल: क्या आपकी कभी रैगिंग हुई? (नहीं / हाँ); क्या आपने कभी किसी की रैगिंग की? (नहीं / हाँ); राष्ट्रीय एंटी-रैगिंग हेल्पलाइन का फ़ोन नंबर क्या है? (टाइप करें); क्या आपके कॉलेज में रैगिंग होती है? (नहीं / हल्की / गंभीर)। फॉर्म के अनुसार यह सर्वे गोपनीय है और कॉलेज को सिर्फ़ इतना पता चलेगा कि आपने इसमें हिस्सा लिया।"
@@ -193,6 +203,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Recheck and Submit Form", hi: "दोबारा जाँचें और फॉर्म जमा करें" },
+      quick: { en: "Recheck email and mobile, tick the confirm box, then Submit", hi: "ईमेल और मोबाइल दोबारा जाँचें, पुष्टि वाले खाने पर टिक करें, फिर Submit करें" },
       meaning: {
         en: "Tick \"I have rechecked the form and confirm that all the details are correct.\" and press Submit Form.",
         hi: "\"मैंने फॉर्म दोबारा जाँच लिया है और पुष्टि करता/करती हूँ कि सारी जानकारी सही है\" पर टिक करें और Submit Form दबाएँ।"
@@ -209,6 +220,7 @@ window.FORMS.push({
     },
     {
       label: { en: "After submitting: email, registration number and reference number", hi: "जमा करने के बाद: ईमेल, रजिस्ट्रेशन नंबर और रेफ़रेंस नंबर" },
+      quick: { en: "Note reference number; forward the email to your Nodal Officer", hi: "रेफ़रेंस नंबर लिख लें; ईमेल कॉलेज के नोडल ऑफ़िसर को फ़ॉरवर्ड करें" },
       meaning: {
         en: "You get a REFERENCE NUMBER on screen, and an email with your registration number. UGC says: \"The student will forward that e-mail to the Nodal officer in his/her university/college e-mail.\" Colleges must display the Nodal Officer's email and phone on their website and campus.",
         hi: "स्क्रीन पर एक रेफ़रेंस नंबर मिलता है, और ईमेल पर रजिस्ट्रेशन नंबर आता है। यूजीसी के अनुसार छात्र को यह ईमेल अपनी यूनिवर्सिटी/कॉलेज के नोडल ऑफ़िसर के ईमेल पर फ़ॉरवर्ड करना है। कॉलेजों को नोडल ऑफ़िसर का ईमेल और फ़ोन अपनी वेबसाइट और कैंपस पर दिखाना होता है।"
@@ -229,6 +241,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Download Undertaking (Reference No. *, Email *, Mobile No. *)", hi: "शपथ पत्र डाउनलोड करें (रेफ़रेंस नंबर *, ईमेल *, मोबाइल नंबर *)" },
+      quick: { en: "Enter reference number, same email and mobile; no printing needed", hi: "रेफ़रेंस नंबर, वही ईमेल और मोबाइल डालें; प्रिंट करने की ज़रूरत नहीं" },
       meaning: {
         en: "On the \"Undertaking Document\" page of antiragging.in you enter your Reference No., Email and Mobile No. to download the Student's and the Parents' Anti Ragging Undertakings.",
         hi: "antiragging.in के \"Undertaking Document\" पेज पर रेफ़रेंस नंबर, ईमेल और मोबाइल नंबर डालकर छात्र और माता-पिता दोनों के एंटी-रैगिंग शपथ पत्र डाउनलोड किए जा सकते हैं।"
@@ -245,6 +258,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Every academic year, and hostel students", hi: "हर शैक्षणिक वर्ष, और हॉस्टल वाले छात्र" },
+      quick: { en: "Fill again each academic year; hostel students: ask cell or warden", hi: "हर शैक्षणिक वर्ष नया शपथ पत्र भरें; हॉस्टल वाले सेल या वार्डन से पूछें" },
       meaning: {
         en: "UGC's letter of 22 January 2025 asks colleges to make it compulsory for each student and every parent \"to submit an online undertaking every academic year\". So this is not only for first-year admission.",
         hi: "यूजीसी के 22 जनवरी 2025 के पत्र में कॉलेजों से कहा गया है कि हर छात्र और हर माता-पिता के लिए हर शैक्षणिक वर्ष ऑनलाइन अंडरटेकिंग देना ज़रूरी किया जाए। यानी यह सिर्फ़ पहले साल के दाख़िले के लिए नहीं है।"

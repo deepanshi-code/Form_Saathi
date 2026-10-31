@@ -24,6 +24,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "\"Please open my / our\" (account type)", hi: "\"मेरा / हमारा खाता खोलें\" (खाते का प्रकार)" },
+      quick: { en: "Tick one: \"Savings\" for a normal account; ask branch about balance", hi: "कोई एक टिक करें: सामान्य खाते के लिए \"Savings\"; बैलेंस शाखा में पूछें" },
       meaning: {
         en: "Which account you want. Options printed on the form: Savings, Savings Max, Salary, Salary & Reimbursement, BSBDA Savings (Basic Savings Bank Deposit Account), Kids Advantage Account, Current, FD, RD, PPF A/C, Sukanya Samriddhi A/C, KGC SB & CA.",
         hi: "आप कौन-सा खाता चाहते हैं। फॉर्म पर छपे विकल्प: Savings, Savings Max, Salary, Salary & Reimbursement, BSBDA Savings (बेसिक बचत खाता), Kids Advantage, Current (चालू), FD, RD, PPF, सुकन्या समृद्धि, KGC SB & CA।"
@@ -40,6 +41,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(B) Operating instruction", hi: "(B) खाता चलाने का तरीका" },
+      quick: { en: "Tick \"Single\" if the account is only in your name", hi: "खाता सिर्फ़ आपके नाम पर है तो \"Single\" पर टिक करें" },
       meaning: {
         en: "Who can use the account. Options: Single, Either or Survivor, Jointly, Former or Survivor, Minor under Guardian.",
         hi: "खाता कौन चला सकता है। विकल्प: Single (अकेले), Either or Survivor (दोनों में से कोई भी), Jointly (दोनों साथ मिलकर), Former or Survivor (पहला धारक, उसके बाद जीवित धारक), Minor under Guardian (अभिभावक के तहत नाबालिग)।"
@@ -56,6 +58,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(A) Applicant name", hi: "(A) आवेदक का नाम" },
+      quick: { en: "One letter per box; leave a box empty between words", hi: "हर खाने में एक अक्षर; शब्दों के बीच एक खाना खाली छोड़ें" },
       meaning: {
         en: "Your name in separate boxes: Prefix (Mr/Ms etc.), First name, Middle name, Surname.",
         hi: "आपका नाम अलग-अलग खानों में: Prefix (श्री/सुश्री आदि), पहला नाम, बीच का नाम, उपनाम (सरनेम)।"
@@ -72,6 +75,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth * and age proof", hi: "जन्म तिथि * और उम्र का प्रमाण" },
+      quick: { en: "DD MM YYYY; ask the branch which age proof to attach", hi: "DD MM YYYY लिखें; उम्र का कौन-सा प्रमाण चलेगा, शाखा में पूछें" },
       meaning: {
         en: "The day you were born. Next to it is an \"AGE PROOF\" column with a \"Proof Attached\" box.",
         hi: "आपके जन्म की तारीख। इसके पास \"AGE PROOF\" (उम्र का प्रमाण) का कॉलम है, जिसमें \"Proof Attached\" (प्रमाण लगाया) का खाना है।"
@@ -88,6 +92,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender * and Mother's maiden name *", hi: "लिंग * और माँ का शादी से पहले का नाम *" },
+      quick: { en: "Tick gender; write your mother's name before marriage", hi: "लिंग टिक करें; माँ का शादी से पहले वाला नाम लिखें" },
       meaning: {
         en: "Gender options: Male, Female, Third Gender. \"Mother's maiden name\" means your mother's name before her marriage. Unlike many forms, this one does not ask for your father's name here.",
         hi: "लिंग के विकल्प: पुरुष, महिला, तृतीय लिंग। \"Mother's maiden name\" यानी आपकी माँ का शादी से पहले का नाम। कई फॉर्मों से अलग, यहाँ पिता का नाम नहीं माँगा गया है।"
@@ -104,6 +109,7 @@ window.FORMS.push({
     },
     {
       label: { en: "PAN No. * (or Form 97)", hi: "पैन नंबर * (या फॉर्म 97)" },
+      quick: { en: "Your 10-character PAN, or attach Form 97 if you have none", hi: "अपना 10 अक्षरों का पैन लिखें; पैन नहीं तो फॉर्म 97 लगाएँ" },
       meaning: {
         en: "PAN is your Permanent Account Number from the Income Tax Department. The form says: \"PAN NO. (If not available attach Form 97)\". Nationality is also asked here and is mandatory.",
         hi: "पैन आयकर विभाग का स्थायी खाता संख्या है। फॉर्म पर लिखा है: पैन न हो तो फॉर्म 97 लगाएँ। यहीं राष्ट्रीयता (Nationality) भी पूछी गई है, जो ज़रूरी है।"
@@ -123,6 +129,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar card no. and \"Link with A/C for DBT\"", hi: "आधार नंबर और \"DBT के लिए खाते से जोड़ें\"" },
+      quick: { en: "Write Aadhaar number; tick whether to link it for DBT", hi: "आधार नंबर लिखें; DBT के लिए जोड़ना है या नहीं, टिक करें" },
       meaning: {
         en: "DBT means Direct Benefit Transfer: government subsidies paid straight into a bank account. Here you choose whether this account should receive them. The form also asks for the \"Previous Bank name where subsidy is received\".",
         hi: "DBT यानी डायरेक्ट बेनिफ़िट ट्रांसफ़र: सरकारी सब्सिडी सीधे बैंक खाते में आना। यहाँ आप चुनते हैं कि सब्सिडी इस खाते में आए या नहीं। फॉर्म यह भी पूछता है कि अभी सब्सिडी किस बैंक में आती है।"
@@ -139,6 +146,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(D) Mailing address and permanent address", hi: "(D) डाक का पता और स्थायी पता" },
+      quick: { en: "Mailing address with landmark (mandatory); your card PIN comes here", hi: "डाक का पता लैंडमार्क के साथ (ज़रूरी); कार्ड का पिन यहीं आएगा" },
       meaning: {
         en: "Mailing address is where the bank sends post. Permanent address is your fixed home address. Both have boxes for Flat No & Bldg Name, Road No./Name, Landmark, City, State, PIN Code and Country.",
         hi: "डाक का पता = जहाँ बैंक चिट्ठी भेजेगा। स्थायी पता = आपका पक्का घर का पता। दोनों में फ़्लैट/बिल्डिंग, सड़क, लैंडमार्क, शहर, राज्य, पिन कोड और देश के खाने हैं।"
@@ -155,6 +163,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(E) Contact details: mobile * and email *", hi: "(E) संपर्क: मोबाइल * और ईमेल *" },
+      quick: { en: "A mobile and email you will keep; statements come here", hi: "ऐसा मोबाइल और ईमेल जो आगे भी रखेंगे; स्टेटमेंट यहीं आएगा" },
       meaning: {
         en: "The form says contact details are mandatory for new customers. Your mobile number will be linked to NetBanking, Mobile Banking, SMS, toll-free banking and WhatsApp banking.",
         hi: "फॉर्म के अनुसार नए ग्राहकों के लिए संपर्क जानकारी ज़रूरी है। आपका मोबाइल नंबर नेटबैंकिंग, मोबाइल बैंकिंग, SMS, टोल-फ़्री बैंकिंग और व्हाट्सऐप बैंकिंग से जुड़ जाएगा।"
@@ -171,6 +180,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(F) Customer profile: occupation, income, source of funds", hi: "(F) ग्राहक प्रोफ़ाइल: व्यवसाय, आय, पैसे का स्रोत" },
+      quick: { en: "Tick accurately (students: \"Student\"); no income? Ask the branch", hi: "सही जानकारी टिक करें (छात्र: \"Student\"); आय नहीं तो शाखा में पूछें" },
       meaning: {
         en: "Occupation options include Salaried, Self-employed, Retired, Housewife, Student and Others. Gross annual income is in ranges, starting at \"< 50,000\". Source of funds: Salary, Business Income, Agriculture, Investment Income, Others. Residence type: Owned, Rented/Leased, Ancestral/Family, Company provided.",
         hi: "व्यवसाय के विकल्पों में नौकरी (Salaried), स्वरोज़गार, सेवानिवृत्त, गृहिणी, छात्र (Student) और अन्य हैं। सालाना आय सीमाओं में है, सबसे कम \"< 50,000\"। पैसे का स्रोत: वेतन, व्यवसाय, खेती, निवेश से आय, अन्य। घर का प्रकार: अपना, किराए का, पुश्तैनी/परिवार का, कंपनी का दिया।"
@@ -187,6 +197,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(G) Politically Exposed Person (PEP) declaration", hi: "(G) राजनीतिक रूप से प्रमुख व्यक्ति (PEP) की घोषणा" },
+      quick: { en: "Tick Yes or No; most people tick No", hi: "Yes या No टिक करें; ज़्यादातर लोग No चुनते हैं" },
       meaning: {
         en: "PEPs are people entrusted with prominent public functions by a foreign country, such as heads of state, senior politicians, senior government, judicial or military officers. You declare whether you are a PEP or a relative or close associate of one.",
         hi: "PEP वे लोग हैं जिन्हें किसी विदेशी देश ने बड़ा सार्वजनिक पद दिया हो, जैसे राष्ट्राध्यक्ष, वरिष्ठ नेता, वरिष्ठ सरकारी, न्यायिक या सैन्य अधिकारी। आप बताते हैं कि आप PEP हैं या किसी PEP के रिश्तेदार या क़रीबी सहयोगी हैं या नहीं।"
@@ -200,6 +211,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(H) Payment details and minimum balance", hi: "(H) पैसा जमा करने का तरीका और न्यूनतम बैलेंस" },
+      quick: { en: "Pick cash, cheque or transfer; check minimum balance is filled before signing", hi: "नकद, चेक या ट्रांसफ़र चुनें; हस्ताक्षर से पहले न्यूनतम बैलेंस लिखा देखें" },
       meaning: {
         en: "How you put the first money in: Cheque, HDFC/other bank transfer, or Cash. On page 4 you also confirm the \"Average Monthly / Quarterly / Half Yearly Balance\" you must keep; the amount is left blank for that product.",
         hi: "पहला पैसा कैसे जमा करेंगे: चेक, एचडीएफसी/दूसरे बैंक से ट्रांसफ़र, या नकद। पेज 4 पर आप यह भी मानते हैं कि आपको कितना \"औसत मासिक / तिमाही / छमाही बैलेंस\" रखना है; रकम का खाना उस खाते के हिसाब से भरा जाता है।"
@@ -216,6 +228,7 @@ window.FORMS.push({
     },
     {
       label: { en: "(M) Nomination (DA1)", hi: "(M) नामांकन / नॉमिनी (DA1)" },
+      quick: { en: "Tick Yes and fill one nominee, or tick No", hi: "Yes टिक करके एक नॉमिनी भरें, या No टिक करें" },
       meaning: {
         en: "A nominee is the person to whom the bank returns the money in this account if you die. You tick \"Yes, I/We wish to nominate\" or \"No, I do not wish to nominate\".",
         hi: "नॉमिनी वह व्यक्ति है जिसे आपकी मृत्यु होने पर बैंक इस खाते का पैसा लौटाएगा। आप \"Yes, I/We wish to nominate\" या \"No, I do not wish to nominate\" पर टिक करते हैं।"
@@ -232,6 +245,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph and signature", hi: "फ़ोटो और हस्ताक्षर" },
+      quick: { en: "Paste latest photo; sign across it after filling everything", hi: "हाल की फ़ोटो चिपकाएँ; सब भरने के बाद फ़ोटो के आर-पार हस्ताक्षर करें" },
       meaning: {
         en: "Paste your latest passport-size photo on page 4 and sign the form in the places marked \"1st Applicant Signature\". For a minor, the guardian also signs.",
         hi: "पेज 4 पर अपनी हाल की पासपोर्ट साइज़ फ़ोटो चिपकाएँ और \"1st Applicant Signature\" वाली जगहों पर हस्ताक्षर करें। नाबालिग के खाते में अभिभावक भी हस्ताक्षर करते हैं।"

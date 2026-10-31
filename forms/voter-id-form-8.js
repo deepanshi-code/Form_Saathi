@@ -25,6 +25,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Assembly / Parliamentary Constituency (\"To, The Electoral Registration Officer\")", hi: "विधानसभा / लोकसभा क्षेत्र (\"सेवा में, निर्वाचक रजिस्ट्रीकरण ऑफ़िसर\")" },
+      quick: { en: "Write your NEW constituency number and name; unsure? Ask BLO", hi: "अपने नए क्षेत्र का नंबर और नाम लिखें; न पता हो तो BLO से पूछें" },
       meaning: {
         en: "The form is addressed to an Electoral Registration Officer (ERO). You write the number and name of the Assembly Constituency. The Parliamentary Constituency line is only for Union Territories that have no Legislative Assembly.",
         hi: "यह फॉर्म निर्वाचक रजिस्ट्रीकरण अधिकारी (ERO) के नाम है। इसमें विधानसभा क्षेत्र का नंबर और नाम लिखना है। लोकसभा क्षेत्र वाली लाइन सिर्फ़ उन केंद्र शासित प्रदेशों के लिए है जहाँ विधानसभा नहीं है।"
@@ -41,6 +42,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of the applicant and EPIC No. (item I)", hi: "आवेदक का नाम और EPIC नंबर (खाना I)" },
+      quick: { en: "Your name and EPIC number copied from your voter ID", hi: "अपना नाम और वोटर आईडी कार्ड से देखकर EPIC नंबर लिखें" },
       meaning: {
         en: "Your name and your EPIC number (the number printed on your voter ID card). This tells the office which existing entry on the voter list is yours.",
         hi: "आपका नाम और आपका EPIC नंबर (वोटर आईडी कार्ड पर छपा नंबर)। इससे दफ़्तर को पता चलता है कि मतदाता सूची में कौन-सी प्रविष्टि आपकी है।"
@@ -57,6 +59,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar details (item I)", hi: "आधार की जानकारी (खाना I)" },
+      quick: { en: "Write Aadhaar number, or tick (b) if you don't have one", hi: "आधार नंबर लिखें, या आधार नहीं है तो (ख) पर टिक करें" },
       meaning: {
         en: "Tick ONE box: (a) write your Aadhaar number, or (b) \"I am not able to furnish my Aadhaar Number because I don't have Aadhaar Number.\" The guidelines say Aadhaar is asked \"for the purpose of authentication of entries\".",
         hi: "एक खाने पर टिक करें: (क) अपना आधार नंबर लिखें, या (ख) \"मैं आधार नंबर नहीं दे सकता/सकती, क्योंकि मेरे पास आधार नंबर नहीं है।\" निर्देशों के अनुसार आधार \"प्रविष्टियों के प्रमाणीकरण\" (सूची की जानकारी जाँचने) के लिए माँगा जाता है।"
@@ -73,6 +76,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile number and email (item I)", hi: "मोबाइल नंबर और ईमेल (खाना I)" },
+      quick: { en: "Your own mobile and email if any, else a relative's", hi: "अपना मोबाइल और ईमेल लिखें, न हो तो किसी रिश्तेदार का" },
       meaning: {
         en: "Your own mobile number and email, or those of your father, mother or any other relative \"(if available)\".",
         hi: "आपका अपना मोबाइल नंबर और ईमेल, या पिता, माता या किसी और रिश्तेदार का, \"(अगर उपलब्ध हो)\"।"
@@ -89,6 +93,7 @@ window.FORMS.push({
     },
     {
       label: { en: "What you are applying for (item II): tick only one", hi: "आप किसके लिए आवेदन कर रहे हैं (खाना II): सिर्फ़ एक पर टिक करें" },
+      quick: { en: "Tick only one; fill that section, strike off the rest", hi: "सिर्फ़ एक पर टिक करें; वही सेक्शन भरें, बाक़ी काट दें" },
       meaning: {
         en: "Four choices: 1. Shifting of Residence, 2. Correction of Entries in Existing Electoral Roll, 3. Issue of Replacement EPIC without correction, 4. Request for marking as Person with Disability. The form says \"Tick any one\".",
         hi: "चार विकल्प: 1. निवास बदलना, 2. मौजूदा मतदाता सूची में प्रविष्टियों का सुधार, 3. बिना सुधार के नया (बदले में) EPIC, 4. दिव्यांग व्यक्ति के रूप में दर्ज करने का अनुरोध। फॉर्म पर लिखा है: \"किसी एक पर टिक करें\"।"
@@ -109,6 +114,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 1: Shifting of Residence: present address *", hi: "सेक्शन 1: निवास बदलना: अभी का पता *" },
+      quick: { en: "Write your new address in full, with PIN code", hi: "अपना नया पता पिन कोड सहित पूरा लिखें" },
       meaning: {
         en: "By filling this you request that your name \"may be deleted from the previous address and shifted to the current address\", and that a replacement EPIC be issued. The CEO Odisha note says this covers shifting \"within or across constituencies\". You write your \"Present Ordinary Residence\", the place where you now normally live.",
         hi: "यह भरकर आप अनुरोध करते हैं कि आपका नाम पुराने पते से हटाकर नए (अभी के) पते पर कर दिया जाए, और नया EPIC दिया जाए। CEO ओडिशा के नोट के अनुसार यह उसी क्षेत्र के अंदर और दूसरे क्षेत्र में, दोनों तरह के बदलाव के लिए है। इसमें अपना \"अभी का साधारण निवास\" लिखें, यानी जहाँ आप अब आम तौर पर रहते हैं।"
@@ -125,6 +131,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 1: Shifting of Residence: address proof", hi: "सेक्शन 1: निवास बदलना: पते का प्रमाण" },
+      quick: { en: "Attach one self-attested proof of new address; tick it", hi: "नए पते के एक प्रमाण की स्व-प्रमाणित कॉपी लगाएँ और उस पर टिक करें" },
       meaning: {
         en: "A self-attested copy (you sign the photocopy yourself) of ONE address proof for the new address. The form says it can be in your name, or in the name of a parent, spouse or adult child \"if already enrolled with as elector at the same address\".",
         hi: "नए पते के किसी एक प्रमाण की स्व-प्रमाणित कॉपी (फ़ोटोकॉपी पर ख़ुद हस्ताक्षर करके)। फॉर्म के अनुसार यह आपके नाम का हो सकता है, या माता-पिता, पति/पत्नी या बालिग़ बच्चे के नाम का, अगर वे उसी पते पर पहले से मतदाता हैं।"
@@ -144,6 +151,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 2: Correction of Entries: what to correct", hi: "सेक्शन 2: प्रविष्टियों का सुधार: क्या ठीक करवाना है" },
+      quick: { en: "Tick up to 4 wrong items; write the CORRECT details", hi: "ज़्यादा से ज़्यादा 4 ग़लत चीज़ों पर टिक करें; सही जानकारी लिखें" },
       meaning: {
         en: "Tick the details on the voter list / EPIC that are wrong. Options: 1. Name, 2. Gender, 3. DoB/Age, 4. Relation Type, 5. Relation Name, 6. Address, 7. Mobile Number, 8. Photo. The form says \"Maximum of 4 entries/particulars can be corrected\".",
         hi: "मतदाता सूची / EPIC में जो जानकारी ग़लत है, उस पर टिक करें। विकल्प: 1. नाम, 2. लिंग, 3. जन्म तिथि/उम्र, 4. रिश्ते का प्रकार, 5. रिश्तेदार का नाम, 6. पता, 7. मोबाइल नंबर, 8. फ़ोटो। फॉर्म पर लिखा है: \"ज़्यादा से ज़्यादा 4 प्रविष्टियाँ ठीक की जा सकती हैं\"।"
@@ -160,6 +168,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 2: Correction of Entries: proof document", hi: "सेक्शन 2: प्रविष्टियों का सुधार: प्रमाण का दस्तावेज़" },
+      quick: { en: "Attach self-attested proof of correct detail; write its name", hi: "सही जानकारी वाले दस्तावेज़ की स्व-प्रमाणित कॉपी लगाएँ, उसका नाम लिखें" },
       meaning: {
         en: "The form says \"Copy of self-attested Documentary Proof in support of claim to be attached\". You must also write the document's name in the space \"Name of Document in support of above claim attached\".",
         hi: "फॉर्म के अनुसार अपनी बात के समर्थन में दस्तावेज़ की स्व-प्रमाणित कॉपी लगानी है। साथ ही \"संलग्न दस्तावेज़ का नाम\" वाली जगह पर उस दस्तावेज़ का नाम भी लिखना है।"
@@ -179,6 +188,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 2: New photograph (only if photo is to be changed)", hi: "सेक्शन 2: नई फ़ोटो (सिर्फ़ अगर फ़ोटो बदलनी हो)" },
+      quick: { en: "Only if changing photo: tick \"8. Photo\", paste unsigned photo", hi: "सिर्फ़ फ़ोटो बदलनी हो तो: \"8. फ़ोटो\" पर टिक करें, बिना हस्ताक्षर की फ़ोटो चिपकाएँ" },
       meaning: {
         en: "There is a box for a photo, to be used \"ONLY IF PHOTO TO BE CHANGED\". If you are not changing your photo, leave it empty.",
         hi: "फ़ोटो के लिए एक खाना है, जो \"सिर्फ़ तब, जब फ़ोटो बदलनी हो\" भरना है। फ़ोटो नहीं बदलवा रहे, तो इसे ख़ाली छोड़ दें।"
@@ -195,6 +205,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 3: Replacement EPIC without correction", hi: "सेक्शन 3: बिना सुधार के नया EPIC" },
+      quick: { en: "Tick reason; return damaged card, or attach FIR if lost", hi: "कारण पर टिक करें; ख़राब कार्ड लौटाएँ, खो गया हो तो FIR लगाएँ" },
       meaning: {
         en: "For a new voter ID card when your details are fine but the card itself is \"Lost\", \"Destroyed due to reason beyond control like floods, fire, other natural disaster etc.\", or \"Mutilated\" (badly damaged).",
         hi: "जब जानकारी सही है पर कार्ड ख़ुद \"खो गया\", \"बाढ़, आग, किसी और प्राकृतिक आपदा जैसी मजबूरी से नष्ट हो गया\", या \"फट/ख़राब हो गया\" हो, तब नए वोटर आईडी कार्ड के लिए।"
@@ -214,6 +225,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Section 4: Marking as Person with Disability", hi: "सेक्शन 4: दिव्यांग व्यक्ति के रूप में दर्ज करना" },
+      quick: { en: "Tick category, write %, tick certificate attached Yes/No", hi: "श्रेणी पर टिक करें, प्रतिशत लिखें, प्रमाण पत्र हाँ/नहीं पर टिक करें" },
       meaning: {
         en: "Categories on the form: Locomotive, Visual, Deaf & Dumb, or any other (give a description). The form also asks the percentage of disability and whether a certificate is attached.",
         hi: "फॉर्म पर श्रेणियाँ: चलने-फिरने से जुड़ी, देखने से जुड़ी, मूक-बधिर, या कोई और (लिखकर बताएँ)। फॉर्म यह भी पूछता है कि दिव्यांगता कितने प्रतिशत है और प्रमाण पत्र लगाया है या नहीं।"
@@ -227,6 +239,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Declaration, signature / thumb impression, date and place *", hi: "घोषणा, हस्ताक्षर / अंगूठे का निशान, तारीख़ और जगह *" },
+      quick: { en: "Sign yourself and fill the date and place", hi: "ख़ुद हस्ताक्षर करें, तारीख़ और जगह भरें" },
       meaning: {
         en: "You declare that you are a citizen of India and that what you wrote is true to the best of your knowledge. Then you sign (or give a thumb impression) with the date and place.",
         hi: "आप घोषणा करते हैं कि आप भारत के नागरिक हैं और आपने जो लिखा वह आपकी जानकारी के अनुसार सच है। फिर तारीख़ और जगह के साथ हस्ताक्षर करते हैं (या अंगूठा लगाते हैं)।"
@@ -243,6 +256,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Acknowledgement / receipt", hi: "पावती / रसीद" },
+      quick: { en: "Office fills this; keep the slip safe", hi: "यह दफ़्तर भरेगा; पर्ची संभालकर रखें" },
       meaning: {
         en: "The bottom slip is filled and signed by the ERO / AERO / BLO when they receive your Form 8. It has an Acknowledgment Number and date.",
         hi: "नीचे की पर्ची ERO / AERO / BLO आपका फॉर्म 8 लेते समय भरकर हस्ताक्षर करते हैं। इसमें पावती नंबर (Acknowledgment Number) और तारीख़ होती है।"

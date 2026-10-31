@@ -22,6 +22,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Name *", hi: "नाम *" },
+      quick: { en: "Your name exactly as on your ID proof, in BLOCK letters", hi: "पहचान पत्र जैसा ही नाम, बड़े अक्षरों में लिखें" },
       meaning: {
         en: "Your full name, split into boxes: salutation (title), first name, middle name, last name.",
         hi: "आपका पूरा नाम, अलग-अलग खानों में: संबोधन (टाइटल), पहला नाम, बीच का नाम, आख़िरी नाम।"
@@ -38,6 +39,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth *", hi: "जन्म तिथि *" },
+      quick: { en: "DD MM YYYY: day, month, then the full year", hi: "DD MM YYYY: पहले दिन, फिर महीना, फिर पूरा साल" },
       meaning: { en: "The day you were born.", hi: "आपके जन्म की तारीख।" },
       write: {
         en: "The boxes are printed as DD MM YYYY: day first, then month, then the full year.",
@@ -51,6 +53,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender *", hi: "लिंग *" },
+      quick: { en: "Tick one: Male, Female or Third Gender", hi: "एक पर टिक करें: पुरुष, महिला या तृतीय लिंग" },
       meaning: { en: "Options on the form: Male, Female, Third Gender.", hi: "फॉर्म पर विकल्प: पुरुष, महिला, तृतीय लिंग।" },
       write: { en: "Tick one box.", hi: "एक खाने पर टिक करें।" },
       documents: { en: [], hi: [] },
@@ -58,6 +61,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of Father / Mother / Spouse *", hi: "पिता / माता / पति या पत्नी का नाम *" },
+      quick: { en: "Tick Father, Mother or Spouse; father's name is a must without PAN", hi: "पिता, माता या पति/पत्नी पर टिक कर नाम लिखें; पैन नहीं तो पिता का नाम" },
       meaning: {
         en: "Field 6 asks for the name of ONE of these people. You tick which one you are writing.",
         hi: "खाना 6 में इनमें से किसी एक का नाम माँगा गया है। आप टिक करके बताते हैं कि किसका नाम लिख रहे हैं।"
@@ -74,6 +78,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Occupation type *", hi: "व्यवसाय का प्रकार *" },
+      quick: { en: "Tick the one that fits; students tick \"Student\"", hi: "जो लागू हो उस पर टिक करें; छात्र \"Student\" चुनें" },
       meaning: {
         en: "What you do. The form lists many options, such as Service (job), Business, Self Employed, Housewife, Student, Retired and Agriculture.",
         hi: "आप क्या काम करते हैं। फॉर्म में कई विकल्प हैं, जैसे सर्विस (नौकरी), व्यवसाय, स्वरोज़गार, गृहिणी, छात्र, सेवानिवृत्त, कृषि।"
@@ -87,6 +92,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Annual income *", hi: "वार्षिक आय *" },
+      quick: { en: "Write your yearly income; no income? Ask the branch, don't leave blank", hi: "सालाना आय लिखें; आय नहीं है तो शाखा में पूछें, खाली न छोड़ें" },
       meaning: { en: "How much you earn in a year, in rupees.", hi: "आप एक साल में कितना कमाते हैं, रुपयों में।" },
       write: {
         en: "This field is marked mandatory. The form does not say what to write if you have no income (for example, as a student), so ask the branch staff instead of leaving it blank.",
@@ -97,6 +103,7 @@ window.FORMS.push({
     },
     {
       label: { en: "PAN * (or Form 97)", hi: "पैन * (या फॉर्म 97)" },
+      quick: { en: "Your PAN, or Form 97 plus a non-Aadhaar birth-date proof", hi: "अपना पैन लिखें; पैन नहीं तो फॉर्म 97 और जन्म तिथि का प्रमाण (आधार नहीं)" },
       meaning: {
         en: "PAN is your Permanent Account Number from the Income Tax Department. If you don't have one, the form asks for Form 97 instead.",
         hi: "पैन आयकर विभाग का स्थायी खाता संख्या है। अगर आपके पास पैन नहीं है, तो फॉर्म इसकी जगह फॉर्म 97 माँगता है।"
@@ -120,6 +127,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Proof of identity / address (OVD) *", hi: "पहचान / पते का प्रमाण (OVD) *" },
+      quick: { en: "Tick ONE ID from the list and write its number", hi: "सूची में से एक पहचान पत्र पर टिक करें, उसका नंबर लिखें" },
       meaning: {
         en: "OVD means \"Officially Valid Document\": one ID from RBI's fixed list that shows your name and address.",
         hi: "OVD यानी \"आधिकारिक रूप से मान्य दस्तावेज़\": आरबीआई की तय सूची में से एक पहचान पत्र, जिसमें आपका नाम और पता हो।"
@@ -139,6 +147,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Current address and correspondence address *", hi: "वर्तमान पता और पत्राचार का पता *" },
+      quick: { en: "Where you live now; tick \"Same as Current\" if letters go there", hi: "जहाँ अभी रहते हैं वह पता; चिट्ठी वहीं आए तो \"Same as Current\" टिक करें" },
       meaning: {
         en: "Current address is where you live now. Correspondence address is where the bank should send letters. Each has boxes for Address type, City/Village, District, State, PIN and Country.",
         hi: "वर्तमान पता = जहाँ आप अभी रहते हैं। पत्राचार का पता = जहाँ बैंक चिट्ठी भेजे। दोनों में पते का प्रकार, शहर/गाँव, ज़िला, राज्य, पिन और देश के खाने हैं।"
@@ -158,6 +167,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile number and email", hi: "मोबाइल नंबर और ईमेल" },
+      quick: { en: "A mobile number you will keep; needed for electronic banking", hi: "ऐसा मोबाइल नंबर जो आगे भी रखेंगे; इसके बिना इलेक्ट्रॉनिक बैंकिंग नहीं" },
       meaning: {
         en: "The form says all communication will be sent to this mobile number and email ID.",
         hi: "फॉर्म के अनुसार बैंक की सारी सूचना इसी मोबाइल नंबर और ईमेल पर आएगी।"
@@ -174,6 +184,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph *", hi: "फ़ोटो *" },
+      quick: { en: "Paste a recent passport-size photo; don't staple. Bring two.", hi: "हाल की पासपोर्ट साइज़ फ़ोटो चिपकाएँ, स्टेपल न करें; दो फ़ोटो लाएँ" },
       meaning: { en: "Your recent passport-size photo.", hi: "आपकी हाल की पासपोर्ट साइज़ फ़ोटो।" },
       write: {
         en: "Paste it in the photo box. The form says \"Do not Staple\". SBI's terms ask for two copies of recent passport-size photos.",
@@ -184,6 +195,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Nomination (Part II, section F)", hi: "नामांकन / नॉमिनी (भाग II, खंड F)" },
+      quick: { en: "Name up to 4 nominees, or tick \"do not want to nominate\"", hi: "4 तक नॉमिनी लिखें, या \"नॉमिनी नहीं चाहिए\" पर टिक करके हस्ताक्षर करें" },
       meaning: {
         en: "A nominee is the person who receives the money in this account if you die. It is optional, but SBI advises it.",
         hi: "नॉमिनी वह व्यक्ति है जिसे आपकी मृत्यु होने पर इस खाते का पैसा मिलेगा। यह वैकल्पिक है, पर एसबीआई इसकी सलाह देता है।"
@@ -200,6 +212,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Signature / thumb impression", hi: "हस्ताक्षर / अंगूठे का निशान" },
+      quick: { en: "Sign in black ink, not in capitals, same every time", hi: "काली स्याही से, कैपिटल अक्षरों में नहीं, हर बार एक जैसा हस्ताक्षर करें" },
       meaning: {
         en: "The bank keeps this signature as your specimen and matches it on later transactions. The form asks for it in several places: next to the photo, under the declarations and in the nomination section.",
         hi: "बैंक इस हस्ताक्षर को आपके नमूने के रूप में रखता है और आगे के लेन-देन में इसी से मिलान करता है। फॉर्म में यह कई जगह माँगा गया है: फ़ोटो के पास, घोषणाओं के नीचे और नॉमिनी वाले खंड में।"

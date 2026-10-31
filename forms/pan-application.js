@@ -25,6 +25,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "1A. Name (First, Middle, Last)", hi: "1A. नाम (पहला, बीच का, आख़िरी)" },
+      quick: { en: "Full name, no initials or titles like Shri/Dr", hi: "पूरा नाम लिखें, initials या Shri/Dr जैसे टाइटल नहीं" },
       meaning: {
         en: "Your full name, split into First Name, Middle Name and Last Name.",
         hi: "आपका पूरा नाम, तीन हिस्सों में: पहला नाम, बीच का नाम और आख़िरी नाम।"
@@ -41,6 +42,7 @@ window.FORMS.push({
     },
     {
       label: { en: "1B. Name (as per Aadhaar)", hi: "1B. नाम (आधार के अनुसार)" },
+      quick: { en: "Exactly as on your Aadhaar, without dots (e.g. M S KANDASWAMY)", hi: "बिल्कुल आधार जैसा, बिना बिंदु के (जैसे M S KANDASWAMY)" },
       meaning: {
         en: "Your name exactly as it is printed on your Aadhaar. The guidelines say: \"Aadhaar name will be printed on the PAN card.\"",
         hi: "आपका नाम ठीक वैसा, जैसा आधार पर छपा है। निर्देशों में लिखा है कि पैन कार्ड पर आधार वाला नाम ही छपेगा।"
@@ -61,6 +63,7 @@ window.FORMS.push({
     },
     {
       label: { en: "3. Date of Birth", hi: "3. जन्म तिथि" },
+      quick: { en: "DDMMYYYY, one digit per box; must match DOB proof (not Aadhaar)", hi: "दिन-महीना-साल, हर खाने में एक अंक; जन्म तिथि प्रमाण (आधार नहीं) से मेल खाए" },
       meaning: { en: "The day you were born.", hi: "आपके जन्म की तारीख।" },
       write: {
         en: "The boxes are printed as d d m m y y y y. The form's example: 2nd August 1975 is written 0 2 0 8 1 9 7 5. It must match your proof of date of birth (see 'Proof documents').",
@@ -74,6 +77,7 @@ window.FORMS.push({
     },
     {
       label: { en: "4. Aadhaar Number", hi: "4. आधार नंबर" },
+      quick: { en: "Your Aadhaar number (mandatory); no Aadhaar? Ask at PAN centre", hi: "अपना आधार नंबर (ज़रूरी); आधार नहीं है तो पैन केंद्र पर पूछें" },
       meaning: {
         en: "Your Aadhaar number. The guidelines say: \"Every Person who possesses Aadhaar shall mandatorily quote Aadhaar in the application.\"",
         hi: "आपका आधार नंबर। निर्देशों के अनुसार जिसके पास भी आधार है, उसे आवेदन में आधार नंबर देना ज़रूरी है।"
@@ -90,6 +94,7 @@ window.FORMS.push({
     },
     {
       label: { en: "5, 6 & 22. Residence address, office address, address for communication", hi: "5, 6 और 22. घर का पता, दफ़्तर का पता, पत्र-व्यवहार का पता" },
+      quick: { en: "Full residence address; tick one address for communication (item 22)", hi: "घर का पूरा पता भरें; खाना 22 में पत्र-व्यवहार के लिए एक पता टिक करें" },
       meaning: {
         en: "Residence address = where you live. Office address = where you work. Address for communication (item 22) = where the PAN card will be sent.",
         hi: "घर का पता = जहाँ आप रहते हैं। दफ़्तर का पता = जहाँ आप काम करते हैं। पत्र-व्यवहार का पता (खाना 22) = जहाँ पैन कार्ड भेजा जाएगा।"
@@ -109,6 +114,7 @@ window.FORMS.push({
     },
     {
       label: { en: "7 & 8. Residential Status and Passport Number", hi: "7 और 8. निवास की स्थिति और पासपोर्ट नंबर" },
+      quick: { en: "Tick one; passport no. only if Non Resident or Not ordinarily Resident", hi: "एक पर टिक करें; पासपोर्ट नंबर सिर्फ़ Non Resident या Not ordinarily Resident के लिए" },
       meaning: {
         en: "Options on the form: Resident, Non Resident, Resident but Not ordinarily Resident.",
         hi: "फॉर्म पर विकल्प: Resident (निवासी), Non Resident (अनिवासी), Resident but Not ordinarily Resident।"
@@ -122,6 +128,7 @@ window.FORMS.push({
     },
     {
       label: { en: "10. Contact Details (mobile and email)", hi: "10. संपर्क जानकारी (मोबाइल और ईमेल)" },
+      quick: { en: "Mobile and email both mandatory; 91 in Country Code boxes", hi: "मोबाइल और ईमेल दोनों ज़रूरी; 91 को Country Code वाले खानों में लिखें" },
       meaning: {
         en: "Your mobile number, email ID and (if you have one) landline.",
         hi: "आपका मोबाइल नंबर, ईमेल आईडी और (अगर हो तो) लैंडलाइन नंबर।"
@@ -138,6 +145,7 @@ window.FORMS.push({
     },
     {
       label: { en: "11. Source of Income", hi: "11. आय का स्रोत" },
+      quick: { en: "Tick at least one; students with no earnings tick \"No Income\"", hi: "कम से कम एक टिक करें; कमाई नहीं (जैसे छात्र) तो \"No Income\"" },
       meaning: {
         en: "Where your money comes from. Options: Salary, Income from Business/Profession, Income from House Property, Capital Gains, Income from Other Sources, No Income.",
         hi: "आपकी कमाई कहाँ से आती है। विकल्प: वेतन, व्यापार/पेशे से आय, मकान-संपत्ति से आय, पूंजीगत लाभ (Capital Gains), अन्य स्रोतों से आय, कोई आय नहीं।"
@@ -151,6 +159,7 @@ window.FORMS.push({
     },
     {
       label: { en: "12–15. Details of Parents", hi: "12–15. माता-पिता की जानकारी" },
+      quick: { en: "Both parents' names (unless single parent); tick item 15", hi: "दोनों माता-पिता के नाम (single parent वाले मामले छोड़कर); खाना 15 टिक करें" },
       meaning: {
         en: "Item 12 asks whether you have a single parent. Items 13 and 14 ask for your father's and mother's names. Item 15 asks which parent's name should be printed on the PAN card.",
         hi: "खाना 12 पूछता है कि क्या आपके माता या पिता में से कोई एक ही अभिभावक (single parent) है। खाना 13 और 14 में पिता और माता का नाम है। खाना 15 पूछता है कि पैन कार्ड पर किसका नाम छपे।"
@@ -167,6 +176,7 @@ window.FORMS.push({
     },
     {
       label: { en: "16. Assessing Officer (AO Code)", hi: "16. कर निर्धारण अधिकारी (AO कोड)" },
+      quick: { en: "Fill all four parts; get the code from PAN centre/official site", hi: "चारों हिस्से भरें; कोड पैन केंद्र या आधिकारिक साइट से पता करें" },
       meaning: {
         en: "A code for the income tax office that will handle your PAN. It has four parts: Area Code, AO Type, Range Code and AO No.",
         hi: "उस आयकर दफ़्तर का कोड जो आपका पैन देखेगा। इसके चार हिस्से हैं: Area Code, AO Type, Range Code और AO No.।"
@@ -180,6 +190,7 @@ window.FORMS.push({
     },
     {
       label: { en: "17–21. Representative Assessee (if applicable)", hi: "17–21. प्रतिनिधि (Representative Assessee), अगर लागू हो" },
+      quick: { en: "Adults applying for themselves usually skip; required e.g. for minors", hi: "ख़ुद के लिए आवेदन करने वाले बालिग आम तौर पर छोड़ें; नाबालिग आदि के लिए ज़रूरी" },
       meaning: {
         en: "A Representative Assessee (RA) is a person who applies on behalf of the applicant. This part is mandatory if the applicant is a minor, mentally ill or of unsound mind.",
         hi: "प्रतिनिधि (RA) वह व्यक्ति है जो आवेदक की ओर से आवेदन करता है। अगर आवेदक नाबालिग है, या मानसिक रूप से बीमार/अस्वस्थ है, तो यह हिस्सा भरना ज़रूरी है।"
@@ -199,6 +210,7 @@ window.FORMS.push({
     },
     {
       label: { en: "23. Proof of Identity, Address and Date of Birth", hi: "23. पहचान, पते और जन्म तिथि का प्रमाण" },
+      quick: { en: "Attach ID, address and DOB proof; Aadhaar not valid for DOB", hi: "पहचान, पते और जन्म तिथि का प्रमाण लगाएँ; जन्म तिथि के लिए आधार मान्य नहीं" },
       meaning: {
         en: "You must submit three proofs: identity (PoI), address (PoA) and date of birth (PoDoB). They go with the form as Annexures A-1, A-2 and A-3. One document can count for more than one proof if it is allowed for both.",
         hi: "आपको तीन प्रमाण देने हैं: पहचान (PoI), पता (PoA) और जन्म तिथि (PoDoB)। ये फॉर्म के साथ Annexure A-1, A-2 और A-3 के रूप में लगते हैं। अगर कोई दस्तावेज़ दो प्रमाणों के लिए मान्य है, तो वह दोनों के काम आ सकता है।"
@@ -230,6 +242,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photographs (two)", hi: "फ़ोटो (दो)" },
+      quick: { en: "Paste two colour photos, 4.5 x 3.5 cm, white background; don't staple", hi: "दो रंगीन फ़ोटो चिपकाएँ, 4.5 x 3.5 सेमी, सफ़ेद बैकग्राउंड; स्टेपल न करें" },
       meaning: {
         en: "The form has two photo boxes, one on the left and one on the right. Every applicant, including a minor, must paste two photos.",
         hi: "फॉर्म पर फ़ोटो के दो खाने हैं, एक बाईं ओर और एक दाईं ओर। हर आवेदक को, नाबालिग को भी, दो फ़ोटो चिपकानी हैं।"
@@ -246,6 +259,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Signature / Left hand thumb impression", hi: "हस्ताक्षर / बाएँ हाथ के अंगूठे का निशान" },
+      quick: { en: "Sign across left photo and in declaration box; never right photo", hi: "बाईं फ़ोटो के आर-पार और घोषणा वाले खाने में हस्ताक्षर; दाईं फ़ोटो पर नहीं" },
       meaning: {
         en: "Your signature, or your left thumb impression if you cannot sign. The form asks for it in two places.",
         hi: "आपके हस्ताक्षर, या अगर आप हस्ताक्षर नहीं कर सकते तो बाएँ हाथ के अंगूठे का निशान। फॉर्म में यह दो जगह चाहिए।"

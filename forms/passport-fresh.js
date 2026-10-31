@@ -23,6 +23,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Service required: Applying for / Type of application (Column 1.1, 1.4)", hi: "कौन-सी सेवा चाहिए: आवेदन किसके लिए / आवेदन का प्रकार (खाना 1.1, 1.4)" },
+      quick: { en: "Cross \"Fresh Passport\"; cross \"Normal\" unless urgent (Tatkaal costs more)", hi: "\"Fresh Passport\" पर क्रॉस; जल्दी न हो तो \"Normal\" (तत्काल की फ़ीस ज़्यादा)" },
       meaning: {
         en: "Column 1.1 asks if this is a fresh passport or a re-issue. Column 1.4 asks if you want Normal or Tatkaal (urgent) processing.",
         hi: "खाना 1.1 पूछता है कि यह नया पासपोर्ट है या दोबारा जारी (re-issue)। खाना 1.4 पूछता है कि आपको सामान्य (Normal) चाहिए या तत्काल (Tatkaal)।"
@@ -39,6 +40,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Type of passport booklet and validity (Column 1.5, 1.6)", hi: "पासपोर्ट बुकलेट का प्रकार और वैधता (खाना 1.5, 1.6)" },
+      quick: { en: "Cross 36 pages (Rs 2,500) or 60 (Rs 3,500), current fees", hi: "36 पेज (₹2,500) या 60 पेज (₹3,500) पर क्रॉस; यह मौजूदा फ़ीस है" },
       meaning: {
         en: "Column 1.5: how many pages you want in the passport, 36 or 60. More pages leave more room for visas and stamps. Column 1.6, \"Validity Required\", is explained in the booklet only for minors.",
         hi: "खाना 1.5: पासपोर्ट में कितने पेज चाहिए, 36 या 60। ज़्यादा पेज में वीज़ा और मुहरों के लिए ज़्यादा जगह होती है। खाना 1.6 \"Validity Required\" के बारे में बुकलेट सिर्फ़ नाबालिगों के लिए बताती है।"
@@ -59,6 +61,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Applicant's Given Name and Surname (Column 2.1)", hi: "आवेदक का दिया गया नाम (Given Name) और उपनाम (Surname) (खाना 2.1)" },
+      quick: { en: "Full words, no initials or titles; family name goes in Surname", hi: "पूरे शब्दों में, initials या उपाधि नहीं; परिवार का नाम Surname में" },
       meaning: {
         en: "Surname is your family name (for example JAIN). Given Name is the rest of your name (for example PIYUSH KUMAR). Your name will appear in the passport exactly as you write it here.",
         hi: "Surname यानी उपनाम या परिवार का नाम (जैसे JAIN)। Given Name यानी आपके नाम का बाकी हिस्सा (जैसे PIYUSH KUMAR)। यहाँ जैसा लिखेंगे, पासपोर्ट पर बिल्कुल वैसा ही छपेगा।"
@@ -75,6 +78,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Known by other names? / Ever changed your name? (Column 2.2, 2.3)", hi: "क्या आप किसी और नाम से भी जाने जाते हैं? / क्या कभी नाम बदला है? (खाना 2.2, 2.3)" },
+      quick: { en: "Yes if alias or any name change (even slight); fill Supplementary Form", hi: "दूसरा नाम हो या नाम कभी बदला (थोड़ा भी) तो Yes, और पूरक फॉर्म भरें" },
       meaning: {
         en: "2.2 is about an alias, a second name people know you by. The booklet's example: Rajesh Bansal who is also known as Raja. 2.3 is about a name you used earlier and changed, even slightly.",
         hi: "2.2 उपनाम या दूसरे नाम (alias) के बारे में है, जिससे लोग आपको जानते हैं। बुकलेट का उदाहरण: राजेश बंसल, जिन्हें राजा भी कहा जाता है। 2.3 उस नाम के बारे में है जो पहले था और बदला गया, चाहे थोड़ा-सा ही।"
@@ -94,6 +98,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth (Column 2.4)", hi: "जन्म तिथि (खाना 2.4)" },
+      quick: { en: "DD-MM-YYYY: day, month, full year; attach DOB proof", hi: "DD-MM-YYYY: दिन, महीना, पूरा साल; जन्म तिथि का प्रमाण लगाएँ" },
       meaning: { en: "The day you were born. You must attach a proof of date of birth.", hi: "आपके जन्म की तारीख। इसके साथ जन्म तिथि का प्रमाण लगाना ज़रूरी है।" },
       write: {
         en: "Write it as DD-MM-YYYY: day, then month, then full year.",
@@ -120,6 +125,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Place of birth (Column 2.5)", hi: "जन्म स्थान (खाना 2.5)" },
+      quick: { en: "India: village/town, district, State. Abroad: only the country", hi: "भारत में जन्म: गाँव/शहर, ज़िला, राज्य। विदेश में: सिर्फ़ देश" },
       meaning: { en: "Where you were born. There are separate boxes for village/town/city, district, State/UT and country.", hi: "आप कहाँ पैदा हुए। गाँव/कस्बा/शहर, ज़िला, राज्य/केंद्र शासित प्रदेश और देश के अलग-अलग खाने हैं।" },
       write: {
         en: "Born in India: write the village, town or city, then the district, then the State or UT. Born outside India: write only the country and leave the other boxes blank. Born before 15/08/1947 in a place now in Pakistan or Bangladesh: write the place and \"Undivided India\" as the country, and leave District and State/UT blank.",
@@ -133,6 +139,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Citizenship, PAN, Voter ID, Aadhaar, visible mark (Column 2.8–2.10, 2.16, 2.17)", hi: "नागरिकता, पैन, वोटर आईडी, आधार, पहचान चिह्न (खाना 2.8–2.10, 2.16, 2.17)" },
+      quick: { en: "Most born in India cross \"Birth\"; IDs only if you have them", hi: "भारत में जन्मे ज़्यादातर लोग \"Birth\"; पैन/वोटर आईडी/आधार हों तभी लिखें" },
       meaning: {
         en: "2.8 asks how you are an Indian citizen: by birth, by descent (born to Indian parents outside India), or by registration/naturalisation (granted by the Ministry of Home Affairs). 2.16 is a mark on your body that can be seen, such as a mole or birth mark.",
         hi: "2.8 पूछता है कि आप भारत के नागरिक कैसे हैं: जन्म से, वंश से (भारत के बाहर भारतीय माता-पिता से जन्म), या पंजीकरण/देशीयकरण से (गृह मंत्रालय से मिली नागरिकता)। 2.16 शरीर पर दिखने वाला कोई निशान है, जैसे तिल या जन्म का निशान।"
@@ -152,6 +159,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Employment type (Column 2.11–2.13)", hi: "रोज़गार का प्रकार (खाना 2.11–2.13)" },
+      quick: { en: "Cross the option that fits; none fits? Ask at Passport Seva Kendra", hi: "लागू विकल्प पर क्रॉस; कोई फ़िट न हो तो पासपोर्ट सेवा केंद्र में पूछें" },
       meaning: {
         en: "What kind of work you do. 2.12 asks for your organisation's name only if you work in Government, a Statutory Body or a PSU. 2.13 asks whether your spouse is a government servant (for minors, a parent).",
         hi: "आप किस तरह का काम करते हैं। 2.12 में संस्था का नाम तभी लिखना है जब आप सरकार, किसी वैधानिक संस्था (Statutory Body) या सार्वजनिक उपक्रम (PSU) में काम करते हों। 2.13 पूछता है कि क्या आपके पति/पत्नी सरकारी कर्मचारी हैं (नाबालिग के लिए माता या पिता)।"
@@ -165,6 +173,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Educational qualification and Non-ECR (Column 2.14, 2.15)", hi: "शैक्षिक योग्यता और Non-ECR (खाना 2.14, 2.15)" },
+      quick: { en: "Highest qualification; Non-ECR Yes only with proof (e.g. 10th pass)", hi: "सबसे ऊँची पढ़ाई; Non-ECR में Yes तभी जब सबूत हो (जैसे 10वीं पास)" },
       meaning: {
         en: "ECR means \"Emigration Check Required\". If your passport is ECR, you need clearance from the Protector of Emigrants before going to work in 18 listed countries, including UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain and Malaysia. Non-ECR is not printed on the passport; ECR is.",
         hi: "ECR यानी \"इमिग्रेशन जाँच ज़रूरी\"। अगर पासपोर्ट ECR है, तो 18 तय देशों (जैसे यूएई, सऊदी अरब, क़तर, ओमान, कुवैत, बहरीन, मलेशिया) में नौकरी के लिए जाने से पहले प्रोटेक्टर ऑफ़ इमिग्रेंट्स से मंज़ूरी लेनी होती है। पासपोर्ट पर ECR छपता है, Non-ECR नहीं छपता।"
@@ -184,6 +193,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Present residential address (Column 4)", hi: "वर्तमान निवास का पता (खाना 4)" },
+      quick: { en: "Real current address with proof; mention all places from past year", hi: "अभी का असली पता, सबूत के साथ; पिछले एक साल में रहे सारे पते बताएँ" },
       meaning: {
         en: "The address where you live now. The form also asks whether your permanent address is the same. If it is different, fill Column 3 of the Supplementary Form.",
         hi: "वह पता जहाँ आप अभी रहते हैं। फॉर्म यह भी पूछता है कि क्या स्थायी पता यही है। अगर अलग है, तो पूरक फॉर्म का खाना 3 भरें।"
@@ -209,6 +219,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Emergency contact details (Column 5)", hi: "आपातकालीन संपर्क (खाना 5)" },
+      quick: { en: "A person to contact in emergency; unsure? Ask Passport Seva Kendra", hi: "आपात स्थिति में संपर्क वाला व्यक्ति; शक हो तो पासपोर्ट सेवा केंद्र में पूछें" },
       meaning: {
         en: "Details of a person who can be contacted in an emergency.",
         hi: "ऐसे व्यक्ति की जानकारी जिससे किसी आपात स्थिति में संपर्क किया जा सके।"
@@ -222,6 +233,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Passport details and other details (Column 6, 7)", hi: "पासपोर्ट से जुड़ी और अन्य जानकारी (खाना 6, 7)" },
+      quick: { en: "Answer every question truthfully; pending case needs court's permission", hi: "हर सवाल का सच्चा जवाब दें; केस चल रहा हो तो अदालत की अनुमति लगाएँ" },
       meaning: {
         en: "Column 6 asks whether you have ever held an Identity Certificate, or ever applied for a passport that was not issued. Column 7 asks questions about you, including criminal cases.",
         hi: "खाना 6 पूछता है कि क्या आपके पास कभी पहचान प्रमाणपत्र (Identity Certificate) रहा है, या क्या आपने कभी पासपोर्ट के लिए आवेदन किया था जो जारी नहीं हुआ। खाना 7 में आपके बारे में कुछ सवाल हैं, जिनमें आपराधिक मामलों के सवाल भी हैं।"
@@ -241,6 +253,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Enclosures, proof documents and Annexures (Column 9)", hi: "संलग्न दस्तावेज़, सबूत और परिशिष्ट (खाना 9)" },
+      quick: { en: "List self-attested copies; bring originals. Ordinary adult: address and DOB proof", hi: "स्व-सत्यापित कॉपियों की सूची लिखें, ओरिजिनल लाएँ; आम वयस्क: पते, जन्म तिथि का सबूत" },
       meaning: {
         en: "The list of documents you attach. An Annexure is a fixed-format certificate or declaration printed at the end of the booklet (Annexure A to J). An ordinary adult who is a citizen by birth needs none of them.",
         hi: "आप जो दस्तावेज़ लगा रहे हैं उनकी सूची। परिशिष्ट (Annexure) एक तय फ़ॉर्मेट का प्रमाणपत्र या घोषणा है, जो बुकलेट के आख़िर में छपी है (Annexure A से J)। जन्म से नागरिक सामान्य वयस्क को इनमें से किसी की ज़रूरत नहीं है।"
@@ -260,6 +273,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph and signature / thumb impression", hi: "फ़ोटो और हस्ताक्षर / अंगूठे का निशान" },
+      quick: { en: "Sign inside the box without touching lines; no photo at PSK/POPSK", hi: "हस्ताक्षर खाने के अंदर, लाइन छुए बिना; PSK/POPSK पर फ़ोटो नहीं चाहिए" },
       meaning: {
         en: "Your signature or thumb impression is scanned and printed in the passport. A photo is NOT needed if you submit at a Passport Seva Kendra (PSK) or Post Office Passport Seva Kendra (POPSK).",
         hi: "आपके हस्ताक्षर या अंगूठे का निशान स्कैन होकर पासपोर्ट पर छपता है। अगर आप पासपोर्ट सेवा केंद्र (PSK) या डाकघर पासपोर्ट सेवा केंद्र (POPSK) में आवेदन जमा करते हैं, तो फ़ोटो नहीं चाहिए।"

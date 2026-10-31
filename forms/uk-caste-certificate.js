@@ -34,6 +34,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Where to apply and who issues it", hi: "आवेदन कहाँ करें और प्रमाण पत्र कौन देता है" },
+      quick: { en: "Apply in your own tehsil: online, e-District centre or CSC", hi: "जिस तहसील में रहते हैं वहीं आवेदन करें: ऑनलाइन, ई-डिस्ट्रिक्ट केंद्र या CSC पर" },
       meaning: {
         en: "The Haridwar district page says the caste certificate is issued by the \"District Magistrate or Tehsildar\" of your area. The Dehradun page says you can apply online, or at the \"Tehsil e-District Center\" in your tehsil or a Common Service Center (CSC).",
         hi: "हरिद्वार ज़िले की वेबसाइट के अनुसार जाति प्रमाण पत्र आपके क्षेत्र के ज़िलाधिकारी या तहसीलदार जारी करते हैं। देहरादून ज़िले की वेबसाइट के अनुसार आवेदन ऑनलाइन, या अपनी तहसील के ई-डिस्ट्रिक्ट केंद्र या जन सेवा केंद्र (CSC) पर किया जा सकता है।"
@@ -50,6 +51,7 @@ window.FORMS.push({
     },
     {
       label: { en: "SC / ST or OBC: which form?", hi: "SC / ST या OBC: कौन-सा फॉर्म?" },
+      quick: { en: "Pick your category's form; for state-purpose OBC, ask Tehsil / CSC", hi: "अपनी श्रेणी का फॉर्म चुनें; राज्य के काम वाले OBC के लिए तहसील पर पूछें" },
       meaning: {
         en: "The Almora district site has a short one-page form titled \"जाति प्रमाणपत्र हेतु आवेदन पत्र\" (application for caste certificate), listed as the SC / ST certificate form. The Pithoragarh district site has a longer OBC form set. Its first part is \"अनुबन्ध 'ख'\": an application for an OBC certificate for reservation in civil posts and services \"under the Government of India\".",
         hi: "अल्मोड़ा ज़िले की वेबसाइट पर एक पन्ने का छोटा फॉर्म है, \"जाति प्रमाणपत्र हेतु आवेदन पत्र\", जो SC / ST प्रमाण पत्र के फॉर्म के रूप में दिया गया है। पिथौरागढ़ ज़िले की वेबसाइट पर OBC का लंबा फॉर्म है। इसका पहला हिस्सा \"अनुबन्ध 'ख'\" है: भारत सरकार के अधीन सिविल पदों और सेवाओं में आरक्षण के लिए OBC प्रमाण पत्र का आवेदन।"
@@ -66,6 +68,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Applicant's name (नाम आवेदक)", hi: "आवेदक का नाम" },
+      quick: { en: "Write your full name, same spelling as your other documents", hi: "अपना पूरा नाम लिखें, स्पेलिंग दूसरे काग़ज़ों जैसी ही रखें" },
       meaning: {
         en: "Your own name. The OBC form asks for \"आवेदक का पूरा नाम\" (full name) \"in bold letters\" (मोटे अक्षरों में).",
         hi: "आपका अपना नाम। OBC फॉर्म में \"आवेदक का पूरा नाम\" \"मोटे अक्षरों में\" माँगा गया है।"
@@ -82,6 +85,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Father's / husband's name and mother's name", hi: "पिता / पति का नाम और माता का नाम" },
+      quick: { en: "Write full names; husband's line on OBC form only if applicable", hi: "पूरे नाम लिखें; OBC फॉर्म में पति वाली लाइन तभी भरें जब लागू हो" },
       meaning: {
         en: "The SC / ST form has \"पिता/पति का नाम\" (father's or husband's name) and \"माता का नाम\" (mother's name). The OBC form has three separate lines: father's name, mother's name and husband's name.",
         hi: "SC / ST फॉर्म में \"पिता/पति का नाम\" और \"माता का नाम\" के खाने हैं। OBC फॉर्म में तीन अलग लाइनें हैं: पिता का नाम, माता का नाम और पति का नाम।"
@@ -98,6 +102,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender, age / date of birth", hi: "लिंग, आयु / जन्म तिथि" },
+      quick: { en: "Write age in years or date of birth, as the form asks", hi: "जैसा फॉर्म माँगे, उम्र (साल में) या जन्म तिथि लिखें" },
       meaning: {
         en: "The SC / ST form asks \"लिंग आवेदक\" (applicant's gender) and \"आयु आवेदक\" (applicant's age). The OBC form asks \"जन्म तिथि\" (date of birth).",
         hi: "SC / ST फॉर्म में \"लिंग आवेदक\" और \"आयु आवेदक\" पूछा गया है। OBC फॉर्म में \"जन्म तिथि\" पूछी गई है।"
@@ -114,6 +119,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Caste and sub-caste (जाति, उपजाति)", hi: "जाति और उपजाति" },
+      quick: { en: "Write caste and sub-caste exactly as in family's old records", hi: "जाति और उपजाति वैसे ही लिखें जैसे परिवार के पुराने सरकारी काग़ज़ों में है" },
       meaning: {
         en: "Both forms have separate lines for \"जाति\" (caste) and \"उपजाति\" (sub-caste). The OBC form also asks your religion (धर्म), your occupational group (व्यावसायिक समूह), and the serial number of your caste in the central OBC list (\"अन्य पिछड़ी श्रेणियों की केन्द्र सूची में जाति की क्रम संख्या\").",
         hi: "दोनों फॉर्म में \"जाति\" और \"उपजाति\" की अलग लाइनें हैं। OBC फॉर्म में धर्म, व्यावसायिक समूह, और केंद्र की OBC सूची में आपकी जाति की क्रम संख्या (\"अन्य पिछड़ी श्रेणियों की केन्द्र सूची में जाति की क्रम संख्या\") भी पूछी गई है।"
@@ -130,6 +136,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Rural / urban, district, tehsil, Patwari area, village or town", hi: "ग्रामीण / शहरी, ज़िला, तहसील, पटवारी क्षेत्र, गाँव या नगर" },
+      quick: { en: "Mark rural/urban; village: Patwari area and village; town: municipal area", hi: "ग्रामीण/शहरी लिखें; गाँव में पटवारी क्षेत्र व गाँव, शहर में नगर पालिका क्षेत्र भरें" },
       meaning: {
         en: "The SC / ST form asks: \"ग्रामीण/शहरी\" (rural or urban), district, tehsil, \"पटवारी क्षेत्र\" (Patwari area), village, and \"नगर पालिका क्षेत्र\" (municipal area).",
         hi: "SC / ST फॉर्म में पूछा गया है: \"ग्रामीण/शहरी\", ज़िला, तहसील, \"पटवारी क्षेत्र\", ग्राम, और \"नगर पालिका क्षेत्र\"।"
@@ -146,6 +153,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Address and mobile number", hi: "पता और मोबाइल नंबर" },
+      quick: { en: "Write full address (OBC: present and permanent) and your mobile", hi: "पूरा पता (OBC में वर्तमान व स्थायी दोनों) और चालू मोबाइल नंबर लिखें" },
       meaning: {
         en: "The SC / ST form has \"पता\" (address) and \"मोबाईल नम्बर\" (mobile number). The OBC form asks the full home address in two parts: \"वर्तमान\" (present) and \"स्थाई पता\" (permanent address).",
         hi: "SC / ST फॉर्म में \"पता\" और \"मोबाईल नम्बर\" के खाने हैं। OBC फॉर्म में घर का पूरा पता दो हिस्सों में माँगा गया है: \"वर्तमान\" और \"स्थाई पता\"।"
@@ -162,6 +170,7 @@ window.FORMS.push({
     },
     {
       label: { en: "OBC only: parents' / husband's status (माता तथा पिता/पति की हैसियत)", hi: "सिर्फ़ OBC: माता-पिता / पति की हैसियत" },
+      quick: { en: "Fill only applicable lines; income limit not stated, ask Tehsil / CSC", hi: "सिर्फ़ लागू लाइनें भरें; आय की मौजूदा सीमा तहसील / CSC पर पूछें" },
       meaning: {
         en: "Item 12 of the OBC form asks about the father, mother and husband in columns: any constitutional post; government service (central or state, post, pay scale, date of appointment); jobs in international organisations; death or permanent disability; public sector jobs; armed forces including paramilitary; profession, trade or business; property held; agricultural land (place, size, irrigated or not); orchards; urban land or buildings; and income / wealth.",
         hi: "OBC फॉर्म के खाना 12 में पिता, माता और पति के बारे में अलग-अलग कॉलम में पूछा गया है: कोई संवैधानिक पद; सरकारी नौकरी (केंद्र या राज्य, पद, वेतनमान, नियुक्ति की तारीख़); अंतरराष्ट्रीय संगठनों में नौकरी; मृत्यु या स्थायी अशक्तता; सार्वजनिक क्षेत्र के उपक्रम में नौकरी; अर्धसैनिक बल सहित सेना; व्यवसाय / पेशा / व्यापार; संपत्ति; खेती की ज़मीन (जगह, आकार, सिंचित या असिंचित); बाग़; शहरी ज़मीन या मकान; और आय / संपत्ति।"
@@ -181,6 +190,7 @@ window.FORMS.push({
     },
     {
       label: { en: "OBC only: creamy-layer declaration", hi: "सिर्फ़ OBC: क्रीमी लेयर की घोषणा" },
+      quick: { en: "Read before signing; false information can cancel candidature or appointment", hi: "हस्ताक्षर से पहले पढ़ें; ग़लत जानकारी पर उम्मीदवारी / नियुक्ति रद्द हो सकती है" },
       meaning: {
         en: "At the end of the OBC application you certify that the details are correct as far as you know, that you are \"not in the creamy layer\" (सम्पन्न वर्ग में से नहीं हूँ) of the OBCs, and that you are eligible for posts reserved for OBCs.",
         hi: "OBC आवेदन के आख़िर में आप प्रमाणित करते हैं कि आपकी जानकारी के अनुसार ऊपर का विवरण सही है, आप अन्य पिछड़ी जातियों के \"सम्पन्न वर्ग में से नहीं\" हैं, और OBC के लिए आरक्षित पदों के लिए पात्र हैं।"
@@ -197,6 +207,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Documents to attach", hi: "साथ में लगाने वाले काग़ज़" },
+      quick: { en: "Full list not stated; ask Tehsil / CSC. OBC: income certificate needed.", hi: "पूरी सूची तहसील / CSC पर पूछें; OBC में आय प्रमाण पत्र ज़रूरी" },
       meaning: {
         en: "The district pages mention only a few items. The Dehradun and Uttarkashi pages mention a certificate of residence in the state for a minimum period, a declaration (\"promissory note\") that you belong to the caste, and court stamp charges. The Haridwar page says an income certificate is \"necessary\" for an OBC certificate. The Patwari's report on the OBC form asks whether you got a caste certificate earlier and, if yes, to attach it.",
         hi: "ज़िलों की वेबसाइट पर कुछ ही चीज़ें बताई गई हैं। देहरादून और उत्तरकाशी की वेबसाइट पर राज्य में कुछ न्यूनतम समय से रहने का निवास प्रमाण पत्र, अपनी जाति के बारे में एक घोषणा पत्र (\"प्रॉमिसरी नोट\"), और कोर्ट स्टांप शुल्क का ज़िक्र है। हरिद्वार की वेबसाइट के अनुसार OBC प्रमाण पत्र के लिए आय प्रमाण पत्र \"ज़रूरी\" है। OBC फॉर्म की पटवारी रिपोर्ट में पूछा गया है कि पहले कभी जाति प्रमाण पत्र बना है या नहीं; बना हो तो उसे लगाएँ।"
@@ -216,6 +227,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Patwari inquiry report (filled by the office)", hi: "पटवारी की जाँच रिपोर्ट (दफ़्तर भरता है)" },
+      quick: { en: "Leave blank: the Patwari fills this. Keep family papers ready.", hi: "यह हिस्सा ख़ाली छोड़ें, इसे पटवारी भरते हैं; परिवार के काग़ज़ तैयार रखें" },
       meaning: {
         en: "The Uttarkashi and Dehradun pages say a local inquiry may be done before the certificate is issued. The Pithoragarh OBC form set includes a report \"to be filled only by the concerned Patwari\": your name, parents, native address, parents' caste with sub-caste, any earlier caste certificate, property in the parents' or guardian's name, family income, and his recommendation. For a married woman, it records her caste and sub-caste before marriage.",
         hi: "उत्तरकाशी और देहरादून की वेबसाइट के अनुसार प्रमाण पत्र देने से पहले स्थानीय जाँच हो सकती है। पिथौरागढ़ के OBC फॉर्म में एक रिपोर्ट है जो \"सम्बन्धित पटवारी द्वारा ही\" भरी जाएगी: आपका नाम, माता-पिता, मूल निवास का पता, माता-पिता की जाति उपजाति सहित, पहले बना कोई जाति प्रमाण पत्र, माता-पिता / अभिभावक के नाम संपत्ति, परिवार की आय, और उनकी संस्तुति। शादीशुदा महिला के मामले में इसमें शादी से पहले की उसकी जाति और उपजाति लिखी जाती है।"
@@ -232,6 +244,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Signature, place and date", hi: "हस्ताक्षर, स्थान और दिनांक" },
+      quick: { en: "Sign yourself, fill place and date; keep the receipt", hi: "ख़ुद हस्ताक्षर करें, स्थान व दिनांक भरें; रसीद या आवेदन नंबर संभालें" },
       meaning: {
         en: "The SC / ST form ends with \"आवेदक के हस्ताक्षर\" (applicant's signature), \"स्थान\" (place) and \"दिनांक\" (date). The OBC form also ends with place, date and your signature under \"भवदीय\" (yours faithfully).",
         hi: "SC / ST फॉर्म के आख़िर में \"आवेदक के हस्ताक्षर\", \"स्थान\" और \"दिनांक\" हैं। OBC फॉर्म के आख़िर में भी स्थान, दिनांक और \"भवदीय\" के नीचे आपके हस्ताक्षर हैं।"

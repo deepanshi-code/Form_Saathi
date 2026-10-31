@@ -25,6 +25,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "1. Purpose: Enrolment OR Update *", hi: "1. उद्देश्य: नामांकन या अपडेट *" },
+      quick: { en: "Tick one; if Update, also fill box 7", hi: "एक पर टिक करें; Update चुना तो खाना 7 भी भरें" },
       meaning: {
         en: "\"Enrolment\" means you have never had an Aadhaar and want a new one. \"Update\" means you already have an Aadhaar and want to change something in it.",
         hi: "\"Enrolment\" यानी आपका आधार कभी बना ही नहीं और अब नया बनवाना है। \"Update\" यानी आधार पहले से है और उसमें कुछ बदलवाना है।"
@@ -41,6 +42,7 @@ window.FORMS.push({
     },
     {
       label: { en: "2. Resident status *", hi: "2. निवासी स्थिति *" },
+      quick: { en: "Tick one: Resident Indian or NRI", hi: "एक पर टिक करें: Resident Indian या NRI" },
       meaning: {
         en: "The declaration explains: a resident of India is someone who \"resided in India for 182 days or more in 12 months\" before applying. An NRI is a citizen with a valid Indian passport who is not resident in India.",
         hi: "फॉर्म की घोषणा के अनुसार: भारत का निवासी वह है जो आवेदन से पहले के 12 महीनों में 182 दिन या ज़्यादा भारत में रहा हो। एनआरआई वह भारतीय नागरिक है जिसके पास वैध भारतीय पासपोर्ट है पर जो भारत में नहीं रहता।"
@@ -57,6 +59,7 @@ window.FORMS.push({
     },
     {
       label: { en: "3(a). Name *", hi: "3(a). नाम *" },
+      quick: { en: "Exactly as on ID proof, no titles; for update, only if changing", hi: "पहचान प्रमाण जैसा हूबहू, बिना संबोधन; अपडेट में तभी भरें जब नाम बदलना हो" },
       meaning: {
         en: "Your full name as it will appear on Aadhaar. UIDAI's document list says the name in your supporting document \"will be replicated as such\" in your Aadhaar.",
         hi: "आपका पूरा नाम, जैसा आधार पर छपेगा। यूआईडीएआई की दस्तावेज़ सूची के अनुसार आपके दस्तावेज़ में जो नाम है, वही हूबहू आधार में दर्ज होगा।"
@@ -76,6 +79,7 @@ window.FORMS.push({
     },
     {
       label: { en: "3(b). Gender *", hi: "3(b). लिंग *" },
+      quick: { en: "Tick one: Female, Male or Third gender / Transgender", hi: "एक पर टिक करें: महिला, पुरुष या तृतीय लिंग / ट्रांसजेंडर" },
       meaning: { en: "Options on the form: Female, Male, Third gender / Transgender.", hi: "फॉर्म पर विकल्प: महिला, पुरुष, तृतीय लिंग / ट्रांसजेंडर।" },
       write: {
         en: "Tick only one. The document list accepts a Transgender Identity Card / Certificate (under the Transgender Persons Act, 2019) for gender and full name change. For other gender-change cases, ask at the Aadhaar centre.",
@@ -86,6 +90,7 @@ window.FORMS.push({
     },
     {
       label: { en: "3(c). Date of Birth or Age *: Verified / Declared / Approximate", hi: "3(c). जन्म तिथि या उम्र *: Verified / Declared / Approximate" },
+      quick: { en: "DDMMYYYY or age; tick Verified only if you bring DOB proof", hi: "DDMMYYYY या उम्र लिखें; जन्म तिथि का प्रमाण लाएँ तभी Verified टिक करें" },
       meaning: {
         en: "\"Verified\" means you show a proof of date of birth. \"Declared\" means you state your DOB without proof. \"Approximate\" is only for age, when you don't know your exact DOB.",
         hi: "\"Verified\" यानी आप जन्म तिथि का प्रमाण दिखा रहे हैं। \"Declared\" यानी बिना प्रमाण के आप अपनी जन्म तिथि बता रहे हैं। \"Approximate\" सिर्फ़ उम्र के लिए है, जब सही जन्म तिथि पता न हो।"
@@ -105,6 +110,7 @@ window.FORMS.push({
     },
     {
       label: { en: "3(d) Email and 3(e) Mobile number", hi: "3(d) ईमेल और 3(e) मोबाइल नंबर" },
+      quick: { en: "Mobile and email you use; email mandatory for NRIs", hi: "चालू मोबाइल और ईमेल लिखें; एनआरआई के लिए ईमेल ज़रूरी" },
       meaning: {
         en: "Your contact details. Per the instructions, email is \"Mandatory for NRI\" and the mobile number is \"Optional\".",
         hi: "आपकी संपर्क जानकारी। निर्देशों के अनुसार ईमेल एनआरआई के लिए ज़रूरी है, और मोबाइल नंबर वैकल्पिक है।"
@@ -121,6 +127,7 @@ window.FORMS.push({
     },
     {
       label: { en: "4. Basis: Document verification OR Confirmation by Head of Family (HoF) *", hi: "4. आधार: दस्तावेज़ से सत्यापन या परिवार के मुखिया (HoF) की पुष्टि *" },
+      quick: { en: "Tick one: own documents (box 5) or Head of Family (box 6)", hi: "एक टिक करें: अपने दस्तावेज़ (खाना 5) या परिवार का मुखिया (खाना 6)" },
       meaning: {
         en: "How your details will be proved. \"Document verification\" = you show your own documents (then fill box 5). \"Head of Family (HoF)\" = a family member who already has Aadhaar confirms you (then fill box 6).",
         hi: "आपकी जानकारी कैसे साबित होगी। \"Document verification\" = आप अपने दस्तावेज़ दिखाते हैं (फिर खाना 5 भरें)। \"Head of Family (HoF)\" = परिवार का कोई सदस्य जिसका आधार पहले से है, आपकी पुष्टि करता है (फिर खाना 6 भरें)।"
@@ -137,6 +144,7 @@ window.FORMS.push({
     },
     {
       label: { en: "5(a). Address (PIN code and Post Office mandatory)", hi: "5(a). पता (पिन कोड और डाकघर ज़रूरी)" },
+      quick: { en: "Only if new or changing address; Post Office and PIN mandatory", hi: "सिर्फ़ नए नामांकन या पता बदलने पर; डाकघर और पिन कोड ज़रूरी" },
       meaning: {
         en: "Your address in India, with boxes for House no., Street, Landmark, Ward no., Area/Locality, Village/Town/City, Post Office, PIN code, Sub-district, District and State. Fill it only for a new enrolment or when updating your address.",
         hi: "भारत में आपका पता, जिसमें मकान नंबर, गली, लैंडमार्क, वार्ड नंबर, इलाका/मोहल्ला, गाँव/कस्बा/शहर, डाकघर, पिन कोड, तहसील, ज़िला और राज्य के खाने हैं। यह सिर्फ़ नए नामांकन या पता बदलवाते समय भरें।"
@@ -156,6 +164,7 @@ window.FORMS.push({
     },
     {
       label: { en: "5(b). Type of documents presented: POI / POA / PDB", hi: "5(b). दिखाए गए दस्तावेज़: POI / POA / PDB" },
+      quick: { en: "Name of each document shown, e.g. \"Passport\"; bring originals", hi: "हर दिखाए दस्तावेज़ का नाम लिखें, जैसे \"Passport\"; ओरिजिनल साथ लाएँ" },
       meaning: {
         en: "Write the type of each document you show. POI = Proof of Identity (must have your name and photo). POA = Proof of Address. PDB = Proof of Date of Birth (optional on this form).",
         hi: "हर दिखाए गए दस्तावेज़ का प्रकार लिखें। POI = पहचान का प्रमाण (इसमें आपका नाम और फ़ोटो होना ज़रूरी है)। POA = पते का प्रमाण। PDB = जन्म तिथि का प्रमाण (इस फॉर्म में वैकल्पिक)।"
@@ -175,6 +184,7 @@ window.FORMS.push({
     },
     {
       label: { en: "6. Head of Family (HoF) details and signature", hi: "6. परिवार के मुखिया (HoF) की जानकारी और हस्ताक्षर" },
+      quick: { en: "Only if HoF ticked: HoF's name, Aadhaar, relation, signature", hi: "सिर्फ़ HoF चुना हो तो: मुखिया का नाम, आधार नंबर, रिश्ता और हस्ताक्षर" },
       meaning: {
         en: "Fill only if you ticked HoF in box 4. The HoF is a family member who already has a valid Aadhaar, is 18 or older, and confirms your identity and lets their Aadhaar address be used as yours.",
         hi: "सिर्फ़ तब भरें जब खाना 4 में HoF पर टिक किया हो। मुखिया परिवार का वह सदस्य है जिसका आधार वैध है, जिसकी उम्र 18 या ज़्यादा है, और जो आपकी पहचान की पुष्टि करके अपने आधार का पता आपके लिए इस्तेमाल करने देता है।"
@@ -194,6 +204,7 @@ window.FORMS.push({
     },
     {
       label: { en: "7(a). Aadhaar number of applicant (for update) *", hi: "7(a). आवेदक का आधार नंबर (अपडेट के लिए) *" },
+      quick: { en: "Your 12-digit Aadhaar; blank only for new enrolment", hi: "अपना 12 अंकों का आधार नंबर; सिर्फ़ नए नामांकन में खाली छोड़ें" },
       meaning: {
         en: "Your existing 12-digit Aadhaar number. Mandatory when the purpose is Update.",
         hi: "आपका मौजूदा 12 अंकों वाला आधार नंबर। उद्देश्य Update हो तो यह ज़रूरी है।"
@@ -207,6 +218,7 @@ window.FORMS.push({
     },
     {
       label: { en: "7(b). Information to be updated *", hi: "7(b). क्या अपडेट करना है *" },
+      quick: { en: "Tick what you're changing; in box 3 fill only those", hi: "जो बदलवाना है उस पर टिक करें; खाना 3 में सिर्फ़ वही भरें" },
       meaning: {
         en: "Options: Biometric (photo, fingerprints and irises), Name, Date of Birth, Gender, Address, Mobile, Email, Update of POI and POA documents.",
         hi: "विकल्प: बायोमेट्रिक (फ़ोटो, उंगलियों और आँखों की पुतली के निशान), नाम, जन्म तिथि, लिंग, पता, मोबाइल, ईमेल, पहचान और पते के दस्तावेज़ अपडेट करना।"
@@ -223,6 +235,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Declaration and signature / thumb impression *", hi: "घोषणा और हस्ताक्षर / अंगूठे का निशान *" },
+      quick: { en: "Sign or thumb in applicant box; leave verifier boxes to staff", hi: "आवेदक वाली जगह हस्ताक्षर या अंगूठा; सत्यापनकर्ता वाले खाने कर्मचारी के लिए छोड़ें" },
       meaning: {
         en: "By signing you declare the information and documents are correct and give consent for UIDAI to check them electronically with the issuing authorities. The form warns that if the declaration is found incorrect, your Aadhaar \"may be deactivated\" and legal action may be taken.",
         hi: "हस्ताक्षर करके आप घोषित करते हैं कि जानकारी और दस्तावेज़ सही हैं, और यूआईडीएआई को उन्हें जारी करने वाले विभागों से इलेक्ट्रॉनिक तरीके से जाँचने की सहमति देते हैं। फॉर्म चेतावनी देता है कि घोषणा ग़लत निकली तो आपका आधार बंद किया जा सकता है और क़ानूनी कार्रवाई भी हो सकती है।"
@@ -239,6 +252,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Fees (printed on the form)", hi: "शुल्क (फॉर्म पर छपा हुआ)" },
+      quick: { en: "Enrolment free; biometric ₹125; demographic ₹75 (free with biometric); documents ₹75", hi: "नामांकन मुफ़्त; बायोमेट्रिक ₹125; नाम/पता आदि ₹75 (बायोमेट्रिक के साथ मुफ़्त); दस्तावेज़ ₹75" },
       meaning: {
         en: "Form 1 (file dated 29-09-2026) prints this fee table for services at an enrolment centre.",
         hi: "फॉर्म 1 (फ़ाइल तारीख़ 29-09-2026) में आधार केंद्र की सेवाओं की यह शुल्क तालिका छपी है।"

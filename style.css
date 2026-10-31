@@ -286,20 +286,27 @@ h1, h2, h3, h4 { letter-spacing: -0.015em; }
   margin-bottom: 8px; overflow: hidden; scroll-margin-top: calc(var(--header-h) + 12px);
 }
 .field.open { border-color: var(--primary); box-shadow: var(--shadow); }
+/* Cheat-sheet row: tick box | name + one-line answer | details hint */
+.field-row { display: flex; align-items: flex-start; gap: 4px; padding-left: 12px; }
 .field-head {
-  width: 100%; display: flex; align-items: center; gap: 12px;
-  background: none; border: 0; cursor: pointer; text-align: left; padding: 13px 16px;
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px;
+  background: none; border: 0; cursor: pointer; text-align: left; padding: 12px 14px 12px 6px;
 }
 .field-head:hover .field-label { color: var(--primary); }
 .step {
-  flex: none; display: grid; place-items: center;
-  width: 24px; height: 24px; border-radius: 6px;
-  border: 1.5px solid #b8c2d3; font-size: 13px; font-weight: 700; color: #fff;
+  flex: none; display: grid; place-items: center; cursor: pointer;
+  width: 26px; height: 26px; margin-top: 13px; border-radius: 6px; padding: 0;
+  border: 1.5px solid #b8c2d3; background: var(--card); font-size: 14px; font-weight: 700; color: #fff;
 }
+.step:hover { border-color: var(--ok); }
 .field.open .step { border-color: var(--primary); }
 .field.done .step { background: var(--ok); border-color: var(--ok); }
-.field.done:not(.open) .field-label { color: var(--muted); }
-.field-label { flex: 1; font-weight: 600; line-height: 1.35; font-size: 16px; }
+.field.done:not(.open) .field-label, .field.done:not(.open) .field-quick { color: var(--muted); }
+.field-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.field-label { font-weight: 600; line-height: 1.35; font-size: 14.5px; color: var(--muted); }
+.field-quick { font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--text); }
+.more { flex: none; font-size: 13.5px; font-weight: 600; color: var(--primary); }
+.cheat-hint { margin: 10px 0 0; font-size: 14px; color: var(--muted); line-height: 1.45; }
 .dot-warn {
   flex: none; display: grid; place-items: center;
   width: 20px; height: 20px; border-radius: 50%;

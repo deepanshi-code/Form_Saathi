@@ -33,6 +33,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "\"सेवा में, उपजिलाधिकारी महोदय\" (addressed to the SDM)", hi: "\"सेवा में, उपजिलाधिकारी महोदय\"" },
+      quick: { en: "Write your own sub-division / district name", hi: "अपने उपखंड / ज़िले का नाम लिखें" },
       meaning: {
         en: "The application is addressed to the Sub-Divisional Magistrate (उपजिलाधिकारी, SDM) of your area. The subject line is \"स्थाई निवास प्रमाण-पत्र\".",
         hi: "आवेदन आपके क्षेत्र के उपजिलाधिकारी (SDM) के नाम होता है। विषय की लाइन में \"स्थाई निवास प्रमाण-पत्र\" लिखा है।"
@@ -49,6 +50,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Applicant's name (item 1)", hi: "आवेदक का नाम (खाना 1)" },
+      quick: { en: "Write your full name, same spelling as your other papers", hi: "अपना पूरा नाम लिखें, स्पेलिंग बाक़ी काग़ज़ों जैसी रखें" },
       meaning: {
         en: "Your full name, the person who needs the certificate.",
         hi: "आपका पूरा नाम, यानी जिसे प्रमाण पत्र चाहिए।"
@@ -65,6 +67,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date and place of birth (item 2)", hi: "जन्म तिथि व स्थान (खाना 2)" },
+      quick: { en: "Write date of birth and birth village/town and district", hi: "जन्म तिथि और जन्म का गाँव/शहर व ज़िला, दोनों लिखें" },
       meaning: {
         en: "Your date of birth and the place where you were born. Both go on one line.",
         hi: "आपकी जन्म तिथि और जहाँ आपका जन्म हुआ वह जगह। दोनों एक ही लाइन में।"
@@ -81,6 +84,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Father's name and mother's name (items 3 and 4)", hi: "पिता का नाम और माता का नाम (खाना 3 और 4)" },
+      quick: { en: "Write both names, same spelling as school or family records", hi: "दोनों नाम लिखें, स्पेलिंग स्कूल या परिवार के रिकॉर्ड जैसी रखें" },
       meaning: {
         en: "The form asks for both your father's name (item 3) and your mother's name (item 4).",
         hi: "फॉर्म में पिता का नाम (खाना 3) और माता का नाम (खाना 4), दोनों पूछे गए हैं।"
@@ -97,6 +101,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Father's place of birth (items 5 and 6)", hi: "पिता का जन्म स्थान (खाना 5 और 6)" },
+      quick: { en: "Write father's birthplace; item 6 only if born outside Uttarakhand", hi: "पिता का जन्म स्थान लिखें; उत्तराखंड से बाहर जन्म हो तभी खाना 6 भरें" },
       meaning: {
         en: "Item 5 asks where your father was born. Item 6 says: \"यदि पिता का जन्मस्थान उत्तराखण्ड से भिन्न है तो वह कब से उत्तराखण्ड में निवास कर रहे हैं\", that is, if he was born outside Uttarakhand, since when he has lived in Uttarakhand.",
         hi: "खाना 5 में पूछा है कि आपके पिता का जन्म कहाँ हुआ। खाना 6 में लिखा है: \"यदि पिता का जन्मस्थान उत्तराखण्ड से भिन्न है तो वह कब से उत्तराखण्ड में निवास कर रहे हैं\"।"
@@ -113,6 +118,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Permanent address (item 7 a)", hi: "आवेदक का स्थाई पता (खाना 7 क)" },
+      quick: { en: "Write village/mohalla, पट्टी (hills), tehsil and district", hi: "ग्राम/मोहल्ला, पट्टी (पहाड़ में), तहसील और ज़िला सहित पूरा पता लिखें" },
       meaning: {
         en: "Your permanent address in Uttarakhand. The Patwari's report also records your village/mohalla, पट्टी, tehsil and district.",
         hi: "उत्तराखंड में आपका स्थायी पता। पटवारी की आख्या में भी आपका ग्राम/मोहल्ला, पट्टी, तहसील और ज़िला दर्ज होता है।"
@@ -129,6 +135,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Education details (item 7 b)", hi: "शिक्षा का विवरण (खाना 7 ख)" },
+      quick: { en: "List every school/college from Class 10, with district and year", hi: "10वीं से आगे हर स्कूल/कॉलेज अलग लाइन में, जनपद और वर्ष के साथ लिखें" },
       meaning: {
         en: "Where you studied: from High School (Class 10) onwards, the name of each school / university / institution, its district (जनपद) and the year.",
         hi: "आपने कहाँ पढ़ाई की: हाईस्कूल (10वीं) और उसके आगे, हर विद्यालय / विश्वविद्यालय / संस्थान का नाम, उसका जनपद और वर्ष।"
@@ -145,6 +152,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Family property here (item 8)", hi: "माता / पिता / दादा की सम्पत्ति (खाना 8)" },
+      quick: { en: "Briefly: which village, what property, since when; or write \"none\"", hi: "छोटा ब्यौरा: कौन-सा गाँव, कैसी सम्पत्ति, कब से; न हो तो \"नहीं\" लिखें" },
       meaning: {
         en: "Does your mother / father / grandfather own property here? If yes, where, and since when? The form says \"यहाँ सम्पत्ति का संक्षिप्त ब्यौरा दे दिया जाय\" (give a short description). The Patwari's report asks whether ancestral property (पैतृक सम्पत्ति) of the father / grandfather / great-grandfather / mother is recorded in the village.",
         hi: "क्या आपके माता / पिता / दादा की यहाँ सम्पत्ति है? हाँ, तो कहाँ और कब से? फॉर्म में लिखा है: \"यहाँ सम्पत्ति का संक्षिप्त ब्यौरा दे दिया जाय\"। पटवारी की आख्या में पूछा जाता है कि क्या पिता / दादा / परदादा / माता की पैतृक सम्पत्ति गाँव में दर्ज है।"
@@ -161,6 +169,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Parents' livelihood and government job (items 9 and 10)", hi: "माता-पिता की आजीविका और सरकारी सेवा (खाना 9 और 10)" },
+      quick: { en: "If working elsewhere: place, year, work type. Item 10: \"No\" if none", hi: "बाहर काम हो तो जगह, साल, काम लिखें; खाना 10: सरकारी नौकरी नहीं तो \"नहीं\"" },
       meaning: {
         en: "Item 9: are your parents earning their living in their ancestral village (पैतृक ग्राम)? If not, where and since when (with details of their work). Item 10: are your parents in government service? If yes, in which district, which department and which post.",
         hi: "खाना 9: क्या आपके माता-पिता अपने पैतृक ग्राम में आजीविका कमा रहे हैं? नहीं, तो कहाँ और कब से (काम का विवरण भी)। खाना 10: क्या माता-पिता सरकारी सेवा में हैं? हाँ, तो किस जनपद में, किस विभाग में और किस पद पर।"
@@ -177,6 +186,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Reason for the certificate (item 11)", hi: "प्रमाण पत्र माँगे जाने का कारण (खाना 11)" },
+      quick: { en: "Write the exact purpose; first check which certificate they want", hi: "सही काम लिखें; पहले पूछें कि उन्हें यही प्रमाण पत्र चाहिए या मूल निवास" },
       meaning: {
         en: "Why you need the certificate, for example the admission, job or scheme you are applying for.",
         hi: "आपको प्रमाण पत्र क्यों चाहिए, जैसे किस दाख़िले, नौकरी या योजना के लिए।"
@@ -193,6 +203,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Declaration (घोषणा)", hi: "घोषणा" },
+      quick: { en: "Read both points; sign only if both are true", hi: "दोनों बातें पढ़ें; दोनों सच हों तभी हस्ताक्षर करें" },
       meaning: {
         en: "You declare two things: (1) all the information above is true; (2) \"मैंने उत्तराखण्ड के अतिरिक्त अन्य किसी राज्य से किसी भी प्रयोजन हेतु स्थाई निवास प्रमाण-पत्र प्राप्त नहीं किया है\", that is, you have not taken a permanent residence certificate from any other state for any purpose. The Patwari's report also asks (item 12) whether you got a domicile / permanent residence certificate from any other district.",
         hi: "आप दो बातों की घोषणा करते हैं: (1) ऊपर दी गई सारी जानकारी सच है; (2) \"मैंने उत्तराखण्ड के अतिरिक्त अन्य किसी राज्य से किसी भी प्रयोजन हेतु स्थाई निवास प्रमाण-पत्र प्राप्त नहीं किया है\"। पटवारी की आख्या (खाना 12) में भी पूछा जाता है कि क्या आपने किसी दूसरे ज़िले से डोमिसाइल / स्थायी निवास प्रमाण पत्र लिया है।"
@@ -209,6 +220,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date, place, signature and address", hi: "दिनांक, स्थान, हस्ताक्षर और पता" },
+      quick: { en: "Sign in both places; fill dates, place and your address", hi: "दोनों जगह हस्ताक्षर करें; दिनांक, स्थान और अपना पता भरें" },
       meaning: {
         en: "The form has two places to sign: once after item 11 (with date and your address) and once below the declaration (with date and place, as घोषणाकर्ता, the person declaring).",
         hi: "फॉर्म में दो जगह हस्ताक्षर हैं: एक खाना 11 के बाद (दिनांक और आपके पते के साथ), और एक घोषणा के नीचे (दिनांक और स्थान के साथ, घोषणाकर्ता के रूप में)।"
@@ -225,6 +237,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Patwari's report (page 2, for office use)", hi: "पटवारी की आख्या (पेज 2, दफ़्तर के लिए)" },
+      quick: { en: "Leave this page blank: the Patwari fills it", hi: "यह पेज ख़ाली छोड़ें, इसे पटवारी भरते हैं" },
       meaning: {
         en: "Page 2 is filled and signed by the Patwari (हस्ताक्षर पटवारी), not by you. It repeats your details point by point (\"बिन्दुसार आख्या\"): name, birth, father's birthplace, address, education, ancestral property, parents' work and job, the reason, and whether you hold a certificate from another district.",
         hi: "पेज 2 पटवारी भरते हैं और उस पर हस्ताक्षर करते हैं (हस्ताक्षर पटवारी), आप नहीं। इसमें आपकी जानकारी बिंदुवार दोहराई जाती है (\"बिन्दुसार आख्या\"): नाम, जन्म, पिता का जन्म स्थान, पता, शिक्षा, पैतृक सम्पत्ति, माता-पिता का काम और नौकरी, कारण, और क्या आपके पास किसी दूसरे ज़िले का प्रमाण पत्र है।"

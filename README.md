@@ -34,9 +34,10 @@ Double-click `index.html`. No install, no server.
 
 1. Copy `forms/sbi-account-opening.js` to `forms/<new-id>.js` and change `id`.
 2. Fill in every field from the **official** form and its instructions. If the official documents don't answer something, write "ask the branch/office". Never guess.
-3. If a rule changed recently (so older advice is wrong), add a `changed` note to that field.
-4. Add `<script src="forms/<new-id>.js"></script>` in `index.html`, after `registry.js` and before `app.js`.
-5. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
+3. Give every field a `quick` answer: what to write in that box, in at most 12 words (English) and a short natural Hindi line. It must come only from that field's own verified text. This is what users see first.
+4. If a rule changed recently (so older advice is wrong), add a `changed` note to that field.
+5. Add `<script src="forms/<new-id>.js?v=YYYYMMDD"></script>` in `index.html`, after `registry.js` and before `catalog.js`, and add a short name and icon in `forms/catalog.js`. When you change any file, update the `?v=` date on all links so browsers fetch the new version.
+6. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
 
 ## Rules
 

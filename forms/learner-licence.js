@@ -23,6 +23,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "To, The Licencing Authority", hi: "सेवा में, लाइसेंसिंग अधिकारी" },
+      quick: { en: "Form doesn't say; ask your RTO which office covers your address", hi: "फॉर्म में नहीं लिखा; अपने पते का दफ़्तर आरटीओ से पूछें" },
       meaning: {
         en: "The office that will issue your licence. The form leaves blank lines for its name and place.",
         hi: "वह दफ़्तर जो आपका लाइसेंस जारी करेगा। फॉर्म में उसका नाम और जगह लिखने के लिए ख़ाली लाइनें हैं।"
@@ -36,6 +37,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Services applying for", hi: "किस सेवा के लिए आवेदन" },
+      quick: { en: "First licence: tick \"Issue of New Learner's Licence\"", hi: "पहली बार: \"Issue of New Learner's Licence\" पर टिक करें" },
       meaning: {
         en: "The form lists 7 services. You can tick one or more \"wherever applicable\".",
         hi: "फॉर्म में 7 सेवाएँ लिखी हैं। जो लागू हो, उन पर एक या ज़्यादा टिक कर सकते हैं।"
@@ -52,6 +54,7 @@ window.FORMS.push({
     },
     {
       label: { en: "1. Class of Vehicles (COV)", hi: "1. गाड़ी की श्रेणी (COV)" },
+      quick: { en: "Tick every vehicle class you want to learn", hi: "जो-जो गाड़ी सीखनी है, उन सभी श्रेणियों पर टिक करें" },
       meaning: {
         en: "Which type of vehicle you want to learn. Options include Motor Cycle Without Gear (MCWOG, e.g. scooty-type), Motor Cycle With Gear (MCWG), Light Motor Vehicle (e.g. a car), Adapted Vehicle (for Divyang), Medium/Heavy transport vehicle, E-Rickshaw, E-Cart and Others (tractor, crane, fork lift, etc.).",
         hi: "आप कौन सी गाड़ी चलाना सीखना चाहते हैं। विकल्प हैं: बिना गियर की मोटरसाइकिल (MCWOG, जैसे स्कूटी), गियर वाली मोटरसाइकिल (MCWG), हल्का मोटर वाहन (जैसे कार), दिव्यांगों के लिए बनी गाड़ी (Adapted Vehicle), मीडियम/भारी ट्रांसपोर्ट गाड़ी, ई-रिक्शा, ई-कार्ट और अन्य (ट्रैक्टर, क्रेन, फ़ोर्क लिफ़्ट आदि)।"
@@ -68,6 +71,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar number (or Aadhaar application number)", hi: "आधार नंबर (या आधार आवेदन संख्या)" },
+      quick: { en: "12-digit Aadhaar number, or Aadhaar application number", hi: "12 अंकों का आधार नंबर, या आधार आवेदन संख्या लिखें" },
       meaning: {
         en: "The form asks for your Aadhaar card number \"if already available\". If you have applied but not got it yet, it asks for the Aadhaar application number.",
         hi: "फॉर्म आधार नंबर माँगता है, \"अगर पहले से है\"। अगर आधार के लिए आवेदन किया है पर अभी मिला नहीं, तो आधार आवेदन संख्या माँगी गई है।"
@@ -81,6 +85,7 @@ window.FORMS.push({
     },
     {
       label: { en: "2. Name and \"Son/wife/daughter of\"", hi: "2. नाम और \"पुत्र/पत्नी/पुत्री\"" },
+      quick: { en: "Name in CAPITALS; tick and name father/mother/husband/guardian", hi: "नाम कैपिटल अक्षरों में; पिता/माता/पति/अभिभावक में एक पर टिक कर नाम लिखें" },
       meaning: {
         en: "Your name in three boxes: First Name, Middle Name, Last Name. Section 2 says \"in Capital Letters\". Below it you write whose son, wife or daughter you are.",
         hi: "आपका नाम तीन खानों में: पहला नाम, बीच का नाम, आख़िरी नाम। खंड 2 में लिखा है \"कैपिटल अक्षरों में\"। उसके नीचे लिखना है कि आप किसके पुत्र, पत्नी या पुत्री हैं।"
@@ -97,6 +102,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth and gender", hi: "जन्म तिथि और लिंग" },
+      quick: { en: "Date as dd/mm/yyyy; tick one gender", hi: "जन्म तिथि दिन/महीना/साल में; लिंग के एक खाने पर टिक करें" },
       meaning: {
         en: "Date of birth is printed as dd/mm/yyyy. Gender options: Male, Female, Transgender.",
         hi: "जन्म तिथि dd/mm/yyyy के रूप में छपी है। लिंग के विकल्प: पुरुष, महिला, ट्रांसजेंडर।"
@@ -113,6 +119,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Identification mark", hi: "पहचान चिह्न" },
+      quick: { en: "Form doesn't explain; ask your RTO if unsure", hi: "फॉर्म में नहीं समझाया; पक्का न हो तो आरटीओ से पूछें" },
       meaning: {
         en: "A mark on your body that helps identify you. The medical certificate (Form 1A) has space for two identification marks.",
         hi: "शरीर पर कोई ऐसा निशान जिससे आपकी पहचान हो सके। मेडिकल सर्टिफ़िकेट (फॉर्म 1A) में दो पहचान चिह्नों की जगह है।"
@@ -126,6 +133,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Blood group, education, mobile and email", hi: "ब्लड ग्रुप, शिक्षा, मोबाइल और ईमेल" },
+      quick: { en: "Email and landline are optional; blood group unknown? Ask RTO", hi: "ईमेल और लैंडलाइन वैकल्पिक हैं; ब्लड ग्रुप नहीं पता तो आरटीओ से पूछें" },
       meaning: {
         en: "Section 2 also asks for Educational Qualification, Blood Group, Mobile number, Email and Landline. Only Email and Landline are marked \"(optional)\".",
         hi: "खंड 2 में शैक्षिक योग्यता, ब्लड ग्रुप, मोबाइल नंबर, ईमेल और लैंडलाइन भी माँगे गए हैं। सिर्फ़ ईमेल और लैंडलाइन पर \"(optional)\" यानी वैकल्पिक लिखा है।"
@@ -142,6 +150,7 @@ window.FORMS.push({
     },
     {
       label: { en: "4. Address", hi: "4. पता" },
+      quick: { en: "Full present address; permanent only if different", hi: "वर्तमान पता पूरा भरें; स्थायी पता सिर्फ़ अलग हो तो" },
       meaning: {
         en: "Two columns: Present Address, which the form says \"shall be printed on Licence\", and Permanent Address, \"Only if different from Present Address\". Each has House No., Street/Locality/Police Station, Landmark, Village/Town, Sub-Dist/Taluk, District, State and Pin code.",
         hi: "दो कॉलम हैं: वर्तमान पता, जो फॉर्म के अनुसार \"लाइसेंस पर छपेगा\", और स्थायी पता, \"सिर्फ़ अगर वर्तमान पते से अलग हो\"। दोनों में मकान नंबर, गली/मोहल्ला/थाना, लैंडमार्क, गाँव/शहर, तहसील, ज़िला, राज्य और पिन कोड के खाने हैं।"
@@ -158,6 +167,7 @@ window.FORMS.push({
     },
     {
       label: { en: "5 & 6. Driving school and existing licence", hi: "5 और 6. ड्राइविंग स्कूल और पहले का लाइसेंस" },
+      quick: { en: "For existing licence holders; first-timers ask your RTO", hi: "पहले से लाइसेंस वालों के लिए; पहली बार वाले आरटीओ से पूछें" },
       meaning: {
         en: "Section 5 is \"In case of request for Addition of a Class of Vehicle in Transport Category\". Section 6 asks for \"Particulars of existing Licence (Learner's or Permanent)\".",
         hi: "खंड 5 सिर्फ़ \"ट्रांसपोर्ट श्रेणी की गाड़ी जोड़ने\" के आवेदन के लिए है। खंड 6 में \"पहले से मौजूद लाइसेंस (लर्नर या पक्का)\" की जानकारी माँगी गई है।"
@@ -171,6 +181,7 @@ window.FORMS.push({
     },
     {
       label: { en: "7. Proof of address and age (Annexure)", hi: "7. पते और उम्र का प्रमाण (अनुलग्नक)" },
+      quick: { en: "Tick the address and age proofs you attach", hi: "जो पते और उम्र के प्रमाण लगा रहे हैं, उन पर टिक करें" },
       meaning: {
         en: "The Annexure lists the documents you can submit or upload. The form says: \"Select only one if the proof is common for Address and Age\".",
         hi: "अनुलग्नक में वे दस्तावेज़ लिखे हैं जो आप जमा या अपलोड कर सकते हैं। फॉर्म में लिखा है: अगर एक ही दस्तावेज़ पते और उम्र दोनों का प्रमाण है, तो सिर्फ़ वही एक चुनें।"
@@ -190,6 +201,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Self-Declaration as to Physical Fitness (and medical certificate)", hi: "शारीरिक फ़िटनेस की स्व-घोषणा (और मेडिकल सर्टिफ़िकेट)" },
+      quick: { en: "Answer all six Yes/No truthfully, then sign", hi: "छहों हाँ/ना सवालों के सच्चे जवाब दें, फिर हस्ताक्षर करें" },
       meaning: {
         en: "Six Yes/No questions about your health: (a) epilepsy or sudden fainting/giddiness, (b) can you read a car number plate from 25 metres in daylight (with glasses, if worn), (c) loss of a hand or foot or weak arm/leg muscles, (d) night blindness, (e) deafness to ordinary sound signals, (f) any other disease that could make your driving dangerous.",
         hi: "आपकी सेहत के बारे में हाँ/ना वाले छह सवाल: (a) मिर्गी या अचानक बेहोशी/चक्कर, (b) क्या दिन की रोशनी में 25 मीटर दूर से कार की नंबर प्लेट पढ़ सकते हैं (चश्मा लगाते हों तो उसके साथ), (c) हाथ या पैर न होना या बाँह/टाँग की मांसपेशियों में कमज़ोरी, (d) रतौंधी, (e) इतना कम सुनना कि सामान्य हॉर्न/आवाज़ न सुनें, (f) कोई और बीमारी जिससे आपका गाड़ी चलाना ख़तरनाक हो।"
@@ -209,6 +221,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Parent/guardian declaration (if the applicant is a minor)", hi: "माता-पिता/अभिभावक की घोषणा (अगर आवेदक नाबालिग है)" },
+      quick: { en: "Only for minors: parent/guardian writes names, relationship and signs", hi: "सिर्फ़ नाबालिग के लिए: माता-पिता/अभिभावक नाम, रिश्ता लिखकर हस्ताक्षर करें" },
       meaning: {
         en: "A declaration \"Under sub-section (2) of section 7 of the Motor Vehicles Act, 1988\". The parent or guardian says the minor is under their care, accepts responsibility for their driving, and gives consent for the learner's licence.",
         hi: "यह घोषणा \"मोटर वाहन अधिनियम, 1988 की धारा 7 की उपधारा (2)\" के तहत है। इसमें माता-पिता या अभिभावक कहते हैं कि नाबालिग उनकी देखरेख में है, वे उसकी ड्राइविंग की ज़िम्मेदारी लेते हैं, और लर्नर लाइसेंस के लिए सहमति देते हैं।"
@@ -225,6 +238,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph, declaration and signature", hi: "फ़ोटो, घोषणा और हस्ताक्षर" },
+      quick: { en: "Photo up to 50 KB; pick organ donation; strike wrong option; sign", hi: "फ़ोटो 50 KB तक; अंग दान हाँ/ना चुनें; ग़लत विकल्प काटें; हस्ताक्षर करें" },
       meaning: {
         en: "The form has space for a passport-size photo. The main declaration asks if you are willing to donate your organ/tissue in case of death (YES/NO), and says the facts and documents are true and that you \"have/have not been disqualified\" from holding a Driving Licence.",
         hi: "फॉर्म में पासपोर्ट साइज़ फ़ोटो की जगह है। मुख्य घोषणा में पूछा गया है कि क्या आप मृत्यु के बाद अंग/ऊतक दान करना चाहते हैं (हाँ/ना), और आप लिखते हैं कि दी गई जानकारी और दस्तावेज़ सच्चे हैं, और आपको ड्राइविंग लाइसेंस रखने से \"अयोग्य ठहराया गया है/नहीं ठहराया गया है\"।"

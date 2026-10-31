@@ -30,6 +30,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Account type and Type of Account", hi: "खाते का प्रकार" },
+      quick: { en: "Tick \"Savings Bank Account\" in Part II; ask balance at branch", hi: "भाग II में \"Savings Bank Account\" टिक करें; न्यूनतम बैलेंस शाखा में पूछें" },
       meaning: {
         en: "The form asks twice. Part I (top) has: Normal, Small, Minor, \"Aadhaar OTP based e-KYC non face to face\". Part II, section 1 has: Savings Bank Account, BSBDA, Small Account, Current Account, Fixed Deposit, Recurring Deposit.",
         hi: "फॉर्म में यह दो बार पूछा गया है। भाग I (सबसे ऊपर) में विकल्प हैं: Normal, Small, Minor, \"Aadhaar OTP based e-KYC non face to face\"। भाग II के खंड 1 में: Savings Bank Account, BSBDA, Small Account, Current Account, Fixed Deposit, Recurring Deposit।"
@@ -46,6 +47,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name * and Maiden Name", hi: "नाम * और शादी से पहले का नाम" },
+      quick: { en: "Exactly as on your ID, BLOCK letters; Maiden Name only if changed", hi: "पहचान पत्र जैसा ही नाम, बड़े अक्षरों में; Maiden Name सिर्फ़ नाम बदला हो तो" },
       meaning: {
         en: "Your full name in boxes: Prefix (Mr/Ms etc.), first name, middle name, last name. \"Maiden Name\" is a name you had before marriage, if it changed.",
         hi: "आपका पूरा नाम खानों में: Prefix (श्री/सुश्री आदि), पहला नाम, बीच का नाम, आख़िरी नाम। \"Maiden Name\" यानी शादी से पहले का नाम, अगर शादी के बाद नाम बदला हो।"
@@ -62,6 +64,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of Birth *, Gender *, Marital Status *", hi: "जन्म तिथि *, लिंग *, वैवाहिक स्थिति *" },
+      quick: { en: "DD MM YYYY; tick one gender and one marital status", hi: "DD MM YYYY लिखें; लिंग और वैवाहिक स्थिति में एक-एक पर टिक करें" },
       meaning: {
         en: "Gender options: Male, Female, Transgender. Marital Status options: Married, Unmarried, Living apart, Single, Divorced, Defacto.",
         hi: "लिंग के विकल्प: पुरुष, महिला, ट्रांसजेंडर। वैवाहिक स्थिति के विकल्प: Married (विवाहित), Unmarried (अविवाहित), Living apart (अलग रह रहे), Single, Divorced (तलाक़शुदा), Defacto।"
@@ -78,6 +81,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Father / Mother / Spouse (Please Tick One)", hi: "पिता / माता / पति या पत्नी (एक पर टिक करें)" },
+      quick: { en: "Tick one: Father, Mother or Spouse; write their full name", hi: "पिता, माता या पति/पत्नी में से एक टिक करें, उनका पूरा नाम लिखें" },
       meaning: {
         en: "The name of ONE of these people. You tick whose name you are writing.",
         hi: "इनमें से किसी एक व्यक्ति का नाम। आप टिक करके बताते हैं कि किसका नाम लिख रहे हैं।"
@@ -94,6 +98,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Type of Customers * and Illiterate", hi: "ग्राहक का प्रकार * और निरक्षर" },
+      quick: { en: "Adult, not senior citizen or staff: \"General / Others\"; Illiterate YES/NO", hi: "वरिष्ठ नागरिक या कर्मचारी नहीं तो \"General / Others\"; Illiterate में YES या NO" },
       meaning: {
         en: "Type of Customers options: Minor, Sr. Citizen, Staff / Ex Staff, General / Others. \"Illiterate\" asks whether you can read and write.",
         hi: "ग्राहक के प्रकार के विकल्प: Minor (नाबालिग), Sr. Citizen (वरिष्ठ नागरिक), Staff / Ex Staff (बैंक कर्मचारी/पूर्व कर्मचारी), General / Others (सामान्य/अन्य)। \"Illiterate\" में पूछा गया है कि आप पढ़-लिख सकते हैं या नहीं।"
@@ -110,6 +115,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Occupation Type * and Annual Income *", hi: "व्यवसाय का प्रकार * और वार्षिक आय *" },
+      quick: { en: "Tick occupation (students: \"Student\"); no income? Ask the branch", hi: "व्यवसाय टिक करें (छात्र: \"Student\"); आय नहीं है तो शाखा में पूछें" },
       meaning: {
         en: "What you do, grouped as Service (job), Business and Others. \"Others\" includes Student, Housewife, Retired, Agriculture and more. Annual Income is what you earn in a year, in rupees.",
         hi: "आप क्या काम करते हैं, तीन समूहों में: Service (नौकरी), Business (व्यवसाय) और Others (अन्य)। \"Others\" में Student (छात्र), Housewife (गृहिणी), Retired (सेवानिवृत्त), Agriculture (कृषि) आदि हैं। वार्षिक आय = आप साल में कितना कमाते हैं, रुपयों में।"
@@ -126,6 +132,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Politically exposed person * and Country of Tax Residence *", hi: "राजनीतिक रूप से प्रभावशाली व्यक्ति * और कर निवास का देश *" },
+      quick: { en: "Most tick \"None\"; tax only in India? Tick Yes", hi: "ज़्यादातर लोग \"None\" टिक करते हैं; सिर्फ़ भारत में कर देते हैं तो Yes" },
       meaning: {
         en: "The form defines politically exposed persons as people \"entrusted with prominent public functions in a foreign country\", such as heads of state, senior politicians or senior government, judicial or military officers. The tax question asks if you pay tax only in India.",
         hi: "फॉर्म के अनुसार राजनीतिक रूप से प्रभावशाली व्यक्ति (PEP) वे हैं जिन्हें किसी विदेशी देश में बड़ा सार्वजनिक पद सौंपा गया हो, जैसे राष्ट्राध्यक्ष, वरिष्ठ नेता, या सरकार, न्यायपालिका या सेना के वरिष्ठ अधिकारी। कर वाला सवाल पूछता है कि क्या आप सिर्फ़ भारत में कर निवासी हैं।"
@@ -142,6 +149,7 @@ window.FORMS.push({
     },
     {
       label: { en: "PAN (or Form 60)", hi: "पैन (या फॉर्म 60)" },
+      quick: { en: "Your PAN, or Form 60 (Annexure I); confirm form at branch", hi: "अपना पैन, या फॉर्म 60 (Annexure I); सही फॉर्म शाखा में पक्का करें" },
       meaning: {
         en: "PAN is your Permanent Account Number from the Income Tax Department. Form 60 is a declaration for people who do not have a PAN. It is attached to this form as Annexure I.",
         hi: "पैन आयकर विभाग का स्थायी खाता संख्या है। फॉर्म 60 उन लोगों की घोषणा है जिनके पास पैन नहीं है। यह इसी फॉर्म के साथ Annexure I के रूप में लगा है।"
@@ -161,6 +169,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile No. * and Email ID", hi: "मोबाइल नंबर * और ईमेल" },
+      quick: { en: "A mobile number you will keep; needed for electronic banking", hi: "ऐसा मोबाइल नंबर जो आगे भी रखेंगे; इसके बिना इलेक्ट्रॉनिक लेन-देन नहीं" },
       meaning: {
         en: "The form says: \"All communications will be sent on provided Mobile No./Email-ID\". There is also space for an alternate mobile number and landline numbers.",
         hi: "फॉर्म के अनुसार बैंक की सारी सूचना इसी मोबाइल नंबर और ईमेल पर भेजी जाएगी। एक और मोबाइल नंबर और लैंडलाइन नंबर के लिए भी जगह है।"
@@ -177,6 +186,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Proof of Identity/Address * and Aadhaar consent", hi: "पहचान/पते का प्रमाण * और आधार की सहमति" },
+      quick: { en: "Tick ONE ID, write number and issue date; Aadhaar consent YES/NO", hi: "एक पहचान पत्र टिक करें, नंबर और जारी तारीख़ लिखें; आधार सहमति YES/NO" },
       meaning: {
         en: "Section 3 asks you to tick \"any one ID type\" from the list below and give its details. Section 7 asks if you allow the bank to verify your Aadhaar with UIDAI through biometric or OTP authentication.",
         hi: "खंड 3 में नीचे दी सूची में से \"कोई एक\" पहचान पत्र चुनकर टिक करना और उसकी जानकारी देनी है। खंड 7 में पूछा गया है कि क्या आप बैंक को UIDAI से बायोमेट्रिक या OTP द्वारा अपना आधार जाँचने की अनुमति देते हैं।"
@@ -196,6 +206,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Address details * (sections 4, 5 and 6)", hi: "पते की जानकारी * (खंड 4, 5 और 6)" },
+      quick: { en: "Current address, type \"Residential\"; ID lacks it? Use section 6", hi: "वर्तमान पता, प्रकार \"Residential\"; पहचान पत्र पर नहीं है तो खंड 6 भरें" },
       meaning: {
         en: "Section 4 is your Current / Permanent address. Section 5 is your Correspondence address (where letters should go). Each has Address type, Address, City/Village, District, State and PIN. Section 6 is for when your ID does not show your current address.",
         hi: "खंड 4 में आपका वर्तमान / स्थायी पता है। खंड 5 में पत्राचार का पता है (जहाँ चिट्ठी आए)। दोनों में पते का प्रकार, पता, शहर/गाँव, ज़िला, राज्य और पिन के खाने हैं। खंड 6 तब के लिए है जब आपके पहचान पत्र पर वर्तमान पता न हो।"
@@ -215,6 +226,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Services Required (Part II, section 3)", hi: "ज़रूरी सेवाएँ (भाग II, खंड 3)" },
+      quick: { en: "Tick Yes or No for each; write the name for your card", hi: "हर सेवा के लिए Yes या No टिक करें; कार्ड पर छपने वाला नाम लिखें" },
       meaning: {
         en: "Yes/No choices for: ATM-cum-Debit card, cheque book, internet banking, SMS alerts, phone banking, mobile banking, passbook and e-Statement.",
         hi: "इन सेवाओं के लिए Yes/No: एटीएम-सह-डेबिट कार्ड, चेक बुक, इंटरनेट बैंकिंग, SMS अलर्ट, फ़ोन बैंकिंग, मोबाइल बैंकिंग, पासबुक और ई-स्टेटमेंट।"
@@ -231,6 +243,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Nomination (Form DA-1)", hi: "नामांकन / नॉमिनी (फॉर्म DA-1)" },
+      quick: { en: "Fill one nominee or tick \"do not want\"; more needs revised form", hi: "एक नॉमिनी भरें या \"नॉमिनी नहीं चाहिए\" टिक करें; ज़्यादा के लिए नया फॉर्म माँगें" },
       meaning: {
         en: "A nominee is the person to whom the bank returns the money in this account if you die. The bank advises you to use this facility.",
         hi: "नॉमिनी वह व्यक्ति है जिसे आपकी मृत्यु होने पर बैंक इस खाते का पैसा देगा। बैंक इस सुविधा को लेने की सलाह देता है।"
@@ -251,6 +264,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph and Signature / Thumb Impression", hi: "फ़ोटो और हस्ताक्षर / अंगूठे का निशान" },
+      quick: { en: "Paste photo (don't staple); sign in black ink, not in capitals", hi: "फ़ोटो चिपकाएँ (स्टेपल नहीं); काली स्याही से हस्ताक्षर, कैपिटल अक्षरों में नहीं" },
       meaning: {
         en: "Your recent passport-size photo, and your specimen signature that the bank keeps and matches later. The form asks you to sign in several places: next to the photo, under the declarations, under the terms and in the nomination section.",
         hi: "आपकी हाल की पासपोर्ट साइज़ फ़ोटो, और आपके हस्ताक्षर का नमूना जो बैंक रखता है और आगे मिलान करता है। फॉर्म में कई जगह हस्ताक्षर करने हैं: फ़ोटो के पास, घोषणाओं के नीचे, शर्तों के नीचे और नॉमिनी वाले खंड में।"

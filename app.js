@@ -54,6 +54,10 @@ const UI = {
     changed: "Recently changed",
     markDone: "Mark as done",
     markUndone: "Done ✓ (tap to undo)",
+    tickLabel: "Mark this field as done",
+    details: "Details",
+    hideDetails: "Hide",
+    cheatHint: "Short answer for every box. Tap a box for details, tick it when you're done.",
     footerAbout: "An independent student project that explains Indian official forms in simple English and Hindi, checked against official sources.",
     footerBrowse: "Browse",
     footerProject: "Project",
@@ -115,6 +119,10 @@ const UI = {
     changed: "हाल में बदला",
     markDone: "पूरा हुआ",
     markUndone: "पूरा ✓ (हटाने के लिए दबाएँ)",
+    tickLabel: "इस खाने को पूरा मार्क करें",
+    details: "पूरी जानकारी",
+    hideDetails: "छिपाएँ",
+    cheatHint: "हर खाने का छोटा जवाब। ज़्यादा जानकारी के लिए खाने पर दबाएँ, पूरा होने पर टिक करें।",
     footerAbout: "एक स्वतंत्र छात्र प्रोजेक्ट, जो भारतीय आधिकारिक फॉर्मों को आसान अंग्रेज़ी और हिंदी में समझाता है, आधिकारिक स्रोतों से जाँचकर।",
     footerBrowse: "फॉर्म देखें",
     footerProject: "प्रोजेक्ट",
@@ -381,7 +389,7 @@ function renderProgress(form) {
   const fill = el("div", "bar-fill");
   fill.style.width = `${Math.round((done.length / total) * 100)}%`;
   bar.append(fill);
-  wrap.append(top, bar);
+  wrap.append(top, bar, el("p", "cheat-hint", UI[lang].cheatHint));
   box.append(wrap);
 }
 
@@ -398,9 +406,11 @@ function renderSections(form) {
 
   const changes = changedFields(form);
   if (changes.length) {
-    // Open until the person starts filling, then tucked away so the fields come first.
+    // On big screens, open until the person starts filling. On phones it starts closed,
+    // so the short answers come first (the "!" on each field still flags the change).
     const started = store.get(doneKey(form), []).length > 0;
-    const s = section(UI[lang].sectionChanges(changes.length), !started, "section-warn");
+    const roomy = window.matchMedia("(min-width: 960px)").matches;
+    const s = section(UI[lang].sectionChanges(changes.length), roomy && !started, "section-warn");
     changes.forEach(f => {
       const item = el("div", "section-item");
       item.append(el("strong", null, f.label[lang]), el("p", null, f.changed[lang]));
@@ -463,29 +473,32 @@ function fieldBody(form, field, i, isDone) {
 
   const btn = el("button", "btn done-btn" + (isDone ? " is-done" : ""), isDone ? UI[lang].markUndone : "✓ " + UI[lang].markDone);
   btn.type = "button";
-  btn.addEventListener("click", () => {
-    const now = store.get(doneKey(form), []);
-    if (isDone) {
-      store.set(doneKey(form), now.filter(x => x !== i));
-    } else {
-      store.set(doneKey(form), [...now, i]);
-      // Jump to the next field that is not done yet (wrap around to earlier skipped ones).
-      const notDone = j => j !== i && !now.includes(j);
-      const next = form.fields.findIndex((_, j) => j > i && notDone(j));
-      openField = next >= 0 ? next : form.fields.findIndex((_, j) => notDone(j));
-    }
-    renderProgress(form);
-    renderFields(form);
-    if (openField < 0) return;
-    if (widePanel.matches) {
-      $("field-detail").scrollTop = 0;
-      $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "nearest" });
-    } else {
-      $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  });
+  btn.addEventListener("click", () => toggleDone(form, i, true));
   body.append(btn);
   return body;
+}
+
+// Tick or untick a field. From the details view ("advance"), ticking moves on to the next open field.
+function toggleDone(form, i, advance) {
+  const now = store.get(doneKey(form), []);
+  const wasDone = now.includes(i);
+  store.set(doneKey(form), wasDone ? now.filter(x => x !== i) : [...now, i]);
+
+  if (advance && !wasDone) {
+    // Jump to the next field that is not done yet (wrap around to earlier skipped ones).
+    const notDone = j => j !== i && !now.includes(j);
+    const next = form.fields.findIndex((_, j) => j > i && notDone(j));
+    openField = next >= 0 ? next : form.fields.findIndex((_, j) => notDone(j));
+  }
+  renderProgress(form);
+  renderFields(form);
+  if (!advance || openField < 0) return;
+  if (widePanel.matches) {
+    $("field-detail").scrollTop = 0;
+    $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } else {
+    $("field-list").children[openField].scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function renderFields(form) {
@@ -503,19 +516,33 @@ function renderFields(form) {
     const isDone = done.includes(i);
     const isOpen = i === openField;
     const item = el("li", "field" + (isDone ? " done" : "") + (isOpen ? " open" : ""));
+    const row = el("div", "field-row");
 
+    // Tick box: mark a field done straight from the cheat sheet, without opening it.
+    const tick = el("button", "step", isDone ? "✓" : "");
+    tick.type = "button";
+    tick.setAttribute("aria-pressed", isDone);
+    tick.setAttribute("aria-label", UI[lang].tickLabel);
+    tick.addEventListener("click", () => toggleDone(form, i, false));
+
+    // The row itself: field name, the one-line answer, and a hint that details exist.
     const head = el("button", "field-head");
     head.type = "button";
     head.setAttribute("aria-expanded", isOpen);
-    // The circle works like a checkbox; the form's own numbering stays in the label.
-    head.append(el("span", "step", isDone ? "✓" : ""), el("span", "field-label", field.label[lang]));
+    const text = el("span", "field-text");
+    text.append(el("span", "field-label", field.label[lang]));
+    if (field.quick) text.append(el("span", "field-quick", field.quick[lang]));
+    head.append(text);
     if (field.changed) head.append(el("span", "dot-warn", "!"));
+    if (!wide) head.append(el("span", "more", isOpen ? UI[lang].hideDetails : UI[lang].details));
     head.addEventListener("click", () => {
       openField = isOpen && !wide ? -1 : i;
       renderFields(form);
       if (wide) detail.scrollTop = 0;
     });
-    item.append(head);
+
+    row.append(tick, head);
+    item.append(row);
 
     if (isOpen && !wide) item.append(fieldBody(form, field, i, isDone));
     if (isOpen && wide) {
@@ -555,9 +582,10 @@ function route() {
   $("form-view").hidden = !form;
 
   if (form) {
-    // Open the first field that isn't done yet.
+    // Cheat sheet: nothing open on phones so the whole form can be scanned.
+    // In the wide three-panel view, show the first field that isn't done yet.
     const done = store.get(doneKey(form), []);
-    openField = form.fields.findIndex((_, i) => !done.includes(i));
+    openField = widePanel.matches ? form.fields.findIndex((_, i) => !done.includes(i)) : -1;
     renderForm(form);
     window.scrollTo(0, 0);
     return;

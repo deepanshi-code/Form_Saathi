@@ -24,6 +24,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Assembly / Parliamentary Constituency (\"To, The Electoral Registration Officer\")", hi: "विधानसभा / लोकसभा क्षेत्र (\"सेवा में, निर्वाचक रजिस्ट्रीकरण ऑफ़िसर\")" },
+      quick: { en: "Write your current constituency number and name; ask BLO if unsure", hi: "अभी वाले क्षेत्र का नंबर और नाम लिखें; न पता हो तो BLO से पूछें" },
       meaning: {
         en: "The form is addressed to the Electoral Registration Officer (ERO) of the constituency where you live now. You write the number and name of your Assembly Constituency. The Parliamentary Constituency line is only for Union Territories that have no Legislative Assembly.",
         hi: "यह फॉर्म उस क्षेत्र के निर्वाचक रजिस्ट्रीकरण अधिकारी (ERO) के नाम है, जहाँ आप अभी रहते हैं। इसमें अपने विधानसभा क्षेत्र का नंबर और नाम लिखना है। लोकसभा क्षेत्र वाली लाइन सिर्फ़ उन केंद्र शासित प्रदेशों के लिए है जहाँ विधानसभा नहीं है।"
@@ -40,6 +41,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph *", hi: "फ़ोटो *" },
+      quick: { en: "Paste unsigned 4.5 x 3.5 cm colour photo, white background", hi: "बिना हस्ताक्षर की 4.5 x 3.5 सेमी रंगीन फ़ोटो, सफ़ेद बैकग्राउंड वाली, चिपकाएँ" },
       meaning: {
         en: "One recent passport-size colour photo. It is used for your voter entry and voter ID card.",
         hi: "एक हाल की पासपोर्ट साइज़ रंगीन फ़ोटो। यही आपकी मतदाता सूची और वोटर आईडी कार्ड में लगेगी।"
@@ -56,6 +58,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name * (item 1)", hi: "नाम * (खाना 1)" },
+      quick: { en: "Name in State language and English CAPITALS, same spelling", hi: "नाम राज्य की भाषा और अंग्रेज़ी कैपिटल अक्षरों, दोनों में एक जैसी स्पेलिंग से लिखें" },
       meaning: {
         en: "Your name, written twice: 1(a) in your State's official language and 1(b) in English in BLOCK (capital) letters. First name with middle name in one box, surname (if any) in the next.",
         hi: "आपका नाम दो बार: 1(क) राज्य की राजभाषा में और 1(ख) अंग्रेज़ी में बड़े (कैपिटल) अक्षरों में। पहला और बीच का नाम एक खाने में, उपनाम (अगर हो) अगले खाने में।"
@@ -72,6 +75,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of one relative * (item 2)", hi: "किसी एक रिश्तेदार का नाम * (खाना 2)" },
+      quick: { en: "Tick one relative and write their name in both languages", hi: "एक रिश्तेदार पर टिक करें और उनका नाम दोनों भाषाओं में लिखें" },
       meaning: {
         en: "The name and surname of ANY ONE of: Father, Mother, Husband, Wife, or \"Legal Guardian in case of orphan / Guru in case of Third Gender\". Again in both the State language (2a) and English BLOCK letters (2b).",
         hi: "इनमें से किसी एक का नाम और उपनाम: पिता, माता, पति, पत्नी, या अनाथ होने पर क़ानूनी अभिभावक / तृतीय लिंग होने पर गुरु। यह भी दोनों भाषाओं में: राज्य की भाषा (2क) और अंग्रेज़ी बड़े अक्षरों (2ख) में।"
@@ -92,6 +96,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile number and email (items 3 and 4)", hi: "मोबाइल नंबर और ईमेल (खाना 3 और 4)" },
+      quick: { en: "Your own mobile and email if any, else the relative's", hi: "अपना मोबाइल और ईमेल लिखें, न हो तो रिश्तेदार का" },
       meaning: {
         en: "Your own mobile number and email \"if available\", or those of the relative named in item 2.",
         hi: "आपका अपना मोबाइल नंबर और ईमेल, \"अगर उपलब्ध हो\", या खाना 2 में लिखे रिश्तेदार का।"
@@ -108,6 +113,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar details (item 5)", hi: "आधार की जानकारी (खाना 5)" },
+      quick: { en: "Write Aadhaar number, or tick (b) if you don't have one", hi: "आधार नंबर लिखें, या आधार नहीं है तो (ख) पर टिक करें" },
       meaning: {
         en: "Tick ONE box: (a) write your Aadhaar number, or (b) \"I am not able to furnish my Aadhaar Number because I don't have Aadhaar Number.\" The guidelines say Aadhaar is asked \"for the purpose of authentication of entries\".",
         hi: "एक खाने पर टिक करें: (क) अपना आधार नंबर लिखें, या (ख) \"मैं आधार नंबर नहीं दे सकता/सकती, क्योंकि मेरे पास आधार नंबर नहीं है।\" निर्देशों के अनुसार आधार \"प्रविष्टियों के प्रमाणीकरण\" (सूची की जानकारी जाँचने) के लिए माँगा जाता है।"
@@ -124,6 +130,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Gender * (item 6)", hi: "लिंग * (खाना 6)" },
+      quick: { en: "Tick one: Male, Female or Third Gender", hi: "एक पर टिक करें: पुरुष, महिला या तृतीय लिंग" },
       meaning: { en: "Options on the form: Male, Female, Third Gender.", hi: "फॉर्म पर विकल्प: पुरुष, महिला, तृतीय लिंग।" },
       write: {
         en: "Tick one box clearly. The guidelines say applicants of the third gender may choose 'Male', 'Female' or 'Third Gender'.",
@@ -134,6 +141,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth and age proof * (item 7)", hi: "जन्म तिथि और उम्र का प्रमाण * (खाना 7)" },
+      quick: { en: "Date as dd/mm/yyyy; attach one self-attested age proof", hi: "जन्म तिथि दिन/महीना/साल में; उम्र के एक प्रमाण की स्व-प्रमाणित कॉपी लगाएँ" },
       meaning: {
         en: "7(a) is your date of birth. 7(b) asks for a self-attested copy (you sign the photocopy yourself) of ONE age-proof document.",
         hi: "7(क) में जन्म तिथि लिखनी है। 7(ख) में उम्र के किसी एक प्रमाण की स्व-प्रमाणित कॉपी (फ़ोटोकॉपी पर ख़ुद हस्ताक्षर करके) लगानी है।"
@@ -153,6 +161,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Present ordinary residence and address proof * (item 8)", hi: "अभी का साधारण निवास और पते का प्रमाण * (खाना 8)" },
+      quick: { en: "Full current address with PIN; attach one self-attested address proof", hi: "पिन कोड सहित अभी का पूरा पता; पते के एक प्रमाण की स्व-प्रमाणित कॉपी लगाएँ" },
       meaning: {
         en: "\"Ordinary residence\" means the place where you normally live now. 8(a) is the full address with PIN code. 8(b) is a self-attested address proof in your name, or in the name of a parent, spouse or adult child who is already a voter at the same address.",
         hi: "\"साधारण निवास\" यानी वह जगह जहाँ आप अभी आम तौर पर रहते हैं। 8(क) में पिन कोड सहित पूरा पता लिखें। 8(ख) में पते का स्व-प्रमाणित प्रमाण लगाएँ: आपके नाम का, या माता-पिता, पति/पत्नी या बालिग़ बच्चे के नाम का, अगर वे उसी पते पर पहले से मतदाता हैं।"
@@ -172,6 +181,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Disability (item 9, optional)", hi: "दिव्यांगता (खाना 9, वैकल्पिक)" },
+      quick: { en: "Optional: tick category, write %, tick certificate Yes/No", hi: "वैकल्पिक: श्रेणी पर टिक, प्रतिशत लिखें, प्रमाण पत्र हाँ/नहीं पर टिक करें" },
       meaning: {
         en: "Optional. Categories on the form: Locomotive, Visual, Deaf & Dumb, or any other (describe it). The form also asks the percentage of disability and whether a certificate is attached.",
         hi: "यह वैकल्पिक है। फॉर्म पर श्रेणियाँ: चलने-फिरने से जुड़ी, देखने से जुड़ी, मूक-बधिर, या कोई और (लिखकर बताएँ)। फॉर्म यह भी पूछता है कि दिव्यांगता कितने प्रतिशत है और प्रमाण पत्र लगाया है या नहीं।"
@@ -189,6 +199,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Family member already on the voter list (item 10)", hi: "परिवार का सदस्य जो पहले से मतदाता है (खाना 10)" },
+      quick: { en: "Enrolled family member at your address: name, relation, EPIC number", hi: "इसी पते पर मतदाता परिवार के सदस्य का नाम, रिश्ता और EPIC नंबर" },
       meaning: {
         en: "Details of a family member who is already on the voter list at your current address and lives with you: their name, their relationship with you, and their EPIC number (the number on their voter ID card).",
         hi: "परिवार के उस सदस्य की जानकारी जो आपके अभी के पते पर पहले से मतदाता है और आपके साथ रहता है: उनका नाम, आपसे रिश्ता, और उनका EPIC नंबर (उनके वोटर आईडी कार्ड पर लिखा नंबर)।"
@@ -205,6 +216,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Declaration *", hi: "घोषणा *" },
+      quick: { en: "Fill every blank; strike off (iv) if you used listed proof", hi: "हर ख़ाली जगह भरें; सूची वाला उम्र प्रमाण लगाया हो तो (iv) काट दें" },
       meaning: {
         en: "You confirm: (i) you are a citizen of India, and your place of birth (village/town, district, state); (ii) since which month and year you have lived at the address in 8(a); (iii) you are applying for the first time and your name is not on any voter list; (iv) only if you used an 'other' age proof, its name.",
         hi: "आप पुष्टि करते हैं: (i) आप भारत के नागरिक हैं, और आपका जन्म स्थान (गाँव/शहर, ज़िला, राज्य); (ii) 8(क) वाले पते पर आप किस महीने और साल से रह रहे हैं; (iii) आप पहली बार आवेदन कर रहे हैं और आपका नाम किसी मतदाता सूची में नहीं है; (iv) सिर्फ़ अगर उम्र का 'दूसरा' प्रमाण लगाया है, तो उसका नाम।"
@@ -225,6 +237,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Signature / left-hand thumb impression, date and place", hi: "हस्ताक्षर / बाएँ हाथ के अंगूठे का निशान, तारीख़ और जगह" },
+      quick: { en: "Sign or give left thumb impression; add date and place", hi: "हस्ताक्षर करें या बाएँ अंगूठे का निशान लगाएँ; तारीख़ और जगह लिखें" },
       meaning: {
         en: "You sign (or give your LEFT-hand thumb impression) below the declaration, with the date and place.",
         hi: "घोषणा के नीचे आप हस्ताक्षर करते हैं (या बाएँ हाथ का अंगूठा लगाते हैं), साथ में तारीख़ और जगह लिखते हैं।"
@@ -241,6 +254,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Acknowledgement / receipt", hi: "पावती / रसीद" },
+      quick: { en: "Office fills this; keep the slip and its Acknowledgement Number", hi: "यह दफ़्तर भरेगा; पर्ची और उसका पावती नंबर संभालकर रखें" },
       meaning: {
         en: "The bottom slip is filled and signed by the ERO / AERO / BLO when they receive your form. It carries an Acknowledgement Number.",
         hi: "नीचे की पर्ची ERO / AERO / BLO फॉर्म लेते समय भरकर हस्ताक्षर करते हैं। इसमें एक पावती नंबर (Acknowledgement Number) होता है।"

@@ -28,6 +28,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Branch and location details", hi: "शाखा और जगह की जानकारी" },
+      quick: { en: "Branch and your place details; ask bank for SSA/census codes", hi: "शाखा और अपने गाँव/शहर का ब्यौरा; SSA व जनगणना कोड बैंक से पूछें" },
       meaning: {
         en: "The top box asks for: Name of the Branch, Village / Town, Sub District / Block Name, District, State, SSA Code / Ward No., and Village Code / Town Code and Name of Village/Town \"[as per census 2011]\".",
         hi: "ऊपर के खाने में माँगा गया है: शाखा का नाम, गाँव/शहर, उपज़िला/ब्लॉक का नाम, ज़िला, राज्य, एसएसए कोड/वार्ड नं., और ग्राम कोड/शहर कोड व गाँव/शहर का नाम \"(2011 की जनगणना के अनुसार)\"।"
@@ -44,6 +45,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photograph", hi: "फ़ोटो" },
+      quick: { en: "Bank may click it; else bring photo under six months old", hi: "बैंक फ़ोटो खींच सकता है; नहीं तो 6 महीने के अंदर की फ़ोटो लाएँ" },
       meaning: {
         en: "The photo box says: \"To be captured through system or obtain latest photograph not older than six month\".",
         hi: "फ़ोटो वाले खाने पर लिखा है: सिस्टम द्वारा खींची गई या नवीनतम फ़ोटो, जो 6 माह से पुरानी न हो।"
@@ -57,6 +59,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Full name", hi: "पूरा नाम" },
+      quick: { en: "Tick title; first, middle, last name in separate spaces", hi: "संबोधन चुनें; पहला, बीच का, आख़िरी नाम अलग-अलग जगह लिखें" },
       meaning: {
         en: "Your name, with a title (Mr./Mrs./Ms.) and separate spaces for First, Middle and Last name.",
         hi: "आपका नाम, संबोधन (श्री/श्रीमती/सुश्री) के साथ, और पहले, बीच के और आख़िरी नाम के लिए अलग-अलग जगह।"
@@ -73,6 +76,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Marital status and gender", hi: "वैवाहिक स्थिति और लिंग" },
+      quick: { en: "Write marital status; circle M or F (else ask bank)", hi: "वैवाहिक स्थिति लिखें; पुरुष या महिला पर गोला (कोई लागू न हो तो बैंक से पूछें)" },
       meaning: {
         en: "Marital status means whether you are married or not. For gender the form prints only \"M / F\" (Male / Female).",
         hi: "वैवाहिक स्थिति यानी आप शादीशुदा हैं या नहीं। लिंग के लिए फॉर्म पर सिर्फ़ \"पुरुष / महिला\" छपा है।"
@@ -86,6 +90,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of Father / Spouse", hi: "पिता का नाम / पति-पत्नी का नाम" },
+      quick: { en: "One full name: your father's or your spouse's", hi: "पिता या पति/पत्नी में से किसी एक का पूरा नाम" },
       meaning: {
         en: "The full name of your father, or of your husband or wife.",
         hi: "आपके पिता का, या पति या पत्नी का पूरा नाम।"
@@ -99,6 +104,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Address and PIN code", hi: "पता और पिन कोड" },
+      quick: { en: "Full address with PIN; ask bank which address proof works", hi: "पिन कोड के साथ पूरा पता; कौन-सा पते का प्रमाण चलेगा, बैंक से पूछें" },
       meaning: {
         en: "Where you live, and the 6-digit postal PIN code of that area.",
         hi: "आप कहाँ रहते हैं, और उस इलाक़े का 6 अंकों वाला डाक पिन कोड।"
@@ -115,6 +121,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Telephone & Mobile No.", hi: "टेलीफ़ोन एवं मोबाइल नं." },
+      quick: { en: "A mobile number you use and will keep", hi: "वही मोबाइल नंबर जो आप चलाते हैं और आगे भी रखेंगे" },
       meaning: { en: "Your phone number, so the bank can reach you.", hi: "आपका फ़ोन नंबर, ताकि बैंक आपसे संपर्क कर सके।" },
       write: {
         en: "Write a mobile number you use and will keep.",
@@ -125,6 +132,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Date of birth", hi: "जन्मतिथि" },
+      quick: { en: "DD/MM/YEAR: day, month, then full year", hi: "दिन/माह/वर्ष: पहले दिन, फिर महीना, फिर पूरा साल" },
       meaning: { en: "The day you were born.", hi: "आपके जन्म की तारीख़।" },
       write: {
         en: "The form prints the order as DD/MM/YEAR: day first, then month, then the full year.",
@@ -138,6 +146,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar / EID No., PAN No., MNREGA Job Card No.", hi: "आधार / ई.आई.डी. नं., पैन नं., मनरेगा जॉब कार्ड सं." },
+      quick: { en: "Numbers you have, copied from cards; ask bank what's compulsory", hi: "जो नंबर हैं, कार्ड से देखकर लिखें; ज़रूरी कौन-सा है, बैंक से पूछें" },
       meaning: {
         en: "Three separate boxes for ID numbers: your Aadhaar (or EID) number, your PAN, and your MNREGA job card number.",
         hi: "पहचान नंबरों के तीन अलग खाने: आपका आधार (या ई.आई.डी.) नंबर, पैन, और मनरेगा जॉब कार्ड नंबर।"
@@ -157,6 +166,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Occupation, annual income, no. of dependents", hi: "पेशा, वार्षिक आय, आश्रितों की संख्या" },
+      quick: { en: "Your work, yearly income, number of dependents", hi: "अपना काम, साल भर की आय और आश्रितों की संख्या" },
       meaning: {
         en: "Occupation / Profession is the work you do. Annual income is what you earn in a year. Dependents are the people who depend on your income.",
         hi: "पेशा/व्यवसाय यानी आप क्या काम करते हैं। वार्षिक आय यानी साल भर की कमाई। आश्रित यानी वे लोग जो आपकी कमाई पर निर्भर हैं।"
@@ -170,6 +180,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Assets, family bank accounts, Kisan Credit Card", hi: "संपत्ति, परिवार के बैंक खाते, किसान क्रेडिट कार्ड" },
+      quick: { en: "Circle Y or N each; write animal and family-account counts", hi: "हर सवाल पर हां/नहीं पर गोला; पशुओं और परिवार के खातों की संख्या लिखें" },
       meaning: {
         en: "Three questions about your household: Detail of Assets (Owning House Y/N, Owning Farm Y/N, No. of Animals, Any other); whether family members or the household already have a bank account (Y/N, and if yes, how many); and whether you are eligible for a Kisan Credit Card (Y/N).",
         hi: "आपके परिवार के बारे में तीन सवाल: संपत्ति के ब्यौरे (अपना घर हां/नहीं, अपना खेत हां/नहीं, पशुओं की संख्या, यदि अन्य); क्या परिवार के सदस्यों या परिवार के नाम पर पहले से बैंक खाता है (हां/नहीं, और हां तो कितने); और क्या आप किसान क्रेडिट कार्ड के पात्र हैं (हां/नहीं)।"
@@ -186,6 +197,7 @@ window.FORMS.push({
     },
     {
       label: { en: "RuPay card and overdraft", hi: "रुपे कार्ड और ओवरड्राफ़्ट" },
+      quick: { en: "Nothing to fill. Overdraft now up to Rs 10,000; ask bank how", hi: "कुछ भरना नहीं है। ओवरड्राफ़्ट अब ₹10,000 तक; कैसे मिलेगा, बैंक से पूछें" },
       meaning: {
         en: "Printed lines on the form: \"I request you to issue me a Rupay Card\", and a statement about an overdraft (a small loan on your account). The form says only one member from the household will be eligible for the overdraft.",
         hi: "फॉर्म पर छपी लाइनें: \"मैं आपसे अनुरोध करता हूं कि मुझे एक रुपे डेबिट कार्ड जारी किया जाए\", और ओवरड्राफ़्ट (खाते पर छोटा कर्ज़) के बारे में एक बात। फॉर्म के अनुसार परिवार के सिर्फ़ एक सदस्य को ओवरड्राफ़्ट मिलेगा।"
@@ -206,6 +218,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Declaration and signature / thumb impression", hi: "घोषणा और हस्ताक्षर / अंगूठे का निशान" },
+      quick: { en: "Place, date, then sign or thumb impression, twice (declaration and nomination)", hi: "स्थान, दिनांक लिखकर हस्ताक्षर या अंगूठा लगाएँ: घोषणा और नामांकन, दोनों जगह" },
       meaning: {
         en: "By signing, you say your information is true, the terms were read and explained to you, and: \"I declare that I have not availed any Overdraft or Credit facility from any other bank.\"",
         hi: "हस्ताक्षर करके आप कहते हैं कि आपकी दी गई जानकारी सच है, शर्तें आपको पढ़कर समझाई गई हैं, और: \"मैं घोषणा करता हूं कि मैंने किसी अन्य बैंक से कोई ओवरड्राफ़्ट या ऋण सुविधा नहीं ली है।\""
@@ -222,6 +235,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Nomination", hi: "नामांकन (नॉमिनी)" },
+      quick: { en: "Nominee's name, relation, age (minor: DOB, authorised person); sign again", hi: "नॉमिनी का नाम, रिश्ता, उम्र (नाबालिग हो तो जन्मतिथि व अधिकृत व्यक्ति); फिर हस्ताक्षर" },
       meaning: {
         en: "\"I want to nominate as under\": the person you name here (nominee) is the one linked to your deposit in the event of your death. The form has one row.",
         hi: "\"मैं निम्न को नामांकित करना चाहता हूं\": यहाँ जिसका नाम लिखते हैं (नॉमिनी), आपकी मृत्यु होने पर आपकी जमा राशि उससे जुड़ी होती है। फॉर्म में एक ही पंक्ति है।"

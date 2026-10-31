@@ -23,6 +23,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Where to apply", hi: "कहाँ आवेदन करें" },
+      quick: { en: "Apply on eservices.uk.gov.in, a CSC, or your tehsil counter", hi: "eservices.uk.gov.in पर, CSC केंद्र या तहसील के अपणि सरकार काउंटर पर आवेदन करें" },
       meaning: {
         en: "The service is listed on the Apuni Sarkar portal as \"Income Certificate\" (Revenue Department, Revenue Certificates). The Udham Singh Nagar district website also lists Apuni Sarkar counters at tehsil campuses.",
         hi: "अपणि सरकार पोर्टल पर यह सेवा \"आय प्रमाण पत्र\" नाम से है (राजस्व विभाग, राजस्व प्रमाण पत्र)। ऊधम सिंह नगर ज़िले की वेबसाइट पर तहसील परिसरों में अपणि सरकार काउंटर भी बताए गए हैं।"
@@ -39,6 +40,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Login / sign up", hi: "लॉगिन / साइन अप" },
+      quick: { en: "Register as a new user; keep your user ID and password private", hi: "नए उपयोगकर्ता के रूप में रजिस्टर करें; यूज़र आईडी-पासवर्ड किसी को न बताएँ" },
       meaning: {
         en: "\"Apply Now\" takes you to the login page. The portal FAQ says: if you are a new user, \"select new user, register here and enter the details to create the account\".",
         hi: "\"Apply Now\" (अभी आवेदन करें) दबाने पर लॉगिन पेज खुलता है। पोर्टल के FAQ के अनुसार नए उपयोगकर्ता को \"new user\" चुनकर रजिस्टर करना होता है और जानकारी भरकर खाता बनाना होता है।"
@@ -55,6 +57,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Whose income, and how much", hi: "किसकी आय, और कितनी" },
+      quick: { en: "Not stated officially; ask Tehsil / CSC. Write only true figures.", hi: "आधिकारिक तौर पर नहीं लिखा; तहसील / CSC पर पूछें। सिर्फ़ सही आँकड़े लिखें" },
       meaning: {
         en: "The portal's service card does not explain whose income is counted (only the applicant's or the whole family's), which sources of income to include, or for which year.",
         hi: "पोर्टल के सेवा विवरण में यह नहीं बताया गया कि किसकी आय गिनी जाती है (सिर्फ़ आवेदक की या पूरे परिवार की), कौन-कौन सी आय जोड़नी है, या किस साल की।"
@@ -71,6 +74,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Applicant photo *", hi: "आवेदक की फ़ोटो *" },
+      quick: { en: "Upload a clear, recent photo of the applicant", hi: "आवेदक की साफ़ और हाल की फ़ोटो अपलोड करें" },
       meaning: {
         en: "\"Applicant Photo\" is in the portal's list of Required Documents.",
         hi: "पोर्टल की आवश्यक दस्तावेज़ों की सूची में \"एप्लिकेंट फोटो\" (आवेदक की फ़ोटो) है।"
@@ -87,6 +91,7 @@ window.FORMS.push({
     },
     {
       label: { en: "ID proof *", hi: "पहचान पत्र *" },
+      quick: { en: "Upload ID proof; accepted IDs not stated, so ask Tehsil / CSC", hi: "पहचान पत्र अपलोड करें; कौन-सा मान्य है, तहसील / CSC पर पूछें" },
       meaning: {
         en: "\"Id Proof\" is a Required Document.",
         hi: "\"पहचान पत्र\" आवश्यक दस्तावेज़ है।"
@@ -103,6 +108,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Address proof *", hi: "निवास का प्रमाण *" },
+      quick: { en: "Upload address proof; accepted proofs not stated, so ask Tehsil / CSC", hi: "निवास का प्रमाण अपलोड करें; कौन-सा मान्य है, तहसील / CSC पर पूछें" },
       meaning: {
         en: "\"Address Proof\" is a Required Document.",
         hi: "\"निवास का प्रमाण\" आवश्यक दस्तावेज़ है।"
@@ -119,6 +125,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Ration card / copy of family register *", hi: "राशन कार्ड / परिवार रजिस्टर की नकल *" },
+      quick: { en: "Upload ration card or a copy of the family register", hi: "राशन कार्ड या परिवार रजिस्टर की नकल, इनमें से एक अपलोड करें" },
       meaning: {
         en: "The Required Documents list says \"Ration Card/Copy Of Family Register\". \"Ration Card\" is also shown again under Optional Documents.",
         hi: "आवश्यक दस्तावेज़ों में \"राशन कार्ड/परिवार रजिस्टर की नकल\" लिखा है। वैकल्पिक दस्तावेज़ों में भी \"राशन कार्ड\" दोबारा दिखता है।"
@@ -135,6 +142,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Self-declaration form *", hi: "स्व-घोषणा पत्र *" },
+      quick: { en: "Official format not found; ask Tehsil / CSC. Sign it yourself.", hi: "आधिकारिक प्रारूप नहीं मिला; तहसील / CSC पर पूछें। पढ़कर ख़ुद हस्ताक्षर करें" },
       meaning: {
         en: "\"Self Declaration Form\" (स्व-घोषणा पत्र) is a Required Document. It is your own signed statement.",
         hi: "\"स्व-घोषणा पत्र\" आवश्यक दस्तावेज़ है। यह आपका अपना हस्ताक्षर किया हुआ बयान होता है।"
@@ -151,6 +159,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Pay slip (optional)", hi: "वेतन पर्ची (वैकल्पिक)" },
+      quick: { en: "Optional: upload it if there is a salary", hi: "वैकल्पिक: वेतन मिलता हो तो वेतन पर्ची अपलोड करें" },
       meaning: {
         en: "\"Pay Slip\" is listed under Optional Documents.",
         hi: "वैकल्पिक दस्तावेज़ों में \"वेतन पर्ची\" है।"
@@ -164,6 +173,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Fee and payment", hi: "शुल्क और भुगतान" },
+      quick: { en: "Check the total on the payment screen before paying", hi: "भुगतान से पहले पेमेंट पेज पर कुल रक़म देख लें" },
       meaning: {
         en: "The service card shows \"CSC/EDC Fee: ₹40\". The portal FAQ separately says you \"have to pay Rs 30 in addition to the charges fixed for department services\". Payment modes listed: Credit card / Debit card / UPI / Net Banking.",
         hi: "सेवा विवरण में \"CSC/EDC शुल्क: ₹40\" लिखा है। पोर्टल के FAQ में अलग से लिखा है कि विभाग की तय फ़ीस के अलावा ₹30 और देने होते हैं। भुगतान के तरीक़े: क्रेडिट कार्ड / डेबिट कार्ड / UPI / नेट बैंकिंग।"
@@ -180,6 +190,7 @@ window.FORMS.push({
     },
     {
       label: { en: "What happens after you apply", hi: "आवेदन के बाद क्या होता है" },
+      quick: { en: "Keep your application number; watch for SMS updates", hi: "आवेदन नंबर संभालकर रखें; हर चरण का SMS देखते रहें" },
       meaning: {
         en: "The portal's \"Officer Flow\" has 5 steps: 1 Applicant (application submitted), 2 Tehsildar, 3 Patwari, 4 Tehsildar, 5 Certificate issued / rejected. Estimated completion: 15 days.",
         hi: "पोर्टल के \"अधिकारी प्रवाह\" में 5 चरण हैं: 1 आवेदक (आवेदन जमा), 2 तहसीलदार, 3 पटवारी, 4 तहसीलदार, 5 प्रमाण पत्र जारी / अस्वीकृत। अनुमानित समय: 15 दिन।"
@@ -196,6 +207,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Track, download and verify", hi: "स्थिति देखें, डाउनलोड करें, जाँचें" },
+      quick: { en: "Use your application number to track, download or verify", hi: "आवेदन नंबर से स्थिति देखें, प्रमाण पत्र डाउनलोड करें या जाँचें" },
       meaning: {
         en: "The portal home page has \"Track Application\", \"Download Certificates\" and \"Verify Certificate\". The FAQ says there is no limit on downloading the certificate.",
         hi: "पोर्टल के मुख्य पेज पर \"Track Application\", \"Download Certificates\" और \"Verify Certificate\" विकल्प हैं। FAQ के अनुसार प्रमाण पत्र डाउनलोड करने की कोई सीमा नहीं है।"

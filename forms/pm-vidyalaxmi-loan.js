@@ -33,6 +33,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Before you start: who gets the scheme benefits, and what to keep ready", hi: "शुरू करने से पहले: योजना का फ़ायदा किसे मिलता है, और क्या तैयार रखें" },
+      quick: { en: "Check the current QHEI list for your institute; keep papers ready", hi: "देखें कि आपका संस्थान अभी की QHEI सूची में है; काग़ज़ तैयार रखें" },
       meaning: {
         en: "Per the PIB note (29 July 2026), scheme benefits are for students with merit-based admission (through competitive exams) to a designated QHEI. QHEIs are chosen by NIRF ranking: top 100 in NIRF overall / category / domain lists, top 200 state / UT government institutions, and all remaining central government institutions. \"Management quota, NRI quota, etc. admissions will not get this benefit.\" Foreign institutions and their campuses are not covered.",
         hi: "PIB नोट (29 जुलाई 2026) के अनुसार योजना का फ़ायदा उन छात्रों को है जिन्हें किसी चुने हुए QHEI में मेरिट से (प्रतियोगी परीक्षा से) दाख़िला मिला है। QHEI, NIRF रैंकिंग से चुने जाते हैं: NIRF की कुल / श्रेणी / विषय सूचियों में टॉप 100, राज्य / केंद्रशासित प्रदेश सरकार के टॉप 200 संस्थान, और केंद्र सरकार के बाक़ी सभी संस्थान। मैनेजमेंट कोटा, NRI कोटा आदि के दाख़िलों को यह फ़ायदा नहीं मिलेगा। विदेशी संस्थान और उनके कैंपस इसमें नहीं आते।"
@@ -56,6 +57,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Step 1–2: Create an Account and log in", hi: "चरण 1–2: अकाउंट बनाना और लॉग-इन करना" },
+      quick: { en: "Register with your own email and mobile; verify both by OTP", hi: "अपने ईमेल और मोबाइल से रजिस्टर करें; दोनों को OTP से पक्का करें" },
       meaning: {
         en: "Register from Home page → Login → Student Login → Create an Account. You give Name, Mobile Number, Email ID and Password, then verify the email and mobile with OTPs. You get a Student ID and a confirmation by SMS / Email / WhatsApp.",
         hi: "होम पेज → Login → Student Login → Create an Account से रजिस्टर करें। नाम, मोबाइल नंबर, ईमेल ID और पासवर्ड भरें, फिर ईमेल और मोबाइल को OTP से पक्का करें। आपको एक Student ID और SMS / ईमेल / WhatsApp पर पुष्टि का संदेश मिलता है।"
@@ -72,6 +74,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Step 3: Aadhaar Authentication", hi: "चरण 3: आधार प्रमाणीकरण (Aadhaar Authentication)" },
+      quick: { en: "Do Aadhaar OTP check if you want scheme benefits", hi: "योजना का फ़ायदा चाहिए तो आधार OTP से जाँच ज़रूर करें" },
       meaning: {
         en: "Menu → Apply for Education Loan opens Aadhaar Authentication. You validate Aadhaar with an OTP and give consent to use your demographic details. There is a \"Proceed without Aadhaar\" option, but the manual notes: \"Aadhaar is mandatory where the student wants to avail benefits under Pm-Vidyalaxmi Scheme including education loan, interest subvention and credit guarantee coverage.\" Aadhaar is also needed for interest subsidy under PM-USP.",
         hi: "मेन्यू → Apply for Education Loan से Aadhaar Authentication खुलता है। आधार को OTP से पक्का करें और अपनी निजी जानकारी इस्तेमाल करने की सहमति दें। \"Proceed without Aadhaar\" का विकल्प भी है, पर पुस्तिका कहती है कि पीएम-विद्यालक्ष्मी योजना के फ़ायदे (लोन, ब्याज सहायता और क्रेडिट गारंटी) के लिए आधार ज़रूरी है। PM-USP की ब्याज सब्सिडी के लिए भी आधार ज़रूरी है।"
@@ -88,6 +91,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Page 1: Student and Parent/Guardian/Spouse details, and address", hi: "पेज 1: छात्र और माता-पिता/अभिभावक/पति-पत्नी की जानकारी, और पता" },
+      quick: { en: "Fill both columns; check category/religion; fix communication address if different", hi: "दोनों कॉलम भरें; श्रेणी/धर्म जाँचें; पता अलग हो तो Communication Address बदलें" },
       meaning: {
         en: "The form has two columns: Student and Parent/Guardian/Spouse (the co-applicant). Mandatory rows include Title, Name, Father's / Husband's Name, Date of Birth, Category, Gender, Religion, Marital Status and Occupation. Then comes the address as per Aadhaar and a Communication Address for both, with mobile number and email ID.",
         hi: "फ़ॉर्म में दो कॉलम हैं: छात्र, और माता-पिता/अभिभावक/पति-पत्नी (सह-आवेदक)। ज़रूरी खाने हैं: टाइटल, नाम, पिता / पति का नाम, जन्म तिथि, श्रेणी (कैटेगरी), लिंग, धर्म, वैवाहिक स्थिति और पेशा। फिर आधार वाला पता और दोनों का पत्राचार पता (Communication Address), मोबाइल नंबर और ईमेल ID के साथ।"
@@ -107,6 +111,7 @@ window.FORMS.push({
     },
     {
       label: { en: "\"Education Loan Availing For\", disability and 10th/12th school", hi: "\"Education Loan Availing For\", दिव्यांगता और 10वीं/12वीं का स्कूल" },
+      quick: { en: "Pick course type exactly as in your allotment letter", hi: "कोर्स का प्रकार ठीक अलॉटमेंट पत्र जैसा चुनें" },
       meaning: {
         en: "You choose the type of course: U.G / P.G / Abroad Studies / Comm. Pilot, Diploma Course, or Vocational / Skill Development Course. The manual warns: \"Student must select the course strictly as mentioned in their allotment letter\"; a wrong choice \"may impact their eligibility for interest subvention\". You also answer \"Person with Benchmark Disability\" and pick your 10th and 12th / Diploma school.",
         hi: "आपको कोर्स का प्रकार चुनना है: U.G / P.G / विदेश में पढ़ाई / कमर्शियल पायलट, डिप्लोमा कोर्स, या वोकेशनल / स्किल डेवलपमेंट कोर्स। पुस्तिका चेतावनी देती है कि कोर्स ठीक वैसा ही चुनें जैसा संस्थान के अलॉटमेंट पत्र में लिखा है; ग़लत चुनाव से ब्याज सहायता की योग्यता पर असर पड़ सकता है। \"Person with Benchmark Disability\" का जवाब भी देना है, और 10वीं और 12वीं / डिप्लोमा का स्कूल चुनना है।"
@@ -126,6 +131,7 @@ window.FORMS.push({
     },
     {
       label: { en: "PAN and bank details", hi: "PAN और बैंक की जानकारी" },
+      quick: { en: "Name and DOB exactly as on PAN; Verify PAN; pick branch", hi: "नाम और जन्म तिथि PAN जैसी; PAN वेरिफ़ाई करें; बैंक शाखा चुनें" },
       meaning: {
         en: "PAN is mandatory. The manual says the name and date of birth entered must exactly match the PAN details. Full bank details are mandatory for at least one person (student or co-applicant). There is also a question: whether you are related to the Chairman / Directors / an Employee of the bank or any other bank.",
         hi: "PAN ज़रूरी है। पुस्तिका के अनुसार भरा गया नाम और जन्म तिथि PAN से बिल्कुल मेल खाने चाहिए। कम से कम एक व्यक्ति (छात्र या सह-आवेदक) के बैंक की पूरी जानकारी ज़रूरी है। एक सवाल यह भी है कि क्या आप उस बैंक या किसी दूसरे बैंक के चेयरमैन / डायरेक्टर / कर्मचारी के रिश्तेदार हैं।"
@@ -142,6 +148,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Page 2: Quota of admission", hi: "पेज 2: दाख़िले का कोटा" },
+      quick: { en: "Select quota exactly as in your allotment letter", hi: "कोटा ठीक वैसा चुनें जैसा अलॉटमेंट पत्र में है" },
       meaning: {
         en: "Choose how you got admission: Merit (through a recognised entrance exam or merit quota), Management (non-merit admission), or NRI. If you choose anything other than Merit, a pop-up says you are not eligible for the PM-Vidyalaxmi Scheme and PM-USP CSIS.",
         hi: "चुनें कि दाख़िला कैसे मिला: Merit (मान्य प्रवेश परीक्षा या मेरिट कोटे से), Management (बिना मेरिट का दाख़िला), या NRI। Merit के अलावा कुछ भी चुनने पर पॉप-अप बताता है कि आप पीएम-विद्यालक्ष्मी योजना और PM-USP CSIS के लिए योग्य नहीं हैं।"
@@ -158,6 +165,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Course duration, institution and course name", hi: "कोर्स की अवधि, संस्थान और कोर्स का नाम" },
+      quick: { en: "Enter duration and start date; search and select institute, course", hi: "अवधि और शुरू होने की तारीख़ डालें; संस्थान और कोर्स खोजकर चुनें" },
       meaning: {
         en: "Enter the course duration (years and months) and the date of commencement; the completion date is calculated automatically. Then select your institution and your course from search pop-ups.",
         hi: "कोर्स की अवधि (साल और महीने) और कोर्स शुरू होने की तारीख़ डालें; ख़त्म होने की तारीख़ अपने आप बन जाती है। फिर खोज वाले पॉप-अप से अपना संस्थान और कोर्स चुनें।"
@@ -174,6 +182,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Cost of Course, Loan Required and Repayment Proposed", hi: "कोर्स का ख़र्च, ज़रूरी लोन और प्रस्तावित भुगतान" },
+      quick: { en: "Enter institute's year-wise costs, own money/scholarship, EMIs; tick declaration", hi: "संस्थान के साल-दर-साल ख़र्च, अपना पैसा/छात्रवृत्ति, EMI भरें; घोषणा पर टिक करें" },
       meaning: {
         en: "Fill the year-wise Cost of Course for the full course, as given by the institution: Tuition Fees, Exam Fees, Books Stationery, Equipment/Computer, Hostel Expenses, Sundries/Travel. Then \"Own Source/Scholarship\". The portal calculates: Loan Required = Total − Own source or Scholarship. You also enter expected earnings after the course (Rs. per month) and any registration / seat locking fee.",
         hi: "संस्थान के बताए अनुसार पूरे कोर्स का साल-दर-साल ख़र्च भरें: ट्यूशन फ़ीस, परीक्षा फ़ीस, किताबें-स्टेशनरी, उपकरण/कंप्यूटर, हॉस्टल ख़र्च, फ़ुटकर/यात्रा। फिर \"Own Source/Scholarship\" (अपना पैसा / छात्रवृत्ति)। पोर्टल ख़ुद हिसाब करता है: ज़रूरी लोन = कुल ख़र्च − अपना पैसा या छात्रवृत्ति। कोर्स के बाद की संभावित कमाई (रुपये प्रति माह) और रजिस्ट्रेशन / सीट लॉकिंग फ़ीस (अगर हो) भी भरनी है।"
@@ -190,6 +199,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Security Details (collateral), only in some cases", hi: "सिक्योरिटी (गिरवी) की जानकारी, सिर्फ़ कुछ मामलों में" },
+      quick: { en: "Only if asked: give security type, owner and details", hi: "सिर्फ़ माँगे जाने पर: सिक्योरिटी का प्रकार, मालिक और जानकारी दें" },
       meaning: {
         en: "Security details are asked only if your institute is not in the eligible QHEI list, or your admission is under Management or NRI quota, and the loan amount is more than Rs. 7.5 lakh. For scheme loans at a QHEI with merit admission, the PIB note says loans are collateral-free and guarantor-free.",
         hi: "सिक्योरिटी की जानकारी सिर्फ़ तब माँगी जाती है जब आपका संस्थान योग्य QHEI सूची में न हो, या दाख़िला मैनेजमेंट या NRI कोटे में हो, और लोन Rs. 7.5 लाख से ज़्यादा हो। PIB नोट के अनुसार QHEI में मेरिट से दाख़िले पर योजना का लोन बिना गिरवी और बिना गारंटर के है।"
@@ -206,6 +216,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Document Upload", hi: "दस्तावेज़ अपलोड करना" },
+      quick: { en: "Upload each document, under 200 KB, in the stated format", hi: "हर दस्तावेज़ 200 KB से कम, बताए गए फ़ॉर्मेट में अपलोड करें" },
       meaning: {
         en: "Upload documents in .pdf, .png or .jpeg as specified. \"Size of each file should not exceed 200 Kb.\" Documents marked * are mandatory. The manual's screen shows marksheets, admission proof, expenses and ID / address proof as PDF only, and photos as JPEG / PNG only.",
         hi: "दस्तावेज़ बताए गए फ़ॉर्मेट (.pdf, .png या .jpeg) में अपलोड करें। हर फ़ाइल 200 KB से ज़्यादा नहीं होनी चाहिए। * वाले दस्तावेज़ ज़रूरी हैं। पुस्तिका की स्क्रीन के अनुसार मार्कशीट, दाख़िले का सबूत, ख़र्च का ब्योरा और पहचान / पते का सबूत सिर्फ़ PDF में, और फ़ोटो सिर्फ़ JPEG / PNG में।"
@@ -225,6 +236,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Preview, choosing banks (up to 3) and Final Submit", hi: "प्रीव्यू, बैंक चुनना (ज़्यादा से ज़्यादा 3) और फ़ाइनल सबमिट" },
+      quick: { en: "Preview form, read bank schemes, pick up to 3 banks, submit", hi: "फ़ॉर्म देखें, बैंक स्कीम पढ़ें, 3 तक बैंक चुनें, फिर सबमिट करें" },
       meaning: {
         en: "Based on your inputs, the portal shows the eligible Loan Scheme and eligible Interest Subvention Scheme. \"Maximum upto 3 Banks can be selected for applying Education Loan.\"",
         hi: "आपकी भरी जानकारी के आधार पर पोर्टल योग्य लोन स्कीम और योग्य ब्याज सहायता स्कीम दिखाता है। शिक्षा ऋण के लिए ज़्यादा से ज़्यादा 3 बैंक चुने जा सकते हैं।"
@@ -241,6 +253,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Track Loan Application, withdraw, and Initiate Grievance", hi: "आवेदन की स्थिति देखना, वापस लेना, और शिकायत (Initiate Grievance)" },
+      quick: { en: "Check status here; complain via Register New Complaint with PDF proof", hi: "यहाँ स्थिति देखें; शिकायत 'Register New Complaint' से, सबूत की PDF के साथ" },
       meaning: {
         en: "Track Loan Application → select the application → Get Loan Status shows the current status with remarks, and lets you download the application PDF. You can withdraw only while the status is \"Submitted\"; if a bank has already updated it, contact that bank branch for closure. Complaints are made from Initiate Grievance.",
         hi: "Track Loan Application → आवेदन चुनें → Get Loan Status से अभी की स्थिति और टिप्पणी दिखती है, और आवेदन की PDF डाउनलोड हो सकती है। आवेदन सिर्फ़ तब वापस ले सकते हैं जब स्थिति \"Submitted\" हो; किसी बैंक ने स्थिति बदल दी हो तो बंद कराने के लिए उसी बैंक शाखा से संपर्क करें। शिकायत Initiate Grievance से होती है।"
@@ -257,6 +270,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Apply for Interest Subvention (after the loan is disbursed)", hi: "ब्याज सहायता के लिए आवेदन (लोन मिलने के बाद)" },
+      quick: { en: "After disbursal: validate Aadhaar, claim, upload income certificate", hi: "लोन मिलने के बाद: आधार पक्का करें, क्लेम करें, आय प्रमाण पत्र अपलोड करें" },
       meaning: {
         en: "Per the PIB note (29 July 2026): under PM-Vidyalaxmi, students with annual family income up to Rs. 8 lakh get 3% interest subvention on loans up to Rs. 10 lakh, during the moratorium (course period plus one year), at QHEIs, for all degree / diploma courses; a maximum of 1 lakh students a year. Under PM-USP CSIS, family income up to Rs. 4.5 lakh gets full interest subvention during the moratorium for technical / professional courses at approved institutions. Students getting any other Central / State scholarship, interest subvention or fee reimbursement are not eligible for either.",
         hi: "PIB नोट (29 जुलाई 2026) के अनुसार: पीएम-विद्यालक्ष्मी में Rs. 8 लाख तक की सालाना पारिवारिक आय वाले छात्रों को Rs. 10 लाख तक के लोन पर 3% ब्याज सहायता मिलती है, मोरेटोरियम (कोर्स की अवधि + एक साल) के दौरान, QHEI में, सभी डिग्री / डिप्लोमा कोर्स के लिए; हर साल ज़्यादा से ज़्यादा 1 लाख छात्र। PM-USP CSIS में Rs. 4.5 लाख तक की पारिवारिक आय पर, मान्य संस्थानों के तकनीकी / प्रोफ़ेशनल कोर्स के लिए, मोरेटोरियम में पूरी ब्याज सहायता मिलती है। जो छात्र कोई दूसरी केंद्र / राज्य छात्रवृत्ति, ब्याज सहायता या फ़ीस वापसी ले रहे हैं, वे दोनों में से किसी के योग्य नहीं हैं।"

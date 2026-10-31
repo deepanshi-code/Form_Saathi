@@ -28,6 +28,7 @@ window.FORMS.push({
   fields: [
     {
       label: { en: "Type of Account (Part II)", hi: "खाते का प्रकार (भाग II)" },
+      quick: { en: "Tick \"Savings Bank Account\" for a normal savings account", hi: "सामान्य बचत खाते के लिए \"Savings Bank Account\" पर टिक करें" },
       meaning: {
         en: "Part II starts with four boxes: Savings Bank Account, BSBDA (Basic Savings Bank Deposit Account), Small Account, Current Account.",
         hi: "भाग II की शुरुआत में चार खाने हैं: बचत बैंक खाता, BSBDA (बेसिक बचत बैंक जमा खाता), लघु खाता, चालू खाता।"
@@ -44,6 +45,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name *", hi: "नाम *" },
+      quick: { en: "One BLOCK letter per box, same as on your ID", hi: "हर खाने में एक बड़ा अक्षर; नाम पहचान पत्र जैसा ही रखें" },
       meaning: {
         en: "Your name, split into boxes: Prefix (like Mr/Ms), First Name, Middle Name, Last Name.",
         hi: "आपका नाम, अलग-अलग खानों में: प्रीफ़िक्स (जैसे Mr/Ms), पहला नाम, बीच का नाम, आख़िरी नाम।"
@@ -60,6 +62,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Name of * (Father / Mother / Spouse)", hi: "का नाम * (पिता / माता / पति या पत्नी)" },
+      quick: { en: "Tick Father, Mother or Spouse; father's name is a must without PAN", hi: "पिता, माता या पति/पत्नी पर टिक कर नाम लिखें; पैन नहीं तो पिता का नाम" },
       meaning: {
         en: "Item 5 in Personal Details. You tick whose name you are writing: Father, Mother or Spouse.",
         hi: "व्यक्तिगत विवरण का खाना 5। आप टिक करते हैं कि किसका नाम लिख रहे हैं: पिता, माता या पति/पत्नी।"
@@ -76,6 +79,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mobile No. and Email ID", hi: "मोबाइल नंबर और ईमेल आईडी" },
+      quick: { en: "A mobile number you will keep; needed for electronic banking", hi: "ऐसा मोबाइल नंबर जो आगे भी रखेंगे; इसके बिना इलेक्ट्रॉनिक लेन-देन नहीं" },
       meaning: {
         en: "Your contact details. Part II says \"Mobile No. is Mandatory\" for ATM-cum-debit card, cheque book, internet banking, SMS alerts, phone banking, mobile banking and e-statement.",
         hi: "आपके संपर्क की जानकारी। भाग II में लिखा है कि एटीएम-कम-डेबिट कार्ड, चेक बुक, इंटरनेट बैंकिंग, SMS अलर्ट, फ़ोन बैंकिंग, मोबाइल बैंकिंग और ई-स्टेटमेंट के लिए मोबाइल नंबर ज़रूरी है।"
@@ -92,6 +96,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Proof of Identity / Address *", hi: "पहचान / पते का प्रमाण *" },
+      quick: { en: "Tick ONE ID; fill its number and issue date", hi: "एक पहचान पत्र पर टिक करें; उसका नंबर और जारी होने की तारीख़ भरें" },
       meaning: {
         en: "Section 2. The form says: tick \"any one ID type\" and give its details.",
         hi: "खंड 2। फॉर्म कहता है: \"कोई एक\" पहचान पत्र चुनकर टिक करें और उसका विवरण दें।"
@@ -111,6 +116,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Address Details * and \"Is this your Current Address?\"", hi: "पते का विवरण * और \"क्या यही आपका वर्तमान पता है?\"" },
+      quick: { en: "Address as on your ID; tick \"NO\" if you live elsewhere", hi: "पहचान पत्र वाला पता लिखें; अब कहीं और रहते हैं तो \"NO\" टिक करें" },
       meaning: {
         en: "Section 3 is the address \"as per Proof of Address\" you gave in section 2. Item 8 asks: \"Is the address provided above your Current Address?\" Section 4 is for your current / local / correspondence address.",
         hi: "खंड 3 में वही पता लिखें जो खंड 2 के पते के प्रमाण पर है। खाना 8 पूछता है: \"क्या ऊपर दिया पता ही आपका वर्तमान पता है?\" खंड 4 वर्तमान / स्थानीय / पत्राचार के पते के लिए है।"
@@ -130,6 +136,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Tax Proof: PAN * (or Form 60)", hi: "कर का प्रमाण: पैन * (या फॉर्म 60)" },
+      quick: { en: "Your PAN; no PAN? Ask the branch: Form 60 or newer", hi: "अपना पैन लिखें; पैन नहीं तो शाखा में पूछें: फॉर्म 60 या नया फॉर्म" },
       meaning: {
         en: "Section 6. Item 1 asks for your PAN. Item 2 asks if your country of tax residence is India only.",
         hi: "खंड 6। खाना 1 में पैन माँगा गया है। खाना 2 पूछता है कि क्या आप सिर्फ़ भारत के कर निवासी हैं।"
@@ -149,6 +156,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Occupation Type *, Annual Income * and Expected Annual Credit *", hi: "पेशे का प्रकार *, वार्षिक आय * और अपेक्षित वार्षिक जमा *" },
+      quick: { en: "Tick occupation, fill income and expected credit; no income? Ask branch", hi: "पेशा टिक करें, आय और अपेक्षित जमा भरें; आय नहीं तो शाखा में पूछें" },
       meaning: {
         en: "Section 7 asks what you do and your yearly income in rupees. Part II asks \"Expected Annual Credit\": how much money you expect to come into the account in a year.",
         hi: "खंड 7 पूछता है कि आप क्या करते हैं और आपकी सालाना आय रुपयों में। भाग II में \"अपेक्षित वार्षिक जमा\" पूछा गया है: साल भर में खाते में कितना पैसा आने की उम्मीद है।"
@@ -168,6 +176,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Politically exposed person *", hi: "राजनैतिक रूप से जोखिम वाले व्यक्ति *" },
+      quick: { en: "Tick one; for most people it is \"None\"", hi: "एक पर टिक करें; ज़्यादातर लोगों के लिए \"None\" (कोई नहीं)" },
       meaning: {
         en: "Item 7.6. The form explains these are people who have been given prominent public functions by a foreign country, such as heads of state, senior politicians, senior government, judicial or military officers.",
         hi: "खाना 7.6। फॉर्म के अनुसार ये वे लोग हैं जिन्हें किसी दूसरे देश ने बड़ा सार्वजनिक पद दिया हो, जैसे राष्ट्र या सरकार के प्रमुख, वरिष्ठ राजनेता, वरिष्ठ सरकारी, न्यायिक या सैन्य अधिकारी।"
@@ -184,6 +193,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Aadhaar consent: Yes / No (section 9)", hi: "आधार सहमति: हाँ / नहीं (खंड 9)" },
+      quick: { en: "Tick Yes or No; DBT benefits need Aadhaar e-KYC and seeding", hi: "हाँ या नहीं पर टिक करें; डीबीटी लाभ के लिए आधार ई-केवाईसी और जोड़ना ज़रूरी" },
       meaning: {
         en: "A declaration that you gave your Aadhaar voluntarily, and that the bank may verify it with UIDAI through biometric authentication.",
         hi: "यह घोषणा कि आपने आधार अपनी मर्ज़ी से दिया है, और बैंक इसे UIDAI से बायोमेट्रिक जाँच द्वारा सत्यापित कर सकता है।"
@@ -200,6 +210,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Facilities required (Part II)", hi: "ज़रूरी सुविधाएँ (भाग II)" },
+      quick: { en: "Tick the services you want; write the name for your card", hi: "जो सेवाएँ चाहिए उन पर टिक करें; डेबिट कार्ड पर छपने वाला नाम लिखें" },
       meaning: {
         en: "Services you want with the account: ATM cum Debit Card, Cheque Book, Internet Banking (View or Transaction), SMS Alerts (charges applicable), Phone Banking, Mobile Banking, e-statement instead of paper, Passbook.",
         hi: "खाते के साथ आप कौन-सी सेवाएँ चाहते हैं: एटीएम-कम-डेबिट कार्ड, चेक बुक, इंटरनेट बैंकिंग (सिर्फ़ देखना या लेन-देन), SMS अलर्ट (शुल्क लगेगा), फ़ोन बैंकिंग, मोबाइल बैंकिंग, कागज़ की जगह ई-स्टेटमेंट, पासबुक।"
@@ -216,6 +227,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Nomination (Part II, section 2)", hi: "नामांकन / नॉमिनी (भाग II, खंड 2)" },
+      quick: { en: "One nominee here, or tick \"do not want to nominate\"", hi: "यहाँ एक नॉमिनी लिखें, या \"नामित नहीं करना चाहते\" पर टिक करें" },
       meaning: {
         en: "A nominee is the person to whom the bank returns the money in this account if you die. The form offers \"Yes, (Fill form below)\" or a box saying you do not want to nominate anyone.",
         hi: "नॉमिनी वह व्यक्ति है जिसे आपकी मृत्यु होने पर बैंक इस खाते का पैसा लौटाएगा। फॉर्म में \"हाँ (नीचे फॉर्म भरें)\" या \"किसी को नामित नहीं करना चाहते\" का खाना है।"
@@ -232,6 +244,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Mode of Operation *", hi: "परिचालन विधि *" },
+      quick: { en: "Tick \"Self\" if the account is only in your name", hi: "खाता सिर्फ़ आपके नाम पर है तो \"Self\" पर टिक करें" },
       meaning: {
         en: "Who can run the account. Options: Self, Either or Survivor, Former or Survivor, Anyone or Survivor, Jointly Operated, Others.",
         hi: "खाता कौन चलाएगा। विकल्प: स्वयं, दोनों में से कोई एक या उत्तरजीवी, पूर्ववर्ती या उत्तरजीवी, कोई एक या उत्तरजीवी, संयुक्त रूप से, अन्य।"
@@ -248,6 +261,7 @@ window.FORMS.push({
     },
     {
       label: { en: "Photo * and Signature / Thumb impression", hi: "फ़ोटो * और हस्ताक्षर / अंगूठे का निशान" },
+      quick: { en: "Paste photo (don't staple); sign in black ink, same every time", hi: "फ़ोटो चिपकाएँ (स्टेपल नहीं); काली स्याही से, हर बार एक जैसा हस्ताक्षर करें" },
       meaning: {
         en: "Part I (end of section 9) has a photo box and a signature box. Part II, section 3 \"Photo & Signature\" has another photo box and two signature boxes for each applicant. The bank keeps these as your specimen signature.",
         hi: "भाग I (खंड 9 के अंत में) में एक फ़ोटो और एक हस्ताक्षर का खाना है। भाग II के खंड 3 \"फ़ोटो एवं हस्ताक्षर\" में हर आवेदक के लिए फिर एक फ़ोटो और दो हस्ताक्षर के खाने हैं। बैंक इन्हें आपके नमूना हस्ताक्षर के रूप में रखता है।"
