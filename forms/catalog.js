@@ -18,7 +18,11 @@ window.CATALOG = {
   "uk-domicile-certificate": { icon: "home",        short: { en: "Residence certificate", hi: "स्थायी निवास प्रमाण पत्र" } },
   "nsp-scholarship":         { icon: "cap",         short: { en: "Scholarship (NSP)",    hi: "छात्रवृत्ति (NSP)" } },
   "pm-vidyalaxmi-loan":      { icon: "rupee",       short: { en: "Education loan",       hi: "शिक्षा ऋण" } },
-  "ugc-anti-ragging":        { icon: "shield",      short: { en: "Anti-ragging",         hi: "एंटी-रैगिंग" } }
+  "ugc-anti-ragging":        { icon: "shield",      short: { en: "Anti-ragging",         hi: "एंटी-रैगिंग" } },
+  "canara-account-opening":  { icon: "bank",        short: { en: "Canara Bank account",  hi: "केनरा बैंक खाता" } },
+  "birth-registration":      { icon: "certificate", short: { en: "Birth registration",   hi: "जन्म पंजीकरण" } },
+  "lpg-kyc":                 { icon: "home",        short: { en: "LPG gas connection",   hi: "एलपीजी गैस कनेक्शन" } },
+  "form-15g":                { icon: "rupee",       short: { en: "No TDS: Form 121 (15G)", hi: "टीडीएस नहीं: फॉर्म 121 (15G)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.

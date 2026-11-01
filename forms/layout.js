@@ -3,7 +3,11 @@
 // Positions are percentages of the page: x/y = top-left corner, w/h = size.
 // One entry per field, in the same order as the form's `fields`.
 // Page images were rendered from the official PDF linked as each form's `source`.
-window.LAYOUT = {
+// Other forms add themselves from their own files in forms/layout/ (one file per form),
+// loaded only when that form is opened. List every such form here.
+window.LAYOUT_FILES = ["voter-id-form-6", "voter-id-form-8", "aadhaar-update", "learner-licence", "sbi-account-opening", "pnb-account-opening", "hdfc-account-opening", "post-office-savings", "bob-account-opening", "pmjdy-account", "uk-caste-certificate", "uk-domicile-certificate", "canara-account-opening", "birth-registration", "lpg-kyc", "form-15g"];
+window.LAYOUT = window.LAYOUT || {};
+Object.assign(window.LAYOUT, {
   "pan-application": {
     pages: ["forms/img/pan-application-1.jpg", "forms/img/pan-application-2.jpg"],
     spots: [
@@ -23,4 +27,4 @@ window.LAYOUT = {
       [{ page: 0, x: 7.56, y: 2.61, w: 16.97, h: 15.32 }, { page: 1, x: 53.45, y: 77.2, w: 38.15, h: 11.88 }]  // Signature
     ]
   }
-};
+});

@@ -188,6 +188,17 @@ let guideStep = 0;  // current step in the guide view
 let guidePage = 0;  // which page image is shown in the guide view
 const layoutOf = form => (window.LAYOUT || {})[form.id];
 
+// Page-image layouts live in forms/layout/<id>.js and are loaded only when that form is opened,
+// so the home page stays light. LAYOUT_FILES (in forms/layout.js) lists which forms have one.
+const VERSION = (document.querySelector('script[src*="app.js"]').src.split("v=")[1] || "");
+function loadLayout(form, done) {
+  if (layoutOf(form) || !(window.LAYOUT_FILES || []).includes(form.id)) return;
+  const s = document.createElement("script");
+  s.src = `forms/layout/${form.id}.js?v=${VERSION}`;
+  s.onload = () => { if (currentForm() === form) done(); };
+  document.head.append(s);
+}
+
 const $ = id => document.getElementById(id);
 
 // Small helper to create an element with text. We always use textContent
@@ -870,12 +881,16 @@ function route() {
     openField = -1;
     panel = null;
     // Forms with page images open on the form view, at the first box not done yet.
-    const lay = layoutOf(form);
-    view = lay ? "guide" : "list";
-    const doneNow = store.get(doneKey(form), []);
-    guideStep = Math.max(0, form.fields.findIndex((_, i) => !doneNow.includes(i)));
-    guidePage = lay && lay.spots[guideStep] && lay.spots[guideStep][0] ? lay.spots[guideStep][0].page : 0;
-    renderForm(form);
+    const startGuide = () => {
+      const lay = layoutOf(form);
+      view = lay ? "guide" : "list";
+      const doneNow = store.get(doneKey(form), []);
+      guideStep = Math.max(0, form.fields.findIndex((_, i) => !doneNow.includes(i)));
+      guidePage = lay && lay.spots[guideStep] && lay.spots[guideStep][0] ? lay.spots[guideStep][0].page : 0;
+      renderForm(form);
+    };
+    startGuide();
+    loadLayout(form, startGuide); // if this form's page images are not loaded yet, load them, then switch view
     window.scrollTo(0, 0);
     return;
   }

@@ -1,6 +1,6 @@
 // Checked against the Election Commission of India's English "Form-8: Voter Application Form for shifting of
 // Residence/Correction of Entries in Existing Electoral Roll/Replacement of EPIC/Marking of PwD" published on
-// voters.eci.gov.in (PDF last modified 28-10-2026; its wording matches the 01-08-2022 copy on the CEO Telangana
+// voters.eci.gov.in (PDF last modified 28-10-2025 per its own metadata; its wording matches the 01-08-2022 copy on the CEO Telangana
 // website), the official "Guidelines for filling up the application Form-8" on voters.eci.gov.in (same date), and
 // the CEO Odisha note "Recent Amendments relating to Electoral Rolls" on the forms that changed on 1 August 2022.
 // Every statement below comes from one of those documents. If something is not stated in them, the guide says
@@ -10,7 +10,7 @@ window.FORMS.push({
   id: "voter-id-form-8",
   verified: true,
   source: {
-    title: "Election Commission of India, Form-8: Shifting of Residence / Correction of Entries / Replacement of EPIC / Marking of PwD (voters.eci.gov.in, PDF last modified 28-10-2026)",
+    title: "Election Commission of India, Form-8: Shifting of Residence / Correction of Entries / Replacement of EPIC / Marking of PwD (voters.eci.gov.in, PDF last modified 28-10-2025)",
     url: "https://voters.eci.gov.in/formspdf/Form_8_English.pdf"
   },
   lastChecked: "2026-10-30",
