@@ -7,22 +7,13 @@
   <meta name="description" content="Understand Indian official forms field by field, in simple English and Hindi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Inter for English, Noto Sans Devanagari for Hindi -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261101-8">
+  <!-- Inter for text, Plus Jakarta Sans for headlines, Noto Sans Devanagari for Hindi,
+       Caveat (English) and Kalam (Hindi) for the handwritten accent line -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css?v=20261101-9">
 </head>
 <body>
-  <div class="topbar">
-    <div class="wrap topbar-row">
-      <span data-text="topbar"></span>
-      <!-- Language toggle: the app re-renders all text when this changes -->
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" data-lang="en">English</button>
-        <button type="button" data-lang="hi">हिंदी</button>
-      </div>
-    </div>
-  </div>
-
+  <!-- Floating glass header: brand · pill navigation · language + main action -->
   <header class="site-header">
     <div class="wrap header-row">
       <a href="#" class="brand" id="home-link">
@@ -34,6 +25,14 @@
         <a href="#changes" data-text="navChanges"></a>
         <a href="#how" data-text="navHow"></a>
       </nav>
+      <div class="header-right">
+        <!-- Language toggle: the app re-renders all text when this changes -->
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="hi">हिं</button>
+        </div>
+        <a href="#find" class="btn-glow" id="header-cta" data-text="cta"></a>
+      </div>
     </div>
   </header>
 
@@ -41,73 +40,54 @@
     <!-- View 1: home -->
     <section id="list-view">
       <div class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="wrap hero-inner">
-          <div class="hero-copy">
-            <h1 data-text="tagline"></h1>
-            <p class="hero-sub" data-text="intro"></p>
-            <div class="search-box">
-              <label class="search">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-                <input type="search" id="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
-                <kbd class="kbd-hint">Ctrl K</kbd>
-              </label>
-              <ul id="search-results" class="search-results" role="listbox" hidden></ul>
-            </div>
-            <div class="popular">
-              <span data-text="popular"></span>
-              <div id="popular-list"></div>
-            </div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-text="eyebrow"></span></p>
+          <h1 data-text="tagline"></h1>
+          <p class="accent-line" data-text="accent"></p>
+          <p class="hero-sub" data-text="intro"></p>
+          <div class="search-box" id="find">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input type="search" id="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
+              <kbd class="kbd-hint">Ctrl K</kbd>
+              <button type="button" class="search-go" id="search-go" data-text="findBtn"></button>
+            </label>
+            <ul id="search-results" class="search-results" role="listbox" hidden></ul>
           </div>
-
-          <!-- Hero illustration: a person filling a form, with an ID card and a "verified" tick -->
-          <svg class="hero-art" viewBox="0 0 480 400" role="img" aria-hidden="true">
-            <circle cx="260" cy="205" r="170" class="art-blob"/>
-            <circle cx="420" cy="70" r="10" class="art-dot"/>
-            <circle cx="70" cy="110" r="6" class="art-dot2"/>
-            <circle cx="440" cy="250" r="5" class="art-dot2"/>
-            <!-- form sheet -->
-            <rect x="170" y="62" width="200" height="268" rx="16" class="art-paper"/>
-            <path d="M170 78a16 16 0 0 1 16-16h168a16 16 0 0 1 16 16v26H170z" class="art-head"/>
-            <rect x="190" y="77" width="90" height="10" rx="5" class="art-head-line"/>
-            <g class="art-rows">
-              <rect x="190" y="128" width="20" height="20" rx="5" class="art-done"/>
-              <path d="M195 138l4 4 7-8" class="art-tick"/>
-              <rect x="222" y="134" width="120" height="9" rx="4.5" class="art-line"/>
-              <rect x="190" y="166" width="20" height="20" rx="5" class="art-done"/>
-              <path d="M195 176l4 4 7-8" class="art-tick"/>
-              <rect x="222" y="172" width="96" height="9" rx="4.5" class="art-line"/>
-              <rect x="190" y="204" width="20" height="20" rx="5" class="art-done"/>
-              <path d="M195 214l4 4 7-8" class="art-tick"/>
-              <rect x="222" y="210" width="128" height="9" rx="4.5" class="art-line"/>
-              <rect x="190" y="242" width="20" height="20" rx="5" class="art-box"/>
-              <rect x="222" y="248" width="84" height="9" rx="4.5" class="art-line"/>
-              <rect x="190" y="280" width="20" height="20" rx="5" class="art-box"/>
-              <rect x="222" y="286" width="110" height="9" rx="4.5" class="art-line"/>
-            </g>
-            <!-- person -->
-            <path d="M48 380c0-62 26-104 74-104s74 42 74 104z" class="art-kurta"/>
-            <path d="M104 276h36l-18 26z" class="art-neck"/>
-            <circle cx="122" cy="236" r="32" class="art-skin"/>
-            <path d="M90 232c0-24 14-38 33-38 20 0 34 14 34 34-10-6-24-8-40-6-12 2-20 6-27 10z" class="art-hair"/>
-            <path d="M168 320c14-12 26-30 34-50" class="art-arm"/>
-            <path d="M196 284l26-40" class="art-pen"/>
-            <!-- ID card -->
-            <g transform="rotate(-8 400 300)">
-              <rect x="338" y="262" width="122" height="78" rx="10" class="art-card"/>
-              <rect x="350" y="276" width="30" height="36" rx="5" class="art-photo"/>
-              <rect x="390" y="280" width="58" height="7" rx="3.5" class="art-line"/>
-              <rect x="390" y="294" width="44" height="7" rx="3.5" class="art-line"/>
-              <rect x="350" y="322" width="98" height="7" rx="3.5" class="art-line"/>
-            </g>
-            <!-- verified badge -->
-            <circle cx="372" cy="120" r="26" class="art-badge"/>
-            <path d="M361 120l8 8 15-16" class="art-badge-tick"/>
-          </svg>
+          <div class="popular">
+            <span data-text="popular"></span>
+            <div id="popular-list"></div>
+          </div>
+          <p class="hero-note" data-text="topbar"></p>
         </div>
+        <!-- The glowing horizon arc at the bottom of the hero -->
+        <div class="horizon" aria-hidden="true"></div>
       </div>
+
+      <!-- Product preview: the real PAN form with one box spotlighted, as in the guide -->
+      <section class="band band-dark" id="preview">
+        <div class="wrap">
+          <p class="eyebrow center"><span class="eyebrow-dot"></span><span data-text="previewEyebrow"></span></p>
+          <h2 class="band-title center" data-text="previewTitle"></h2>
+          <p class="band-sub center" data-text="previewSub"></p>
+          <a class="mock" href="#form/pan-application" id="mock">
+            <span class="mock-bar"><i></i><i></i><i></i><b id="mock-title"></b></span>
+            <span class="mock-body">
+              <span class="mock-sheet"><span class="mock-inner" id="mock-inner">
+                <img src="forms/img/pan-application-1.jpg" alt="" loading="lazy" decoding="async" id="mock-img">
+                <span class="mock-spot" id="mock-spot"></span>
+              </span></span>
+              <span class="mock-steps" id="mock-steps"></span>
+            </span>
+          </a>
+          <p class="mock-caption"><a href="#form/pan-application" data-text="previewCaption"></a></p>
+        </div>
+      </section>
 
       <section class="band band-white" id="categories">
         <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-text="catEyebrow"></span></p>
           <h2 class="band-title" data-text="catTitle"></h2>
           <div id="cat-tiles" class="cat-tiles"></div>
         </div>
@@ -126,6 +106,7 @@
       <section class="band band-warn" id="changes">
         <div class="wrap changes-inner">
           <div>
+            <p class="eyebrow eyebrow-warn"><span class="eyebrow-dot"></span><span data-text="changesEyebrow"></span></p>
             <h2 class="band-title" id="changes-title"></h2>
             <p class="band-sub" data-text="changesSub"></p>
           </div>
@@ -135,6 +116,7 @@
 
       <section class="band band-blue" id="how">
         <div class="wrap">
+          <p class="eyebrow center"><span class="eyebrow-dot"></span><span data-text="navHow"></span></p>
           <h2 class="band-title center" data-text="howTitle"></h2>
           <ol class="steps">
             <li>
@@ -219,31 +201,31 @@
   </footer>
 
   <!-- Order matters: the registry first, then each form file, then the catalog and the app -->
-  <script src="forms/registry.js?v=20261101-8"></script>
-  <script src="forms/sbi-account-opening.js?v=20261101-8"></script>
-  <script src="forms/pnb-account-opening.js?v=20261101-8"></script>
-  <script src="forms/bob-account-opening.js?v=20261101-8"></script>
-  <script src="forms/hdfc-account-opening.js?v=20261101-8"></script>
-  <script src="forms/post-office-savings.js?v=20261101-8"></script>
-  <script src="forms/pmjdy-account.js?v=20261101-8"></script>
-  <script src="forms/pan-application.js?v=20261101-8"></script>
-  <script src="forms/aadhaar-update.js?v=20261101-8"></script>
-  <script src="forms/voter-id-form-6.js?v=20261101-8"></script>
-  <script src="forms/voter-id-form-8.js?v=20261101-8"></script>
-  <script src="forms/learner-licence.js?v=20261101-8"></script>
-  <script src="forms/passport-fresh.js?v=20261101-8"></script>
-  <script src="forms/uk-income-certificate.js?v=20261101-8"></script>
-  <script src="forms/uk-caste-certificate.js?v=20261101-8"></script>
-  <script src="forms/uk-domicile-certificate.js?v=20261101-8"></script>
-  <script src="forms/nsp-scholarship.js?v=20261101-8"></script>
-  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101-8"></script>
-  <script src="forms/ugc-anti-ragging.js?v=20261101-8"></script>
-  <script src="forms/canara-account-opening.js?v=20261101-8"></script>
-  <script src="forms/birth-registration.js?v=20261101-8"></script>
-  <script src="forms/lpg-kyc.js?v=20261101-8"></script>
-  <script src="forms/form-15g.js?v=20261101-8"></script>
-  <script src="forms/catalog.js?v=20261101-8"></script>
-  <script src="forms/layout.js?v=20261101-8"></script>
-  <script src="app.js?v=20261101-8"></script>
+  <script src="forms/registry.js?v=20261101-9"></script>
+  <script src="forms/sbi-account-opening.js?v=20261101-9"></script>
+  <script src="forms/pnb-account-opening.js?v=20261101-9"></script>
+  <script src="forms/bob-account-opening.js?v=20261101-9"></script>
+  <script src="forms/hdfc-account-opening.js?v=20261101-9"></script>
+  <script src="forms/post-office-savings.js?v=20261101-9"></script>
+  <script src="forms/pmjdy-account.js?v=20261101-9"></script>
+  <script src="forms/pan-application.js?v=20261101-9"></script>
+  <script src="forms/aadhaar-update.js?v=20261101-9"></script>
+  <script src="forms/voter-id-form-6.js?v=20261101-9"></script>
+  <script src="forms/voter-id-form-8.js?v=20261101-9"></script>
+  <script src="forms/learner-licence.js?v=20261101-9"></script>
+  <script src="forms/passport-fresh.js?v=20261101-9"></script>
+  <script src="forms/uk-income-certificate.js?v=20261101-9"></script>
+  <script src="forms/uk-caste-certificate.js?v=20261101-9"></script>
+  <script src="forms/uk-domicile-certificate.js?v=20261101-9"></script>
+  <script src="forms/nsp-scholarship.js?v=20261101-9"></script>
+  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101-9"></script>
+  <script src="forms/ugc-anti-ragging.js?v=20261101-9"></script>
+  <script src="forms/canara-account-opening.js?v=20261101-9"></script>
+  <script src="forms/birth-registration.js?v=20261101-9"></script>
+  <script src="forms/lpg-kyc.js?v=20261101-9"></script>
+  <script src="forms/form-15g.js?v=20261101-9"></script>
+  <script src="forms/catalog.js?v=20261101-9"></script>
+  <script src="forms/layout.js?v=20261101-9"></script>
+  <script src="app.js?v=20261101-9"></script>
 </body>
 </html>

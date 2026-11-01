@@ -6,9 +6,25 @@ const UI = {
     navChanges: "What changed",
     navHow: "How it works",
     tagline: "Fill any form the right way",
+    accent: "without fear, without mistakes",
+    eyebrow: "Free · English & हिंदी · Checked against official sources",
+    cta: "Find your form",
+    findBtn: "Find form →",
+    previewEyebrow: "See it in action",
+    previewTitle: "The real form. One box at a time.",
+    previewSub: "We spotlight the exact box on the official form and tell you what to write in it.",
+    previewCaption: "Open the PAN card guide →",
+    catEyebrow: "Browse",
+    changesEyebrow: "Changed recently",
+    statChangesTitle: n => `${n} rule changes flagged`,
+    statChangesSub: "Old advice from friends or seniors may be wrong. We mark what changed.",
+    statViewTitle: n => `${n} forms on the real page`,
+    statViewSub: "See each box spotlighted on the official form.",
+    statLangTitle: "English + हिंदी",
+    statLangSub: "Tap to switch language. Every answer comes in both.",
     intro: "Simple answers for every box, in English and Hindi.",
     search: "Search a form: PAN, voter ID, bank…",
-    popular: "Popular:",
+    popular: "Try:",
     catTitle: "What do you need help with?",
     catCount: n => `${n} forms`,
     catDesc: {
@@ -76,9 +92,25 @@ const UI = {
     navChanges: "क्या बदला",
     navHow: "कैसे काम करता है",
     tagline: "कोई भी फॉर्म सही तरीके से भरें",
+    accent: "बिना डर, बिना गलती",
+    eyebrow: "मुफ़्त · हिंदी और English · आधिकारिक स्रोतों से जाँचा गया",
+    cta: "अपना फॉर्म खोजें",
+    findBtn: "फॉर्म खोजें →",
+    previewEyebrow: "ऐसे काम करता है",
+    previewTitle: "असली फॉर्म। एक-एक खाना करके।",
+    previewSub: "हम आधिकारिक फॉर्म पर ठीक वही खाना चमकाकर दिखाते हैं, और बताते हैं कि उसमें क्या लिखना है।",
+    previewCaption: "पैन कार्ड गाइड खोलें →",
+    catEyebrow: "फॉर्म देखें",
+    changesEyebrow: "हाल में बदला",
+    statChangesTitle: n => `${n} नियम-बदलाव बताए गए`,
+    statChangesSub: "दोस्तों या सीनियर की पुरानी सलाह ग़लत हो सकती है। हम बताते हैं क्या बदला।",
+    statViewTitle: n => `${n} फॉर्म असली पेज पर`,
+    statViewSub: "आधिकारिक फॉर्म पर हर खाना चमकाकर दिखाया जाता है।",
+    statLangTitle: "हिंदी + English",
+    statLangSub: "भाषा बदलने के लिए दबाएँ। हर जवाब दोनों भाषाओं में है।",
     intro: "हर खाने का आसान जवाब, हिंदी और अंग्रेज़ी में।",
     search: "फॉर्म खोजें: पैन, वोटर आईडी, बैंक…",
-    popular: "लोकप्रिय:",
+    popular: "आज़माएँ:",
     catTitle: "आपको किसमें मदद चाहिए?",
     catCount: n => `${n} फॉर्म`,
     catDesc: {
@@ -317,10 +349,14 @@ function renderCategoryTiles() {
     tile.type = "button";
     const blob = el("span", "tile-icon");
     blob.append(icon(CHIP_ICONS[c.key]));
+    // Mini preview inside the tile: the first few forms of this category, as chips.
+    const preview = el("span", "tile-preview");
+    formsInChip(c).slice(0, 4).forEach(f => preview.append(el("span", "tile-chip", meta(f).short[lang])));
     tile.append(
       blob,
       el("span", "tile-name", c.label[lang]),
       el("span", "tile-desc", UI[lang].catDesc[c.key]),
+      preview,
       el("span", "tile-count", UI[lang].catCount(formsInChip(c).length) + " →")
     );
     tile.addEventListener("click", () => {
@@ -331,7 +367,61 @@ function renderCategoryTiles() {
     });
     box.append(tile);
   });
+
+  // Stat tiles complete the bento grid. Numbers come from the data, so they stay true.
+  const changes = window.FORMS.reduce((n, f) => n + changedFields(f).length, 0);
+  const withImages = window.FORMS.filter(f => f.id === "pan-application" || (window.LAYOUT_FILES || []).includes(f.id)).length;
+  const stat = (cls, title, sub, onClick) => {
+    const t = el("button", "cat-tile stat-tile " + cls);
+    t.type = "button";
+    t.append(el("span", "stat-title", title), el("span", "tile-desc", sub));
+    t.addEventListener("click", onClick);
+    box.append(t);
+  };
+  stat("stat-warn", UI[lang].statChangesTitle(changes), UI[lang].statChangesSub, () => $("changes").scrollIntoView({ behavior: "smooth" }));
+  stat("stat-blue", UI[lang].statViewTitle(withImages), UI[lang].statViewSub, () => { location.hash = "form/pan-application"; });
+  stat("stat-lang", UI[lang].statLangTitle, UI[lang].statLangSub, () => {
+    document.querySelector(`.lang-toggle [data-lang="${lang === "en" ? "hi" : "en"}"]`).click();
+  });
 }
+
+// Product preview on the home page: the real PAN form with one box spotlighted,
+// filled from the PAN guide's own data so the words always match the guide.
+function renderPreview() {
+  const form = window.FORMS.find(f => f.id === "pan-application");
+  const lay = layoutOf(form || {});
+  if (!form || !lay) { $("preview").hidden = true; return; }
+  const step = 2; // "Date of Birth": a box everyone recognises
+  const s = lay.spots[step][0];
+  $("mock-title").textContent = "Form Saathi · " + meta(form).short[lang];
+  Object.assign($("mock-spot").style, { left: s.x + "%", top: s.y + "%", width: s.w + "%", height: s.h + "%" });
+
+  const steps = $("mock-steps");
+  steps.replaceChildren(el("span", "mock-count", UI[lang].stepOf(step + 1, form.fields.length)));
+  form.fields.slice(0, 5).forEach((f, i) => {
+    const row = el("span", "mock-step" + (i < step ? " done" : "") + (i === step ? " active" : ""));
+    row.append(el("i", null, i < step ? "✓" : String(i + 1)));
+    const text = el("span", "mock-text");
+    text.append(el("b", null, f.label[lang]));
+    if (i === step) text.append(el("span", "mock-quick", f.quick[lang]), el("span", "mock-btn", "✓ " + UI[lang].markDone));
+    row.append(text);
+    steps.append(row);
+  });
+  positionMock();
+}
+
+// Shift the zoomed page so the spotlighted box sits near the top of the preview window.
+function positionMock() {
+  const img = $("mock-img");
+  const place = () => {
+    const inner = $("mock-inner");
+    const spot = $("mock-spot");
+    const target = spot.offsetTop - inner.parentElement.clientHeight * 0.35;
+    inner.style.transform = `translateY(${-Math.max(0, target)}px)`;
+  };
+  if (img.complete) place(); else img.addEventListener("load", place, { once: true });
+}
+window.addEventListener("resize", () => { if (!$("list-view").hidden) positionMock(); });
 
 // Fluid tabs: a highlight slides between categories. The indicator element is reused
 // across renders so the browser can animate it from its old position to the new one.
@@ -416,6 +506,7 @@ function renderFooter() {
 function renderHome() {
   renderSearchResults();
   renderPopular();
+  renderPreview();
   renderCategoryTiles();
   renderChips();
   renderGrid();
@@ -875,6 +966,7 @@ function currentForm() {
 function route() {
   const form = currentForm();
   $("list-view").hidden = Boolean(form);
+  document.body.classList.toggle("is-home", !form); // the dark landing style applies to home only
   $("form-view").hidden = !form;
 
   if (form) {
@@ -939,6 +1031,21 @@ document.addEventListener("click", e => {
 });
 $("search").addEventListener("focus", renderSearchResults);
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
+
+// The search button opens the highlighted result, or puts the cursor in the box if it's empty.
+$("search-go").addEventListener("click", () => {
+  if (searchMatches[searchActive]) openForm(searchMatches[searchActive]);
+  else $("search").focus();
+});
+// "Find your form" in the header: go home (if needed) and put the cursor in the search box.
+$("header-cta").addEventListener("click", e => {
+  e.preventDefault();
+  if (currentForm()) location.hash = "";
+  setTimeout(() => {
+    $("find").scrollIntoView({ behavior: "smooth", block: "center" });
+    $("search").focus({ preventScroll: true });
+  }, 60);
+});
 window.addEventListener("hashchange", route);
 
 renderStaticText();
