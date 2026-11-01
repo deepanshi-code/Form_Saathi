@@ -39,6 +39,14 @@ Double-click `index.html`. No install, no server.
 5. Add `<script src="forms/<new-id>.js?v=YYYYMMDD"></script>` in `index.html`, after `registry.js` and before `catalog.js`, and add a short name and icon in `forms/catalog.js`. When you change any file, update the `?v=` date on all links so browsers fetch the new version.
 6. Set `verified: true` only after you have checked every field against the official source. Fill in `source` and `lastChecked`.
 
+### Optional: show the boxes on the real form ("On the form" view)
+
+1. Render the pages of the official PDF that contain boxes to JPG images in `forms/img/` (for example `<new-id>-1.jpg`, about 1100 px wide).
+2. In `forms/layout.js`, add an entry with the image paths and one list of `spots` per field, in the same order as `fields`. Each spot is `{ page, x, y, w, h }` in percent of the page, where `page` is 0 for the first image.
+3. Check every spot visually before publishing: the highlight must cover exactly the box it describes.
+
+Live so far: PAN card (Form 93).
+
 ## Rules
 
 - No real personal data (Aadhaar, PAN, signatures) is ever stored or collected.

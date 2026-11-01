@@ -36,6 +36,15 @@ const UI = {
     sourceToggle: "Source",
     sourceText: "Checked against:",
     unverified: "Not yet checked against an official form. Confirm with the office.",
+    viewGuide: "On the form",
+    viewList: "List of boxes",
+    page: n => `Page ${n}`,
+    stepOf: (i, t) => `Step ${i} of ${t}`,
+    prev: "Previous",
+    next: "Next",
+    alsoOn: n => `Also on page ${n}`,
+    imageCredit: "Image of the official form ·",
+    imageSource: "source",
     progressLabel: "boxes done",
     toastDone: label => `✓ Done: ${label}`,
     toastUndone: "Marked as not done",
@@ -97,6 +106,15 @@ const UI = {
     sourceToggle: "स्रोत",
     sourceText: "इससे जाँचा गया:",
     unverified: "अभी किसी आधिकारिक फॉर्म से नहीं जाँचा गया। दफ़्तर से पुष्टि करें।",
+    viewGuide: "फॉर्म पर देखें",
+    viewList: "खानों की सूची",
+    page: n => `पेज ${n}`,
+    stepOf: (i, t) => `${t} में से कदम ${i}`,
+    prev: "पिछला",
+    next: "अगला",
+    alsoOn: n => `पेज ${n} पर भी`,
+    imageCredit: "आधिकारिक फॉर्म की तस्वीर ·",
+    imageSource: "स्रोत",
     progressLabel: "खाने पूरे",
     toastDone: label => `✓ पूरा: ${label}`,
     toastUndone: "अधूरा मार्क किया",
@@ -165,6 +183,10 @@ let lang = store.get("fs:lang", "en");
 let chip = "all";
 let openField = -1; // which box card is expanded on the form page
 let panel = null;   // which tool panel is open on the form page: "docs" | "changes" | "about"
+let view = "list";  // form page view: "guide" (form image + steps) or "list" (box cards)
+let guideStep = 0;  // current step in the guide view
+let guidePage = 0;  // which page image is shown in the guide view
+const layoutOf = form => (window.LAYOUT || {})[form.id];
 
 const $ = id => document.getElementById(id);
 
@@ -446,7 +468,10 @@ function renderTools(form) {
     seg.type = "button";
     seg.title = field.label[lang];
     seg.setAttribute("aria-label", field.label[lang]);
-    seg.addEventListener("click", () => { if (openField !== i) setOpen(form, i); });
+    seg.addEventListener("click", () => {
+      if (view === "guide" && layoutOf(form)) goToStep(form, i);
+      else if (openField !== i) setOpen(form, i);
+    });
     segments.append(seg);
   });
   prog.append(top, segments);
@@ -563,6 +588,7 @@ function toggleDone(form, i) {
   btn.querySelector("span").textContent = nowDone ? UI[lang].done : UI[lang].markDone;
   if (nowDone && openField === i) setOpen(form, i);
   updateProgress(form);
+  updateGuide(form, false);
   toast(nowDone ? UI[lang].toastDone(form.fields[i].label[lang]) : UI[lang].toastUndone);
 }
 
@@ -615,11 +641,217 @@ function renderFields(form) {
   });
 }
 
+// ---------- Guide view: the official form image with the current box spotlighted,
+// next to a step-by-step flowchart of what to fill ----------
+
+function renderViewSwitch(form) {
+  const box = $("view-switch");
+  box.replaceChildren();
+  box.hidden = !layoutOf(form);
+  if (!layoutOf(form)) return;
+  [["guide", UI[lang].viewGuide], ["list", UI[lang].viewList]].forEach(([key, label]) => {
+    const btn = el("button", "view-tab" + (view === key ? " active" : ""), label);
+    btn.type = "button";
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", view === key);
+    btn.addEventListener("click", () => { view = key; renderViewSwitch(form); applyView(form); });
+    box.append(btn);
+  });
+}
+
+function applyView(form) {
+  const guide = view === "guide" && Boolean(layoutOf(form));
+  $("guide-view").hidden = !guide;
+  $("field-list").hidden = guide;
+  if (guide) updateGuide(form, true);
+}
+
+function renderGuide(form) {
+  const lay = layoutOf(form);
+  const box = $("guide-view");
+  box.replaceChildren();
+  if (!lay) return;
+
+  // Left: the form page image, with pins and the spotlight drawn on top.
+  const sheet = el("div", "sheet");
+  const frame = el("div", "sheet-frame");
+  const inner = el("div", "sheet-inner");
+  const img = el("img", "sheet-img");
+  img.alt = form.name[lang];
+  img.decoding = "async";
+  inner.append(img, el("div", "sheet-layer"));
+  frame.append(inner);
+  const credit = el("p", "sheet-credit", UI[lang].imageCredit + " ");
+  if (form.source) {
+    const a = el("a", null, UI[lang].imageSource);
+    a.href = form.source.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    credit.append(a);
+  }
+  sheet.append(el("div", "page-tabs"), frame, credit);
+
+  // Right: the steps, as a vertical flowchart.
+  const flow = el("div", "flow");
+  flow.append(el("p", "flow-count"), el("ol", "flow-steps"));
+
+  box.append(sheet, flow);
+}
+
+function goToStep(form, i) {
+  guideStep = i;
+  const spots = layoutOf(form).spots[i] || [];
+  if (spots.length && !spots.some(s => s.page === guidePage)) guidePage = spots[0].page;
+  updateGuide(form, true, true);
+}
+
+// Updates the guide in place: page image, pins, spotlight and the flowchart.
+// scroll: move the page image to the spotlight. scrollPage: on phones, also bring the step into view.
+function updateGuide(form, scroll, scrollPage = false) {
+  const lay = layoutOf(form);
+  const box = $("guide-view");
+  if (!lay || box.hidden) return;
+  const done = store.get(doneKey(form), []);
+  const total = form.fields.length;
+  const current = lay.spots[guideStep] || [];
+
+  // Page tabs, with a dot on pages where the current box appears.
+  const tabs = box.querySelector(".page-tabs");
+  tabs.replaceChildren();
+  if (lay.pages.length > 1) {
+    lay.pages.forEach((_, p) => {
+      const t = el("button", "page-tab" + (p === guidePage ? " active" : "") + (current.some(s => s.page === p) ? " has-spot" : ""), UI[lang].page(p + 1));
+      t.type = "button";
+      t.addEventListener("click", () => { guidePage = p; updateGuide(form, false); });
+      tabs.append(t);
+    });
+  }
+
+  const img = box.querySelector(".sheet-img");
+  if (!img.src.endsWith(lay.pages[guidePage])) img.src = lay.pages[guidePage];
+
+  // Pins for every box on this page, and the spotlight on the current one.
+  const layer = box.querySelector(".sheet-layer");
+  layer.replaceChildren();
+  current.filter(s => s.page === guidePage).forEach(s => {
+    const spot = el("div", "spot");
+    Object.assign(spot.style, { left: s.x + "%", top: s.y + "%", width: s.w + "%", height: s.h + "%" });
+    layer.append(spot);
+  });
+  form.fields.forEach((field, j) => {
+    const s = (lay.spots[j] || []).find(sp => sp.page === guidePage);
+    if (!s) return;
+    const pin = el("button", "pin" + (j === guideStep ? " active" : "") + (done.includes(j) ? " done" : ""), done.includes(j) ? "✓" : String(j + 1));
+    pin.type = "button";
+    pin.title = field.label[lang];
+    pin.setAttribute("aria-label", field.label[lang]);
+    Object.assign(pin.style, { left: s.x + "%", top: s.y + "%" });
+    pin.addEventListener("click", () => goToStep(form, j));
+    layer.append(pin);
+  });
+
+  // Flowchart of steps; the current one is expanded with its short answer.
+  box.querySelector(".flow-count").textContent = UI[lang].stepOf(guideStep + 1, total);
+  const steps = box.querySelector(".flow-steps");
+  steps.replaceChildren();
+  form.fields.forEach((field, j) => {
+    const isDone = done.includes(j);
+    const li = el("li", "flow-step" + (j === guideStep ? " active" : "") + (isDone ? " done" : ""));
+    const head = el("button", "flow-head");
+    head.type = "button";
+    head.setAttribute("aria-current", j === guideStep ? "step" : "false");
+    head.append(el("span", "flow-dot", isDone ? "✓" : String(j + 1)), el("span", "flow-label", field.label[lang]));
+    head.addEventListener("click", () => goToStep(form, j));
+    li.append(head);
+
+    if (j === guideStep) {
+      const body = el("div", "flow-body");
+      body.append(el("p", "flow-quick", field.quick ? field.quick[lang] : field.write[lang]));
+      const other = (lay.spots[j] || []).find(s => s.page !== guidePage);
+      if (other) {
+        const hint = el("button", "link-btn flow-also", UI[lang].alsoOn(other.page + 1) + " →");
+        hint.type = "button";
+        hint.addEventListener("click", () => { guidePage = other.page; updateGuide(form, true); });
+        body.append(hint);
+      }
+
+      const more = el("details", "flow-more");
+      more.append(el("summary", null, UI[lang].details));
+      const blocks = el("div", "flow-details");
+      blocks.append(detailBlock("detail-write", UI[lang].write, field.write[lang]));
+      blocks.append(detailBlock("detail-plain", UI[lang].meaning, field.meaning[lang]));
+      if (field.changed) blocks.append(detailBlock("detail-warn", UI[lang].changed, field.changed[lang]));
+      if (field.documents && field.documents[lang].length) blocks.append(detailBlock("detail-plain", UI[lang].documents, field.documents[lang]));
+      if (field.mistakes && field.mistakes[lang].length) blocks.append(detailBlock("detail-danger", UI[lang].mistakes, field.mistakes[lang]));
+      more.append(blocks);
+      body.append(more);
+
+      const actions = el("div", "flow-actions");
+      const prev = el("button", "flow-nav", "← " + UI[lang].prev);
+      prev.type = "button";
+      prev.disabled = j === 0;
+      prev.addEventListener("click", () => goToStep(form, j - 1));
+      const doneBtn = el("button", "box-done" + (isDone ? " is-done" : ""));
+      doneBtn.type = "button";
+      doneBtn.setAttribute("aria-pressed", isDone);
+      doneBtn.append(icon("check", "icon small-icon tick-draw"), el("span", null, isDone ? UI[lang].done : UI[lang].markDone));
+      doneBtn.addEventListener("click", () => {
+        toggleDone(form, j);
+        // After ticking, move on to the next box that isn't done yet.
+        const nowDone = store.get(doneKey(form), []);
+        if (nowDone.includes(j)) {
+          const next = form.fields.findIndex((_, k) => k > j && !nowDone.includes(k));
+          if (next >= 0) goToStep(form, next);
+        }
+      });
+      const next = el("button", "flow-nav", UI[lang].next + " →");
+      next.type = "button";
+      next.disabled = j === total - 1;
+      next.addEventListener("click", () => goToStep(form, j + 1));
+      actions.append(prev, doneBtn, next);
+      body.append(actions);
+      li.append(body);
+    }
+    steps.append(li);
+  });
+
+  if (!scroll) return;
+  // Bring the spotlight into view inside the page frame, and the current step into view.
+  requestAnimationFrame(() => {
+    // The view may have changed in the meantime (another form, language switch): then do nothing.
+    const frame = box.querySelector(".sheet-frame");
+    const inner = box.querySelector(".sheet-inner");
+    const flowBox = box.querySelector(".flow");
+    if (!frame || !inner || !flowBox || box.hidden) return;
+    const s = current.find(sp => sp.page === guidePage);
+    const scrollFrame = () => {
+      if (!frame.isConnected) return;
+      // On phones the page is zoomed in, so scroll sideways to the box too.
+      if (s) frame.scrollTo({
+        top: Math.max(0, (s.y / 100) * inner.offsetHeight - frame.clientHeight * 0.2),
+        left: Math.max(0, (s.x / 100) * inner.offsetWidth - 8),
+        behavior: "smooth"
+      });
+    };
+    if (img.complete) scrollFrame(); else img.addEventListener("load", scrollFrame, { once: true });
+    const active = steps.querySelector(".flow-step.active");
+    if (!active || !active.isConnected) return;
+    if (flowBox.scrollHeight > flowBox.clientHeight + 1) {
+      flowBox.scrollTo({ top: active.offsetTop - 60, behavior: "smooth" }); // wide screens: the step list scrolls by itself
+    } else if (scrollPage) {
+      active.scrollIntoView({ behavior: "smooth", block: "start" }); // phones: scroll the page, below the pinned image
+    }
+  });
+}
+
 function renderForm(form) {
   renderFormHeader(form);
   renderTools(form);
   renderPanel(form);
   renderFields(form);
+  renderViewSwitch(form);
+  renderGuide(form);
+  applyView(form);
 }
 
 function currentForm() {
@@ -637,6 +869,12 @@ function route() {
   if (form) {
     openField = -1;
     panel = null;
+    // Forms with page images open on the form view, at the first box not done yet.
+    const lay = layoutOf(form);
+    view = lay ? "guide" : "list";
+    const doneNow = store.get(doneKey(form), []);
+    guideStep = Math.max(0, form.fields.findIndex((_, i) => !doneNow.includes(i)));
+    guidePage = lay && lay.spots[guideStep] && lay.spots[guideStep][0] ? lay.spots[guideStep][0].page : 0;
     renderForm(form);
     window.scrollTo(0, 0);
     return;

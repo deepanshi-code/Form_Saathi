@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Inter for English, Noto Sans Devanagari for Hindi -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261101-4">
+  <link rel="stylesheet" href="style.css?v=20261101-7">
 </head>
 <body>
   <div class="topbar">
@@ -187,6 +187,9 @@
       </div>
       <div class="wrap">
         <div id="form-panel"></div>
+        <!-- Only for forms with page images: "On the form" (image + steps) or "List of boxes" -->
+        <div id="view-switch" class="view-switch" role="tablist"></div>
+        <section id="guide-view" class="guide" hidden></section>
         <ol id="field-list" class="box-grid"></ol>
       </div>
     </section>
@@ -216,26 +219,27 @@
   </footer>
 
   <!-- Order matters: the registry first, then each form file, then the catalog and the app -->
-  <script src="forms/registry.js?v=20261101-4"></script>
-  <script src="forms/sbi-account-opening.js?v=20261101-4"></script>
-  <script src="forms/pnb-account-opening.js?v=20261101-4"></script>
-  <script src="forms/bob-account-opening.js?v=20261101-4"></script>
-  <script src="forms/hdfc-account-opening.js?v=20261101-4"></script>
-  <script src="forms/post-office-savings.js?v=20261101-4"></script>
-  <script src="forms/pmjdy-account.js?v=20261101-4"></script>
-  <script src="forms/pan-application.js?v=20261101-4"></script>
-  <script src="forms/aadhaar-update.js?v=20261101-4"></script>
-  <script src="forms/voter-id-form-6.js?v=20261101-4"></script>
-  <script src="forms/voter-id-form-8.js?v=20261101-4"></script>
-  <script src="forms/learner-licence.js?v=20261101-4"></script>
-  <script src="forms/passport-fresh.js?v=20261101-4"></script>
-  <script src="forms/uk-income-certificate.js?v=20261101-4"></script>
-  <script src="forms/uk-caste-certificate.js?v=20261101-4"></script>
-  <script src="forms/uk-domicile-certificate.js?v=20261101-4"></script>
-  <script src="forms/nsp-scholarship.js?v=20261101-4"></script>
-  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101-4"></script>
-  <script src="forms/ugc-anti-ragging.js?v=20261101-4"></script>
-  <script src="forms/catalog.js?v=20261101-4"></script>
-  <script src="app.js?v=20261101-4"></script>
+  <script src="forms/registry.js?v=20261101-7"></script>
+  <script src="forms/sbi-account-opening.js?v=20261101-7"></script>
+  <script src="forms/pnb-account-opening.js?v=20261101-7"></script>
+  <script src="forms/bob-account-opening.js?v=20261101-7"></script>
+  <script src="forms/hdfc-account-opening.js?v=20261101-7"></script>
+  <script src="forms/post-office-savings.js?v=20261101-7"></script>
+  <script src="forms/pmjdy-account.js?v=20261101-7"></script>
+  <script src="forms/pan-application.js?v=20261101-7"></script>
+  <script src="forms/aadhaar-update.js?v=20261101-7"></script>
+  <script src="forms/voter-id-form-6.js?v=20261101-7"></script>
+  <script src="forms/voter-id-form-8.js?v=20261101-7"></script>
+  <script src="forms/learner-licence.js?v=20261101-7"></script>
+  <script src="forms/passport-fresh.js?v=20261101-7"></script>
+  <script src="forms/uk-income-certificate.js?v=20261101-7"></script>
+  <script src="forms/uk-caste-certificate.js?v=20261101-7"></script>
+  <script src="forms/uk-domicile-certificate.js?v=20261101-7"></script>
+  <script src="forms/nsp-scholarship.js?v=20261101-7"></script>
+  <script src="forms/pm-vidyalaxmi-loan.js?v=20261101-7"></script>
+  <script src="forms/ugc-anti-ragging.js?v=20261101-7"></script>
+  <script src="forms/catalog.js?v=20261101-7"></script>
+  <script src="forms/layout.js?v=20261101-7"></script>
+  <script src="app.js?v=20261101-7"></script>
 </body>
 </html>
