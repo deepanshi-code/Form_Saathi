@@ -10,9 +10,6 @@ const UI = {
     eyebrow: "Free · English & हिंदी · Checked against official sources",
     cta: "Find your form",
     findBtn: "Find form →",
-    previewEyebrow: "See it in action",
-    previewTitle: "The real form. One box at a time.",
-    previewSub: "We spotlight the exact box on the official form and tell you what to write in it.",
     previewCaption: "Open the PAN card guide →",
     catEyebrow: "Browse",
     changesEyebrow: "Changed recently",
@@ -96,9 +93,6 @@ const UI = {
     eyebrow: "मुफ़्त · हिंदी और English · आधिकारिक स्रोतों से जाँचा गया",
     cta: "अपना फॉर्म खोजें",
     findBtn: "फॉर्म खोजें →",
-    previewEyebrow: "ऐसे काम करता है",
-    previewTitle: "असली फॉर्म। एक-एक खाना करके।",
-    previewSub: "हम आधिकारिक फॉर्म पर ठीक वही खाना चमकाकर दिखाते हैं, और बताते हैं कि उसमें क्या लिखना है।",
     previewCaption: "पैन कार्ड गाइड खोलें →",
     catEyebrow: "फॉर्म देखें",
     changesEyebrow: "हाल में बदला",
@@ -398,7 +392,9 @@ function renderPreview() {
 
   const steps = $("mock-steps");
   steps.replaceChildren(el("span", "mock-count", UI[lang].stepOf(step + 1, form.fields.length)));
-  form.fields.slice(0, 5).forEach((f, i) => {
+  // Show the step before, the current step and the one after
+  form.fields.slice(step - 1, step + 2).forEach((f, k) => {
+    const i = step - 1 + k;
     const row = el("span", "mock-step" + (i < step ? " done" : "") + (i === step ? " active" : ""));
     row.append(el("i", null, i < step ? "✓" : String(i + 1)));
     const text = el("span", "mock-text");
@@ -410,14 +406,15 @@ function renderPreview() {
   positionMock();
 }
 
-// Shift the zoomed page so the spotlighted box sits near the top of the preview window.
+// Shift the zoomed page so the spotlighted box sits near the top left of the preview window.
 function positionMock() {
   const img = $("mock-img");
   const place = () => {
     const inner = $("mock-inner");
     const spot = $("mock-spot");
-    const target = spot.offsetTop - inner.parentElement.clientHeight * 0.35;
-    inner.style.transform = `translateY(${-Math.max(0, target)}px)`;
+    const target = spot.offsetTop - inner.parentElement.clientHeight * 0.4;
+    const left = Math.max(0, spot.offsetLeft - 12);
+    inner.style.transform = `translate(${-left}px, ${-Math.max(0, target)}px)`;
   };
   if (img.complete) place(); else img.addEventListener("load", place, { once: true });
 }
@@ -966,7 +963,6 @@ function currentForm() {
 function route() {
   const form = currentForm();
   $("list-view").hidden = Boolean(form);
-  document.body.classList.toggle("is-home", !form); // the dark landing style applies to home only
   $("form-view").hidden = !form;
 
   if (form) {
