@@ -1,0 +1,245 @@
+// Checked against these official Uttarakhand Police / Government of Uttarakhand documents:
+// 1. "About Tenant/PG Verification", Uttarakhand Police Citizen Portal (CCTNS),
+//    https://policecitizenportal.uk.gov.in/Citizen/AboutTenant.aspx (read 05-11-2026; page shows no date).
+// 2. "Citizen Registration" page of the same portal,
+//    https://policecitizenportal.uk.gov.in/Citizen/SignUp.aspx?Mode=Q3JlYXRl (read 05-11-2026): every box
+//    and drop-down list of the one-time account form.
+// 3. "पुलिस विभाग उत्तराखण्ड नागरिक अधिकार-पत्र (Citizen Charter)", 37-page PDF linked from the portal's
+//    login page, https://policecitizenportal.uk.gov.in/Citizen/CITIZAN%20CHARTER.pdf (no date printed;
+//    PDF file created 14-09-2026). Table of services under the Uttarakhand Right to Service Act, 2011:
+//    items 11 and 13 (tenant verification), designated officer, time limit and appeal officers.
+// 4. The Uttarakhand Police Act, 2007 (Act No. 01 of 2008, as amended by Act No. 27 of 2018), English text
+//    published on a Government of Uttarakhand S3WaaS website (file uploaded 25-03-2025):
+//    https://cdnbbsr.s3waas.gov.in/s3bc7f621451b4f5df308a8e098112185d/uploads/2025/03/20250325188535390.pdf
+//    Section 52(3) and section 83.
+// The tenant request form itself opens only after logging in, so its boxes could not be seen. No official
+// paper form, fee, or document list for tenant verification was found on uttarakhandpolice.uk.gov.in or the
+// portal. News reports of 2025-2026 verification drives were not used; no official order text was found.
+
+window.FORMS.push({
+  id: "uk-tenant-verification",
+  verified: false,
+  source: {
+    title: "Uttarakhand Police Citizen Portal (CCTNS): \"About Tenant/PG Verification\" and \"Citizen Registration\" pages (read 05-11-2026), with the Uttarakhand Police Citizen Charter PDF and the Uttarakhand Police Act, 2007",
+    url: "https://policecitizenportal.uk.gov.in/Citizen/AboutTenant.aspx"
+  },
+  caution: {
+    en: "Tenant verification in Uttarakhand is an online request on the Uttarakhand Police Citizen Portal. The request form opens only after you log in, so this guide could not check its exact boxes. It explains the account form (checked box by box) and what the official pages say the request must contain. No official fee, document list or paper form was found. Ask at the police station (thana) of the area where the house is.",
+    hi: "उत्तराखंड में किरायेदार सत्यापन उत्तराखंड पुलिस के सिटिज़न पोर्टल पर ऑनलाइन अनुरोध से होता है। अनुरोध वाला फॉर्म लॉग-इन के बाद ही खुलता है, इसलिए इसके सारे खाने हम जाँच नहीं पाए। यह गाइड खाता बनाने वाला फॉर्म (हर खाना जाँचा गया) और आधिकारिक पेजों के अनुसार अनुरोध में क्या भरना है, बताती है। कोई आधिकारिक फ़ीस, दस्तावेज़ों की सूची या काग़ज़ी फॉर्म नहीं मिला। मकान जिस इलाके में है, वहाँ के थाने पर पूछें।"
+  },
+  lastChecked: "2026-11-05",
+
+  category: { en: "Uttarakhand", hi: "उत्तराखंड" },
+  name: { en: "Tenant Verification (Uttarakhand Police)", hi: "किरायेदार सत्यापन (उत्तराखंड पुलिस)" },
+  about: {
+    en: "Police verification of a tenant (kirayedar) or PG resident. Uttarakhand Police offers it online as \"Tenant/PG Verification Request\" on its Citizen Portal (policecitizenportal.uk.gov.in). You make an account once, upload your photo and ID and address proofs to your profile, then fill the request with personal details, address, contact number and tenant details. Students renting a room or PG are tenants too. The police Citizen Charter gives the police station in-charge 15 days if the tenant is from within Uttarakhand and 60 days if from outside.",
+    hi: "किरायेदार या PG में रहने वाले का पुलिस सत्यापन। उत्तराखंड पुलिस इसे अपने सिटिज़न पोर्टल (policecitizenportal.uk.gov.in) पर \"Tenant/PG Verification Request\" नाम से ऑनलाइन देती है। एक बार खाता बनाइए, प्रोफ़ाइल में अपनी फ़ोटो, पहचान और पते का प्रमाण अपलोड कीजिए, फिर अनुरोध में अपनी जानकारी, पता, मोबाइल नंबर और किरायेदार की जानकारी भरिए। कमरा या PG किराये पर लेने वाले छात्र भी किरायेदार ही हैं। पुलिस के नागरिक अधिकार-पत्र के अनुसार थाना प्रभारी को उत्तराखंड के अंदर के किरायेदार के लिए 15 दिन और बाहर के किरायेदार के लिए 60 दिन मिलते हैं।"
+  },
+
+  fields: [
+    {
+      label: { en: "Who must get it done (the law)", hi: "यह किसे करवाना है (क़ानून)" },
+      quick: { en: "House owner gives tenant details to police; ask your thana", hi: "मकान मालिक पुलिस को किरायेदार की जानकारी दे; थाने पर पूछें" },
+      meaning: {
+        en: "Section 52(3) of the Uttarakhand Police Act, 2007 says the Superintendent of Police may, by an order published in prominent local newspapers, require every owner of a household, shop or public premises to give details of a tenant or domestic help \"in the specified format\". Section 83 says anyone not following such an order can be prosecuted and fined up to Rs. 10,000, and the offence may be settled on the spot by depositing half of that maximum at the police station.",
+        hi: "उत्तराखंड पुलिस अधिनियम, 2007 की धारा 52(3) के अनुसार पुलिस अधीक्षक बड़े स्थानीय अख़बारों में आदेश छपवाकर हर मकान, दुकान या सार्वजनिक जगह के मालिक से किरायेदार या घरेलू नौकर की जानकारी तय फ़ॉर्मेट में माँग सकते हैं। धारा 83 के अनुसार ऐसा आदेश न मानने पर मुक़दमा चल सकता है और 10,000 रुपये तक जुर्माना हो सकता है; थाने पर इसका आधा जमा करके मामला मौके पर निपटाया भी जा सकता है।"
+      },
+      write: {
+        en: "The duty in the Act is on the owner. The exact format and order for your district are set by the SP, so ask at the police station of the area where the house is. If you are a student or tenant, give your landlord your correct details and ask for the Service Request No. once the request is made.",
+        hi: "क़ानून में यह ज़िम्मेदारी मकान मालिक की है। आपके ज़िले का फ़ॉर्मेट और आदेश पुलिस अधीक्षक तय करते हैं, इसलिए मकान वाले इलाके के थाने पर पूछें। अगर आप छात्र या किरायेदार हैं, तो मकान मालिक को अपनी सही जानकारी दें और अनुरोध होने पर उनसे सर्विस रिक्वेस्ट नंबर ले लें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Letting out a room without police verification", "Tenant assuming the owner has done it without seeing a Service Request No."],
+        hi: ["बिना पुलिस सत्यापन के कमरा किराये पर दे देना", "सर्विस रिक्वेस्ट नंबर देखे बिना किरायेदार का मान लेना कि मालिक ने सत्यापन करा दिया है"]
+      }
+    },
+    {
+      label: { en: "Name and gender (account form)", hi: "नाम और लिंग (खाता फॉर्म)" },
+      quick: { en: "First name, middle and last name; pick your gender", hi: "पहला नाम, बीच का और आख़िरी नाम लिखें; लिंग चुनें" },
+      meaning: {
+        en: "To use any service you first register on the portal, once. The \"Citizen Registration\" form starts with Personal Details: First Name (required), Middle Name, Last Name, and Gender (required). Gender choices are Female, Male, Transgender and Unknown.",
+        hi: "कोई भी सेवा लेने के लिए पहले पोर्टल पर एक बार रजिस्टर करना होता है। \"Citizen Registration\" फॉर्म में सबसे पहले Personal Details हैं: First Name (ज़रूरी), Middle Name, Last Name और Gender (ज़रूरी)। Gender में Female, Male, Transgender और Unknown के विकल्प हैं।"
+      },
+      write: {
+        en: "Write your name split into first, middle and last name, the same way it is on the ID you will give. Boxes marked * must be filled.",
+        hi: "अपना नाम पहले, बीच के और आख़िरी नाम में बाँटकर लिखें, ठीक वैसे जैसे उस पहचान पत्र में है जो आप देंगे। जिन खानों पर * लगा है, वे भरने ज़रूरी हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the full name in the First Name box", "Name spelling different from the ID"],
+        hi: ["पूरा नाम First Name वाले खाने में ही लिख देना", "नाम की स्पेलिंग पहचान पत्र से अलग होना"]
+      }
+    },
+    {
+      label: { en: "Mobile, landline and email", hi: "मोबाइल, लैंडलाइन और ईमेल" },
+      quick: { en: "Your own working mobile number and email ID", hi: "अपना चालू मोबाइल नंबर और ईमेल ID लिखें" },
+      meaning: {
+        en: "Mobile Number and Email ID are required on the registration form; Landline No. is optional. The portal says that after you submit a request it alerts you by SMS and email with the Service Request No.",
+        hi: "रजिस्ट्रेशन फॉर्म में Mobile Number और Email ID ज़रूरी हैं; Landline No. ज़रूरी नहीं। पोर्टल के अनुसार अनुरोध जमा करने के बाद SMS और ईमेल पर सर्विस रिक्वेस्ट नंबर आता है।"
+      },
+      write: {
+        en: "Give a mobile number and email you check yourself, because the Service Request No. comes there. Leave Landline No. blank if you have none.",
+        hi: "ऐसा मोबाइल नंबर और ईमेल दें जो आप ख़ुद देखते हों, क्योंकि सर्विस रिक्वेस्ट नंबर वहीं आएगा। लैंडलाइन न हो तो वह खाना खाली छोड़ दें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a number or email you cannot access", "Typing error in the email ID"],
+        hi: ["ऐसा नंबर या ईमेल देना जो आपके पास न हो", "ईमेल ID में टाइपिंग की ग़लती"]
+      }
+    },
+    {
+      label: { en: "Identification Type and ID No.", hi: "पहचान पत्र का प्रकार और नंबर" },
+      quick: { en: "Choose one ID (e.g. Aadhaar) and type its number", hi: "एक पहचान पत्र (जैसे Aadhaar) चुनें और उसका नंबर लिखें" },
+      meaning: {
+        en: "Both are required. The list offers Aadhaar Number, Arms License, Driving License, Income Tax (PAN) Card, Passport, Ration Card and Voter Card.",
+        hi: "दोनों ज़रूरी हैं। सूची में Aadhaar Number, Arms License, Driving License, Income Tax (PAN) Card, Passport, Ration Card और Voter Card हैं।"
+      },
+      write: {
+        en: "Pick the ID you have with you and type its number exactly. Keep the same ID ready to upload as identity proof in your profile.",
+        hi: "जो पहचान पत्र आपके पास है, वह चुनें और उसका नंबर बिल्कुल सही लिखें। यही पहचान पत्र प्रोफ़ाइल में पहचान प्रमाण के रूप में अपलोड करने के लिए तैयार रखें।"
+      },
+      documents: { en: ["One ID from the list (for its number)"], hi: ["सूची में से कोई एक पहचान पत्र (नंबर के लिए)"] },
+      mistakes: {
+        en: ["Choosing one ID type and typing the number of another", "Missing or extra digits"],
+        hi: ["एक पहचान पत्र चुनकर दूसरे का नंबर लिख देना", "अंक छूट जाना या ज़्यादा लग जाना"]
+      }
+    },
+    {
+      label: { en: "Age Panel (date of birth or age)", hi: "उम्र (जन्म तिथि या उम्र)" },
+      quick: { en: "Give date of birth if known; else year or age", hi: "जन्म तिथि पता हो तो वही दें; नहीं तो साल या उम्र" },
+      meaning: {
+        en: "The Age Panel is required. It has four ways to give your age: Date of Birth, Year of birth, Age (Year/Month), or Age Range (From-To).",
+        hi: "Age Panel ज़रूरी है। इसमें उम्र बताने के चार तरीके हैं: Date of Birth, Year of birth, Age (Year/Month), या Age Range (From-To)।"
+      },
+      write: {
+        en: "If you know your date of birth, fill Date of Birth as on your ID. The form does not say which option to prefer, so use the most exact one you can.",
+        hi: "अगर जन्म तिथि पता है तो Date of Birth में पहचान पत्र जैसी ही तारीख़ भरें। फॉर्म में यह नहीं लिखा कि कौन-सा विकल्प बेहतर है, इसलिए जितना सटीक दे सकें, वही दें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Date of birth different from the ID"],
+        hi: ["जन्म तिथि पहचान पत्र से अलग होना"]
+      }
+    },
+    {
+      label: { en: "Present Address", hi: "वर्तमान पता (Present Address)" },
+      quick: { en: "Where you live now; country, state, district, town required", hi: "अभी जहाँ रहते हैं; देश, राज्य, ज़िला, शहर/गाँव ज़रूरी" },
+      meaning: {
+        en: "Boxes: House No., Street Name, Colony / Locality / Area, Village/Town/City (required), Tehsil / Block / Mandal, Country (required), State (required), District (required), Police Station, and Pincode. The District list on the form shows Uttarakhand's 13 districts and \"GRP\" (railway police).",
+        hi: "खाने: House No., Street Name, Colony / Locality / Area, Village/Town/City (ज़रूरी), Tehsil / Block / Mandal, Country (ज़रूरी), State (ज़रूरी), District (ज़रूरी), Police Station और Pincode। फॉर्म की District सूची में उत्तराखंड के 13 ज़िले और \"GRP\" (रेलवे पुलिस) दिखते हैं।"
+      },
+      write: {
+        en: "Fill the address where you live now. Choose the Police Station of that area from the list after picking the district.",
+        hi: "जहाँ अभी रहते हैं, वह पता भरें। ज़िला चुनने के बाद सूची से उसी इलाके का थाना चुनें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Choosing the wrong district or police station", "Leaving Village/Town/City blank"],
+        hi: ["ग़लत ज़िला या थाना चुन लेना", "Village/Town/City खाली छोड़ देना"]
+      }
+    },
+    {
+      label: { en: "Permanent Address", hi: "स्थायी पता (Permanent Address)" },
+      quick: { en: "Choose Yes if same as present; else fill home address", hi: "वर्तमान जैसा हो तो Yes चुनें; नहीं तो घर का पता भरें" },
+      meaning: {
+        en: "There is a \"Same for Permanent\" choice (Yes / No). The Permanent Address has the same boxes as the Present Address, with Country, State, District and Village/Town/City required.",
+        hi: "\"Same for Permanent\" में Yes / No चुनना होता है। Permanent Address में भी वर्तमान पते जैसे ही खाने हैं; Country, State, District और Village/Town/City ज़रूरी हैं।"
+      },
+      write: {
+        en: "If you live at your permanent home, choose Yes. A student or worker from another town or state chooses No and writes the home address.",
+        hi: "अगर आप अपने स्थायी घर में ही रहते हैं तो Yes चुनें। दूसरे शहर या राज्य से आए छात्र या कर्मचारी No चुनकर अपने घर का पता लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Choosing Yes when you have come from another place"],
+        hi: ["बाहर से आए हों फिर भी Yes चुन लेना"]
+      }
+    },
+    {
+      label: { en: "Login details (Login Id, password, security questions)", hi: "लॉग-इन जानकारी (Login Id, पासवर्ड, सुरक्षा प्रश्न)" },
+      quick: { en: "Make your own Login Id and password; add two questions", hi: "अपनी Login Id और पासवर्ड बनाएँ; दो सुरक्षा प्रश्न जोड़ें" },
+      meaning: {
+        en: "Required: Login Id, Password, Confirm Password, and two security questions with answers (\"Please add two security questions\"). The page notes that characters are case sensitive.",
+        hi: "ज़रूरी: Login Id, Password, Confirm Password, और जवाब के साथ दो सुरक्षा प्रश्न (\"Please add two security questions\")। पेज पर लिखा है कि अक्षर छोटे-बड़े (case) के हिसाब से अलग माने जाते हैं।"
+      },
+      write: {
+        en: "Create the account yourself and keep the password private. Pick two questions whose answers you will remember, and note capital and small letters exactly.",
+        hi: "खाता ख़ुद बनाएँ और पासवर्ड किसी को न बताएँ। ऐसे दो प्रश्न चुनें जिनके जवाब आपको याद रहें, और बड़े-छोटे अक्षर ठीक वैसे ही लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Sharing your password with an agent or shopkeeper", "Forgetting capital letters in the password"],
+        hi: ["पासवर्ड किसी एजेंट या दुकान वाले को बता देना", "पासवर्ड के बड़े अक्षर भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Profile: photo, identity proof, address proof", hi: "प्रोफ़ाइल: फ़ोटो, पहचान प्रमाण, पते का प्रमाण" },
+      quick: { en: "After login, upload your photo, ID proof and address proof", hi: "लॉग-इन के बाद अपनी फ़ोटो, पहचान और पते का प्रमाण अपलोड करें" },
+      meaning: {
+        en: "The portal says: after logging in, update your profile immediately and upload your photo, identity proof, address proof etc. \"for all services and for future references\".",
+        hi: "पोर्टल के अनुसार लॉग-इन के बाद तुरंत प्रोफ़ाइल अपडेट करें और अपनी फ़ोटो, पहचान प्रमाण, पते का प्रमाण आदि अपलोड करें, जो सभी सेवाओं और आगे के काम आएँगे।"
+      },
+      write: {
+        en: "Upload clear scans before making the request. File size and format rules are not given on the public pages, so follow what the upload screen says. Which tenant documents the police want is also not listed, so ask at the thana.",
+        hi: "अनुरोध करने से पहले साफ़ स्कैन अपलोड करें। फ़ाइल का साइज़ और फ़ॉर्मेट सार्वजनिक पेजों पर नहीं लिखा, इसलिए अपलोड वाली स्क्रीन जो कहे, वही करें। किरायेदार के कौन-से काग़ज़ पुलिस चाहती है, यह भी नहीं लिखा, इसलिए थाने पर पूछें।"
+      },
+      documents: { en: ["Your photo", "Identity proof", "Address proof"], hi: ["अपनी फ़ोटो", "पहचान प्रमाण", "पते का प्रमाण"] },
+      mistakes: {
+        en: ["Skipping the profile uploads and going straight to the request", "Blurred or cut scans"],
+        hi: ["प्रोफ़ाइल में अपलोड किए बिना सीधे अनुरोध पर चले जाना", "धुंधले या कटे हुए स्कैन"]
+      }
+    },
+    {
+      label: { en: "Tenant/PG Verification Request form", hi: "किरायेदार/PG सत्यापन अनुरोध फॉर्म" },
+      quick: { en: "Fill every * box: your details, address, phone, tenant details", hi: "हर * वाला खाना भरें: अपनी जानकारी, पता, फ़ोन, किरायेदार की जानकारी" },
+      meaning: {
+        en: "Choose \"Tenant/PG Verification Request\" under Citizen Services. The portal says to fill at least all mandatory fields (*) along with personal details, address, contact number and tenant details. The individual boxes of this form are not shown publicly.",
+        hi: "Citizen Services में \"Tenant/PG Verification Request\" चुनें। पोर्टल के अनुसार कम से कम सभी ज़रूरी खाने (*) भरें, साथ में अपनी जानकारी, पता, संपर्क नंबर और किरायेदार की जानकारी। इस फॉर्म के अलग-अलग खाने सार्वजनिक रूप से नहीं दिखाए गए हैं।"
+      },
+      write: {
+        en: "Before you start, collect the tenant's details from the tenant's own ID and address proof, so names and numbers match. If a box is unclear, ask at the thana of the house's area.",
+        hi: "शुरू करने से पहले किरायेदार की जानकारी उसके अपने पहचान पत्र और पते के प्रमाण से लें, ताकि नाम और नंबर मेल खाएँ। कोई खाना समझ न आए तो मकान वाले इलाके के थाने पर पूछें।"
+      },
+      documents: { en: ["Tenant's ID and address details"], hi: ["किरायेदार के पहचान पत्र और पते की जानकारी"] },
+      mistakes: {
+        en: ["Filling tenant details from memory instead of the tenant's ID", "Leaving a * box empty"],
+        hi: ["किरायेदार के पहचान पत्र की जगह याद से जानकारी भरना", "किसी * वाले खाने को खाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "Check, submit and keep the Service Request No.", hi: "जाँचें, जमा करें और सर्विस रिक्वेस्ट नंबर रखें" },
+      quick: { en: "Check carefully; after submitting you cannot edit. Print the copy", hi: "ध्यान से जाँचें; जमा करने के बाद बदल नहीं सकते। प्रिंट रखें" },
+      meaning: {
+        en: "The portal says: verify the request before submitting, because once you submit it \"will not be editable\". After submission you get an SMS and email with the Service Request No. Take a system-generated print copy for future reference.",
+        hi: "पोर्टल के अनुसार जमा करने से पहले अनुरोध जाँच लें, क्योंकि जमा होने के बाद इसे बदला नहीं जा सकता। जमा करने पर SMS और ईमेल से सर्विस रिक्वेस्ट नंबर आता है। आगे के लिए सिस्टम से बनी प्रिंट कॉपी ले लें।"
+      },
+      write: {
+        en: "Read every entry once more, then submit. Save the Service Request No. and the printout; give the tenant a copy of the number too.",
+        hi: "हर जानकारी एक बार फिर पढ़ें, फिर जमा करें। सर्विस रिक्वेस्ट नंबर और प्रिंट संभालकर रखें; किरायेदार को भी नंबर दे दें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Submitting without checking (it cannot be edited later)", "Not saving the Service Request No."],
+        hi: ["बिना जाँचे जमा कर देना (बाद में बदल नहीं सकते)", "सर्विस रिक्वेस्ट नंबर सँभालकर न रखना"]
+      }
+    },
+    {
+      label: { en: "Time limit, fee and complaint if delayed", hi: "समय-सीमा, फ़ीस और देरी होने पर शिकायत" },
+      quick: { en: "15 days (within state), 60 days (outside); ask fee at thana", hi: "15 दिन (राज्य के अंदर), 60 दिन (बाहर); फ़ीस थाने पर पूछें" },
+      meaning: {
+        en: "The police Citizen Charter, under the Uttarakhand Right to Service Act, 2011, lists tenant verification with the police station in-charge (प्रभारी थानाध्यक्ष) as the officer: 15 days if the tenant is from within the state, 60 days if from outside. A separate entry gives 15 days for tenant / servant verification if they are residents of the local area. The first appeal goes to the Circle Officer (क्षेत्राधिकारी) and the second to the Uttarakhand Right to Service Commission. The mode is shown as online.",
+        hi: "उत्तराखंड सेवा का अधिकार अधिनियम, 2011 के तहत पुलिस के नागरिक अधिकार-पत्र में किरायेदार सत्यापन के लिए अधिकारी प्रभारी थानाध्यक्ष हैं: किरायेदार प्रदेश के अंदर का हो तो 15 दिन, बाहर का हो तो 60 दिन। एक अलग पंक्ति में लिखा है कि किरायेदार / नौकर स्थानीय क्षेत्र के निवासी हों तो 15 दिन। पहली अपील क्षेत्राधिकारी को और दूसरी उत्तराखंड सेवा का अधिकार आयोग को होती है। माध्यम ऑनलाइन लिखा है।"
+      },
+      write: {
+        en: "Count the days from your Service Request No. If it is late, the appeal goes first to the Circle Officer. No fee is stated in the official pages we found, so ask at the thana.",
+        hi: "दिन सर्विस रिक्वेस्ट नंबर मिलने से गिनें। देर हो तो पहली अपील क्षेत्राधिकारी को होती है। हमें मिले आधिकारिक पेजों में कोई फ़ीस नहीं लिखी, इसलिए थाने पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Paying an agent without asking the thana about any fee"],
+        hi: ["थाने से फ़ीस पूछे बिना किसी एजेंट को पैसे दे देना"]
+      }
+    }
+  ]
+});

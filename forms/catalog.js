@@ -38,7 +38,8 @@ window.CATALOG = {
   "uk-marriage-registration": { icon: "certificate", short: { en: "Marriage registration", hi: "विवाह पंजीकरण" } },
   "name-change-gazette":     { icon: "certificate", short: { en: "Name change (Gazette)", hi: "नाम बदलना (गज़ट)" } },
   "sbi-kyc-update":          { icon: "bank",        short: { en: "Bank KYC update (SBI)", hi: "बैंक केवाईसी अपडेट (एसबीआई)" } },
-  "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } }
+  "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } },
+  "uk-tenant-verification":  { icon: "shield",      short: { en: "Tenant police verification", hi: "किरायेदार पुलिस सत्यापन" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
@@ -58,7 +59,7 @@ window.LIFE = [
   { icon: "cap",       title: { en: "Going to college",              hi: "कॉलेज में दाख़िला" },
     forms: ["nsp-scholarship", "pm-vidyalaxmi-loan", "ugc-anti-ragging", "uk-income-certificate", "uk-caste-certificate", "uk-domicile-certificate", "uk-tenant-verification"] },
   { icon: "briefcase", title: { en: "Starting my first job",         hi: "पहली नौकरी की शुरुआत" },
-    forms: ["epf-form-11", "pan-application", "sbi-account-opening", "bank-nomination-da1", "uk-character-certificate"] },
+    forms: ["epf-form-11", "pan-application", "sbi-account-opening", "bank-nomination-da1"] },
   { icon: "exit",      title: { en: "Leaving or changing a job",     hi: "नौकरी छोड़ना या बदलना" },
     forms: ["epf-composite-claim", "epf-form-11", "form-15g"] },
   { icon: "heart",     title: { en: "Getting married",               hi: "शादी" },
