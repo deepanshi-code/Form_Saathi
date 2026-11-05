@@ -36,7 +36,9 @@ window.CATALOG = {
   "sbi-neft-rtgs":           { icon: "bank",        short: { en: "Send money: NEFT/RTGS (SBI)", hi: "पैसे भेजें: NEFT/RTGS (एसबीआई)" } },
   "uk-ration-card":          { icon: "home",        short: { en: "Ration card",         hi: "राशन कार्ड" } },
   "uk-marriage-registration": { icon: "certificate", short: { en: "Marriage registration", hi: "विवाह पंजीकरण" } },
-  "name-change-gazette":     { icon: "certificate", short: { en: "Name change (Gazette)", hi: "नाम बदलना (गज़ट)" } }
+  "name-change-gazette":     { icon: "certificate", short: { en: "Name change (Gazette)", hi: "नाम बदलना (गज़ट)" } },
+  "sbi-kyc-update":          { icon: "bank",        short: { en: "Bank KYC update (SBI)", hi: "बैंक केवाईसी अपडेट (एसबीआई)" } },
+  "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
