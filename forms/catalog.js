@@ -28,7 +28,9 @@ window.CATALOG = {
   "pan-correction":          { icon: "card",        short: { en: "PAN correction",       hi: "पैन में सुधार" } },
   "death-registration":      { icon: "certificate", short: { en: "Death registration",   hi: "मृत्यु पंजीकरण" } },
   "bank-nomination-da1":     { icon: "bank",        short: { en: "Bank nominee form",    hi: "बैंक नॉमिनी फॉर्म" } },
-  "sukanya-samriddhi":       { icon: "post",        short: { en: "Sukanya Samriddhi",    hi: "सुकन्या समृद्धि" } }
+  "sukanya-samriddhi":       { icon: "post",        short: { en: "Sukanya Samriddhi",    hi: "सुकन्या समृद्धि" } },
+  "voter-id-form-7":         { icon: "ballot",      short: { en: "Remove name from voter list", hi: "मतदाता सूची से नाम हटाना" } },
+  "voter-id-form-6b":        { icon: "ballot",      short: { en: "Link Aadhaar to voter ID", hi: "वोटर आईडी से आधार जोड़ना" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.

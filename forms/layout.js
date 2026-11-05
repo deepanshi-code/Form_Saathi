@@ -5,7 +5,7 @@
 // Page images were rendered from the official PDF linked as each form's `source`.
 // Other forms add themselves from their own files in forms/layout/ (one file per form),
 // loaded only when that form is opened. List every such form here.
-window.LAYOUT_FILES = ["voter-id-form-6", "voter-id-form-8", "aadhaar-update", "learner-licence", "sbi-account-opening", "pnb-account-opening", "hdfc-account-opening", "post-office-savings", "bob-account-opening", "pmjdy-account", "uk-caste-certificate", "uk-domicile-certificate", "canara-account-opening", "birth-registration", "lpg-kyc", "form-15g", "driving-licence", "epf-composite-claim", "pan-correction", "death-registration", "bank-nomination-da1", "sukanya-samriddhi"];
+window.LAYOUT_FILES = ["voter-id-form-6", "voter-id-form-8", "aadhaar-update", "learner-licence", "sbi-account-opening", "pnb-account-opening", "hdfc-account-opening", "post-office-savings", "bob-account-opening", "pmjdy-account", "uk-caste-certificate", "uk-domicile-certificate", "canara-account-opening", "birth-registration", "lpg-kyc", "form-15g", "driving-licence", "epf-composite-claim", "pan-correction", "death-registration", "bank-nomination-da1", "sukanya-samriddhi", "voter-id-form-7", "voter-id-form-6b"];
 window.LAYOUT = window.LAYOUT || {};
 Object.assign(window.LAYOUT, {
   "pan-application": {
