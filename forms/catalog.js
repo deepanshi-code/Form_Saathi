@@ -26,7 +26,9 @@ window.CATALOG = {
   "driving-licence":         { icon: "car",         short: { en: "Driving licence",      hi: "ड्राइविंग लाइसेंस" } },
   "epf-composite-claim":     { icon: "rupee",       short: { en: "PF withdrawal (EPF)",  hi: "पीएफ निकासी (EPF)" } },
   "pan-correction":          { icon: "card",        short: { en: "PAN correction",       hi: "पैन में सुधार" } },
-  "death-registration":      { icon: "certificate", short: { en: "Death registration",   hi: "मृत्यु पंजीकरण" } }
+  "death-registration":      { icon: "certificate", short: { en: "Death registration",   hi: "मृत्यु पंजीकरण" } },
+  "bank-nomination-da1":     { icon: "bank",        short: { en: "Bank nominee form",    hi: "बैंक नॉमिनी फॉर्म" } },
+  "sukanya-samriddhi":       { icon: "post",        short: { en: "Sukanya Samriddhi",    hi: "सुकन्या समृद्धि" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
