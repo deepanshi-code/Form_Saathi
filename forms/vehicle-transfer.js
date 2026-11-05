@@ -1,0 +1,325 @@
+// Checked against these official documents (all read on 2026-11-05):
+// 1. Form 29 [Refer Rule 55(1)] "Notice of Transfer of Ownership of a Motor Vehicle", Central Motor Vehicles Rules,
+//    1989 (PDF made 03-04-2023, parivahan.gov.in "Downloadable Forms",
+//    https://parivahan.gov.in/sites/default/files/DownloadForm/cmvr/FORM-29.pdf).
+// 2. Form 30 [Refer Rule 55(2) and (3)] "Application for Intimation and Transfer of Ownership of Motor Vehicle",
+//    two pages, with the financier's consent (PDF made 03-04-2023,
+//    https://parivahan.gov.in/sites/default/files/DownloadForm/cmvr/FORM-30.pdf). The page images are from 1 and 2.
+// 3. parivahan.gov.in "Downloadable Forms" list (https://parivahan.gov.in/en/forms-all): still lists Form 29 and
+//    Form 30 as separate forms, next to Forms 29C/29D (authorised dealers), 31 (death) and 32 (auction).
+// 4. parivahan.gov.in "Transfer Of Ownership" page (https://parivahan.gov.in/en/content/ownership-transfer, site
+//    "last updated on: October 8, 2026") and the mParivahan "Transfer of Ownership" page
+//    (https://mparivahan.parivahan.gov.in/mstatic/english/rc-info-ownership.html): time limits, Document A / B lists,
+//    fee "as specified in rule 81", references to section 50 of the Motor Vehicles Act and rules 55-57.
+// 5. PIB release "Government of India Amends Central Motor Vehicles Rules to Strengthen User Fee Payments",
+//    Ministry of Road Transport & Highways, 20-01-2026 (Release ID 2216507,
+//    https://www.pib.gov.in/PressReleasePage.aspx?PRID=2216507): Central Motor Vehicles (Second Amendment) Rules, 2026.
+// Every statement below comes from these documents. If something is not stated in them, the guide says
+// "ask at your RTO" instead of guessing. No fee amounts are given: the official pages only say "rule 81" and do
+// not show dated amounts, and states may charge differently.
+
+window.FORMS.push({
+  id: "vehicle-transfer",
+  verified: true,
+  source: {
+    title: "Form 29 (Notice of Transfer of Ownership) and Form 30 (Application for Intimation and Transfer of Ownership), Central Motor Vehicles Rules, 1989, parivahan.gov.in, PDFs made 03-04-2023; with parivahan.gov.in 'Transfer Of Ownership' page and PIB release of 20-01-2026",
+    url: "https://parivahan.gov.in/en/content/ownership-transfer"
+  },
+  caution: {
+    en: "The official Form 29 and Form 30 files on parivahan.gov.in are from April 2023, and they are still two separate forms in the official list; we found no notified change that merges them. From 20 January 2026 (Central Motor Vehicles (Second Amendment) Rules, 2026), a No Objection Certificate (NOC) for transfer of ownership or for moving a vehicle to another State is not given until any unpaid National Highway toll (user fee) recorded against the vehicle is paid. Some documents are needed only \"in some states\", and the fee is as per rule 81 and your State. Ask at your RTO which documents and fee apply, and whether you can apply online through Parivahan's vehicle services (Vahan) in your State.",
+    hi: "parivahan.gov.in पर मौजूद सरकारी फॉर्म 29 और फॉर्म 30 अप्रैल 2023 के हैं, और सरकारी सूची में ये अभी भी दो अलग फॉर्म हैं; इन्हें मिलाने वाला कोई लागू बदलाव हमें नहीं मिला। 20 जनवरी 2026 से (केंद्रीय मोटर वाहन (द्वितीय संशोधन) नियम, 2026) गाड़ी के मालिकाना हक़ के ट्रांसफ़र या दूसरे राज्य में ले जाने के लिए NOC (अनापत्ति प्रमाण पत्र) तब तक नहीं मिलेगा, जब तक गाड़ी पर दर्ज नेशनल हाईवे का बकाया टोल (यूज़र फ़ी) नहीं भर दिया जाता। कुछ कागज़ सिर्फ़ \"कुछ राज्यों में\" माँगे जाते हैं, और फ़ीस नियम 81 और आपके राज्य के हिसाब से है। अपने आरटीओ से पूछें कि कौन-से कागज़ और कितनी फ़ीस लगेगी, और क्या आपके राज्य में परिवहन की वाहन सेवा (Vahan) पर ऑनलाइन आवेदन हो सकता है।"
+  },
+  lastChecked: "2026-11-05",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "Vehicle Ownership Transfer on Sale (Form 29 and Form 30)", hi: "गाड़ी बेचने पर मालिकाना हक़ ट्रांसफ़र (फॉर्म 29 और फॉर्म 30)" },
+  about: {
+    en: "When you sell or buy a used vehicle, the buyer's name must replace the seller's name as the registered owner. This needs two forms under the Central Motor Vehicles Rules, 1989. Form 29 is the seller's notice of transfer. It is made in duplicate and sent to the registering authority (RTO) where the buyer lives, with a copy to the RTO where the seller lives. Form 30 is the application: Part I is signed by the seller and Part II by the buyer. The buyer must apply in Form 30 within 14 days of the sale if the vehicle is registered in the same State, or within 45 days if it is registered in another State. With it go the certificate of registration (RC), insurance certificate and other documents; for a vehicle from another State, also the NOC (or the documents in its place). The fee and tax are as per rule 81. The guide below follows the form order: fields 1 to 8 are Form 29, fields 9 to 16 are Form 30.",
+    hi: "जब आप पुरानी गाड़ी बेचते या ख़रीदते हैं, तो रजिस्टर्ड मालिक के रूप में बेचने वाले की जगह ख़रीदने वाले का नाम आना चाहिए। इसके लिए केंद्रीय मोटर वाहन नियम, 1989 के दो फॉर्म हैं। फॉर्म 29 बेचने वाले की ओर से ट्रांसफ़र की सूचना है। यह दो कॉपी में बनता है और उस आरटीओ (रजिस्ट्रेशन अधिकारी) को भेजा जाता है जहाँ ख़रीदार रहता है, और एक कॉपी उस आरटीओ को जहाँ बेचने वाला रहता है। फॉर्म 30 आवेदन है: भाग I पर बेचने वाला और भाग II पर ख़रीदार हस्ताक्षर करता है। ख़रीदार को फॉर्म 30 बिक्री के 14 दिन के अंदर देना है अगर गाड़ी उसी राज्य में रजिस्टर्ड है, या 45 दिन के अंदर अगर दूसरे राज्य की है। साथ में रजिस्ट्रेशन सर्टिफ़िकेट (RC), बीमा सर्टिफ़िकेट और बाक़ी कागज़; दूसरे राज्य की गाड़ी हो तो NOC (या उसकी जगह वाले कागज़) भी। फ़ीस और टैक्स नियम 81 के अनुसार है। नीचे की गाइड फॉर्म के क्रम में है: खाने 1 से 8 फॉर्म 29 के हैं, 9 से 16 फॉर्म 30 के।"
+  },
+
+  fields: [
+    {
+      label: { en: "Form 29 (seller): To the Registering Authority", hi: "फॉर्म 29 (बेचने वाला): सेवा में, रजिस्ट्रेशन अधिकारी" },
+      quick: { en: "RTO of the area where the buyer lives", hi: "उस इलाक़े का आरटीओ जहाँ ख़रीदार रहता है" },
+      meaning: {
+        en: "Form 29 is addressed to \"The Registering Authority ... (in whose jurisdiction the transferee resides)\", that is, the RTO for the buyer's address.",
+        hi: "फॉर्म 29 उस रजिस्ट्रेशन अधिकारी (आरटीओ) के नाम है जिसके इलाक़े में ख़रीदार (transferee) रहता है।"
+      },
+      write: {
+        en: "Write the name and place of the RTO that covers the buyer's address. If you do not know which office that is, ask at your RTO. Fill Form 29 in duplicate (two copies), as the form says.",
+        hi: "ख़रीदार के पते वाले आरटीओ का नाम और जगह लिखें। अगर नहीं पता कि कौन-सा दफ़्तर है, तो अपने आरटीओ से पूछें। फॉर्म के अनुसार फॉर्म 29 दो कॉपी में भरें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the seller's RTO here instead of the buyer's", "Making only one copy"],
+        hi: ["यहाँ ख़रीदार की जगह बेचने वाले का आरटीओ लिख देना", "सिर्फ़ एक कॉपी बनाना"]
+      }
+    },
+    {
+      label: { en: "Form 29 (seller): Your name, place and date of sale", hi: "फॉर्म 29 (बेचने वाला): आपका नाम, जगह और बिक्री की तारीख़" },
+      quick: { en: "Seller's name as on RC, town, and sale date", hi: "RC जैसा बेचने वाले का नाम, शहर और बिक्री की तारीख़" },
+      meaning: {
+        en: "\"I/We ... resident of ... have on the ... day of the year ... sold and delivered\": the seller's name, where the seller lives, and the day and year the vehicle was sold and handed over.",
+        hi: "\"मैं/हम ... निवासी ... ने ... तारीख़, साल ... को बेचकर सौंप दी\": बेचने वाले का नाम, वह कहाँ रहता है, और गाड़ी किस दिन और साल बेची और सौंपी गई।"
+      },
+      write: {
+        en: "Write the registered owner's name (as on the RC), the place of residence, and the date of sale. The buyer's 14-day or 45-day time limit for Form 30 counts from the date of transfer, so write the real date.",
+        hi: "रजिस्टर्ड मालिक का नाम (जैसा RC पर है), रहने की जगह और बिक्री की तारीख़ लिखें। ख़रीदार के लिए फॉर्म 30 की 14 या 45 दिन की समय-सीमा ट्रांसफ़र की तारीख़ से गिनी जाती है, इसलिए असली तारीख़ लिखें।"
+      },
+      documents: { en: ["Certificate of registration (RC)"], hi: ["रजिस्ट्रेशन सर्टिफ़िकेट (RC)"] },
+      mistakes: {
+        en: ["Writing a family member's name when the RC is in your name"],
+        hi: ["RC आपके नाम है, फिर भी परिवार के किसी और सदस्य का नाम लिख देना"]
+      }
+    },
+    {
+      label: { en: "Form 29 (seller): Vehicle number, make, chassis and engine number", hi: "फॉर्म 29 (बेचने वाला): गाड़ी नंबर, कंपनी, चेसिस और इंजन नंबर" },
+      quick: { en: "Copy registration number, make, chassis and engine number from RC", hi: "RC से गाड़ी नंबर, कंपनी, चेसिस और इंजन नंबर उतारें" },
+      meaning: {
+        en: "The vehicle number, its make, the chassis number, and the engine number (or the motor number for a battery operated vehicle).",
+        hi: "गाड़ी का नंबर, बनाने वाली कंपनी (make), चेसिस नंबर, और इंजन नंबर (बैटरी वाली गाड़ी हो तो मोटर नंबर)।"
+      },
+      write: {
+        en: "Copy each number carefully from the RC and check it against the vehicle. parivahan.gov.in says a pencil print of the chassis and engine number may be required in some states.",
+        hi: "हर नंबर RC से ध्यान से उतारें और गाड़ी पर लिखे नंबर से मिला लें। parivahan.gov.in के अनुसार कुछ राज्यों में चेसिस और इंजन नंबर की पेंसिल प्रिंट (ट्रेस) भी माँगी जा सकती है।"
+      },
+      documents: { en: ["Certificate of registration (RC)", "Pencil print of chassis and engine number (some states)"], hi: ["रजिस्ट्रेशन सर्टिफ़िकेट (RC)", "चेसिस और इंजन नंबर की पेंसिल प्रिंट (कुछ राज्यों में)"] },
+      mistakes: {
+        en: ["Missing a digit of the chassis number", "Mixing up the chassis and engine numbers"],
+        hi: ["चेसिस नंबर का कोई अंक छूट जाना", "चेसिस और इंजन नंबर आपस में बदल देना"]
+      }
+    },
+    {
+      label: { en: "Form 29 (seller): Buyer's name, relation and address", hi: "फॉर्म 29 (बेचने वाला): ख़रीदार का नाम, रिश्ता और पता" },
+      quick: { en: "Buyer's full name, parent/spouse name, full address", hi: "ख़रीदार का पूरा नाम, पिता/पति/पत्नी का नाम, पूरा पता" },
+      meaning: {
+        en: "\"to Shri/Smt. ... (Name) Son/wife/daughter of ... residing at ... (house No./street village/town, distt. and State)\": the person you sold the vehicle to.",
+        hi: "\"श्री/श्रीमती ... (नाम) पुत्र/पत्नी/पुत्री ... निवासी ... (मकान नं./गली, गाँव/शहर, ज़िला और राज्य)\": जिसे आपने गाड़ी बेची।"
+      },
+      write: {
+        en: "Write the buyer's name, father's/husband's name and full address with house number, street, village or town, district and State. Strike out the words that do not apply (Shri/Smt., son/wife/daughter), as the form says. Use the same details the buyer writes in Form 30 Part II.",
+        hi: "ख़रीदार का नाम, पिता/पति का नाम और पूरा पता, मकान नंबर, गली, गाँव या शहर, ज़िला और राज्य के साथ लिखें। फॉर्म के अनुसार जो शब्द लागू नहीं हैं (श्री/श्रीमती, पुत्र/पत्नी/पुत्री), उन्हें काट दें। वही जानकारी लिखें जो ख़रीदार फॉर्म 30 के भाग II में लिखेगा।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing an address different from the buyer's address proof"],
+        hi: ["ख़रीदार के पते के प्रमाण से अलग पता लिखना"]
+      }
+    },
+    {
+      label: { en: "Form 29 (seller): Financier and financier's consent", hi: "फॉर्म 29 (बेचने वाला): फ़ाइनेंसर और उसकी सहमति" },
+      quick: { en: "Only if vehicle has a loan/lease: financier's name and signature", hi: "सिर्फ़ लोन/लीज़ वाली गाड़ी: फ़ाइनेंसर का नाम और हस्ताक्षर" },
+      meaning: {
+        en: "\"under an agreement of hire/purchase/lease/hypothecation with ...\" and \"Signature of the financier (to give his consent)\". This is for a vehicle bought on loan or lease, where a bank or finance company has an agreement on it.",
+        hi: "\"... के साथ हायर-परचेज़/लीज़/हाइपोथिकेशन के समझौते के तहत\" और \"फ़ाइनेंसर के हस्ताक्षर (सहमति देने के लिए)\"। यह उस गाड़ी के लिए है जो लोन या लीज़ पर ली गई थी और जिस पर किसी बैंक या फ़ाइनेंस कंपनी का समझौता है।"
+      },
+      write: {
+        en: "If such an agreement exists, write the financier's name and get the financier to sign in this place. If there is no loan or lease on the vehicle, strike out these words (the form says \"Strike out whichever is inapplicable\"). If your loan is fully repaid, ask at your RTO whether the hypothecation entry on the RC must be removed first.",
+        hi: "अगर ऐसा समझौता है, तो फ़ाइनेंसर का नाम लिखें और यहाँ फ़ाइनेंसर के हस्ताक्षर करवाएँ। अगर गाड़ी पर कोई लोन या लीज़ नहीं है, तो ये शब्द काट दें (फॉर्म कहता है जो लागू न हो उसे काटें)। अगर लोन पूरा चुका दिया है, तो आरटीओ से पूछें कि क्या पहले RC से हाइपोथिकेशन हटवाना होगा।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Selling a vehicle under loan without the financier's signature"],
+        hi: ["लोन वाली गाड़ी फ़ाइनेंसर के हस्ताक्षर के बिना बेच देना"]
+      }
+    },
+    {
+      label: { en: "Form 29 (seller): Declarations, date and seller's signature", hi: "फॉर्म 29 (बेचने वाला): घोषणाएँ, तारीख़ और बेचने वाले के हस्ताक्षर" },
+      quick: { en: "Hand over RC and insurance; date and sign", hi: "RC और बीमा सौंपें; तारीख़ डालकर हस्ताक्षर करें" },
+      meaning: {
+        en: "You declare that the RC and insurance certificate have been handed over to the buyer, and that to the best of your knowledge the vehicle \"is not superdari and free from all encumbrances\" and the information is true. Then the date and the \"Signature/digital signature/e-signature of owner of motor vehicle or authorised dealer of registered vehicle\".",
+        hi: "आप घोषणा करते हैं कि RC और बीमा सर्टिफ़िकेट ख़रीदार को सौंप दिए हैं, और आपकी जानकारी में गाड़ी \"सुपुर्दगी (superdari) में नहीं है और हर तरह के बोझ (क़र्ज़/दावे) से मुक्त है\" और जानकारी सही है। फिर तारीख़ और \"मालिक या रजिस्टर्ड गाड़ियों के अधिकृत डीलर के हस्ताक्षर/डिजिटल हस्ताक्षर/ई-हस्ताक्षर\"।"
+      },
+      write: {
+        en: "Write the date and sign as the registered owner. The form does not explain \"superdari\"; if the vehicle was ever seized or kept in police or court custody, ask at your RTO before signing. If you are selling through an authorised dealer of registered vehicles, the dealer has separate forms (29C and 29D on parivahan.gov.in); ask the dealer.",
+        hi: "तारीख़ लिखें और रजिस्टर्ड मालिक के रूप में हस्ताक्षर करें। फॉर्म में \"सुपुर्दगी\" का मतलब नहीं समझाया है; अगर गाड़ी कभी ज़ब्त हुई थी या पुलिस/अदालत की कस्टडी में रही, तो हस्ताक्षर से पहले आरटीओ से पूछें। अगर आप रजिस्टर्ड गाड़ियों के अधिकृत डीलर के ज़रिए बेच रहे हैं, तो डीलर के अलग फॉर्म हैं (parivahan.gov.in पर 29C और 29D); डीलर से पूछें।"
+      },
+      documents: { en: ["Certificate of registration (RC)", "Certificate of insurance"], hi: ["रजिस्ट्रेशन सर्टिफ़िकेट (RC)", "बीमा सर्टिफ़िकेट"] },
+      mistakes: {
+        en: ["Signing blank forms and leaving the buyer to fill them", "Signing without reading the two declarations"],
+        hi: ["ख़ाली फॉर्म पर हस्ताक्षर करके ख़रीदार को भरने के लिए दे देना", "दोनों घोषणाएँ पढ़े बिना हस्ताक्षर कर देना"]
+      }
+    },
+    {
+      label: { en: "Form 29: Buyer's acknowledgement and copy to the seller's RTO", hi: "फॉर्म 29: ख़रीदार की पावती और बेचने वाले के आरटीओ को कॉपी" },
+      quick: { en: "Buyer writes name and date; name seller's RTO for the copy", hi: "ख़रीदार नाम और तारीख़ लिखे; कॉपी के लिए बेचने वाले का आरटीओ लिखें" },
+      meaning: {
+        en: "\"Date ... I/We ... (Transferee)\" is a line for the buyer. Below it: \"Copy to the registering authority ... in whose jurisdiction the transferor resides\", with the note \"To be sent to the registering authority by registered post acknowledgment due\".",
+        hi: "\"तारीख़ ... मैं/हम ... (ख़रीदार)\" ख़रीदार के लिए लाइन है। उसके नीचे: \"कॉपी उस रजिस्ट्रेशन अधिकारी को ... जिसके इलाक़े में बेचने वाला रहता है\", और नोट कि इसे रजिस्टर्ड डाक (पावती सहित) से आरटीओ को भेजना है।"
+      },
+      write: {
+        en: "The buyer writes the date and their name on the \"(Transferee)\" line. Write the name of the RTO where the seller lives on the \"Copy to\" line. The note says it goes by registered post with acknowledgment due; ask at your RTO if they accept it by hand or online instead.",
+        hi: "ख़रीदार \"(Transferee)\" वाली लाइन पर तारीख़ और अपना नाम लिखे। \"Copy to\" वाली लाइन पर उस आरटीओ का नाम लिखें जहाँ बेचने वाला रहता है। नोट के अनुसार इसे रजिस्टर्ड डाक (पावती सहित) से भेजना है; आरटीओ से पूछें कि क्या वे इसे हाथ से या ऑनलाइन भी लेते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Not keeping the postal receipt and acknowledgement card"],
+        hi: ["डाक की रसीद और पावती कार्ड संभालकर न रखना"]
+      }
+    },
+    {
+      label: { en: "Form 29: Office endorsement and return to the seller", hi: "फॉर्म 29: दफ़्तर का पृष्ठांकन और बेचने वाले को वापसी" },
+      quick: { en: "Leave office part blank; write your name for the return copy", hi: "दफ़्तर वाला हिस्सा ख़ाली छोड़ें; वापसी कॉपी के लिए अपना नाम लिखें" },
+      meaning: {
+        en: "\"OFFICE ENDORSEMENT\": the RTO writes the reference number, office, the new owner's name, the date from which the transfer is effective, and signs with seal. Then \"To The transferor ... (to be sent by Regd. post acknowledgement due)\": the duplicate copy with this endorsement comes back to the seller.",
+        hi: "\"दफ़्तर का पृष्ठांकन\": आरटीओ यहाँ रेफ़रेंस नंबर, दफ़्तर, नए मालिक का नाम, किस तारीख़ से ट्रांसफ़र लागू है, लिखकर मुहर के साथ हस्ताक्षर करता है। फिर \"सेवा में, बेचने वाला ... (रजिस्टर्ड डाक से भेजा जाए)\": इसी पृष्ठांकन वाली दूसरी कॉपी बेचने वाले को वापस आती है।"
+      },
+      write: {
+        en: "Do not write in the office endorsement. On the \"The transferor\" line you may write your own name and address so the endorsed copy reaches you; ask at your RTO if unsure. Keep the endorsed copy safely: it shows the vehicle is no longer in your name.",
+        hi: "दफ़्तर वाले हिस्से में कुछ न लिखें। \"The transferor\" वाली लाइन पर अपना नाम और पता लिख सकते हैं ताकि पृष्ठांकन वाली कॉपी आप तक पहुँचे; पक्का न हो तो आरटीओ से पूछें। यह कॉपी संभालकर रखें: इससे पता चलता है कि गाड़ी अब आपके नाम पर नहीं है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Not following up until the endorsed copy comes back"],
+        hi: ["पृष्ठांकन वाली कॉपी वापस आने तक पता न करते रहना"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part I (seller): Registering Authority, seller's name and address", hi: "फॉर्म 30 भाग I (बेचने वाला): रजिस्ट्रेशन अधिकारी, बेचने वाले का नाम और पता" },
+      quick: { en: "RTO name; seller's name, parent/spouse name, full address", hi: "आरटीओ का नाम; बेचने वाले का नाम, पिता/पति का नाम, पूरा पता" },
+      meaning: {
+        en: "\"To The Registering Authority ...\" and \"PART I - FOR THE USE OF THE TRANSFEROR\": name of the transferor (seller), son/wife/daughter of, and full address. Form 30 is made in duplicate if the vehicle is under a hire-purchase, lease or hypothecation agreement.",
+        hi: "\"सेवा में, रजिस्ट्रेशन अधिकारी ...\" और \"भाग I - बेचने वाले के लिए\": बेचने वाले का नाम, पिता/पति का नाम, और पूरा पता। अगर गाड़ी पर हायर-परचेज़, लीज़ या हाइपोथिकेशन का समझौता है, तो फॉर्म 30 दो कॉपी में बनता है।"
+      },
+      write: {
+        en: "Write the RTO you are applying to (ask at your RTO which one if unsure). The seller writes their name as on the RC, father's/husband's name and full address.",
+        hi: "जिस आरटीओ में आवेदन कर रहे हैं उसका नाम लिखें (पक्का न हो तो आरटीओ से पूछें)। बेचने वाला RC जैसा अपना नाम, पिता/पति का नाम और पूरा पता लिखे।"
+      },
+      documents: { en: ["Certificate of registration (RC)"], hi: ["रजिस्ट्रेशन सर्टिफ़िकेट (RC)"] },
+      mistakes: {
+        en: ["Buyer filling Part I instead of the seller"],
+        hi: ["भाग I बेचने वाले की जगह ख़रीदार द्वारा भर देना"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part I (seller): Sale declaration", hi: "फॉर्म 30 भाग I (बेचने वाला): बिक्री की घोषणा" },
+      quick: { en: "Sale date, registration number, buyer's name and address", hi: "बिक्री की तारीख़, गाड़ी नंबर, ख़रीदार का नाम और पता" },
+      meaning: {
+        en: "The seller declares that on a given day and year they sold the vehicle with a given registration mark to the buyer (name, son/wife/daughter of, full address), and handed over the RC and the insurance certificate.",
+        hi: "बेचने वाला घोषणा करता है कि किस दिन और साल उसने किस रजिस्ट्रेशन नंबर वाली गाड़ी ख़रीदार (नाम, पिता/पति का नाम, पूरा पता) को बेची, और RC व बीमा सर्टिफ़िकेट सौंप दिए।"
+      },
+      write: {
+        en: "Fill the same date, registration number and buyer details as in Form 29. They must match.",
+        hi: "वही तारीख़, गाड़ी नंबर और ख़रीदार की जानकारी लिखें जो फॉर्म 29 में लिखी है। दोनों मेल खाने चाहिए।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["A different sale date in Form 29 and Form 30"],
+        hi: ["फॉर्म 29 और फॉर्म 30 में बिक्री की अलग-अलग तारीख़"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part I (seller): RC status, NOC, date and signature", hi: "फॉर्म 30 भाग I (बेचने वाला): RC की स्थिति, NOC, तारीख़ और हस्ताक्षर" },
+      quick: { en: "Confirm RC valid; NOC for other-State vehicle; sign", hi: "RC सही है; दूसरे राज्य की गाड़ी हो तो NOC; हस्ताक्षर करें" },
+      meaning: {
+        en: "The seller declares the RC has not been suspended or cancelled (if it was, give details). Then: \"I/We enclose the No Objection Certificate issued by the registering authority\", or, if the NOC is not enclosed, a declaration under section 50(1). Then the date and the seller's signature/digital signature/e-signature.",
+        hi: "बेचने वाला घोषणा करता है कि RC निलंबित या रद्द नहीं हुई है (हुई हो तो उसकी जानकारी दें)। फिर: \"मैं/हम आरटीओ का दिया NOC लगा रहे हैं\", या NOC न हो तो धारा 50(1) के तहत घोषणा। फिर तारीख़ और बेचने वाले के हस्ताक्षर/डिजिटल हस्ताक्षर/ई-हस्ताक्षर।"
+      },
+      write: {
+        en: "Strike out the NOC line that does not apply. parivahan.gov.in says the NOC papers (Document B) are needed for a vehicle registered in another State: the NOC, or the RTO's order refusing it, or, if neither has come, the seller's declaration that no such communication was received with the RTO's receipt or the postal acknowledgement of the NOC application. From 20 January 2026 an NOC is not given until any unpaid National Highway toll recorded against the vehicle is cleared.",
+        hi: "NOC वाली जो लाइन लागू न हो, उसे काट दें। parivahan.gov.in के अनुसार दूसरे राज्य में रजिस्टर्ड गाड़ी के लिए NOC के कागज़ (Document B) चाहिए: NOC, या आरटीओ का NOC न देने का आदेश, या दोनों में से कुछ न आया हो तो बेचने वाले की घोषणा कि कोई जवाब नहीं मिला, साथ में NOC आवेदन की आरटीओ रसीद या डाक की पावती। 20 जनवरी 2026 से गाड़ी पर दर्ज नेशनल हाईवे का बकाया टोल भरे बिना NOC नहीं मिलता।"
+      },
+      changed: {
+        en: "Changed: the Central Motor Vehicles (Second Amendment) Rules, 2026 (PIB, 20 January 2026) say no NOC for transfer of ownership or for moving a vehicle to another State is granted until any unpaid user fee (toll) is cleared, and the NOC application Form 28 now asks about pending toll demands.",
+        hi: "बदलाव: केंद्रीय मोटर वाहन (द्वितीय संशोधन) नियम, 2026 (PIB, 20 जनवरी 2026) के अनुसार बकाया यूज़र फ़ी (टोल) भरे बिना मालिकाना हक़ ट्रांसफ़र या दूसरे राज्य में ले जाने का NOC नहीं मिलेगा, और NOC का आवेदन फॉर्म 28 अब बकाया टोल के बारे में पूछता है।"
+      },
+      documents: { en: ["NOC from the registering authority, or the papers in its place (only for a vehicle registered in another State)"], hi: ["आरटीओ का NOC, या उसकी जगह वाले कागज़ (सिर्फ़ दूसरे राज्य में रजिस्टर्ड गाड़ी के लिए)"] },
+      mistakes: {
+        en: ["Leaving both NOC lines without striking one out", "Not clearing pending toll dues before applying for the NOC"],
+        hi: ["NOC वाली दोनों लाइनें बिना काटे छोड़ देना", "NOC के आवेदन से पहले बकाया टोल न भरना"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part II (buyer): Name, age, mobile and address", hi: "फॉर्म 30 भाग II (ख़रीदार): नाम, उम्र, मोबाइल और पता" },
+      quick: { en: "Buyer's name, parent/spouse, age, mobile, address; attach address proof", hi: "ख़रीदार का नाम, पिता/पति, उम्र, मोबाइल, पता; पते का प्रमाण लगाएँ" },
+      meaning: {
+        en: "\"PART II - FOR THE USE OF TRANSFEREE\": name of the transferee (buyer), son/wife/daughter of, age, mobile number and full address. The form says \"(Proof of address to be enclosed)\".",
+        hi: "\"भाग II - ख़रीदार के लिए\": ख़रीदार का नाम, पिता/पति का नाम, उम्र, मोबाइल नंबर और पूरा पता। फॉर्म कहता है कि पते का प्रमाण साथ लगाना है।"
+      },
+      write: {
+        en: "The buyer writes their own details, with the address exactly as on the address proof they attach. Give a mobile number you will keep using. parivahan.gov.in also lists proof of date of birth of the purchaser \"if applicable\", PAN card (or Form 60), passport size photograph and a purchaser's undertaking as documents that may be required in some states; ask at your RTO.",
+        hi: "ख़रीदार अपनी जानकारी लिखे, पता बिल्कुल वैसा जैसा साथ लगाए पते के प्रमाण पर है। ऐसा मोबाइल नंबर दें जो आगे भी चलता रहे। parivahan.gov.in पर ख़रीदार की जन्म तिथि का प्रमाण (\"अगर लागू हो\"), PAN कार्ड (या फॉर्म 60), पासपोर्ट साइज़ फ़ोटो और ख़रीदार का वचन-पत्र (undertaking) भी ऐसे कागज़ों में हैं जो कुछ राज्यों में माँगे जाते हैं; आरटीओ से पूछें।"
+      },
+      documents: {
+        en: ["Proof of address", "PAN card or Form 60 (some states)", "Proof of date of birth, if applicable (some states)", "Passport size photograph (some states)"],
+        hi: ["पते का प्रमाण", "PAN कार्ड या फॉर्म 60 (कुछ राज्यों में)", "जन्म तिथि का प्रमाण, अगर लागू हो (कुछ राज्यों में)", "पासपोर्ट साइज़ फ़ोटो (कुछ राज्यों में)"]
+      },
+      mistakes: {
+        en: ["Address on the form not matching the address proof", "Giving the seller's or a dealer's mobile number"],
+        hi: ["फॉर्म का पता पते के प्रमाण से मेल न खाना", "बेचने वाले या डीलर का मोबाइल नंबर दे देना"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part II (buyer): Nominee", hi: "फॉर्म 30 भाग II (ख़रीदार): नॉमिनी" },
+      quick: { en: "Nominee's name and how they are related to you", hi: "नॉमिनी का नाम और उनसे आपका रिश्ता" },
+      meaning: {
+        en: "\"I/We hereby declare ... as the nominee for this vehicle who is my/our ...\": the person you name as nominee for the vehicle, and their relation to you.",
+        hi: "\"मैं/हम ... को इस गाड़ी का नॉमिनी घोषित करते हैं, जो मेरे/हमारे ... हैं\": जिस व्यक्ति को आप गाड़ी का नॉमिनी बनाते हैं, उनका नाम और आपसे रिश्ता।"
+      },
+      write: {
+        en: "Write the nominee's full name and the relation (for example mother, father, spouse). The form does not say what proof of the nominee is needed; ask at your RTO.",
+        hi: "नॉमिनी का पूरा नाम और रिश्ता (जैसे माँ, पिता, पति/पत्नी) लिखें। फॉर्म यह नहीं बताता कि नॉमिनी का कौन-सा प्रमाण चाहिए; आरटीओ से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving the relation blank"],
+        hi: ["रिश्ता लिखना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Form 30 Part II (buyer): Purchase declaration, date and signature", hi: "फॉर्म 30 भाग II (ख़रीदार): ख़रीद की घोषणा, तारीख़ और हस्ताक्षर" },
+      quick: { en: "Purchase date, registration number, seller's name and address; sign", hi: "ख़रीद की तारीख़, गाड़ी नंबर, बेचने वाले का नाम-पता; हस्ताक्षर" },
+      meaning: {
+        en: "The buyer declares that on a given day and year they purchased the vehicle with a given registration number from the seller (name and full address), and asks for the transfer to be entered in the certificate of registration/fitness, which is enclosed. The insurance certificate is also enclosed. The buyer declares the vehicle is not superdari and is free from all encumbrances. Then the date and \"Signature or thumb impression of the transferee\".",
+        hi: "ख़रीदार घोषणा करता है कि किस दिन और साल उसने किस रजिस्ट्रेशन नंबर वाली गाड़ी बेचने वाले (नाम और पूरा पता) से ख़रीदी, और गुज़ारिश करता है कि ट्रांसफ़र साथ लगे रजिस्ट्रेशन/फ़िटनेस सर्टिफ़िकेट में दर्ज हो। बीमा सर्टिफ़िकेट भी साथ है। ख़रीदार घोषणा करता है कि गाड़ी सुपुर्दगी में नहीं है और हर बोझ से मुक्त है। फिर तारीख़ और \"ख़रीदार के हस्ताक्षर या अँगूठे का निशान\"।"
+      },
+      write: {
+        en: "Use the same date, number and seller details as in Part I and Form 29. Attach the original RC and the insurance certificate. parivahan.gov.in also lists a pollution under control (PUC) certificate and, in some states, a tax clearance certificate. Apply within 14 days of the transfer (same State) or 45 days (vehicle from another State).",
+        hi: "वही तारीख़, नंबर और बेचने वाले की जानकारी लिखें जो भाग I और फॉर्म 29 में है। असली RC और बीमा सर्टिफ़िकेट साथ लगाएँ। parivahan.gov.in पर प्रदूषण नियंत्रण (PUC) सर्टिफ़िकेट और कुछ राज्यों में टैक्स क्लियरेंस सर्टिफ़िकेट भी है। ट्रांसफ़र के 14 दिन (उसी राज्य की गाड़ी) या 45 दिन (दूसरे राज्य की गाड़ी) के अंदर आवेदन करें।"
+      },
+      documents: {
+        en: ["Original certificate of registration (RC)", "Certificate of insurance", "Pollution under control (PUC) certificate (some states)", "Tax clearance certificate (some states)"],
+        hi: ["असली रजिस्ट्रेशन सर्टिफ़िकेट (RC)", "बीमा सर्टिफ़िकेट", "प्रदूषण नियंत्रण (PUC) सर्टिफ़िकेट (कुछ राज्यों में)", "टैक्स क्लियरेंस सर्टिफ़िकेट (कुछ राज्यों में)"]
+      },
+      mistakes: {
+        en: ["Applying after the 14-day or 45-day limit", "Forgetting to attach the insurance certificate"],
+        hi: ["14 या 45 दिन की समय-सीमा के बाद आवेदन करना", "बीमा सर्टिफ़िकेट साथ लगाना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Form 30: Consent of the financier and specimen signatures", hi: "फॉर्म 30: फ़ाइनेंसर की सहमति और नमूना हस्ताक्षर" },
+      quick: { en: "Only for loan/lease vehicles: financier signs; specimen signatures given", hi: "सिर्फ़ लोन/लीज़ वाली गाड़ी: फ़ाइनेंसर हस्ताक्षर करे; नमूना हस्ताक्षर दें" },
+      meaning: {
+        en: "Page 2 begins with \"Consent of the financier in the case of motor vehicle subject to an agreement of hire-purchase/lease/hypothecation\": the financier gives consent to the transfer to the buyer, with full name and address, signature and date. At the bottom: \"Specimen signatures of financier\" (1, 2) and \"Specimen signatures of registered owner\" (1, 2), which the RTO attests with its seal in Forms 23 and 24.",
+        hi: "पेज 2 की शुरुआत \"हायर-परचेज़/लीज़/हाइपोथिकेशन वाली गाड़ी में फ़ाइनेंसर की सहमति\" से होती है: फ़ाइनेंसर ख़रीदार के नाम ट्रांसफ़र की सहमति देता है, अपने पूरे नाम-पते, हस्ताक्षर और तारीख़ के साथ। नीचे: \"फ़ाइनेंसर के नमूना हस्ताक्षर\" (1, 2) और \"रजिस्टर्ड मालिक के नमूना हस्ताक्षर\" (1, 2), जिन्हें आरटीओ फॉर्म 23 और 24 में अपनी मुहर से प्रमाणित करता है।"
+      },
+      write: {
+        en: "Fill this only if the vehicle is under a hire-purchase, lease or hypothecation agreement that continues with the buyer. The financier fills and signs its part. The form asks for specimen signatures (or thumb impressions) of the registered owner and the financier in the original application. If there is no such agreement, leave this page blank and ask at your RTO whether to attach it.",
+        hi: "यह हिस्सा सिर्फ़ तभी भरें जब गाड़ी पर हायर-परचेज़, लीज़ या हाइपोथिकेशन का समझौता है जो ख़रीदार के साथ जारी रहेगा। फ़ाइनेंसर अपना हिस्सा भरकर हस्ताक्षर करे। फॉर्म असली आवेदन में रजिस्टर्ड मालिक और फ़ाइनेंसर के नमूना हस्ताक्षर (या अँगूठे के निशान) माँगता है। अगर ऐसा कोई समझौता नहीं है, तो यह पेज ख़ाली छोड़ें और आरटीओ से पूछें कि इसे लगाना है या नहीं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the financier's part yourself"],
+        hi: ["फ़ाइनेंसर वाला हिस्सा ख़ुद भर देना"]
+      }
+    },
+    {
+      label: { en: "Form 30: Office endorsement", hi: "फॉर्म 30: दफ़्तर का पृष्ठांकन" },
+      quick: { en: "Leave blank; the RTO fills this part", hi: "ख़ाली छोड़ें; यह हिस्सा आरटीओ भरता है" },
+      meaning: {
+        en: "\"OFFICE ENDORSEMENT\": the RTO records the reference number, office, and the date from which the transfer (with the hire-purchase/lease/hypothecation endorsement) is recorded in the RC and in Form 24. It is sent to the owner/authorised dealer and the financier by registered post acknowledgement due.",
+        hi: "\"दफ़्तर का पृष्ठांकन\": आरटीओ यहाँ रेफ़रेंस नंबर, दफ़्तर, और किस तारीख़ से ट्रांसफ़र (हायर-परचेज़/लीज़/हाइपोथिकेशन की एंट्री के साथ) RC और फॉर्म 24 में दर्ज हुआ, लिखता है। इसे मालिक/अधिकृत डीलर और फ़ाइनेंसर को रजिस्टर्ड डाक (पावती सहित) से भेजा जाता है।"
+      },
+      write: {
+        en: "Do not write here. After the transfer, check that the RC shows the buyer's name. For the status of your application, ask at your RTO.",
+        hi: "यहाँ कुछ न लिखें। ट्रांसफ़र के बाद देख लें कि RC पर ख़रीदार का नाम आ गया है। आवेदन की स्थिति के लिए आरटीओ से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing in the office endorsement"],
+        hi: ["दफ़्तर वाले हिस्से में कुछ लिख देना"]
+      }
+    }
+  ]
+});
