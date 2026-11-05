@@ -1,0 +1,311 @@
+// Checked against these official documents of the Food, Civil Supplies & Consumer Affairs Department, Uttarakhand:
+// 1. "Ration Card Application Form" in the Downloads section of fcs.uk.gov.in (file uploaded 13-02-2025;
+//    the PDF itself is a 2-page scan made on 21-01-2019). Printed title: "राज्य खाद्य योजना - राशन कार्ड
+//    जाँच / आवेदन पत्र". Page 1: card type, head of family, address, gas, proofs, affidavit, receipt.
+//    Page 2 (printed sideways): table of family members, and the office / inspector section.
+// 2. The department's service page "Issuance of new Ration Card" (fcs.uk.gov.in/issuance-of-new-ration-card/,
+//    last updated 18.11.2025): where to apply (DSO in towns, BDO in villages), the steps, the documents,
+//    and "Fees: 5 Rs.".
+// The National Food Security Act, 2013 text could not be downloaded from an official site during this check,
+// so no rule from the Act is quoted here. The department's online application or e-KYC process (if any)
+// was not checked. Eligibility for each card type, the quantity of grain and the time limit are not stated
+// in the documents above, so the guide says "ask at the DSO / BDO office" for them.
+
+window.FORMS.push({
+  id: "uk-ration-card",
+  verified: true,
+  source: {
+    title: "Food, Civil Supplies & Consumer Affairs Department, Uttarakhand: Ration Card Application Form (राशन कार्ड जाँच / आवेदन पत्र), fcs.uk.gov.in Downloads (uploaded 13-02-2025, scan dated 21-01-2019), with the \"Issuance of new Ration Card\" page (last updated 18.11.2025)",
+    url: "https://cdnbbsr.s3waas.gov.in/s38bdb5058376143fa358981954e7626b8/uploads/2025/02/20250213639436570.pdf"
+  },
+  caution: {
+    en: "The form on the department's website is a 2019 scan headed \"State Food Scheme\" (राज्य खाद्य योजना), though its card-type line also lists Antyodaya and the Food Security scheme (NFSA). Which card your family qualifies for, how much ration you get, and whether you can or must apply online or do e-KYC are not stated in the official documents we found. Ask at your District Supply Office (towns) or Block office (villages) before filling it.",
+    hi: "विभाग की वेबसाइट पर मिला फॉर्म 2019 की स्कैन कॉपी है, जिस पर \"राज्य खाद्य योजना\" लिखा है, हालाँकि इसमें कार्ड के प्रकार में अंत्योदय और खाद्य सुरक्षा योजना (NFSA) भी हैं। आपका परिवार किस कार्ड के योग्य है, कितना राशन मिलेगा, और ऑनलाइन आवेदन या ई-केवाईसी हो सकता है या ज़रूरी है या नहीं, यह हमें मिले आधिकारिक दस्तावेज़ों में नहीं लिखा। भरने से पहले अपने ज़िला पूर्ति कार्यालय (शहर) या ब्लॉक कार्यालय (गाँव) में पूछ लें।"
+  },
+  lastChecked: "2026-11-05",
+
+  category: { en: "Uttarakhand", hi: "उत्तराखंड" },
+  name: { en: "Ration Card Application (Uttarakhand)", hi: "राशन कार्ड आवेदन (उत्तराखंड)" },
+  about: {
+    en: "This is the Uttarakhand Food and Civil Supplies Department's form to apply for a ration card for your family. One form is filled for the whole family, in the name of the senior-most female or male head. The department's page (updated 18.11.2025) says: in towns, take the free form from the District Supply Office (DSO) or download it, and submit it there with your documents; in villages, do the same at the Block Development Office (BDO), with the Gram Panchayat officer. You get an acknowledgement receipt. A Supply Inspector (in villages, the Gram Panchayat officer) checks your papers and visits your home. The card is then made, linked to your nearest ration shop (Fair Price Shop), and you collect it by showing the receipt. The page states \"Fees: 5 Rs.\" The form says families with an annual income above ₹5 lakh will not get a ration card.",
+    hi: "यह उत्तराखंड खाद्य एवं नागरिक आपूर्ति विभाग का राशन कार्ड बनवाने का फॉर्म है। पूरे परिवार के लिए एक फॉर्म भरा जाता है, परिवार की सबसे बड़ी महिला या पुरुष मुखिया के नाम पर। विभाग के पेज (18.11.2025 को अपडेट) के अनुसार: शहर में ज़िला पूर्ति कार्यालय (DSO) से फ़्री फॉर्म लें या डाउनलोड करें, और दस्तावेज़ों के साथ वहीं जमा करें; गाँव में यही काम खंड विकास कार्यालय (BDO) में ग्राम पंचायत अधिकारी के पास होता है। आपको पावती रसीद मिलती है। पूर्ति निरीक्षक (गाँव में ग्राम पंचायत अधिकारी) काग़ज़ जाँचते हैं और घर आकर देखते हैं। फिर कार्ड बनता है, आपकी नज़दीकी राशन दुकान (सस्ते गल्ले की दुकान) से जुड़ता है, और रसीद दिखाकर आप कार्ड ले लेते हैं। पेज पर फ़ीस 5 रुपये लिखी है। फॉर्म में लिखा है कि जिन परिवारों की सालाना आय 5 लाख रुपये से ज़्यादा है, उनका राशन कार्ड नहीं बनेगा।"
+  },
+
+  fields: [
+    {
+      label: { en: "Photo of the senior-most male / female head, and signature box", hi: "वरिष्ठतम पुरुष/महिला मुखिया की फ़ोटो और हस्ताक्षर" },
+      quick: { en: "Paste the family head's photo; head signs below it", hi: "मुखिया की फ़ोटो चिपकाएँ; नीचे मुखिया हस्ताक्षर करें" },
+      meaning: {
+        en: "The box at the top right is for the photo of the family's senior-most female or male head (the person in whose name the card is made). The small box under it says हस्ताक्षर (signature).",
+        hi: "ऊपर दाईं ओर का खाना परिवार की सबसे बड़ी महिला या पुरुष मुखिया की फ़ोटो के लिए है (जिसके नाम पर कार्ड बनेगा)। उसके नीचे छोटे खाने में \"हस्ताक्षर\" लिखा है।"
+      },
+      write: {
+        en: "Paste the head's photo and have the head sign in the box below. The department's page says the clerk sticks the head's photo on the card, so use a clear photo. The form does not give the photo size or how many photos; ask at the DSO / BDO office.",
+        hi: "मुखिया की फ़ोटो चिपकाएँ और नीचे के खाने में मुखिया से हस्ताक्षर कराएँ। विभाग के पेज के अनुसार बाबू मुखिया की फ़ोटो कार्ड पर लगाते हैं, इसलिए साफ़ फ़ोटो दें। फॉर्म में फ़ोटो का साइज़ या कितनी फ़ोटो चाहिए, यह नहीं लिखा; DSO / BDO कार्यालय में पूछें।"
+      },
+      documents: { en: ["Photo of the family head"], hi: ["परिवार के मुखिया की फ़ोटो"] },
+      mistakes: {
+        en: ["Pasting the photo of the person filling the form instead of the head", "Signature by someone other than the head"],
+        hi: ["मुखिया की जगह फॉर्म भरने वाले की फ़ोटो चिपका देना", "मुखिया की जगह किसी और का हस्ताक्षर"]
+      }
+    },
+    {
+      label: { en: "Application No. and Date of application (day/month/year)", hi: "आवेदन संख्या और आवेदन की तारीख़ (दिन/माह/साल)" },
+      quick: { en: "Write today's date; ask office about application number", hi: "आज की तारीख़ लिखें; आवेदन संख्या कार्यालय से पूछें" },
+      meaning: {
+        en: "The application number and the date you apply.",
+        hi: "आवेदन का नंबर और आवेदन करने की तारीख़।"
+      },
+      write: {
+        en: "Write the date as day/month/year. The form does not say who writes the application number; the receipt at the bottom also has an application number filled by the office. If you don't have one, leave it blank and ask at the counter.",
+        hi: "तारीख़ दिन/माह/साल में लिखें। फॉर्म में यह नहीं लिखा कि आवेदन संख्या कौन भरेगा; नीचे की रसीद में भी आवेदन संख्या है जो कार्यालय भरता है। आपके पास नंबर न हो तो खाली छोड़ें और काउंटर पर पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Making up an application number"],
+        hi: ["अपने मन से कोई आवेदन संख्या लिख देना"]
+      }
+    },
+    {
+      label: { en: "Card type (tick): Antyodaya / Food Security Scheme / Uttarakhand State Food Scheme / APL/BPL, and family's BPL ID", hi: "कार्ड का प्रकार (टिक करें): अन्त्योदय / खाद्य सुरक्षा योजना / उत्तराखण्ड राज्य खाद्य योजना / APL/BPL, और परिवार की बी.पी.एल. आई.डी." },
+      quick: { en: "Tick the card type; BPL ID only if you have one", hi: "कार्ड का प्रकार टिक करें; बी.पी.एल. आई.डी. हो तभी लिखें" },
+      meaning: {
+        en: "Which kind of ration card you are applying for. The options printed are Antyodaya, Food Security Scheme (खाद्य सुरक्षा योजना, i.e. NFSA), Uttarakhand State Food Scheme, and APL/BPL. On the right is the family's BPL (below poverty line) ID.",
+        hi: "आप किस तरह के राशन कार्ड के लिए आवेदन कर रहे हैं। छपे हुए विकल्प हैं: अन्त्योदय, खाद्य सुरक्षा योजना (NFSA), उत्तराखण्ड राज्य खाद्य योजना, और APL/BPL। दाईं ओर परिवार की बी.पी.एल. (गरीबी रेखा से नीचे) आई.डी. लिखनी है।"
+      },
+      write: {
+        en: "Tick one. The official documents we found do not say who is eligible for which card, so ask at the DSO / BDO office which one your family can apply for. Write the BPL ID only if your family has one.",
+        hi: "एक पर टिक करें। हमें मिले आधिकारिक दस्तावेज़ों में यह नहीं लिखा कि कौन किस कार्ड के योग्य है, इसलिए DSO / BDO कार्यालय में पूछें कि आपका परिवार किसके लिए आवेदन कर सकता है। बी.पी.एल. आई.डी. तभी लिखें जब परिवार के पास हो।"
+      },
+      documents: { en: ["BPL ID / proof, if you write a BPL ID"], hi: ["बी.पी.एल. आई.डी. / प्रमाण, अगर आई.डी. लिख रहे हैं"] },
+      mistakes: {
+        en: ["Ticking more than one card type", "Writing a BPL ID that is not your family's"],
+        hi: ["एक से ज़्यादा कार्ड प्रकार पर टिक करना", "ऐसी बी.पी.एल. आई.डी. लिखना जो आपके परिवार की नहीं है"]
+      }
+    },
+    {
+      label: { en: "Name of the senior-most female / male head of family, and Father's / Husband's name", hi: "परिवार की वरिष्ठतम महिला/पुरुष मुखिया का नाम, और पिता/पति का नाम" },
+      quick: { en: "Family head's name and father's or husband's name", hi: "परिवार के मुखिया का नाम और पिता या पति का नाम" },
+      meaning: {
+        en: "The name of the family's senior-most female or male head, and that person's father's or husband's name.",
+        hi: "परिवार की सबसे बड़ी महिला या पुरुष मुखिया का नाम, और उनके पिता या पति का नाम।"
+      },
+      write: {
+        en: "Write the head's full name as on their ID (for example Aadhaar or voter ID), and their father's or husband's name. The same person's photo goes in the photo box and they sign the affidavit. If you are not sure who should be the head, ask at the DSO / BDO office.",
+        hi: "मुखिया का पूरा नाम उनके पहचान पत्र (जैसे Aadhaar या वोटर आई.डी.) जैसा लिखें, और उनके पिता या पति का नाम। इसी व्यक्ति की फ़ोटो लगेगी और यही शपथ पत्र पर हस्ताक्षर करेंगे। मुखिया किसे बनाना है, यह पक्का न हो तो DSO / BDO कार्यालय में पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Name spelled differently from the head's Aadhaar / voter ID"],
+        hi: ["मुखिया के Aadhaar / वोटर आई.डी. से अलग स्पेलिंग में नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "Existing ration card number, and family's total annual income (in rupees)", hi: "मौजूदा राशन कार्ड की संख्या, और परिवार की कुल वार्षिक आय (रुपये में)" },
+      quick: { en: "Old card number if any; whole family's yearly income", hi: "पुराना कार्ड नंबर हो तो; पूरे परिवार की सालाना आय" },
+      meaning: {
+        en: "If your family already has a ration card, its number. Then the total yearly income of the whole family, in rupees.",
+        hi: "अगर परिवार के पास पहले से राशन कार्ड है, तो उसका नंबर। फिर पूरे परिवार की कुल सालाना आमदनी, रुपये में।"
+      },
+      write: {
+        en: "Write the existing card number only if you have one (for example when moving from another town). For income, add up the yearly income of all family members. The form says families with annual income above ₹5 lakh will not be given a ration card. The form does not ask for an income certificate; ask the office if they need one.",
+        hi: "मौजूदा कार्ड नंबर तभी लिखें जब हो (जैसे दूसरे शहर से आने पर)। आय में परिवार के सभी सदस्यों की सालाना कमाई जोड़कर लिखें। फॉर्म में लिखा है कि 5 लाख रुपये से ज़्यादा सालाना आय वाले परिवारों का राशन कार्ड नहीं बनेगा। फॉर्म आय प्रमाण पत्र नहीं माँगता; कार्यालय से पूछें कि चाहिए या नहीं।"
+      },
+      documents: { en: ["Old ration card, if you are transferring"], hi: ["पुराना राशन कार्ड, अगर ट्रांसफ़र करा रहे हैं"] },
+      mistakes: {
+        en: ["Writing only one person's income instead of the whole family's", "Writing monthly income in the yearly box"],
+        hi: ["पूरे परिवार की जगह सिर्फ़ एक व्यक्ति की आय लिखना", "सालाना वाले खाने में महीने की आय लिख देना"]
+      }
+    },
+    {
+      label: { en: "Residential status (tick): Owner / Tenant / Temporary / Homeless", hi: "आवासीय स्थिति (टिक करें): मालिक / किरायेदार / अस्थायी / बेघर" },
+      quick: { en: "Tick owner, tenant, temporary or homeless", hi: "मालिक, किरायेदार, अस्थायी या बेघर पर टिक करें" },
+      meaning: {
+        en: "Whether the family owns the house it lives in, rents it, lives there temporarily, or is homeless.",
+        hi: "परिवार जिस घर में रहता है, वह अपना है, किराये का है, अस्थायी है, या परिवार बेघर है।"
+      },
+      write: {
+        en: "Tick one box. The department's page says that if you live on rent, attach the rent receipt.",
+        hi: "एक खाने में टिक करें। विभाग के पेज के अनुसार किराये पर रहते हैं तो किराये की रसीद लगाएँ।"
+      },
+      documents: { en: ["Rent receipt, if you live on rent"], hi: ["किराये की रसीद, अगर किराये पर रहते हैं"] },
+      mistakes: {
+        en: ["Ticking \"owner\" while living on rent"],
+        hi: ["किराये पर रहते हुए \"मालिक\" पर टिक करना"]
+      }
+    },
+    {
+      label: { en: "Gas connection status * (Single / DBC / No gas), gas connection number, gas agency, oil company", hi: "गैस कनेक्शन की स्थिति * (एकल / डी.बी.सी. / गैस नहीं), गैस कनेक्शन संख्या, गैस एजेंसी, ऑयल कम्पनी" },
+      quick: { en: "Tick gas status; if you have gas, write its details", hi: "गैस की स्थिति टिक करें; गैस हो तो उसका ब्योरा लिखें" },
+      meaning: {
+        en: "Under \"अन्य विवरण\" (other details): whether the family has a single-cylinder LPG connection (एकल), a double-cylinder one (DBC), or no gas. Then the gas connection number, the gas agency's name and the oil company (for example Indian Oil, Bharat Petroleum, Hindustan Petroleum).",
+        hi: "\"अन्य विवरण\" में: परिवार के पास एक सिलेंडर वाला एलपीजी कनेक्शन (एकल) है, दो सिलेंडर वाला (डी.बी.सी.), या गैस नहीं है। फिर गैस कनेक्शन नंबर, गैस एजेंसी का नाम और ऑयल कंपनी (जैसे इंडियन ऑयल, भारत पेट्रोलियम, हिंदुस्तान पेट्रोलियम)।"
+      },
+      write: {
+        en: "The gas status is mandatory (*). Tick one. If you have a connection, copy the consumer number, agency and company from your gas book or cylinder receipt.",
+        hi: "गैस की स्थिति ज़रूरी (*) है। एक पर टिक करें। कनेक्शन हो तो उपभोक्ता नंबर, एजेंसी और कंपनी अपनी गैस कॉपी या सिलेंडर की रसीद से देखकर लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving gas status blank (it is mandatory)", "Ticking \"no gas\" when the family has a connection"],
+        hi: ["गैस की स्थिति खाली छोड़ना (यह ज़रूरी है)", "कनेक्शन होते हुए \"गैस नहीं\" पर टिक करना"]
+      }
+    },
+    {
+      label: { en: "Present address and other details (house, area, village/town, block & tehsil, district, PIN), head's mobile number", hi: "वर्तमान निवास का पता और अन्य विवरण (मकान, क्षेत्र, ग्राम/शहर, ब्लॉक एवं तहसील, जिला, पिन), मुखिया का मोबाइल नं." },
+      quick: { en: "Where the family lives now; head's mobile number", hi: "परिवार अभी जहाँ रहता है वह पता; मुखिया का मोबाइल" },
+      meaning: {
+        en: "The address where the family lives now: house number / house name, area / colony, village / town, block and tehsil, district, PIN code, and the head's mobile number.",
+        hi: "जहाँ परिवार अभी रहता है उसका पता: मकान नंबर / घर का नाम, क्षेत्र / कॉलोनी, ग्राम / शहर, ब्लॉक एवं तहसील, जिला, पिन कोड, और मुखिया का मोबाइल नंबर।"
+      },
+      write: {
+        en: "House no. / name, area / colony, village / town, block & tehsil and district are mandatory (*). Write the address as on your address proof. The inspector visits this address to verify, and the card is linked to the ration shop near it.",
+        hi: "मकान नं. / घर का नाम, क्षेत्र / कॉलोनी, ग्राम / शहर, ब्लॉक एवं तहसील और जिला ज़रूरी (*) हैं। पता वैसा लिखें जैसा पते के प्रमाण पर है। जाँच के लिए निरीक्षक इसी पते पर आते हैं, और कार्ड इसी के पास की राशन दुकान से जुड़ता है।"
+      },
+      documents: { en: ["Address proof (see 'Attached self-attested proofs')"], hi: ["पते का प्रमाण ('संलग्न स्व-प्रमाणित प्रमाण पत्र' देखें)"] },
+      mistakes: {
+        en: ["Leaving block & tehsil blank", "Address different from the address proof"],
+        hi: ["ब्लॉक एवं तहसील खाली छोड़ना", "पते के प्रमाण से अलग पता लिखना"]
+      }
+    },
+    {
+      label: { en: "Permanent address and other details", hi: "स्थायी निवास का पता और अन्य विवरण" },
+      quick: { en: "Permanent home address; repeat present one if same", hi: "स्थायी घर का पता; वही हो तो दोबारा लिखें" },
+      meaning: {
+        en: "Your family's permanent address: house, area / colony, village / town, block & tehsil, district, PIN.",
+        hi: "परिवार का स्थायी पता: मकान, क्षेत्र / कॉलोनी, ग्राम / शहर, ब्लॉक एवं तहसील, जिला, पिन।"
+      },
+      write: {
+        en: "If your permanent address is the same as the present one, write it again here. The form does not say \"same as above\" is allowed, so it is safer to write it in full.",
+        hi: "अगर स्थायी पता वही है जो वर्तमान पता है, तो यहाँ दोबारा लिखें। फॉर्म में \"ऊपर जैसा\" लिखने की बात नहीं है, इसलिए पूरा लिखना बेहतर है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving it blank because it is the same as the present address"],
+        hi: ["वर्तमान पते जैसा होने की वजह से खाली छोड़ देना"]
+      }
+    },
+    {
+      label: { en: "Old address (only in case of transfer)", hi: "पुराना निवास स्थान (अगर हस्तान्तरण का मामला हो तो)" },
+      quick: { en: "Only if moving your card from another place", hi: "सिर्फ़ तब, जब दूसरी जगह से कार्ड ला रहे हों" },
+      meaning: {
+        en: "If your family had a ration card at another place and is transferring, the old address there.",
+        hi: "अगर परिवार का राशन कार्ड पहले किसी दूसरी जगह था और अब ट्रांसफ़र हो रहा है, तो वहाँ का पुराना पता।"
+      },
+      write: {
+        en: "Fill this only for a transfer. The department's page says that when transferring from another town or Gram Panchayat, attach the surrender certificate and the previous ration card. Otherwise leave it blank.",
+        hi: "इसे सिर्फ़ ट्रांसफ़र में भरें। विभाग के पेज के अनुसार दूसरे शहर या ग्राम पंचायत से ट्रांसफ़र पर समर्पण प्रमाण पत्र (surrender certificate) और पुराना राशन कार्ड लगाना है। वरना खाली छोड़ें।"
+      },
+      documents: { en: ["Surrender certificate and previous ration card (only for transfer)"], hi: ["समर्पण प्रमाण पत्र और पुराना राशन कार्ड (सिर्फ़ ट्रांसफ़र में)"] },
+      mistakes: {
+        en: ["Applying for a new card while the old card at the other place is not surrendered"],
+        hi: ["दूसरी जगह का पुराना कार्ड जमा (सरेंडर) किए बिना नए कार्ड के लिए आवेदन करना"]
+      }
+    },
+    {
+      label: { en: "Attached self-attested proofs * (at least one from 1–3 and one from 4–7)", hi: "संलग्न स्व-प्रमाणित प्रमाण पत्र * (1–3 में से कम से कम एक और 4–7 में से कम से कम एक)" },
+      quick: { en: "Attach one of 1–3 and one of 4–7, self-attested", hi: "1–3 में से एक और 4–7 में से एक, स्व-प्रमाणित लगाएँ" },
+      meaning: {
+        en: "The list of proofs: (1) Voter ID, (2) UID (Aadhaar card), (3) Bank account number, (4) Electricity bill, (5) Water bill, (6) House tax receipt, (7) Ration card surrender certificate. Below it the form says families with annual income above ₹5 lakh will not get a ration card.",
+        hi: "प्रमाणों की सूची: (1) मतदाता पहचान पत्र, (2) यू.आई.डी. (Aadhaar कार्ड), (3) बैंक एकाउन्ट नं., (4) बिजली का बिल, (5) पानी का बिल, (6) गृहकर की रसीद, (7) राशन कार्ड समर्पण प्रमाण पत्र। इसके नीचे लिखा है कि 5 लाख रुपये से ज़्यादा सालाना आय वाले परिवारों का राशन कार्ड नहीं बनेगा।"
+      },
+      write: {
+        en: "Attach self-attested copies (sign on each copy) of at least one document from 1–3 and at least one from 4–7. The department's page also lists, where they apply: rent receipt; surrender certificate and old card for a transfer; a residence and family-members certificate from the head of the institution for government / semi-government employees and for employees of registered industrial units; and a residence and study certificate from the institution head for students in towns.",
+        hi: "1–3 में से कम से कम एक और 4–7 में से कम से कम एक दस्तावेज़ की स्व-प्रमाणित कॉपी (हर कॉपी पर अपना हस्ताक्षर) लगाएँ। विभाग के पेज पर, जहाँ लागू हो, ये भी हैं: किराये की रसीद; ट्रांसफ़र में समर्पण प्रमाण पत्र और पुराना कार्ड; सरकारी / अर्ध-सरकारी कर्मचारियों और पंजीकृत औद्योगिक संस्थानों के कर्मचारियों के लिए संस्थान प्रमुख से निवास और परिवार के सदस्यों का प्रमाण पत्र; और शहर में पढ़ने वाले छात्रों के लिए संस्थान प्रमुख से निवास और पढ़ाई का प्रमाण पत्र।"
+      },
+      documents: {
+        en: ["One of: Voter ID, Aadhaar card, bank account details", "One of: electricity bill, water bill, house tax receipt, ration card surrender certificate"],
+        hi: ["इनमें से एक: वोटर आई.डी., Aadhaar कार्ड, बैंक खाते का ब्योरा", "इनमें से एक: बिजली का बिल, पानी का बिल, गृहकर की रसीद, राशन कार्ड समर्पण प्रमाण पत्र"]
+      },
+      mistakes: {
+        en: ["Attaching two documents from the same group (e.g. Aadhaar and voter ID only)", "Forgetting to sign the copies"],
+        hi: ["एक ही समूह से दो दस्तावेज़ लगाना (जैसे सिर्फ़ Aadhaar और वोटर आई.डी.)", "कॉपियों पर हस्ताक्षर करना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "Affidavit (शपथ पत्र) (क), (ख), (ग) and signature / thumb impression of the head", hi: "शपथ पत्र (क), (ख), (ग) और परिवार के मुखिया के हस्ताक्षर / निशानी अंगूठा" },
+      quick: { en: "Head writes name, category, proof; signs or puts thumb", hi: "मुखिया नाम, श्रेणी, प्रमाण लिखें; हस्ताक्षर या अंगूठा लगाएँ" },
+      meaning: {
+        en: "(क) \"I ... declare\" that all information is true, the whole family cooks in one kitchen, and no member has a ration card anywhere else or is included in any other ration card. (ख) \"I have attached ... as proof of my ... category\". (ग) If anything is found false, I will be responsible and my ration card can be cancelled.",
+        hi: "(क) \"मैं ... घोषित करता/करती हूँ\" कि सारी जानकारी सच है, पूरे परिवार का खाना एक रसोई में बनता है, और परिवार के किसी सदस्य का राशन कार्ड कहीं और नहीं चल रहा और न वह किसी दूसरे राशन कार्ड में शामिल है। (ख) \"मैंने अपने ... श्रेणी के प्रमाण के रूप में ... प्रमाण पत्र संलग्न कर दिया है।\" (ग) कोई बात झूठी निकली तो मैं ज़िम्मेदार रहूँगा/रहूँगी और मेरा राशन कार्ड रद्द हो सकता है।"
+      },
+      write: {
+        en: "In (क) write the head's name. In (ख) write the card category you ticked and the name of the proof you attached for it. The head signs (or puts a thumb impression) at \"परिवार के मुखिया का हस्ताक्षर/निशानी अंगूठा\". Sign only if no family member is on another ration card.",
+        hi: "(क) में मुखिया का नाम लिखें। (ख) में वह श्रेणी लिखें जिस पर टिक किया है और उसके लिए लगाए प्रमाण पत्र का नाम। \"परिवार के मुखिया का हस्ताक्षर/निशानी अंगूठा\" पर मुखिया हस्ताक्षर करें या अंगूठा लगाएँ। हस्ताक्षर तभी करें जब परिवार का कोई सदस्य किसी दूसरे राशन कार्ड में न हो।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["A member still listed on a parent's or another ration card", "Leaving the category in (ख) blank"],
+        hi: ["किसी सदस्य का नाम अब भी माता-पिता के या किसी दूसरे राशन कार्ड में होना", "(ख) में श्रेणी खाली छोड़ना"]
+      }
+    },
+    {
+      label: { en: "Acknowledgement receipt (प्राप्ति रसीद) – filled by the office", hi: "प्राप्ति रसीद – कार्यालय भरेगा" },
+      quick: { en: "Leave blank; keep the receipt the clerk gives you", hi: "खाली छोड़ें; बाबू जो रसीद दें उसे संभालकर रखें" },
+      meaning: {
+        en: "The cut-off part at the bottom: application number, date received, and the date on which you should come to the counter to collect the card, with the clerk's signature / stamp.",
+        hi: "नीचे का कटने वाला हिस्सा: आवेदन संख्या, जमा होने की तारीख़, और वह तारीख़ जिस दिन कार्ड लेने काउंटर पर आना है, साथ में बाबू के हस्ताक्षर / मोहर।"
+      },
+      write: {
+        en: "Do not fill it. The department's page says the clerk checks your file and gives an acknowledgement receipt, and you show this receipt to collect the card. Check that the date to collect is written on it.",
+        hi: "इसे न भरें। विभाग के पेज के अनुसार बाबू फ़ाइल जाँचकर पावती रसीद देते हैं, और कार्ड लेने के लिए यही रसीद दिखानी होती है। देख लें कि उस पर कार्ड लेने की तारीख़ लिखी हो।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Losing the receipt before collecting the card"],
+        hi: ["कार्ड मिलने से पहले रसीद खो देना"]
+      }
+    },
+    {
+      label: { en: "Full details of the head and other family members (page 2 table)", hi: "परिवार के मुखिया व अन्य सदस्यों का पूर्ण विवरण (पेज 2 की तालिका)" },
+      quick: { en: "One row per member, head first; Aadhaar for each", hi: "हर सदस्य की एक लाइन, पहले मुखिया; सबका Aadhaar" },
+      meaning: {
+        en: "A table with up to 10 rows. Columns: member's name *, mother's name *, father's name *, spouse's name *, gender * (M/F/T), age * / date of birth, relation with the head *, nationality, occupation, monthly income, and UID (Aadhaar card) number.",
+        hi: "10 लाइनों तक की तालिका। कॉलम: सदस्य का नाम *, माता का नाम *, पिता का नाम *, जीवन साथी का नाम *, लिंग * (M/F/T), आयु * / जन्मतिथि, परिवार के मुखिया के साथ सम्बन्ध *, नागरिकता, व्यवसाय, मासिक आय, और यू.आई.डी. (Aadhaar कार्ड) संख्या।"
+      },
+      write: {
+        en: "Write the head in row 1, then every family member who lives and eats with you. Columns marked * are mandatory. For spouse's name, write the husband's or wife's name; for unmarried members ask the office what to write. Write each person's Aadhaar number carefully. The page is printed sideways, so turn the sheet to fill it.",
+        hi: "पहली लाइन में मुखिया, फिर साथ रहने और खाने वाले हर सदस्य को लिखें। * वाले कॉलम ज़रूरी हैं। जीवन साथी के कॉलम में पति या पत्नी का नाम लिखें; अविवाहित सदस्यों के लिए कार्यालय से पूछें कि क्या लिखें। हर व्यक्ति का Aadhaar नंबर ध्यान से लिखें। यह पेज आड़ा छपा है, इसलिए काग़ज़ घुमाकर भरें।"
+      },
+      documents: { en: ["Aadhaar numbers of family members"], hi: ["परिवार के सदस्यों के Aadhaar नंबर"] },
+      mistakes: {
+        en: ["Leaving out a child or elderly member", "Adding a person who already appears on another ration card", "Mixing up monthly income with yearly income"],
+        hi: ["किसी बच्चे या बुज़ुर्ग सदस्य का नाम छोड़ देना", "ऐसे व्यक्ति को जोड़ना जो पहले से किसी दूसरे राशन कार्ड में है", "मासिक आय की जगह सालाना आय लिखना"]
+      }
+    },
+    {
+      label: { en: "Head's Voter ID number *, PAN card number, bank account number / bank name and IFSC code", hi: "मुखिया की वोटर आई.डी. संख्या *, पैन कार्ड नं., बैंक एकाउन्ट नं. / बैंक का नाम एवं IFSC कोड" },
+      quick: { en: "Head's voter ID (must), PAN if any, bank details", hi: "मुखिया की वोटर आई.डी. (ज़रूरी), पैन हो तो, बैंक ब्योरा" },
+      meaning: {
+        en: "Three tall columns at the right end of the table, filled once for the head: voter ID number, PAN card number, and bank account number with the bank's name and IFSC.",
+        hi: "तालिका के दाएँ छोर पर तीन लंबे कॉलम, जो मुखिया के लिए एक बार भरे जाते हैं: वोटर आई.डी. नंबर, पैन कार्ड नंबर, और बैंक खाता नंबर, बैंक का नाम और IFSC।"
+      },
+      write: {
+        en: "The head's voter ID number is mandatory (*). PAN and bank details have no * on the form; write them if the head has them. Copy the account number and IFSC from the passbook.",
+        hi: "मुखिया की वोटर आई.डी. संख्या ज़रूरी (*) है। पैन और बैंक के ब्योरे पर फॉर्म में * नहीं है; मुखिया के पास हों तो लिखें। खाता नंबर और IFSC पासबुक से देखकर लिखें।"
+      },
+      documents: { en: ["Head's voter ID", "Bank passbook (for account number and IFSC)"], hi: ["मुखिया की वोटर आई.डी.", "बैंक पासबुक (खाता नंबर और IFSC के लिए)"] },
+      mistakes: {
+        en: ["Writing a family member's voter ID instead of the head's", "Wrong digit in the account number or IFSC"],
+        hi: ["मुखिया की जगह किसी दूसरे सदस्य की वोटर आई.डी. लिखना", "खाता नंबर या IFSC में ग़लत अंक"]
+      }
+    },
+    {
+      label: { en: "For office use (ration card details and inspector's report)", hi: "कार्यालय प्रयोग के लिये (राशन कार्ड का विवरण और निरीक्षक के जाँच का प्रतिफल)" },
+      quick: { en: "Leave blank; sign only when you receive the card", hi: "खाली छोड़ें; कार्ड मिलने पर ही हस्ताक्षर करें" },
+      meaning: {
+        en: "Filled by the office: ration shop (dealer) name and registration number, register numbers, printed card number, units, date of issue, and the inspector's report (whether details are correct, number of adults and minors, units, and whether the card should be issued). There is one line for the card receiver's signature (हस्ताक्षर, राशन कार्ड प्राप्तकर्ता).",
+        hi: "कार्यालय भरता है: राशन दुकानदार का नाम और रजिस्ट्रेशन नंबर, रजिस्टर नंबर, छपा कार्ड नंबर, यूनिट, जारी करने की तारीख़, और निरीक्षक की रिपोर्ट (जानकारी सही है या नहीं, बालिग और नाबालिग सदस्यों की संख्या, यूनिट, और कार्ड जारी हो या नहीं)। इसमें कार्ड लेने वाले के हस्ताक्षर (राशन कार्ड प्राप्तकर्ता) की एक लाइन है।"
+      },
+      write: {
+        en: "Do not write anything here. Sign at \"हस्ताक्षर (राशन कार्ड प्राप्तकर्ता)\" only when the office gives you the card. The department's page says the card is linked to your nearest ration shop, and the clerk works out the family's units.",
+        hi: "यहाँ कुछ न लिखें। \"हस्ताक्षर (राशन कार्ड प्राप्तकर्ता)\" पर तभी हस्ताक्षर करें जब कार्यालय आपको कार्ड दे। विभाग के पेज के अनुसार कार्ड आपकी नज़दीकी राशन दुकान से जुड़ता है, और बाबू परिवार की यूनिट गिनते हैं।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing as card receiver while submitting the form"],
+        hi: ["फॉर्म जमा करते समय ही कार्ड प्राप्तकर्ता वाली जगह हस्ताक्षर कर देना"]
+      }
+    }
+  ]
+});
