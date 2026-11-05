@@ -1,0 +1,321 @@
+// Checked against these official documents:
+// 1. "Application Form for New LT Connection" (Annexure-II, ref. regulation 3.3), with its Appendix
+//    "Declaration/Undertaking (For new LT Connections)" and the "Acknowledgement", of the Uttarakhand Electricity
+//    Regulatory Commission (The Electricity Supply Code, Release of New Connections and Related Matters)
+//    Regulations, 2020, Uttarakhand Gazette dated 28 November 2020, pages 597-602. Downloaded from UPCL's
+//    "Form Download" page (upcl.org/wss/form-downloads) as "Supply_Code_2020_ eng LT New Connection.pdf"
+//    (scanned PDF, file created 19-12-2022). UPCL also gives a Hindi version of the same form there.
+// 2. The same Supply Code Regulations, 2020 (Gazette 28.11.2020, scanned copy on upcl.uk.gov.in, uploaded
+//    30-06-2025): Regulation 3.3.1, 3.3.2 (application, documents, online application), 3.3.3 (processing,
+//    timelines, Tables 3.4-3.5, clause (14) "no other charges"), and 3.6 (complexes built by developers).
+// 3. UERC Order dated 27.03.2024 (uerc.uk.gov.in) changing the time limit in Regulation 3.3.3(15) to 3 days in
+//    metropolitan areas, 7 days in other municipal areas and 15 days in rural areas, from 1 April 2024.
+// 4. UERC Order dated 06.10.2026 "Predefined charges for release of New LT Connections upto 150 kW"
+//    (uerc.uk.gov.in, Miscellaneous Orders 2026): revised Tables 3.4-3.7, charges paid with the application,
+//    no initial security for prepaid-meter connections, for applications received from 1 November 2026.
+// 5. UPCL's online "New Electricity Connection" registration screens (upcl.org/wss), read for the upload
+//    rules (photo, at least one ownership and one identity document, file type and 1 MB size) and the
+//    Prepaid/Postpaid choice.
+// The UERC (Standards of Performance) Regulations, 2022 and any smart-meter rollout notices were not read
+// for this guide, so nothing is said about compensation amounts beyond Regulation 3.3.3, or about smart
+// meters being compulsory.
+
+window.FORMS.push({
+  id: "upcl-new-connection",
+  verified: true,
+  source: {
+    title: "UPCL / UERC: Application Form for New LT Connection (Annexure-II of the UERC Supply Code Regulations, 2020, Uttarakhand Gazette 28.11.2020), with the UERC Orders dated 27.03.2024 (timelines) and 06.10.2026 (predefined charges from 1 November 2026)",
+    url: "https://www.upcl.org/wss/assets/downloads/downloadForms/Supply_Code_2020_%20eng%20LT%20New%20Connection.pdf"
+  },
+  caution: {
+    en: "This paper form is the one printed in the 2020 Supply Code and is still the one UPCL offers for download. Two later UERC orders change the rules around it: the time limits (from 1 April 2024) and the charges (for applications from 1 November 2026, when the charges are paid with the application itself). The order of 6 October 2026 also says the Supply Code will be amended, so a new form may follow. UPCL's online application asks a few things the paper form does not (for example Aadhaar number, Prepaid/Postpaid, plot size in square metres). Before you apply, check the current charges and form with your UPCL sub-division office or the helpline 1800-419-0405.",
+    hi: "यह काग़ज़ वाला फॉर्म 2020 के सप्लाई कोड में छपा फॉर्म है, और UPCL अभी भी डाउनलोड के लिए यही देता है। इसके बाद UERC के दो आदेशों ने नियम बदले हैं: समय सीमा (1 अप्रैल 2024 से) और शुल्क (1 नवंबर 2026 या उसके बाद के आवेदनों के लिए, जिनमें शुल्क आवेदन के साथ ही जमा होता है)। 6 अक्टूबर 2026 के आदेश में यह भी लिखा है कि सप्लाई कोड में संशोधन होगा, इसलिए नया फॉर्म आ सकता है। UPCL का ऑनलाइन आवेदन कुछ ऐसी बातें भी पूछता है जो काग़ज़ के फॉर्म में नहीं हैं (जैसे Aadhaar नंबर, प्रीपेड/पोस्टपेड, प्लॉट का साइज़ वर्ग मीटर में)। आवेदन से पहले अपने UPCL उपखंड कार्यालय या हेल्पलाइन 1800-419-0405 से मौजूदा शुल्क और फॉर्म पक्का कर लें।"
+  },
+  lastChecked: "2026-11-05",
+
+  category: { en: "Uttarakhand", hi: "उत्तराखंड" },
+  name: { en: "New Electricity Connection, LT (UPCL, Uttarakhand)", hi: "नया बिजली कनेक्शन, एलटी (UPCL, उत्तराखंड)" },
+  about: {
+    en: "This is the form to get a new low-tension (LT) electricity connection, such as a normal home connection, from Uttarakhand Power Corporation Ltd (UPCL). The Supply Code says the form is free at any UPCL sub-division office, can be downloaded from UPCL's website or even photocopied, and is submitted at the sub-division or division office. You can also apply online on UPCL's website (upcl.org, \"New Electricity Connection Registration\"); there you upload your recent photo and at least one ownership proof and one identity proof (.jpg, .jpeg, .png, .doc or .pdf, up to 1 MB each). The office gives a dated acknowledgement with a Unique Application Number. For online applications, UPCL must tell you of any mistake within 2 working days by email and SMS, and you must fix it within the next 3 working days or the application lapses. UPCL inspects your wiring within 5 days. Time limit (UERC order of 27.03.2024): if no new line or substation is needed, the connection must be given within 3 days in metropolitan areas, 7 days in other municipal areas and 15 days in rural areas from the date of a complete application with payment. If the line must be extended, the limit is 60 days; with a new 11/0.4 kV substation, 90 days. Charges (UERC order of 06.10.2026, for applications from 1 November 2026, paid at the time of applying): for a domestic load up to 4 kW, service line ₹1,400 (overhead) or ₹2,800 (underground), predefined line charges ₹900 / ₹2,700 (covering up to 300 metres), and initial security ₹600 per kW; above 4 kW up to 10 kW, ₹3,000 / ₹7,500 service line, ₹4,500 / ₹13,500 predefined, and ₹600 per kW security. No initial security is payable for a prepaid-meter connection. A line beyond 300 metres costs extra, and UPCL tells you that amount within 15 days. Ask the office which of these apply to your house.",
+    hi: "यह उत्तराखंड पावर कॉरपोरेशन लिमिटेड (UPCL) से नया लो-टेंशन (एलटी) बिजली कनेक्शन, जैसे आम घर का कनेक्शन, लेने का फॉर्म है। सप्लाई कोड के अनुसार यह फॉर्म UPCL के किसी भी उपखंड कार्यालय में मुफ़्त मिलता है, UPCL की वेबसाइट से डाउनलोड हो सकता है या फ़ोटोकॉपी भी चलेगी, और इसे उपखंड या खंड कार्यालय में जमा करते हैं। आप UPCL की वेबसाइट (upcl.org, \"New Electricity Connection Registration\") पर ऑनलाइन भी आवेदन कर सकते हैं; वहाँ अपनी हाल की फ़ोटो और कम से कम एक मालिकाना हक़ का प्रमाण और एक पहचान प्रमाण अपलोड करना होता है (.jpg, .jpeg, .png, .doc या .pdf, हर फ़ाइल 1 MB तक)। कार्यालय यूनिक एप्लीकेशन नंबर के साथ तारीख़ वाली पावती देता है। ऑनलाइन आवेदन में कोई कमी हो तो UPCL को 2 कार्य दिवस में ईमेल और SMS से बताना होता है, और आपको अगले 3 कार्य दिवस में ठीक करना होता है, वरना आवेदन रद्द (लैप्स) हो जाता है। UPCL 5 दिन में आपकी वायरिंग की जाँच करता है। समय सीमा (UERC आदेश 27.03.2024): अगर नई लाइन या सबस्टेशन नहीं चाहिए, तो पूरा आवेदन और भुगतान मिलने की तारीख़ से महानगर में 3 दिन, दूसरे नगर क्षेत्रों में 7 दिन और ग्रामीण क्षेत्र में 15 दिन में कनेक्शन देना होता है। लाइन बढ़ानी पड़े तो 60 दिन; नया 11/0.4 kV सबस्टेशन लगे तो 90 दिन। शुल्क (UERC आदेश 06.10.2026, 1 नवंबर 2026 से आने वाले आवेदनों के लिए, आवेदन के समय ही जमा): 4 kW तक घरेलू लोड के लिए सर्विस लाइन ₹1,400 (ऊपर से तार) या ₹2,800 (ज़मीन के नीचे केबल), पहले से तय लाइन शुल्क ₹900 / ₹2,700 (300 मीटर तक के लिए), और शुरुआती सिक्योरिटी ₹600 प्रति kW; 4 kW से 10 kW तक सर्विस लाइन ₹3,000 / ₹7,500, तय लाइन शुल्क ₹4,500 / ₹13,500, और सिक्योरिटी ₹600 प्रति kW। प्रीपेड मीटर वाले कनेक्शन पर शुरुआती सिक्योरिटी नहीं लगती। 300 मीटर से आगे लाइन का पैसा अलग लगता है, जो UPCL 15 दिन में बताता है। आपके घर पर इनमें से क्या लागू है, यह कार्यालय से पूछ लें।"
+  },
+
+  fields: [
+    {
+      label: { en: "Distribution Licensee, Electricity Distribution Division and Sub-Division", hi: "वितरण लाइसेंसी, विद्युत वितरण खंड और उपखंड" },
+      quick: { en: "Write UPCL, and your area's division and sub-division", hi: "UPCL लिखें, और अपने इलाक़े का खंड व उपखंड" },
+      meaning: {
+        en: "The heading has a blank after \"Distribution Licensee\", and the first line asks for the Electricity Distribution Division and Sub-Division, the UPCL offices that cover the place where you want the connection.",
+        hi: "शीर्षक में \"Distribution Licensee\" के आगे खाली जगह है, और पहली लाइन में विद्युत वितरण खंड (Division) और उपखंड (Sub-Division) पूछा गया है, यानी UPCL के वे कार्यालय जिनके इलाक़े में आपको कनेक्शन चाहिए।"
+      },
+      write: {
+        en: "UPCL is the distribution company in Uttarakhand, so the licensee is UPCL. If you do not know your division and sub-division, ask a neighbour with a UPCL bill or the office. UPCL's online form can find your office from the nearest pole number or a neighbour's service connection number.",
+        hi: "उत्तराखंड में बिजली बाँटने वाली कंपनी UPCL है, इसलिए लाइसेंसी UPCL है। अपना खंड और उपखंड न पता हो तो किसी पड़ोसी के UPCL बिल से देखें या कार्यालय में पूछें। UPCL का ऑनलाइन फॉर्म नज़दीकी खंभे के नंबर या पड़ोसी के सर्विस कनेक्शन नंबर से आपका कार्यालय ढूँढ देता है।"
+      },
+      documents: { en: ["A neighbour's UPCL bill helps to find the office"], hi: ["कार्यालय पता करने में पड़ोसी का UPCL बिल काम आता है"] },
+      mistakes: {
+        en: ["Writing the office near your current home instead of the one for the new connection's place"],
+        hi: ["नए कनेक्शन वाली जगह की जगह अभी के घर के पास वाले कार्यालय का नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "To be filled by the Distribution Licensee (load, tariff category, Unique Application No., date of receipt, consumer no., pole no.)", hi: "वितरण लाइसेंसी द्वारा भरा जाएगा (लोड, टैरिफ़ श्रेणी, यूनिक एप्लीकेशन नंबर, प्राप्ति तिथि, उपभोक्ता संख्या, खंभा नंबर)" },
+      quick: { en: "Leave blank; UPCL office fills this box", hi: "खाली छोड़ें; यह UPCL कार्यालय भरता है" },
+      meaning: {
+        en: "This box is for UPCL: load applied, applicable tariff category, Unique Application No., date of receipt, CONSUMER No., and the nearest landmark pole number or feeder pillar number.",
+        hi: "यह खाना UPCL के लिए है: आवेदित लोड, लागू टैरिफ़ श्रेणी, यूनिक एप्लीकेशन नंबर, प्राप्ति की तारीख़, उपभोक्ता संख्या (CONSUMER No.), और नज़दीकी खंभे या फ़ीडर पिलर का नंबर।"
+      },
+      write: {
+        en: "Do not write here. The Supply Code says the officer puts the Unique Application Number on both the form and the acknowledgement and gives you a dated acknowledgement. Keep that number to track your application.",
+        hi: "यहाँ कुछ न लिखें। सप्लाई कोड के अनुसार अधिकारी यूनिक एप्लीकेशन नंबर फॉर्म और पावती दोनों पर लिखते हैं और आपको तारीख़ वाली पावती देते हैं। आवेदन की स्थिति देखने के लिए यह नंबर सँभाल कर रखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the office box yourself", "Leaving without the dated acknowledgement"],
+        hi: ["कार्यालय वाला खाना ख़ुद भर देना", "तारीख़ वाली पावती लिए बिना लौट आना"]
+      }
+    },
+    {
+      label: { en: "Passport size photograph (4.5 cm x 3.5 cm, white background)", hi: "पासपोर्ट साइज़ फ़ोटो (4.5 सेमी x 3.5 सेमी, सफ़ेद बैकग्राउंड)" },
+      quick: { en: "Paste applicant's 4.5 x 3.5 cm photo, white background", hi: "आवेदक की 4.5 x 3.5 सेमी, सफ़ेद बैकग्राउंड वाली फ़ोटो चिपकाएँ" },
+      meaning: {
+        en: "The box on the right is for the photo of the applicant (owner or occupier), or for a company, of its authorised person such as a director or proprietor.",
+        hi: "दाईं ओर का खाना आवेदक (मालिक या रहने वाले) की फ़ोटो के लिए है; कंपनी हो तो उसके अधिकृत व्यक्ति, जैसे डायरेक्टर या प्रोप्राइटर, की।"
+      },
+      write: {
+        en: "Paste a passport size photo, 4.5 cm x 3.5 cm, with a white background, of the person in whose name the connection is asked. For the online form, upload a recent photo instead.",
+        hi: "जिसके नाम पर कनेक्शन चाहिए, उसकी 4.5 सेमी x 3.5 सेमी की, सफ़ेद बैकग्राउंड वाली पासपोर्ट साइज़ फ़ोटो चिपकाएँ। ऑनलाइन फॉर्म में इसकी जगह हाल की फ़ोटो अपलोड करें।"
+      },
+      documents: { en: ["Passport size photo of the applicant"], hi: ["आवेदक की पासपोर्ट साइज़ फ़ोटो"] },
+      mistakes: {
+        en: ["Photo with a coloured background", "Photo of a family member who is not the applicant"],
+        hi: ["रंगीन बैकग्राउंड वाली फ़ोटो", "आवेदक की जगह परिवार के किसी और की फ़ोटो"]
+      }
+    },
+    {
+      label: { en: "1) Name of Individual / Organisation in whose name connection is required", hi: "1) व्यक्ति / संस्था का नाम जिसके नाम पर कनेक्शन चाहिए" },
+      quick: { en: "Your first, middle, last name; organisation part only for companies", hi: "अपना पहला, बीच का, आख़िरी नाम; संस्था वाला हिस्सा सिर्फ़ कंपनी के लिए" },
+      meaning: {
+        en: "The name in which the connection (and later the bill) will be. \"For individual\" has Mr./Ms./Mrs. with First, Middle and Last Name. \"For Organisation/Others\" has Company's Name and the name of the Owner/Director/Proprietor.",
+        hi: "वह नाम जिस पर कनेक्शन (और बाद में बिल) बनेगा। \"For individual\" में Mr./Ms./Mrs. के साथ पहला, बीच का और आख़िरी नाम है। \"For Organisation/Others\" में कंपनी का नाम और मालिक/डायरेक्टर/प्रोप्राइटर का नाम है।"
+      },
+      write: {
+        en: "For a home, fill only \"For individual\": tick or write Mr./Ms./Mrs. and write your name as on your identity proof, split into first, middle and last name. Leave the organisation lines blank. Your ownership or occupancy proof should be in the same person's name.",
+        hi: "घर के लिए सिर्फ़ \"For individual\" भरें: Mr./Ms./Mrs. में से सही चुनें और अपना नाम पहचान प्रमाण जैसा, पहला, बीच का और आख़िरी नाम अलग करके लिखें। संस्था वाली लाइनें खाली छोड़ें। मालिकाना हक़ या कब्ज़े का प्रमाण भी इसी व्यक्ति के नाम पर होना चाहिए।"
+      },
+      documents: { en: ["Identity proof (see question 14)"], hi: ["पहचान प्रमाण (सवाल 14 देखें)"] },
+      mistakes: {
+        en: ["Name spelled differently from the identity proof", "Filling the company lines for a home connection"],
+        hi: ["पहचान प्रमाण से अलग स्पेलिंग में नाम", "घर के कनेक्शन के लिए कंपनी वाली लाइनें भर देना"]
+      }
+    },
+    {
+      label: { en: "1) Address, Tel. No., Fax No., Email ID, Mobile No., web site", hi: "1) पता, टेलीफ़ोन, फ़ैक्स, ईमेल, मोबाइल नंबर, वेबसाइट" },
+      quick: { en: "Your present address, mobile number and email", hi: "अपना अभी का पता, मोबाइल नंबर और ईमेल" },
+      meaning: {
+        en: "The address and contact lines under question 1. The connection address is asked separately in question 3.",
+        hi: "सवाल 1 के नीचे पता और संपर्क की लाइनें। कनेक्शन वाली जगह का पता अलग से सवाल 3 में पूछा गया है।"
+      },
+      write: {
+        en: "The form does not say which address goes here; UPCL's online form asks for your current address and permanent address separately from the connection address, so write the address where you live now. Give a mobile number and email you use: the Supply Code says deficiencies in online applications are told by email and SMS. Leave fax and web site blank if you have none. Ask the office if you are unsure.",
+        hi: "फॉर्म में नहीं लिखा कि यहाँ कौन सा पता देना है; UPCL का ऑनलाइन फॉर्म कनेक्शन वाले पते से अलग आपका मौजूदा और स्थायी पता पूछता है, इसलिए वह पता लिखें जहाँ आप अभी रहते हैं। ऐसा मोबाइल नंबर और ईमेल दें जो आप चलाते हों: सप्लाई कोड के अनुसार ऑनलाइन आवेदन की कमियाँ ईमेल और SMS से बताई जाती हैं। फ़ैक्स और वेबसाइट न हों तो खाली छोड़ें। पक्का न हो तो कार्यालय में पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Giving a mobile number that is switched off or not yours", "Wrong email spelling"],
+        hi: ["ऐसा मोबाइल नंबर देना जो बंद हो या आपका न हो", "ईमेल की ग़लत स्पेलिंग"]
+      }
+    },
+    {
+      label: { en: "2) Father / Husband's / Organization's Authorized Signatory's Name", hi: "2) पिता / पति / संस्था के अधिकृत हस्ताक्षरकर्ता का नाम" },
+      quick: { en: "Father's or husband's first, middle and last name", hi: "पिता या पति का पहला, बीच का और आख़िरी नाम" },
+      meaning: {
+        en: "For a person, the father's or husband's name; for an organisation, the name of its authorised signatory. Title Mr./Ms./Mrs./Dr./Prof. and First, Middle, Last Name.",
+        hi: "व्यक्ति के लिए पिता या पति का नाम; संस्था के लिए उसके अधिकृत हस्ताक्षरकर्ता का नाम। Mr./Ms./Mrs./Dr./Prof. और पहला, बीच का, आख़िरी नाम।"
+      },
+      write: {
+        en: "Write your father's or husband's name as on your documents, split into first, middle and last name.",
+        hi: "अपने पिता या पति का नाम दस्तावेज़ों जैसा, पहला, बीच का और आख़िरी नाम अलग करके लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing your own name again here"],
+        hi: ["यहाँ फिर से अपना ही नाम लिख देना"]
+      }
+    },
+    {
+      label: { en: "3) Full Address of Location (where connection is required) and 4) Address of Owner of property (if applicant is tenant or occupier)", hi: "3) जगह का पूरा पता (जहाँ कनेक्शन चाहिए) और 4) मकान मालिक का पता (अगर आवेदक किरायेदार या रहने वाला है)" },
+      quick: { en: "Full connection address; owner's address only if you're a tenant", hi: "कनेक्शन वाली जगह का पूरा पता; किरायेदार हों तभी मालिक का पता" },
+      meaning: {
+        en: "Question 3 is the full address of the place where the connection is needed, with Tel./Mob. No., Fax No. and Email ID. Question 4 is the address of the property owner, filled only if you are a tenant or occupier, not the owner.",
+        hi: "सवाल 3 उस जगह का पूरा पता है जहाँ कनेक्शन चाहिए, साथ में टेलीफ़ोन/मोबाइल, फ़ैक्स और ईमेल। सवाल 4 में मकान मालिक का पता है, जो तभी भरना है जब आप मालिक नहीं, किरायेदार या रहने वाले हों।"
+      },
+      write: {
+        en: "Write the complete address with house or plot number, street, colony or village, and district, plus a nearby landmark. The Supply Code says UPCL records the full address, a landmark or GPS location and the pole number if they are missing. If you are the owner, leave question 4 blank.",
+        hi: "मकान या प्लॉट नंबर, गली, कॉलोनी या गाँव, ज़िला और पास का कोई लैंडमार्क लिखकर पूरा पता दें। सप्लाई कोड के अनुसार पता अधूरा हो तो UPCL पूरा पता, लैंडमार्क या GPS लोकेशन और खंभे का नंबर ख़ुद दर्ज करता है। अगर आप ही मालिक हैं तो सवाल 4 खाली छोड़ें।"
+      },
+      documents: { en: ["Owner's no objection certificate, if you are a tenant (see question 15)"], hi: ["किरायेदार हों तो मालिक का अनापत्ति प्रमाण पत्र (NOC) (सवाल 15 देखें)"] },
+      mistakes: {
+        en: ["Writing your old home address instead of the new connection's place", "Address that does not match the ownership proof"],
+        hi: ["नए कनेक्शन वाली जगह की जगह पुराने घर का पता लिखना", "ऐसा पता जो मालिकाना हक़ वाले प्रमाण से मेल न खाए"]
+      }
+    },
+    {
+      label: { en: "5) Whether any electricity connection is existing at the premises (Yes/No, Connection No., Account No.) and 6) Date of Birth / Date of Incorporation", hi: "5) क्या उस जगह पर पहले से कोई बिजली कनेक्शन है (हाँ/नहीं, कनेक्शन नंबर, खाता नंबर) और 6) जन्म तिथि / निगमन तिथि" },
+      quick: { en: "Yes/No for existing connection; your date of birth", hi: "पहले से कनेक्शन है या नहीं; अपनी जन्म तिथि" },
+      meaning: {
+        en: "Question 5 asks if there is already an electricity connection at that place; if yes, its Connection No. and Account No. Question 6 is your date of birth (or, for a company, its date of incorporation).",
+        hi: "सवाल 5 पूछता है कि उस जगह पर पहले से बिजली कनेक्शन है या नहीं; है तो उसका कनेक्शन नंबर और खाता नंबर। सवाल 6 में आपकी जन्म तिथि (कंपनी हो तो उसके बनने की तारीख़) लिखनी है।"
+      },
+      write: {
+        en: "Strike out Yes or No. If Yes, copy the connection and account numbers from that connection's bill. The Supply Code says UPCL checks for unpaid dues on the premises; if there are any, it sends a demand note within 5 days and you must pay within 15 days, or the application lapses. Write the date of birth as on your identity proof.",
+        hi: "हाँ (Yes) या नहीं (No) में से एक काटें। हाँ हो तो उस कनेक्शन के बिल से कनेक्शन नंबर और खाता नंबर देखकर लिखें। सप्लाई कोड के अनुसार UPCL उस जगह का बकाया जाँचता है; बकाया हो तो 5 दिन में डिमांड नोट भेजता है और आपको 15 दिन में चुकाना होता है, वरना आवेदन रद्द हो जाता है। जन्म तिथि पहचान प्रमाण जैसी लिखें।"
+      },
+      documents: { en: ["Bill of the existing connection, if any"], hi: ["पहले वाले कनेक्शन का बिल, अगर है"] },
+      mistakes: {
+        en: ["Writing No when the building already has a meter", "Date of birth different from the identity proof"],
+        hi: ["इमारत में मीटर होते हुए भी No लिखना", "पहचान प्रमाण से अलग जन्म तिथि"]
+      }
+    },
+    {
+      label: { en: "7) Plot size and built up area in sq. feet (Residential / Non-Residential / Multiplex / Malls / Townships etc., refer regulation 3.6)", hi: "7) प्लॉट का साइज़ और बना हुआ क्षेत्र वर्ग फ़ुट में (आवासीय / अनावासीय / मल्टीप्लेक्स / मॉल / टाउनशिप आदि, विनियम 3.6 देखें)" },
+      quick: { en: "Plot area and built-up area in square feet", hi: "प्लॉट का क्षेत्र और बना हुआ क्षेत्र वर्ग फ़ुट में" },
+      meaning: {
+        en: "The size of the plot and the built-up (constructed) area, in square feet. The form points to regulation 3.6 of the Supply Code, which is about connections in residential or commercial complexes, multiplexes, malls and townships built by a developer.",
+        hi: "प्लॉट का साइज़ और उस पर बना हुआ (निर्मित) क्षेत्र, वर्ग फ़ुट में। फॉर्म सप्लाई कोड के विनियम 3.6 की ओर इशारा करता है, जो बिल्डर द्वारा बनाए गए आवासीय या व्यावसायिक कॉम्प्लेक्स, मल्टीप्लेक्स, मॉल और टाउनशिप के कनेक्शन के बारे में है।"
+      },
+      write: {
+        en: "Copy the areas from your sale deed, map or allotment letter. The paper form asks for square feet, but UPCL's online form asks in square metres, so check the unit before you write. Whether a single house must fill this is not stated; ask the office.",
+        hi: "क्षेत्रफल अपनी रजिस्ट्री, नक्शे या आवंटन पत्र से देखकर लिखें। काग़ज़ का फॉर्म वर्ग फ़ुट में पूछता है, लेकिन UPCL का ऑनलाइन फॉर्म वर्ग मीटर में, इसलिए लिखने से पहले इकाई देख लें। अकेले घर के लिए यह भरना ज़रूरी है या नहीं, यह नहीं लिखा; कार्यालय में पूछें।"
+      },
+      documents: { en: ["Sale deed, map or allotment letter (for the area)"], hi: ["रजिस्ट्री, नक्शा या आवंटन पत्र (क्षेत्रफल के लिए)"] },
+      mistakes: {
+        en: ["Writing square metres in the square feet box (or the other way online)", "Writing only the plot area and not the built-up area"],
+        hi: ["वर्ग फ़ुट वाले खाने में वर्ग मीटर लिखना (या ऑनलाइन में उल्टा)", "सिर्फ़ प्लॉट का क्षेत्र लिखना, बना हुआ क्षेत्र नहीं"]
+      }
+    },
+    {
+      label: { en: "8) Load applied for (kW/kVA/HP), 9) Pre-paid meter connection (Yes/No), 10) Voltage at which supply is required (230 V / 415 V)", hi: "8) आवेदित लोड (kW/kVA/HP), 9) प्रीपेड मीटर कनेक्शन (हाँ/नहीं), 10) किस वोल्टेज पर सप्लाई चाहिए (230 V / 415 V)" },
+      quick: { en: "Load in kW; prepaid Yes/No; 230 V or 415 V", hi: "लोड kW में; प्रीपेड हाँ/नहीं; 230 V या 415 V" },
+      meaning: {
+        en: "Load is the total power of all the appliances you will use, in kilowatts (kW). Question 9 asks if you want a pre-paid meter (the form says this is for loads up to 25 kW). Question 10 is the supply voltage: 230 V or 415 V.",
+        hi: "लोड यानी आप जितने बिजली के उपकरण चलाएँगे उनकी कुल ताक़त, किलोवाट (kW) में। सवाल 9 पूछता है कि क्या आपको प्रीपेड मीटर चाहिए (फॉर्म के अनुसार यह 25 kW तक के लोड के लिए है)। सवाल 10 सप्लाई का वोल्टेज है: 230 V या 415 V।"
+      },
+      write: {
+        en: "Add up the wattage of your appliances, or use UPCL's online \"Load Calculator\". The charges depend on the load (up to 4 kW, 4 to 10 kW, and so on), so do not write more than you need. The UERC order of 06.10.2026 says no initial security deposit is payable for a prepaid-meter connection. The form does not say which voltage a given load needs; ask the office whether you need 230 V (single phase) or 415 V.",
+        hi: "अपने उपकरणों के वॉट जोड़ें, या UPCL के ऑनलाइन \"Load Calculator\" का इस्तेमाल करें। शुल्क लोड पर निर्भर है (4 kW तक, 4 से 10 kW, आदि), इसलिए ज़रूरत से ज़्यादा लोड न लिखें। UERC के 06.10.2026 के आदेश के अनुसार प्रीपेड मीटर वाले कनेक्शन पर शुरुआती सिक्योरिटी नहीं लगती। फॉर्म में नहीं लिखा कि किस लोड पर कौन सा वोल्टेज चाहिए; कार्यालय से पूछें कि आपको 230 V (सिंगल फ़ेज़) चाहिए या 415 V।"
+      },
+      changed: {
+        en: "Changed: for applications from 1 November 2026, the UERC order of 06.10.2026 sets predefined charges by load, paid with the application, and no initial security for prepaid-meter connections.",
+        hi: "बदलाव: 1 नवंबर 2026 से आने वाले आवेदनों के लिए UERC के 06.10.2026 के आदेश ने लोड के हिसाब से पहले से तय शुल्क रखे हैं, जो आवेदन के साथ जमा होते हैं, और प्रीपेड मीटर वाले कनेक्शन पर शुरुआती सिक्योरिटी नहीं है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing a much higher load than needed, which raises the charges", "Writing watts instead of kilowatts (1 kW = 1000 W)"],
+        hi: ["ज़रूरत से बहुत ज़्यादा लोड लिखना, जिससे शुल्क बढ़ जाता है", "किलोवाट की जगह वॉट लिख देना (1 kW = 1000 W)"]
+      }
+    },
+    {
+      label: { en: "11) Category of Connection, 12) For Non-domestic Load (type), 13) For Industry Load (type of industry)", hi: "11) कनेक्शन की श्रेणी, 12) गैर-घरेलू लोड के लिए (प्रकार), 13) उद्योग लोड के लिए (उद्योग का प्रकार)" },
+      quick: { en: "Tick Domestic for a home; skip 12 and 13", hi: "घर के लिए Domestic पर टिक करें; 12 और 13 छोड़ दें" },
+      meaning: {
+        en: "Question 11 has tick boxes: Domestic, Non-domestic, Govt. Public Utilities, Private Tube wells, LT Industry, Others. Question 12 is the type of a non-domestic place (school, hospital, hotel, shop, office, mobile tower and others). Question 13 is the type of industry.",
+        hi: "सवाल 11 में टिक करने के खाने हैं: Domestic (घरेलू), Non-domestic (गैर-घरेलू), सरकारी सार्वजनिक सुविधा, निजी ट्यूबवेल, एलटी उद्योग, अन्य। सवाल 12 गैर-घरेलू जगह का प्रकार है (स्कूल, अस्पताल, होटल, दुकान, ऑफ़िस, मोबाइल टावर आदि)। सवाल 13 उद्योग का प्रकार है।"
+      },
+      write: {
+        en: "For a house, tick only Domestic and leave 12 and 13 blank. The category decides your tariff and the security amount (for example ₹600 per kW domestic and ₹1,500 per kW non-domestic in the 06.10.2026 order). If part of the house is a shop or office, ask the office which category to choose.",
+        hi: "घर के लिए सिर्फ़ Domestic पर टिक करें और 12 व 13 खाली छोड़ें। श्रेणी से आपका टैरिफ़ और सिक्योरिटी तय होती है (जैसे 06.10.2026 के आदेश में घरेलू ₹600 प्रति kW और गैर-घरेलू ₹1,500 प्रति kW)। अगर घर के एक हिस्से में दुकान या ऑफ़िस है, तो कार्यालय से पूछें कि कौन सी श्रेणी चुनें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking more than one category", "Taking a domestic connection for a shop"],
+        hi: ["एक से ज़्यादा श्रेणी पर टिक करना", "दुकान के लिए घरेलू कनेक्शन ले लेना"]
+      }
+    },
+    {
+      label: { en: "14) Identity / Address Proof (tick the one attached)", hi: "14) पहचान / पते का प्रमाण (जो लगाया है उस पर टिक करें)" },
+      quick: { en: "Tick one ID you attach, e.g. Aadhaar or voter ID", hi: "जो एक पहचान पत्र लगा रहे हैं उस पर टिक करें, जैसे Aadhaar या वोटर आईडी" },
+      meaning: {
+        en: "For an individual, a copy of any one of: (a) Aadhaar Card, (b) Electoral identity card, (c) Passport, (d) Driving license, (e) Photo ration card, (f) Photo identity card issued by a Government agency. Part (ii) is for companies, firms, trusts, schools, government departments and so on.",
+        hi: "व्यक्ति के लिए इनमें से किसी एक की कॉपी: (a) Aadhaar कार्ड, (b) वोटर आईडी, (c) पासपोर्ट, (d) ड्राइविंग लाइसेंस, (e) फ़ोटो वाला राशन कार्ड, (f) सरकारी एजेंसी का फ़ोटो पहचान पत्र। भाग (ii) कंपनी, फ़र्म, ट्रस्ट, स्कूल, सरकारी विभाग आदि के लिए है।"
+      },
+      write: {
+        en: "Tick the one you attach and attach its copy. For a company or institution, the application needs a certified copy of the resolution or authority letter, and the authorised signatory also gives one of the IDs above. UPCL's online form marks the Aadhaar number as required, even though the paper form accepts other IDs.",
+        hi: "जो प्रमाण लगा रहे हैं उस पर टिक करें और उसकी कॉपी लगाएँ। कंपनी या संस्था के लिए प्रस्ताव (resolution) या अधिकार पत्र की प्रमाणित कॉपी चाहिए, और अधिकृत हस्ताक्षरकर्ता ऊपर दिए पहचान पत्रों में से एक देता है। UPCL के ऑनलाइन फॉर्म में Aadhaar नंबर ज़रूरी लिखा है, जबकि काग़ज़ का फॉर्म दूसरे पहचान पत्र भी मानता है।"
+      },
+      documents: { en: ["Copy of one identity proof from the list"], hi: ["सूची में से एक पहचान प्रमाण की कॉपी"] },
+      mistakes: {
+        en: ["Ticking an ID but attaching a different one", "ID in a different name from the applicant"],
+        hi: ["एक पहचान पत्र पर टिक करके दूसरा लगा देना", "आवेदक से अलग नाम का पहचान पत्र"]
+      }
+    },
+    {
+      label: { en: "15) Proof of Ownership / Occupancy (tick the one attached)", hi: "15) मालिकाना हक़ / कब्ज़े का प्रमाण (जो लगाया है उस पर टिक करें)" },
+      quick: { en: "Tick and attach self-attested ownership or occupancy proof", hi: "मालिकाना हक़ या कब्ज़े का स्व-प्रमाणित प्रमाण टिक करके लगाएँ" },
+      meaning: {
+        en: "A self-attested copy of any one of: (a) sale deed or lease deed (with the latest rent receipt from within three months before the application), or khasra or khatauni (your name being in it is enough), (b) registered General Power of Attorney, (c) municipal tax receipt or demand notice or any other related document, (d) letter of allotment. (e) If you are an occupier and not the owner, you also give a no objection certificate (NOC) from the owner.",
+        hi: "इनमें से किसी एक की स्व-प्रमाणित (self-attested) कॉपी: (a) बैनामा (सेल डीड) या लीज़ डीड (आवेदन से पहले के तीन महीने के अंदर की ताज़ा किराया रसीद के साथ), या खसरा या खतौनी (उसमें आपका नाम होना काफ़ी है), (b) रजिस्टर्ड जनरल पावर ऑफ़ अटॉर्नी, (c) नगर निकाय के टैक्स की रसीद या डिमांड नोटिस या कोई और संबंधित दस्तावेज़, (d) आवंटन पत्र। (e) अगर आप मालिक नहीं, सिर्फ़ रहने वाले हैं, तो मालिक का अनापत्ति प्रमाण पत्र (NOC) भी दें।"
+      },
+      write: {
+        en: "Tick the one you attach, sign the copy yourself (self-attest), and attach it. The Supply Code says that if you cannot give any of these documents, you are charged three times the security amount. A connection is refused if the District Magistrate or a government authority has objected to the premises, or a court has decided ownership in someone else's favour. On UPCL's online form, upload at least one ownership document and one identity document.",
+        hi: "जो प्रमाण लगा रहे हैं उस पर टिक करें, कॉपी पर ख़ुद हस्ताक्षर करें (स्व-प्रमाणित) और लगाएँ। सप्लाई कोड के अनुसार अगर आप इनमें से कोई भी दस्तावेज़ नहीं दे पाते, तो सिक्योरिटी की तीन गुना राशि ली जाती है। अगर ज़िलाधिकारी या किसी सरकारी विभाग ने उस जगह पर आपत्ति की हो, या अदालत ने मालिकाना हक़ किसी और के पक्ष में तय किया हो, तो कनेक्शन नहीं मिलता। UPCL के ऑनलाइन फॉर्म में कम से कम एक मालिकाना हक़ का और एक पहचान का दस्तावेज़ अपलोड करें।"
+      },
+      documents: { en: ["Self-attested ownership or occupancy proof", "Latest rent receipt (within 3 months), if you give a lease deed", "Owner's NOC, if you are not the owner"], hi: ["मालिकाना हक़ या कब्ज़े का स्व-प्रमाणित प्रमाण", "लीज़ डीड दे रहे हों तो ताज़ा किराया रसीद (3 महीने के अंदर की)", "मालिक नहीं हैं तो मालिक का NOC"] },
+      mistakes: {
+        en: ["Forgetting to sign (self-attest) the copy", "Rent receipt older than three months", "Tenant applying without the owner's NOC"],
+        hi: ["कॉपी पर स्व-प्रमाणित हस्ताक्षर करना भूल जाना", "तीन महीने से पुरानी किराया रसीद", "किरायेदार का मालिक के NOC के बिना आवेदन करना"]
+      }
+    },
+    {
+      label: { en: "16) Statutory Permissions / Registrations, 17) Declaration / Undertaking attached, Date, Place, Signature, Name (Designation and Seal for companies)", hi: "16) वैधानिक अनुमतियाँ / पंजीकरण, 17) घोषणा / वचन पत्र संलग्न, तारीख़, स्थान, हस्ताक्षर, नाम (कंपनी हो तो पद और मुहर)" },
+      quick: { en: "Skip 16 for a home; date, place, sign, name", hi: "घर के लिए 16 छोड़ें; तारीख़, स्थान, हस्ताक्षर, नाम लिखें" },
+      meaning: {
+        en: "Question 16 lists papers \"whichever applicable\": proof of applying for approval, permission or NOC (for example from the Pollution Control Board or Director of Industries) if a law requires it, a partnership deed and list of partners, or for a limited company its Memorandum and Articles of Association, Certificate of Incorporation and list of directors. Question 17 says the Declaration/Undertaking in the Appendix must be attached. Then Date, Place, Signature of the Applicant and Name.",
+        hi: "सवाल 16 में \"जो लागू हों\" वे काग़ज़ हैं: अगर किसी क़ानून के तहत ज़रूरी हो तो मंज़ूरी, अनुमति या NOC (जैसे प्रदूषण नियंत्रण बोर्ड या उद्योग निदेशक से) के लिए आवेदन का प्रमाण, साझेदारी फ़र्म हो तो पार्टनरशिप डीड और साझेदारों की सूची, लिमिटेड कंपनी हो तो मेमोरेंडम और आर्टिकल्स ऑफ़ एसोसिएशन, निगमन प्रमाण पत्र और डायरेक्टरों की सूची। सवाल 17 कहता है कि परिशिष्ट (Appendix) वाला घोषणा/वचन पत्र साथ लगाना है। फिर तारीख़, स्थान, आवेदक के हस्ताक्षर और नाम।"
+      },
+      write: {
+        en: "For a normal home, question 16 usually does not apply; if you are unsure, ask the office. Fill and attach the declaration on the next pages. Write the date as day/month/year and the place, then sign and write your name. Designation and seal are only for a company or organisation.",
+        hi: "आम घर के लिए सवाल 16 आमतौर पर लागू नहीं होता; पक्का न हो तो कार्यालय में पूछें। अगले पन्नों वाला घोषणा पत्र भरकर साथ लगाएँ। तारीख़ दिन/माह/साल में और स्थान लिखें, फिर हस्ताक्षर करके अपना नाम लिखें। पद (Designation) और मुहर सिर्फ़ कंपनी या संस्था के लिए हैं।"
+      },
+      documents: { en: ["Declaration / Undertaking (Appendix), filled and signed"], hi: ["घोषणा / वचन पत्र (परिशिष्ट), भरा और हस्ताक्षर किया हुआ"] },
+      mistakes: {
+        en: ["Submitting the form without the declaration pages", "Signature by someone other than the applicant"],
+        hi: ["घोषणा वाले पन्नों के बिना फॉर्म जमा करना", "आवेदक की जगह किसी और के हस्ताक्षर"]
+      }
+    },
+    {
+      label: { en: "Appendix: Declaration / Undertaking (For new LT Connections)", hi: "परिशिष्ट: घोषणा / वचन पत्र (नए एलटी कनेक्शन के लिए)" },
+      quick: { en: "Fill name, father's name, address; choose options; sign before witness", hi: "नाम, पिता का नाम, पता भरें; सही विकल्प चुनें; गवाह के सामने हस्ताक्षर" },
+      meaning: {
+        en: "A sworn declaration that becomes an agreement with UPCL. You fill \"I, ___ son of ___ Resident of ___\" (or the company version), and the premises address. You state either that you are a lawful occupant and have enclosed proof, or that you are a lawful occupant but not the owner, cannot give the owner's NOC, and are ready to pay the security set by the Commission. For wiring, you state either that it follows the CEA Safety Regulations and was done by a licensed electrical contractor (owner with new wiring), or that it follows them to the best of your knowledge (reconnection or occupier). You also agree to pay bills, keep the meter safe, allow meter reading, and let UPCL disconnect for default or false statements.",
+        hi: "यह शपथ वाली घोषणा है जो UPCL के साथ समझौता बन जाती है। आप \"मैं, ___ पुत्र ___ निवासी ___\" (या कंपनी वाला हिस्सा) और जगह का पता भरते हैं। आप बताते हैं कि या तो आप जगह के वैध रहने वाले हैं और प्रमाण लगाया है, या आप वैध रहने वाले हैं पर मालिक नहीं, मालिक का NOC नहीं दे सकते, और आयोग द्वारा तय सिक्योरिटी देने को तैयार हैं। वायरिंग के बारे में आप कहते हैं कि या तो वह CEA सुरक्षा नियमों के अनुसार लाइसेंसी बिजली ठेकेदार ने की है (मालिक और नई वायरिंग), या आपकी जानकारी में नियमों के अनुसार है (दोबारा कनेक्शन या किरायेदार)। आप बिल भरने, मीटर सुरक्षित रखने, मीटर रीडिंग करने देने, और चूक या ग़लत जानकारी पर UPCL को कनेक्शन काटने देने के लिए भी सहमत होते हैं।"
+      },
+      write: {
+        en: "Fill the blanks, strike out the \"Or\" options that do not apply to you, then sign and write your name at the end of the second page. The form says \"Signed and delivered in presence of witness\" and has a line for the witness's name. Whether it must be on stamp paper or notarised is not stated; ask the office. The Supply Code also says UPCL inspects and tests your wiring within 5 days, and defects must be fixed within 15 days or the application lapses.",
+        hi: "खाली जगहें भरें, \"Or\" वाले जो विकल्प आप पर लागू नहीं होते उन्हें काटें, फिर दूसरे पन्ने के आख़िर में हस्ताक्षर करके नाम लिखें। फॉर्म में \"गवाह की मौजूदगी में हस्ताक्षर\" लिखा है और गवाह के नाम की लाइन है। स्टांप पेपर या नोटरी की ज़रूरत है या नहीं, यह नहीं लिखा; कार्यालय में पूछें। सप्लाई कोड के अनुसार UPCL 5 दिन में आपकी वायरिंग की जाँच करता है, और कमियाँ 15 दिन में ठीक न हों तो आवेदन रद्द हो जाता है।"
+      },
+      documents: { en: ["Witness (name on the declaration)"], hi: ["गवाह (घोषणा पत्र पर नाम)"] },
+      mistakes: {
+        en: ["Leaving both \"Or\" options un-struck", "Claiming licensed-contractor wiring when it was not", "No witness name"],
+        hi: ["दोनों \"Or\" वाले विकल्प बिना काटे छोड़ देना", "ठेकेदार से वायरिंग न होने पर भी लाइसेंसी ठेकेदार वाली बात लिखना", "गवाह का नाम न होना"]
+      }
+    },
+    {
+      label: { en: "Acknowledgement (Unique Application No., name, address, load, stamp and signature of UPCL's representative)", hi: "पावती (यूनिक एप्लीकेशन नंबर, नाम, पता, लोड, UPCL प्रतिनिधि की मुहर और हस्ताक्षर)" },
+      quick: { en: "UPCL fills and stamps this; keep it safely", hi: "इसे UPCL भरकर मुहर लगाता है; सँभाल कर रखें" },
+      meaning: {
+        en: "The receipt UPCL gives you: Unique Application No., name of applicant, address where connection is required, load applied for, with UPCL's stamp and its representative's signature, name and designation.",
+        hi: "UPCL आपको जो रसीद देता है: यूनिक एप्लीकेशन नंबर, आवेदक का नाम, कनेक्शन वाली जगह का पता, आवेदित लोड, साथ में UPCL की मुहर और उसके प्रतिनिधि के हस्ताक्षर, नाम और पद।"
+      },
+      write: {
+        en: "You may fill your name, address and load to save time, but the office must write the Unique Application No., stamp and sign it. Check it before you leave. The time limits for your connection count from the date of a complete application with payment, so this dated receipt matters if there is a delay.",
+        hi: "समय बचाने के लिए आप अपना नाम, पता और लोड भर सकते हैं, लेकिन यूनिक एप्लीकेशन नंबर, मुहर और हस्ताक्षर कार्यालय ही लगाएगा। निकलने से पहले जाँच लें। कनेक्शन की समय सीमा पूरा आवेदन और भुगतान मिलने की तारीख़ से गिनी जाती है, इसलिए देरी होने पर यह तारीख़ वाली रसीद काम आती है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Acknowledgement without stamp or application number", "Losing the acknowledgement"],
+        hi: ["बिना मुहर या आवेदन नंबर वाली पावती लेना", "पावती खो देना"]
+      }
+    }
+  ]
+});

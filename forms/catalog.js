@@ -39,7 +39,8 @@ window.CATALOG = {
   "name-change-gazette":     { icon: "certificate", short: { en: "Name change (Gazette)", hi: "नाम बदलना (गज़ट)" } },
   "sbi-kyc-update":          { icon: "bank",        short: { en: "Bank KYC update (SBI)", hi: "बैंक केवाईसी अपडेट (एसबीआई)" } },
   "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } },
-  "uk-tenant-verification":  { icon: "shield",      short: { en: "Tenant police verification", hi: "किरायेदार पुलिस सत्यापन" } }
+  "uk-tenant-verification":  { icon: "shield",      short: { en: "Tenant police verification", hi: "किरायेदार पुलिस सत्यापन" } },
+  "upcl-new-connection":     { icon: "home",        short: { en: "Electricity connection (UPCL)", hi: "बिजली कनेक्शन (UPCL)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
