@@ -1,0 +1,271 @@
+// Checked against the official "PAN CR-01 Request For Changes Or Correction in PAN Data [For an Individual]"
+// (4-page PDF with its printed "Guidelines for filling Request for Changes or Correction in PAN Data",
+// file "PAN CR individual_03Nov.pdf" on tinpan.proteantech.in, created 26-03-2026, last modified 30-10-2026;
+// linked from https://tinpan.proteantech.in/downloads/pan/downloads-pan.html as "PAN CR-01 - For Individual");
+// the earlier upload of the same form ("PAN CR individual.pdf", modified 30-03-2026), which differs only in
+// the TIN note; Protean's pages "Read Instructions" for changes/correction
+// (https://tinpan.proteantech.in/services/pan/instructionscorr.html) and "Steps for online application"
+// (https://tinpan.proteantech.in/services/pan/correction.html). The CBDT order on the PAN correction procedure
+// (incometaxindia.gov.in) could not be opened (access denied), so nothing here is taken from it.
+// Every statement below comes from those documents. If something is not stated in them, the guide
+// says "ask at the PAN centre / check the official site" instead of guessing. No fees are given, because
+// the official fee table read does not carry a date.
+
+window.FORMS.push({
+  id: "pan-correction",
+  verified: true,
+  source: {
+    title: "PAN CR-01: Request For Changes Or Correction in PAN Data [For an Individual], with Guidelines (Protean, file dated 30-10-2026)",
+    url: "https://tinpan.proteantech.in/downloads/pan/download/PAN%20CR%20individual_03Nov.pdf"
+  },
+  caution: {
+    en: "The old form \"Request for New PAN Card or/and Changes or Correction in PAN Data\" is no longer the current form. From 2026 Protean lists PAN CR-01 for individuals (PAN CR-02 is for companies and other non-individuals). Some older Protean help pages still show old details such as a 3.5 cm x 2.5 cm photo; follow what is printed on PAN CR-01 (4.5 cm x 3.5 cm). Fees are not given here; check the current fee on the Protean or UTIITSL website or at the PAN centre.",
+    hi: "पुराना फॉर्म \"Request for New PAN Card or/and Changes or Correction in PAN Data\" अब मौजूदा फॉर्म नहीं है। 2026 से प्रोटियन व्यक्तियों के लिए PAN CR-01 देता है (कंपनी जैसे दूसरों के लिए PAN CR-02)। प्रोटियन के कुछ पुराने मदद वाले पेजों पर अब भी पुरानी बातें लिखी हैं, जैसे 3.5 x 2.5 सेमी फ़ोटो; PAN CR-01 पर जो छपा है वही मानें (4.5 x 3.5 सेमी)। फ़ीस यहाँ नहीं दी गई है; मौजूदा फ़ीस प्रोटियन या UTIITSL की वेबसाइट या पैन केंद्र पर देखें।"
+  },
+  lastChecked: "2026-11-05",
+
+  category: { en: "Government", hi: "सरकारी" },
+  name: { en: "PAN Card Correction / Change Form (PAN CR-01)", hi: "पैन कार्ड सुधार / बदलाव फॉर्म (PAN CR-01)" },
+  about: {
+    en: "The form for a person who already has a PAN and wants to correct or change the details in it, such as name, date of birth, father's or mother's name, address, mobile or email. Do NOT use it to get a second PAN. Fill it in English only, in BLOCK (capital) letters, preferably in black ink, one character per box with one empty box after each word. Tick the box in the left margin only next to the items you want to change, but fill all the mandatory items anyway. Attach a copy of your PAN card and proof for each change. You can submit it at a PAN centre of Protean or UTIITSL, or apply online on their websites. If you only want a reprint of your card with no change, the form tells you to use www.utiitsl.com or www.tinpan.proteantech.in.",
+    hi: "यह फॉर्म उन लोगों के लिए है जिनके पास पहले से पैन है और वे उसकी जानकारी ठीक करवाना या बदलवाना चाहते हैं, जैसे नाम, जन्म तिथि, पिता या माँ का नाम, पता, मोबाइल या ईमेल। दूसरा पैन लेने के लिए इसका इस्तेमाल न करें। फॉर्म सिर्फ़ अंग्रेज़ी में, बड़े (कैपिटल) अक्षरों में, हो सके तो काली स्याही से भरें; हर खाने में एक अक्षर और हर शब्द के बाद एक खाना खाली। बाईं ओर के टिक वाले खाने सिर्फ़ उन्हीं चीज़ों के आगे टिक करें जिन्हें बदलवाना है, पर बाक़ी ज़रूरी खाने भी भरें। पैन कार्ड की कॉपी और हर बदलाव का प्रमाण साथ लगाएँ। फॉर्म प्रोटियन या UTIITSL के पैन केंद्र पर जमा कर सकते हैं, या उनकी वेबसाइट पर ऑनलाइन आवेदन कर सकते हैं। अगर बिना किसी बदलाव के सिर्फ़ कार्ड दोबारा छपवाना है, तो फॉर्म के अनुसार www.utiitsl.com या www.tinpan.proteantech.in पर जाएँ।"
+  },
+
+  fields: [
+    {
+      label: { en: "Permanent Account Number (PAN) and Aadhaar Number", hi: "पैन (स्थायी खाता संख्या) और आधार नंबर" },
+      quick: { en: "Your existing 10-character PAN, and your 12-digit Aadhaar", hi: "अपना मौजूदा 10 अक्षरों वाला पैन और 12 अंकों का आधार" },
+      meaning: {
+        en: "The PAN you already have (the one you want corrected) and your Aadhaar number.",
+        hi: "आपका पहले से मिला पैन (जिसमें सुधार चाहिए) और आपका आधार नंबर।"
+      },
+      write: {
+        en: "Write your PAN correctly, one character per box. Aadhaar is mandatory except for the exempt category: everyone who has an Aadhaar must write it. Attach a copy of your PAN card, or the Income Tax Department letter that told you your PAN. If you lost the card, attach a copy of the FIR. Protean says that without any PAN proof the request is handled on a 'good effort' basis, and if the PAN or details don't match the Income Tax records it may not be processed and the fee is forfeited.",
+        hi: "पैन सही-सही लिखें, हर खाने में एक अक्षर। आधार ज़रूरी है (छूट वाली श्रेणी को छोड़कर): जिसके पास आधार है उसे लिखना ही है। पैन कार्ड की कॉपी, या आयकर विभाग का वह पत्र जिसमें पैन बताया गया था, साथ लगाएँ। कार्ड खो गया है तो FIR की कॉपी लगाएँ। प्रोटियन के अनुसार पैन का कोई प्रमाण न हो तो आवेदन 'good effort' आधार पर देखा जाता है, और अगर पैन या जानकारी आयकर रिकॉर्ड से मेल न खाए तो आवेदन रुक सकता है और फ़ीस वापस नहीं मिलती।"
+      },
+      documents: {
+        en: ["Copy of PAN card, or the Income Tax Department letter giving your PAN", "Copy of FIR, if the PAN card is lost"],
+        hi: ["पैन कार्ड की कॉपी, या आयकर विभाग का पैन वाला पत्र", "पैन कार्ड खो गया हो तो FIR की कॉपी"]
+      },
+      mistakes: {
+        en: ["A wrong letter or digit in the PAN", "Leaving Aadhaar blank when you have one", "Not attaching any PAN proof"],
+        hi: ["पैन में कोई अक्षर या अंक ग़लत लिखना", "आधार होते हुए भी खाना खाली छोड़ना", "पैन का कोई प्रमाण न लगाना"]
+      }
+    },
+    {
+      label: { en: "Photographs (two)", hi: "फ़ोटो (दो)" },
+      quick: { en: "Paste two colour photos, 4.5 x 3.5 cm, white background; don't staple", hi: "दो रंगीन फ़ोटो चिपकाएँ, 4.5 x 3.5 सेमी, सफ़ेद बैकग्राउंड; स्टेपल न करें" },
+      meaning: {
+        en: "Two photo boxes at the top, left and right. Every applicant, including a minor, must paste two photos.",
+        hi: "ऊपर बाएँ और दाएँ फ़ोटो के दो खाने हैं। हर आवेदक को, नाबालिग को भी, दो फ़ोटो लगानी हैं।"
+      },
+      write: {
+        en: "Paste two recent colour photos with a white background, size 4.5 cm x 3.5 cm. Do not staple or clip them. Sign (or put your left thumb impression) across the LEFT photo so part is on the photo and part on the form. Keep the RIGHT photo clean, with no mark. The card photo will only be as clear as the photo you paste.",
+        hi: "हाल की दो रंगीन फ़ोटो, सफ़ेद बैकग्राउंड, साइज़ 4.5 सेमी x 3.5 सेमी चिपकाएँ। स्टेपल या क्लिप न करें। बाईं फ़ोटो के आर-पार हस्ताक्षर (या बाएँ अंगूठे का निशान) करें, ताकि कुछ हिस्सा फ़ोटो पर और कुछ फॉर्म पर हो। दाईं फ़ोटो पर कोई निशान न लगाएँ। कार्ड पर फ़ोटो उतनी ही साफ़ आएगी जितनी साफ़ फ़ोटो आप लगाएँगे।"
+      },
+      documents: { en: ["2 recent colour photos, white background, 4.5 cm x 3.5 cm"], hi: ["हाल की 2 रंगीन फ़ोटो, सफ़ेद बैकग्राउंड, 4.5 सेमी x 3.5 सेमी"] },
+      mistakes: {
+        en: ["Stapling or clipping the photos", "Signing on the right-side photo", "Using the old 3.5 x 2.5 cm size from older guides"],
+        hi: ["फ़ोटो स्टेपल या क्लिप करना", "दाईं फ़ोटो पर हस्ताक्षर करना", "पुरानी गाइड वाला 3.5 x 2.5 सेमी साइज़ लगाना"]
+      }
+    },
+    {
+      label: { en: "Tick Box column (left margin)", hi: "टिक बॉक्स वाला कॉलम (बाईं ओर)" },
+      quick: { en: "Tick only the items you want changed", hi: "सिर्फ़ उन्हीं खानों पर टिक करें जिन्हें बदलवाना है" },
+      meaning: {
+        en: "Each of items 1 to 9 has a small 'Tick' box next to its number. A tick tells the PAN office that this item must be changed.",
+        hi: "1 से 9 तक हर आइटम के नंबर के पास एक छोटा 'Tick' खाना है। टिक का मतलब है कि यह जानकारी बदलनी है।"
+      },
+      write: {
+        en: "Tick the box next to each item you want corrected and fill that item. Still fill all the other mandatory items, even those you are not changing. Protean says: if you only want a fresh card with no change, fill the form but do not tick any box. Your address for communication is updated from this form even if you did not tick address.",
+        hi: "जिस आइटम में सुधार चाहिए, उसके आगे टिक करें और वह आइटम भरें। बाक़ी ज़रूरी आइटम भी भरें, चाहे उन्हें न बदलवाना हो। प्रोटियन के अनुसार अगर बिना बदलाव के सिर्फ़ नया कार्ड चाहिए, तो फॉर्म भरें पर कोई टिक न करें। पता टिक न करने पर भी, इस फॉर्म में लिखा पता ही आपके पत्राचार का पता बन जाता है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Ticking items you are not changing", "Leaving mandatory items blank because they are not being changed", "Forgetting to tick the item you want corrected"],
+        hi: ["जिन्हें नहीं बदलवाना उन पर भी टिक कर देना", "बदलाव न होने की वजह से ज़रूरी खाने खाली छोड़ना", "जिसे ठीक करवाना है उसी पर टिक करना भूल जाना"]
+      }
+    },
+    {
+      label: { en: "1A. Name (First, Middle, Last)", hi: "1A. नाम (पहला, बीच का, आख़िरी)" },
+      quick: { en: "Full name, no initials or titles like Shri/Dr", hi: "पूरा नाम लिखें, initials या Shri/Dr जैसे टाइटल नहीं" },
+      meaning: {
+        en: "Your full name, split into First Name, Middle Name and Last Name. It is mandatory.",
+        hi: "आपका पूरा नाम, तीन हिस्सों में: पहला, बीच का और आख़िरी नाम। यह ज़रूरी है।"
+      },
+      write: {
+        en: "Write the full name with no short forms and no title like Shri/Mr, Smt/Mrs, Kumari/Ms, Dr. or Major. If your Aadhaar has initials, write the expanded name here. The form's example: Aadhaar says M.S. KANDASWAMY, so write First Name MADURAI, Middle Name SOMASUNDRAM, Last Name KANDASWAMY. If you have one name (RAVIKANT), the example puts it in Last Name.",
+        hi: "पूरा नाम लिखें, कोई छोटा रूप नहीं, और Shri/Mr, Smt/Mrs, Kumari/Ms, Dr. या Major जैसा टाइटल नहीं। आधार में initials हों तो यहाँ पूरा नाम लिखें। फॉर्म का उदाहरण: आधार में M.S. KANDASWAMY है, तो पहला नाम MADURAI, बीच का SOMASUNDRAM, आख़िरी KANDASWAMY। अगर एक ही नाम है (RAVIKANT), तो उदाहरण में वह Last Name में लिखा गया है।"
+      },
+      documents: {
+        en: ["For a spelling fix or expanding initials: an ID proof showing the corrected name", "For a big name change: proof of the change (see item 11)"],
+        hi: ["स्पेलिंग सुधार या initials खोलने के लिए: सही नाम वाला पहचान प्रमाण", "नाम पूरी तरह बदलने पर: बदलाव का प्रमाण (आइटम 11 देखें)"]
+      },
+      mistakes: {
+        en: ["Writing initials instead of the full name", "Adding Shri / Smt / Dr. before the name"],
+        hi: ["पूरे नाम की जगह initials लिखना", "नाम से पहले Shri / Smt / Dr. लगाना"]
+      }
+    },
+    {
+      label: { en: "1B. Name (as per Aadhaar)", hi: "1B. नाम (आधार के अनुसार)" },
+      quick: { en: "Exactly as on Aadhaar, without dots (e.g. M S KANDASWAMY)", hi: "बिल्कुल आधार जैसा, बिना बिंदु के (जैसे M S KANDASWAMY)" },
+      meaning: {
+        en: "Your name exactly as printed on your Aadhaar. The guidelines say the Aadhaar name will be printed on the PAN card.",
+        hi: "आपका नाम ठीक वैसा, जैसा आधार पर छपा है। निर्देशों के अनुसार पैन कार्ड पर आधार वाला नाम ही छपेगा।"
+      },
+      write: {
+        en: "Copy the Aadhaar name letter by letter, leaving one box empty between words and no dots. The form's examples: RAVIKANT; SURESH SARDA; POONAM RAVI NARAYAN; and M.S. KANDASWAMY written as M S KANDASWAMY.",
+        hi: "आधार वाला नाम अक्षर-अक्षर वैसे ही लिखें, शब्दों के बीच एक खाना खाली, बिंदु (.) नहीं। फॉर्म के उदाहरण: RAVIKANT; SURESH SARDA; POONAM RAVI NARAYAN; और M.S. KANDASWAMY को M S KANDASWAMY लिखें।"
+      },
+      documents: { en: ["Your Aadhaar"], hi: ["आपका आधार"] },
+      mistakes: {
+        en: ["A name here that differs from the Aadhaar", "Wanting a different name on the card than on Aadhaar (fix the Aadhaar first)"],
+        hi: ["यहाँ आधार से अलग नाम लिखना", "कार्ड पर आधार से अलग नाम चाहना (पहले आधार ठीक करवाएँ)"]
+      }
+    },
+    {
+      label: { en: "2. Gender", hi: "2. लिंग" },
+      quick: { en: "Tick one: Male, Female or Transgender", hi: "एक पर टिक करें: Male, Female या Transgender" },
+      meaning: { en: "Your gender. It is mandatory to select one option.", hi: "आपका लिंग। एक विकल्प चुनना ज़रूरी है।" },
+      write: {
+        en: "Tick exactly one of Male, Female or Transgender.",
+        hi: "Male, Female या Transgender में से सिर्फ़ एक पर टिक करें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Ticking two options or none"], hi: ["दो विकल्पों पर टिक करना या किसी पर नहीं"] }
+    },
+    {
+      label: { en: "3. Date of Birth", hi: "3. जन्म तिथि" },
+      quick: { en: "DDMMYYYY, one digit per box (2 Aug 1975 = 02081975)", hi: "दिन-महीना-साल, हर खाने में एक अंक (2 अगस्त 1975 = 02081975)" },
+      meaning: { en: "The day you were born. It is mandatory.", hi: "आपके जन्म की तारीख। यह ज़रूरी है।" },
+      write: {
+        en: "The boxes are printed d d m m y y y y. The form's example: 2nd August 1975 is written 0 2 0 8 1 9 7 5. To correct your date of birth, tick this item and attach a document from a competent authority showing the correct date.",
+        hi: "खाने d d m m y y y y क्रम में छपे हैं। फॉर्म का उदाहरण: 2 अगस्त 1975 को 0 2 0 8 1 9 7 5 लिखें। जन्म तिथि ठीक करवानी हो तो इस पर टिक करें और सक्षम अधिकारी (competent authority) का वह दस्तावेज़ लगाएँ जिसमें सही तारीख़ हो।"
+      },
+      documents: {
+        en: ["Proof of date of birth", "If correcting it: a document issued by a competent authority with the correct date"],
+        hi: ["जन्म तिथि का प्रमाण", "सुधार करवाना हो तो: सक्षम अधिकारी का जारी दस्तावेज़ जिसमें सही तारीख़ हो"]
+      },
+      mistakes: {
+        en: ["Writing the month before the day", "Writing 2 instead of 02"],
+        hi: ["दिन से पहले महीना लिखना", "02 की जगह सिर्फ़ 2 लिखना"]
+      }
+    },
+    {
+      label: { en: "4. Address", hi: "4. पता" },
+      quick: { en: "Tick Residence or Office; full address with PIN", hi: "Residence या Office पर टिक; पिन के साथ पूरा पता" },
+      meaning: {
+        en: "The address where the PAN card will be sent. You choose either your residence or your office.",
+        hi: "वह पता जहाँ पैन कार्ड भेजा जाएगा। घर (Residence) या दफ़्तर (Office), इनमें से एक चुनें।"
+      },
+      write: {
+        en: "Tick one of Residence or Office, then fill Flat/Door/Building, Road/Street, Post Office, Area/Locality/Town/City, District, State/Union Territory, Country and PIN code completely. For a foreign address, Country and ZIP code are mandatory. If you choose Office, proof of office address is mandatory. The address must appear on your address proof.",
+        hi: "Residence या Office में से एक पर टिक करें, फिर मकान/बिल्डिंग, सड़क/गली, डाकघर, इलाक़ा/शहर, ज़िला, राज्य/केंद्र शासित प्रदेश, देश और पिन कोड पूरा भरें। विदेशी पता हो तो देश और ZIP कोड ज़रूरी हैं। Office चुनें तो दफ़्तर के पते का प्रमाण ज़रूरी है। यही पता आपके पते के प्रमाण में होना चाहिए।"
+      },
+      documents: { en: ["Proof of address showing this address (office address proof if you tick Office)"], hi: ["इसी पते वाला पते का प्रमाण (Office चुनें तो दफ़्तर के पते का प्रमाण)"] },
+      mistakes: {
+        en: ["Ticking both Residence and Office", "Wrong or missing PIN code", "An address that is not on the attached proof"],
+        hi: ["Residence और Office दोनों पर टिक करना", "ग़लत या छूटा हुआ पिन कोड", "ऐसा पता जो लगाए गए प्रमाण में नहीं है"]
+      }
+    },
+    {
+      label: { en: "5–6. Passport Number and Taxpayer Identification Number (TIN)", hi: "5–6. पासपोर्ट नंबर और विदेशी TIN" },
+      quick: { en: "Most resident Indians leave blank; needed for NRIs/foreign citizens", hi: "ज़्यादातर भारत में रहने वाले खाली छोड़ें; NRI/विदेशी नागरिकों के लिए" },
+      meaning: {
+        en: "Item 5 is your passport number. Item 6 is your tax number in the foreign country where you live.",
+        hi: "आइटम 5 आपका पासपोर्ट नंबर है। आइटम 6 उस विदेशी देश का टैक्स नंबर है जहाँ आप रहते हैं।"
+      },
+      write: {
+        en: "Passport number is mandatory if you are a Non-resident or Resident but not ordinarily resident. TIN is mandatory if you are not a citizen of India; if you have no TIN, write another citizenship or national ID number and attach a self-attested copy. The form does not say ordinary resident citizens must fill these; if unsure, ask at the PAN centre.",
+        hi: "अगर आप Non-resident या Resident but not ordinarily resident हैं तो पासपोर्ट नंबर ज़रूरी है। भारत के नागरिक नहीं हैं तो TIN ज़रूरी है; TIN न हो तो कोई और नागरिकता/राष्ट्रीय पहचान नंबर लिखें और उसकी स्व-सत्यापित कॉपी लगाएँ। फॉर्म यह नहीं कहता कि भारत में रहने वाले आम नागरिक इन्हें भरें; शक हो तो पैन केंद्र पर पूछें।"
+      },
+      changed: {
+        en: "Updated in the October 2026 version of PAN CR-01: if a foreign TIN is not available, another citizenship or national identification number can be given, with a self-attested copy.",
+        hi: "PAN CR-01 के अक्टूबर 2026 वाले वर्ज़न में जोड़ा गया: विदेशी TIN न हो तो कोई और नागरिकता या राष्ट्रीय पहचान नंबर, स्व-सत्यापित कॉपी के साथ, दिया जा सकता है।"
+      },
+      documents: { en: ["Self-attested copy of the citizenship/national ID, if given instead of a TIN"], hi: ["TIN की जगह दिया गया नागरिकता/राष्ट्रीय पहचान पत्र की स्व-सत्यापित कॉपी"] },
+      mistakes: { en: ["An NRI leaving the passport number blank"], hi: ["NRI का पासपोर्ट नंबर खाली छोड़ना"] }
+    },
+    {
+      label: { en: "7. Contact Details (mobile, email, landline)", hi: "7. संपर्क (मोबाइल, ईमेल, लैंडलाइन)" },
+      quick: { en: "Mobile with country code 91, and email; both mandatory", hi: "कंट्री कोड 91 के साथ मोबाइल, और ईमेल; दोनों ज़रूरी" },
+      meaning: { en: "How the PAN office can reach you.", hi: "पैन दफ़्तर आपसे कैसे संपर्क करे।" },
+      write: {
+        en: "Mobile number and email ID are mandatory. Put the country code before the mobile: the form's example writes 9102511111 of India as 91 and then 9102511111. A landline is optional; write the country code, STD code and number (example: 91, 11, 23555705 for Delhi).",
+        hi: "मोबाइल नंबर और ईमेल ज़रूरी हैं। मोबाइल से पहले कंट्री कोड लिखें: फॉर्म के उदाहरण में भारत का 9102511111 ऐसे लिखा है: 91 और फिर 9102511111। लैंडलाइन ज़रूरी नहीं; हो तो कंट्री कोड, STD कोड और नंबर लिखें (उदाहरण: दिल्ली के लिए 91, 11, 23555705)।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Leaving email blank", "Missing the country code 91", "A mobile number you don't use"], hi: ["ईमेल खाली छोड़ना", "कंट्री कोड 91 न लिखना", "ऐसा मोबाइल नंबर जो आप इस्तेमाल नहीं करते"] }
+    },
+    {
+      label: { en: "8. Father's Name", hi: "8. पिता का नाम" },
+      quick: { en: "Father's full name; married women too give father's, not husband's", hi: "पिता का पूरा नाम; शादीशुदा महिलाएँ भी पति का नहीं, पिता का" },
+      meaning: { en: "Your father's name, as First, Middle and Last Name. It is mandatory.", hi: "आपके पिता का नाम, पहला, बीच का और आख़िरी नाम में। यह ज़रूरी है।" },
+      write: {
+        en: "Write your father's name in full in the three rows. A married woman must give her father's name, not her husband's.",
+        hi: "तीनों पंक्तियों में पिता का पूरा नाम लिखें। शादीशुदा महिला को पति का नहीं, अपने पिता का नाम देना है।"
+      },
+      documents: { en: ["If correcting it: proof containing the corrected name (see item 11)"], hi: ["सुधार करवाना हो तो: सही नाम वाला प्रमाण (आइटम 11 देखें)"] },
+      mistakes: { en: ["Writing the husband's name", "Using initials"], hi: ["पति का नाम लिखना", "initials लिखना"] }
+    },
+    {
+      label: { en: "9. Mother's Name", hi: "9. माँ का नाम" },
+      quick: { en: "Mother's name as First / Middle / Last Name", hi: "माँ का नाम, पहला / बीच का / आख़िरी नाम में" },
+      meaning: { en: "Your mother's name.", hi: "आपकी माँ का नाम।" },
+      write: {
+        en: "Write your mother's name as First Name, Middle Name and Last Name.",
+        hi: "माँ का नाम पहला, बीच का और आख़िरी नाम में लिखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Using initials or short forms"], hi: ["initials या छोटा रूप लिखना"] }
+    },
+    {
+      label: { en: "10. Name of parent to be printed on the PAN card", hi: "10. पैन कार्ड पर किस माता/पिता का नाम छपे" },
+      quick: { en: "Tick Father or Mother (mandatory, only one)", hi: "Father या Mother पर टिक करें (ज़रूरी, सिर्फ़ एक)" },
+      meaning: { en: "Whose name appears on your PAN card: your father's or your mother's.", hi: "आपके पैन कार्ड पर किसका नाम छपेगा: पिता का या माँ का।" },
+      write: {
+        en: "Tick exactly one: Father or Mother. It is mandatory.",
+        hi: "सिर्फ़ एक पर टिक करें: Father या Mother। यह ज़रूरी है।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: { en: ["Ticking both or neither"], hi: ["दोनों पर टिक करना या किसी पर नहीं"] }
+    },
+    {
+      label: { en: "11. Documents submitted (proofs)", hi: "11. लगाए गए दस्तावेज़ (प्रमाण)" },
+      quick: { en: "Tick each proof attached: ID, address, DOB, change proof, PAN copy", hi: "जो प्रमाण लगाए उन पर टिक: पहचान, पता, जन्म तिथि, बदलाव का प्रमाण, पैन कॉपी" },
+      meaning: {
+        en: "A checklist of the proofs you attach: (i) identity, (ii) address, (iii) date of birth, (iv) proof supporting other changes, (v) copy of PAN.",
+        hi: "आप जो प्रमाण लगा रहे हैं उनकी सूची: (i) पहचान, (ii) पता, (iii) जन्म तिथि, (iv) दूसरे बदलावों का प्रमाण, (v) पैन की कॉपी।"
+      },
+      write: {
+        en: "Tick each box for the proof you attach. ID and address proofs must be in your full name as written in item 1A. For a minor, a parent's or guardian's ID and address proof counts. Address proof in the name of a spouse, parent or sibling is also accepted. For a small name fix (spelling, expanding initials), give an ID proof with the corrected name. For a big name change: married women can give a marriage certificate, marriage invitation card, Gazette notice of name change, a gazetted officer's certificate, or a passport showing the husband's name; others can give a Gazette notice or a gazetted officer's certificate. For the full list of accepted ID and address documents, see Protean's \"Documents Required\" page or ask at the PAN centre.",
+        hi: "जो प्रमाण लगाया है, उसके खाने पर टिक करें। पहचान और पते का प्रमाण आपके उसी पूरे नाम में हो जो 1A में लिखा है। नाबालिग के लिए माता-पिता या अभिभावक का पहचान और पते का प्रमाण मान्य है। पति/पत्नी, माता-पिता या भाई-बहन के नाम वाला पते का प्रमाण भी चलता है। नाम में छोटा सुधार (स्पेलिंग, initials खोलना) हो तो सही नाम वाला पहचान प्रमाण दें। नाम पूरी तरह बदला हो तो: शादीशुदा महिलाएँ विवाह प्रमाणपत्र, शादी का कार्ड, गज़ट में नाम बदलने की सूचना, राजपत्रित अधिकारी का प्रमाणपत्र, या पति के नाम वाला पासपोर्ट दे सकती हैं; बाक़ी लोग गज़ट की सूचना या राजपत्रित अधिकारी का प्रमाणपत्र दें। मान्य पहचान और पते के दस्तावेज़ों की पूरी सूची प्रोटियन के \"Documents Required\" पेज पर देखें या पैन केंद्र पर पूछें।"
+      },
+      documents: {
+        en: ["Proof of identity", "Proof of address", "Proof of date of birth", "Proof for each change requested", "Copy of PAN card (or FIR if lost)"],
+        hi: ["पहचान का प्रमाण", "पते का प्रमाण", "जन्म तिथि का प्रमाण", "हर बदलाव का प्रमाण", "पैन कार्ड की कॉपी (खो गया हो तो FIR)"]
+      },
+      mistakes: {
+        en: ["Asking for a name change without proof of the change", "Proofs in a different name from item 1A", "Not ticking the boxes for documents attached"],
+        hi: ["बदलाव का प्रमाण दिए बिना नाम बदलवाना", "1A से अलग नाम वाले प्रमाण देना", "लगाए गए दस्तावेज़ों के खानों पर टिक न करना"]
+      }
+    },
+    {
+      label: { en: "Verification & Declaration, Place, Date and Signature", hi: "सत्यापन और घोषणा, जगह, तारीख़ और हस्ताक्षर" },
+      quick: { en: "Your name, 'Self', place, date; sign inside the box", hi: "अपना नाम, 'Self', जगह, तारीख़; खाने के अंदर हस्ताक्षर" },
+      meaning: {
+        en: "On page 2 you declare that what you wrote is true, and sign.",
+        hi: "पेज 2 पर आप घोषणा करते हैं कि लिखी जानकारी सही है, और हस्ताक्षर करते हैं।"
+      },
+      write: {
+        en: "Write your name after \"I,\" and in \"in the capacity of\" write Self (or Representative Assessee if someone signs for the applicant). Fill Place and Date. Sign or put your left thumb impression inside the box only. A thumb impression must be attested by a Magistrate, Notary Public, Oath Commissioner or Gazetted Officer under official seal and stamp.",
+        hi: "\"I,\" के बाद अपना नाम लिखें और \"in the capacity of\" में Self लिखें (अगर कोई आवेदक की ओर से साइन कर रहा है तो Representative Assessee)। जगह (Place) और तारीख़ (Date) भरें। हस्ताक्षर या बाएँ अंगूठे का निशान सिर्फ़ खाने के अंदर करें। अंगूठे का निशान मजिस्ट्रेट, नोटरी, ओथ कमिश्नर या राजपत्रित अधिकारी से सरकारी मुहर के साथ सत्यापित होना चाहिए।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing outside the box", "A thumb impression without attestation", "Leaving place or date blank"],
+        hi: ["खाने के बाहर हस्ताक्षर करना", "बिना सत्यापन के अंगूठे का निशान", "जगह या तारीख़ खाली छोड़ना"]
+      }
+    }
+  ]
+});

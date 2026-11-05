@@ -22,7 +22,11 @@ window.CATALOG = {
   "canara-account-opening":  { icon: "bank",        short: { en: "Canara Bank account",  hi: "केनरा बैंक खाता" } },
   "birth-registration":      { icon: "certificate", short: { en: "Birth registration",   hi: "जन्म पंजीकरण" } },
   "lpg-kyc":                 { icon: "home",        short: { en: "LPG gas connection",   hi: "एलपीजी गैस कनेक्शन" } },
-  "form-15g":                { icon: "rupee",       short: { en: "No TDS: Form 121 (15G)", hi: "टीडीएस नहीं: फॉर्म 121 (15G)" } }
+  "form-15g":                { icon: "rupee",       short: { en: "No TDS: Form 121 (15G)", hi: "टीडीएस नहीं: फॉर्म 121 (15G)" } },
+  "driving-licence":         { icon: "car",         short: { en: "Driving licence",      hi: "ड्राइविंग लाइसेंस" } },
+  "epf-composite-claim":     { icon: "rupee",       short: { en: "PF withdrawal (EPF)",  hi: "पीएफ निकासी (EPF)" } },
+  "pan-correction":          { icon: "card",        short: { en: "PAN correction",       hi: "पैन में सुधार" } },
+  "death-registration":      { icon: "certificate", short: { en: "Death registration",   hi: "मृत्यु पंजीकरण" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
