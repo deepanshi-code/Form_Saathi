@@ -751,32 +751,72 @@ html:lang(hi) .band-title { letter-spacing: 0; }
   .search-go::after { content: "→"; font-size: 18px; }
 }
 
-/* ---------- "What's happening in your life?" cards ---------- */
-.life-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; margin-top: 24px; }
-.life-card {
-  display: flex; flex-direction: column; gap: 12px; padding: 18px;
-  background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow);
+/* ======================================================================
+   Calm home page: more air between sections, fewer boxes and stripes
+   ====================================================================== */
+#list-view .band { padding: clamp(64px, 9vw, 120px) 0; }
+#list-view .band + .band { border-top: 1px solid var(--border); }
+#list-view .band-warn, #list-view .band-blue { background: var(--bg); }
+#list-view .band-title { font-size: clamp(28px, 3vw, 40px); margin-bottom: 14px; }
+#list-view .band-sub { margin: 0; max-width: 56ch; font-size: 17px; line-height: 1.6; }
+
+/* "What's happening in your life?": a calm picker on the left, one short list on the right */
+.life-box { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); margin-top: 40px; align-items: start; }
+.life-picker { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.life-tile {
+  display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 12px 16px; text-align: left; cursor: pointer;
+  font: inherit; font-size: 15.5px; font-weight: 600; color: var(--text);
+  background: var(--surface); border: 1.5px solid transparent; border-radius: 16px;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
-.life-head { display: flex; align-items: center; gap: 12px; }
-.life-icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; background: var(--primary-soft); color: var(--primary); }
-.life-icon .icon { width: 24px; height: 24px; }
-.life-title { margin: 0; font-size: 17.5px; font-weight: 800; line-height: 1.3; }
-.life-forms { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.life-tile:hover { background: var(--primary-soft); }
+.life-tile.active { background: var(--card); border-color: var(--primary); box-shadow: var(--shadow); }
+.life-icon { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--card); color: var(--primary); }
+.life-tile.active .life-icon { background: var(--primary); color: #fff; }
+.life-icon .icon { width: 22px; height: 22px; }
+.life-name { line-height: 1.3; }
+.life-panel { position: sticky; top: calc(var(--header-h) + 16px); padding: 28px; border-radius: 22px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.life-need { margin: 0 0 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.life-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; animation: fade-up 0.3s ease both; }
 .life-link {
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  min-height: 40px; padding: 8px 12px; border-radius: 10px; background: var(--surface);
-  color: var(--text); font-weight: 600; font-size: 15px; text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  display: flex; align-items: center; gap: 14px; padding: 12px 10px; border-radius: 12px;
+  color: var(--text); font-size: 16.5px; font-weight: 600; text-decoration: none;
 }
 .life-link:hover, .life-link:focus-visible { background: var(--primary-soft); color: var(--primary); }
-.life-arrow { flex: none; width: 16px; height: 16px; color: var(--muted); }
+.life-form { flex: 1; min-width: 0; }
+.life-arrow { flex: none; width: 18px; height: 18px; color: var(--muted); }
 .life-link:hover .life-arrow { color: var(--primary); }
-/* Phones: the situations become one swipeable row instead of a very long column */
+@keyframes fade-up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* All forms: lighter cards with more room, and a "show all" button */
+#list-view .form-grid { gap: 12px 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); margin-top: 8px; }
+#list-view .form-card { box-shadow: none; border-color: transparent; background: var(--surface); padding: 16px 18px; }
+#list-view .form-card:hover { transform: none; background: var(--card); border-color: var(--border); box-shadow: var(--shadow); }
+#list-view .band-row { margin-bottom: 32px; }
+.more-btn {
+  display: block; margin: 36px auto 0; padding: 12px 22px; cursor: pointer;
+  font: inherit; font-size: 15.5px; font-weight: 700; color: var(--primary);
+  background: transparent; border: 1.5px solid var(--border); border-radius: 999px;
+}
+.more-btn:hover { border-color: var(--primary); background: var(--primary-soft); }
+.more-btn.more-left { margin: 20px 0 0; }
+
+/* Recent changes: a short, quiet list instead of a cloud of chips */
+.changes-list { display: grid; gap: 4px; }
+.change-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 4px;
+  border-bottom: 1px solid var(--border); color: var(--text); font-weight: 600; text-decoration: none;
+}
+.change-row:hover .change-name { color: var(--primary); }
+.change-count { flex: none; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--warn); background: var(--warn-soft); }
+
+@media (prefers-reduced-motion: reduce) { .life-list { animation: none; } }
+@media (max-width: 960px) {
+  .life-box { grid-template-columns: minmax(0, 1fr); }
+  .life-panel { position: static; }
+}
 @media (max-width: 560px) {
-  .life-grid {
-    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%;
-    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-    margin: 20px -16px 0; padding: 4px 16px 12px; scroll-padding: 0 16px;
-  }
-  .life-card { scroll-snap-align: start; }
+  .life-picker { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .life-tile { flex-direction: column; align-items: flex-start; gap: 8px; min-height: 0; padding: 12px; font-size: 14.5px; }
+  .life-panel { padding: 20px 16px; }
 }

@@ -11,29 +11,19 @@ const UI = {
     cta: "Find your form",
     findBtn: "Find form →",
     previewCaption: "Open the PAN card guide →",
-    catEyebrow: "Browse",
     changesEyebrow: "Changed recently",
-    statChangesTitle: n => `${n} rule changes flagged`,
-    statChangesSub: "Old advice from friends or seniors may be wrong. We mark what changed.",
-    statViewTitle: n => `${n} forms on the real page`,
-    statViewSub: "See each box spotlighted on the official form.",
-    statLangTitle: "English + हिंदी",
-    statLangSub: "Tap to switch language. Every answer comes in both.",
     intro: "Simple answers for every box, in English and Hindi.",
     search: "Search a form: PAN, voter ID, bank…",
     popular: "Try:",
-    catTitle: "Or browse by type",
     lifeEyebrow: "Start here",
     lifeTitle: "What’s happening in your life?",
     lifeSub: "Pick what is going on, and see every form you will need for it.",
-    catCount: n => `${n} forms`,
-    catDesc: {
-      bank: "Open a bank or post office account",
-      gov: "PAN, Aadhaar, voter ID, licence, passport",
-      students: "Scholarships, education loan, anti-ragging",
-      uttarakhand: "Income, caste and residence certificates"
-    },
     allForms: "All forms",
+    showAll: n => `Show all ${n} forms`,
+    showLess: "Show fewer",
+    lifeNeed: n => n === 1 ? "You may need this form" : `You may need these ${n} forms`,
+    changeCount: n => n === 1 ? "1 change" : `${n} changes`,
+    changesAll: n => `See all ${n} forms with changes`,
     changesTitle: n => `${n} rules changed recently`,
     changesSub: "Old advice may be wrong for these forms. Check them first.",
     howTitle: "Three simple steps",
@@ -97,29 +87,19 @@ const UI = {
     cta: "अपना फॉर्म खोजें",
     findBtn: "फॉर्म खोजें →",
     previewCaption: "पैन कार्ड गाइड खोलें →",
-    catEyebrow: "फॉर्म देखें",
     changesEyebrow: "हाल में बदला",
-    statChangesTitle: n => `${n} नियम-बदलाव बताए गए`,
-    statChangesSub: "दोस्तों या सीनियर की पुरानी सलाह ग़लत हो सकती है। हम बताते हैं क्या बदला।",
-    statViewTitle: n => `${n} फॉर्म असली पेज पर`,
-    statViewSub: "आधिकारिक फॉर्म पर हर खाना चमकाकर दिखाया जाता है।",
-    statLangTitle: "हिंदी + English",
-    statLangSub: "भाषा बदलने के लिए दबाएँ। हर जवाब दोनों भाषाओं में है।",
     intro: "हर खाने का आसान जवाब, हिंदी और अंग्रेज़ी में।",
     search: "फॉर्म खोजें: पैन, वोटर आईडी, बैंक…",
     popular: "आज़माएँ:",
-    catTitle: "या प्रकार के हिसाब से देखें",
     lifeEyebrow: "यहाँ से शुरू करें",
     lifeTitle: "आपकी ज़िंदगी में अभी क्या हो रहा है?",
     lifeSub: "जो चल रहा है वह चुनें, और उसके लिए ज़रूरी सारे फॉर्म देखें।",
-    catCount: n => `${n} फॉर्म`,
-    catDesc: {
-      bank: "बैंक या डाकघर में खाता खोलें",
-      gov: "पैन, आधार, वोटर आईडी, लाइसेंस, पासपोर्ट",
-      students: "छात्रवृत्ति, शिक्षा ऋण, एंटी-रैगिंग",
-      uttarakhand: "आय, जाति और निवास प्रमाण पत्र"
-    },
     allForms: "सभी फॉर्म",
+    showAll: n => `सभी ${n} फॉर्म देखें`,
+    showLess: "कम दिखाएँ",
+    lifeNeed: n => n === 1 ? "आपको शायद यह फॉर्म चाहिए" : `आपको शायद ये ${n} फॉर्म चाहिए`,
+    changeCount: n => `${n} बदलाव`,
+    changesAll: n => `बदलाव वाले सभी ${n} फॉर्म देखें`,
     changesTitle: n => `${n} नियम हाल में बदले हैं`,
     changesSub: "इन फॉर्मों के लिए पुरानी सलाह ग़लत हो सकती है। पहले इन्हें देखें।",
     howTitle: "तीन आसान कदम",
@@ -271,13 +251,6 @@ function iconBox(form, extra = "") {
   return box;
 }
 
-function statusBadge(form) {
-  if (!form.verified) return el("span", "badge badge-muted", UI[lang].tagUnverified);
-  if (changedFields(form).length) return el("span", "badge badge-warn", UI[lang].tagChanged);
-  if (form.caution) return el("span", "badge badge-muted", UI[lang].tagCaution);
-  return el("span", "badge badge-ok", "✓ " + UI[lang].tagVerified);
-}
-
 function renderStaticText() {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-text]").forEach(node => {
@@ -347,74 +320,49 @@ function renderPopular() {
   });
 }
 
-// "What's happening in your life?": one card per situation, listing the forms it needs.
+// "What's happening in your life?": pick one situation, see only its forms.
+let lifeIndex = 0;
 function renderLife() {
-  const box = $("life-grid");
-  box.replaceChildren();
-  (window.LIFE || []).forEach(ev => {
-    const forms = ev.forms.map(id => window.FORMS.find(f => f.id === id)).filter(Boolean);
-    if (!forms.length) return;
-    const card = el("div", "life-card");
-    const head = el("div", "life-head");
+  const events = (window.LIFE || [])
+    .map(ev => ({ ...ev, list: ev.forms.map(id => window.FORMS.find(f => f.id === id)).filter(Boolean) }))
+    .filter(ev => ev.list.length);
+  if (!events[lifeIndex]) lifeIndex = 0;
+  const picker = $("life-picker");
+  picker.replaceChildren(...events.map((ev, i) => {
+    const btn = el("button", "life-tile" + (i === lifeIndex ? " active" : ""));
+    btn.type = "button";
+    btn.setAttribute("aria-pressed", i === lifeIndex);
     const blob = el("span", "life-icon");
     blob.append(icon(ev.icon));
-    head.append(blob, el("h3", "life-title", ev.title[lang]));
-    const list = el("ul", "life-forms");
-    forms.forEach(form => {
-      const li = el("li");
-      const a = el("a", "life-link", meta(form).short[lang]);
-      a.href = "#form/" + form.id;
-      a.append(icon("arrow", "icon life-arrow"));
-      li.append(a);
-      list.append(li);
+    btn.append(blob, el("span", "life-name", ev.title[lang]));
+    btn.addEventListener("click", () => {
+      lifeIndex = i;
+      renderLife();
+      // On narrow screens the list sits below the tiles, so bring it into view.
+      if (window.matchMedia("(max-width: 960px)").matches) {
+        const panel = $("life-panel");
+        panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        // Some browsers skip smooth scrolling; make sure the list ends up on screen anyway.
+        setTimeout(() => {
+          const r = panel.getBoundingClientRect();
+          if (r.top > window.innerHeight - 80) panel.scrollIntoView({ block: "nearest" });
+        }, 600);
+      }
     });
-    card.append(head, list);
-    box.append(card);
-  });
-}
+    return btn;
+  }));
 
-function renderCategoryTiles() {
-  const box = $("cat-tiles");
-  box.replaceChildren();
-  window.CHIPS.filter(c => c.categories).forEach(c => {
-    const tile = el("button", "cat-tile tile-" + c.key);
-    tile.type = "button";
-    const blob = el("span", "tile-icon");
-    blob.append(icon(CHIP_ICONS[c.key]));
-    // Mini preview inside the tile: the first few forms of this category, as chips.
-    const preview = el("span", "tile-preview");
-    formsInChip(c).slice(0, 4).forEach(f => preview.append(el("span", "tile-chip", meta(f).short[lang])));
-    tile.append(
-      blob,
-      el("span", "tile-name", c.label[lang]),
-      el("span", "tile-desc", UI[lang].catDesc[c.key]),
-      preview,
-      el("span", "tile-count", UI[lang].catCount(formsInChip(c).length) + " →")
-    );
-    tile.addEventListener("click", () => {
-      chip = c.key;
-      renderChips();
-      renderGrid();
-      $("forms").scrollIntoView({ behavior: "smooth" });
-    });
-    box.append(tile);
+  const ev = events[lifeIndex];
+  const list = el("ol", "life-list");
+  ev.list.forEach(form => {
+    const a = el("a", "life-link");
+    a.href = "#form/" + form.id;
+    a.append(iconBox(form, "small"), el("span", "life-form", meta(form).short[lang]), icon("arrow", "icon life-arrow"));
+    const li = el("li");
+    li.append(a);
+    list.append(li);
   });
-
-  // Stat tiles complete the bento grid. Numbers come from the data, so they stay true.
-  const changes = window.FORMS.reduce((n, f) => n + changedFields(f).length, 0);
-  const withImages = window.FORMS.filter(f => f.id === "pan-application" || (window.LAYOUT_FILES || []).includes(f.id)).length;
-  const stat = (cls, title, sub, onClick) => {
-    const t = el("button", "cat-tile stat-tile " + cls);
-    t.type = "button";
-    t.append(el("span", "stat-title", title), el("span", "tile-desc", sub));
-    t.addEventListener("click", onClick);
-    box.append(t);
-  };
-  stat("stat-warn", UI[lang].statChangesTitle(changes), UI[lang].statChangesSub, () => $("changes").scrollIntoView({ behavior: "smooth" }));
-  stat("stat-blue", UI[lang].statViewTitle(withImages), UI[lang].statViewSub, () => { location.hash = "form/pan-application"; });
-  stat("stat-lang", UI[lang].statLangTitle, UI[lang].statLangSub, () => {
-    document.querySelector(`.lang-toggle [data-lang="${lang === "en" ? "hi" : "en"}"]`).click();
-  });
+  $("life-panel").replaceChildren(el("p", "life-need", UI[lang].lifeNeed(ev.list.length)), list);
 }
 
 // Product preview on the home page: the real PAN form with one box spotlighted,
@@ -488,26 +436,44 @@ window.addEventListener("resize", () => {
   if (indicator) moveChipIndicator(box, indicator);
 });
 
+// Only a warning earns a badge on a card; "verified" is the normal case and would just add noise.
+function cardBadge(form) {
+  if (!form.verified) return el("span", "badge badge-muted", UI[lang].tagUnverified);
+  if (changedFields(form).length) return el("span", "badge badge-warn", UI[lang].tagChanged);
+  return null;
+}
+
+let showAllForms = false;
+const FIRST_FORMS = 12;
 function renderGrid() {
   const current = window.CHIPS.find(c => c.key === chip);
   $("forms-title").textContent = current.categories ? current.label[lang] : UI[lang].allForms;
   const grid = $("form-grid");
   grid.replaceChildren();
 
-  formsInChip(current).forEach((form, i) => {
+  const all = formsInChip(current);
+  const shown = current.categories || showAllForms ? all : all.slice(0, FIRST_FORMS);
+  shown.forEach((form, i) => {
     const card = el("button", "form-card");
     card.type = "button";
     card.style.setProperty("--i", i); // staggers the fade-in animation
     const text = el("span", "card-text");
     const metaRow = el("span", "card-meta");
-    metaRow.append(statusBadge(form), el("span", null, UI[lang].fieldsCount(form.fields.length)));
+    const badge = cardBadge(form);
+    metaRow.append(el("span", null, UI[lang].fieldsCount(form.fields.length)));
+    if (badge) metaRow.append(badge);
     text.append(el("span", "card-name", meta(form).short[lang]), metaRow);
     card.append(iconBox(form), text, icon("arrow", "icon card-arrow"));
     card.addEventListener("click", () => openForm(form));
     grid.append(card);
   });
+
+  const more = $("forms-more");
+  more.hidden = !!current.categories || all.length <= FIRST_FORMS;
+  more.textContent = showAllForms ? UI[lang].showLess : UI[lang].showAll(all.length);
 }
 
+let changesAll = false;
 function renderChangesList() {
   const forms = window.FORMS.filter(f => changedFields(f).length > 0);
   const total = forms.reduce((n, f) => n + changedFields(f).length, 0);
@@ -515,14 +481,16 @@ function renderChangesList() {
   $("changes-title").textContent = UI[lang].changesTitle(total);
 
   const list = $("changes-list");
-  list.replaceChildren();
-  forms.forEach(form => {
-    const btn = el("button", "change-chip");
-    btn.type = "button";
-    btn.append(el("span", null, meta(form).short[lang]), el("span", "change-count", String(changedFields(form).length)));
-    btn.addEventListener("click", () => openForm(form));
-    list.append(btn);
-  });
+  const sorted = forms.slice().sort((a, b) => changedFields(b).length - changedFields(a).length);
+  list.replaceChildren(...(changesAll ? sorted : sorted.slice(0, 6)).map(form => {
+    const a = el("a", "change-row");
+    a.href = "#form/" + form.id;
+    a.append(el("span", "change-name", meta(form).short[lang]), el("span", "change-count", UI[lang].changeCount(changedFields(form).length)));
+    return a;
+  }));
+  const more = $("changes-more");
+  more.hidden = sorted.length <= 6;
+  more.textContent = changesAll ? UI[lang].showLess : UI[lang].changesAll(sorted.length);
 }
 
 function renderFooter() {
@@ -543,7 +511,6 @@ function renderHome() {
   renderPopular();
   renderPreview();
   renderLife();
-  renderCategoryTiles();
   renderChips();
   renderGrid();
   renderChangesList();
@@ -1068,6 +1035,12 @@ $("search").addEventListener("focus", renderSearchResults);
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
 
 // The search button opens the highlighted result, or puts the cursor in the box if it's empty.
+$("forms-more").addEventListener("click", () => {
+  showAllForms = !showAllForms;
+  renderGrid();
+  if (!showAllForms) $("forms").scrollIntoView({ behavior: "smooth" });
+});
+$("changes-more").addEventListener("click", () => { changesAll = !changesAll; renderChangesList(); });
 $("search-go").addEventListener("click", () => {
   if (searchMatches[searchActive]) openForm(searchMatches[searchActive]);
   else $("search").focus();
