@@ -46,3 +46,28 @@ window.CHIPS = [
   { key: "students",    label: { en: "Students",    hi: "छात्र" },      categories: ["Scholarship", "College"] },
   { key: "uttarakhand", label: { en: "Uttarakhand", hi: "उत्तराखंड" },  categories: ["Uttarakhand"] }
 ];
+
+// Life situations on the home page, each with the forms people usually need for it.
+// Ids of forms not on the site yet are skipped, so this list can name forms before they exist.
+window.LIFE = [
+  { icon: "cake",      title: { en: "I just turned 18",              hi: "मेरी उम्र 18 साल हो गई" },
+    forms: ["voter-id-form-6", "pan-application", "aadhaar-update", "learner-licence", "sbi-account-opening"] },
+  { icon: "cap",       title: { en: "Going to college",              hi: "कॉलेज में दाख़िला" },
+    forms: ["nsp-scholarship", "pm-vidyalaxmi-loan", "ugc-anti-ragging", "uk-income-certificate", "uk-caste-certificate", "uk-domicile-certificate", "uk-tenant-verification"] },
+  { icon: "briefcase", title: { en: "Starting my first job",         hi: "पहली नौकरी की शुरुआत" },
+    forms: ["epf-form-11", "pan-application", "sbi-account-opening", "bank-nomination-da1", "uk-character-certificate"] },
+  { icon: "exit",      title: { en: "Leaving or changing a job",     hi: "नौकरी छोड़ना या बदलना" },
+    forms: ["epf-composite-claim", "epf-form-11", "form-15g"] },
+  { icon: "heart",     title: { en: "Getting married",               hi: "शादी" },
+    forms: ["uk-marriage-registration", "voter-id-form-8", "aadhaar-update", "pan-correction"] },
+  { icon: "person",    title: { en: "A baby is born",                hi: "घर में बच्चे का जन्म हुआ" },
+    forms: ["birth-registration", "sukanya-samriddhi", "aadhaar-update"] },
+  { icon: "candle",    title: { en: "Someone in the family passed away", hi: "परिवार में किसी का देहांत हुआ" },
+    forms: ["death-registration", "voter-id-form-7", "bank-nomination-da1"] },
+  { icon: "home",      title: { en: "Moving to a new home",          hi: "नए घर में जा रहे हैं" },
+    forms: ["voter-id-form-8", "uk-ration-card", "lpg-kyc", "upcl-new-connection", "uk-tenant-verification", "aadhaar-update"] },
+  { icon: "car",       title: { en: "Driving, buying or selling a vehicle", hi: "गाड़ी चलाना, खरीदना या बेचना" },
+    forms: ["learner-licence", "driving-licence", "vehicle-transfer"] },
+  { icon: "rupee",     title: { en: "Saving money and bank work",    hi: "बचत और बैंक के काम" },
+    forms: ["post-office-savings", "ppf-account", "sukanya-samriddhi", "sbi-neft-rtgs", "sbi-kyc-update", "form-15g"] }
+];

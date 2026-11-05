@@ -750,3 +750,33 @@ html:lang(hi) .band-title { letter-spacing: 0; }
   .search-go { font-size: 0; padding: 11px 14px; }
   .search-go::after { content: "→"; font-size: 18px; }
 }
+
+/* ---------- "What's happening in your life?" cards ---------- */
+.life-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; margin-top: 24px; }
+.life-card {
+  display: flex; flex-direction: column; gap: 12px; padding: 18px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow);
+}
+.life-head { display: flex; align-items: center; gap: 12px; }
+.life-icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; background: var(--primary-soft); color: var(--primary); }
+.life-icon .icon { width: 24px; height: 24px; }
+.life-title { margin: 0; font-size: 17.5px; font-weight: 800; line-height: 1.3; }
+.life-forms { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.life-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: 40px; padding: 8px 12px; border-radius: 10px; background: var(--surface);
+  color: var(--text); font-weight: 600; font-size: 15px; text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.life-link:hover, .life-link:focus-visible { background: var(--primary-soft); color: var(--primary); }
+.life-arrow { flex: none; width: 16px; height: 16px; color: var(--muted); }
+.life-link:hover .life-arrow { color: var(--primary); }
+/* Phones: the situations become one swipeable row instead of a very long column */
+@media (max-width: 560px) {
+  .life-grid {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%;
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin: 20px -16px 0; padding: 4px 16px 12px; scroll-padding: 0 16px;
+  }
+  .life-card { scroll-snap-align: start; }
+}

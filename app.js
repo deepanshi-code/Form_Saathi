@@ -22,7 +22,10 @@ const UI = {
     intro: "Simple answers for every box, in English and Hindi.",
     search: "Search a form: PAN, voter ID, bank…",
     popular: "Try:",
-    catTitle: "What do you need help with?",
+    catTitle: "Or browse by type",
+    lifeEyebrow: "Start here",
+    lifeTitle: "What’s happening in your life?",
+    lifeSub: "Pick what is going on, and see every form you will need for it.",
     catCount: n => `${n} forms`,
     catDesc: {
       bank: "Open a bank or post office account",
@@ -105,7 +108,10 @@ const UI = {
     intro: "हर खाने का आसान जवाब, हिंदी और अंग्रेज़ी में।",
     search: "फॉर्म खोजें: पैन, वोटर आईडी, बैंक…",
     popular: "आज़माएँ:",
-    catTitle: "आपको किसमें मदद चाहिए?",
+    catTitle: "या प्रकार के हिसाब से देखें",
+    lifeEyebrow: "यहाँ से शुरू करें",
+    lifeTitle: "आपकी ज़िंदगी में अभी क्या हो रहा है?",
+    lifeSub: "जो चल रहा है वह चुनें, और उसके लिए ज़रूरी सारे फॉर्म देखें।",
     catCount: n => `${n} फॉर्म`,
     catDesc: {
       bank: "बैंक या डाकघर में खाता खोलें",
@@ -187,7 +193,13 @@ const ICONS = {
   info: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5M12 8h.01",
   alert: "M12 4l9 16H3zM12 10v4M12 17h.01",
   chevron: "M6 9l6 6 6-6",
-  check: "M5 12l5 5 9-10"
+  check: "M5 12l5 5 9-10",
+  cake: "M4 21h16M5 21v-7h14v7M5 17.5c2.3 1.5 4.7 1.5 7 0s4.7-1.5 7 0M12 14v-4M12 7.5c-1-.8-1-2 0-3.5 1 1.5 1 2.7 0 3.5z",
+  briefcase: "M3 8h18v12H3zM9 8V5h6v3M3 13h18",
+  exit: "M14 4h6v16h-6M10 16l4-4-4-4M14 12H3",
+  heart: "M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z",
+  person: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 21c0-4 3-7 7-7s7 3 7 7",
+  candle: "M12 3c1.6 2 1.6 3.6 0 5.2-1.6-1.6-1.6-3.2 0-5.2zM9 11h6v10H9z"
 };
 
 // Icon for each category tile.
@@ -332,6 +344,32 @@ function renderPopular() {
     btn.type = "button";
     btn.addEventListener("click", () => openForm(form));
     box.append(btn);
+  });
+}
+
+// "What's happening in your life?": one card per situation, listing the forms it needs.
+function renderLife() {
+  const box = $("life-grid");
+  box.replaceChildren();
+  (window.LIFE || []).forEach(ev => {
+    const forms = ev.forms.map(id => window.FORMS.find(f => f.id === id)).filter(Boolean);
+    if (!forms.length) return;
+    const card = el("div", "life-card");
+    const head = el("div", "life-head");
+    const blob = el("span", "life-icon");
+    blob.append(icon(ev.icon));
+    head.append(blob, el("h3", "life-title", ev.title[lang]));
+    const list = el("ul", "life-forms");
+    forms.forEach(form => {
+      const li = el("li");
+      const a = el("a", "life-link", meta(form).short[lang]);
+      a.href = "#form/" + form.id;
+      a.append(icon("arrow", "icon life-arrow"));
+      li.append(a);
+      list.append(li);
+    });
+    card.append(head, list);
+    box.append(card);
   });
 }
 
@@ -504,6 +542,7 @@ function renderHome() {
   renderSearchResults();
   renderPopular();
   renderPreview();
+  renderLife();
   renderCategoryTiles();
   renderChips();
   renderGrid();
