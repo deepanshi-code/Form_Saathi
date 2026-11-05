@@ -35,7 +35,8 @@ window.CATALOG = {
   "vehicle-transfer":        { icon: "car",         short: { en: "Vehicle ownership transfer", hi: "वाहन के मालिक का नाम बदलना" } },
   "sbi-neft-rtgs":           { icon: "bank",        short: { en: "Send money: NEFT/RTGS (SBI)", hi: "पैसे भेजें: NEFT/RTGS (एसबीआई)" } },
   "uk-ration-card":          { icon: "home",        short: { en: "Ration card",         hi: "राशन कार्ड" } },
-  "uk-marriage-registration": { icon: "certificate", short: { en: "Marriage registration", hi: "विवाह पंजीकरण" } }
+  "uk-marriage-registration": { icon: "certificate", short: { en: "Marriage registration", hi: "विवाह पंजीकरण" } },
+  "name-change-gazette":     { icon: "certificate", short: { en: "Name change (Gazette)", hi: "नाम बदलना (गज़ट)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
@@ -59,7 +60,7 @@ window.LIFE = [
   { icon: "exit",      title: { en: "Leaving or changing a job",     hi: "नौकरी छोड़ना या बदलना" },
     forms: ["epf-composite-claim", "epf-form-11", "form-15g"] },
   { icon: "heart",     title: { en: "Getting married",               hi: "शादी" },
-    forms: ["uk-marriage-registration", "voter-id-form-8", "aadhaar-update", "pan-correction"] },
+    forms: ["uk-marriage-registration", "name-change-gazette", "pan-correction", "aadhaar-update", "voter-id-form-8"] },
   { icon: "person",    title: { en: "A baby is born",                hi: "घर में बच्चे का जन्म हुआ" },
     forms: ["birth-registration", "sukanya-samriddhi", "aadhaar-update"] },
   { icon: "candle",    title: { en: "Someone in the family passed away", hi: "परिवार में किसी का देहांत हुआ" },
