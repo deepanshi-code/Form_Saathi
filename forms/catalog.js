@@ -41,7 +41,8 @@ window.CATALOG = {
   "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } },
   "uk-tenant-verification":  { icon: "shield",      short: { en: "Tenant police verification", hi: "किरायेदार पुलिस सत्यापन" } },
   "upcl-new-connection":     { icon: "home",        short: { en: "Electricity connection (UPCL)", hi: "बिजली कनेक्शन (UPCL)" } },
-  "schengen-visa":           { icon: "globe",       short: { en: "Schengen visa (Europe)", hi: "शेंगेन वीज़ा (यूरोप)" } }
+  "schengen-visa":           { icon: "globe",       short: { en: "Schengen visa (Europe)", hi: "शेंगेन वीज़ा (यूरोप)" } },
+  "canada-visitor-visa":     { icon: "globe",       short: { en: "Canada visitor visa", hi: "कनाडा विज़िटर वीज़ा" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
