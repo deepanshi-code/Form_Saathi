@@ -59,6 +59,15 @@ const UI = {
     toolDocs: "Documents to bring",
     toolChanges: n => `What changed (${n})`,
     toolAbout: "About this form",
+    toolPrint: "Print my answers",
+    listen: "Listen",
+    stop: "Stop",
+    myAnswer: "Your answer (for your own notes)",
+    myAnswerHint: "Saved only on this device. Avoid typing ID numbers on a shared phone.",
+    printTitle: name => `My answers: ${name}`,
+    printNote: "Made with Form Saathi. Check every answer against your documents before writing it on the form.",
+    printCols: ["Box", "What to write", "My answer"],
+    noAnswers: "Type your answers in the boxes first, then print.",
     noDocs: "No documents listed. Ask at the office what to bring.",
     write: "What to write",
     meaning: "What it means",
@@ -135,6 +144,15 @@ const UI = {
     toolDocs: "ये दस्तावेज़ लाएँ",
     toolChanges: n => `क्या बदला (${n})`,
     toolAbout: "इस फॉर्म के बारे में",
+    toolPrint: "मेरे जवाब प्रिंट करें",
+    listen: "सुनें",
+    stop: "रोकें",
+    myAnswer: "आपका जवाब (अपने नोट्स के लिए)",
+    myAnswerHint: "सिर्फ़ इसी डिवाइस पर सेव होता है। साझा फ़ोन पर पहचान नंबर न लिखें।",
+    printTitle: name => `मेरे जवाब: ${name}`,
+    printNote: "Form Saathi से बनाया गया। फॉर्म पर लिखने से पहले हर जवाब अपने दस्तावेज़ों से मिला लें।",
+    printCols: ["खाना", "क्या लिखना है", "मेरा जवाब"],
+    noAnswers: "पहले खानों में अपने जवाब लिखें, फिर प्रिंट करें।",
     noDocs: "कोई दस्तावेज़ नहीं लिखा। दफ़्तर में पूछें क्या लाना है।",
     write: "क्या लिखें",
     meaning: "इसका मतलब",
@@ -180,7 +198,13 @@ const ICONS = {
   heart: "M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z",
   person: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 21c0-4 3-7 7-7s7 3 7 7",
   candle: "M12 3c1.6 2 1.6 3.6 0 5.2-1.6-1.6-1.6-3.2 0-5.2zM9 11h6v10H9z",
-  globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"
+  globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z",
+  chat: "M4 5h16v11H9l-5 4zM8 9.5h8M8 12.5h5",
+  mic: "M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3zM5 11a7 7 0 0 0 14 0M12 18v3",
+  send: "M4 12l16-8-6 16-2-7zM12 13l8-9",
+  close: "M6 6l12 12M18 6L6 18",
+  speaker: "M4 9h4l5-4v14l-5-4H4zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12",
+  print: "M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"
 };
 
 // Shown as quick buttons under the search box.
@@ -596,6 +620,12 @@ function renderTools(form) {
     tools.append(btn);
   });
 
+  const printBtn = el("button", "tool");
+  printBtn.type = "button";
+  printBtn.append(icon("print", "icon small-icon"), el("span", null, UI[lang].toolPrint));
+  printBtn.addEventListener("click", () => printAnswers(form));
+  tools.append(printBtn);
+
   box.append(prog, tools);
   updateProgress(form);
 }
@@ -609,6 +639,72 @@ function updateProgress(form) {
   box.querySelector(".progress-label").textContent = done.length === total ? UI[lang].allDone : UI[lang].progressLabel;
   box.querySelector(".link-btn").hidden = done.length === 0;
   box.querySelectorAll(".seg").forEach((seg, i) => seg.classList.toggle("on", done.includes(i)));
+}
+
+// Read text aloud with the browser's built-in speech (no data leaves the device).
+const canSpeak = "speechSynthesis" in window;
+function speak(text, btn) {
+  if (!canSpeak) return;
+  const synth = window.speechSynthesis;
+  const wasThis = btn && btn.classList.contains("speaking");
+  synth.cancel();
+  document.querySelectorAll(".speak-btn.speaking").forEach(b => { b.classList.remove("speaking"); b.querySelector("span").textContent = UI[lang].listen; });
+  if (wasThis) return; // a second tap stops it
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang === "hi" ? "hi-IN" : "en-IN";
+  const voices = synth.getVoices();
+  const voice = voices.find(v => v.lang.replace("_", "-") === u.lang) || voices.find(v => v.lang.startsWith(lang));
+  if (voice) u.voice = voice;
+  u.rate = 0.95;
+  if (btn) {
+    btn.classList.add("speaking");
+    btn.querySelector("span").textContent = UI[lang].stop;
+    u.onend = u.onerror = () => { btn.classList.remove("speaking"); btn.querySelector("span").textContent = UI[lang].listen; };
+  }
+  synth.speak(u);
+}
+function speakButton(text) {
+  const btn = el("button", "speak-btn");
+  btn.type = "button";
+  btn.hidden = !canSpeak;
+  btn.append(icon("speaker", "icon small-icon"), el("span", null, UI[lang].listen));
+  btn.addEventListener("click", e => { e.stopPropagation(); speak(text, btn); });
+  return btn;
+}
+
+// "My answers": what the user plans to write in each box, kept only in this browser.
+const answersKey = form => `fs:ans:${form.id}`;
+function answerInput(form, i) {
+  const wrap = el("label", "my-answer");
+  wrap.append(el("span", "my-answer-label", UI[lang].myAnswer));
+  const input = el("input");
+  input.type = "text";
+  input.autocomplete = "off";
+  input.value = store.get(answersKey(form), {})[i] || "";
+  input.addEventListener("input", () => {
+    const all = store.get(answersKey(form), {});
+    if (input.value.trim()) all[i] = input.value; else delete all[i];
+    store.set(answersKey(form), all);
+  });
+  wrap.append(input, el("span", "my-answer-hint", UI[lang].myAnswerHint));
+  return wrap;
+}
+
+// A one-page sheet to carry to the counter: box, what to write, and the user's own answer.
+function printAnswers(form) {
+  const answers = store.get(answersKey(form), {});
+  if (!Object.keys(answers).length) { toast(UI[lang].noAnswers); return; }
+  const table = el("table");
+  const head = el("tr");
+  UI[lang].printCols.forEach(c => head.append(el("th", null, c)));
+  table.append(head);
+  form.fields.forEach((f, i) => {
+    const tr = el("tr");
+    tr.append(el("td", null, (i + 1) + ". " + f.label[lang]), el("td", null, f.quick ? f.quick[lang] : f.write[lang]), el("td", "print-answer", answers[i] || ""));
+    table.append(tr);
+  });
+  $("print-sheet").replaceChildren(el("h1", null, UI[lang].printTitle(meta(form).short[lang])), table, el("p", null, UI[lang].printNote));
+  window.print();
 }
 
 // Small confirmation message at the bottom of the screen.
@@ -725,6 +821,7 @@ function renderFields(form) {
     if (field.changed) details.append(detailBlock("detail-warn", UI[lang].changed, field.changed[lang]));
     if (field.documents && field.documents[lang].length) details.append(detailBlock("detail-plain", UI[lang].documents, field.documents[lang]));
     if (field.mistakes && field.mistakes[lang].length) details.append(detailBlock("detail-danger", UI[lang].mistakes, field.mistakes[lang]));
+    details.append(answerInput(form, i));
     collapse.append(details);
 
     // Footer: details toggle and the done button.
@@ -738,7 +835,7 @@ function renderFields(form) {
     doneBtn.setAttribute("aria-pressed", isDone);
     doneBtn.append(icon("check", "icon small-icon tick-draw"), el("span", null, isDone ? UI[lang].done : UI[lang].markDone));
     doneBtn.addEventListener("click", () => toggleDone(form, i));
-    foot.append(more, doneBtn);
+    foot.append(more, speakButton(field.quick ? field.quick[lang] : field.write[lang]), doneBtn);
 
     card.append(main, collapse, foot);
     list.append(card);
@@ -870,7 +967,10 @@ function updateGuide(form, scroll, scrollPage = false) {
 
     if (j === guideStep) {
       const body = el("div", "flow-body");
-      body.append(el("p", "flow-quick", field.quick ? field.quick[lang] : field.write[lang]));
+      const quickText = field.quick ? field.quick[lang] : field.write[lang];
+      const quickRow = el("div", "flow-quick-row");
+      quickRow.append(el("p", "flow-quick", quickText), speakButton(quickText + ". " + field.write[lang]));
+      body.append(quickRow);
       const other = (lay.spots[j] || []).find(s => s.page !== guidePage);
       if (other) {
         const hint = el("button", "link-btn flow-also", UI[lang].alsoOn(other.page + 1) + " →");
@@ -888,7 +988,7 @@ function updateGuide(form, scroll, scrollPage = false) {
       if (field.documents && field.documents[lang].length) blocks.append(detailBlock("detail-plain", UI[lang].documents, field.documents[lang]));
       if (field.mistakes && field.mistakes[lang].length) blocks.append(detailBlock("detail-danger", UI[lang].mistakes, field.mistakes[lang]));
       more.append(blocks);
-      body.append(more);
+      body.append(more, answerInput(form, j));
 
       const actions = el("div", "flow-actions");
       const prev = el("button", "flow-nav", "← " + UI[lang].prev);
@@ -966,6 +1066,7 @@ function currentForm() {
 // The URL hash decides which view is shown: "#form/<id>" = one form, anything else = home.
 // Home links like "#forms" or "#how" scroll to that section.
 function route() {
+  if (canSpeak) window.speechSynthesis.cancel();
   const form = currentForm();
   $("list-view").hidden = Boolean(form);
   $("form-view").hidden = !form;
@@ -1033,13 +1134,13 @@ document.addEventListener("click", e => {
 $("search").addEventListener("focus", renderSearchResults);
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
 
-// The search button opens the highlighted result, or puts the cursor in the box if it's empty.
 $("forms-more").addEventListener("click", () => {
   showAllForms = !showAllForms;
   renderGrid();
   if (!showAllForms) $("forms").scrollIntoView({ behavior: "smooth" });
 });
 $("changes-more").addEventListener("click", () => { changesAll = !changesAll; renderChangesList(); });
+// The search button opens the highlighted result, or puts the cursor in the box if it's empty.
 $("search-go").addEventListener("click", () => {
   if (searchMatches[searchActive]) openForm(searchMatches[searchActive]);
   else $("search").focus();
