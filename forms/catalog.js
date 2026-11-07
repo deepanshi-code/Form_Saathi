@@ -40,7 +40,8 @@ window.CATALOG = {
   "sbi-kyc-update":          { icon: "bank",        short: { en: "Bank KYC update (SBI)", hi: "बैंक केवाईसी अपडेट (एसबीआई)" } },
   "ppf-account":             { icon: "post",        short: { en: "PPF account",         hi: "पीपीएफ खाता" } },
   "uk-tenant-verification":  { icon: "shield",      short: { en: "Tenant police verification", hi: "किरायेदार पुलिस सत्यापन" } },
-  "upcl-new-connection":     { icon: "home",        short: { en: "Electricity connection (UPCL)", hi: "बिजली कनेक्शन (UPCL)" } }
+  "upcl-new-connection":     { icon: "home",        short: { en: "Electricity connection (UPCL)", hi: "बिजली कनेक्शन (UPCL)" } },
+  "schengen-visa":           { icon: "globe",       short: { en: "Schengen visa (Europe)", hi: "शेंगेन वीज़ा (यूरोप)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
@@ -49,7 +50,8 @@ window.CHIPS = [
   { key: "bank",        label: { en: "Bank",        hi: "बैंक" },       categories: ["Bank"] },
   { key: "gov",         label: { en: "Government",  hi: "सरकारी" },     categories: ["Government"] },
   { key: "students",    label: { en: "Students",    hi: "छात्र" },      categories: ["Scholarship", "College"] },
-  { key: "uttarakhand", label: { en: "Uttarakhand", hi: "उत्तराखंड" },  categories: ["Uttarakhand"] }
+  { key: "uttarakhand", label: { en: "Uttarakhand", hi: "उत्तराखंड" },  categories: ["Uttarakhand"] },
+  { key: "intl",        label: { en: "International", hi: "विदेश" },  categories: ["International"] }
 ];
 
 // Life situations on the home page, each with the forms people usually need for it.
@@ -73,6 +75,8 @@ window.LIFE = [
     forms: ["voter-id-form-8", "uk-ration-card", "lpg-kyc", "upcl-new-connection", "uk-tenant-verification", "aadhaar-update"] },
   { icon: "car",       title: { en: "Driving, buying or selling a vehicle", hi: "गाड़ी चलाना, खरीदना या बेचना" },
     forms: ["learner-licence", "driving-licence", "vehicle-transfer"] },
+  { icon: "globe",     title: { en: "Going abroad to study or work", hi: "पढ़ाई या नौकरी के लिए विदेश जाना" },
+    forms: ["passport-fresh", "passport-reissue", "police-clearance-certificate", "schengen-visa", "canada-visitor-visa", "form-a2-lrs", "nri-account"] },
   { icon: "rupee",     title: { en: "Saving money and bank work",    hi: "बचत और बैंक के काम" },
     forms: ["post-office-savings", "ppf-account", "sukanya-samriddhi", "sbi-neft-rtgs", "sbi-kyc-update", "form-15g"] }
 ];

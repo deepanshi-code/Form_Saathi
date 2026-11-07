@@ -179,11 +179,10 @@ const ICONS = {
   exit: "M14 4h6v16h-6M10 16l4-4-4-4M14 12H3",
   heart: "M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z",
   person: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 21c0-4 3-7 7-7s7 3 7 7",
-  candle: "M12 3c1.6 2 1.6 3.6 0 5.2-1.6-1.6-1.6-3.2 0-5.2zM9 11h6v10H9z"
+  candle: "M12 3c1.6 2 1.6 3.6 0 5.2-1.6-1.6-1.6-3.2 0-5.2zM9 11h6v10H9z",
+  globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"
 };
 
-// Icon for each category tile.
-const CHIP_ICONS = { bank: "bank", gov: "card", students: "cap", uttarakhand: "home" };
 // Shown as quick buttons under the search box.
 const POPULAR = ["pan-application", "voter-id-form-6", "aadhaar-update", "passport-fresh", "sbi-account-opening"];
 
