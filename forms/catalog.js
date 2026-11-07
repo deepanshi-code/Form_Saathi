@@ -44,7 +44,9 @@ window.CATALOG = {
   "schengen-visa":           { icon: "globe",       short: { en: "Schengen visa (Europe)", hi: "शेंगेन वीज़ा (यूरोप)" } },
   "canada-visitor-visa":     { icon: "globe",       short: { en: "Canada visitor visa", hi: "कनाडा विज़िटर वीज़ा" } },
   "passport-reissue":        { icon: "passport",    short: { en: "Passport renewal / re-issue", hi: "पासपोर्ट नवीनीकरण / री-इश्यू" } },
-  "nri-account":             { icon: "bank",        short: { en: "NRI account (NRE/NRO)", hi: "एनआरआई खाता (NRE/NRO)" } }
+  "nri-account":             { icon: "bank",        short: { en: "NRI account (NRE/NRO)", hi: "एनआरआई खाता (NRE/NRO)" } },
+  "form-a2-lrs":             { icon: "rupee",       short: { en: "Send money abroad (Form A2)", hi: "विदेश पैसे भेजना (फॉर्म A2)" } },
+  "police-clearance-certificate": { icon: "shield",      short: { en: "Police Clearance Certificate (PCC)", hi: "पुलिस क्लीयरेंस सर्टिफिकेट (PCC)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.

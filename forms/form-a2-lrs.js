@@ -1,0 +1,317 @@
+// Checked against these official documents:
+// 1. SBI "Form A2 (To be completed by the applicant) (For payments other than imports of goods and remittances
+//    covering intermediary trade) Application for Remittance Abroad", 2 pages, PDF "130720-Form A2.pdf"
+//    (created 13-07-2020) on sbi.bank.in, linked as "Form A 2 - Application for Remittance Abroad (Import of
+//    services)" on SBI's NRI "Download Forms" page (sbi.bank.in/web/nri/accounts/download-forms, last updated
+//    09-10-2026). Page images are from this PDF.
+// 2. RBI's own Form A2 text as printed in the Annex of the Master Direction on LRS (extract pages 12-18 with the
+//    FETERS purpose-code list), PDF "14082020_FORM A2.pdf" on sbi.bank.in (PDF dated 20-06-2018).
+// 3. RBI Master Direction - Liberalised Remittance Scheme (LRS), RBI/FED/2017-18/3, FED Master Direction
+//    No. 7/2015-16 dated 01-01-2016, updated as on 06-09-2024
+//    (rbi.org.in/Scripts/BS_ViewMasterDirections.aspx?id=10192): USD 2,50,000 per financial year, minors,
+//    PAN, designated branch, Form A2, permitted and prohibited purposes, studies abroad.
+// 4. RBI FAQs on LRS (rbi.org.in/Scripts/FAQView.aspx?Id=115, updated as on 06-04-2023).
+// 5. RBI A.P. (DIR Series) Circular No. 23, RBI/2026-27/279 dated 01-10-2026 "Online submission of Form A2:
+//    Removal of limits on amount of remittance" (keeps Circular No. 12 of 03-07-2024 in force).
+// 6. Income-tax Act, 2025, Section 394 (Table Sl. No. 7 and sub-section (4)), as shown on incometaxindia.gov.in
+//    (wm.incometaxindia.gov.in/w/section-394-6), and the Ministry of Finance PIB release of 01-02-2026
+//    "The Income Tax Act, 2025 to come into effect from 1st April, 2026" (TCS on LRS for education/medical
+//    reduced from 5% to 2%).
+// 7. SBI "Schedule of Foreign Exchange Transaction Related Service Charges", applicable w.e.f. 01-10-2026.
+// Every statement below comes from those documents. Anything not stated there is left as "ask the bank".
+
+window.FORMS.push({
+  id: "form-a2-lrs",
+  verified: true,
+  source: {
+    title: "SBI Form A2: Application for Remittance Abroad (PDF dated 13-07-2020, on SBI's NRI Download Forms page), read with RBI Master Direction on LRS (updated 06-09-2024)",
+    url: "https://sbi.bank.in/documents/21077/23246/130720-Form+A2.pdf/47d0f735-f308-d156-1def-06df31bd2427?t=1594645039124"
+  },
+  caution: {
+    en: "The SBI Form A2 on its website is a 2020 PDF, and SBI lists it under \"Import of services\". Every box was checked against it and against RBI's own Form A2 text, but banks often use their own combined \"Form A2 cum LRS declaration\" and may ask for more details. Ask your branch for the form they use today. The purpose-code list used here is from RBI's 2018 annex; ask the bank to confirm the code.",
+    hi: "SBI की वेबसाइट पर मिला Form A2 साल 2020 की PDF है, और SBI ने इसे \"Import of services\" के नाम से रखा है। हर खाना इसी से और RBI के अपने Form A2 से मिलाया गया है, पर बैंक अक्सर अपना \"Form A2 cum LRS declaration\" वाला फॉर्म लेते हैं और ज़्यादा जानकारी माँग सकते हैं। अपनी ब्रांच से आज वाला फॉर्म माँगें। यहाँ दी गई purpose code सूची RBI की 2018 वाली सूची से है; सही कोड बैंक से पक्का कर लें।"
+  },
+  lastChecked: "2026-11-07",
+
+  category: { en: "International", hi: "विदेश" },
+  name: { en: "Form A2: Send Money Abroad (LRS, e.g. foreign university fees)", hi: "फॉर्म A2: विदेश पैसे भेजना (LRS, जैसे विदेशी यूनिवर्सिटी की फ़ीस)" },
+  about: {
+    en: "Form A2 is the application and declaration you give your bank to buy foreign exchange or send money abroad, for example to pay a foreign university's fees or a student's living costs. Under RBI's Liberalised Remittance Scheme (LRS), a resident individual can send up to USD 2,50,000 per financial year (April-March) for permitted purposes, which include studies abroad, maintenance of close relatives abroad, medical treatment, travel and gifts. LRS is for individuals only, not companies, firms, HUFs or trusts. PAN is mandatory. You must choose one bank branch through which all your LRS remittances are made. RBI says the bank goes by what you declare in Form A2, and you are responsible for it being true. For studies abroad, RBI lets the bank send more than USD 2,50,000 based on the estimate from the institution abroad. If the student is a minor, the form must be countersigned by the natural guardian. TCS (tax collected at source) may be collected by the bank under the Income-tax Act; see the purpose field.",
+    hi: "फॉर्म A2 वह आवेदन और घोषणा है जो आप विदेशी मुद्रा ख़रीदने या विदेश पैसे भेजने के लिए बैंक को देते हैं, जैसे विदेशी यूनिवर्सिटी की फ़ीस या पढ़ाई के दौरान रहने का ख़र्च। RBI की Liberalised Remittance Scheme (LRS) में भारत में रहने वाला एक व्यक्ति एक वित्त वर्ष (अप्रैल-मार्च) में USD 2,50,000 तक भेज सकता है, सिर्फ़ मान्य कामों के लिए, जैसे विदेश में पढ़ाई, विदेश में नज़दीकी रिश्तेदारों का ख़र्च, इलाज, यात्रा और गिफ़्ट। LRS सिर्फ़ व्यक्तियों के लिए है, कंपनी, फ़र्म, HUF या ट्रस्ट के लिए नहीं। PAN ज़रूरी है। LRS के सारे पैसे भेजने के लिए आपको एक ही बैंक ब्रांच चुननी होती है। RBI के अनुसार बैंक वही मानता है जो आप Form A2 में घोषित करते हैं, और उसके सच होने की ज़िम्मेदारी आपकी है। विदेश में पढ़ाई के लिए RBI बैंक को विदेशी संस्थान के अनुमान (estimate) के आधार पर USD 2,50,000 से ज़्यादा भेजने देता है। छात्र नाबालिग हो तो फॉर्म पर माता-पिता (natural guardian) के भी हस्ताक्षर चाहिए। इनकम टैक्स क़ानून के तहत बैंक TCS काट सकता है; इसके बारे में purpose वाले खाने में लिखा है।"
+  },
+
+  fields: [
+    {
+      label: { en: "AD Code No., Form No., Currency, Amount, Equivalent to Rs. (bank fills)", hi: "AD कोड नंबर, फॉर्म नंबर, मुद्रा, रक़म, रुपये में बराबर (बैंक भरेगा)" },
+      quick: { en: "Leave blank; the bank fills these boxes", hi: "खाली छोड़ें; ये खाने बैंक भरेगा" },
+      meaning: {
+        en: "The boxes at the top right. The form says the AD Code No. and Form No. are \"To be filled in by the Authorised Dealer\", and Currency, Amount and Equivalent to Rs. are \"To be completed by the Authorised Dealer\". The Authorised Dealer (AD) is the bank branch that sends the money.",
+        hi: "ऊपर दाईं ओर के खाने। फॉर्म के अनुसार AD Code No. और Form No. Authorised Dealer भरेगा, और Currency, Amount और रुपये में बराबर रक़म भी Authorised Dealer भरेगा। Authorised Dealer (AD) यानी वह बैंक ब्रांच जो पैसा भेजती है।"
+      },
+      write: {
+        en: "Don't write here. Tell the bank clearly which currency and how much you want to send (for example, the amount on the university's fee letter).",
+        hi: "यहाँ कुछ न लिखें। बैंक को साफ़ बताएँ कि किस मुद्रा में और कितना भेजना है (जैसे यूनिवर्सिटी के फ़ीस लेटर में लिखी रक़म)।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Filling the bank's boxes yourself"],
+        hi: ["बैंक वाले खाने ख़ुद भर देना"]
+      }
+    },
+    {
+      label: { en: "I/We (Name of applicant remitter)", hi: "मैं/हम (पैसे भेजने वाले आवेदक का नाम)" },
+      quick: { en: "Name of the person sending the money, as on PAN", hi: "पैसे भेजने वाले का नाम, PAN जैसा" },
+      meaning: {
+        en: "The name of the person who is sending the money (the remitter). Under LRS this is a resident individual. The money must belong to this person: the declaration says the source of funds belongs to the applicant.",
+        hi: "उस व्यक्ति का नाम जो पैसा भेज रहा है (remitter)। LRS में यह भारत में रहने वाला एक व्यक्ति होता है। पैसा इसी व्यक्ति का होना चाहिए: घोषणा में लिखा है कि पैसे का स्रोत आवेदक का अपना है।"
+      },
+      write: {
+        en: "Write the remitter's full name. Neither form says the name must match the PAN, but PAN is mandatory under LRS, so use the same spelling to avoid problems. If a parent is paying a student's fees from the parent's account, ask the bank whose name goes here. If the remitter is a minor, the natural guardian must countersign the form.",
+        hi: "पैसा भेजने वाले का पूरा नाम लिखें। फॉर्म में यह नहीं लिखा कि नाम PAN जैसा ही हो, पर LRS में PAN ज़रूरी है, इसलिए वही स्पेलिंग लिखें ताकि दिक़्क़त न हो। अगर माता-पिता अपने खाते से छात्र की फ़ीस भर रहे हैं, तो यहाँ किसका नाम आएगा, यह बैंक से पूछें। भेजने वाला नाबालिग हो तो माता-पिता (natural guardian) को भी फॉर्म पर हस्ताक्षर करने होंगे।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the student's (beneficiary's) name here when a parent is the one sending", "Name spelt differently from the PAN"],
+        hi: ["पैसा माता-पिता भेज रहे हों, फिर भी यहाँ छात्र (पैसा पाने वाले) का नाम लिखना", "PAN से अलग स्पेलिंग में नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "PAN No.", hi: "PAN नंबर" },
+      quick: { en: "Remitter's 10-character PAN; mandatory under LRS", hi: "भेजने वाले का 10 अक्षर का PAN; LRS में ज़रूरी" },
+      meaning: {
+        en: "The Permanent Account Number of the person sending the money. RBI says it is mandatory for the resident individual to provide PAN to make a remittance under LRS (since 19 June 2018 this applies to all LRS remittances).",
+        hi: "पैसे भेजने वाले व्यक्ति का Permanent Account Number। RBI के अनुसार LRS में पैसा भेजने के लिए PAN देना ज़रूरी है (19 जून 2018 से यह सभी LRS भुगतानों पर लागू है)।"
+      },
+      write: {
+        en: "Write the remitter's PAN exactly as on the PAN card.",
+        hi: "भेजने वाले का PAN बिल्कुल PAN कार्ड जैसा लिखें।"
+      },
+      changed: {
+        en: "Older copies of RBI's Form A2 said PAN was needed only above USD 25,000 and for capital account transactions. RBI changed this on 19 June 2018: PAN is now needed for every LRS remittance.",
+        hi: "RBI के पुराने Form A2 में लिखा था कि PAN सिर्फ़ USD 25,000 से ऊपर और capital account वाले लेन-देन में चाहिए। RBI ने 19 जून 2018 को यह बदल दिया: अब हर LRS भुगतान में PAN चाहिए।"
+      },
+      documents: { en: ["PAN card of the remitter (ask the bank whether a copy is needed)"], hi: ["भेजने वाले का PAN कार्ड (कॉपी चाहिए या नहीं, बैंक से पूछें)"] },
+      mistakes: {
+        en: ["Giving the student's PAN when the money goes from a parent's account", "Mixing up 0 and O, or 1 and I"],
+        hi: ["पैसा माता-पिता के खाते से जा रहा हो, फिर भी छात्र का PAN लिखना", "0 और O, या 1 और I में गड़बड़"]
+      }
+    },
+    {
+      label: { en: "Address", hi: "पता" },
+      quick: { en: "Remitter's full address in India", hi: "भेजने वाले का भारत का पूरा पता" },
+      meaning: {
+        en: "The address of the person sending the money.",
+        hi: "पैसे भेजने वाले व्यक्ति का पता।"
+      },
+      write: {
+        en: "Write your full address with PIN code. The form does not say which address to use; the one in your bank records is the safe choice. If unsure, ask the branch.",
+        hi: "पिन कोड के साथ पूरा पता लिखें। फॉर्म में यह नहीं लिखा कि कौन-सा पता; बैंक रिकॉर्ड वाला पता लिखना ठीक रहेगा। पक्का न हो तो ब्रांच से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the foreign university's address here instead of your own"],
+        hi: ["अपने पते की जगह विदेशी यूनिवर्सिटी का पता लिख देना"]
+      }
+    },
+    {
+      label: { en: "authorize ... (Name of AD branch)", hi: "अधिकृत करता/करती हूँ ... (AD ब्रांच का नाम)" },
+      quick: { en: "Your bank branch name that will send the money", hi: "उस बैंक ब्रांच का नाम जो पैसा भेजेगी" },
+      meaning: {
+        en: "The bank branch (Authorised Dealer branch) you are authorising to debit your account and send the money. RBI says an individual must designate one AD branch through which all remittances under LRS will be made.",
+        hi: "वह बैंक ब्रांच (Authorised Dealer ब्रांच) जिसे आप खाते से पैसा काटकर भेजने की इजाज़त दे रहे हैं। RBI के अनुसार LRS के सारे भुगतानों के लिए व्यक्ति को एक ही AD ब्रांच चुननी होती है।"
+      },
+      write: {
+        en: "Write the bank and branch name, for example \"State Bank of India, <branch name>\". Ask the branch whether it handles foreign remittances, and keep using the same branch for later LRS payments in the year.",
+        hi: "बैंक और ब्रांच का नाम लिखें, जैसे \"State Bank of India, <ब्रांच का नाम>\"। ब्रांच से पूछें कि क्या वह विदेश पैसे भेजने का काम करती है, और साल में आगे के LRS भुगतान भी इसी ब्रांच से करें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Sending LRS money through different branches/banks without telling each about the others"],
+        hi: ["अलग-अलग ब्रांच/बैंक से LRS पैसा भेजना और एक-दूसरे के बारे में न बताना"]
+      }
+    },
+    {
+      label: { en: "To debit my Savings Bank / Current / RFC / EEFC A/c. No.", hi: "मेरे Savings Bank / Current / RFC / EEFC खाता नंबर से काटें" },
+      quick: { en: "Strike unused account types; write your account number", hi: "जो खाता प्रकार लागू नहीं, काटें; अपना खाता नंबर लिखें" },
+      meaning: {
+        en: "The account from which the bank will take the money \"together with their charges\". RFC and EEFC are special foreign currency accounts; most students and parents will use a Savings Bank account.",
+        hi: "वह खाता जिससे बैंक पैसा \"अपने चार्ज के साथ\" काटेगा। RFC और EEFC ख़ास विदेशी मुद्रा वाले खाते हैं; ज़्यादातर छात्र और माता-पिता Savings Bank खाता ही इस्तेमाल करेंगे।"
+      },
+      write: {
+        en: "Write the account number and strike out the account types that do not apply. RBI says that if you are a new customer of the bank, it should obtain your bank statement for the previous year (or, if not available, your latest Income Tax Assessment Order or Return) to check the source of funds. SBI's charges schedule from 01-10-2026 lists outward remittances by individuals (other than import/export/ODI) as Nil, but out-of-pocket expenses, SWIFT charge (Rs. 500 per outward SWIFT message, not for P-Segment customers) and GST/TCS can apply. SBI also lists outward remittance on disbursement of an education loan as free. Ask the branch for the exact total.",
+        hi: "खाता नंबर लिखें और जो खाता प्रकार लागू नहीं हैं, उन्हें काट दें। RBI के अनुसार अगर आप बैंक के नए ग्राहक हैं, तो बैंक पैसे का स्रोत जाँचने के लिए पिछले साल का बैंक स्टेटमेंट माँगेगा (न हो तो आख़िरी Income Tax Assessment Order या रिटर्न)। SBI की 01-10-2026 से लागू चार्ज सूची में व्यक्तियों के विदेश भुगतान (import/export/ODI को छोड़कर) का चार्ज शून्य (Nil) है, पर दूसरे बैंक के ख़र्च, SWIFT चार्ज (हर SWIFT मैसेज पर ₹500, P-Segment ग्राहकों पर नहीं) और GST/TCS लग सकते हैं। SBI ने शिक्षा लोन की राशि विदेश भेजने को भी मुफ़्त बताया है। कुल कितना कटेगा, ब्रांच से पूछें।"
+      },
+      documents: {
+        en: ["If you are a new customer: last year's bank statement, or latest Income Tax Assessment Order / Return"],
+        hi: ["अगर आप नए ग्राहक हैं: पिछले साल का बैंक स्टेटमेंट, या आख़िरी Income Tax Assessment Order / रिटर्न"]
+      },
+      mistakes: {
+        en: ["Not keeping enough balance for the amount plus charges and TCS", "Not striking out the other account types"],
+        hi: ["रक़म, चार्ज और TCS के लिए खाते में पूरा पैसा न रखना", "बाक़ी खाता प्रकार न काटना"]
+      }
+    },
+    {
+      label: { en: "* a) Issue a draft: Beneficiary's Name, Address", hi: "* a) ड्राफ़्ट बनाएँ: पैसा पाने वाले का नाम, पता" },
+      quick: { en: "Only if you want a foreign currency draft; else strike out", hi: "सिर्फ़ विदेशी मुद्रा ड्राफ़्ट चाहिए तो; वरना काट दें" },
+      meaning: {
+        en: "Options a) to d) are four ways of getting the foreign exchange. The form says: \"Strike out whichever is not applicable\". Option a) is a draft made out to the beneficiary (the person or institution receiving the money).",
+        hi: "a) से d) तक विदेशी मुद्रा लेने के चार तरीक़े हैं। फॉर्म कहता है: जो लागू नहीं, उसे काट दें। a) में पैसा पाने वाले (व्यक्ति या संस्था) के नाम ड्राफ़्ट बनता है।"
+      },
+      write: {
+        en: "If you want a draft, write the beneficiary's name and address exactly as they asked. If not, strike out a). SBI's charges schedule (from 01-10-2026) lists a foreign currency demand draft for individuals at 0.10%, minimum Rs. 500, maximum Rs. 5,000.",
+        hi: "अगर ड्राफ़्ट चाहिए, तो पाने वाले का नाम और पता बिल्कुल वैसे लिखें जैसा उन्होंने बताया है। नहीं चाहिए तो a) काट दें। SBI की चार्ज सूची (01-10-2026 से) में व्यक्तियों के लिए विदेशी मुद्रा डिमांड ड्राफ़्ट 0.10% है, कम से कम ₹500, ज़्यादा से ज़्यादा ₹5,000।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving options a) to d) all un-struck, so the bank cannot tell what you want"],
+        hi: ["a) से d) में से कुछ भी न काटना, जिससे बैंक को समझ न आए कि आपको क्या चाहिए"]
+      }
+    },
+    {
+      label: { en: "* b) Effect the foreign exchange remittance directly: Beneficiary's Name, bank name and address, Account No.", hi: "* b) सीधे विदेश पैसा भेजें: पाने वाले का नाम, बैंक का नाम-पता, खाता नंबर" },
+      quick: { en: "University's or beneficiary's name, bank, account number from fee letter", hi: "यूनिवर्सिटी/पाने वाले का नाम, बैंक, खाता नंबर, फ़ीस लेटर से" },
+      meaning: {
+        en: "Option b) sends the money straight to the beneficiary's bank account abroad. This is the usual choice for paying a university's fees. There are three lines: 1) Beneficiary's Name, 2) Name and address of the bank, 3) Account No.",
+        hi: "b) में पैसा सीधे विदेश में पाने वाले के बैंक खाते में जाता है। यूनिवर्सिटी की फ़ीस भरने के लिए आमतौर पर यही चुनते हैं। तीन लाइनें हैं: 1) पाने वाले का नाम, 2) बैंक का नाम और पता, 3) खाता नंबर।"
+      },
+      write: {
+        en: "Copy these exactly from the university's fee letter or invoice, or from the person receiving the money. The SBI form has no separate box for SWIFT/BIC, IBAN or a reference number; ask the branch where to write them if your fee letter gives them. If you are not using b), strike it out.",
+        hi: "ये जानकारी यूनिवर्सिटी के फ़ीस लेटर/इनवॉइस से, या पैसा पाने वाले से बिल्कुल वैसी ही उतारें। SBI फॉर्म में SWIFT/BIC, IBAN या रेफ़रेंस नंबर का अलग खाना नहीं है; अगर फ़ीस लेटर में ये दिए हैं तो कहाँ लिखें, ब्रांच से पूछें। अगर b) नहीं चुन रहे, तो उसे काट दें।"
+      },
+      documents: {
+        en: ["The university's fee letter / invoice with its bank details (ask the bank what proof of purpose it needs)"],
+        hi: ["यूनिवर्सिटी का फ़ीस लेटर / इनवॉइस जिसमें उसके बैंक की जानकारी हो (purpose के सबूत में क्या चाहिए, बैंक से पूछें)"]
+      },
+      mistakes: {
+        en: ["One wrong digit in the account number", "Writing the student's name as beneficiary when the money is meant for the university's account"],
+        hi: ["खाता नंबर में एक भी अंक ग़लत लिखना", "पैसा यूनिवर्सिटी के खाते में जाना है, फिर भी पाने वाले में छात्र का नाम लिखना"]
+      }
+    },
+    {
+      label: { en: "* c) Issue travellers cheques / * d) Issue foreign currency notes; Amount (specify currency)", hi: "* c) ट्रैवलर्स चेक / * d) विदेशी मुद्रा के नोट; रक़म (मुद्रा लिखें)" },
+      quick: { en: "Only if you want cheques or cash notes; write currency and amount", hi: "चेक या नोट चाहिए तभी; मुद्रा और रक़म लिखें" },
+      meaning: {
+        en: "Options c) and d) are for travellers cheques or foreign currency notes (cash). The line \"Amount (specify currency)\" is for the amount and its currency, for example USD 2,000.",
+        hi: "c) और d) ट्रैवलर्स चेक या विदेशी मुद्रा के नोट (नक़द) के लिए हैं। \"Amount (specify currency)\" वाली लाइन में रक़म और उसकी मुद्रा लिखें, जैसे USD 2,000।"
+      },
+      write: {
+        en: "Fill c) or d) only if you need them, and strike out the rest. Write the amount with the currency name. How much cash a student may carry and whether the branch sells notes or cheques is not stated in Form A2; ask the bank.",
+        hi: "c) या d) तभी भरें जब ज़रूरत हो, बाक़ी काट दें। रक़म के साथ मुद्रा का नाम लिखें। छात्र कितना नक़द ले जा सकता है, या ब्रांच नोट/चेक बेचती है या नहीं, यह Form A2 में नहीं लिखा; बैंक से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing the amount without the currency (USD, GBP, EUR, etc.)"],
+        hi: ["मुद्रा (USD, GBP, EUR आदि) लिखे बिना सिर्फ़ रक़म लिखना"]
+      }
+    },
+    {
+      label: { en: "2) Under LRS table: No., Whether under LRS (Yes/No), Purpose Code, Description", hi: "2) LRS वाली तालिका: क्रम, LRS में है? (Yes/No), Purpose Code, विवरण" },
+      quick: { en: "Write Yes; for university fees/hostel, code S0305 (confirm with bank)", hi: "Yes लिखें; फ़ीस/हॉस्टल के लिए कोड S0305 (बैंक से पक्का करें)" },
+      meaning: {
+        en: "The form says this part is \"To be filled in by residents only if the remittance is made under LRS\". The purpose code tells RBI why the money is going. You put the code and its description. The form says: \"In case of doubt/difficulty, the AD bank should be consulted\".",
+        hi: "फॉर्म के अनुसार यह हिस्सा सिर्फ़ भारत के निवासी भरें, और तभी जब पैसा LRS में जा रहा हो। Purpose code से RBI को पता चलता है कि पैसा किस काम के लिए जा रहा है। आप कोड और उसका विवरण लिखते हैं। फॉर्म कहता है: शक या दिक़्क़त हो तो बैंक से पूछें।"
+      },
+      write: {
+        en: "Write Yes under LRS. Codes from RBI's purpose-code list printed with Form A2: S0305 \"Travel for education (including fees, hostel expenses etc.)\"; S1107 \"Education (e.g. fees for correspondence courses abroad)\"; S1301 family maintenance and savings; S1302 personal gifts and donations; S0304 travel for medical treatment; S0306 other travel. RBI also lists studies abroad, maintenance of close relatives, medical treatment, private visits and gifts as permitted under LRS. TCS: from 1 April 2026, Section 394 of the Income-tax Act, 2025 says the bank collects TCS on LRS remittances of an amount, or total of amounts, above Rs. 10 lakh: 2% for education or medical treatment, 20% for other purposes. No TCS is collected if the money sent is a loan from a financial institution for education. Ask the bank how much TCS it will collect on your payment.",
+        hi: "LRS के नीचे Yes लिखें। Form A2 के साथ छपी RBI की purpose code सूची से कोड: S0305 \"शिक्षा के लिए यात्रा (फ़ीस, हॉस्टल का ख़र्च आदि)\"; S1107 \"शिक्षा (जैसे विदेश के correspondence course की फ़ीस)\"; S1301 परिवार का ख़र्च और बचत; S1302 निजी गिफ़्ट और दान; S0304 इलाज के लिए यात्रा; S0306 दूसरी यात्रा। RBI के अनुसार विदेश में पढ़ाई, नज़दीकी रिश्तेदारों का ख़र्च, इलाज, घूमने जाना और गिफ़्ट LRS में मान्य हैं। TCS: 1 अप्रैल 2026 से इनकम-टैक्स एक्ट, 2025 की धारा 394 के अनुसार LRS में ₹10 लाख से ज़्यादा की रक़म (या कुल रक़म) पर बैंक TCS काटता है: पढ़ाई या इलाज के लिए 2%, बाक़ी कामों के लिए 20%। अगर भेजा गया पैसा पढ़ाई के लिए किसी वित्तीय संस्था से लिया लोन है, तो TCS नहीं कटता। आपके भुगतान पर कितना TCS कटेगा, बैंक से पूछें।"
+      },
+      changed: {
+        en: "Changed from 1 April 2026: the Ministry of Finance (1 Feb 2026) said TCS on LRS for education and medical treatment was reduced from 5% to 2%, and the new Income-tax Act, 2025 (Section 394) applies from 1 April 2026. Older bank pages that say 5% above Rs. 7 lakh (Section 206C(1G) of the old Act) are out of date.",
+        hi: "1 अप्रैल 2026 से बदला: वित्त मंत्रालय (1 फ़रवरी 2026) के अनुसार पढ़ाई और इलाज के लिए LRS पर TCS 5% से घटाकर 2% किया गया, और नया इनकम-टैक्स एक्ट, 2025 (धारा 394) 1 अप्रैल 2026 से लागू है। बैंकों के पुराने पेज जिनमें ₹7 लाख से ऊपर 5% (पुराने एक्ट की धारा 206C(1G)) लिखा है, अब पुराने हो चुके हैं।"
+      },
+      documents: {
+        en: ["Proof of purpose, such as the university's admission or fee letter (ask the bank exactly what it needs)", "If paid from an education loan: the loan sanction/disbursement papers (ask the bank)"],
+        hi: ["purpose का सबूत, जैसे यूनिवर्सिटी का एडमिशन या फ़ीस लेटर (ठीक-ठीक क्या चाहिए, बैंक से पूछें)", "अगर शिक्षा लोन से भुगतान है: लोन मंज़ूरी/वितरण के काग़ज़ (बैंक से पूछें)"]
+      },
+      mistakes: {
+        en: ["Choosing a non-education code for fees, which can mean 20% TCS instead of 2%", "Not mentioning that the money is from an education loan"],
+        hi: ["फ़ीस के लिए पढ़ाई वाला कोड न चुनना, जिससे 2% की जगह 20% TCS कट सकता है", "यह न बताना कि पैसा शिक्षा लोन से है"]
+      }
+    },
+    {
+      label: { en: "(3) Payment for import of services: Name of the country providing ultimate services", hi: "(3) विदेशी सेवाओं का भुगतान: अंतिम सेवा देने वाले देश का नाम" },
+      quick: { en: "Country of the university or service, if your code's group applies", hi: "यूनिवर्सिटी/सेवा का देश, अगर आपके कोड का ग्रुप लागू हो" },
+      meaning: {
+        en: "This line is for payments for import of services in Purpose Group Nos. 02, 03, 05, 06, 07, 08, 09, 10, 11, 15, 16 or 17. Education codes S0305 (group 03, Travel) and S1107 (group 11) are in these groups.",
+        hi: "यह लाइन उन भुगतानों के लिए है जो विदेशी सेवाओं के हैं, Purpose Group 02, 03, 05, 06, 07, 08, 09, 10, 11, 15, 16 या 17 में। शिक्षा वाले कोड S0305 (ग्रुप 03, यात्रा) और S1107 (ग्रुप 11) इन्हीं ग्रुप में आते हैं।"
+      },
+      write: {
+        en: "If your purpose code is in one of these groups, write the country providing the service, for example the country where the university is. For family maintenance or gifts (group 13), this line does not apply. If unsure, ask the bank.",
+        hi: "अगर आपका purpose code इन ग्रुप में है, तो सेवा देने वाले देश का नाम लिखें, जैसे जिस देश में यूनिवर्सिटी है। परिवार के ख़र्च या गिफ़्ट (ग्रुप 13) के लिए यह लाइन लागू नहीं है। पक्का न हो तो बैंक से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Writing \"India\" instead of the country where the service is given"],
+        hi: ["जिस देश में सेवा मिल रही है उसकी जगह \"India\" लिख देना"]
+      }
+    },
+    {
+      label: { en: "Declaration (Under FEMA 1999): I, ... (Name)", hi: "घोषणा (FEMA 1999 के तहत): मैं, ... (नाम)" },
+      quick: { en: "Your name; you confirm the limit, own funds, no prohibited use", hi: "अपना नाम; आप सीमा, अपना पैसा, ग़लत काम में न लगाने की पुष्टि करते हैं" },
+      meaning: {
+        en: "You declare that the total foreign exchange you bought or sent from all sources in India in the financial year, including this one, is within the rules (RBI's own Form A2 says \"within the overall limit of the Liberalised Remittance Scheme\"), that the money belongs to you, and that it will not be used for prohibited purposes.",
+        hi: "आप घोषणा करते हैं कि इस वित्त वर्ष में भारत में सभी जगहों से ख़रीदी या भेजी गई विदेशी मुद्रा, इस भुगतान को मिलाकर, नियमों के अंदर है (RBI के अपने Form A2 में लिखा है \"LRS की कुल सीमा के अंदर\"), पैसा आपका अपना है, और इसे मना किए गए कामों में नहीं लगाया जाएगा।"
+      },
+      write: {
+        en: "Write your name in the gap. Sign only if it is true. RBI gives examples of prohibited uses: lottery tickets, sweepstakes, proscribed magazines, margin or margin calls to overseas exchanges, and foreign exchange trading abroad. RBI also says banks may not lend money to residents for capital account remittances under LRS.",
+        hi: "ख़ाली जगह में अपना नाम लिखें। हस्ताक्षर तभी करें जब सब सच हो। RBI मना किए गए कामों के उदाहरण देता है: लॉटरी टिकट, स्वीपस्टेक, प्रतिबंधित पत्रिकाएँ, विदेशी एक्सचेंज के margin/margin call, और विदेश में फ़ॉरेक्स ट्रेडिंग। RBI के अनुसार बैंक LRS में capital account वाले भुगतान के लिए लोन नहीं दे सकते।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signing when this year's LRS total, with this payment, crosses USD 2,50,000 (except studies abroad as allowed by the bank)"],
+        hi: ["इस साल का LRS कुल, इस भुगतान को मिलाकर, USD 2,50,000 से ज़्यादा होने पर भी हस्ताक्षर करना (विदेश पढ़ाई में बैंक जितना अनुमति दे, उसे छोड़कर)"]
+      }
+    },
+    {
+      label: { en: "Details of remittances under LRS in the current Financial Year (No., Date, Amount, AD branch/FFMC)", hi: "इस वित्त वर्ष में LRS के तहत भेजे गए पैसों का ब्योरा (क्रम, तारीख़, रक़म, AD ब्रांच/FFMC)" },
+      quick: { en: "List this year's earlier LRS payments; write the year", hi: "इस साल के पहले के LRS भुगतान लिखें; साल लिखें" },
+      meaning: {
+        en: "A table on page 2 for every remittance or foreign exchange purchase you already made under LRS in the current financial year (April-March): date, amount, and the name and address of the bank branch or FFMC (money changer) used.",
+        hi: "पेज 2 पर एक तालिका, जिसमें इस वित्त वर्ष (अप्रैल-मार्च) में LRS के तहत पहले भेजा गया हर पैसा या ख़रीदी गई विदेशी मुद्रा लिखनी है: तारीख़, रक़म, और जिस बैंक ब्रांच या FFMC (मनी चेंजर) से लिया उसका नाम-पता।"
+      },
+      write: {
+        en: "Write the financial year after \"(April-March)\", for example 2026-27, and fill one row per earlier transaction. RBI says the USD 2,50,000 limit is for the whole financial year and there is no limit on how many times you remit within it. If this is your first LRS payment this year, ask the branch whether to write \"Nil\".",
+        hi: "\"(April-March)\" के बाद वित्त वर्ष लिखें, जैसे 2026-27, और पहले के हर लेन-देन के लिए एक लाइन भरें। RBI के अनुसार USD 2,50,000 की सीमा पूरे वित्त वर्ष की है, और उसके अंदर कितनी भी बार भेज सकते हैं। अगर इस साल का यह पहला LRS भुगतान है, तो \"Nil\" लिखें या नहीं, ब्रांच से पूछें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving out forex bought for a trip or a forex card load earlier in the year", "Counting by calendar year instead of April-March"],
+        hi: ["साल में पहले यात्रा के लिए ख़रीदी विदेशी मुद्रा या फ़ॉरेक्स कार्ड लोड न लिखना", "अप्रैल-मार्च की जगह जनवरी-दिसंबर के हिसाब से गिनना"]
+      }
+    },
+    {
+      label: { en: "Signature of the applicant, (Name), Date", hi: "आवेदक के हस्ताक्षर, (नाम), तारीख़" },
+      quick: { en: "Sign, write name and date; guardian countersigns for a minor", hi: "हस्ताक्षर, नाम और तारीख़; नाबालिग हो तो अभिभावक भी साइन करें" },
+      meaning: {
+        en: "The remitter signs here, with name and date.",
+        hi: "यहाँ पैसा भेजने वाला अपने हस्ताक्षर, नाम और तारीख़ लिखता है।"
+      },
+      write: {
+        en: "Sign as in your bank records, then write your name and the date. RBI says that if the remitter is a minor, Form A2 must be countersigned by the minor's natural guardian. RBI also allows Form A2 to be given online; ask your bank whether it accepts online Form A2.",
+        hi: "बैंक रिकॉर्ड जैसे हस्ताक्षर करें, फिर नाम और तारीख़ लिखें। RBI के अनुसार भेजने वाला नाबालिग हो तो Form A2 पर उसके माता-पिता (natural guardian) के भी हस्ताक्षर ज़रूरी हैं। RBI ऑनलाइन Form A2 की भी अनुमति देता है; आपका बैंक ऑनलाइन लेता है या नहीं, पूछ लें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Signature different from the bank's records", "Minor signs alone without the guardian's countersignature"],
+        hi: ["बैंक रिकॉर्ड से अलग हस्ताक्षर", "नाबालिग अकेले साइन करे, अभिभावक के हस्ताक्षर न हों"]
+      }
+    },
+    {
+      label: { en: "Certificate by the Authorised Dealer (bank fills)", hi: "Authorised Dealer का प्रमाणपत्र (बैंक भरेगा)" },
+      quick: { en: "Leave blank; bank official signs, stamps and dates", hi: "खाली छोड़ें; बैंक अधिकारी साइन, मुहर और तारीख़ लगाएँगे" },
+      meaning: {
+        en: "The bank certifies that the remittance is not being made by or to ineligible entities and follows RBI's instructions under the Scheme. The official writes name and designation, and adds stamp and seal, signature and date.",
+        hi: "बैंक प्रमाणित करता है कि पैसा किसी अयोग्य व्यक्ति/संस्था द्वारा या उसे नहीं भेजा जा रहा, और यह योजना में RBI के निर्देशों के अनुसार है। अधिकारी नाम और पद लिखता है, और मुहर, हस्ताक्षर व तारीख़ लगाता है।"
+      },
+      write: {
+        en: "Don't write here. After the money is sent, ask the bank for the transaction advice or reference number, and keep it with your fee receipt.",
+        hi: "यहाँ कुछ न लिखें। पैसा जाने के बाद बैंक से लेन-देन की रसीद या रेफ़रेंस नंबर माँगें, और उसे फ़ीस की रसीद के साथ संभालकर रखें।"
+      },
+      documents: { en: [], hi: [] },
+      mistakes: {
+        en: ["Leaving without any reference number for the remittance"],
+        hi: ["भुगतान का कोई रेफ़रेंस नंबर लिए बिना लौट आना"]
+      }
+    }
+  ]
+});
