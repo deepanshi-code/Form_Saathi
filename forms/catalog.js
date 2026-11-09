@@ -46,7 +46,8 @@ window.CATALOG = {
   "passport-reissue":        { icon: "passport",    short: { en: "Passport renewal / re-issue", hi: "पासपोर्ट नवीनीकरण / री-इश्यू" } },
   "nri-account":             { icon: "bank",        short: { en: "NRI account (NRE/NRO)", hi: "एनआरआई खाता (NRE/NRO)" } },
   "form-a2-lrs":             { icon: "rupee",       short: { en: "Send money abroad (Form A2)", hi: "विदेश पैसे भेजना (फॉर्म A2)" } },
-  "police-clearance-certificate": { icon: "shield",      short: { en: "Police Clearance Certificate (PCC)", hi: "पुलिस क्लीयरेंस सर्टिफिकेट (PCC)" } }
+  "police-clearance-certificate": { icon: "shield",      short: { en: "Police Clearance Certificate (PCC)", hi: "पुलिस क्लीयरेंस सर्टिफिकेट (PCC)" } },
+  "sbi-cheque-book":         { icon: "bank",        short: { en: "Cheque book request (SBI)", hi: "चेक बुक मँगाना (एसबीआई)" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
@@ -83,5 +84,5 @@ window.LIFE = [
   { icon: "globe",     title: { en: "Going abroad to study or work", hi: "पढ़ाई या नौकरी के लिए विदेश जाना" },
     forms: ["passport-fresh", "passport-reissue", "police-clearance-certificate", "schengen-visa", "canada-visitor-visa", "form-a2-lrs", "nri-account"] },
   { icon: "rupee",     title: { en: "Saving money and bank work",    hi: "बचत और बैंक के काम" },
-    forms: ["post-office-savings", "ppf-account", "sukanya-samriddhi", "sbi-neft-rtgs", "sbi-kyc-update", "form-15g"] }
+    forms: ["fill-cheque", "sbi-cheque-book", "sbi-neft-rtgs", "sbi-kyc-update", "post-office-savings", "ppf-account", "sukanya-samriddhi", "form-15g"] }
 ];
