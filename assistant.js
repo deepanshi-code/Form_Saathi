@@ -86,6 +86,7 @@ const SYNONYMS = {
   naam: "name", "नाम": "name", pata: "address", "पता": "address", tarikh: "date", "तारीख": "date", "तिथि": "date", dob: "date birth",
   photo: "photograph", signature: "signature", sign: "signature", "हस्ताक्षर": "signature", "फ़ोटो": "photograph",
   bachat: "savings", "बचत": "savings", saving: "savings", ladki: "girl", beti: "girl", "बेटी": "girl",
+  bharna: "fill", bhare: "fill", bharu: "fill", "भरना": "fill", "भरें": "fill", likhna: "fill write",
   cheque: "cheque", check: "cheque", chek: "cheque", chequebook: "cheque book", checkbook: "cheque book", "चेक": "cheque", leaf: "cheque", bounce: "cheque",
   nominee: "nominee nomination", "नॉमिनी": "nominee", kyc: "kyc", tds: "tds", interest: "tds",
   income: "income", aay: "income", "आय": "income", caste: "caste", jati: "caste", "जाति": "caste",

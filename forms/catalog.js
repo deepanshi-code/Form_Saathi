@@ -47,7 +47,8 @@ window.CATALOG = {
   "nri-account":             { icon: "bank",        short: { en: "NRI account (NRE/NRO)", hi: "एनआरआई खाता (NRE/NRO)" } },
   "form-a2-lrs":             { icon: "rupee",       short: { en: "Send money abroad (Form A2)", hi: "विदेश पैसे भेजना (फॉर्म A2)" } },
   "police-clearance-certificate": { icon: "shield",      short: { en: "Police Clearance Certificate (PCC)", hi: "पुलिस क्लीयरेंस सर्टिफिकेट (PCC)" } },
-  "sbi-cheque-book":         { icon: "bank",        short: { en: "Cheque book request (SBI)", hi: "चेक बुक मँगाना (एसबीआई)" } }
+  "sbi-cheque-book":         { icon: "bank",        short: { en: "Cheque book request (SBI)", hi: "चेक बुक मँगाना (एसबीआई)" } },
+  "fill-cheque":             { icon: "bank",        short: { en: "How to fill a cheque", hi: "चेक कैसे भरें" } }
 };
 
 // Filter chips on the home page. A chip can cover more than one form category.
