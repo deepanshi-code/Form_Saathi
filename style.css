@@ -918,3 +918,10 @@ html:lang(hi) .band-title { letter-spacing: 0; }
   .print-sheet p { margin-top: 12pt; font-size: 10pt; color: #444; }
 }
 .ask-more { align-self: flex-start; background: var(--card); color: var(--primary); border: 1.5px solid var(--border); }
+
+/* AI answers inside Ask Saathi */
+.ask-ai { border: 1.5px solid color-mix(in srgb, var(--primary) 30%, transparent); background: var(--card); }
+.ask-ai-label { align-self: flex-start; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary); background: var(--primary-soft); }
+.ask-ai.is-loading p { color: var(--muted); }
+.ask-ai.is-loading p::after { content: ""; display: inline-block; width: 1em; animation: ai-dots 1.2s steps(4) infinite; overflow: hidden; vertical-align: bottom; }
+@keyframes ai-dots { from { width: 0; } to { width: 1em; } }

@@ -5,3 +5,8 @@ Thumbs.db
 
 # Never commit real filled forms or scans with personal data
 private/
+
+# Cloudflare Worker local files
+worker/.wrangler/
+worker/node_modules/
+.dev.vars

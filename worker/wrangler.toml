@@ -1,0 +1,16 @@
+name = "form-saathi-ai"
+main = "src/index.mjs"
+compatibility_date = "2026-06-01"
+
+[vars]
+GEMINI_MODEL = "gemini-2.5-flash"
+SITE_URL = "https://deepanshi-code.github.io/Form_Saathi"
+ALLOWED_ORIGINS = "https://deepanshi-code.github.io,http://localhost:8000"
+DAILY_LIMIT = "30"
+
+# Counts questions per person per day. Create it once with:
+#   npx wrangler kv namespace create LIMITS
+# then paste the id it prints below (replace PASTE_ID_HERE).
+[[kv_namespaces]]
+binding = "LIMITS"
+id = "PASTE_ID_HERE"

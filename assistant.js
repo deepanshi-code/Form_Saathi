@@ -27,7 +27,12 @@ const ASK = {
     none: "Sorry, I couldn't find that. Try simple words like PAN, bank account, passport, scholarship or marriage.",
     noMic: "Voice input isn't supported in this browser. Please type instead.",
     micError: "I couldn't hear that. Please try again or type.",
-    note: "Answers come only from the verified guides on this site."
+    note: "Answers come only from the verified guides on this site.",
+    aiLabel: "Saathi AI (beta)",
+    aiThinking: "Reading the guides…",
+    aiLimit: "You've reached today's limit for AI answers. The search results above still work.",
+    aiOpenBox: (n) => `Show box ${n}`,
+    aiNote: "AI answers use Google Gemini and only the guides on this site. Don't type personal numbers."
   },
   hi: {
     open: "साथी से पूछें",
@@ -52,7 +57,12 @@ const ASK = {
     none: "माफ़ कीजिए, यह नहीं मिला। आसान शब्द लिखें, जैसे पैन, बैंक खाता, पासपोर्ट, छात्रवृत्ति या शादी।",
     noMic: "इस ब्राउज़र में बोलकर पूछना नहीं चलता। कृपया लिखकर पूछें।",
     micError: "आवाज़ साफ़ नहीं आई। फिर से कोशिश करें या लिखें।",
-    note: "जवाब सिर्फ़ इस साइट की जाँची हुई गाइड से आते हैं।"
+    note: "जवाब सिर्फ़ इस साइट की जाँची हुई गाइड से आते हैं।",
+    aiLabel: "साथी AI (बीटा)",
+    aiThinking: "गाइड पढ़ रहा हूँ…",
+    aiLimit: "आज के AI जवाबों की सीमा पूरी हो गई। ऊपर के खोज नतीजे अब भी काम करते हैं।",
+    aiOpenBox: (n) => `खाना ${n} दिखाएँ`,
+    aiNote: "AI जवाब Google Gemini से और सिर्फ़ इस साइट की गाइड से आते हैं। निजी नंबर न लिखें।"
   }
 };
 
@@ -189,8 +199,15 @@ function askGreet() {
 function askHandle(query) {
   query = query.trim();
   if (!query) return;
-  const t = ASK[lang];
   askAdd("user", [askText(query)]);
+  const forms = askSearch(query);
+  askAI(query, forms);
+}
+
+// Instant answer from the guides on this device. Returns the ids of the guides it pointed to,
+// so the AI (when switched on) can read the same guides.
+function askSearch(query) {
+  const t = ASK[lang];
   const tokens = askTokens(query);
 
   // Forms ranked by how well they match.
@@ -216,7 +233,7 @@ function askHandle(query) {
       row.append(show, speakButton(quick));
       askAdd("bot", [askText(t.boxIntro), el("strong", "ask-box", t.box(best.i + 1, field.label[lang])), askText(quick), row]);
       askShowBox(form, best.i);
-      return;
+      return [form.id];
     }
   }
 
@@ -229,9 +246,12 @@ function askHandle(query) {
   if (events[0] && (events[0].s >= 4 || (events[0].s >= 2 && events[0].s >= topForm))) {
     const e = events[0];
     askAdd("bot", [askText(t.situation(e.ev.title[lang])), ...e.list.map(askFormButton)]);
-    return;
+    return (form ? [form] : []).concat(e.list).map(f => f.id).slice(0, 3);
   }
-  if (!ranked.length) { askAdd("bot", [askText(t.none)]); return; }
+  if (!ranked.length) {
+    askAdd("bot", [askText(t.none)]);
+    return form ? [form.id] : [];
+  }
   // Keep forms close to the best score, at most three.
   const close = ranked.filter(x => x.s >= topForm * 0.6).map(x => x.f);
   const picks = close.slice(0, 3);
@@ -252,6 +272,65 @@ function askHandle(query) {
     nodes.push(more);
   }
   askAdd("bot", nodes);
+  return [...new Set((form ? [form] : []).concat(picks).map(f => f.id))].slice(0, 3);
+}
+
+// ---------- Optional AI answers ----------
+// Switched on only when config.js sets window.SAATHI_AI_URL to the deployed worker.
+// The worker reads the same verified guides and answers only from them (see worker/src/index.mjs).
+
+const AI_URL = (window.SAATHI_AI_URL || "").replace(/\/$/, "");
+
+// Personal numbers and emails never leave the device (the worker removes them again too).
+function askRedact(text) {
+  return text
+    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, "[email]")
+    .replace(/\b[A-Z]{5}[0-9]{4}[A-Z]\b/gi, "[PAN]")
+    .replace(/\d[\d\s-]{5,}\d/g, "[number]");
+}
+
+async function askAI(query, formIds) {
+  if (!AI_URL || !formIds.length) return;
+  const t = ASK[lang];
+  const askedLang = lang;
+  const msg = askAdd("bot", [el("span", "ask-ai-label", t.aiLabel), askText(t.aiThinking)]);
+  msg.classList.add("ask-ai", "is-loading");
+  const stop = new AbortController();
+  const timer = setTimeout(() => stop.abort(), 15000);
+  try {
+    const res = await fetch(AI_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: askRedact(query), lang: askedLang, forms: formIds }),
+      signal: stop.signal
+    });
+    if (res.status === 429) { msg.classList.remove("is-loading"); msg.replaceChildren(el("span", "ask-ai-label", t.aiLabel), askText(t.aiLimit)); return; }
+    if (!res.ok) throw new Error(String(res.status));
+    const data = await res.json();
+    if (!data.answer) throw new Error("empty");
+    const nodes = [el("span", "ask-ai-label", t.aiLabel), askText(data.answer)];
+    const row = el("div", "ask-row");
+    const target = data.form_id && window.FORMS.find(f => f.id === data.form_id);
+    const here = currentForm();
+    if (target && data.box && here && here.id === target.id) {
+      const show = el("button", "ask-action", t.aiOpenBox(data.box));
+      show.type = "button";
+      show.addEventListener("click", () => askShowBox(target, data.box - 1));
+      row.append(show);
+    } else if (target) {
+      nodes.push(askFormButton(target));
+    }
+    row.append(speakButton(data.answer));
+    nodes.push(row);
+    msg.classList.remove("is-loading");
+    msg.replaceChildren(...nodes);
+    msg.scrollIntoView({ block: "nearest" });
+  } catch {
+    // The instant answer above is already shown, so a failed AI call just disappears.
+    msg.remove();
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function askShowBox(form, i) {
@@ -321,7 +400,7 @@ function askRenderText() {
   $("ask-send").setAttribute("aria-label", t.send);
   $("ask-mic").setAttribute("aria-label", t.mic);
   $("ask-close").setAttribute("aria-label", t.close);
-  $("ask-note").textContent = t.note;
+  $("ask-note").textContent = AI_URL ? t.aiNote : t.note;
 }
 
 (function askInit() {
