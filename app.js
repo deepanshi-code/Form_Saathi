@@ -6,6 +6,8 @@ const UI = {
     navChanges: "What changed",
     navHow: "How it works",
     skip: "Skip to content",
+    offline: "You are offline. Forms you opened before still work.",
+    online: "Back online.",
     tagline: "Fill any form the right way",
     accent: "without fear, without mistakes",
     eyebrow: "Free · English & हिंदी · Checked against official sources",
@@ -23,6 +25,12 @@ const UI = {
     showAll: n => `Show all ${n} forms`,
     showLess: "Show fewer",
     lifeNeed: n => n === 1 ? "You may need this form" : `You may need these ${n} forms`,
+    checklistBtn: "Document checklist",
+    checklistTitle: t => `Documents for: ${t}`,
+    checklistNote: "Grouped by form and box, because many lists say \"any ONE of\": you need only one document from such a list. Your ticks are saved on this device.",
+    checklistEmpty: "These guides don't list documents. Ask the office what to bring.",
+    checklistPrint: "Print checklist",
+    close: "Close",
     changeCount: n => n === 1 ? "1 change" : `${n} changes`,
     changesAll: n => `See all ${n} forms with changes`,
     changesTitle: n => `${n} rules changed recently`,
@@ -96,6 +104,8 @@ const UI = {
     navChanges: "क्या बदला",
     navHow: "कैसे काम करता है",
     skip: "सीधे सामग्री पर जाएँ",
+    offline: "आप ऑफ़लाइन हैं। पहले खोले गए फॉर्म अब भी चलेंगे।",
+    online: "इंटरनेट वापस आ गया।",
     tagline: "कोई भी फॉर्म सही तरीके से भरें",
     accent: "बिना डर, बिना गलती",
     eyebrow: "मुफ़्त · हिंदी और English · आधिकारिक स्रोतों से जाँचा गया",
@@ -113,6 +123,12 @@ const UI = {
     showAll: n => `सभी ${n} फॉर्म देखें`,
     showLess: "कम दिखाएँ",
     lifeNeed: n => n === 1 ? "आपको शायद यह फॉर्म चाहिए" : `आपको शायद ये ${n} फॉर्म चाहिए`,
+    checklistBtn: "दस्तावेज़ों की सूची",
+    checklistTitle: t => `इसके लिए दस्तावेज़: ${t}`,
+    checklistNote: "फॉर्म और खाने के हिसाब से बाँटा गया है, क्योंकि कई सूचियों में लिखा है \"इनमें से कोई एक\": ऐसी सूची से एक ही दस्तावेज़ चाहिए। आपके टिक इसी डिवाइस पर सेव होते हैं।",
+    checklistEmpty: "इन गाइड में दस्तावेज़ों की सूची नहीं है। दफ़्तर से पूछें कि क्या लाना है।",
+    checklistPrint: "सूची प्रिंट करें",
+    close: "बंद करें",
     changeCount: n => `${n} बदलाव`,
     changesAll: n => `बदलाव वाले सभी ${n} फॉर्म देखें`,
     changesTitle: n => `${n} नियम हाल में बदले हैं`,
@@ -397,7 +413,93 @@ function renderLife() {
     li.append(a);
     list.append(li);
   });
-  $("life-panel").replaceChildren(el("p", "life-need", UI[lang].lifeNeed(ev.list.length)), list);
+  const checklist = el("button", "more-btn more-left life-checklist");
+  checklist.type = "button";
+  checklist.append(icon("doc", "icon small-icon"), el("span", null, UI[lang].checklistBtn));
+  checklist.addEventListener("click", () => openChecklist(ev.title[lang], ev.list));
+  $("life-panel").replaceChildren(el("p", "life-need", UI[lang].lifeNeed(ev.list.length)), list, checklist);
+}
+
+// Document checklist: every document the chosen forms ask for, grouped by form and box
+// (lists like "any ONE of" must not be merged). Ticks are kept in this browser only.
+function checklistGroups(forms) {
+  return forms.map(form => ({
+    form,
+    boxes: form.fields
+      .map((f, i) => ({ i, label: f.label[lang], docs: f.documents ? f.documents[lang] : [] }))
+      .filter(b => b.docs.length)
+  })).filter(g => g.boxes.length);
+}
+
+function openChecklist(title, forms) {
+  let dlg = $("checklist");
+  if (!dlg) {
+    dlg = el("dialog", "checklist");
+    dlg.id = "checklist";
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); }); // tap outside closes
+    document.body.append(dlg);
+  }
+  const groups = checklistGroups(forms);
+  const head = el("div", "checklist-head");
+  const close = el("button", "ask-close");
+  close.type = "button";
+  close.setAttribute("aria-label", UI[lang].close);
+  close.append(icon("close"));
+  close.addEventListener("click", () => dlg.close());
+  head.append(el("h2", null, UI[lang].checklistTitle(title)), close);
+
+  const body = el("div", "checklist-body");
+  body.append(el("p", "checklist-note", groups.length ? UI[lang].checklistNote : UI[lang].checklistEmpty));
+  groups.forEach(g => {
+    const sec = el("section", "checklist-form");
+    sec.append(el("h3", null, meta(g.form).short[lang]));
+    g.boxes.forEach(b => {
+      sec.append(el("p", "checklist-box", `${b.i + 1}. ${b.label}`));
+      const ul = el("ul");
+      b.docs.forEach((d, k) => {
+        const key = `fs:check:${g.form.id}:${b.i}:${k}`;
+        const li = el("li");
+        const lab = el("label");
+        const cb = el("input");
+        cb.type = "checkbox";
+        cb.checked = store.get(key, false);
+        cb.addEventListener("change", () => store.set(key, cb.checked));
+        lab.append(cb, el("span", null, d));
+        li.append(lab);
+        ul.append(li);
+      });
+      sec.append(ul);
+    });
+    body.append(sec);
+  });
+
+  const foot = el("div", "checklist-foot");
+  if (groups.length) {
+    const print = el("button", "ask-action");
+    print.type = "button";
+    print.append(el("span", null, UI[lang].checklistPrint));
+    print.addEventListener("click", () => printChecklist(title, groups));
+    foot.append(print);
+  }
+  dlg.replaceChildren(head, body, foot);
+  dlg.showModal();
+}
+
+function printChecklist(title, groups) {
+  const nodes = [el("h1", null, UI[lang].checklistTitle(title))];
+  groups.forEach(g => {
+    nodes.push(el("h2", null, meta(g.form).short[lang]));
+    g.boxes.forEach(b => {
+      nodes.push(el("p", "print-box", `${b.i + 1}. ${b.label}`));
+      const ul = el("ul", "print-checks");
+      b.docs.forEach(d => ul.append(el("li", null, "☐ " + d)));
+      nodes.push(ul);
+    });
+  });
+  nodes.push(el("p", null, UI[lang].printNote));
+  $("print-sheet").replaceChildren(...nodes);
+  $("checklist").close();
+  window.print();
 }
 
 // Product preview on the home page: the real PAN form with one box spotlighted,
@@ -1218,3 +1320,10 @@ window.addEventListener("hashchange", route);
 
 renderStaticText();
 route();
+
+// Keep working with weak or no internet (see sw.js). Browsers allow this only on https or localhost.
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  navigator.serviceWorker.register("sw.js").catch(() => { /* the site still works online */ });
+}
+window.addEventListener("offline", () => toast(UI[lang].offline));
+window.addEventListener("online", () => toast(UI[lang].online));

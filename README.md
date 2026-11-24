@@ -20,6 +20,7 @@ TODO: add findings from interviews and the collected forms.
 | Listen (read aloud) and "My answers" printable sheet (answers stay only in the browser) | Done |
 | Share links with previews (one page per form in f/, plus sitemap.xml), "Report a problem" per form, accessibility fixes (keyboard focus, skip link, contrast) | Done. To appear on Google, submit sitemap.xml in Google Search Console |
 | Automated checks (node tools/check.mjs) and one bundled guide file (forms/bundle.js) | Done |
+| Works offline for forms already opened (sw.js), and a document checklist for each life situation (tick and print) | Done |
 | Optional AI answers in Ask Saathi (Gemini via a Cloudflare Worker; answers only from the verified guides) | Code ready and tested with a mock; needs setup: [worker/README.md](worker/README.md) |
 | Verified form guides | 44: SBI, PNB\*, Bank of Baroda\*, HDFC, Canara Bank, Post Office\* and Jan Dhan\* savings accounts, Form 121 (earlier 15G)\*, PAN (Form 93), Aadhaar (Form 1), Voter ID (Form 6 and Form 8), Learner's licence (Form 2), Fresh passport, Birth registration (Form 1)\*, LPG connection KYC\*, National Scholarship Portal\*, PM-Vidyalaxmi education loan, UGC anti-ragging undertaking, Uttarakhand caste certificate\*, Uttarakhand permanent residence certificate\*, Driving licence (Form 2)\*, EPF withdrawal (Composite Claim Form)\*, PAN correction (PAN CR-01)\*, Death registration (Form 2)\*, Bank nomination (2025 Nomination Form)\*, Sukanya Samriddhi account\*, Voter ID Form 7 (deletion)\*, Voter ID Form 6B (Aadhaar)\*, EPF Form 11\*, Vehicle ownership transfer (Forms 29 and 30)\*, SBI NEFT/RTGS\*, Uttarakhand ration card\*, Uttarakhand marriage registration (UCC Form 1)\*, Uttarakhand income certificate\*, Name change (Gazette of India)\*, SBI KYC update\*, PPF account\*, UPCL electricity connection\*; International: Schengen visa, Canada visitor visa (IMM 5257)\*, Passport re-issue, NRI account (NRE/NRO)\*, Form A2 (sending money abroad)\* |
 | Not yet verified | Uttarakhand tenant police verification and Police Clearance Certificate (both forms are only visible after logging in to the portal) |
@@ -27,6 +28,10 @@ TODO: add findings from interviews and the collected forms.
 
 \* Shown with a caution note: the official source found is older or indirect (details on each page).
 | AI explanations for any uploaded form | Not started (needs a small server, later) |
+
+## How it works
+
+Code structure and design decisions: [docs/how-it-works.md](docs/how-it-works.md).
 
 ## User testing
 
