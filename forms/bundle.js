@@ -151,11 +151,11 @@ window.FORMS.push({
       },
       write: {
         en: "If both addresses are the same, tick \"Same as Current\". If your ID doesn't show your current address (for example, you moved for college), attach one of the documents below instead. Then you must submit Aadhaar or an OVD with your current address within 3 months, or the account may stop working.",
-        hi: "अगर दोनों पते एक ही हैं, तो \"Same as Current\" पर टिक करें। अगर आपके पहचान पत्र पर वर्तमान पता नहीं है (जैसे पढ़ाई के लिए दूसरे शहर आए हैं), तो नीचे दिए दस्तावेज़ों में से एक लगाएँ। फिर 3 महीने के अंदर वर्तमान पते वाला आधार या OVD जमा करना होगा, वरना खाता बंद हो सकता है।"
+        hi: "अगर दोनों पते एक ही हैं, तो \"Same as Current\" पर टिक करें। अगर आपके पहचान पत्र पर वर्तमान पता नहीं है (जैसे पढ़ाई के लिए दूसरे शहर आए हैं), तो नीचे दिए दस्तावेज़ों में से एक लगाएँ। फिर 3 महीने के अंदर वर्तमान पते वाला आधार या OVD जमा करना होगा, वरना खाता काम करना बंद कर सकता है।"
       },
       documents: {
-        en: ["Only if your ID lacks the current address, one of: Utility bill (electricity, telephone, post-paid mobile, piped gas, water) not more than 2 months old", "Property or municipal tax receipt", "Pension payment order (PPO / FPPO)", "Accommodation allotment letter from an employer (Government, PSU, bank, listed company, etc.)"],
-        hi: ["सिर्फ़ तब, जब पहचान पत्र पर वर्तमान पता न हो, इनमें से एक: 2 महीने से पुराना न हो ऐसा बिजली/टेलीफ़ोन/पोस्टपेड मोबाइल/पाइप गैस/पानी का बिल", "संपत्ति या नगर निगम कर की रसीद", "पेंशन भुगतान आदेश (PPO / FPPO)", "नियोक्ता (सरकार, सार्वजनिक उपक्रम, बैंक, सूचीबद्ध कंपनी आदि) का आवास आवंटन पत्र"]
+        en: ["Only if your ID lacks the current address, one of: Utility bill (electricity, telephone, post-paid mobile, piped gas, water) not more than 2 months old", "Property or municipal tax receipt", "Pension payment order (PPO / FPPO)", "Accommodation allotment letter from an employer (Government, PSU, bank, listed company, etc.), or a leave and licence agreement with such an employer", "Self-declaration, if you give Aadhaar voluntarily and your current address is different from the one in it"],
+        hi: ["सिर्फ़ तब, जब पहचान पत्र पर वर्तमान पता न हो, इनमें से एक: 2 महीने से पुराना न हो ऐसा बिजली/टेलीफ़ोन/पोस्टपेड मोबाइल/पाइप गैस/पानी का बिल", "संपत्ति या नगर निगम कर की रसीद", "पेंशन भुगतान आदेश (PPO / FPPO)", "नियोक्ता (सरकार, सार्वजनिक उपक्रम, बैंक, सूचीबद्ध कंपनी आदि) का आवास आवंटन पत्र, या ऐसे नियोक्ता के साथ लीव एंड लाइसेंस अनुबंध", "स्व-घोषणा, अगर आप अपनी मर्ज़ी से आधार देते हैं और आपका वर्तमान पता आधार वाले पते से अलग है"]
       },
       mistakes: {
         en: ["Using a utility bill older than 2 months", "Not submitting an updated ID within 3 months"],
@@ -1070,14 +1070,14 @@ window.FORMS.push({
     },
     {
       label: { en: "Initial deposit", hi: "शुरुआती जमा राशि" },
-      quick: { en: "At least Rs. 500, in figures and in words", hi: "कम से कम ₹500, अंकों और शब्दों दोनों में लिखें" },
+      quick: { en: "At least Rs. 500 (Basic account: nil), figures and words", hi: "कम से कम ₹500 (बेसिक खाता: शून्य), अंकों और शब्दों में" },
       meaning: {
         en: "The money you pay to open the account. The form asks for the amount in figures and in words, and whether you pay by cash, DD or cheque (with cheque number and date).",
         hi: "खाता खोलते समय जमा की जाने वाली रकम। फॉर्म में रकम अंकों में और शब्दों में, और भुगतान का तरीक़ा (नकद, डीडी या चेक, चेक नंबर और तारीख़ के साथ) माँगा गया है।"
       },
       write: {
-        en: "The Post Office Savings Account Scheme, 2019 (notified 12.12.2019) says the minimum opening deposit is Rs. 500, and no withdrawal may bring the balance below Rs. 500. No interest is given for a month if the balance falls below Rs. 500 between the 10th and the last day. The form also says: if your total balance/investment in all accounts is Rs. 10 lakh or more, you must give a document showing the source of the money.",
-        hi: "डाकघर बचत खाता योजना, 2019 (12.12.2019 को अधिसूचित) के अनुसार खाता कम से कम ₹500 से खुलता है, और कोई भी निकासी बैलेंस को ₹500 से नीचे नहीं ला सकती। अगर किसी महीने की 10 तारीख़ से आख़िरी दिन के बीच बैलेंस ₹500 से कम हो जाए, तो उस महीने का ब्याज नहीं मिलता। फॉर्म के अनुसार, अगर सभी खातों में कुल जमा ₹10 लाख या उससे ज़्यादा है, तो पैसे का स्रोत बताने वाला दस्तावेज़ देना होगा।"
+        en: "The Post Office Savings Account Scheme, 2019 (notified 12.12.2019) says the minimum opening deposit is Rs. 500, and no withdrawal may bring the balance below Rs. 500. No interest is given for a month if the balance falls below Rs. 500 between the 10th and the last day. The form also says: if your total balance/investment in all accounts is Rs. 10 lakh or more, you must give a document showing the source of the money. Exception: the 2021 amendment (G.S.R. 257(E)) added a Basic Savings Account that a registered adult member of a Government welfare scheme (or the guardian of a registered minor) can open with Nil deposit; ask the post office if you qualify.",
+        hi: "डाकघर बचत खाता योजना, 2019 (12.12.2019 को अधिसूचित) के अनुसार खाता कम से कम ₹500 से खुलता है, और कोई भी निकासी बैलेंस को ₹500 से नीचे नहीं ला सकती। अगर किसी महीने की 10 तारीख़ से आख़िरी दिन के बीच बैलेंस ₹500 से कम हो जाए, तो उस महीने का ब्याज नहीं मिलता। फॉर्म के अनुसार, अगर सभी खातों में कुल जमा ₹10 लाख या उससे ज़्यादा है, तो पैसे का स्रोत बताने वाला दस्तावेज़ देना होगा। अपवाद: 2021 के संशोधन (G.S.R. 257(E)) में बेसिक बचत खाता जोड़ा गया, जिसे किसी सरकारी कल्याण योजना का पंजीकृत वयस्क सदस्य (या पंजीकृत नाबालिग का अभिभावक) बिना किसी जमा राशि के खोल सकता है; डाकघर में पूछें कि क्या आप इसके योग्य हैं।"
       },
       documents: { en: ["Cash, DD or cheque for at least Rs. 500"], hi: ["कम से कम ₹500 नकद, डीडी या चेक"] },
       mistakes: {
@@ -1800,7 +1800,7 @@ window.FORMS.push({
     title: "UIDAI Form 1: Aadhaar Enrolment and Update (Resident Indian / NRI with Indian address, 18+), file dated 29-09-2026",
     url: "https://backend.uidai.gov.in/get/files/media/document/2026-09/Form_1_Eng.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
 
   category: { en: "Government", hi: "सरकारी" },
   name: { en: "Aadhaar Enrolment / Update Form (18+)", hi: "आधार नामांकन / अपडेट फॉर्म (18+ उम्र)" },
@@ -1977,8 +1977,8 @@ window.FORMS.push({
         hi: "सिर्फ़ तब भरें जब खाना 4 में HoF पर टिक किया हो। मुखिया परिवार का वह सदस्य है जिसका आधार वैध है, जिसकी उम्र 18 या ज़्यादा है, और जो आपकी पहचान की पुष्टि करके अपने आधार का पता आपके लिए इस्तेमाल करने देता है।"
       },
       write: {
-        en: "Write the HoF's name and Aadhaar number, and tick one relationship. For a new enrolment, the HoF must be your mother, father or legal guardian. For an address update, the HoF can also be your spouse, child/ward or sibling. The HoF signs the consent printed in box 6. Whether the HoF must come to the centre in person: ask at the Aadhaar centre.",
-        hi: "मुखिया का नाम और आधार नंबर लिखें, और एक रिश्ते पर टिक करें। नए नामांकन में मुखिया आपकी माँ, पिता या क़ानूनी अभिभावक ही हो सकते हैं। पता बदलवाने में मुखिया आपके पति/पत्नी, बच्चा/आश्रित या भाई-बहन भी हो सकते हैं। खाना 6 में छपी सहमति पर मुखिया हस्ताक्षर करते हैं। मुखिया को ख़ुद केंद्र आना होगा या नहीं, यह आधार केंद्र पर पूछें।"
+        en: "Write the HoF's name and Aadhaar number, and tick one relationship. For a new enrolment, the HoF must be your mother, father or legal guardian. For an address update, the HoF can also be your spouse, child/ward or sibling. The HoF signs the consent printed in box 6. For an HoF-based address update, UIDAI's Citizen's Charter 2026 says the HoF \"needs to be physically present\", because the HoF's fingerprint or iris check is needed.",
+        hi: "मुखिया का नाम और आधार नंबर लिखें, और एक रिश्ते पर टिक करें। नए नामांकन में मुखिया आपकी माँ, पिता या क़ानूनी अभिभावक ही हो सकते हैं। पता बदलवाने में मुखिया आपके पति/पत्नी, बच्चा/आश्रित या भाई-बहन भी हो सकते हैं। खाना 6 में छपी सहमति पर मुखिया हस्ताक्षर करते हैं। UIDAI के नागरिक चार्टर 2026 के अनुसार, मुखिया के आधार पर पता बदलवाने के लिए मुखिया को ख़ुद केंद्र पर आना होगा, क्योंकि उनके बायोमेट्रिक (उंगली या आँख) की जाँच ज़रूरी है।"
       },
       documents: {
         en: ["One Proof of Relationship (POR) with your name and the HoF's name, for example: Marriage certificate (Central / State Government)", "Birth certificate", "Ration / PDS photo card", "Valid Indian passport", "Pensioner photo ID / Pension Payment Order", "Self-declaration by the HoF on UIDAI's format (only for borrowing an immediate family member's address; valid for 3 months from date of issue)"],
@@ -2045,8 +2045,8 @@ window.FORMS.push({
         hi: "फॉर्म 1 (फ़ाइल तारीख़ 29-09-2026) में आधार केंद्र की सेवाओं की यह शुल्क तालिका छपी है।"
       },
       write: {
-        en: "New enrolment: Free. Biometric update (photo, fingerprints, irises) for adults: ₹125. Demographic update (name, gender, DOB, address, mobile, email) done separately: ₹75 for all or any of them; free if done together with a biometric update (only the biometric charge applies). Updating POI and POA documents: ₹75.",
-        hi: "नया नामांकन: मुफ़्त। वयस्कों के लिए बायोमेट्रिक अपडेट (फ़ोटो, उंगलियों और पुतली के निशान): ₹125। जनसांख्यिकीय अपडेट (नाम, लिंग, जन्म तिथि, पता, मोबाइल, ईमेल) अलग से: सब या कोई भी, ₹75; बायोमेट्रिक अपडेट के साथ करवाएँ तो मुफ़्त (सिर्फ़ बायोमेट्रिक का शुल्क लगेगा)। पहचान और पते के दस्तावेज़ अपडेट करना: ₹75।"
+        en: "New enrolment: Free. Biometric update (photo, fingerprints, irises) for adults: ₹125. Demographic update (name, gender, DOB, address, mobile, email) done separately: ₹75 for all or any of them; free if done together with a biometric update (only the biometric charge applies). Updating POI and POA documents: ₹75 at a centre. UIDAI's Citizen's Charter 2026 says document update through the myAadhaar portal (myaadhaar.uidai.gov.in) is free \"till 14.6.2027\".",
+        hi: "नया नामांकन: मुफ़्त। वयस्कों के लिए बायोमेट्रिक अपडेट (फ़ोटो, उंगलियों और पुतली के निशान): ₹125। जनसांख्यिकीय अपडेट (नाम, लिंग, जन्म तिथि, पता, मोबाइल, ईमेल) अलग से: सब या कोई भी, ₹75; बायोमेट्रिक अपडेट के साथ करवाएँ तो मुफ़्त (सिर्फ़ बायोमेट्रिक का शुल्क लगेगा)। पहचान और पते के दस्तावेज़ अपडेट करना: केंद्र पर ₹75। UIDAI के नागरिक चार्टर 2026 के अनुसार myAadhaar पोर्टल (myaadhaar.uidai.gov.in) पर दस्तावेज़ अपडेट 14.6.2027 तक मुफ़्त है।"
       },
       documents: { en: [], hi: [] },
       mistakes: {
@@ -2063,7 +2063,11 @@ window.FORMS.push({
     title: "Election Commission of India, Form-6: Application Form for New Voters (voters.eci.gov.in, PDF last modified 28-10-2025)",
     url: "https://voters.eci.gov.in/formspdf/Form_6_English.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
+  caution: {
+    en: "During a Special Intensive Revision (SIR) of the voter list, the Election Commission asks new voters to submit Form 6 \"along with the prescribed Declaration Form\" (ECI order of 14 May 2026 for 16 States and 3 UTs, PIB release of 31 May 2026). Ask your BLO (Booth Level Officer) whether a Declaration Form is needed in your state now.",
+    hi: "मतदाता सूची के विशेष गहन पुनरीक्षण (SIR) के दौरान चुनाव आयोग नए मतदाताओं से फॉर्म 6 के साथ तय घोषणा पत्र (Declaration Form) भी माँगता है (16 राज्यों और 3 केंद्र शासित प्रदेशों के लिए 14 मई 2026 का ECI आदेश, PIB रिलीज़ 31 मई 2026)। अपने BLO (बूथ लेवल अधिकारी) से पूछें कि अभी आपके राज्य में घोषणा पत्र ज़रूरी है या नहीं।"
+  },
 
   category: { en: "Government", hi: "सरकारी" },
   name: { en: "Voter ID: Form 6 (New Voter Registration)", hi: "वोटर आईडी: फॉर्म 6 (नया मतदाता पंजीकरण)" },
@@ -2865,8 +2869,8 @@ window.FORMS.push({
         hi: "खाना 1.1 पूछता है कि यह नया पासपोर्ट है या दोबारा जारी (re-issue)। खाना 1.4 पूछता है कि आपको सामान्य (Normal) चाहिए या तत्काल (Tatkaal)।"
       },
       write: {
-        en: "Cross \"Fresh Passport\" if you have never held a passport. Cross \"Normal\" unless you need it urgently. The booklet says Tatkaal needs no proof of urgency, but its fee is higher and police verification is then done after the passport is issued. Some categories cannot apply under Tatkaal.",
-        hi: "अगर आपके पास पहले कभी पासपोर्ट नहीं था, तो \"Fresh Passport\" पर क्रॉस लगाएँ। जल्दी न हो तो \"Normal\" पर क्रॉस लगाएँ। बुकलेट के अनुसार तत्काल के लिए जल्दी का कोई सबूत नहीं चाहिए, पर उसकी फ़ीस ज़्यादा है और पुलिस जाँच पासपोर्ट जारी होने के बाद होती है। कुछ श्रेणियों के लोग तत्काल में आवेदन नहीं कर सकते।"
+        en: "Cross \"Fresh Passport\" if you have never held a passport. Cross \"Normal\" unless you need it urgently. The booklet says Tatkaal needs no proof of urgency, but its fee is higher and police verification is then done after the passport is issued. Some categories cannot apply under Tatkaal. Fees from 1 July 2026 (G.S.R. 516(E)) get a 10% discount on fresh passports for children up to 8 years and people above 60.",
+        hi: "अगर आपके पास पहले कभी पासपोर्ट नहीं था, तो \"Fresh Passport\" पर क्रॉस लगाएँ। जल्दी न हो तो \"Normal\" पर क्रॉस लगाएँ। बुकलेट के अनुसार तत्काल के लिए जल्दी का कोई सबूत नहीं चाहिए, पर उसकी फ़ीस ज़्यादा है और पुलिस जाँच पासपोर्ट जारी होने के बाद होती है। कुछ श्रेणियों के लोग तत्काल में आवेदन नहीं कर सकते। 1 जुलाई 2026 से (G.S.R. 516(E)) 8 साल तक के बच्चों और 60 साल से ज़्यादा उम्र के लोगों को नए पासपोर्ट की फ़ीस में 10% छूट मिलती है।"
       },
       documents: { en: [], hi: [] },
       mistakes: {
@@ -3823,10 +3827,10 @@ window.FORMS.push({
     title: "Govt. of Goa, Directorate of Tribal Welfare: NSP circular for AY 2026-27 (July 2026), with NSP Student User Manual v1.0 and NSP OTR FAQ (2024)",
     url: "https://tribalwelfare.goa.gov.in/wp-content/uploads/2026/07/2026-27-central-circular.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
   caution: {
-    en: "scholarships.gov.in could not be opened when this guide was checked, so it is based on an official 2026-27 state circular and official NSP manuals/FAQs from 2024 shared by an institute. Screens may have changed. Each scheme has its own rules; check with your institute's NSP nodal officer.",
-    hi: "यह गाइड जाँचते समय scholarships.gov.in नहीं खुल सका, इसलिए यह 2026-27 के एक आधिकारिक राज्य परिपत्र और 2024 के आधिकारिक NSP मैनुअल/FAQ (एक संस्थान द्वारा साझा) पर आधारित है। स्क्रीन बदल चुकी हो सकती हैं। हर योजना के अपने नियम होते हैं; अपने संस्थान के NSP नोडल अधिकारी से पुष्टि करें।"
+    en: "The step-by-step screens come from NSP's official user manual of 2024, so some screens may look different now. Each scheme has its own rules and last dates (the NSP homepage lists the current ones); check with your institute's NSP nodal officer.",
+    hi: "स्क्रीन के कदम NSP की 2024 की आधिकारिक यूज़र पुस्तिका से हैं, इसलिए कुछ स्क्रीन अब अलग दिख सकती हैं। हर योजना के अपने नियम और आख़िरी तारीख़ें होती हैं (मौजूदा तारीख़ें NSP होमपेज पर हैं); अपने संस्थान के NSP नोडल अधिकारी से पुष्टि करें।"
   },
 
   category: { en: "Scholarship", hi: "छात्रवृत्ति" },
@@ -3938,19 +3942,23 @@ window.FORMS.push({
     },
     {
       label: { en: "Apply Fresh: Domicile State, Scholarship Category and scheme", hi: "Apply Fresh: डोमिसाइल राज्य, छात्रवृत्ति श्रेणी और योजना" },
-      quick: { en: "Choose domicile state carefully, it locks; one scholarship at a time", hi: "डोमिसाइल राज्य ध्यान से चुनें, बाद में नहीं बदलेगा; एक समय में एक छात्रवृत्ति" },
+      quick: { en: "Choose domicile state carefully, it locks; max one merit scheme", hi: "डोमिसाइल राज्य ध्यान से चुनें, बाद में नहीं बदलेगा; मेरिट योजना सिर्फ़ एक" },
       meaning: {
         en: "From 'My Applications', click 'Apply Fresh', read the disclaimer and click 'I Agree'. Then select your Domicile State, the scholarship category and the scholarship / incentive. The manual warns about the Domicile State: \"Once selected, it cannot be changed\".",
         hi: "'My Applications' में 'Apply Fresh' दबाएँ, डिस्क्लेमर पढ़कर 'I Agree' दबाएँ। फिर डोमिसाइल (मूल निवास) राज्य, छात्रवृत्ति की श्रेणी और छात्रवृत्ति / प्रोत्साहन चुनें। पुस्तिका में चेतावनी है कि डोमिसाइल राज्य एक बार चुनने के बाद बदला नहीं जा सकता।"
       },
       write: {
-        en: "Choose carefully. \"Only 1 scholarship can be active at one time\", but you can apply for multiple incentives. To change the domicile state, category or application type later, you must withdraw ALL your applications and apply fresh. Which category or scheme fits you is not explained in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
-        hi: "ध्यान से चुनें। एक समय में सिर्फ़ 1 छात्रवृत्ति का आवेदन चालू रह सकता है, पर प्रोत्साहन (इंसेंटिव) कई ले सकते हैं। बाद में डोमिसाइल राज्य, श्रेणी या आवेदन का प्रकार बदलना हो, तो अपने सारे आवेदन वापस (विदड्रॉ) लेकर फिर से नया आवेदन करना होगा। आपके लिए कौन-सी श्रेणी या योजना सही है, यह पुस्तिका में नहीं बताया, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+        en: "Choose carefully. From AY 2026-27, NSP says: \"Students may apply for one merit-based scholarship scheme and one or more welfare-based scholarship schemes\", as each scheme's eligibility allows. (The 2024 manual allowed only one scholarship at a time; that rule has changed.) To change the domicile state, category or application type later, you must withdraw ALL your applications and apply fresh. Which category or scheme fits you is not explained in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "ध्यान से चुनें। सत्र 2026-27 से NSP के अनुसार छात्र एक मेरिट-आधारित छात्रवृत्ति योजना और एक या ज़्यादा कल्याण (वेलफ़ेयर)-आधारित छात्रवृत्ति योजनाओं के लिए आवेदन कर सकते हैं, जितनी हर योजना की योग्यता इजाज़त दे। (2024 की पुस्तिका में एक समय में सिर्फ़ एक छात्रवृत्ति का नियम था; वह बदल गया है।) बाद में डोमिसाइल राज्य, श्रेणी या आवेदन का प्रकार बदलना हो, तो अपने सारे आवेदन वापस (विदड्रॉ) लेकर फिर से नया आवेदन करना होगा। आपके लिए कौन-सी श्रेणी या योजना सही है, यह पुस्तिका में नहीं बताया, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
       },
       documents: { en: [], hi: [] },
+      changed: {
+        en: "Changed from AY 2026-27: students may apply for one merit-based scheme and one or more welfare-based schemes (NSP homepage). Older advice that \"only one scholarship can be active\" is out of date.",
+        hi: "सत्र 2026-27 से बदलाव: छात्र एक मेरिट-आधारित योजना और एक या ज़्यादा कल्याण-आधारित योजनाओं के लिए आवेदन कर सकते हैं (NSP होमपेज)। \"एक समय में एक ही छात्रवृत्ति\" वाली पुरानी सलाह अब सही नहीं है।"
+      },
       mistakes: {
-        en: ["Choosing the wrong domicile state (it gets locked)", "Trying to apply for two scholarships at the same time"],
-        hi: ["ग़लत डोमिसाइल राज्य चुनना (यह लॉक हो जाता है)", "एक साथ दो छात्रवृत्तियों के लिए आवेदन करने की कोशिश"]
+        en: ["Choosing the wrong domicile state (it gets locked)", "Applying for two merit-based scholarship schemes in the same year"],
+        hi: ["ग़लत डोमिसाइल राज्य चुनना (यह लॉक हो जाता है)", "एक ही साल में दो मेरिट-आधारित छात्रवृत्ति योजनाओं के लिए आवेदन करना"]
       }
     },
     {
@@ -3998,10 +4006,10 @@ window.FORMS.push({
         hi: "'Application Specific' आपके डोमिसाइल राज्य पर निर्भर है; इसमें राशन कार्ड और UDID की जानकारी माँगी जा सकती है (डेटा लाने के लिए बटन दबाना होता है), या यह छूट भी सकता है। 'Scheme Available' में सिर्फ़ वे योजनाएँ दिखती हैं जिनके लिए आप आपकी भरी जानकारी के हिसाब से योग्य हैं। 'Scheme Specific Details' सिर्फ़ कुछ योजनाओं में आता है।"
       },
       write: {
-        en: "Select one scheme with the radio button. If a scheme you expected is missing, re-check the details you entered earlier. The exact eligibility of each scheme is not in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
-        hi: "रेडियो बटन से एक योजना चुनें। जिस योजना की उम्मीद थी वह न दिखे, तो पहले भरी जानकारी दोबारा जाँचें। हर योजना की योग्यता पुस्तिका में नहीं लिखी, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+        en: "Select one scheme with the radio button. Students with a disability: NSP says you \"must first login in the UDID portal and provide consent to share their UDID details\" before applying, otherwise you cannot submit the application. If a scheme you expected is missing, re-check the details you entered earlier. The exact eligibility of each scheme is not in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "रेडियो बटन से एक योजना चुनें। दिव्यांग छात्र: NSP के अनुसार आवेदन से पहले UDID पोर्टल पर लॉगिन करके अपनी UDID जानकारी साझा करने की सहमति देनी होगी, नहीं तो आवेदन जमा नहीं होगा। जिस योजना की उम्मीद थी वह न दिखे, तो पहले भरी जानकारी दोबारा जाँचें। हर योजना की योग्यता पुस्तिका में नहीं लिखी, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
       },
-      documents: { en: ["Ration card / PPPID details (if asked)", "UDID number (if you have a disability)"], hi: ["राशन कार्ड / PPPID की जानकारी (अगर माँगी जाए)", "UDID नंबर (दिव्यांगता हो तो)"] },
+      documents: { en: ["Ration card / PPPID details (if asked)", "UDID number (if you have a disability), with consent given first on the UDID portal"], hi: ["राशन कार्ड / PPPID की जानकारी (अगर माँगी जाए)", "UDID नंबर (दिव्यांगता हो तो), पहले UDID पोर्टल पर सहमति देकर"] },
       mistakes: {
         en: ["Wrong details in earlier steps, so the right scheme never shows up"],
         hi: ["पहले के चरणों में ग़लत जानकारी, जिससे सही योजना दिखती ही नहीं"]
@@ -8566,8 +8574,8 @@ window.FORMS.push({
         hi: "मुख्य फॉर्म पर और काउंटरफ़ॉइल के नीचे बैंक के लिए जगह, जहाँ UTR (ट्रांसफ़र का रेफ़रेंस नंबर) और ब्रांच मैनेजर के हस्ताक्षर आते हैं।"
       },
       write: {
-        en: "Do not write anything here. When you get the counterfoil back, check that the UTR number is written on it; it helps if you need to follow up. If there is a problem, RBI says to complain first to your bank; if not resolved in 30 days you can complain at cms.rbi.org.in.",
-        hi: "यहाँ कुछ न लिखें। काउंटरफ़ॉइल वापस मिले तो देखें कि उस पर UTR नंबर लिखा है; बाद में पूछताछ में यह काम आता है। कोई दिक़्क़त हो तो RBI के अनुसार पहले अपने बैंक में शिकायत करें; 30 दिन में हल न हो तो cms.rbi.org.in पर शिकायत कर सकते हैं।"
+        en: "Do not write anything here. When you get the counterfoil back, check that the UTR number is written on it; it helps if you need to follow up. If there is a problem, complain first to your bank. Under RBI's Integrated Ombudsman Scheme 2026 (from 1 July 2026), you can then complain at cms.rbi.org.in if the bank does not reply within 30 days (or the longer time RBI allows) or you are not satisfied with its reply; do it within 90 days.",
+        hi: "यहाँ कुछ न लिखें। काउंटरफ़ॉइल वापस मिले तो देखें कि उस पर UTR नंबर लिखा है; बाद में पूछताछ में यह काम आता है। कोई दिक़्क़त हो तो पहले अपने बैंक में शिकायत करें। RBI की एकीकृत लोकपाल योजना 2026 (1 जुलाई 2026 से) के अनुसार, अगर बैंक 30 दिन (या RBI की तय लंबी अवधि) में जवाब न दे, या आप जवाब से संतुष्ट न हों, तो cms.rbi.org.in पर शिकायत कर सकते हैं; यह 90 दिन के अंदर करें।"
       },
       documents: { en: [], hi: [] },
       mistakes: {

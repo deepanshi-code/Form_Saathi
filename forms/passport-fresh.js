@@ -29,8 +29,8 @@ window.FORMS.push({
         hi: "खाना 1.1 पूछता है कि यह नया पासपोर्ट है या दोबारा जारी (re-issue)। खाना 1.4 पूछता है कि आपको सामान्य (Normal) चाहिए या तत्काल (Tatkaal)।"
       },
       write: {
-        en: "Cross \"Fresh Passport\" if you have never held a passport. Cross \"Normal\" unless you need it urgently. The booklet says Tatkaal needs no proof of urgency, but its fee is higher and police verification is then done after the passport is issued. Some categories cannot apply under Tatkaal.",
-        hi: "अगर आपके पास पहले कभी पासपोर्ट नहीं था, तो \"Fresh Passport\" पर क्रॉस लगाएँ। जल्दी न हो तो \"Normal\" पर क्रॉस लगाएँ। बुकलेट के अनुसार तत्काल के लिए जल्दी का कोई सबूत नहीं चाहिए, पर उसकी फ़ीस ज़्यादा है और पुलिस जाँच पासपोर्ट जारी होने के बाद होती है। कुछ श्रेणियों के लोग तत्काल में आवेदन नहीं कर सकते।"
+        en: "Cross \"Fresh Passport\" if you have never held a passport. Cross \"Normal\" unless you need it urgently. The booklet says Tatkaal needs no proof of urgency, but its fee is higher and police verification is then done after the passport is issued. Some categories cannot apply under Tatkaal. Fees from 1 July 2026 (G.S.R. 516(E)) get a 10% discount on fresh passports for children up to 8 years and people above 60.",
+        hi: "अगर आपके पास पहले कभी पासपोर्ट नहीं था, तो \"Fresh Passport\" पर क्रॉस लगाएँ। जल्दी न हो तो \"Normal\" पर क्रॉस लगाएँ। बुकलेट के अनुसार तत्काल के लिए जल्दी का कोई सबूत नहीं चाहिए, पर उसकी फ़ीस ज़्यादा है और पुलिस जाँच पासपोर्ट जारी होने के बाद होती है। कुछ श्रेणियों के लोग तत्काल में आवेदन नहीं कर सकते। 1 जुलाई 2026 से (G.S.R. 516(E)) 8 साल तक के बच्चों और 60 साल से ज़्यादा उम्र के लोगों को नए पासपोर्ट की फ़ीस में 10% छूट मिलती है।"
       },
       documents: { en: [], hi: [] },
       mistakes: {

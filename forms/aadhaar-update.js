@@ -13,7 +13,7 @@ window.FORMS.push({
     title: "UIDAI Form 1: Aadhaar Enrolment and Update (Resident Indian / NRI with Indian address, 18+), file dated 29-09-2026",
     url: "https://backend.uidai.gov.in/get/files/media/document/2026-09/Form_1_Eng.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
 
   category: { en: "Government", hi: "सरकारी" },
   name: { en: "Aadhaar Enrolment / Update Form (18+)", hi: "आधार नामांकन / अपडेट फॉर्म (18+ उम्र)" },
@@ -190,8 +190,8 @@ window.FORMS.push({
         hi: "सिर्फ़ तब भरें जब खाना 4 में HoF पर टिक किया हो। मुखिया परिवार का वह सदस्य है जिसका आधार वैध है, जिसकी उम्र 18 या ज़्यादा है, और जो आपकी पहचान की पुष्टि करके अपने आधार का पता आपके लिए इस्तेमाल करने देता है।"
       },
       write: {
-        en: "Write the HoF's name and Aadhaar number, and tick one relationship. For a new enrolment, the HoF must be your mother, father or legal guardian. For an address update, the HoF can also be your spouse, child/ward or sibling. The HoF signs the consent printed in box 6. Whether the HoF must come to the centre in person: ask at the Aadhaar centre.",
-        hi: "मुखिया का नाम और आधार नंबर लिखें, और एक रिश्ते पर टिक करें। नए नामांकन में मुखिया आपकी माँ, पिता या क़ानूनी अभिभावक ही हो सकते हैं। पता बदलवाने में मुखिया आपके पति/पत्नी, बच्चा/आश्रित या भाई-बहन भी हो सकते हैं। खाना 6 में छपी सहमति पर मुखिया हस्ताक्षर करते हैं। मुखिया को ख़ुद केंद्र आना होगा या नहीं, यह आधार केंद्र पर पूछें।"
+        en: "Write the HoF's name and Aadhaar number, and tick one relationship. For a new enrolment, the HoF must be your mother, father or legal guardian. For an address update, the HoF can also be your spouse, child/ward or sibling. The HoF signs the consent printed in box 6. For an HoF-based address update, UIDAI's Citizen's Charter 2026 says the HoF \"needs to be physically present\", because the HoF's fingerprint or iris check is needed.",
+        hi: "मुखिया का नाम और आधार नंबर लिखें, और एक रिश्ते पर टिक करें। नए नामांकन में मुखिया आपकी माँ, पिता या क़ानूनी अभिभावक ही हो सकते हैं। पता बदलवाने में मुखिया आपके पति/पत्नी, बच्चा/आश्रित या भाई-बहन भी हो सकते हैं। खाना 6 में छपी सहमति पर मुखिया हस्ताक्षर करते हैं। UIDAI के नागरिक चार्टर 2026 के अनुसार, मुखिया के आधार पर पता बदलवाने के लिए मुखिया को ख़ुद केंद्र पर आना होगा, क्योंकि उनके बायोमेट्रिक (उंगली या आँख) की जाँच ज़रूरी है।"
       },
       documents: {
         en: ["One Proof of Relationship (POR) with your name and the HoF's name, for example: Marriage certificate (Central / State Government)", "Birth certificate", "Ration / PDS photo card", "Valid Indian passport", "Pensioner photo ID / Pension Payment Order", "Self-declaration by the HoF on UIDAI's format (only for borrowing an immediate family member's address; valid for 3 months from date of issue)"],
@@ -258,8 +258,8 @@ window.FORMS.push({
         hi: "फॉर्म 1 (फ़ाइल तारीख़ 29-09-2026) में आधार केंद्र की सेवाओं की यह शुल्क तालिका छपी है।"
       },
       write: {
-        en: "New enrolment: Free. Biometric update (photo, fingerprints, irises) for adults: ₹125. Demographic update (name, gender, DOB, address, mobile, email) done separately: ₹75 for all or any of them; free if done together with a biometric update (only the biometric charge applies). Updating POI and POA documents: ₹75.",
-        hi: "नया नामांकन: मुफ़्त। वयस्कों के लिए बायोमेट्रिक अपडेट (फ़ोटो, उंगलियों और पुतली के निशान): ₹125। जनसांख्यिकीय अपडेट (नाम, लिंग, जन्म तिथि, पता, मोबाइल, ईमेल) अलग से: सब या कोई भी, ₹75; बायोमेट्रिक अपडेट के साथ करवाएँ तो मुफ़्त (सिर्फ़ बायोमेट्रिक का शुल्क लगेगा)। पहचान और पते के दस्तावेज़ अपडेट करना: ₹75।"
+        en: "New enrolment: Free. Biometric update (photo, fingerprints, irises) for adults: ₹125. Demographic update (name, gender, DOB, address, mobile, email) done separately: ₹75 for all or any of them; free if done together with a biometric update (only the biometric charge applies). Updating POI and POA documents: ₹75 at a centre. UIDAI's Citizen's Charter 2026 says document update through the myAadhaar portal (myaadhaar.uidai.gov.in) is free \"till 14.6.2027\".",
+        hi: "नया नामांकन: मुफ़्त। वयस्कों के लिए बायोमेट्रिक अपडेट (फ़ोटो, उंगलियों और पुतली के निशान): ₹125। जनसांख्यिकीय अपडेट (नाम, लिंग, जन्म तिथि, पता, मोबाइल, ईमेल) अलग से: सब या कोई भी, ₹75; बायोमेट्रिक अपडेट के साथ करवाएँ तो मुफ़्त (सिर्फ़ बायोमेट्रिक का शुल्क लगेगा)। पहचान और पते के दस्तावेज़ अपडेट करना: केंद्र पर ₹75। UIDAI के नागरिक चार्टर 2026 के अनुसार myAadhaar पोर्टल (myaadhaar.uidai.gov.in) पर दस्तावेज़ अपडेट 14.6.2027 तक मुफ़्त है।"
       },
       documents: { en: [], hi: [] },
       mistakes: {

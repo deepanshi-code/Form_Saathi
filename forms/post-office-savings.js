@@ -49,14 +49,14 @@ window.FORMS.push({
     },
     {
       label: { en: "Initial deposit", hi: "शुरुआती जमा राशि" },
-      quick: { en: "At least Rs. 500, in figures and in words", hi: "कम से कम ₹500, अंकों और शब्दों दोनों में लिखें" },
+      quick: { en: "At least Rs. 500 (Basic account: nil), figures and words", hi: "कम से कम ₹500 (बेसिक खाता: शून्य), अंकों और शब्दों में" },
       meaning: {
         en: "The money you pay to open the account. The form asks for the amount in figures and in words, and whether you pay by cash, DD or cheque (with cheque number and date).",
         hi: "खाता खोलते समय जमा की जाने वाली रकम। फॉर्म में रकम अंकों में और शब्दों में, और भुगतान का तरीक़ा (नकद, डीडी या चेक, चेक नंबर और तारीख़ के साथ) माँगा गया है।"
       },
       write: {
-        en: "The Post Office Savings Account Scheme, 2019 (notified 12.12.2019) says the minimum opening deposit is Rs. 500, and no withdrawal may bring the balance below Rs. 500. No interest is given for a month if the balance falls below Rs. 500 between the 10th and the last day. The form also says: if your total balance/investment in all accounts is Rs. 10 lakh or more, you must give a document showing the source of the money.",
-        hi: "डाकघर बचत खाता योजना, 2019 (12.12.2019 को अधिसूचित) के अनुसार खाता कम से कम ₹500 से खुलता है, और कोई भी निकासी बैलेंस को ₹500 से नीचे नहीं ला सकती। अगर किसी महीने की 10 तारीख़ से आख़िरी दिन के बीच बैलेंस ₹500 से कम हो जाए, तो उस महीने का ब्याज नहीं मिलता। फॉर्म के अनुसार, अगर सभी खातों में कुल जमा ₹10 लाख या उससे ज़्यादा है, तो पैसे का स्रोत बताने वाला दस्तावेज़ देना होगा।"
+        en: "The Post Office Savings Account Scheme, 2019 (notified 12.12.2019) says the minimum opening deposit is Rs. 500, and no withdrawal may bring the balance below Rs. 500. No interest is given for a month if the balance falls below Rs. 500 between the 10th and the last day. The form also says: if your total balance/investment in all accounts is Rs. 10 lakh or more, you must give a document showing the source of the money. Exception: the 2021 amendment (G.S.R. 257(E)) added a Basic Savings Account that a registered adult member of a Government welfare scheme (or the guardian of a registered minor) can open with Nil deposit; ask the post office if you qualify.",
+        hi: "डाकघर बचत खाता योजना, 2019 (12.12.2019 को अधिसूचित) के अनुसार खाता कम से कम ₹500 से खुलता है, और कोई भी निकासी बैलेंस को ₹500 से नीचे नहीं ला सकती। अगर किसी महीने की 10 तारीख़ से आख़िरी दिन के बीच बैलेंस ₹500 से कम हो जाए, तो उस महीने का ब्याज नहीं मिलता। फॉर्म के अनुसार, अगर सभी खातों में कुल जमा ₹10 लाख या उससे ज़्यादा है, तो पैसे का स्रोत बताने वाला दस्तावेज़ देना होगा। अपवाद: 2021 के संशोधन (G.S.R. 257(E)) में बेसिक बचत खाता जोड़ा गया, जिसे किसी सरकारी कल्याण योजना का पंजीकृत वयस्क सदस्य (या पंजीकृत नाबालिग का अभिभावक) बिना किसी जमा राशि के खोल सकता है; डाकघर में पूछें कि क्या आप इसके योग्य हैं।"
       },
       documents: { en: ["Cash, DD or cheque for at least Rs. 500"], hi: ["कम से कम ₹500 नकद, डीडी या चेक"] },
       mistakes: {

@@ -8,8 +8,10 @@
 //    launch (copy published by SCERT Uttarakhand).
 // 4. Directorate of Tribal Welfare, Government of Goa, circular of July 2026 for AY 2026-27, which
 //    repeats the NSP / DBT Mission directions on Aadhaar, face authentication and bank seeding.
-// scholarships.gov.in itself could not be opened on 30-10-2026 (its security certificate was
-// rejected), so the PDFs on that site were not read directly. Every statement below comes from one of
+// scholarships.gov.in could not be opened on 30-10-2026; it was re-checked on 25-11-2026 (homepage
+// announcements for AY 2026-27, NSP_User_Manual_v1.0.pdf, OTR FAQ v1.4, Renewal Students FAQ v1.1,
+// helpdesk page). That re-check corrected the "one scholarship at a time" rule and added the UDID
+// consent step. Every statement below comes from one of
 // the documents above. If something is not stated in them, the guide says "ask your institute's NSP
 // nodal officer or check scholarships.gov.in" instead of guessing.
 
@@ -20,10 +22,10 @@ window.FORMS.push({
     title: "Govt. of Goa, Directorate of Tribal Welfare: NSP circular for AY 2026-27 (July 2026), with NSP Student User Manual v1.0 and NSP OTR FAQ (2024)",
     url: "https://tribalwelfare.goa.gov.in/wp-content/uploads/2026/07/2026-27-central-circular.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
   caution: {
-    en: "scholarships.gov.in could not be opened when this guide was checked, so it is based on an official 2026-27 state circular and official NSP manuals/FAQs from 2024 shared by an institute. Screens may have changed. Each scheme has its own rules; check with your institute's NSP nodal officer.",
-    hi: "यह गाइड जाँचते समय scholarships.gov.in नहीं खुल सका, इसलिए यह 2026-27 के एक आधिकारिक राज्य परिपत्र और 2024 के आधिकारिक NSP मैनुअल/FAQ (एक संस्थान द्वारा साझा) पर आधारित है। स्क्रीन बदल चुकी हो सकती हैं। हर योजना के अपने नियम होते हैं; अपने संस्थान के NSP नोडल अधिकारी से पुष्टि करें।"
+    en: "The step-by-step screens come from NSP's official user manual of 2024, so some screens may look different now. Each scheme has its own rules and last dates (the NSP homepage lists the current ones); check with your institute's NSP nodal officer.",
+    hi: "स्क्रीन के कदम NSP की 2024 की आधिकारिक यूज़र पुस्तिका से हैं, इसलिए कुछ स्क्रीन अब अलग दिख सकती हैं। हर योजना के अपने नियम और आख़िरी तारीख़ें होती हैं (मौजूदा तारीख़ें NSP होमपेज पर हैं); अपने संस्थान के NSP नोडल अधिकारी से पुष्टि करें।"
   },
 
   category: { en: "Scholarship", hi: "छात्रवृत्ति" },
@@ -135,19 +137,23 @@ window.FORMS.push({
     },
     {
       label: { en: "Apply Fresh: Domicile State, Scholarship Category and scheme", hi: "Apply Fresh: डोमिसाइल राज्य, छात्रवृत्ति श्रेणी और योजना" },
-      quick: { en: "Choose domicile state carefully, it locks; one scholarship at a time", hi: "डोमिसाइल राज्य ध्यान से चुनें, बाद में नहीं बदलेगा; एक समय में एक छात्रवृत्ति" },
+      quick: { en: "Choose domicile state carefully, it locks; max one merit scheme", hi: "डोमिसाइल राज्य ध्यान से चुनें, बाद में नहीं बदलेगा; मेरिट योजना सिर्फ़ एक" },
       meaning: {
         en: "From 'My Applications', click 'Apply Fresh', read the disclaimer and click 'I Agree'. Then select your Domicile State, the scholarship category and the scholarship / incentive. The manual warns about the Domicile State: \"Once selected, it cannot be changed\".",
         hi: "'My Applications' में 'Apply Fresh' दबाएँ, डिस्क्लेमर पढ़कर 'I Agree' दबाएँ। फिर डोमिसाइल (मूल निवास) राज्य, छात्रवृत्ति की श्रेणी और छात्रवृत्ति / प्रोत्साहन चुनें। पुस्तिका में चेतावनी है कि डोमिसाइल राज्य एक बार चुनने के बाद बदला नहीं जा सकता।"
       },
       write: {
-        en: "Choose carefully. \"Only 1 scholarship can be active at one time\", but you can apply for multiple incentives. To change the domicile state, category or application type later, you must withdraw ALL your applications and apply fresh. Which category or scheme fits you is not explained in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
-        hi: "ध्यान से चुनें। एक समय में सिर्फ़ 1 छात्रवृत्ति का आवेदन चालू रह सकता है, पर प्रोत्साहन (इंसेंटिव) कई ले सकते हैं। बाद में डोमिसाइल राज्य, श्रेणी या आवेदन का प्रकार बदलना हो, तो अपने सारे आवेदन वापस (विदड्रॉ) लेकर फिर से नया आवेदन करना होगा। आपके लिए कौन-सी श्रेणी या योजना सही है, यह पुस्तिका में नहीं बताया, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+        en: "Choose carefully. From AY 2026-27, NSP says: \"Students may apply for one merit-based scholarship scheme and one or more welfare-based scholarship schemes\", as each scheme's eligibility allows. (The 2024 manual allowed only one scholarship at a time; that rule has changed.) To change the domicile state, category or application type later, you must withdraw ALL your applications and apply fresh. Which category or scheme fits you is not explained in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "ध्यान से चुनें। सत्र 2026-27 से NSP के अनुसार छात्र एक मेरिट-आधारित छात्रवृत्ति योजना और एक या ज़्यादा कल्याण (वेलफ़ेयर)-आधारित छात्रवृत्ति योजनाओं के लिए आवेदन कर सकते हैं, जितनी हर योजना की योग्यता इजाज़त दे। (2024 की पुस्तिका में एक समय में सिर्फ़ एक छात्रवृत्ति का नियम था; वह बदल गया है।) बाद में डोमिसाइल राज्य, श्रेणी या आवेदन का प्रकार बदलना हो, तो अपने सारे आवेदन वापस (विदड्रॉ) लेकर फिर से नया आवेदन करना होगा। आपके लिए कौन-सी श्रेणी या योजना सही है, यह पुस्तिका में नहीं बताया, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
       },
       documents: { en: [], hi: [] },
+      changed: {
+        en: "Changed from AY 2026-27: students may apply for one merit-based scheme and one or more welfare-based schemes (NSP homepage). Older advice that \"only one scholarship can be active\" is out of date.",
+        hi: "सत्र 2026-27 से बदलाव: छात्र एक मेरिट-आधारित योजना और एक या ज़्यादा कल्याण-आधारित योजनाओं के लिए आवेदन कर सकते हैं (NSP होमपेज)। \"एक समय में एक ही छात्रवृत्ति\" वाली पुरानी सलाह अब सही नहीं है।"
+      },
       mistakes: {
-        en: ["Choosing the wrong domicile state (it gets locked)", "Trying to apply for two scholarships at the same time"],
-        hi: ["ग़लत डोमिसाइल राज्य चुनना (यह लॉक हो जाता है)", "एक साथ दो छात्रवृत्तियों के लिए आवेदन करने की कोशिश"]
+        en: ["Choosing the wrong domicile state (it gets locked)", "Applying for two merit-based scholarship schemes in the same year"],
+        hi: ["ग़लत डोमिसाइल राज्य चुनना (यह लॉक हो जाता है)", "एक ही साल में दो मेरिट-आधारित छात्रवृत्ति योजनाओं के लिए आवेदन करना"]
       }
     },
     {
@@ -195,10 +201,10 @@ window.FORMS.push({
         hi: "'Application Specific' आपके डोमिसाइल राज्य पर निर्भर है; इसमें राशन कार्ड और UDID की जानकारी माँगी जा सकती है (डेटा लाने के लिए बटन दबाना होता है), या यह छूट भी सकता है। 'Scheme Available' में सिर्फ़ वे योजनाएँ दिखती हैं जिनके लिए आप आपकी भरी जानकारी के हिसाब से योग्य हैं। 'Scheme Specific Details' सिर्फ़ कुछ योजनाओं में आता है।"
       },
       write: {
-        en: "Select one scheme with the radio button. If a scheme you expected is missing, re-check the details you entered earlier. The exact eligibility of each scheme is not in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
-        hi: "रेडियो बटन से एक योजना चुनें। जिस योजना की उम्मीद थी वह न दिखे, तो पहले भरी जानकारी दोबारा जाँचें। हर योजना की योग्यता पुस्तिका में नहीं लिखी, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
+        en: "Select one scheme with the radio button. Students with a disability: NSP says you \"must first login in the UDID portal and provide consent to share their UDID details\" before applying, otherwise you cannot submit the application. If a scheme you expected is missing, re-check the details you entered earlier. The exact eligibility of each scheme is not in the manual, so ask your institute's NSP nodal officer or check scholarships.gov.in.",
+        hi: "रेडियो बटन से एक योजना चुनें। दिव्यांग छात्र: NSP के अनुसार आवेदन से पहले UDID पोर्टल पर लॉगिन करके अपनी UDID जानकारी साझा करने की सहमति देनी होगी, नहीं तो आवेदन जमा नहीं होगा। जिस योजना की उम्मीद थी वह न दिखे, तो पहले भरी जानकारी दोबारा जाँचें। हर योजना की योग्यता पुस्तिका में नहीं लिखी, इसलिए अपने संस्थान के NSP नोडल अधिकारी से पूछें या scholarships.gov.in देखें।"
       },
-      documents: { en: ["Ration card / PPPID details (if asked)", "UDID number (if you have a disability)"], hi: ["राशन कार्ड / PPPID की जानकारी (अगर माँगी जाए)", "UDID नंबर (दिव्यांगता हो तो)"] },
+      documents: { en: ["Ration card / PPPID details (if asked)", "UDID number (if you have a disability), with consent given first on the UDID portal"], hi: ["राशन कार्ड / PPPID की जानकारी (अगर माँगी जाए)", "UDID नंबर (दिव्यांगता हो तो), पहले UDID पोर्टल पर सहमति देकर"] },
       mistakes: {
         en: ["Wrong details in earlier steps, so the right scheme never shows up"],
         hi: ["पहले के चरणों में ग़लत जानकारी, जिससे सही योजना दिखती ही नहीं"]

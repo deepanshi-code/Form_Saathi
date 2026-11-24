@@ -12,7 +12,11 @@ window.FORMS.push({
     title: "Election Commission of India, Form-6: Application Form for New Voters (voters.eci.gov.in, PDF last modified 28-10-2025)",
     url: "https://voters.eci.gov.in/formspdf/Form_6_English.pdf"
   },
-  lastChecked: "2026-10-30",
+  lastChecked: "2026-11-25",
+  caution: {
+    en: "During a Special Intensive Revision (SIR) of the voter list, the Election Commission asks new voters to submit Form 6 \"along with the prescribed Declaration Form\" (ECI order of 14 May 2026 for 16 States and 3 UTs, PIB release of 31 May 2026). Ask your BLO (Booth Level Officer) whether a Declaration Form is needed in your state now.",
+    hi: "मतदाता सूची के विशेष गहन पुनरीक्षण (SIR) के दौरान चुनाव आयोग नए मतदाताओं से फॉर्म 6 के साथ तय घोषणा पत्र (Declaration Form) भी माँगता है (16 राज्यों और 3 केंद्र शासित प्रदेशों के लिए 14 मई 2026 का ECI आदेश, PIB रिलीज़ 31 मई 2026)। अपने BLO (बूथ लेवल अधिकारी) से पूछें कि अभी आपके राज्य में घोषणा पत्र ज़रूरी है या नहीं।"
+  },
 
   category: { en: "Government", hi: "सरकारी" },
   name: { en: "Voter ID: Form 6 (New Voter Registration)", hi: "वोटर आईडी: फॉर्म 6 (नया मतदाता पंजीकरण)" },

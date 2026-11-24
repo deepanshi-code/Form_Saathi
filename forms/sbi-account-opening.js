@@ -154,11 +154,11 @@ window.FORMS.push({
       },
       write: {
         en: "If both addresses are the same, tick \"Same as Current\". If your ID doesn't show your current address (for example, you moved for college), attach one of the documents below instead. Then you must submit Aadhaar or an OVD with your current address within 3 months, or the account may stop working.",
-        hi: "अगर दोनों पते एक ही हैं, तो \"Same as Current\" पर टिक करें। अगर आपके पहचान पत्र पर वर्तमान पता नहीं है (जैसे पढ़ाई के लिए दूसरे शहर आए हैं), तो नीचे दिए दस्तावेज़ों में से एक लगाएँ। फिर 3 महीने के अंदर वर्तमान पते वाला आधार या OVD जमा करना होगा, वरना खाता बंद हो सकता है।"
+        hi: "अगर दोनों पते एक ही हैं, तो \"Same as Current\" पर टिक करें। अगर आपके पहचान पत्र पर वर्तमान पता नहीं है (जैसे पढ़ाई के लिए दूसरे शहर आए हैं), तो नीचे दिए दस्तावेज़ों में से एक लगाएँ। फिर 3 महीने के अंदर वर्तमान पते वाला आधार या OVD जमा करना होगा, वरना खाता काम करना बंद कर सकता है।"
       },
       documents: {
-        en: ["Only if your ID lacks the current address, one of: Utility bill (electricity, telephone, post-paid mobile, piped gas, water) not more than 2 months old", "Property or municipal tax receipt", "Pension payment order (PPO / FPPO)", "Accommodation allotment letter from an employer (Government, PSU, bank, listed company, etc.)"],
-        hi: ["सिर्फ़ तब, जब पहचान पत्र पर वर्तमान पता न हो, इनमें से एक: 2 महीने से पुराना न हो ऐसा बिजली/टेलीफ़ोन/पोस्टपेड मोबाइल/पाइप गैस/पानी का बिल", "संपत्ति या नगर निगम कर की रसीद", "पेंशन भुगतान आदेश (PPO / FPPO)", "नियोक्ता (सरकार, सार्वजनिक उपक्रम, बैंक, सूचीबद्ध कंपनी आदि) का आवास आवंटन पत्र"]
+        en: ["Only if your ID lacks the current address, one of: Utility bill (electricity, telephone, post-paid mobile, piped gas, water) not more than 2 months old", "Property or municipal tax receipt", "Pension payment order (PPO / FPPO)", "Accommodation allotment letter from an employer (Government, PSU, bank, listed company, etc.), or a leave and licence agreement with such an employer", "Self-declaration, if you give Aadhaar voluntarily and your current address is different from the one in it"],
+        hi: ["सिर्फ़ तब, जब पहचान पत्र पर वर्तमान पता न हो, इनमें से एक: 2 महीने से पुराना न हो ऐसा बिजली/टेलीफ़ोन/पोस्टपेड मोबाइल/पाइप गैस/पानी का बिल", "संपत्ति या नगर निगम कर की रसीद", "पेंशन भुगतान आदेश (PPO / FPPO)", "नियोक्ता (सरकार, सार्वजनिक उपक्रम, बैंक, सूचीबद्ध कंपनी आदि) का आवास आवंटन पत्र, या ऐसे नियोक्ता के साथ लीव एंड लाइसेंस अनुबंध", "स्व-घोषणा, अगर आप अपनी मर्ज़ी से आधार देते हैं और आपका वर्तमान पता आधार वाले पते से अलग है"]
       },
       mistakes: {
         en: ["Using a utility bill older than 2 months", "Not submitting an updated ID within 3 months"],

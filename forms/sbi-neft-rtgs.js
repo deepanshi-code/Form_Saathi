@@ -5,7 +5,7 @@
 //    (sbi.bank.in/web/faq-s/faq-rtgs-neft, last updated 01-08-2024).
 // 2. SBI "RTGS/NEFT" page (sbi.bank.in/web/personal-banking/rtgs-neft, last updated 02-12-2025): 24x7,
 //    RTGS from Rs. 2 lakh, no minimum or maximum for NEFT.
-// 3. RBI FAQs on NEFT (rbi.org.in/Scripts/FAQView.aspx?Id=60, updated as on 02-09-2024) and on RTGS
+// 3. RBI FAQs on NEFT (rbi.org.in/Scripts/FAQView.aspx?Id=60, updated as on 20-11-2026; re-checked 25-11-2026) and on RTGS
 //    (rbi.org.in/Scripts/FAQView.aspx?Id=65, updated as on 14-10-2026).
 // 4. RBI circular RBI/2024-25/99 dated 30-12-2024, "Introduction of beneficiary bank account name look-up
 //    facility for RTGS and NEFT Systems" (to be offered by banks no later than 1 April 2025).
@@ -301,8 +301,8 @@ window.FORMS.push({
         hi: "मुख्य फॉर्म पर और काउंटरफ़ॉइल के नीचे बैंक के लिए जगह, जहाँ UTR (ट्रांसफ़र का रेफ़रेंस नंबर) और ब्रांच मैनेजर के हस्ताक्षर आते हैं।"
       },
       write: {
-        en: "Do not write anything here. When you get the counterfoil back, check that the UTR number is written on it; it helps if you need to follow up. If there is a problem, RBI says to complain first to your bank; if not resolved in 30 days you can complain at cms.rbi.org.in.",
-        hi: "यहाँ कुछ न लिखें। काउंटरफ़ॉइल वापस मिले तो देखें कि उस पर UTR नंबर लिखा है; बाद में पूछताछ में यह काम आता है। कोई दिक़्क़त हो तो RBI के अनुसार पहले अपने बैंक में शिकायत करें; 30 दिन में हल न हो तो cms.rbi.org.in पर शिकायत कर सकते हैं।"
+        en: "Do not write anything here. When you get the counterfoil back, check that the UTR number is written on it; it helps if you need to follow up. If there is a problem, complain first to your bank. Under RBI's Integrated Ombudsman Scheme 2026 (from 1 July 2026), you can then complain at cms.rbi.org.in if the bank does not reply within 30 days (or the longer time RBI allows) or you are not satisfied with its reply; do it within 90 days.",
+        hi: "यहाँ कुछ न लिखें। काउंटरफ़ॉइल वापस मिले तो देखें कि उस पर UTR नंबर लिखा है; बाद में पूछताछ में यह काम आता है। कोई दिक़्क़त हो तो पहले अपने बैंक में शिकायत करें। RBI की एकीकृत लोकपाल योजना 2026 (1 जुलाई 2026 से) के अनुसार, अगर बैंक 30 दिन (या RBI की तय लंबी अवधि) में जवाब न दे, या आप जवाब से संतुष्ट न हों, तो cms.rbi.org.in पर शिकायत कर सकते हैं; यह 90 दिन के अंदर करें।"
       },
       documents: { en: [], hi: [] },
       mistakes: {
