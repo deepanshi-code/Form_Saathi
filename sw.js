@@ -6,9 +6,9 @@
 // - Form page images: use the saved copy first (they never change), else download and save.
 // Only forms the person has opened before are available offline.
 
-const CACHE = "form-saathi-v1";
+const CACHE = "form-saathi-v2";
 const SHELL = [
-  "./", "index.html", "style.css", "app.js", "assistant.js", "config.js",
+  "./", "index.html", "style.css", "app.js", "search.js", "assistant.js", "config.js",
   "forms/bundle.js", "forms/catalog.js", "forms/layout.js", "img/preview.png"
 ];
 

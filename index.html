@@ -18,7 +18,7 @@
   <!-- Inter for text, Plus Jakarta Sans for headlines, Noto Sans Devanagari for Hindi,
        Caveat (English) and Kalam (Hindi) for the handwritten accent line -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261124-4">
+  <link rel="stylesheet" href="style.css?v=20261124-7">
 </head>
 <body>
   <a class="skip-link" href="#main" id="skip-link" data-text="skip"></a>
@@ -198,11 +198,11 @@
         <p data-text="footerAbout"></p>
       </div>
       <div>
-        <h4 data-text="footerBrowse"></h4>
+        <h2 class="footer-head" data-text="footerBrowse"></h2>
         <ul id="footer-categories"></ul>
       </div>
       <div>
-        <h4 data-text="footerProject"></h4>
+        <h2 class="footer-head" data-text="footerProject"></h2>
         <ul>
           <li><a href="https://github.com/deepanshi-code/Form_Saathi" target="_blank" rel="noopener" data-text="footerSource"></a></li>
           <li><a href="https://github.com/deepanshi-code/Form_Saathi/blob/main/docs/user-testing/plan.md" target="_blank" rel="noopener" data-text="footerTesting"></a></li>
@@ -213,12 +213,13 @@
   </footer>
 
   <!-- All form guides in one file (built by tools/build-data.mjs from forms/*.js), then the catalog and the app -->
-  <script src="forms/bundle.js?v=20261124-4"></script>
-  <script src="forms/catalog.js?v=20261124-4"></script>
-  <script src="forms/layout.js?v=20261124-4"></script>
-  <script src="app.js?v=20261124-4"></script>
+  <script src="forms/bundle.js?v=20261124-7"></script>
+  <script src="forms/catalog.js?v=20261124-7"></script>
+  <script src="forms/layout.js?v=20261124-7"></script>
+  <script src="app.js?v=20261124-7"></script>
   <!-- config.js switches on the optional AI answers (see worker/README.md) -->
-  <script src="config.js?v=20261124-4"></script>
-  <script src="assistant.js?v=20261124-4"></script>
+  <script src="config.js?v=20261124-7"></script>
+  <script src="search.js?v=20261124-7"></script>
+  <script src="assistant.js?v=20261124-7"></script>
 </body>
 </html>

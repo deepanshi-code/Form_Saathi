@@ -906,7 +906,7 @@ function renderPanel(form) {
 
 function detailBlock(className, title, content) {
   const block = el("div", "detail " + className);
-  block.append(el("h3", null, title));
+  block.append(el("h2", null, title));
   if (Array.isArray(content)) {
     const ul = el("ul");
     content.forEach(v => ul.append(el("li", null, v)));

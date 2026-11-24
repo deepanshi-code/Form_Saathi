@@ -66,99 +66,6 @@ const ASK = {
   }
 };
 
-// Hinglish and Hindi words mapped to the English words used in the guides.
-const SYNONYMS = {
-  khata: "account", khaata: "account", "खाता": "account", kholna: "open", kholana: "open", "खोलना": "open",
-  banwana: "new apply", banana: "new apply", "बनवाना": "new apply", naya: "new", nayi: "new", "नया": "new",
-  badalna: "change", badlav: "change", "बदलना": "change", sudhar: "correction", sudharna: "correction", galti: "correction", "सुधार": "correction", "ग़लती": "correction",
-  shadi: "marriage", shaadi: "marriage", vivah: "marriage", "शादी": "marriage", "विवाह": "marriage", married: "marriage", wedding: "marriage",
-  janam: "birth", janm: "birth", "जन्म": "birth", baby: "birth", bachcha: "birth", bacche: "birth", "बच्चा": "birth",
-  maut: "death", mrityu: "death", dehant: "death", "मृत्यु": "death", "देहांत": "death", died: "death", passed: "death",
-  bijli: "electricity", "बिजली": "electricity", light: "electricity", meter: "electricity",
-  cylinder: "lpg", "सिलेंडर": "lpg", "गैस": "lpg", gas: "lpg",
-  rashan: "ration", "राशन": "ration",
-  kirayedar: "tenant", kiraya: "tenant rent", "किरायेदार": "tenant", "किराया": "tenant", rent: "tenant", landlord: "tenant",
-  naukri: "job", "नौकरी": "job", job: "job employment", pf: "epf provident", epf: "epf provident", "पीएफ": "epf",
-  paisa: "money", paise: "money", "पैसे": "money", "पैसा": "money", bhejna: "send", "भेजना": "send", transfer: "send neft",
-  videsh: "abroad international", bahar: "abroad", "विदेश": "abroad international", foreign: "abroad international",
-  europe: "schengen", germany: "schengen", france: "schengen", italy: "schengen", canada: "canada",
-  padhai: "education study", "पढ़ाई": "education study", study: "education", college: "college education", university: "education",
-  scholarship: "scholarship", chhatravritti: "scholarship", "छात्रवृत्ति": "scholarship", fees: "education",
-  gaadi: "vehicle", gadi: "vehicle", "गाड़ी": "vehicle", bike: "vehicle", car: "vehicle", scooty: "vehicle", becha: "transfer", bechna: "transfer", kharida: "transfer",
-  license: "licence", lisence: "licence", "लाइसेंस": "licence", driving: "licence",
-  vote: "voter", matdata: "voter", "वोटर": "voter", "मतदाता": "voter", epic: "voter",
-  aadhar: "aadhaar", adhar: "aadhaar", "आधार": "aadhaar",
-  pan: "pan", "पैन": "pan", passport: "passport", "पासपोर्ट": "passport", renew: "reissue", renewal: "reissue", expired: "reissue",
-  pita: "father parent", papa: "father parent", "पिता": "father parent", mata: "mother parent", maa: "mother parent", "माता": "mother parent", "माँ": "mother parent", father: "father parent", mother: "mother parent",
-  pati: "husband spouse", patni: "wife spouse", "पति": "husband spouse", "पत्नी": "wife spouse", guardian: "guardian", abhibhavak: "guardian",
-  mobile: "mobile contact", phone: "mobile contact", "मोबाइल": "mobile", email: "email contact", "ईमेल": "email",
-  janmtithi: "date birth", "जन्मतिथि": "date birth", umar: "age", "उम्र": "age", gender: "gender sex", ling: "gender", "लिंग": "gender",
-  naam: "name", "नाम": "name", pata: "address", "पता": "address", tarikh: "date", "तारीख": "date", "तिथि": "date", dob: "date birth",
-  photo: "photograph", signature: "signature", sign: "signature", "हस्ताक्षर": "signature", "फ़ोटो": "photograph",
-  bachat: "savings", "बचत": "savings", saving: "savings", ladki: "girl", beti: "girl", "बेटी": "girl",
-  bharna: "fill", bhare: "fill", bharu: "fill", "भरना": "fill", "भरें": "fill", likhna: "fill write",
-  cheque: "cheque", check: "cheque", chek: "cheque", chequebook: "cheque book", checkbook: "cheque book", "चेक": "cheque", leaf: "cheque", bounce: "cheque",
-  nominee: "nominee nomination", "नॉमिनी": "nominee", kyc: "kyc", tds: "tds", interest: "tds",
-  income: "income", aay: "income", "आय": "income", caste: "caste", jati: "caste", "जाति": "caste",
-  domicile: "domicile residence", niwas: "residence", "निवास": "residence", police: "police", "पुलिस": "police",
-  ragging: "ragging", loan: "loan", karz: "loan", "लोन": "loan", "ऋण": "loan"
-};
-
-// Small words that carry no meaning for finding a form.
-const STOP = new Set(("i me my mine we want wanted need to a an the of for in on at and or is are am be do does how what which where when " +
-  "can should please help with about it this that get got make my form forms apply application " +
-  "mujhe muje mera meri mere hai hain ho karna karni karne kaise kya kahan kab ka ki ke ko se me mein par aur liye chahiye " +
-  "मुझे मेरा मेरी मेरे है हैं हो करना करनी करने कैसे क्या कहाँ कब का की के को से में पर और लिए चाहिए फॉर्म").split(" "));
-
-// Words that describe a box on almost every form. They point to a box on the open form,
-// never to a different form.
-const BOX_WORDS = new Set("name date birth dob address number photo photograph signature mobile contact email father mother parent husband wife spouse guardian gender sex age".split(" "));
-
-function askTokens(text) {
-  const words = text.toLowerCase().match(/[a-z0-9]+|[ऀ-ॿ]+/g) || [];
-  const out = [];
-  words.forEach(w => {
-    if (STOP.has(w)) return;
-    out.push(w);
-    if (SYNONYMS[w]) out.push(...SYNONYMS[w].split(" "));
-  });
-  return [...new Set(out)];
-}
-
-// How well a piece of text matches the query words (prefix match, so "regist" finds "registration").
-function askScore(tokens, text, weight) {
-  if (!text) return 0;
-  const words = text.toLowerCase().match(/[a-z0-9]+|[ऀ-ॿ]+/g) || [];
-  let score = 0;
-  tokens.forEach(t => {
-    if (t.length < 2) return;
-    if (words.some(w => w === t)) score += weight;
-    else if (t.length >= 4 && words.some(w => w.startsWith(t) || t.startsWith(w) && w.length >= 4)) score += weight * 0.6;
-  });
-  return score;
-}
-
-function scoreForm(tokens, form) {
-  const m = meta(form);
-  return askScore(tokens, m.short.en + " " + m.short.hi, 3) +
-    askScore(tokens, form.name.en + " " + form.name.hi, 2) +
-    askScore(tokens, form.category.en + " " + form.category.hi, 1) +
-    askScore(tokens, form.id.replace(/-/g, " "), 2);
-}
-
-function labelScore(tokens, label) {
-  const words = (label.toLowerCase().match(/[a-z]+|[\u0900-\u097F]+/g) || []).filter(w => !STOP.has(w) && w.length > 1);
-  if (!words.length) return 0;
-  const hit = words.filter(w => tokens.some(t => t === w || (t.length >= 4 && w.length >= 4 && (w.startsWith(t) || t.startsWith(w))))).length;
-  return hit * 3 * Math.sqrt(hit / words.length);
-}
-
-function scoreField(tokens, field) {
-  return Math.max(labelScore(tokens, field.label.en), labelScore(tokens, field.label.hi)) +
-    askScore(tokens, (field.quick ? field.quick.en + " " + field.quick.hi : ""), 1) +
-    askScore(tokens, field.meaning.en + " " + field.meaning.hi, 0.5);
-}
-
 // ---------- Chat panel ----------
 
 const askState = { open: false, listening: false, rec: null };
@@ -208,57 +115,33 @@ function askHandle(query) {
 // so the AI (when switched on) can read the same guides.
 function askSearch(query) {
   const t = ASK[lang];
-  const tokens = askTokens(query);
-
-  // Forms ranked by how well they match.
-  const ranked = window.FORMS.map(f => ({ f, s: scoreForm(tokens, f) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s);
-  const topForm = ranked[0] ? ranked[0].s : 0;
-
-  // 1. On a form page, first look for a matching box in that form, unless the question
-  //    is clearly about a different form ("passport banwana hai" while on the PAN page).
   const form = currentForm();
-  if (form) {
-    const best = form.fields
-      .map((f, i) => ({ i, s: scoreField(tokens, f) }))
-      .sort((a, b) => b.s - a.s)[0];
-    const formTokens = tokens.filter(t => !BOX_WORDS.has(t));
-    const other = window.FORMS.filter(f => f.id !== form.id).map(f => scoreForm(formTokens, f)).sort((a, b) => b - a)[0] || 0;
-    if (best && best.s >= 1.7 && other <= best.s) {
-      const field = form.fields[best.i];
-      const quick = field.quick ? field.quick[lang] : field.write[lang];
-      const show = el("button", "ask-action", t.showBox);
-      show.type = "button";
-      show.addEventListener("click", () => askShowBox(form, best.i));
-      const row = el("div", "ask-row");
-      row.append(show, speakButton(quick));
-      askAdd("bot", [askText(t.boxIntro), el("strong", "ask-box", t.box(best.i + 1, field.label[lang])), askText(quick), row]);
-      askShowBox(form, best.i);
-      return [form.id];
-    }
-  }
+  const match = findMatch(query, form ? form.id : null);
 
-  // 2. A life situation ("getting married", "going abroad") that matches clearly.
-  const events = (window.LIFE || []).map((ev, i) => ({
-    ev, i, s: askScore(tokens, ev.title.en + " " + ev.title.hi, 2),
-    list: ev.forms.map(id => window.FORMS.find(f => f.id === id)).filter(Boolean)
-  })).filter(x => x.list.length).sort((a, b) => b.s - a.s);
-
-  if (events[0] && (events[0].s >= 4 || (events[0].s >= 2 && events[0].s >= topForm))) {
-    const e = events[0];
-    askAdd("bot", [askText(t.situation(e.ev.title[lang])), ...e.list.map(askFormButton)]);
-    return (form ? [form] : []).concat(e.list).map(f => f.id).slice(0, 3);
+  if (match.kind === "box") {
+    const field = match.form.fields[match.index];
+    const quick = field.quick ? field.quick[lang] : field.write[lang];
+    const show = el("button", "ask-action", t.showBox);
+    show.type = "button";
+    show.addEventListener("click", () => askShowBox(match.form, match.index));
+    const row = el("div", "ask-row");
+    row.append(show, speakButton(quick));
+    askAdd("bot", [askText(t.boxIntro), el("strong", "ask-box", t.box(match.index + 1, field.label[lang])), askText(quick), row]);
+    askShowBox(match.form, match.index);
+    return [match.form.id];
   }
-  if (!ranked.length) {
+  if (match.kind === "event") {
+    askAdd("bot", [askText(t.situation(match.event.title[lang])), ...match.list.map(askFormButton)]);
+    return (form ? [form] : []).concat(match.list).map(f => f.id).slice(0, 3);
+  }
+  if (match.kind === "none") {
     askAdd("bot", [askText(t.none)]);
     return form ? [form.id] : [];
   }
-  // Keep forms close to the best score, at most three.
-  const close = ranked.filter(x => x.s >= topForm * 0.6).map(x => x.f);
-  const picks = close.slice(0, 3);
-  const nodes = [askText(picks.length === 1 ? t.foundOne : t.found), ...picks.map(askFormButton)];
+  const nodes = [askText(match.picks.length === 1 ? t.foundOne : t.found), ...match.picks.map(askFormButton)];
   // Many equally good matches in one group (e.g. eight bank accounts): offer the whole group too.
-  const group = window.CHIPS.find(c => c.categories && close.every(f => c.categories.includes(f.category.en)));
-  if (close.length > 3 && group) {
+  if (match.group) {
+    const group = match.group;
     const more = el("button", "ask-action ask-more", t.seeAll(formsInChip(group).length, group.label[lang]));
     more.type = "button";
     more.addEventListener("click", () => {
@@ -272,7 +155,7 @@ function askSearch(query) {
     nodes.push(more);
   }
   askAdd("bot", nodes);
-  return [...new Set((form ? [form] : []).concat(picks).map(f => f.id))].slice(0, 3);
+  return [...new Set((form ? [form] : []).concat(match.picks).map(f => f.id))].slice(0, 3);
 }
 
 // ---------- Optional AI answers ----------
@@ -280,14 +163,6 @@ function askSearch(query) {
 // The worker reads the same verified guides and answers only from them (see worker/src/index.mjs).
 
 const AI_URL = (window.SAATHI_AI_URL || "").replace(/\/$/, "");
-
-// Personal numbers and emails never leave the device (the worker removes them again too).
-function askRedact(text) {
-  return text
-    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, "[email]")
-    .replace(/\b[A-Z]{5}[0-9]{4}[A-Z]\b/gi, "[PAN]")
-    .replace(/\d[\d\s-]{5,}\d/g, "[number]");
-}
 
 async function askAI(query, formIds) {
   if (!AI_URL || !formIds.length) return;
@@ -397,6 +272,7 @@ function askRenderText() {
   $("ask-title").textContent = t.title;
   $("ask-sub").textContent = t.sub;
   $("ask-input").placeholder = t.placeholder;
+  $("ask-input").setAttribute("aria-label", t.placeholder);
   $("ask-send").setAttribute("aria-label", t.send);
   $("ask-mic").setAttribute("aria-label", t.mic);
   $("ask-close").setAttribute("aria-label", t.close);
@@ -440,6 +316,7 @@ function askRenderText() {
   input.id = "ask-input";
   input.type = "text";
   input.autocomplete = "off";
+  input.setAttribute("aria-label", ASK[lang].placeholder);
   const mic = el("button", "ask-mic");
   mic.id = "ask-mic";
   mic.type = "button";
