@@ -18,7 +18,7 @@
   <!-- Inter for text, Plus Jakarta Sans for headlines, Noto Sans Devanagari for Hindi,
        Caveat (English) and Kalam (Hindi) for the handwritten accent line -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261124-7">
+  <link rel="stylesheet" href="style.css?v=20261125-5">
 </head>
 <body>
   <a class="skip-link" href="#main" id="skip-link" data-text="skip"></a>
@@ -36,6 +36,8 @@
       </nav>
       <div class="header-right">
         <!-- Language toggle: the app re-renders all text when this changes -->
+        <!-- Text size: cycles normal, larger, largest (for older eyes) -->
+        <button type="button" class="size-btn" id="size-btn"><span aria-hidden="true">Aa</span></button>
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" data-lang="en">EN</button>
           <button type="button" data-lang="hi">हिं</button>
@@ -68,6 +70,10 @@
             <div class="popular">
               <span data-text="popular"></span>
               <div id="popular-list"></div>
+            </div>
+            <div class="popular" id="recent" hidden>
+              <span data-text="recent"></span>
+              <div id="recent-list"></div>
             </div>
             <p class="hero-note" data-text="topbar"></p>
           </div>
@@ -213,13 +219,13 @@
   </footer>
 
   <!-- All form guides in one file (built by tools/build-data.mjs from forms/*.js), then the catalog and the app -->
-  <script src="forms/bundle.js?v=20261124-7"></script>
-  <script src="forms/catalog.js?v=20261124-7"></script>
-  <script src="forms/layout.js?v=20261124-7"></script>
-  <script src="app.js?v=20261124-7"></script>
+  <script src="forms/bundle.js?v=20261125-5"></script>
+  <script src="forms/catalog.js?v=20261125-5"></script>
+  <script src="forms/layout.js?v=20261125-5"></script>
+  <script src="app.js?v=20261125-5"></script>
   <!-- config.js switches on the optional AI answers (see worker/README.md) -->
-  <script src="config.js?v=20261124-7"></script>
-  <script src="search.js?v=20261124-7"></script>
-  <script src="assistant.js?v=20261124-7"></script>
+  <script src="config.js?v=20261125-5"></script>
+  <script src="search.js?v=20261125-5"></script>
+  <script src="assistant.js?v=20261125-5"></script>
 </body>
 </html>

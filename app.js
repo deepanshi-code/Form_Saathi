@@ -6,6 +6,13 @@ const UI = {
     navChanges: "What changed",
     navHow: "How it works",
     skip: "Skip to content",
+    recent: "Recently opened:",
+    textSize: n => `Text size: ${["normal", "larger", "largest"][n]}. Tap to change.`,
+    hintDate: "Check: a date usually has day, month and a 4-digit year (for example 05/08/2007). Write it the way your form's boxes ask.",
+    hintMobile: "Check: Indian mobile numbers have 10 digits.",
+    hintPin: "Check: a PIN code has 6 digits.",
+    hintIfsc: "Check: an IFSC has 11 characters: 4 letters, a 0, then 6 letters or digits (like SBIN0001234).",
+    hintEmail: "Check: this doesn't look like an email address (name@example.com).",
     offline: "You are offline. Forms you opened before still work.",
     online: "Back online.",
     tagline: "Fill any form the right way",
@@ -104,6 +111,13 @@ const UI = {
     navChanges: "क्या बदला",
     navHow: "कैसे काम करता है",
     skip: "सीधे सामग्री पर जाएँ",
+    recent: "हाल में खोले:",
+    textSize: n => `अक्षरों का आकार: ${["सामान्य", "बड़ा", "सबसे बड़ा"][n]}। बदलने के लिए दबाएँ।`,
+    hintDate: "जाँचें: तारीख में आम तौर पर दिन, महीना और 4 अंकों का साल होता है (जैसे 05/08/2007)। जैसे फॉर्म के खाने कहें, वैसे लिखें।",
+    hintMobile: "जाँचें: भारतीय मोबाइल नंबर 10 अंकों का होता है।",
+    hintPin: "जाँचें: पिन कोड 6 अंकों का होता है।",
+    hintIfsc: "जाँचें: IFSC में 11 अक्षर होते हैं: 4 अंग्रेज़ी अक्षर, फिर 0, फिर 6 अक्षर या अंक (जैसे SBIN0001234)।",
+    hintEmail: "जाँचें: यह ईमेल पता जैसा नहीं लगता (name@example.com)।",
     offline: "आप ऑफ़लाइन हैं। पहले खोले गए फॉर्म अब भी चलेंगे।",
     online: "इंटरनेट वापस आ गया।",
     tagline: "कोई भी फॉर्म सही तरीके से भरें",
@@ -358,6 +372,23 @@ function renderSearchResults() {
     list.append(li);
   });
   $("search").setAttribute("aria-activedescendant", "result-" + searchActive);
+}
+
+// "Recently opened": the last few forms this person opened, kept only in this browser.
+const RECENT_KEY = "fs:recent";
+function rememberForm(form) {
+  const list = store.get(RECENT_KEY, []).filter(id => id !== form.id);
+  store.set(RECENT_KEY, [form.id, ...list].slice(0, 4));
+}
+function renderRecent() {
+  const forms = store.get(RECENT_KEY, []).map(id => window.FORMS.find(f => f.id === id)).filter(Boolean);
+  $("recent").hidden = !forms.length;
+  $("recent-list").replaceChildren(...forms.map(form => {
+    const btn = el("button", "pop pop-recent", meta(form).short[lang]);
+    btn.type = "button";
+    btn.addEventListener("click", () => openForm(form));
+    return btn;
+  }));
 }
 
 function renderPopular() {
@@ -646,6 +677,7 @@ function renderFooter() {
 function renderHome() {
   renderSearchResults();
   renderPopular();
+  renderRecent();
   renderPreview();
   renderLife();
   renderChips();
@@ -809,13 +841,47 @@ function answerInput(form, i) {
   input.type = "text";
   input.autocomplete = "off";
   input.value = store.get(answersKey(form), {})[i] || "";
+  const check = el("span", "my-answer-check");
+  check.setAttribute("aria-live", "polite");
+  const kind = answerKind(form.fields[i].label.en);
+  const showCheck = () => { check.textContent = formatHint(kind, input.value); };
   input.addEventListener("input", () => {
     const all = store.get(answersKey(form), {});
     if (input.value.trim()) all[i] = input.value; else delete all[i];
     store.set(answersKey(form), all);
   });
-  wrap.append(input, el("span", "my-answer-hint", UI[lang].myAnswerHint));
+  input.addEventListener("blur", showCheck); // check once the person has finished typing
+  wrap.append(input, check, el("span", "my-answer-hint", UI[lang].myAnswerHint));
+  showCheck();
   return wrap;
+}
+
+// Gentle format checks for "My answers", guessed from the box label. They only warn, never block,
+// because forms differ (some want DDMMYYYY in boxes, some DD/MM/YYYY).
+function answerKind(label) {
+  const l = label.toLowerCase();
+  // Only boxes that ask for one thing: labels that combine several items ("Address and PIN code",
+  // "Date, place and signature") are skipped, so a correct answer is never flagged.
+  if (/,|&| and |place|signature|proof|gender|\bage\b|name|identification|declaration|particulars|whether|address|step|after|parts|telephone/.test(l)) return null;
+  if (/ifsc/.test(l)) return "ifsc";
+  if (/\bpin\b|pin code|pincode/.test(l)) return "pin";
+  if (/e-?mail/.test(l)) return "email";
+  if (/mobile/.test(l)) return "mobile";
+  if (/\bdate\b|\bdob\b/.test(l)) return "date";
+  return null;
+}
+function formatHint(kind, value) {
+  const v = value.trim();
+  if (!kind || !v) return "";
+  const digits = v.replace(/\D/g, "");
+  const ok = {
+    date: /^\d{1,2}[\/\-. ]?\d{1,2}[\/\-. ]?\d{4}$/.test(v.replace(/\s+/g, "")),
+    mobile: /^(\+?91)?[6-9]\d{9}$/.test(v.replace(/[\s-]/g, "")),
+    pin: /^\d{6}$/.test(digits) && digits.length === v.replace(/\s/g, "").length,
+    ifsc: /^[A-Z]{4}0[A-Z0-9]{6}$/i.test(v),
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
+  }[kind];
+  return ok ? "" : UI[lang]["hint" + kind[0].toUpperCase() + kind.slice(1)];
 }
 
 // A one-page sheet to carry to the counter: box, what to write, and the user's own answer.
@@ -1231,6 +1297,7 @@ function route() {
   $("form-view").hidden = !form;
 
   if (form) {
+    rememberForm(form);
     openField = -1;
     panel = null;
     // Forms with page images open on the form view, at the first box not done yet.
@@ -1320,6 +1387,23 @@ window.addEventListener("hashchange", route);
 
 renderStaticText();
 route();
+
+// Text size for older eyes: normal, larger, largest. CSS zoom keeps the layout fitting the screen.
+const SIZES = [1, 1.15, 1.3];
+function applyTextSize() {
+  const n = store.get("fs:size", 0);
+  document.documentElement.style.zoom = SIZES[n] || 1;
+  document.documentElement.toggleAttribute("data-large-text", n > 0);
+  $("size-btn").setAttribute("aria-label", UI[lang].textSize(n));
+  $("size-btn").title = UI[lang].textSize(n);
+  $("size-btn").dataset.size = n;
+}
+$("size-btn").addEventListener("click", () => {
+  store.set("fs:size", (store.get("fs:size", 0) + 1) % SIZES.length);
+  applyTextSize();
+});
+document.querySelectorAll(".lang-toggle button").forEach(b => b.addEventListener("click", applyTextSize));
+applyTextSize();
 
 // Keep working with weak or no internet (see sw.js). Browsers allow this only on https or localhost.
 if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
