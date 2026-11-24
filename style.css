@@ -668,7 +668,7 @@ h1, h2, h3, h4 { letter-spacing: -0.015em; }
 html:lang(hi) .hero h1 { letter-spacing: 0; line-height: 1.25; }
 .accent-line {
   margin: 4px 0 0; font-family: "Caveat", cursive; font-weight: 700;
-  font-size: clamp(26px, 2.6vw, 38px); line-height: 1.1; color: var(--accent, #d97706); transform: rotate(-1deg); transform-origin: left;
+  font-size: clamp(26px, 2.6vw, 38px); line-height: 1.1; color: #b45309; transform: rotate(-1deg); transform-origin: left;
 }
 html:lang(hi) .accent-line { font-family: "Kalam", "Noto Sans Devanagari", cursive; font-size: clamp(24px, 2.3vw, 32px); }
 .hero-sub { margin: 14px 0 22px; }
@@ -925,3 +925,23 @@ html:lang(hi) .band-title { letter-spacing: 0; }
 .ask-ai.is-loading p { color: var(--muted); }
 .ask-ai.is-loading p::after { content: ""; display: inline-block; width: 1em; animation: ai-dots 1.2s steps(4) infinite; overflow: hidden; vertical-align: bottom; }
 @keyframes ai-dots { from { width: 0; } to { width: 1em; } }
+
+/* ---------- Accessibility ---------- */
+/* A clear outline for keyboard users (mouse clicks don't show it) */
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.chip:focus-visible, .life-tile:focus-visible, .pop:focus-visible { outline-offset: 3px; }
+/* "Skip to content": hidden until a keyboard user presses Tab */
+.skip-link {
+  position: fixed; left: 12px; top: -60px; z-index: 60; padding: 10px 16px;
+  background: var(--primary); color: #fff; font-weight: 700; border-radius: 10px; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+main:focus { outline: none; }
+a.tool { text-decoration: none; color: inherit; }
+/* Phones: the six form tools sit in a tidy two-column grid instead of five rows */
+@media (max-width: 560px) {
+  .tool-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tool-buttons .tool { justify-content: flex-start; min-width: 0; padding-left: 12px; padding-right: 12px; font-size: 14px; }
+  .tool-buttons .tool { text-align: left; line-height: 1.25; }
+  .tool-buttons .tool span { white-space: normal; }
+}

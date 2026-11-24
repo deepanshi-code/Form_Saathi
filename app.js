@@ -5,6 +5,7 @@ const UI = {
     navForms: "Forms",
     navChanges: "What changed",
     navHow: "How it works",
+    skip: "Skip to content",
     tagline: "Fill any form the right way",
     accent: "without fear, without mistakes",
     eyebrow: "Free · English & हिंदी · Checked against official sources",
@@ -60,6 +61,10 @@ const UI = {
     toolChanges: n => `What changed (${n})`,
     toolAbout: "About this form",
     toolPrint: "Print my answers",
+    toolShare: "Share",
+    shareCopied: "Link copied. Paste it in WhatsApp or anywhere.",
+    shareText: name => `How to fill the ${name} form, box by box, in English and Hindi:`,
+    toolReport: "Report a problem",
     listen: "Listen",
     stop: "Stop",
     myAnswer: "Your answer (for your own notes)",
@@ -90,6 +95,7 @@ const UI = {
     navForms: "फॉर्म",
     navChanges: "क्या बदला",
     navHow: "कैसे काम करता है",
+    skip: "सीधे सामग्री पर जाएँ",
     tagline: "कोई भी फॉर्म सही तरीके से भरें",
     accent: "बिना डर, बिना गलती",
     eyebrow: "मुफ़्त · हिंदी और English · आधिकारिक स्रोतों से जाँचा गया",
@@ -145,6 +151,10 @@ const UI = {
     toolChanges: n => `क्या बदला (${n})`,
     toolAbout: "इस फॉर्म के बारे में",
     toolPrint: "मेरे जवाब प्रिंट करें",
+    toolShare: "शेयर करें",
+    shareCopied: "लिंक कॉपी हो गया। WhatsApp या कहीं भी पेस्ट करें।",
+    shareText: name => `${name} फॉर्म कैसे भरें, हर खाना, हिंदी और अंग्रेज़ी में:`,
+    toolReport: "गलती बताएँ",
     listen: "सुनें",
     stop: "रोकें",
     myAnswer: "आपका जवाब (अपने नोट्स के लिए)",
@@ -204,7 +214,9 @@ const ICONS = {
   send: "M4 12l16-8-6 16-2-7zM12 13l8-9",
   close: "M6 6l12 12M18 6L6 18",
   speaker: "M4 9h4l5-4v14l-5-4H4zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12",
-  print: "M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"
+  print: "M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z",
+  share: "M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4",
+  flag: "M5 21V4M5 4h12l-2 4 2 4H5"
 };
 
 // Shown as quick buttons under the search box.
@@ -555,8 +567,10 @@ function renderFormHeader(form) {
   const head = el("div", "form-head");
   const titles = el("div", "form-titles");
   const trust = el("div", "trust");
-  if (form.verified) {
-    trust.append(el("span", "badge badge-ok", "✓ " + UI[lang].verifiedPill(form.lastChecked)));
+  trust.append(form.verified
+    ? el("span", "badge badge-ok", "✓ " + UI[lang].verifiedPill(form.lastChecked))
+    : el("span", "badge badge-muted", UI[lang].unverifiedPill));
+  if (form.source) {
     const details = el("details", "source");
     details.append(el("summary", null, UI[lang].sourceToggle));
     const p = el("p", null, UI[lang].sourceText + " ");
@@ -567,8 +581,6 @@ function renderFormHeader(form) {
     p.append(link);
     details.append(p);
     trust.append(details);
-  } else {
-    trust.append(el("span", "badge badge-muted", UI[lang].unverifiedPill));
   }
   titles.append(el("h1", null, m.short[lang]), el("p", "official-name", form.name[lang]), trust);
   head.append(iconBox(form, "big"), titles);
@@ -625,6 +637,20 @@ function renderTools(form) {
   printBtn.append(icon("print", "icon small-icon"), el("span", null, UI[lang].toolPrint));
   printBtn.addEventListener("click", () => printAnswers(form));
   tools.append(printBtn);
+
+  const shareBtn = el("button", "tool");
+  shareBtn.type = "button";
+  shareBtn.append(icon("share", "icon small-icon"), el("span", null, UI[lang].toolShare));
+  shareBtn.addEventListener("click", () => shareForm(form));
+  tools.append(shareBtn);
+
+  // "Report a problem" opens a ready-made issue on the project's GitHub page.
+  const report = el("a", "tool");
+  report.href = reportLink(form);
+  report.target = "_blank";
+  report.rel = "noopener";
+  report.append(icon("flag", "icon small-icon"), el("span", null, UI[lang].toolReport));
+  tools.append(report);
 
   box.append(prog, tools);
   updateProgress(form);
@@ -705,6 +731,37 @@ function printAnswers(form) {
   });
   $("print-sheet").replaceChildren(el("h1", null, UI[lang].printTitle(meta(form).short[lang])), table, el("p", null, UI[lang].printNote));
   window.print();
+}
+
+const SITE_URL = "https://deepanshi-code.github.io/Form_Saathi";
+const REPO_URL = "https://github.com/deepanshi-code/Form_Saathi";
+
+async function shareForm(form) {
+  const url = `${SITE_URL}/f/${form.id}.html`;
+  const text = UI[lang].shareText(meta(form).short[lang]);
+  try {
+    if (navigator.share) { await navigator.share({ title: meta(form).short[lang], text, url }); return; }
+    await navigator.clipboard.writeText(text + " " + url);
+    toast(UI[lang].shareCopied);
+  } catch {
+    // Closing the share sheet also lands here; nothing to do.
+  }
+}
+
+function reportLink(form) {
+  const title = `Problem in guide: ${meta(form).short.en}`;
+  const body = [
+    `Guide: ${form.id} (last checked ${form.lastChecked})`,
+    "",
+    "Which box (number or name):",
+    "",
+    "What is wrong or out of date:",
+    "",
+    "Official link that shows the correct rule (if you have one):",
+    "",
+    "Please do not write personal details here (Aadhaar, PAN, account or phone numbers)."
+  ].join("\n");
+  return `${REPO_URL}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
 // Small confirmation message at the bottom of the screen.
@@ -1133,6 +1190,9 @@ document.addEventListener("click", e => {
 });
 $("search").addEventListener("focus", renderSearchResults);
 $("home-link").addEventListener("click", e => { e.preventDefault(); location.hash = ""; });
+// The skip link moves keyboard focus to the content without changing the page (the address
+// after # decides which view is shown, so it must not change).
+$("skip-link").addEventListener("click", e => { e.preventDefault(); $("main").focus(); });
 
 $("forms-more").addEventListener("click", () => {
   showAllForms = !showAllForms;

@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Form Saathi</title>
   <meta name="description" content="Understand Indian official forms field by field, in simple English and Hindi.">
+  <!-- Preview shown when the link is shared (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Form Saathi">
+  <meta property="og:title" content="Form Saathi: fill any form the right way">
+  <meta property="og:description" content="Bank, government, college and international forms explained box by box, in simple English and Hindi. Free.">
+  <meta property="og:url" content="https://deepanshi-code.github.io/Form_Saathi/">
+  <meta property="og:image" content="https://deepanshi-code.github.io/Form_Saathi/img/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Inter for text, Plus Jakarta Sans for headlines, Noto Sans Devanagari for Hindi,
        Caveat (English) and Kalam (Hindi) for the handwritten accent line -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261122-1">
+  <link rel="stylesheet" href="style.css?v=20261124-3">
 </head>
 <body>
+  <a class="skip-link" href="#main" id="skip-link" data-text="skip"></a>
   <!-- Floating glass header: brand · pill navigation · language + main action -->
   <header class="site-header">
     <div class="wrap header-row">
@@ -36,7 +45,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- View 1: home -->
     <section id="list-view">
       <!-- Hero: search on the left, a live preview of a real guide on the right -->
@@ -204,12 +213,12 @@
   </footer>
 
   <!-- All form guides in one file (built by tools/build-data.mjs from forms/*.js), then the catalog and the app -->
-  <script src="forms/bundle.js?v=20261122-1"></script>
-  <script src="forms/catalog.js?v=20261122-1"></script>
-  <script src="forms/layout.js?v=20261122-1"></script>
-  <script src="app.js?v=20261122-1"></script>
+  <script src="forms/bundle.js?v=20261124-3"></script>
+  <script src="forms/catalog.js?v=20261124-3"></script>
+  <script src="forms/layout.js?v=20261124-3"></script>
+  <script src="app.js?v=20261124-3"></script>
   <!-- config.js switches on the optional AI answers (see worker/README.md) -->
-  <script src="config.js?v=20261122-1"></script>
-  <script src="assistant.js?v=20261122-1"></script>
+  <script src="config.js?v=20261124-3"></script>
+  <script src="assistant.js?v=20261124-3"></script>
 </body>
 </html>
